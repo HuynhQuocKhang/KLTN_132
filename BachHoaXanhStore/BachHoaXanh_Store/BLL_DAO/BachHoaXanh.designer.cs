@@ -9,7 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BachHoaXanh_Store
+namespace BLL_DAO
 {
 	using System.Data.Linq;
 	using System.Data.Linq.Mapping;
@@ -84,7 +84,7 @@ namespace BachHoaXanh_Store
     #endregion
 		
 		public BachHoaXanhDataContext() : 
-				base(global::BachHoaXanh_Store.Properties.Settings.Default.BachHoaXanh_StoreConnectionString, mappingSource)
+				base(global::BLL_DAO.Properties.Settings.Default.BachHoaXanh_StoreConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}

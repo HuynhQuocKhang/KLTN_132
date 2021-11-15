@@ -52,10 +52,10 @@ namespace BachHoaXanh_Store
             this.bunifuTextBox1 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_TimKiem = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.chk_AllStore = new Bunifu.UI.WinForms.BunifuCheckBox();
-            this.btn_TimKiem = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.bunifuCustomDataGrid1 = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.col_MaDH = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -280,70 +280,14 @@ namespace BachHoaXanh_Store
             this.panel2.Size = new System.Drawing.Size(358, 32);
             this.panel2.TabIndex = 6;
             // 
-            // bunifuCustomLabel1
+            // panel1
             // 
-            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(21, 0);
-            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(144, 21);
-            this.bunifuCustomLabel1.TabIndex = 1;
-            this.bunifuCustomLabel1.Text = "Tất cả siêu thị";
-            this.bunifuCustomLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // chk_AllStore
-            // 
-            this.chk_AllStore.AllowBindingControlAnimation = true;
-            this.chk_AllStore.AllowBindingControlColorChanges = false;
-            this.chk_AllStore.AllowBindingControlLocation = true;
-            this.chk_AllStore.AllowCheckBoxAnimation = false;
-            this.chk_AllStore.AllowCheckmarkAnimation = true;
-            this.chk_AllStore.AllowOnHoverStates = true;
-            this.chk_AllStore.AutoCheck = true;
-            this.chk_AllStore.BackColor = System.Drawing.Color.Transparent;
-            this.chk_AllStore.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chk_AllStore.BackgroundImage")));
-            this.chk_AllStore.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.chk_AllStore.BindingControl = null;
-            this.chk_AllStore.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
-            this.chk_AllStore.Checked = true;
-            this.chk_AllStore.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Checked;
-            this.chk_AllStore.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.chk_AllStore.CustomCheckmarkImage = null;
-            this.chk_AllStore.Dock = System.Windows.Forms.DockStyle.Left;
-            this.chk_AllStore.Location = new System.Drawing.Point(0, 0);
-            this.chk_AllStore.MinimumSize = new System.Drawing.Size(17, 17);
-            this.chk_AllStore.Name = "chk_AllStore";
-            this.chk_AllStore.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(186)))), ((int)(((byte)(27)))));
-            this.chk_AllStore.OnCheck.BorderRadius = 2;
-            this.chk_AllStore.OnCheck.BorderThickness = 2;
-            this.chk_AllStore.OnCheck.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(186)))), ((int)(((byte)(27)))));
-            this.chk_AllStore.OnCheck.CheckmarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(244)))), ((int)(((byte)(215)))));
-            this.chk_AllStore.OnCheck.CheckmarkThickness = 2;
-            this.chk_AllStore.OnDisable.BorderColor = System.Drawing.Color.LightGray;
-            this.chk_AllStore.OnDisable.BorderRadius = 2;
-            this.chk_AllStore.OnDisable.BorderThickness = 2;
-            this.chk_AllStore.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.chk_AllStore.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
-            this.chk_AllStore.OnDisable.CheckmarkThickness = 2;
-            this.chk_AllStore.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(86)))), ((int)(((byte)(49)))));
-            this.chk_AllStore.OnHoverChecked.BorderRadius = 2;
-            this.chk_AllStore.OnHoverChecked.BorderThickness = 2;
-            this.chk_AllStore.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(86)))), ((int)(((byte)(49)))));
-            this.chk_AllStore.OnHoverChecked.CheckmarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(244)))), ((int)(((byte)(215)))));
-            this.chk_AllStore.OnHoverChecked.CheckmarkThickness = 2;
-            this.chk_AllStore.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(86)))), ((int)(((byte)(49)))));
-            this.chk_AllStore.OnHoverUnchecked.BorderRadius = 2;
-            this.chk_AllStore.OnHoverUnchecked.BorderThickness = 2;
-            this.chk_AllStore.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.chk_AllStore.OnUncheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(186)))), ((int)(((byte)(27)))));
-            this.chk_AllStore.OnUncheck.BorderRadius = 2;
-            this.chk_AllStore.OnUncheck.BorderThickness = 2;
-            this.chk_AllStore.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.chk_AllStore.Size = new System.Drawing.Size(21, 21);
-            this.chk_AllStore.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
-            this.chk_AllStore.TabIndex = 0;
-            this.chk_AllStore.ThreeState = false;
-            this.chk_AllStore.ToolTipText = null;
+            this.panel1.Controls.Add(this.btn_TimKiem);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel1.Location = new System.Drawing.Point(186, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(172, 32);
+            this.panel1.TabIndex = 2;
             // 
             // btn_TimKiem
             // 
@@ -409,14 +353,70 @@ namespace BachHoaXanh_Store
             this.btn_TimKiem.TextMarginLeft = 0;
             this.btn_TimKiem.UseDefaultRadiusAndThickness = true;
             // 
-            // panel1
+            // bunifuCustomLabel1
             // 
-            this.panel1.Controls.Add(this.btn_TimKiem);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(186, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(172, 32);
-            this.panel1.TabIndex = 2;
+            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(21, 0);
+            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
+            this.bunifuCustomLabel1.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(144, 21);
+            this.bunifuCustomLabel1.TabIndex = 1;
+            this.bunifuCustomLabel1.Text = "Tất cả siêu thị";
+            this.bunifuCustomLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // chk_AllStore
+            // 
+            this.chk_AllStore.AllowBindingControlAnimation = true;
+            this.chk_AllStore.AllowBindingControlColorChanges = false;
+            this.chk_AllStore.AllowBindingControlLocation = true;
+            this.chk_AllStore.AllowCheckBoxAnimation = false;
+            this.chk_AllStore.AllowCheckmarkAnimation = true;
+            this.chk_AllStore.AllowOnHoverStates = true;
+            this.chk_AllStore.AutoCheck = true;
+            this.chk_AllStore.BackColor = System.Drawing.Color.Transparent;
+            this.chk_AllStore.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chk_AllStore.BackgroundImage")));
+            this.chk_AllStore.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.chk_AllStore.BindingControl = null;
+            this.chk_AllStore.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
+            this.chk_AllStore.Checked = true;
+            this.chk_AllStore.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Checked;
+            this.chk_AllStore.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.chk_AllStore.CustomCheckmarkImage = null;
+            this.chk_AllStore.Dock = System.Windows.Forms.DockStyle.Left;
+            this.chk_AllStore.Location = new System.Drawing.Point(0, 0);
+            this.chk_AllStore.MinimumSize = new System.Drawing.Size(17, 17);
+            this.chk_AllStore.Name = "chk_AllStore";
+            this.chk_AllStore.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(186)))), ((int)(((byte)(27)))));
+            this.chk_AllStore.OnCheck.BorderRadius = 2;
+            this.chk_AllStore.OnCheck.BorderThickness = 2;
+            this.chk_AllStore.OnCheck.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(186)))), ((int)(((byte)(27)))));
+            this.chk_AllStore.OnCheck.CheckmarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(244)))), ((int)(((byte)(215)))));
+            this.chk_AllStore.OnCheck.CheckmarkThickness = 2;
+            this.chk_AllStore.OnDisable.BorderColor = System.Drawing.Color.LightGray;
+            this.chk_AllStore.OnDisable.BorderRadius = 2;
+            this.chk_AllStore.OnDisable.BorderThickness = 2;
+            this.chk_AllStore.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.chk_AllStore.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
+            this.chk_AllStore.OnDisable.CheckmarkThickness = 2;
+            this.chk_AllStore.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(86)))), ((int)(((byte)(49)))));
+            this.chk_AllStore.OnHoverChecked.BorderRadius = 2;
+            this.chk_AllStore.OnHoverChecked.BorderThickness = 2;
+            this.chk_AllStore.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(86)))), ((int)(((byte)(49)))));
+            this.chk_AllStore.OnHoverChecked.CheckmarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(244)))), ((int)(((byte)(215)))));
+            this.chk_AllStore.OnHoverChecked.CheckmarkThickness = 2;
+            this.chk_AllStore.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(86)))), ((int)(((byte)(49)))));
+            this.chk_AllStore.OnHoverUnchecked.BorderRadius = 2;
+            this.chk_AllStore.OnHoverUnchecked.BorderThickness = 2;
+            this.chk_AllStore.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.chk_AllStore.OnUncheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(186)))), ((int)(((byte)(27)))));
+            this.chk_AllStore.OnUncheck.BorderRadius = 2;
+            this.chk_AllStore.OnUncheck.BorderThickness = 2;
+            this.chk_AllStore.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.chk_AllStore.Size = new System.Drawing.Size(21, 21);
+            this.chk_AllStore.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
+            this.chk_AllStore.TabIndex = 0;
+            this.chk_AllStore.ThreeState = false;
+            this.chk_AllStore.ToolTipText = null;
             // 
             // panel3
             // 

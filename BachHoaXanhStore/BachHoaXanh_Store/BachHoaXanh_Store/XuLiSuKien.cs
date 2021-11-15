@@ -8,14 +8,6 @@ namespace BachHoaXanh_Store
 {
     public class XuLiSuKien
     {
-        BachHoaXanhDataContext db = new BachHoaXanhDataContext();
-        public IQueryable<SanPham> loadGridSanPham()
-        {
-            return db.SanPhams.Select(t => t);
-        }
-        public IQueryable<NhaCungCap> loadComboboxNhaCC()
-        {
-            return db.NhaCungCaps.Select(t => t);
-        }
+        
     }
 }

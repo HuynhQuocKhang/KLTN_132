@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BLL_DAO;
 
 namespace BachHoaXanh_Store
 {
@@ -19,9 +20,10 @@ namespace BachHoaXanh_Store
         public FormTraHangNCC()
         {
             InitializeComponent();
+            CustomerBLL objCustomerBLL = new CustomerBLL();
             dgv_DSSP.Columns.Add(dgv_CheckBox);
             dgv_CTTraHang.Columns.Add(dgv_CheckBox1);
-            cbo_NhaCungCap.DataSource = xlsk.loadComboboxNhaCC();
+            cbo_NhaCungCap.DataSource = objCustomerBLL.GetListALlCustomer();
             cbo_NhaCungCap.DisplayMember = "TenNCC";
             cbo_NhaCungCap.ValueMember = "MaNCC";
         }

@@ -15,7 +15,6 @@ namespace BachHoaXanh_Store
         public FormDanhSachSP()
         {
             InitializeComponent();
-
         }
 
         private void dgv_DSSP_CellContentClick(object sender, DataGridViewCellEventArgs e)

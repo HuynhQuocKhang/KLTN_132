@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace BachHoaXanh_Store {
+namespace BLL_DAO {
     
     
     /// <summary>
@@ -846,7 +846,7 @@ namespace BachHoaXanh_Store {
         }
     }
 }
-namespace BachHoaXanh_Store.BachHoaXanh_StoreDataSetTableAdapters {
+namespace BLL_DAO.BachHoaXanh_StoreDataSetTableAdapters {
     
     
     /// <summary>
@@ -1040,7 +1040,7 @@ SELECT MaSP, TenSP, MaLoaiSP, MaNCC, DVT, GiaBan, GiaVon FROM SanPham WHERE (MaS
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::BachHoaXanh_Store.Properties.Settings.Default.BachHoaXanh_StoreConnectionString;
+            this._connection.ConnectionString = global::BLL_DAO.Properties.Settings.Default.BachHoaXanh_StoreConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

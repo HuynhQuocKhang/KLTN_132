@@ -147,16 +147,6 @@
     <Reference Include="TelerikExport, Version=2021.2.511.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BachHoaXanh.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BachHoaXanh.dbml</DependentUpon>
-    </Compile>
-    <Compile Include="BachHoaXanh_StoreDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BachHoaXanh_StoreDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="FormChinhSuaSP.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -221,9 +211,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="XuLiGiaoDien.cs" />
     <Compile Include="XuLiSuKien.cs" />
-    <None Include="BachHoaXanh.dbml.layout">
-      <DependentUpon>BachHoaXanh.dbml</DependentUpon>
-    </None>
     <EmbeddedResource Include="FormChinhSuaSP.resx">
       <DependentUpon>FormChinhSuaSP.cs</DependentUpon>
     </EmbeddedResource>
@@ -264,22 +251,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="BachHoaXanh.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>BachHoaXanh.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="BachHoaXanh_StoreDataSet.xsc">
-      <DependentUpon>BachHoaXanh_StoreDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="BachHoaXanh_StoreDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>BachHoaXanh_StoreDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="BachHoaXanh_StoreDataSet.xss">
-      <DependentUpon>BachHoaXanh_StoreDataSet.xsd</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -296,6 +267,12 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL_DAO\BLL_DAO.csproj">
+      <Project>{09f5f2ad-024d-4482-99b2-aafe1ce08a68}</Project>
+      <Name>BLL_DAO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

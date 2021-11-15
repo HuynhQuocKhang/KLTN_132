@@ -12,7 +12,6 @@ namespace BachHoaXanh_Store
         public static FormDatHang frmDatHang = null;
         public static FormPhanPhoiHang frmPhanPhoiHang = null;
         public static FormTraHangNCC frmTraHangNCC = null;
-        public static FormCTTraHang frmCTTraHang = null;
         public static FormPhieuTraHang frmPhieuTraHang = null;
         public static FormPhieuXuatKho frmPhieuXuatKho = null;
         public static FormDonDatHang frmDonDatHang = null;
