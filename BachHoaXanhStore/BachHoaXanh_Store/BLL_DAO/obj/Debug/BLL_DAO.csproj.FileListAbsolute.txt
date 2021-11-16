@@ -1,4 +1,3 @@
-E:\KhoaLuanTotNghiep\BachHoaXanhStore\BachHoaXanh_Store\BLL_DAO\obj\Debug\BLL_DAO.csproj.AssemblyReference.cache
 E:\KhoaLuanTotNghiep\BachHoaXanhStore\BachHoaXanh_Store\BLL_DAO\obj\Debug\BLL_DAO.csproj.CoreCompileInputs.cache
 E:\KhoaLuanTotNghiep\BachHoaXanhStore\BachHoaXanh_Store\BLL_DAO\bin\Debug\BLL_DAO.dll.config
 E:\KhoaLuanTotNghiep\BachHoaXanhStore\BachHoaXanh_Store\BLL_DAO\bin\Debug\BLL_DAO.dll
