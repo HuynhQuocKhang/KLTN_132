@@ -20,7 +20,6 @@ namespace BachHoaXanh_Store
         public FormPhieuTraHang(string s)
         {
             InitializeComponent();
-            xlgd.thongtinPhieuTraHang(txt_NhaCungCap, txt_NgayTra, txt_TongTien, txt_TinhTrang);
             txt_NhaCungCap.Text = s;
         }
 

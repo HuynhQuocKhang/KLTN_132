@@ -17,6 +17,8 @@ namespace BachHoaXanh_Store
         public static FormDonDatHang frmDonDatHang = null;
         public static FormDanhSachSP frmDanhSachSP = null;
         public static FormChinhSuaSP frmChinhSuaSP = null;
+        public static FormXemDonDatHang frmXemDonDatHang = null;
+        public static FormMain frmMain = null;
         [STAThread]
         static void Main()
         {
@@ -27,8 +29,9 @@ namespace BachHoaXanh_Store
             //frmPhanPhoiHang = new FormPhanPhoiHang();
             // frmTraHangNCC = new FormTraHangNCC();
             //frmPhieuTraHang = new FormPhieuTraHang();
-            frmDanhSachSP = new FormDanhSachSP();
-            Application.Run(frmDanhSachSP);
+            //frmDanhSachSP = new FormDanhSachSP();
+            frmMain = new FormMain();
+            Application.Run(frmMain);
         }
     }
 }

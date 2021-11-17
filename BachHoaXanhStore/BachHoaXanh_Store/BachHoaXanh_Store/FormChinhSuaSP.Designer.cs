@@ -91,7 +91,7 @@ namespace BachHoaXanh_Store
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(402, 370);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(402, 374);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -121,16 +121,16 @@ namespace BachHoaXanh_Store
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(402, 370);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(402, 374);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // cbo_NhaCungCap
             // 
-            this.cbo_NhaCungCap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(247)))), ((int)(((byte)(228)))));
+            this.cbo_NhaCungCap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(216)))), ((int)(((byte)(211)))));
             this.cbo_NhaCungCap.BorderRadius = 17;
-            this.cbo_NhaCungCap.Color = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(42)))));
+            this.cbo_NhaCungCap.Color = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(92)))), ((int)(((byte)(83)))));
             this.tableLayoutPanel2.SetColumnSpan(this.cbo_NhaCungCap, 2);
             this.cbo_NhaCungCap.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
             this.cbo_NhaCungCap.DisabledColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -143,16 +143,16 @@ namespace BachHoaXanh_Store
             this.cbo_NhaCungCap.FillIndicator = false;
             this.cbo_NhaCungCap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbo_NhaCungCap.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbo_NhaCungCap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(19)))), ((int)(((byte)(10)))));
+            this.cbo_NhaCungCap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(92)))), ((int)(((byte)(83)))));
             this.cbo_NhaCungCap.FormattingEnabled = true;
             this.cbo_NhaCungCap.Icon = null;
-            this.cbo_NhaCungCap.IndicatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(42)))));
+            this.cbo_NhaCungCap.IndicatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(92)))), ((int)(((byte)(83)))));
             this.cbo_NhaCungCap.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
             this.cbo_NhaCungCap.ItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(247)))), ((int)(((byte)(228)))));
             this.cbo_NhaCungCap.ItemBorderColor = System.Drawing.Color.Transparent;
             this.cbo_NhaCungCap.ItemForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(19)))), ((int)(((byte)(10)))));
             this.cbo_NhaCungCap.ItemHeight = 26;
-            this.cbo_NhaCungCap.ItemHighLightColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(222)))), ((int)(((byte)(2)))));
+            this.cbo_NhaCungCap.ItemHighLightColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(209)))), ((int)(((byte)(175)))));
             this.cbo_NhaCungCap.Location = new System.Drawing.Point(33, 111);
             this.cbo_NhaCungCap.MaximumSize = new System.Drawing.Size(5000, 0);
             this.cbo_NhaCungCap.Name = "cbo_NhaCungCap";
@@ -169,10 +169,10 @@ namespace BachHoaXanh_Store
             this.txt_TenSP.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
             this.txt_TenSP.BackColor = System.Drawing.Color.Transparent;
             this.txt_TenSP.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txt_TenSP.BackgroundImage")));
-            this.txt_TenSP.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(42)))));
+            this.txt_TenSP.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(92)))), ((int)(((byte)(83)))));
             this.txt_TenSP.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(223)))), ((int)(((byte)(135)))));
             this.txt_TenSP.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(186)))), ((int)(((byte)(27)))));
-            this.txt_TenSP.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(42)))));
+            this.txt_TenSP.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(92)))), ((int)(((byte)(83)))));
             this.txt_TenSP.BorderRadius = 35;
             this.txt_TenSP.BorderThickness = 1;
             this.txt_TenSP.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -195,7 +195,7 @@ namespace BachHoaXanh_Store
             this.txt_TenSP.Modified = false;
             this.txt_TenSP.Multiline = false;
             this.txt_TenSP.Name = "txt_TenSP";
-            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(42)))));
+            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(92)))), ((int)(((byte)(83)))));
             stateProperties1.FillColor = System.Drawing.Color.Empty;
             stateProperties1.ForeColor = System.Drawing.Color.Empty;
             stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
@@ -210,7 +210,7 @@ namespace BachHoaXanh_Store
             stateProperties3.ForeColor = System.Drawing.Color.Empty;
             stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_TenSP.OnHoverState = stateProperties3;
-            stateProperties4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(42)))));
+            stateProperties4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(92)))), ((int)(((byte)(83)))));
             stateProperties4.FillColor = System.Drawing.Color.White;
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
@@ -244,10 +244,10 @@ namespace BachHoaXanh_Store
             this.txt_DVT.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
             this.txt_DVT.BackColor = System.Drawing.Color.Transparent;
             this.txt_DVT.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txt_DVT.BackgroundImage")));
-            this.txt_DVT.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(42)))));
+            this.txt_DVT.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(92)))), ((int)(((byte)(83)))));
             this.txt_DVT.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(223)))), ((int)(((byte)(135)))));
             this.txt_DVT.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(186)))), ((int)(((byte)(27)))));
-            this.txt_DVT.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(42)))));
+            this.txt_DVT.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(92)))), ((int)(((byte)(83)))));
             this.txt_DVT.BorderRadius = 35;
             this.txt_DVT.BorderThickness = 1;
             this.txt_DVT.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -270,7 +270,7 @@ namespace BachHoaXanh_Store
             this.txt_DVT.Modified = false;
             this.txt_DVT.Multiline = false;
             this.txt_DVT.Name = "txt_DVT";
-            stateProperties5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(42)))));
+            stateProperties5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(92)))), ((int)(((byte)(83)))));
             stateProperties5.FillColor = System.Drawing.Color.Empty;
             stateProperties5.ForeColor = System.Drawing.Color.Empty;
             stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
@@ -285,7 +285,7 @@ namespace BachHoaXanh_Store
             stateProperties7.ForeColor = System.Drawing.Color.Empty;
             stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_DVT.OnHoverState = stateProperties7;
-            stateProperties8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(42)))));
+            stateProperties8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(92)))), ((int)(((byte)(83)))));
             stateProperties8.FillColor = System.Drawing.Color.White;
             stateProperties8.ForeColor = System.Drawing.Color.Empty;
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
@@ -343,7 +343,7 @@ namespace BachHoaXanh_Store
             this.btn_TraHang.AnimationSpeed = 200;
             this.btn_TraHang.AutoGenerateColors = false;
             this.btn_TraHang.BackColor = System.Drawing.Color.Transparent;
-            this.btn_TraHang.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(42)))));
+            this.btn_TraHang.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(207)))), ((int)(((byte)(138)))));
             this.btn_TraHang.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_TraHang.BackgroundImage")));
             this.btn_TraHang.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btn_TraHang.ButtonText = "Cập nhật";
@@ -363,26 +363,26 @@ namespace BachHoaXanh_Store
             this.btn_TraHang.Dock = System.Windows.Forms.DockStyle.Right;
             this.btn_TraHang.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
             this.btn_TraHang.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_TraHang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(244)))), ((int)(((byte)(215)))));
+            this.btn_TraHang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(46)))), ((int)(((byte)(41)))));
             this.btn_TraHang.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
             this.btn_TraHang.IconMarginLeft = 11;
             this.btn_TraHang.IconPadding = 10;
             this.btn_TraHang.IconRightCursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_TraHang.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(186)))), ((int)(((byte)(27)))));
+            this.btn_TraHang.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(207)))), ((int)(((byte)(138)))));
             this.btn_TraHang.IdleBorderRadius = 25;
             this.btn_TraHang.IdleBorderThickness = 1;
-            this.btn_TraHang.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(42)))));
+            this.btn_TraHang.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(207)))), ((int)(((byte)(138)))));
             this.btn_TraHang.IdleIconLeftImage = null;
             this.btn_TraHang.IdleIconRightImage = null;
             this.btn_TraHang.IndicateFocus = false;
-            this.btn_TraHang.Location = new System.Drawing.Point(276, 311);
+            this.btn_TraHang.Location = new System.Drawing.Point(244, 311);
             this.btn_TraHang.Name = "btn_TraHang";
-            stateProperties9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(222)))), ((int)(((byte)(2)))));
+            stateProperties9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(221)))), ((int)(((byte)(158)))));
             stateProperties9.BorderRadius = 25;
             stateProperties9.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             stateProperties9.BorderThickness = 1;
-            stateProperties9.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(222)))), ((int)(((byte)(2)))));
-            stateProperties9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(19)))), ((int)(((byte)(10)))));
+            stateProperties9.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(221)))), ((int)(((byte)(158)))));
+            stateProperties9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(46)))), ((int)(((byte)(41)))));
             stateProperties9.IconLeftImage = null;
             stateProperties9.IconRightImage = null;
             this.btn_TraHang.onHoverState = stateProperties9;
@@ -395,7 +395,7 @@ namespace BachHoaXanh_Store
             stateProperties10.IconLeftImage = null;
             stateProperties10.IconRightImage = null;
             this.btn_TraHang.OnPressedState = stateProperties10;
-            this.btn_TraHang.Size = new System.Drawing.Size(87, 34);
+            this.btn_TraHang.Size = new System.Drawing.Size(119, 39);
             this.btn_TraHang.TabIndex = 2;
             this.btn_TraHang.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_TraHang.TextMarginLeft = 0;
@@ -439,7 +439,7 @@ namespace BachHoaXanh_Store
             this.btn_Huy.IdleIconLeftImage = null;
             this.btn_Huy.IdleIconRightImage = null;
             this.btn_Huy.IndicateFocus = false;
-            this.btn_Huy.Location = new System.Drawing.Point(161, 311);
+            this.btn_Huy.Location = new System.Drawing.Point(134, 311);
             this.btn_Huy.Name = "btn_Huy";
             stateProperties11.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(124)))), ((int)(((byte)(75)))));
             stateProperties11.BorderRadius = 25;
@@ -459,7 +459,7 @@ namespace BachHoaXanh_Store
             stateProperties12.IconLeftImage = null;
             stateProperties12.IconRightImage = null;
             this.btn_Huy.OnPressedState = stateProperties12;
-            this.btn_Huy.Size = new System.Drawing.Size(77, 34);
+            this.btn_Huy.Size = new System.Drawing.Size(104, 39);
             this.btn_Huy.TabIndex = 5;
             this.btn_Huy.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Huy.TextMarginLeft = 0;
@@ -475,10 +475,10 @@ namespace BachHoaXanh_Store
             this.txt_GiaBan.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
             this.txt_GiaBan.BackColor = System.Drawing.Color.Transparent;
             this.txt_GiaBan.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txt_GiaBan.BackgroundImage")));
-            this.txt_GiaBan.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(42)))));
+            this.txt_GiaBan.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(92)))), ((int)(((byte)(83)))));
             this.txt_GiaBan.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(223)))), ((int)(((byte)(135)))));
             this.txt_GiaBan.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(186)))), ((int)(((byte)(27)))));
-            this.txt_GiaBan.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(42)))));
+            this.txt_GiaBan.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(92)))), ((int)(((byte)(83)))));
             this.txt_GiaBan.BorderRadius = 35;
             this.txt_GiaBan.BorderThickness = 1;
             this.txt_GiaBan.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -501,7 +501,7 @@ namespace BachHoaXanh_Store
             this.txt_GiaBan.Modified = false;
             this.txt_GiaBan.Multiline = false;
             this.txt_GiaBan.Name = "txt_GiaBan";
-            stateProperties13.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(42)))));
+            stateProperties13.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(92)))), ((int)(((byte)(83)))));
             stateProperties13.FillColor = System.Drawing.Color.Empty;
             stateProperties13.ForeColor = System.Drawing.Color.Empty;
             stateProperties13.PlaceholderForeColor = System.Drawing.Color.Empty;
@@ -516,7 +516,7 @@ namespace BachHoaXanh_Store
             stateProperties15.ForeColor = System.Drawing.Color.Empty;
             stateProperties15.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_GiaBan.OnHoverState = stateProperties15;
-            stateProperties16.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(42)))));
+            stateProperties16.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(92)))), ((int)(((byte)(83)))));
             stateProperties16.FillColor = System.Drawing.Color.White;
             stateProperties16.ForeColor = System.Drawing.Color.Empty;
             stateProperties16.PlaceholderForeColor = System.Drawing.Color.Empty;
@@ -550,10 +550,10 @@ namespace BachHoaXanh_Store
             this.txt_GiaVon.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
             this.txt_GiaVon.BackColor = System.Drawing.Color.Transparent;
             this.txt_GiaVon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txt_GiaVon.BackgroundImage")));
-            this.txt_GiaVon.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(42)))));
+            this.txt_GiaVon.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(92)))), ((int)(((byte)(83)))));
             this.txt_GiaVon.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(223)))), ((int)(((byte)(135)))));
             this.txt_GiaVon.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(186)))), ((int)(((byte)(27)))));
-            this.txt_GiaVon.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(42)))));
+            this.txt_GiaVon.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(92)))), ((int)(((byte)(83)))));
             this.txt_GiaVon.BorderRadius = 35;
             this.txt_GiaVon.BorderThickness = 1;
             this.txt_GiaVon.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -576,7 +576,7 @@ namespace BachHoaXanh_Store
             this.txt_GiaVon.Modified = false;
             this.txt_GiaVon.Multiline = false;
             this.txt_GiaVon.Name = "txt_GiaVon";
-            stateProperties17.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(42)))));
+            stateProperties17.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(92)))), ((int)(((byte)(83)))));
             stateProperties17.FillColor = System.Drawing.Color.Empty;
             stateProperties17.ForeColor = System.Drawing.Color.Empty;
             stateProperties17.PlaceholderForeColor = System.Drawing.Color.Empty;
@@ -591,7 +591,7 @@ namespace BachHoaXanh_Store
             stateProperties19.ForeColor = System.Drawing.Color.Empty;
             stateProperties19.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_GiaVon.OnHoverState = stateProperties19;
-            stateProperties20.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(42)))));
+            stateProperties20.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(92)))), ((int)(((byte)(83)))));
             stateProperties20.FillColor = System.Drawing.Color.White;
             stateProperties20.ForeColor = System.Drawing.Color.Empty;
             stateProperties20.PlaceholderForeColor = System.Drawing.Color.Empty;
@@ -618,9 +618,9 @@ namespace BachHoaXanh_Store
             // 
             // cbo_MaLoaiSP
             // 
-            this.cbo_MaLoaiSP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(247)))), ((int)(((byte)(228)))));
+            this.cbo_MaLoaiSP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(216)))), ((int)(((byte)(211)))));
             this.cbo_MaLoaiSP.BorderRadius = 17;
-            this.cbo_MaLoaiSP.Color = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(42)))));
+            this.cbo_MaLoaiSP.Color = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(92)))), ((int)(((byte)(83)))));
             this.tableLayoutPanel2.SetColumnSpan(this.cbo_MaLoaiSP, 2);
             this.cbo_MaLoaiSP.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
             this.cbo_MaLoaiSP.DisabledColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -633,16 +633,16 @@ namespace BachHoaXanh_Store
             this.cbo_MaLoaiSP.FillIndicator = false;
             this.cbo_MaLoaiSP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbo_MaLoaiSP.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbo_MaLoaiSP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(19)))), ((int)(((byte)(10)))));
+            this.cbo_MaLoaiSP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(92)))), ((int)(((byte)(83)))));
             this.cbo_MaLoaiSP.FormattingEnabled = true;
             this.cbo_MaLoaiSP.Icon = null;
-            this.cbo_MaLoaiSP.IndicatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(42)))));
+            this.cbo_MaLoaiSP.IndicatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(92)))), ((int)(((byte)(83)))));
             this.cbo_MaLoaiSP.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
             this.cbo_MaLoaiSP.ItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(247)))), ((int)(((byte)(228)))));
             this.cbo_MaLoaiSP.ItemBorderColor = System.Drawing.Color.Transparent;
             this.cbo_MaLoaiSP.ItemForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(19)))), ((int)(((byte)(10)))));
             this.cbo_MaLoaiSP.ItemHeight = 26;
-            this.cbo_MaLoaiSP.ItemHighLightColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(222)))), ((int)(((byte)(2)))));
+            this.cbo_MaLoaiSP.ItemHighLightColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(209)))), ((int)(((byte)(175)))));
             this.cbo_MaLoaiSP.Location = new System.Drawing.Point(33, 151);
             this.cbo_MaLoaiSP.MaximumSize = new System.Drawing.Size(5000, 0);
             this.cbo_MaLoaiSP.Name = "cbo_MaLoaiSP";
@@ -654,8 +654,8 @@ namespace BachHoaXanh_Store
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(247)))), ((int)(((byte)(228)))));
-            this.ClientSize = new System.Drawing.Size(434, 402);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(216)))), ((int)(((byte)(211)))));
+            this.ClientSize = new System.Drawing.Size(434, 406);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
