@@ -4,3 +4,10 @@ E:\KhoaLuanTotNghiep\BachHoaXanhStore\BachHoaXanh_Store\BLL_DAO\bin\Debug\BLL_DA
 E:\KhoaLuanTotNghiep\BachHoaXanhStore\BachHoaXanh_Store\BLL_DAO\bin\Debug\BLL_DAO.pdb
 E:\KhoaLuanTotNghiep\BachHoaXanhStore\BachHoaXanh_Store\BLL_DAO\obj\Debug\BLL_DAO.dll
 E:\KhoaLuanTotNghiep\BachHoaXanhStore\BachHoaXanh_Store\BLL_DAO\obj\Debug\BLL_DAO.pdb
+E:\09DHTH5\KLTN\SoDoLop\KLTN_132\BachHoaXanhStore\BachHoaXanh_Store\BLL_DAO\bin\Debug\BLL_DAO.dll.config
+E:\09DHTH5\KLTN\SoDoLop\KLTN_132\BachHoaXanhStore\BachHoaXanh_Store\BLL_DAO\bin\Debug\BLL_DAO.dll
+E:\09DHTH5\KLTN\SoDoLop\KLTN_132\BachHoaXanhStore\BachHoaXanh_Store\BLL_DAO\bin\Debug\BLL_DAO.pdb
+E:\09DHTH5\KLTN\SoDoLop\KLTN_132\BachHoaXanhStore\BachHoaXanh_Store\BLL_DAO\obj\Debug\BLL_DAO.csproj.AssemblyReference.cache
+E:\09DHTH5\KLTN\SoDoLop\KLTN_132\BachHoaXanhStore\BachHoaXanh_Store\BLL_DAO\obj\Debug\BLL_DAO.csproj.CoreCompileInputs.cache
+E:\09DHTH5\KLTN\SoDoLop\KLTN_132\BachHoaXanhStore\BachHoaXanh_Store\BLL_DAO\obj\Debug\BLL_DAO.dll
+E:\09DHTH5\KLTN\SoDoLop\KLTN_132\BachHoaXanhStore\BachHoaXanh_Store\BLL_DAO\obj\Debug\BLL_DAO.pdb
