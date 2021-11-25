@@ -1,4 +1,4 @@
-﻿using DevExpress.XtraBars;
+﻿using DevExpress.XtraEditors;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,23 +11,18 @@ using System.Windows.Forms;
 
 namespace BachHoaXanh_Store
 {
-    public partial class FormMain : DevExpress.XtraBars.Ribbon.RibbonForm
+    public partial class FormMain : DevExpress.XtraEditors.XtraForm
     {
         public FormMain()
         {
             InitializeComponent();
+           
         }
 
-        private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
+        private void btn_DatHangNCC_Click(object sender, EventArgs e)
         {
             Program.frmDatHang = new FormDatHang();
             ViewChildForm(Program.frmDatHang);
-        }
-
-        private void barButtonItem2_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            Program.frmPhanPhoiHang = new FormPhanPhoiHang();
-            ViewChildForm(Program.frmPhanPhoiHang);
         }
 
         public bool IsFormActive(Form pForm)
@@ -37,12 +32,12 @@ namespace BachHoaXanh_Store
             {
                 foreach(var item in MdiChildren)
                 {
-                    if(pForm.Name == item.Name)
+                    if(pForm.Name==item.Name)
                     {
                         xtraTabbedMdiManager1.Pages[item].MdiChild.Activate();
                         Isopend = true;
                     }    
-                }    
+                }
             }
             return Isopend;
         }
@@ -53,22 +48,52 @@ namespace BachHoaXanh_Store
             {
                 pForm.MdiParent = this;
                 pForm.Show();
-            }    
+            }
         }
 
-        private void barButtonItem4_ItemClick(object sender, ItemClickEventArgs e)
+        private void btn_XuatHang_Click(object sender, EventArgs e)
         {
-            Program.frmDanhSachSP = new  FormDanhSachSP();
-            ViewChildForm(Program.frmDanhSachSP);
+            Program.frmPhanPhoiHang = new FormPhanPhoiHang();
+            ViewChildForm(Program.frmPhanPhoiHang);
         }
 
-        private void barButtonItem3_ItemClick(object sender, ItemClickEventArgs e)
+        private void btn_TraHangNCC_Click(object sender, EventArgs e)
         {
             Program.frmTraHangNCC = new  FormTraHangNCC();
             ViewChildForm(Program.frmTraHangNCC);
         }
 
-        private void barButtonItem5_ItemClick(object sender, ItemClickEventArgs e)
+        private void accordionControlElement6_Click(object sender, EventArgs e)
+        {
+            Program.frmDanhSachSP = new FormDanhSachSP();
+            ViewChildForm(Program.frmDanhSachSP);
+        }
+
+        private void accordionControlElement7_Click(object sender, EventArgs e)
+        {
+            Program.frmXemDonDatHang = new  FormXemDonDatHang();
+            ViewChildForm(Program.frmXemDonDatHang);
+        }
+
+        private void accordionControlElement3_Click(object sender, EventArgs e)
+        {
+            Program.frmDatHang = new FormDatHang();
+            ViewChildForm(Program.frmDatHang);
+        }
+
+        private void accordionControlElement4_Click(object sender, EventArgs e)
+        {
+            Program.frmTraHangNCC = new  FormTraHangNCC();
+            ViewChildForm(Program.frmTraHangNCC);
+        }
+
+        private void accordionControlElement5_Click(object sender, EventArgs e)
+        {
+            Program.frmDanhSachSP = new  FormDanhSachSP();
+            ViewChildForm(Program.frmDanhSachSP);
+        }
+
+        private void accordionControlElement8_Click(object sender, EventArgs e)
         {
             Program.frmXemDonDatHang = new  FormXemDonDatHang();
             ViewChildForm(Program.frmXemDonDatHang);

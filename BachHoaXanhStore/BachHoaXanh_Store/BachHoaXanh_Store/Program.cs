@@ -19,6 +19,7 @@ namespace BachHoaXanh_Store
         public static FormChinhSuaSP frmChinhSuaSP = null;
         public static FormXemDonDatHang frmXemDonDatHang = null;
         public static FormMain frmMain = null;
+
         [STAThread]
         static void Main()
         {
