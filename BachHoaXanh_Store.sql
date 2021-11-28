@@ -125,7 +125,7 @@ create table DonDatHang
 
 create table CTDonDatHang 
 (
-	MaCTDDH nvarchar(30) not null,
+	MaCTDDH int IDENTITY(1,1),
 	MaSP nvarchar(30),
 	MaDH int,
 	SoLuong int,

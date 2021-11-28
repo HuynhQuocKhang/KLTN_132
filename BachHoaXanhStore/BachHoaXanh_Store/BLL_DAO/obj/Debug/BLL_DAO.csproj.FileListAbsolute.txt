@@ -11,3 +11,8 @@ E:\09DHTH5\KLTN\SoDoLop\KLTN_132\BachHoaXanhStore\BachHoaXanh_Store\BLL_DAO\obj\
 E:\09DHTH5\KLTN\SoDoLop\KLTN_132\BachHoaXanhStore\BachHoaXanh_Store\BLL_DAO\obj\Debug\BLL_DAO.csproj.CoreCompileInputs.cache
 E:\09DHTH5\KLTN\SoDoLop\KLTN_132\BachHoaXanhStore\BachHoaXanh_Store\BLL_DAO\obj\Debug\BLL_DAO.dll
 E:\09DHTH5\KLTN\SoDoLop\KLTN_132\BachHoaXanhStore\BachHoaXanh_Store\BLL_DAO\obj\Debug\BLL_DAO.pdb
+E:\KhoaLuanTotNghiep\BachHoaXanhStore\BachHoaXanh_Store\BLL_DAO\obj\Debug\BLL_DAO.csproj.AssemblyReference.cache
+E:\KhoaLuanTotNghiep\BachHoaXanhStore\BachHoaXanh_Store\BLL_DAO\bin\Debug\BO.dll
+E:\KhoaLuanTotNghiep\BachHoaXanhStore\BachHoaXanh_Store\BLL_DAO\bin\Debug\BO.pdb
+E:\KhoaLuanTotNghiep\BachHoaXanhStore\BachHoaXanh_Store\BLL_DAO\bin\Debug\BO.dll.config
+E:\KhoaLuanTotNghiep\BachHoaXanhStore\BachHoaXanh_Store\BLL_DAO\obj\Debug\BLL_DAO.csproj.CopyComplete
