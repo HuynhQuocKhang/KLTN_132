@@ -28,9 +28,6 @@ namespace BachHoaXanh_Store
             cbo_NhaCungCap.ValueMember = "MaNCC";
         }
 
-
-
-
         private void btn_LapPhieu_Click(object sender, EventArgs e)
         {
             Program.frmPhieuTraHang = new FormPhieuTraHang(cbo_NhaCungCap.Text);

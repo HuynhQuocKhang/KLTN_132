@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BachHoaXanh_Store", "BachHo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL_DAO", "BLL_DAO\BLL_DAO.csproj", "{09F5F2AD-024D-4482-99B2-AAFE1CE08A68}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BO", "BO\BO.csproj", "{3D3AF6A7-7C51-46C0-96A9-365BB87845C7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{09F5F2AD-024D-4482-99B2-AAFE1CE08A68}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09F5F2AD-024D-4482-99B2-AAFE1CE08A68}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09F5F2AD-024D-4482-99B2-AAFE1CE08A68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D3AF6A7-7C51-46C0-96A9-365BB87845C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D3AF6A7-7C51-46C0-96A9-365BB87845C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D3AF6A7-7C51-46C0-96A9-365BB87845C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D3AF6A7-7C51-46C0-96A9-365BB87845C7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -48,6 +48,7 @@ namespace BachHoaXanh_Store
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuTextBox1 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.dgv_DSSP = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.bunifuButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.col_MaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_TenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_MaLoaiSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,7 +57,6 @@ namespace BachHoaXanh_Store
             this.col_GiaBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_Sua = new System.Windows.Forms.DataGridViewButtonColumn();
             this.col_Xoa = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.bunifuButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DSSP)).BeginInit();
@@ -287,56 +287,6 @@ namespace BachHoaXanh_Store
             this.dgv_DSSP.TabIndex = 2;
             this.dgv_DSSP.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DSSP_CellContentClick);
             // 
-            // col_MaSP
-            // 
-            this.col_MaSP.HeaderText = "Mã sản phẩm";
-            this.col_MaSP.Name = "col_MaSP";
-            // 
-            // col_TenSP
-            // 
-            this.col_TenSP.HeaderText = "Tên sản phẩm";
-            this.col_TenSP.Name = "col_TenSP";
-            // 
-            // col_MaLoaiSP
-            // 
-            this.col_MaLoaiSP.HeaderText = "Mã loại sản phẩm";
-            this.col_MaLoaiSP.Name = "col_MaLoaiSP";
-            // 
-            // col_MaNCC
-            // 
-            this.col_MaNCC.HeaderText = "Mã nhà cung cấp";
-            this.col_MaNCC.Name = "col_MaNCC";
-            // 
-            // col_DonViTinh
-            // 
-            this.col_DonViTinh.HeaderText = "ĐVT";
-            this.col_DonViTinh.Name = "col_DonViTinh";
-            // 
-            // col_GiaBan
-            // 
-            this.col_GiaBan.HeaderText = "Giá bán";
-            this.col_GiaBan.Name = "col_GiaBan";
-            // 
-            // col_Sua
-            // 
-            this.col_Sua.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.col_Sua.HeaderText = "Sửa";
-            this.col_Sua.Name = "col_Sua";
-            this.col_Sua.Text = "Sửa";
-            this.col_Sua.ToolTipText = "Sửa";
-            this.col_Sua.UseColumnTextForButtonValue = true;
-            this.col_Sua.Width = 50;
-            // 
-            // col_Xoa
-            // 
-            this.col_Xoa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.col_Xoa.HeaderText = "Xoá";
-            this.col_Xoa.Name = "col_Xoa";
-            this.col_Xoa.Text = "Xoá";
-            this.col_Xoa.ToolTipText = "Xoá";
-            this.col_Xoa.UseColumnTextForButtonValue = true;
-            this.col_Xoa.Width = 50;
-            // 
             // bunifuButton1
             // 
             this.bunifuButton1.AllowToggling = false;
@@ -400,6 +350,62 @@ namespace BachHoaXanh_Store
             this.bunifuButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuButton1.TextMarginLeft = 0;
             this.bunifuButton1.UseDefaultRadiusAndThickness = true;
+            // 
+            // col_MaSP
+            // 
+            this.col_MaSP.DataPropertyName = "MaSP";
+            this.col_MaSP.HeaderText = "Mã sản phẩm";
+            this.col_MaSP.Name = "col_MaSP";
+            // 
+            // col_TenSP
+            // 
+            this.col_TenSP.DataPropertyName = "TenSP";
+            this.col_TenSP.HeaderText = "Tên sản phẩm";
+            this.col_TenSP.Name = "col_TenSP";
+            // 
+            // col_MaLoaiSP
+            // 
+            this.col_MaLoaiSP.DataPropertyName = "MaLoaiSP";
+            this.col_MaLoaiSP.HeaderText = "Mã loại sản phẩm";
+            this.col_MaLoaiSP.Name = "col_MaLoaiSP";
+            // 
+            // col_MaNCC
+            // 
+            this.col_MaNCC.DataPropertyName = "MaNCC";
+            this.col_MaNCC.HeaderText = "Mã nhà cung cấp";
+            this.col_MaNCC.Name = "col_MaNCC";
+            // 
+            // col_DonViTinh
+            // 
+            this.col_DonViTinh.DataPropertyName = "DVT";
+            this.col_DonViTinh.HeaderText = "ĐVT";
+            this.col_DonViTinh.Name = "col_DonViTinh";
+            // 
+            // col_GiaBan
+            // 
+            this.col_GiaBan.DataPropertyName = "GiaBan";
+            this.col_GiaBan.HeaderText = "Giá bán";
+            this.col_GiaBan.Name = "col_GiaBan";
+            // 
+            // col_Sua
+            // 
+            this.col_Sua.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.col_Sua.HeaderText = "Sửa";
+            this.col_Sua.Name = "col_Sua";
+            this.col_Sua.Text = "Sửa";
+            this.col_Sua.ToolTipText = "Sửa";
+            this.col_Sua.UseColumnTextForButtonValue = true;
+            this.col_Sua.Width = 50;
+            // 
+            // col_Xoa
+            // 
+            this.col_Xoa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.col_Xoa.HeaderText = "Xoá";
+            this.col_Xoa.Name = "col_Xoa";
+            this.col_Xoa.Text = "Xoá";
+            this.col_Xoa.ToolTipText = "Xoá";
+            this.col_Xoa.UseColumnTextForButtonValue = true;
+            this.col_Xoa.Width = 50;
             // 
             // FormDanhSachSP
             // 

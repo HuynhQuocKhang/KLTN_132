@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLL_DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,8 @@ namespace BachHoaXanh_Store
         public FormDanhSachSP()
         {
             InitializeComponent();
+            ProductBLL objProductBLL = new ProductBLL();
+            dgv_DSSP.DataSource = objProductBLL.GetListAllProdyct();
         }
 
         private void dgv_DSSP_CellContentClick(object sender, DataGridViewCellEventArgs e)

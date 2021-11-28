@@ -9,19 +9,64 @@ namespace BLL_DAO
     public class OrderStoreBLL
     {
         BachHoaXanhDataContext db = new BachHoaXanhDataContext();
+        //Lấy danh sách tất cả các đơn đặt hàng 
         public IQueryable<DonDatHang> GetListAllOrderStore()
         {
             return db.DonDatHangs.Select(t => t);
         }
 
-        public IQueryable<DonDatHang> GetListAllOrderStoreByDay(DateTime dateFrom, DateTime dateTo)
+        //Lấy danh sách đơn đặt hàng theo điều kiện
+        public IQueryable<DonDatHang> GetListOrderStoreByKey(string strOrderId, string strStoreId, DateTime dateFrom, DateTime dateTo)
         {
-            return db.DonDatHangs.Select(t => t).Where(t => t.NgayDat >= dateFrom && t.NgayDat <= dateTo); ;
+            if (strOrderId == "" && strStoreId == "")
+            {
+                return db.DonDatHangs.Select(t => t).Where(t => t.NgayDat >= dateFrom && t.NgayDat <= dateTo);
+            }
+
+            else if (strOrderId == "")
+            {
+                return db.DonDatHangs.Select(t => t).Where(t => t.MaDH == int.Parse(strOrderId.Trim()) && t.NgayDat >= dateFrom && t.NgayDat <= dateTo);
+            }
+            else
+            {
+                return db.DonDatHangs.Select(t => t).Where(t => t.MaDH == int.Parse(strOrderId.Trim()) && t.MaST == strStoreId.Trim() && t.NgayDat >= dateFrom && t.NgayDat <= dateTo);
+            }
         }
 
-        public IQueryable<DonDatHang> GetListOrderStoreByStoreId(string strStoreId, DateTime dateFrom, DateTime dateTo)
+        //Tạo đơn đặt hàng
+        public bool InsertOrderStore(DonDatHang model)
         {
-            return db.DonDatHangs.Select(t => t).Where(t => t.MaST == strStoreId.Trim() && t.NgayDat >= dateFrom && t.NgayDat <= dateTo);
+            try
+            {
+                DonDatHang objDonDatHang = new DonDatHang();
+                objDonDatHang.MaST = model.MaST;
+                objDonDatHang.NgayDat = DateTime.Now;
+                objDonDatHang.TinhTrang = 0;
+                objDonDatHang.TongTien = model.TongTien;
+                objDonDatHang.Isdeleted = false;
+                db.DonDatHangs.InsertOnSubmit(objDonDatHang);
+                db.SubmitChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public bool DeleteOrderStore(DonDatHang model)
+        {
+            try
+            {
+                var objDonDatHang = db.DonDatHangs.Where(t => t.MaDH == model.MaDH).FirstOrDefault();
+                objDonDatHang.Isdeleted = true;
+                db.SubmitChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
     }
 }

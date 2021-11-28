@@ -1,0 +1,6 @@
+E:\KhoaLuanTotNghiep\BachHoaXanhStore\BachHoaXanh_Store\BO\obj\Debug\BO.csproj.CoreCompileInputs.cache
+E:\KhoaLuanTotNghiep\BachHoaXanhStore\BachHoaXanh_Store\BO\bin\Debug\BO.dll.config
+E:\KhoaLuanTotNghiep\BachHoaXanhStore\BachHoaXanh_Store\BO\bin\Debug\BO.dll
+E:\KhoaLuanTotNghiep\BachHoaXanhStore\BachHoaXanh_Store\BO\bin\Debug\BO.pdb
+E:\KhoaLuanTotNghiep\BachHoaXanhStore\BachHoaXanh_Store\BO\obj\Debug\BO.dll
+E:\KhoaLuanTotNghiep\BachHoaXanhStore\BachHoaXanh_Store\BO\obj\Debug\BO.pdb

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,5 +14,28 @@ namespace BLL_DAO
         {
             return data.CTDonDatHangs.Select(t => t).Where(t => t.MaDH == intOrderStoreId);
         }
+
+        public bool InserOrderStoreDetail(List<ProductBO> lstProduct, int intOrderStoreId)
+        {
+            try
+            {
+                foreach (var item in lstProduct)
+                {
+                    CTDonDatHang objCTDonDatHang = new CTDonDatHang();
+                    objCTDonDatHang.MaDH = intOrderStoreId;
+                    objCTDonDatHang.MaSP = item.MaSP;
+                    objCTDonDatHang.SoLuong = item.SoLuong;
+                    objCTDonDatHang.ThanhTien = item.SoLuong * item.GiaBan;
+                    data.CTDonDatHangs.InsertOnSubmit(objCTDonDatHang);
+                    data.SubmitChanges();
+                }
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
     }
 }
