@@ -84,7 +84,7 @@ namespace BLL_DAO
     #endregion
 		
 		public BachHoaXanhDataContext() : 
-				base(global::BLL_DAO.Properties.Settings.Default.BachHoaXanh_StoreConnectionString1, mappingSource)
+				base(global::BLL_DAO.Properties.Settings.Default.BachHoaXanh_StoreConnectionString, mappingSource)
 		{
 			OnCreated();
 		}

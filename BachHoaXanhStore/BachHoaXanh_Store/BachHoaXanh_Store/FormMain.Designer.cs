@@ -401,6 +401,7 @@ namespace BachHoaXanh_Store
             // 
             this.xtraTabbedMdiManager1.MdiParent = this;
             this.xtraTabbedMdiManager1.SelectedPageChanged += new System.EventHandler(this.xtraTabbedMdiManager1_SelectedPageChanged);
+            this.xtraTabbedMdiManager1.PageRemoved += new DevExpress.XtraTabbedMdi.MdiTabPageEventHandler(this.xtraTabbedMdiManager1_PageRemoved);
             // 
             // panel4
             // 

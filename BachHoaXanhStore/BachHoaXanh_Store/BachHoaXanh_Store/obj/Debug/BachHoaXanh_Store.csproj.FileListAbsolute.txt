@@ -403,16 +403,6 @@ E:\09DHTH5\KLTN\SoDoLop\KLTN_132\BachHoaXanhStore\BachHoaXanh_Store\BachHoaXanh_
 E:\09DHTH5\KLTN\SoDoLop\KLTN_132\BachHoaXanhStore\BachHoaXanh_Store\BachHoaXanh_Store\bin\Debug\Microsoft.MSXML.dll
 E:\09DHTH5\KLTN\SoDoLop\KLTN_132\BachHoaXanhStore\BachHoaXanh_Store\BachHoaXanh_Store\bin\Debug\BLL_DAO.pdb
 E:\09DHTH5\KLTN\SoDoLop\KLTN_132\BachHoaXanhStore\BachHoaXanh_Store\BachHoaXanh_Store\bin\Debug\BLL_DAO.dll.config
-E:\09DHTH5\KLTN\SoDoLop\KLTN_132\BachHoaXanhStore\BachHoaXanh_Store\BachHoaXanh_Store\bin\Debug\Bunifu.UI.WinForm.BunifuShadowPanel.xml
-E:\09DHTH5\KLTN\SoDoLop\KLTN_132\BachHoaXanhStore\BachHoaXanh_Store\BachHoaXanh_Store\bin\Debug\Bunifu.UI.WinForms.BunifuButton.xml
-E:\09DHTH5\KLTN\SoDoLop\KLTN_132\BachHoaXanhStore\BachHoaXanh_Store\BachHoaXanh_Store\bin\Debug\Bunifu.UI.WinForms.BunifuCheckBox.xml
-E:\09DHTH5\KLTN\SoDoLop\KLTN_132\BachHoaXanhStore\BachHoaXanh_Store\BachHoaXanh_Store\bin\Debug\Bunifu.UI.WinForms.BunifuDataGridView.xml
-E:\09DHTH5\KLTN\SoDoLop\KLTN_132\BachHoaXanhStore\BachHoaXanh_Store\BachHoaXanh_Store\bin\Debug\Bunifu.UI.WinForms.BunifuDatePicker.xml
-E:\09DHTH5\KLTN\SoDoLop\KLTN_132\BachHoaXanhStore\BachHoaXanh_Store\BachHoaXanh_Store\bin\Debug\Bunifu.UI.WinForms.BunifuDropdown.xml
-E:\09DHTH5\KLTN\SoDoLop\KLTN_132\BachHoaXanhStore\BachHoaXanh_Store\BachHoaXanh_Store\bin\Debug\Bunifu.UI.WinForms.BunifuLabel.xml
-E:\09DHTH5\KLTN\SoDoLop\KLTN_132\BachHoaXanhStore\BachHoaXanh_Store\BachHoaXanh_Store\bin\Debug\Bunifu.UI.WinForms.BunifuTextbox.xml
-E:\09DHTH5\KLTN\SoDoLop\KLTN_132\BachHoaXanhStore\BachHoaXanh_Store\BachHoaXanh_Store\bin\Debug\Bunifu.UI.WinForms.BunifuUserControl.xml
-E:\09DHTH5\KLTN\SoDoLop\KLTN_132\BachHoaXanhStore\BachHoaXanh_Store\BachHoaXanh_Store\bin\Debug\Bunifu_UI_v1.5.3.xml
 E:\09DHTH5\KLTN\SoDoLop\KLTN_132\BachHoaXanhStore\BachHoaXanh_Store\BachHoaXanh_Store\bin\Debug\DevExpress.Data.Desktop.v20.1.xml
 E:\09DHTH5\KLTN\SoDoLop\KLTN_132\BachHoaXanhStore\BachHoaXanh_Store\BachHoaXanh_Store\bin\Debug\DevExpress.Data.v20.1.xml
 E:\09DHTH5\KLTN\SoDoLop\KLTN_132\BachHoaXanhStore\BachHoaXanh_Store\BachHoaXanh_Store\bin\Debug\DevExpress.Printing.v20.1.Core.xml
@@ -519,7 +509,6 @@ E:\09DHTH5\KLTN\SoDoLop\KLTN_132\BachHoaXanhStore\BachHoaXanh_Store\BachHoaXanh_
 E:\09DHTH5\KLTN\SoDoLop\KLTN_132\BachHoaXanhStore\BachHoaXanh_Store\BachHoaXanh_Store\obj\Debug\BachHoaXanh_Store.csproj.CoreCompileInputs.cache
 E:\09DHTH5\KLTN\SoDoLop\KLTN_132\BachHoaXanhStore\BachHoaXanh_Store\BachHoaXanh_Store\obj\Debug\BachHoaXanh_Store.exe
 E:\09DHTH5\KLTN\SoDoLop\KLTN_132\BachHoaXanhStore\BachHoaXanh_Store\BachHoaXanh_Store\obj\Debug\BachHoaXanh_Store.pdb
-E:\09DHTH5\KLTN\SoDoLop\KLTN_132\BachHoaXanhStore\BachHoaXanh_Store\BachHoaXanh_Store\bin\Debug\Bunifu.UI.WinForms.BunifuPages.xml
 E:\09DHTH5\KLTN\SoDoLop\KLTN_132\BachHoaXanhStore\BachHoaXanh_Store\BachHoaXanh_Store\bin\Debug\DevExpress.XtraLayout.v20.1.dll
 E:\09DHTH5\KLTN\SoDoLop\KLTN_132\BachHoaXanhStore\BachHoaXanh_Store\BachHoaXanh_Store\bin\Debug\DevExpress.XtraLayout.v20.1.xml
 E:\09DHTH5\KLTN\SoDoLop\KLTN_132\BachHoaXanhStore\BachHoaXanh_Store\BachHoaXanh_Store\bin\Debug\de\DevExpress.XtraLayout.v20.1.resources.dll
@@ -659,3 +648,6 @@ E:\09DHTH5\KLTN\SoDoLop\KLTN_132\BachHoaXanhStore\BachHoaXanh_Store\BachHoaXanh_
 E:\09DHTH5\KLTN\SoDoLop\KLTN_132\BachHoaXanhStore\BachHoaXanh_Store\BachHoaXanh_Store\bin\Debug\ru\DevExpress.Diagram.v20.1.Core.resources.dll
 E:\09DHTH5\KLTN\SoDoLop\KLTN_132\BachHoaXanhStore\BachHoaXanh_Store\BachHoaXanh_Store\obj\Debug\BachHoaXanh_Store.ReportForm.rptPhieuTraHang.resources
 E:\09DHTH5\KLTN\SoDoLop\KLTN_132\BachHoaXanhStore\BachHoaXanh_Store\BachHoaXanh_Store\obj\Debug\BachHoaXanh_Store.ReportForm.rptPhieuXuatKho.resources
+E:\09DHTH5\KLTN\SoDoLop\KLTN_132\BachHoaXanhStore\BachHoaXanh_Store\BachHoaXanh_Store\bin\Debug\BO.dll
+E:\09DHTH5\KLTN\SoDoLop\KLTN_132\BachHoaXanhStore\BachHoaXanh_Store\BachHoaXanh_Store\bin\Debug\BO.pdb
+E:\09DHTH5\KLTN\SoDoLop\KLTN_132\BachHoaXanhStore\BachHoaXanh_Store\BachHoaXanh_Store\bin\Debug\BO.dll.config

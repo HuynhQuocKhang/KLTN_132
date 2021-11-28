@@ -4,3 +4,9 @@ E:\KhoaLuanTotNghiep\BachHoaXanhStore\BachHoaXanh_Store\BO\bin\Debug\BO.dll
 E:\KhoaLuanTotNghiep\BachHoaXanhStore\BachHoaXanh_Store\BO\bin\Debug\BO.pdb
 E:\KhoaLuanTotNghiep\BachHoaXanhStore\BachHoaXanh_Store\BO\obj\Debug\BO.dll
 E:\KhoaLuanTotNghiep\BachHoaXanhStore\BachHoaXanh_Store\BO\obj\Debug\BO.pdb
+E:\09DHTH5\KLTN\SoDoLop\KLTN_132\BachHoaXanhStore\BachHoaXanh_Store\BO\bin\Debug\BO.dll.config
+E:\09DHTH5\KLTN\SoDoLop\KLTN_132\BachHoaXanhStore\BachHoaXanh_Store\BO\bin\Debug\BO.dll
+E:\09DHTH5\KLTN\SoDoLop\KLTN_132\BachHoaXanhStore\BachHoaXanh_Store\BO\bin\Debug\BO.pdb
+E:\09DHTH5\KLTN\SoDoLop\KLTN_132\BachHoaXanhStore\BachHoaXanh_Store\BO\obj\Debug\BO.csproj.CoreCompileInputs.cache
+E:\09DHTH5\KLTN\SoDoLop\KLTN_132\BachHoaXanhStore\BachHoaXanh_Store\BO\obj\Debug\BO.dll
+E:\09DHTH5\KLTN\SoDoLop\KLTN_132\BachHoaXanhStore\BachHoaXanh_Store\BO\obj\Debug\BO.pdb
