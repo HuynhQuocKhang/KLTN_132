@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BachHoaXanh_Store.ReportForm;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -19,7 +20,7 @@ namespace BachHoaXanh_Store
         public static FormChinhSuaSP frmChinhSuaSP = null;
         public static FormXemDonDatHang frmXemDonDatHang = null;
         public static FormMain frmMain = null;
-
+        public static FormReport frmReport = null;
         [STAThread]
         static void Main()
         {
@@ -32,7 +33,10 @@ namespace BachHoaXanh_Store
             //frmPhieuTraHang = new FormPhieuTraHang();
             //frmDanhSachSP = new FormDanhSachSP();
             frmMain = new FormMain();
+            //FormReport frmReport = new FormReport();
             Application.Run(frmMain);
         }
+
+
     }
 }

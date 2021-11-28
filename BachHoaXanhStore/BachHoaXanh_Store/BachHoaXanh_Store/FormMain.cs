@@ -16,11 +16,13 @@ namespace BachHoaXanh_Store
         public FormMain()
         {
             InitializeComponent();
-           
         }
+        private string reportType;
+        public string ReportType { get => reportType; set => reportType = value; }
 
         private void btn_DatHangNCC_Click(object sender, EventArgs e)
         {
+            panel4.Visible = true;
             Program.frmDatHang = new FormDatHang();
             ViewChildForm(Program.frmDatHang);
         }
@@ -53,6 +55,7 @@ namespace BachHoaXanh_Store
 
         private void btn_XuatHang_Click(object sender, EventArgs e)
         {
+            panel4.Visible = true;
             Program.frmPhanPhoiHang = new FormPhanPhoiHang();
             ViewChildForm(Program.frmPhanPhoiHang);
         }
@@ -97,6 +100,49 @@ namespace BachHoaXanh_Store
         {
             Program.frmXemDonDatHang = new  FormXemDonDatHang();
             ViewChildForm(Program.frmXemDonDatHang);
+        }
+
+        private void xtraTabbedMdiManager1_SelectedPageChanged(object sender, EventArgs e)
+        {
+            if(xtraTabbedMdiManager1.SelectedPage.MdiChild.Name == "FormDatHang")
+            {
+                bunifuButton1.Visible = true;
+                reportType = "DatHang";
+                label1.Text = "Số đơn đã đặt";
+                label3.Text = "Tổng giá trị đặt";
+            }    
+            else if (xtraTabbedMdiManager1.SelectedPage.MdiChild.Name == "FormPhanPhoiHang")
+            {
+                bunifuButton1.Visible = true;
+                reportType = "PhanPhoiHang";
+                label1.Text = "Số đơn đã xuất";
+                label3.Text = "Tổng giá trị xuất";
+            }
+            else if (xtraTabbedMdiManager1.SelectedPage.MdiChild.Name == "FormTraHangNCC")
+            {
+                bunifuButton1.Visible = true;
+                reportType = "TraHang";
+                label1.Text = "Số sản phẩm trả về";
+                label3.Text = "Tổng giá trị trả về";
+            }
+            else if (xtraTabbedMdiManager1.SelectedPage.MdiChild.Name == "FormDanhSachSP")
+            {
+                bunifuButton1.Visible = false;
+                label1.Text = "Số sản phẩm còn";
+                label3.Text = "Số sản phẩm đã hết";
+            }
+            else if (xtraTabbedMdiManager1.SelectedPage.MdiChild.Name == "FormXemDonDatHang")
+            {
+                bunifuButton1.Visible = false;
+                label1.Text = "Số đơn chưa xử lí";
+                label3.Text = "Số đơn đã xử lí";
+            }
+        }
+
+        private void bunifuButton1_Click(object sender, EventArgs e)
+        {
+            Program.frmReport = new FormReport();
+            Program.frmReport.Show();
         }
     }
 }
