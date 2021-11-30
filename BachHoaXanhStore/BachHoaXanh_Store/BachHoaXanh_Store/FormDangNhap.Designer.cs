@@ -31,6 +31,9 @@ namespace BachHoaXanh_Store
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDangNhap));
+            Telerik.WinControls.UI.RadListDataItem radListDataItem1 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem2 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem3 = new Telerik.WinControls.UI.RadListDataItem();
             this.txt_username = new Telerik.WinControls.UI.RadTextBox();
             this.radPanel1 = new Telerik.WinControls.UI.RadPanel();
             this.btn_Close = new Telerik.WinControls.UI.RadButton();
@@ -42,6 +45,7 @@ namespace BachHoaXanh_Store
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.radThemeManager1 = new Telerik.WinControls.RadThemeManager();
             this.telerikMetroTheme1 = new Telerik.WinControls.Themes.TelerikMetroTheme();
+            this.radDropDownList1 = new Telerik.WinControls.UI.RadDropDownList();
             ((System.ComponentModel.ISupportInitialize)(this.txt_username)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel1)).BeginInit();
             this.radPanel1.SuspendLayout();
@@ -52,6 +56,7 @@ namespace BachHoaXanh_Store
             ((System.ComponentModel.ISupportInitialize)(this.radPanel2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel3)).BeginInit();
             this.radPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radDropDownList1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,22 +71,23 @@ namespace BachHoaXanh_Store
             // 
             // radPanel1
             // 
+            this.radPanel1.Controls.Add(this.radDropDownList1);
             this.radPanel1.Controls.Add(this.btn_Close);
             this.radPanel1.Controls.Add(this.btn_Login);
             this.radPanel1.Controls.Add(this.radLabel1);
             this.radPanel1.Controls.Add(this.txt_Password);
             this.radPanel1.Controls.Add(this.txt_username);
             this.radPanel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.radPanel1.Location = new System.Drawing.Point(199, 0);
+            this.radPanel1.Location = new System.Drawing.Point(247, 0);
             this.radPanel1.Name = "radPanel1";
-            this.radPanel1.Size = new System.Drawing.Size(270, 201);
+            this.radPanel1.Size = new System.Drawing.Size(270, 248);
             this.radPanel1.TabIndex = 2;
             this.radPanel1.ThemeName = "TelerikMetro";
             // 
             // btn_Close
             // 
             this.btn_Close.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Close.Location = new System.Drawing.Point(152, 173);
+            this.btn_Close.Location = new System.Drawing.Point(147, 206);
             this.btn_Close.Name = "btn_Close";
             this.btn_Close.Size = new System.Drawing.Size(110, 24);
             this.btn_Close.TabIndex = 5;
@@ -93,7 +99,7 @@ namespace BachHoaXanh_Store
             // 
             this.btn_Login.BackColor = System.Drawing.Color.White;
             this.btn_Login.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Login.Location = new System.Drawing.Point(18, 173);
+            this.btn_Login.Location = new System.Drawing.Point(13, 206);
             this.btn_Login.Name = "btn_Login";
             this.btn_Login.Size = new System.Drawing.Size(110, 24);
             this.btn_Login.TabIndex = 4;
@@ -126,10 +132,10 @@ namespace BachHoaXanh_Store
             this.radPanel2.BackColor = System.Drawing.Color.Transparent;
             this.radPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("radPanel2.BackgroundImage")));
             this.radPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.radPanel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.radPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radPanel2.Location = new System.Drawing.Point(0, 0);
             this.radPanel2.Name = "radPanel2";
-            this.radPanel2.Size = new System.Drawing.Size(200, 201);
+            this.radPanel2.Size = new System.Drawing.Size(247, 248);
             this.radPanel2.TabIndex = 3;
             this.radPanel2.ThemeName = "TelerikMetro";
             // 
@@ -140,7 +146,7 @@ namespace BachHoaXanh_Store
             this.radPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radPanel3.Location = new System.Drawing.Point(8, 8);
             this.radPanel3.Name = "radPanel3";
-            this.radPanel3.Size = new System.Drawing.Size(469, 201);
+            this.radPanel3.Size = new System.Drawing.Size(517, 248);
             this.radPanel3.TabIndex = 4;
             this.radPanel3.ThemeName = "TelerikMetro";
             // 
@@ -149,12 +155,27 @@ namespace BachHoaXanh_Store
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // radDropDownList1
+            // 
+            this.radDropDownList1.DropDownAnimationEnabled = true;
+            radListDataItem1.Text = "Quản lí kho";
+            radListDataItem2.Text = "Cửa hàng trưởng";
+            radListDataItem3.Text = "Nhân viên";
+            this.radDropDownList1.Items.Add(radListDataItem1);
+            this.radDropDownList1.Items.Add(radListDataItem2);
+            this.radDropDownList1.Items.Add(radListDataItem3);
+            this.radDropDownList1.Location = new System.Drawing.Point(27, 172);
+            this.radDropDownList1.Name = "radDropDownList1";
+            this.radDropDownList1.Size = new System.Drawing.Size(221, 24);
+            this.radDropDownList1.TabIndex = 6;
+            this.radDropDownList1.ThemeName = "TelerikMetro";
+            // 
             // FormDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(485, 217);
+            this.ClientSize = new System.Drawing.Size(533, 264);
             this.Controls.Add(this.radPanel3);
             this.Name = "FormDangNhap";
             this.Padding = new System.Windows.Forms.Padding(8);
@@ -175,6 +196,7 @@ namespace BachHoaXanh_Store
             ((System.ComponentModel.ISupportInitialize)(this.radPanel2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel3)).EndInit();
             this.radPanel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.radDropDownList1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
@@ -192,5 +214,6 @@ namespace BachHoaXanh_Store
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private Telerik.WinControls.RadThemeManager radThemeManager1;
         private Telerik.WinControls.Themes.TelerikMetroTheme telerikMetroTheme1;
+        private Telerik.WinControls.UI.RadDropDownList radDropDownList1;
     }
 }

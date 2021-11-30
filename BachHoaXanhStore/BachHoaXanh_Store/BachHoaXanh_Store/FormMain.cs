@@ -22,7 +22,7 @@ namespace BachHoaXanh_Store
 
         private void btn_DatHangNCC_Click(object sender, EventArgs e)
         {
-            panel4.Visible = true;
+            panel9.Visible = true;
             bunifuButton1.Visible = true;
             reportType = "DatHang";
             label1.Text = "Số đơn đã đặt";
@@ -59,7 +59,7 @@ namespace BachHoaXanh_Store
 
         private void btn_XuatHang_Click(object sender, EventArgs e)
         {
-            panel4.Visible = true;
+            panel9.Visible = true;
             bunifuButton1.Visible = true;
             reportType = "PhanPhoiHang";
             label1.Text = "Số đơn đã xuất";
@@ -70,7 +70,7 @@ namespace BachHoaXanh_Store
 
         private void btn_TraHangNCC_Click(object sender, EventArgs e)
         {
-            panel4.Visible = true;
+            panel9.Visible = true;
             bunifuButton1.Visible = true;
             reportType = "TraHang";
             label1.Text = "Số sản phẩm trả về";
@@ -81,7 +81,7 @@ namespace BachHoaXanh_Store
 
         private void accordionControlElement6_Click(object sender, EventArgs e)
         {
-            panel4.Visible = true;
+            panel9.Visible = true;
             bunifuButton1.Visible = false;
             label1.Text = "Số sản phẩm còn";
             label3.Text = "Số sản phẩm đã hết";
@@ -91,7 +91,7 @@ namespace BachHoaXanh_Store
 
         private void accordionControlElement7_Click(object sender, EventArgs e)
         {
-            panel4.Visible = true;
+            panel9.Visible = true;
             bunifuButton1.Visible = false;
             label1.Text = "Số đơn chưa xử lí";
             label3.Text = "Số đơn đã xử lí";
@@ -101,7 +101,7 @@ namespace BachHoaXanh_Store
 
         private void accordionControlElement3_Click(object sender, EventArgs e)
         {
-            panel4.Visible = true;
+            panel9.Visible = true;
             bunifuButton1.Visible = true;
             reportType = "DatHang";
             label1.Text = "Số đơn đã đặt";
@@ -112,7 +112,7 @@ namespace BachHoaXanh_Store
 
         private void accordionControlElement4_Click(object sender, EventArgs e)
         {
-            panel4.Visible = true;
+            panel9.Visible = true;
             bunifuButton1.Visible = true;
             reportType = "TraHang";
             label1.Text = "Số sản phẩm trả về";
@@ -123,7 +123,7 @@ namespace BachHoaXanh_Store
 
         private void accordionControlElement5_Click(object sender, EventArgs e)
         {
-            panel4.Visible = true;
+            panel9.Visible = true;
             bunifuButton1.Visible = false;
             label1.Text = "Số sản phẩm còn";
             label3.Text = "Số sản phẩm đã hết";
@@ -133,7 +133,7 @@ namespace BachHoaXanh_Store
 
         private void accordionControlElement8_Click(object sender, EventArgs e)
         {
-            panel4.Visible = true;
+            panel9.Visible = true;
             bunifuButton1.Visible = false;
             label1.Text = "Số đơn chưa xử lí";
             label3.Text = "Số đơn đã xử lí";
@@ -192,7 +192,7 @@ namespace BachHoaXanh_Store
         {
             if (MdiChildren.Count() == 0)
             {
-                panel4.Visible = false;
+                panel9.Visible = false;
             }
         }
     }
