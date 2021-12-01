@@ -41,7 +41,7 @@ namespace BLL_DAO
                 DonDatHang objDonDatHang = new DonDatHang();
                 objDonDatHang.MaST = model.MaST;
                 objDonDatHang.NgayDat = DateTime.Now;
-                objDonDatHang.TinhTrang = 0;
+                objDonDatHang.TinhTrang = "0";
                 objDonDatHang.TongTien = model.TongTien;
                 objDonDatHang.Isdeleted = false;
                 db.DonDatHangs.InsertOnSubmit(objDonDatHang);

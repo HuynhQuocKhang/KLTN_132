@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,9 +10,17 @@ namespace BLL_DAO
     public class CustomerBLL
     {
         BachHoaXanhDataContext data = new BachHoaXanhDataContext();
-        public IQueryable<NhaCungCap> GetListALlCustomer()
+        public List<CustomerBO> GetListALlCustomer()
         {
-            return data.NhaCungCaps.Select(t => t);
+            var model = from objCustomer in data.NhaCungCaps
+                        select new CustomerBO()
+                        {
+                            MaNCC = objCustomer.MaNCC,
+                            TenNCC = objCustomer.TenNCC,
+                            DiaChi = objCustomer.DiaChi
+                        };
+            model.OrderByDescending(x => x.MaNCC);
+            return model.ToList();
         }
     }
 }

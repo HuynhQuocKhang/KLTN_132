@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BachHoaXanh_Store" Class="BachHoaXanhDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-HAF1U2R\HUYNHKHANG;Initial Catalog=BachHoaXanh_Store;Integrated Security=True" SettingsObjectName="BLL_DAO.Properties.Settings" SettingsPropertyName="BachHoaXanh_StoreConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=162860-VHBSON;Initial Catalog=BachHoaXanh_Store;Integrated Security=True" SettingsObjectName="BLL_DAO.Properties.Settings" SettingsPropertyName="BachHoaXanh_StoreConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.CTDonDatHang" Member="CTDonDatHangs">
     <Type Name="CTDonDatHang">
-      <Column Name="MaCTDDH" Type="System.String" DbType="NVarChar(30) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaCTDDH" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="MaSP" Type="System.String" DbType="NVarChar(30) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="MaDH" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="SoLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="ThanhTien" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="ThanhTien" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="DonDatHang_CTDonDatHang" Member="DonDatHang" ThisKey="MaDH" OtherKey="MaDH" Type="DonDatHang" IsForeignKey="true" />
       <Association Name="SanPham_CTDonDatHang" Member="SanPham" ThisKey="MaSP" OtherKey="MaSP" Type="SanPham" IsForeignKey="true" />
     </Type>
@@ -29,7 +29,7 @@
       <Column Name="MaHDDat" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="MaSP" Type="System.String" DbType="NVarChar(30) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="SoLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="ThanhTien" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="ThanhTien" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="HoaDonDatNCC_CTHoaDonDatNCC" Member="HoaDonDatNCC" ThisKey="MaHDDat" OtherKey="MaHDDat" Type="HoaDonDatNCC" IsForeignKey="true" />
       <Association Name="SanPham_CTHoaDonDatNCC" Member="SanPham" ThisKey="MaSP" OtherKey="MaSP" Type="SanPham" IsForeignKey="true" />
     </Type>
@@ -50,7 +50,7 @@
       <Column Name="MaPGH" Type="System.String" DbType="NVarChar(30) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="MaSP" Type="System.String" DbType="NVarChar(30) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="SoLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="ThanhTien" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="ThanhTien" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="PhieuGiaoHangNCC_CTPhieuGiaoHangNCC" Member="PhieuGiaoHangNCC" ThisKey="MaPGH" OtherKey="MaPGH" Type="PhieuGiaoHangNCC" IsForeignKey="true" />
       <Association Name="SanPham_CTPhieuGiaoHangNCC" Member="SanPham" ThisKey="MaSP" OtherKey="MaSP" Type="SanPham" IsForeignKey="true" />
     </Type>
@@ -70,7 +70,7 @@
       <Column Name="MaPXK" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="MaSP" Type="System.String" DbType="NVarChar(30) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="SoLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="ThanhTien" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="ThanhTien" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="PhieuXuatKho_CTPhieuXuatKho" Member="PhieuXuatKho" ThisKey="MaPXK" OtherKey="MaPXK" Type="PhieuXuatKho" IsForeignKey="true" />
       <Association Name="SanPham_CTPhieuXuatKho" Member="SanPham" ThisKey="MaSP" OtherKey="MaSP" Type="SanPham" IsForeignKey="true" />
     </Type>
@@ -80,13 +80,9 @@
       <Column Name="MaDH" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="MaST" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
       <Column Name="NgayDat" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-      <Column Name="TinhTrang" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="TongTien" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="TinhTrang" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="TongTien" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="Isdeleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="DeletedUser" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
-      <Column Name="DeletedDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-      <Column Name="CreatedUser" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
-      <Column Name="Creatdate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Association Name="DonDatHang_CTDonDatHang" Member="CTDonDatHangs" ThisKey="MaDH" OtherKey="MaDH" Type="CTDonDatHang" />
       <Association Name="DonDatHang_PhieuXuatKho" Member="PhieuXuatKhos" ThisKey="MaDH" OtherKey="MaDH" Type="PhieuXuatKho" />
       <Association Name="SieuThi_DonDatHang" Member="SieuThi" ThisKey="MaST" OtherKey="MaST" Type="SieuThi" IsForeignKey="true" />
@@ -96,14 +92,10 @@
     <Type Name="HoaDonDatNCC">
       <Column Name="MaHDDat" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="MaNCC" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="TongTien" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="TongTien" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="NgayDat" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-      <Column Name="TinhTrang" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TinhTrang" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
       <Column Name="Isdeleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="DeletedUser" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
-      <Column Name="DeletedDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-      <Column Name="CreatedUser" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
-      <Column Name="Creatdate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Association Name="HoaDonDatNCC_CTHoaDonDatNCC" Member="CTHoaDonDatNCCs" ThisKey="MaHDDat" OtherKey="MaHDDat" Type="CTHoaDonDatNCC" />
       <Association Name="HoaDonDatNCC_PhieuGiaoHangNCC" Member="PhieuGiaoHangNCCs" ThisKey="MaHDDat" OtherKey="MaHDDat" Type="PhieuGiaoHangNCC" />
       <Association Name="NhaCungCap_HoaDonDatNCC" Member="NhaCungCap" ThisKey="MaNCC" OtherKey="MaNCC" Type="NhaCungCap" IsForeignKey="true" />
@@ -131,10 +123,6 @@
       <Column Name="MaLoaiSP" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="TenLoaiSP" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
       <Column Name="Isdeleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="DeletedUser" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
-      <Column Name="DeletedDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-      <Column Name="CreatedUser" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
-      <Column Name="Creatdate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Association Name="LoaiSP_SanPham" Member="SanPhams" ThisKey="MaLoaiSP" OtherKey="MaLoaiSP" Type="SanPham" />
     </Type>
   </Table>
@@ -151,6 +139,7 @@
     <Type Name="PhieuGiaoHangNCC">
       <Column Name="MaPGH" Type="System.String" DbType="NVarChar(30) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="MaHDDat" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Isdeleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
       <Association Name="PhieuGiaoHangNCC_CTPhieuGiaoHangNCC" Member="CTPhieuGiaoHangNCCs" ThisKey="MaPGH" OtherKey="MaPGH" Type="CTPhieuGiaoHangNCC" />
       <Association Name="HoaDonDatNCC_PhieuGiaoHangNCC" Member="HoaDonDatNCC" ThisKey="MaHDDat" OtherKey="MaHDDat" Type="HoaDonDatNCC" IsForeignKey="true" />
     </Type>
@@ -160,13 +149,9 @@
       <Column Name="MaPTH" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="MaST" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
       <Column Name="NgayTra" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-      <Column Name="TongTien" Type="System.Decimal" DbType="Money" CanBeNull="true" />
-      <Column Name="TinhTrang" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TongTien" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="Isdeleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="DeletedUser" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
-      <Column Name="DeletedDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-      <Column Name="CreatedUser" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
-      <Column Name="Creatdate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="TinhTrang" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
       <Association Name="PhieuTraHang_CTPhieuTraHang" Member="CTPhieuTraHangs" ThisKey="MaPTH" OtherKey="MaPTH" Type="CTPhieuTraHang" />
       <Association Name="SieuThi_PhieuTraHang" Member="SieuThi" ThisKey="MaST" OtherKey="MaST" Type="SieuThi" IsForeignKey="true" />
     </Type>
@@ -176,14 +161,9 @@
       <Column Name="MaPXK" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="MaST" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
       <Column Name="MaDH" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="TongTien" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="TongTien" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="NgayXuat" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-      <Column Name="Tinhtrang" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="Isdeleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="DeletedUser" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
-      <Column Name="DeletedDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-      <Column Name="CreatedUser" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
-      <Column Name="Creatdate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Association Name="PhieuXuatKho_CTPhieuXuatKho" Member="CTPhieuXuatKhos" ThisKey="MaPXK" OtherKey="MaPXK" Type="CTPhieuXuatKho" />
       <Association Name="DonDatHang_PhieuXuatKho" Member="DonDatHang" ThisKey="MaDH" OtherKey="MaDH" Type="DonDatHang" IsForeignKey="true" />
       <Association Name="SieuThi_PhieuXuatKho" Member="SieuThi" ThisKey="MaST" OtherKey="MaST" Type="SieuThi" IsForeignKey="true" />
@@ -198,11 +178,8 @@
       <Column Name="DVT" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
       <Column Name="GiaBan" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="GiaVon" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SoLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="Isdeleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="DeletedUser" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
-      <Column Name="DeletedDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-      <Column Name="CreatedUser" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
-      <Column Name="Creatdate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Association Name="SanPham_CTDonDatHang" Member="CTDonDatHangs" ThisKey="MaSP" OtherKey="MaSP" Type="CTDonDatHang" />
       <Association Name="SanPham_CTHoaDonDatNCC" Member="CTHoaDonDatNCCs" ThisKey="MaSP" OtherKey="MaSP" Type="CTHoaDonDatNCC" />
       <Association Name="SanPham_CTKhoHangKM" Member="CTKhoHangKMs" ThisKey="MaSP" OtherKey="MaSP" Type="CTKhoHangKM" />

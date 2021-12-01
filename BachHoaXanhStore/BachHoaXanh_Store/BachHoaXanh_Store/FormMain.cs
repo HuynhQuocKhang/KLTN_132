@@ -1,4 +1,6 @@
-﻿using DevExpress.XtraEditors;
+﻿using BLL_DAO;
+using BO;
+using DevExpress.XtraEditors;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +15,8 @@ namespace BachHoaXanh_Store
 {
     public partial class FormMain : DevExpress.XtraEditors.XtraForm
     {
+        public static ProductBLL objProductBLL = new ProductBLL();
+        public static List<ProductBO> lstProduct = objProductBLL.GetListAllProduct();
         public FormMain()
         {
             InitializeComponent();
@@ -171,6 +175,14 @@ namespace BachHoaXanh_Store
                     bunifuButton1.Visible = false;
                     label1.Text = "Số sản phẩm còn";
                     label3.Text = "Số sản phẩm đã hết";
+                    
+                    
+                    int intProductStock = 0;
+                    int intProductOOT = 0;
+                    intProductStock = lstProduct.Count(x => x.SoLuong > 0);
+                    intProductOOT = lstProduct.Count(x => x.SoLuong == 0);
+                    label2.Text = intProductStock.ToString();
+                    label4.Text = intProductOOT.ToString();
                 }
                 else if (xtraTabbedMdiManager1.SelectedPage.Text == "FormXemDonDatHang")
                 {
@@ -181,6 +193,7 @@ namespace BachHoaXanh_Store
             }
 
         }
+
 
         private void bunifuButton1_Click(object sender, EventArgs e)
         {

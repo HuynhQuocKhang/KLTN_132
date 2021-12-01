@@ -76,6 +76,7 @@
     <Compile Include="OrderStoreBLL.cs" />
     <Compile Include="OrderStoreDetailBLL.cs" />
     <Compile Include="ProductBLL.cs" />
+    <Compile Include="ProductTypeBLL.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>

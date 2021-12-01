@@ -256,7 +256,7 @@ namespace BLL_DAO
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private string _MaCTDDH;
+		private int _MaCTDDH;
 		
 		private string _MaSP;
 		
@@ -264,7 +264,7 @@ namespace BLL_DAO
 		
 		private System.Nullable<int> _SoLuong;
 		
-		private System.Nullable<decimal> _ThanhTien;
+		private System.Nullable<int> _ThanhTien;
 		
 		private EntityRef<DonDatHang> _DonDatHang;
 		
@@ -274,7 +274,7 @@ namespace BLL_DAO
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OnMaCTDDHChanging(string value);
+    partial void OnMaCTDDHChanging(int value);
     partial void OnMaCTDDHChanged();
     partial void OnMaSPChanging(string value);
     partial void OnMaSPChanged();
@@ -282,7 +282,7 @@ namespace BLL_DAO
     partial void OnMaDHChanged();
     partial void OnSoLuongChanging(System.Nullable<int> value);
     partial void OnSoLuongChanged();
-    partial void OnThanhTienChanging(System.Nullable<decimal> value);
+    partial void OnThanhTienChanging(System.Nullable<int> value);
     partial void OnThanhTienChanged();
     #endregion
 		
@@ -293,8 +293,8 @@ namespace BLL_DAO
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaCTDDH", DbType="NVarChar(30) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string MaCTDDH
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaCTDDH", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int MaCTDDH
 		{
 			get
 			{
@@ -381,8 +381,8 @@ namespace BLL_DAO
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ThanhTien", DbType="Money")]
-		public System.Nullable<decimal> ThanhTien
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ThanhTien", DbType="Int")]
+		public System.Nullable<int> ThanhTien
 		{
 			get
 			{
@@ -776,7 +776,7 @@ namespace BLL_DAO
 		
 		private System.Nullable<int> _SoLuong;
 		
-		private System.Nullable<decimal> _ThanhTien;
+		private System.Nullable<int> _ThanhTien;
 		
 		private EntityRef<HoaDonDatNCC> _HoaDonDatNCC;
 		
@@ -792,7 +792,7 @@ namespace BLL_DAO
     partial void OnMaSPChanged();
     partial void OnSoLuongChanging(System.Nullable<int> value);
     partial void OnSoLuongChanged();
-    partial void OnThanhTienChanging(System.Nullable<decimal> value);
+    partial void OnThanhTienChanging(System.Nullable<int> value);
     partial void OnThanhTienChanged();
     #endregion
 		
@@ -871,8 +871,8 @@ namespace BLL_DAO
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ThanhTien", DbType="Money")]
-		public System.Nullable<decimal> ThanhTien
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ThanhTien", DbType="Int")]
+		public System.Nullable<int> ThanhTien
 		{
 			get
 			{
@@ -1232,7 +1232,7 @@ namespace BLL_DAO
 		
 		private System.Nullable<int> _SoLuong;
 		
-		private System.Nullable<decimal> _ThanhTien;
+		private System.Nullable<int> _ThanhTien;
 		
 		private EntityRef<PhieuGiaoHangNCC> _PhieuGiaoHangNCC;
 		
@@ -1248,7 +1248,7 @@ namespace BLL_DAO
     partial void OnMaSPChanged();
     partial void OnSoLuongChanging(System.Nullable<int> value);
     partial void OnSoLuongChanged();
-    partial void OnThanhTienChanging(System.Nullable<decimal> value);
+    partial void OnThanhTienChanging(System.Nullable<int> value);
     partial void OnThanhTienChanged();
     #endregion
 		
@@ -1327,8 +1327,8 @@ namespace BLL_DAO
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ThanhTien", DbType="Money")]
-		public System.Nullable<decimal> ThanhTien
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ThanhTien", DbType="Int")]
+		public System.Nullable<int> ThanhTien
 		{
 			get
 			{
@@ -1664,7 +1664,7 @@ namespace BLL_DAO
 		
 		private System.Nullable<int> _SoLuong;
 		
-		private System.Nullable<decimal> _ThanhTien;
+		private System.Nullable<int> _ThanhTien;
 		
 		private EntityRef<PhieuXuatKho> _PhieuXuatKho;
 		
@@ -1680,7 +1680,7 @@ namespace BLL_DAO
     partial void OnMaSPChanged();
     partial void OnSoLuongChanging(System.Nullable<int> value);
     partial void OnSoLuongChanged();
-    partial void OnThanhTienChanging(System.Nullable<decimal> value);
+    partial void OnThanhTienChanging(System.Nullable<int> value);
     partial void OnThanhTienChanged();
     #endregion
 		
@@ -1759,8 +1759,8 @@ namespace BLL_DAO
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ThanhTien", DbType="Money")]
-		public System.Nullable<decimal> ThanhTien
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ThanhTien", DbType="Int")]
+		public System.Nullable<int> ThanhTien
 		{
 			get
 			{
@@ -1880,19 +1880,11 @@ namespace BLL_DAO
 		
 		private System.Nullable<System.DateTime> _NgayDat;
 		
-		private System.Nullable<int> _TinhTrang;
+		private string _TinhTrang;
 		
-		private System.Nullable<decimal> _TongTien;
+		private System.Nullable<int> _TongTien;
 		
 		private System.Nullable<bool> _Isdeleted;
-		
-		private string _DeletedUser;
-		
-		private System.Nullable<System.DateTime> _DeletedDate;
-		
-		private string _CreatedUser;
-		
-		private System.Nullable<System.DateTime> _Creatdate;
 		
 		private EntitySet<CTDonDatHang> _CTDonDatHangs;
 		
@@ -1910,20 +1902,12 @@ namespace BLL_DAO
     partial void OnMaSTChanged();
     partial void OnNgayDatChanging(System.Nullable<System.DateTime> value);
     partial void OnNgayDatChanged();
-    partial void OnTinhTrangChanging(System.Nullable<int> value);
+    partial void OnTinhTrangChanging(string value);
     partial void OnTinhTrangChanged();
-    partial void OnTongTienChanging(System.Nullable<decimal> value);
+    partial void OnTongTienChanging(System.Nullable<int> value);
     partial void OnTongTienChanged();
     partial void OnIsdeletedChanging(System.Nullable<bool> value);
     partial void OnIsdeletedChanged();
-    partial void OnDeletedUserChanging(string value);
-    partial void OnDeletedUserChanged();
-    partial void OnDeletedDateChanging(System.Nullable<System.DateTime> value);
-    partial void OnDeletedDateChanged();
-    partial void OnCreatedUserChanging(string value);
-    partial void OnCreatedUserChanged();
-    partial void OnCreatdateChanging(System.Nullable<System.DateTime> value);
-    partial void OnCreatdateChanged();
     #endregion
 		
 		public DonDatHang()
@@ -1998,8 +1982,8 @@ namespace BLL_DAO
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TinhTrang", DbType="Int")]
-		public System.Nullable<int> TinhTrang
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TinhTrang", DbType="NVarChar(30)")]
+		public string TinhTrang
 		{
 			get
 			{
@@ -2018,8 +2002,8 @@ namespace BLL_DAO
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TongTien", DbType="Money")]
-		public System.Nullable<decimal> TongTien
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TongTien", DbType="Int")]
+		public System.Nullable<int> TongTien
 		{
 			get
 			{
@@ -2054,86 +2038,6 @@ namespace BLL_DAO
 					this._Isdeleted = value;
 					this.SendPropertyChanged("Isdeleted");
 					this.OnIsdeletedChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DeletedUser", DbType="NVarChar(30)")]
-		public string DeletedUser
-		{
-			get
-			{
-				return this._DeletedUser;
-			}
-			set
-			{
-				if ((this._DeletedUser != value))
-				{
-					this.OnDeletedUserChanging(value);
-					this.SendPropertyChanging();
-					this._DeletedUser = value;
-					this.SendPropertyChanged("DeletedUser");
-					this.OnDeletedUserChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DeletedDate", DbType="Date")]
-		public System.Nullable<System.DateTime> DeletedDate
-		{
-			get
-			{
-				return this._DeletedDate;
-			}
-			set
-			{
-				if ((this._DeletedDate != value))
-				{
-					this.OnDeletedDateChanging(value);
-					this.SendPropertyChanging();
-					this._DeletedDate = value;
-					this.SendPropertyChanged("DeletedDate");
-					this.OnDeletedDateChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreatedUser", DbType="NVarChar(30)")]
-		public string CreatedUser
-		{
-			get
-			{
-				return this._CreatedUser;
-			}
-			set
-			{
-				if ((this._CreatedUser != value))
-				{
-					this.OnCreatedUserChanging(value);
-					this.SendPropertyChanging();
-					this._CreatedUser = value;
-					this.SendPropertyChanged("CreatedUser");
-					this.OnCreatedUserChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Creatdate", DbType="Date")]
-		public System.Nullable<System.DateTime> Creatdate
-		{
-			get
-			{
-				return this._Creatdate;
-			}
-			set
-			{
-				if ((this._Creatdate != value))
-				{
-					this.OnCreatdateChanging(value);
-					this.SendPropertyChanging();
-					this._Creatdate = value;
-					this.SendPropertyChanged("Creatdate");
-					this.OnCreatdateChanged();
 				}
 			}
 		}
@@ -2253,21 +2157,13 @@ namespace BLL_DAO
 		
 		private System.Nullable<int> _MaNCC;
 		
-		private System.Nullable<decimal> _TongTien;
+		private System.Nullable<int> _TongTien;
 		
 		private System.Nullable<System.DateTime> _NgayDat;
 		
-		private System.Nullable<int> _TinhTrang;
+		private string _TinhTrang;
 		
 		private System.Nullable<bool> _Isdeleted;
-		
-		private string _DeletedUser;
-		
-		private System.Nullable<System.DateTime> _DeletedDate;
-		
-		private string _CreatedUser;
-		
-		private System.Nullable<System.DateTime> _Creatdate;
 		
 		private EntitySet<CTHoaDonDatNCC> _CTHoaDonDatNCCs;
 		
@@ -2283,22 +2179,14 @@ namespace BLL_DAO
     partial void OnMaHDDatChanged();
     partial void OnMaNCCChanging(System.Nullable<int> value);
     partial void OnMaNCCChanged();
-    partial void OnTongTienChanging(System.Nullable<decimal> value);
+    partial void OnTongTienChanging(System.Nullable<int> value);
     partial void OnTongTienChanged();
     partial void OnNgayDatChanging(System.Nullable<System.DateTime> value);
     partial void OnNgayDatChanged();
-    partial void OnTinhTrangChanging(System.Nullable<int> value);
+    partial void OnTinhTrangChanging(string value);
     partial void OnTinhTrangChanged();
     partial void OnIsdeletedChanging(System.Nullable<bool> value);
     partial void OnIsdeletedChanged();
-    partial void OnDeletedUserChanging(string value);
-    partial void OnDeletedUserChanged();
-    partial void OnDeletedDateChanging(System.Nullable<System.DateTime> value);
-    partial void OnDeletedDateChanged();
-    partial void OnCreatedUserChanging(string value);
-    partial void OnCreatedUserChanged();
-    partial void OnCreatdateChanging(System.Nullable<System.DateTime> value);
-    partial void OnCreatdateChanged();
     #endregion
 		
 		public HoaDonDatNCC()
@@ -2353,8 +2241,8 @@ namespace BLL_DAO
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TongTien", DbType="Money")]
-		public System.Nullable<decimal> TongTien
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TongTien", DbType="Int")]
+		public System.Nullable<int> TongTien
 		{
 			get
 			{
@@ -2393,8 +2281,8 @@ namespace BLL_DAO
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TinhTrang", DbType="Int")]
-		public System.Nullable<int> TinhTrang
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TinhTrang", DbType="NVarChar(30)")]
+		public string TinhTrang
 		{
 			get
 			{
@@ -2429,86 +2317,6 @@ namespace BLL_DAO
 					this._Isdeleted = value;
 					this.SendPropertyChanged("Isdeleted");
 					this.OnIsdeletedChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DeletedUser", DbType="NVarChar(30)")]
-		public string DeletedUser
-		{
-			get
-			{
-				return this._DeletedUser;
-			}
-			set
-			{
-				if ((this._DeletedUser != value))
-				{
-					this.OnDeletedUserChanging(value);
-					this.SendPropertyChanging();
-					this._DeletedUser = value;
-					this.SendPropertyChanged("DeletedUser");
-					this.OnDeletedUserChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DeletedDate", DbType="Date")]
-		public System.Nullable<System.DateTime> DeletedDate
-		{
-			get
-			{
-				return this._DeletedDate;
-			}
-			set
-			{
-				if ((this._DeletedDate != value))
-				{
-					this.OnDeletedDateChanging(value);
-					this.SendPropertyChanging();
-					this._DeletedDate = value;
-					this.SendPropertyChanged("DeletedDate");
-					this.OnDeletedDateChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreatedUser", DbType="NVarChar(30)")]
-		public string CreatedUser
-		{
-			get
-			{
-				return this._CreatedUser;
-			}
-			set
-			{
-				if ((this._CreatedUser != value))
-				{
-					this.OnCreatedUserChanging(value);
-					this.SendPropertyChanging();
-					this._CreatedUser = value;
-					this.SendPropertyChanged("CreatedUser");
-					this.OnCreatedUserChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Creatdate", DbType="Date")]
-		public System.Nullable<System.DateTime> Creatdate
-		{
-			get
-			{
-				return this._Creatdate;
-			}
-			set
-			{
-				if ((this._Creatdate != value))
-				{
-					this.OnCreatdateChanging(value);
-					this.SendPropertyChanging();
-					this._Creatdate = value;
-					this.SendPropertyChanged("Creatdate");
-					this.OnCreatdateChanged();
 				}
 			}
 		}
@@ -2977,14 +2785,6 @@ namespace BLL_DAO
 		
 		private System.Nullable<bool> _Isdeleted;
 		
-		private string _DeletedUser;
-		
-		private System.Nullable<System.DateTime> _DeletedDate;
-		
-		private string _CreatedUser;
-		
-		private System.Nullable<System.DateTime> _Creatdate;
-		
 		private EntitySet<SanPham> _SanPhams;
 		
     #region Extensibility Method Definitions
@@ -2997,14 +2797,6 @@ namespace BLL_DAO
     partial void OnTenLoaiSPChanged();
     partial void OnIsdeletedChanging(System.Nullable<bool> value);
     partial void OnIsdeletedChanged();
-    partial void OnDeletedUserChanging(string value);
-    partial void OnDeletedUserChanged();
-    partial void OnDeletedDateChanging(System.Nullable<System.DateTime> value);
-    partial void OnDeletedDateChanged();
-    partial void OnCreatedUserChanging(string value);
-    partial void OnCreatedUserChanged();
-    partial void OnCreatdateChanging(System.Nullable<System.DateTime> value);
-    partial void OnCreatdateChanged();
     #endregion
 		
 		public LoaiSP()
@@ -3069,86 +2861,6 @@ namespace BLL_DAO
 					this._Isdeleted = value;
 					this.SendPropertyChanged("Isdeleted");
 					this.OnIsdeletedChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DeletedUser", DbType="NVarChar(30)")]
-		public string DeletedUser
-		{
-			get
-			{
-				return this._DeletedUser;
-			}
-			set
-			{
-				if ((this._DeletedUser != value))
-				{
-					this.OnDeletedUserChanging(value);
-					this.SendPropertyChanging();
-					this._DeletedUser = value;
-					this.SendPropertyChanged("DeletedUser");
-					this.OnDeletedUserChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DeletedDate", DbType="Date")]
-		public System.Nullable<System.DateTime> DeletedDate
-		{
-			get
-			{
-				return this._DeletedDate;
-			}
-			set
-			{
-				if ((this._DeletedDate != value))
-				{
-					this.OnDeletedDateChanging(value);
-					this.SendPropertyChanging();
-					this._DeletedDate = value;
-					this.SendPropertyChanged("DeletedDate");
-					this.OnDeletedDateChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreatedUser", DbType="NVarChar(30)")]
-		public string CreatedUser
-		{
-			get
-			{
-				return this._CreatedUser;
-			}
-			set
-			{
-				if ((this._CreatedUser != value))
-				{
-					this.OnCreatedUserChanging(value);
-					this.SendPropertyChanging();
-					this._CreatedUser = value;
-					this.SendPropertyChanged("CreatedUser");
-					this.OnCreatedUserChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Creatdate", DbType="Date")]
-		public System.Nullable<System.DateTime> Creatdate
-		{
-			get
-			{
-				return this._Creatdate;
-			}
-			set
-			{
-				if ((this._Creatdate != value))
-				{
-					this.OnCreatdateChanging(value);
-					this.SendPropertyChanging();
-					this._Creatdate = value;
-					this.SendPropertyChanged("Creatdate");
-					this.OnCreatdateChanged();
 				}
 			}
 		}
@@ -3375,6 +3087,8 @@ namespace BLL_DAO
 		
 		private System.Nullable<int> _MaHDDat;
 		
+		private System.Nullable<bool> _Isdeleted;
+		
 		private EntitySet<CTPhieuGiaoHangNCC> _CTPhieuGiaoHangNCCs;
 		
 		private EntityRef<HoaDonDatNCC> _HoaDonDatNCC;
@@ -3387,6 +3101,8 @@ namespace BLL_DAO
     partial void OnMaPGHChanged();
     partial void OnMaHDDatChanging(System.Nullable<int> value);
     partial void OnMaHDDatChanged();
+    partial void OnIsdeletedChanging(System.Nullable<bool> value);
+    partial void OnIsdeletedChanged();
     #endregion
 		
 		public PhieuGiaoHangNCC()
@@ -3436,6 +3152,26 @@ namespace BLL_DAO
 					this._MaHDDat = value;
 					this.SendPropertyChanged("MaHDDat");
 					this.OnMaHDDatChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Isdeleted", DbType="Bit")]
+		public System.Nullable<bool> Isdeleted
+		{
+			get
+			{
+				return this._Isdeleted;
+			}
+			set
+			{
+				if ((this._Isdeleted != value))
+				{
+					this.OnIsdeletedChanging(value);
+					this.SendPropertyChanging();
+					this._Isdeleted = value;
+					this.SendPropertyChanged("Isdeleted");
+					this.OnIsdeletedChanged();
 				}
 			}
 		}
@@ -3532,19 +3268,11 @@ namespace BLL_DAO
 		
 		private System.Nullable<System.DateTime> _NgayTra;
 		
-		private System.Nullable<decimal> _TongTien;
-		
-		private System.Nullable<int> _TinhTrang;
+		private System.Nullable<int> _TongTien;
 		
 		private System.Nullable<bool> _Isdeleted;
 		
-		private string _DeletedUser;
-		
-		private System.Nullable<System.DateTime> _DeletedDate;
-		
-		private string _CreatedUser;
-		
-		private System.Nullable<System.DateTime> _Creatdate;
+		private string _TinhTrang;
 		
 		private EntitySet<CTPhieuTraHang> _CTPhieuTraHangs;
 		
@@ -3560,20 +3288,12 @@ namespace BLL_DAO
     partial void OnMaSTChanged();
     partial void OnNgayTraChanging(System.Nullable<System.DateTime> value);
     partial void OnNgayTraChanged();
-    partial void OnTongTienChanging(System.Nullable<decimal> value);
+    partial void OnTongTienChanging(System.Nullable<int> value);
     partial void OnTongTienChanged();
-    partial void OnTinhTrangChanging(System.Nullable<int> value);
-    partial void OnTinhTrangChanged();
     partial void OnIsdeletedChanging(System.Nullable<bool> value);
     partial void OnIsdeletedChanged();
-    partial void OnDeletedUserChanging(string value);
-    partial void OnDeletedUserChanged();
-    partial void OnDeletedDateChanging(System.Nullable<System.DateTime> value);
-    partial void OnDeletedDateChanged();
-    partial void OnCreatedUserChanging(string value);
-    partial void OnCreatedUserChanged();
-    partial void OnCreatdateChanging(System.Nullable<System.DateTime> value);
-    partial void OnCreatdateChanged();
+    partial void OnTinhTrangChanging(string value);
+    partial void OnTinhTrangChanged();
     #endregion
 		
 		public PhieuTraHang()
@@ -3647,8 +3367,8 @@ namespace BLL_DAO
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TongTien", DbType="Money")]
-		public System.Nullable<decimal> TongTien
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TongTien", DbType="Int")]
+		public System.Nullable<int> TongTien
 		{
 			get
 			{
@@ -3663,26 +3383,6 @@ namespace BLL_DAO
 					this._TongTien = value;
 					this.SendPropertyChanged("TongTien");
 					this.OnTongTienChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TinhTrang", DbType="Int")]
-		public System.Nullable<int> TinhTrang
-		{
-			get
-			{
-				return this._TinhTrang;
-			}
-			set
-			{
-				if ((this._TinhTrang != value))
-				{
-					this.OnTinhTrangChanging(value);
-					this.SendPropertyChanging();
-					this._TinhTrang = value;
-					this.SendPropertyChanged("TinhTrang");
-					this.OnTinhTrangChanged();
 				}
 			}
 		}
@@ -3707,82 +3407,22 @@ namespace BLL_DAO
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DeletedUser", DbType="NVarChar(30)")]
-		public string DeletedUser
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TinhTrang", DbType="NVarChar(30)")]
+		public string TinhTrang
 		{
 			get
 			{
-				return this._DeletedUser;
+				return this._TinhTrang;
 			}
 			set
 			{
-				if ((this._DeletedUser != value))
+				if ((this._TinhTrang != value))
 				{
-					this.OnDeletedUserChanging(value);
+					this.OnTinhTrangChanging(value);
 					this.SendPropertyChanging();
-					this._DeletedUser = value;
-					this.SendPropertyChanged("DeletedUser");
-					this.OnDeletedUserChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DeletedDate", DbType="Date")]
-		public System.Nullable<System.DateTime> DeletedDate
-		{
-			get
-			{
-				return this._DeletedDate;
-			}
-			set
-			{
-				if ((this._DeletedDate != value))
-				{
-					this.OnDeletedDateChanging(value);
-					this.SendPropertyChanging();
-					this._DeletedDate = value;
-					this.SendPropertyChanged("DeletedDate");
-					this.OnDeletedDateChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreatedUser", DbType="NVarChar(30)")]
-		public string CreatedUser
-		{
-			get
-			{
-				return this._CreatedUser;
-			}
-			set
-			{
-				if ((this._CreatedUser != value))
-				{
-					this.OnCreatedUserChanging(value);
-					this.SendPropertyChanging();
-					this._CreatedUser = value;
-					this.SendPropertyChanged("CreatedUser");
-					this.OnCreatedUserChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Creatdate", DbType="Date")]
-		public System.Nullable<System.DateTime> Creatdate
-		{
-			get
-			{
-				return this._Creatdate;
-			}
-			set
-			{
-				if ((this._Creatdate != value))
-				{
-					this.OnCreatdateChanging(value);
-					this.SendPropertyChanging();
-					this._Creatdate = value;
-					this.SendPropertyChanged("Creatdate");
-					this.OnCreatdateChanged();
+					this._TinhTrang = value;
+					this.SendPropertyChanged("TinhTrang");
+					this.OnTinhTrangChanged();
 				}
 			}
 		}
@@ -3879,21 +3519,11 @@ namespace BLL_DAO
 		
 		private System.Nullable<int> _MaDH;
 		
-		private System.Nullable<decimal> _TongTien;
+		private System.Nullable<int> _TongTien;
 		
 		private System.Nullable<System.DateTime> _NgayXuat;
 		
-		private System.Nullable<int> _Tinhtrang;
-		
 		private System.Nullable<bool> _Isdeleted;
-		
-		private string _DeletedUser;
-		
-		private System.Nullable<System.DateTime> _DeletedDate;
-		
-		private string _CreatedUser;
-		
-		private System.Nullable<System.DateTime> _Creatdate;
 		
 		private EntitySet<CTPhieuXuatKho> _CTPhieuXuatKhos;
 		
@@ -3911,22 +3541,12 @@ namespace BLL_DAO
     partial void OnMaSTChanged();
     partial void OnMaDHChanging(System.Nullable<int> value);
     partial void OnMaDHChanged();
-    partial void OnTongTienChanging(System.Nullable<decimal> value);
+    partial void OnTongTienChanging(System.Nullable<int> value);
     partial void OnTongTienChanged();
     partial void OnNgayXuatChanging(System.Nullable<System.DateTime> value);
     partial void OnNgayXuatChanged();
-    partial void OnTinhtrangChanging(System.Nullable<int> value);
-    partial void OnTinhtrangChanged();
     partial void OnIsdeletedChanging(System.Nullable<bool> value);
     partial void OnIsdeletedChanged();
-    partial void OnDeletedUserChanging(string value);
-    partial void OnDeletedUserChanged();
-    partial void OnDeletedDateChanging(System.Nullable<System.DateTime> value);
-    partial void OnDeletedDateChanged();
-    partial void OnCreatedUserChanging(string value);
-    partial void OnCreatedUserChanged();
-    partial void OnCreatdateChanging(System.Nullable<System.DateTime> value);
-    partial void OnCreatdateChanged();
     #endregion
 		
 		public PhieuXuatKho()
@@ -4005,8 +3625,8 @@ namespace BLL_DAO
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TongTien", DbType="Money")]
-		public System.Nullable<decimal> TongTien
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TongTien", DbType="Int")]
+		public System.Nullable<int> TongTien
 		{
 			get
 			{
@@ -4045,26 +3665,6 @@ namespace BLL_DAO
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Tinhtrang", DbType="Int")]
-		public System.Nullable<int> Tinhtrang
-		{
-			get
-			{
-				return this._Tinhtrang;
-			}
-			set
-			{
-				if ((this._Tinhtrang != value))
-				{
-					this.OnTinhtrangChanging(value);
-					this.SendPropertyChanging();
-					this._Tinhtrang = value;
-					this.SendPropertyChanged("Tinhtrang");
-					this.OnTinhtrangChanged();
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Isdeleted", DbType="Bit")]
 		public System.Nullable<bool> Isdeleted
 		{
@@ -4081,86 +3681,6 @@ namespace BLL_DAO
 					this._Isdeleted = value;
 					this.SendPropertyChanged("Isdeleted");
 					this.OnIsdeletedChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DeletedUser", DbType="NVarChar(30)")]
-		public string DeletedUser
-		{
-			get
-			{
-				return this._DeletedUser;
-			}
-			set
-			{
-				if ((this._DeletedUser != value))
-				{
-					this.OnDeletedUserChanging(value);
-					this.SendPropertyChanging();
-					this._DeletedUser = value;
-					this.SendPropertyChanged("DeletedUser");
-					this.OnDeletedUserChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DeletedDate", DbType="Date")]
-		public System.Nullable<System.DateTime> DeletedDate
-		{
-			get
-			{
-				return this._DeletedDate;
-			}
-			set
-			{
-				if ((this._DeletedDate != value))
-				{
-					this.OnDeletedDateChanging(value);
-					this.SendPropertyChanging();
-					this._DeletedDate = value;
-					this.SendPropertyChanged("DeletedDate");
-					this.OnDeletedDateChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreatedUser", DbType="NVarChar(30)")]
-		public string CreatedUser
-		{
-			get
-			{
-				return this._CreatedUser;
-			}
-			set
-			{
-				if ((this._CreatedUser != value))
-				{
-					this.OnCreatedUserChanging(value);
-					this.SendPropertyChanging();
-					this._CreatedUser = value;
-					this.SendPropertyChanged("CreatedUser");
-					this.OnCreatedUserChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Creatdate", DbType="Date")]
-		public System.Nullable<System.DateTime> Creatdate
-		{
-			get
-			{
-				return this._Creatdate;
-			}
-			set
-			{
-				if ((this._Creatdate != value))
-				{
-					this.OnCreatdateChanging(value);
-					this.SendPropertyChanging();
-					this._Creatdate = value;
-					this.SendPropertyChanged("Creatdate");
-					this.OnCreatdateChanged();
 				}
 			}
 		}
@@ -4299,15 +3819,9 @@ namespace BLL_DAO
 		
 		private System.Nullable<int> _GiaVon;
 		
+		private System.Nullable<int> _SoLuong;
+		
 		private System.Nullable<bool> _Isdeleted;
-		
-		private string _DeletedUser;
-		
-		private System.Nullable<System.DateTime> _DeletedDate;
-		
-		private string _CreatedUser;
-		
-		private System.Nullable<System.DateTime> _Creatdate;
 		
 		private EntitySet<CTDonDatHang> _CTDonDatHangs;
 		
@@ -4345,16 +3859,10 @@ namespace BLL_DAO
     partial void OnGiaBanChanged();
     partial void OnGiaVonChanging(System.Nullable<int> value);
     partial void OnGiaVonChanged();
+    partial void OnSoLuongChanging(System.Nullable<int> value);
+    partial void OnSoLuongChanged();
     partial void OnIsdeletedChanging(System.Nullable<bool> value);
     partial void OnIsdeletedChanged();
-    partial void OnDeletedUserChanging(string value);
-    partial void OnDeletedUserChanged();
-    partial void OnDeletedDateChanging(System.Nullable<System.DateTime> value);
-    partial void OnDeletedDateChanged();
-    partial void OnCreatedUserChanging(string value);
-    partial void OnCreatedUserChanged();
-    partial void OnCreatdateChanging(System.Nullable<System.DateTime> value);
-    partial void OnCreatdateChanged();
     #endregion
 		
 		public SanPham()
@@ -4519,6 +4027,26 @@ namespace BLL_DAO
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SoLuong", DbType="Int")]
+		public System.Nullable<int> SoLuong
+		{
+			get
+			{
+				return this._SoLuong;
+			}
+			set
+			{
+				if ((this._SoLuong != value))
+				{
+					this.OnSoLuongChanging(value);
+					this.SendPropertyChanging();
+					this._SoLuong = value;
+					this.SendPropertyChanged("SoLuong");
+					this.OnSoLuongChanged();
+				}
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Isdeleted", DbType="Bit")]
 		public System.Nullable<bool> Isdeleted
 		{
@@ -4535,86 +4063,6 @@ namespace BLL_DAO
 					this._Isdeleted = value;
 					this.SendPropertyChanged("Isdeleted");
 					this.OnIsdeletedChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DeletedUser", DbType="NVarChar(30)")]
-		public string DeletedUser
-		{
-			get
-			{
-				return this._DeletedUser;
-			}
-			set
-			{
-				if ((this._DeletedUser != value))
-				{
-					this.OnDeletedUserChanging(value);
-					this.SendPropertyChanging();
-					this._DeletedUser = value;
-					this.SendPropertyChanged("DeletedUser");
-					this.OnDeletedUserChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DeletedDate", DbType="Date")]
-		public System.Nullable<System.DateTime> DeletedDate
-		{
-			get
-			{
-				return this._DeletedDate;
-			}
-			set
-			{
-				if ((this._DeletedDate != value))
-				{
-					this.OnDeletedDateChanging(value);
-					this.SendPropertyChanging();
-					this._DeletedDate = value;
-					this.SendPropertyChanged("DeletedDate");
-					this.OnDeletedDateChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreatedUser", DbType="NVarChar(30)")]
-		public string CreatedUser
-		{
-			get
-			{
-				return this._CreatedUser;
-			}
-			set
-			{
-				if ((this._CreatedUser != value))
-				{
-					this.OnCreatedUserChanging(value);
-					this.SendPropertyChanging();
-					this._CreatedUser = value;
-					this.SendPropertyChanged("CreatedUser");
-					this.OnCreatedUserChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Creatdate", DbType="Date")]
-		public System.Nullable<System.DateTime> Creatdate
-		{
-			get
-			{
-				return this._Creatdate;
-			}
-			set
-			{
-				if ((this._Creatdate != value))
-				{
-					this.OnCreatdateChanging(value);
-					this.SendPropertyChanging();
-					this._Creatdate = value;
-					this.SendPropertyChanged("Creatdate");
-					this.OnCreatdateChanged();
 				}
 			}
 		}

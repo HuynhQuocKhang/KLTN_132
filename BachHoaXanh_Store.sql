@@ -1,10 +1,11 @@
 create database BachHoaXanh_Store
 use BachHoaXanh_Store
-drop database BachHoaXanh_Store
+--drop database BachHoaXanh_Store
 create table LoaiSP
 (
 	MaLoaiSP int IDENTITY(1,1),
 	TenLoaiSP nvarchar(30),
+	Isdeleted bit,
 	constraint PK_LoaiSP primary key (MaLoaiSP)
 )
 create table NhaCungCap
@@ -23,8 +24,10 @@ create table SanPham
 	MaLoaiSP int,
 	MaNCC int,
 	DVT nvarchar(20),
-	GiaBan money,
-	GiaVon money,
+	GiaBan int,
+	GiaVon int,
+	SoLuong int,
+	Isdeleted bit,
 	constraint PK_SanPham primary key (MaSP),
 	constraint FK_SanPham_NCC foreign key (MaNCC) references NhaCungCap(MaNCC),
 	constraint FK_SanPham_LoaiSP foreign key (MaLoaiSP) references LoaiSP(MaLoaiSP)
@@ -35,9 +38,10 @@ create table HoaDonDatNCC
 (
 	MaHDDat int IDENTITY(1,1),
 	MaNCC int,
-	TongTien money,
+	TongTien int,
 	NgayDat date,
 	TinhTrang nvarchar(30),
+	Isdeleted bit,
 	constraint PK_HoaDonDatNCC primary key (MaHDDat),
 	constraint FK_HoaDonDatNCC_NhaCungCap foreign key (MaNCC) references NhaCungCap(MaNCC)
 )
@@ -47,7 +51,7 @@ create table CTHoaDonDatNCC
 	MaHDDat int,
 	MaSP nvarchar(30),
 	SoLuong int,
-	ThanhTien money,
+	ThanhTien int,
 	constraint PK_CTHDD primary key (MaHDDat,MaSP),
 	constraint FK_CTHHD_HDDat foreign key (MaHDDat) references HoaDonDatNCC(MaHDDat),
 	constraint FK_CTHDD_SanPham foreign key (MaSP) references SanPham(MaSP)
@@ -57,6 +61,7 @@ create table PhieuGiaoHangNCC
 (
 	MaPGH nvarchar(30) not null,
 	MaHDDat int,
+	Isdeleted bit,
 	constraint PK_PhieuGiaoHang primary key (MaPGH),
 	constraint FK_PhieuGiaoHang_HoaDonDat foreign key (MaHDDat) references HoaDonDatNCC(MaHDDat)
 )
@@ -66,7 +71,7 @@ create table CTPhieuGiaoHangNCC
 	MaPGH nvarchar(30) not null,
 	MaSP nvarchar(30),
 	SoLuong int,
-	ThanhTien money,
+	ThanhTien int,
 	constraint PK_CTPGH primary key (MaPGH,MaSP),
 	constraint FK_CTPGH_SanPham foreign key (MaSP) references SanPham(MaSP),
 	constraint FK_CTPGH_PhieuGiaoHang foreign key (MaPGH) references PhieuGiaoHangNCC(MaPGH)
@@ -117,7 +122,8 @@ create table DonDatHang
 	MaST nvarchar(30),
 	NgayDat date,
 	TinhTrang nvarchar(30),
-	TongTien money,
+	TongTien int,
+	Isdeleted bit,
 	constraint PK_DonDatHang primary key (MaDH),
 	constraint FK_DonDatHang_SieuThi foreign key (MaST) references SieuThi(MaST)
 )
@@ -129,7 +135,7 @@ create table CTDonDatHang
 	MaSP nvarchar(30),
 	MaDH int,
 	SoLuong int,
-	ThanhTien money,
+	ThanhTien int,
 	constraint PK_CTDDH primary key (MaCTDDH,MaSP),
 	constraint FK_CTDDH_SanPham foreign key (MaSP) references SanPham(MaSP),
 	constraint FK_CTDDH_DonDatHang foreign key (MaDH) references DonDatHang(MaDH)
@@ -140,8 +146,9 @@ create table PhieuXuatKho
 	MaPXK int IDENTITY(1,1) not null,
 	MaST nvarchar(30),
 	MaDH int,
-	TongTien money,
+	TongTien int,
 	NgayXuat date,
+	Isdeleted bit,
 	constraint PK_PhieuXuatKho primary key (MaPXK),
 	constraint FK_PhieuXuatKho_SieuThi foreign key (MaST) references SieuThi(MaST),
 	constraint FK_PhieuXuatKho_DonDatHang foreign key (MaDH) references DonDatHang(MaDH)
@@ -152,7 +159,7 @@ create table CTPhieuXuatKho
 	MaPXK int,
 	MaSP nvarchar(30),
 	SoLuong int,
-	ThanhTien money,
+	ThanhTien int,
 	constraint PK_CTPhieuXuatKho primary key (MaPXK,MaSP),
 	constraint FK_CTPhieuXuatKho_SanPham foreign key (MaSP) references SanPham(MaSP),
 	constraint FK_CTPhieuXuatKho_PhieuXuatKho foreign key (MaPXK) references PhieuXuatKho(MaPXK)
@@ -163,7 +170,8 @@ create table PhieuTraHang
 	MaPTH int IDENTITY,
 	MaST nvarchar(30),
 	NgayTra date,
-	TongTien money,
+	TongTien int,
+	Isdeleted bit,
 	TinhTrang nvarchar(30),
 	constraint PK_PhieuTraHang primary key (MaPTH),
 	constraint FK_PhieuTraHang_SieuThi foreign key(MaST) references SieuThi(MaST)
@@ -183,3 +191,8 @@ create table CTPhieuTraHang
 
 
 select *from NhaCungCap,LoaiSP
+
+select * from SanPham where Isdeleted = 'true';
+
+update SanPham
+set Isdeleted = 'false'

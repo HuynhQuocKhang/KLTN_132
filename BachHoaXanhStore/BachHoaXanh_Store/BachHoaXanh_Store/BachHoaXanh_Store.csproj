@@ -362,6 +362,10 @@
       <Project>{09f5f2ad-024d-4482-99b2-aafe1ce08a68}</Project>
       <Name>BLL_DAO</Name>
     </ProjectReference>
+    <ProjectReference Include="..\BO\BO.csproj">
+      <Project>{3D3AF6A7-7C51-46C0-96A9-365BB87845C7}</Project>
+      <Name>BO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

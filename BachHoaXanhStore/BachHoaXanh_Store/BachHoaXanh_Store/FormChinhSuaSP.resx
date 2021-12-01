@@ -143,28 +143,6 @@
         Vih0D/7DsuU7B4rGAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="txt_DVT.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAUoAAAAjCAYAAADypUMjAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOpSURBVHhe7d1LbFRVHMfxWbp0ydKlS3dYxgTLsw/6HFHK
-        nek8eodeSmkqSChiiBJBQiAEEAxoqzTGpjZYDRJrNE0wJGggGCKRKAmwABMy4nSgPKSLCz/m35QGGEq1
-        STv3+0nOam7v7eqX/73n/M8JAQCmSElD/Ythp75jvuvsL/cSv2qEoxGfwWAwpsMYzaXFK2KHwk7k3bBT
-        97LF19SaG186Sw9d6EYztW3p3L6e7pHe7474p38/+2AAwHQxmkv9P37vdx7u9Z317dl5qYZcuRfvm7N8
-        6UsWa/+fufGa5+8n854KL5HTQ//KXLV/BQBmjmtDWf/oT4P+62tahhSYKv4s5v4blatlzY3Zrq++vP3v
-        3bv2OACY2RSYKv4WpGMxi7vJqWhOvhl/e23mxs1huzUAFA8Vf+t2bPmnutXdb7H3bJasaurc/NHuLFUk
-        gGLXdbj3es1q9xuLv4kpb27csL3rQM7uAQBF7/Mj/bdUIFoMFhZ2Iq+6mzoyVJIAgkav4U/9ZqkZoCUt
-        qb/5JgkgiFQgRtq9a1onbrH4qDIvcfCLb78esb8BgMA5duoXv9JLDFosjjc7XvNCdavL5A2AwNPi9Md2
-        8mjxpdYVAUDQqaNH7Y8Wj2PU2qNV6wAQdHqzXuA6w+pKtIjMd9+o1LRrACDw1u/8IFcSfW2ZxWQopB2A
-        PuvvYxIHAIw+ReqTpMXk/YoyGvF/OHHcfgYAnD3/x4Pt2iwm80HJNmkAMEa7pD0SlFo7BADI+/PSxfFB
-        WZpsGNQ+kwCAvJ/PnPYXpWO/WUyGQiXR+tr2be8N2e8AEHg7D31yJ+zUtVtMqsc7/lxpchkb8wKAqVyZ
-        vKGORYvJvIqVyRMqNQEg6PR9sqy58YLF45hXonVl3uaNLDoHEHjvH9h7fX7KWW3xOJ52zGD2G0CQPbGa
-        HKUjHHU6mV0PAIGjiW1NcFssPl71qqYtu7o7CUsAgdM3cPRWVWtTj8VhYVUtqYGB48eYAgcQGOpOrGp1
-        T2oVkEVhYbqwsiV5hrAEEAQKydq29Llx26pNhMJSlSWnMQIoZvnXbVWSzxiSD9PRtal31mW1kwYAFAtt
-        eqGJG32TnPDrdiE6wrbcS5zTTS9duWyPAYCZRwG549ODwwvdaOaps9uToZsuXhG7otaerR9/eFOdPFpz
-        BADTlYo7fYPc19M9UtuWzikgSxNvvGWxNnXU/zhnecRT26MWZmorIgaDwZiOQ8WdDgoLO/UdBc/rBgBM
-        Vih0D/7DsuU7B4rGAAAAAElFTkSuQmCC
-</value>
-  </data>
   <data name="bunifuLabel1.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 1.2px; margin: auto; padding-top: 21px;font-family: 'Tahoma'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: #143920; text-align: center; }</value>
   </data>
