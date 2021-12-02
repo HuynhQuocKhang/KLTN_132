@@ -15,4 +15,12 @@ namespace BO
         public string TinhTrang { get; set; }
         public bool? Isdeleted { get; set; }
     }
+
+    public class OrderCustomerDetailBO
+    {
+        public int MaHDDat { get; set; }
+        public string MaSP { get; set; }
+        public int SoLuong { get; set; }
+        public int ThanhTien { get; set; }
+    }
 }

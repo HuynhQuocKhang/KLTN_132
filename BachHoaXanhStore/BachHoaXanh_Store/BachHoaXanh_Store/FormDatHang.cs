@@ -17,6 +17,7 @@ namespace BachHoaXanh_Store
         public UserBO objUser = new UserBO();
         CustomerBLL objCustomerBLL = new CustomerBLL();
         ProductBLL objProductBll = new ProductBLL();
+        public static List<OrderCustomerDetailBO> lstOrderCustomerDetailBO = new List<OrderCustomerDetailBO>();
 
         public FormDatHang()
         {
@@ -30,6 +31,7 @@ namespace BachHoaXanh_Store
 
         private void bunifuButton1_Click(object sender, EventArgs e)
         {
+
             Program.frmDonDatHang = new FormDonDatHang();
             Program.frmDonDatHang.ShowDialog();
         }
