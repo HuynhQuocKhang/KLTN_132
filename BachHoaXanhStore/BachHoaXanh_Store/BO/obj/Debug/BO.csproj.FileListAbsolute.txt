@@ -11,3 +11,9 @@ E:\09DHTH5\KLTN\SoDoLop\KLTN_132\BachHoaXanhStore\BachHoaXanh_Store\BO\obj\Debug
 E:\09DHTH5\KLTN\SoDoLop\KLTN_132\BachHoaXanhStore\BachHoaXanh_Store\BO\obj\Debug\BO.dll
 E:\09DHTH5\KLTN\SoDoLop\KLTN_132\BachHoaXanhStore\BachHoaXanh_Store\BO\obj\Debug\BO.pdb
 E:\KhoaLuanTotNghiep\BachHoaXanhStore\BachHoaXanh_Store\BO\obj\Debug\BO.csproj.AssemblyReference.cache
+C:\Users\HP_Pro\Desktop\Khang\BachHoaXanhStore\BachHoaXanh_Store\BO\bin\Debug\BO.dll.config
+C:\Users\HP_Pro\Desktop\Khang\BachHoaXanhStore\BachHoaXanh_Store\BO\bin\Debug\BO.dll
+C:\Users\HP_Pro\Desktop\Khang\BachHoaXanhStore\BachHoaXanh_Store\BO\bin\Debug\BO.pdb
+C:\Users\HP_Pro\Desktop\Khang\BachHoaXanhStore\BachHoaXanh_Store\BO\obj\Debug\BO.csproj.CoreCompileInputs.cache
+C:\Users\HP_Pro\Desktop\Khang\BachHoaXanhStore\BachHoaXanh_Store\BO\obj\Debug\BO.dll
+C:\Users\HP_Pro\Desktop\Khang\BachHoaXanhStore\BachHoaXanh_Store\BO\obj\Debug\BO.pdb

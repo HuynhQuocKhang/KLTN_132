@@ -19,3 +19,14 @@ E:\KhoaLuanTotNghiep\BachHoaXanhStore\BachHoaXanh_Store\BLL_DAO\obj\Debug\BLL_DA
 E:\09DHTH5\KLTN\SoDoLop\KLTN_132\BachHoaXanhStore\BachHoaXanh_Store\BLL_DAO\bin\Debug\BO.dll
 E:\09DHTH5\KLTN\SoDoLop\KLTN_132\BachHoaXanhStore\BachHoaXanh_Store\BLL_DAO\bin\Debug\BO.pdb
 E:\09DHTH5\KLTN\SoDoLop\KLTN_132\BachHoaXanhStore\BachHoaXanh_Store\BLL_DAO\bin\Debug\BO.dll.config
+C:\Users\HP_Pro\Desktop\Khang\BachHoaXanhStore\BachHoaXanh_Store\BLL_DAO\bin\Debug\BLL_DAO.dll.config
+C:\Users\HP_Pro\Desktop\Khang\BachHoaXanhStore\BachHoaXanh_Store\BLL_DAO\bin\Debug\BLL_DAO.dll
+C:\Users\HP_Pro\Desktop\Khang\BachHoaXanhStore\BachHoaXanh_Store\BLL_DAO\bin\Debug\BLL_DAO.pdb
+C:\Users\HP_Pro\Desktop\Khang\BachHoaXanhStore\BachHoaXanh_Store\BLL_DAO\bin\Debug\BO.dll
+C:\Users\HP_Pro\Desktop\Khang\BachHoaXanhStore\BachHoaXanh_Store\BLL_DAO\bin\Debug\BO.pdb
+C:\Users\HP_Pro\Desktop\Khang\BachHoaXanhStore\BachHoaXanh_Store\BLL_DAO\bin\Debug\BO.dll.config
+C:\Users\HP_Pro\Desktop\Khang\BachHoaXanhStore\BachHoaXanh_Store\BLL_DAO\obj\Debug\BLL_DAO.csproj.AssemblyReference.cache
+C:\Users\HP_Pro\Desktop\Khang\BachHoaXanhStore\BachHoaXanh_Store\BLL_DAO\obj\Debug\BLL_DAO.csproj.CoreCompileInputs.cache
+C:\Users\HP_Pro\Desktop\Khang\BachHoaXanhStore\BachHoaXanh_Store\BLL_DAO\obj\Debug\BLL_DAO.csproj.CopyComplete
+C:\Users\HP_Pro\Desktop\Khang\BachHoaXanhStore\BachHoaXanh_Store\BLL_DAO\obj\Debug\BLL_DAO.dll
+C:\Users\HP_Pro\Desktop\Khang\BachHoaXanhStore\BachHoaXanh_Store\BLL_DAO\obj\Debug\BLL_DAO.pdb
