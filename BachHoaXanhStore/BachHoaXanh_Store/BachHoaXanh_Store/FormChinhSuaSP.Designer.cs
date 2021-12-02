@@ -49,6 +49,10 @@ namespace BachHoaXanh_Store
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties14 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties15 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties16 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties17 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties18 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties19 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties20 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -63,6 +67,7 @@ namespace BachHoaXanh_Store
             this.cbo_MaLoaiSP = new Bunifu.UI.WinForms.BunifuDropdown();
             this.cbo_DVT = new Bunifu.UI.WinForms.BunifuDropdown();
             this.crystalDarkTheme1 = new Telerik.WinControls.Themes.CrystalDarkTheme();
+            this.txt_MaSP = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -87,7 +92,7 @@ namespace BachHoaXanh_Store
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(402, 374);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(402, 396);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -97,20 +102,22 @@ namespace BachHoaXanh_Store
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 54.16667F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.83333F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel2.Controls.Add(this.cbo_NhaCungCap, 1, 2);
-            this.tableLayoutPanel2.Controls.Add(this.txt_TenSP, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.cbo_NhaCungCap, 1, 3);
+            this.tableLayoutPanel2.Controls.Add(this.txt_TenSP, 1, 2);
             this.tableLayoutPanel2.Controls.Add(this.panel2, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.btn_TraHang, 2, 7);
-            this.tableLayoutPanel2.Controls.Add(this.btn_Huy, 1, 7);
-            this.tableLayoutPanel2.Controls.Add(this.txt_GiaBan, 1, 5);
-            this.tableLayoutPanel2.Controls.Add(this.txt_GiaVon, 1, 6);
-            this.tableLayoutPanel2.Controls.Add(this.cbo_MaLoaiSP, 1, 3);
-            this.tableLayoutPanel2.Controls.Add(this.cbo_DVT, 1, 4);
+            this.tableLayoutPanel2.Controls.Add(this.btn_TraHang, 2, 8);
+            this.tableLayoutPanel2.Controls.Add(this.btn_Huy, 1, 8);
+            this.tableLayoutPanel2.Controls.Add(this.txt_GiaBan, 1, 6);
+            this.tableLayoutPanel2.Controls.Add(this.txt_GiaVon, 1, 7);
+            this.tableLayoutPanel2.Controls.Add(this.cbo_MaLoaiSP, 1, 4);
+            this.tableLayoutPanel2.Controls.Add(this.cbo_DVT, 1, 5);
+            this.tableLayoutPanel2.Controls.Add(this.txt_MaSP, 1, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(16, 16);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 9;
+            this.tableLayoutPanel2.RowCount = 10;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 68F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
@@ -119,7 +126,7 @@ namespace BachHoaXanh_Store
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(402, 374);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(402, 396);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // cbo_NhaCungCap
@@ -149,7 +156,7 @@ namespace BachHoaXanh_Store
             this.cbo_NhaCungCap.ItemForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(19)))), ((int)(((byte)(10)))));
             this.cbo_NhaCungCap.ItemHeight = 26;
             this.cbo_NhaCungCap.ItemHighLightColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(209)))), ((int)(((byte)(175)))));
-            this.cbo_NhaCungCap.Location = new System.Drawing.Point(33, 111);
+            this.cbo_NhaCungCap.Location = new System.Drawing.Point(33, 151);
             this.cbo_NhaCungCap.MaximumSize = new System.Drawing.Size(5000, 0);
             this.cbo_NhaCungCap.Name = "cbo_NhaCungCap";
             this.cbo_NhaCungCap.Size = new System.Drawing.Size(330, 32);
@@ -185,7 +192,7 @@ namespace BachHoaXanh_Store
             this.txt_TenSP.IconRight = null;
             this.txt_TenSP.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_TenSP.Lines = new string[0];
-            this.txt_TenSP.Location = new System.Drawing.Point(33, 71);
+            this.txt_TenSP.Location = new System.Drawing.Point(33, 111);
             this.txt_TenSP.MaxLength = 32767;
             this.txt_TenSP.MinimumSize = new System.Drawing.Size(100, 35);
             this.txt_TenSP.Modified = false;
@@ -213,7 +220,7 @@ namespace BachHoaXanh_Store
             this.txt_TenSP.OnIdleState = stateProperties4;
             this.txt_TenSP.PasswordChar = '\0';
             this.txt_TenSP.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txt_TenSP.PlaceholderText = "Enter text";
+            this.txt_TenSP.PlaceholderText = "Tên sản phẩm";
             this.txt_TenSP.ReadOnly = false;
             this.txt_TenSP.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_TenSP.SelectedText = "";
@@ -227,7 +234,7 @@ namespace BachHoaXanh_Store
             this.txt_TenSP.TextMarginBottom = 0;
             this.txt_TenSP.TextMarginLeft = 5;
             this.txt_TenSP.TextMarginTop = 0;
-            this.txt_TenSP.TextPlaceholder = "Enter text";
+            this.txt_TenSP.TextPlaceholder = "Tên sản phẩm";
             this.txt_TenSP.UseSystemPasswordChar = false;
             this.txt_TenSP.WordWrap = true;
             // 
@@ -296,7 +303,7 @@ namespace BachHoaXanh_Store
             this.btn_TraHang.IdleIconLeftImage = null;
             this.btn_TraHang.IdleIconRightImage = null;
             this.btn_TraHang.IndicateFocus = false;
-            this.btn_TraHang.Location = new System.Drawing.Point(244, 311);
+            this.btn_TraHang.Location = new System.Drawing.Point(244, 351);
             this.btn_TraHang.Name = "btn_TraHang";
             stateProperties5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(221)))), ((int)(((byte)(158)))));
             stateProperties5.BorderRadius = 25;
@@ -361,7 +368,7 @@ namespace BachHoaXanh_Store
             this.btn_Huy.IdleIconLeftImage = null;
             this.btn_Huy.IdleIconRightImage = null;
             this.btn_Huy.IndicateFocus = false;
-            this.btn_Huy.Location = new System.Drawing.Point(105, 311);
+            this.btn_Huy.Location = new System.Drawing.Point(105, 351);
             this.btn_Huy.Name = "btn_Huy";
             stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(124)))), ((int)(((byte)(75)))));
             stateProperties7.BorderRadius = 25;
@@ -417,7 +424,7 @@ namespace BachHoaXanh_Store
             this.txt_GiaBan.IconRight = null;
             this.txt_GiaBan.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_GiaBan.Lines = new string[0];
-            this.txt_GiaBan.Location = new System.Drawing.Point(33, 231);
+            this.txt_GiaBan.Location = new System.Drawing.Point(33, 271);
             this.txt_GiaBan.MaxLength = 32767;
             this.txt_GiaBan.MinimumSize = new System.Drawing.Size(100, 35);
             this.txt_GiaBan.Modified = false;
@@ -445,7 +452,7 @@ namespace BachHoaXanh_Store
             this.txt_GiaBan.OnIdleState = stateProperties12;
             this.txt_GiaBan.PasswordChar = '\0';
             this.txt_GiaBan.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txt_GiaBan.PlaceholderText = "Enter text";
+            this.txt_GiaBan.PlaceholderText = "Giá bán";
             this.txt_GiaBan.ReadOnly = false;
             this.txt_GiaBan.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_GiaBan.SelectedText = "";
@@ -459,7 +466,7 @@ namespace BachHoaXanh_Store
             this.txt_GiaBan.TextMarginBottom = 0;
             this.txt_GiaBan.TextMarginLeft = 5;
             this.txt_GiaBan.TextMarginTop = 0;
-            this.txt_GiaBan.TextPlaceholder = "Enter text";
+            this.txt_GiaBan.TextPlaceholder = "Giá bán";
             this.txt_GiaBan.UseSystemPasswordChar = false;
             this.txt_GiaBan.WordWrap = true;
             // 
@@ -492,7 +499,7 @@ namespace BachHoaXanh_Store
             this.txt_GiaVon.IconRight = null;
             this.txt_GiaVon.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_GiaVon.Lines = new string[0];
-            this.txt_GiaVon.Location = new System.Drawing.Point(33, 271);
+            this.txt_GiaVon.Location = new System.Drawing.Point(33, 311);
             this.txt_GiaVon.MaxLength = 32767;
             this.txt_GiaVon.MinimumSize = new System.Drawing.Size(100, 35);
             this.txt_GiaVon.Modified = false;
@@ -520,7 +527,7 @@ namespace BachHoaXanh_Store
             this.txt_GiaVon.OnIdleState = stateProperties16;
             this.txt_GiaVon.PasswordChar = '\0';
             this.txt_GiaVon.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txt_GiaVon.PlaceholderText = "Enter text";
+            this.txt_GiaVon.PlaceholderText = "Giá vốn";
             this.txt_GiaVon.ReadOnly = false;
             this.txt_GiaVon.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_GiaVon.SelectedText = "";
@@ -534,7 +541,7 @@ namespace BachHoaXanh_Store
             this.txt_GiaVon.TextMarginBottom = 0;
             this.txt_GiaVon.TextMarginLeft = 5;
             this.txt_GiaVon.TextMarginTop = 0;
-            this.txt_GiaVon.TextPlaceholder = "Enter text";
+            this.txt_GiaVon.TextPlaceholder = "Giá vốn";
             this.txt_GiaVon.UseSystemPasswordChar = false;
             this.txt_GiaVon.WordWrap = true;
             // 
@@ -565,7 +572,7 @@ namespace BachHoaXanh_Store
             this.cbo_MaLoaiSP.ItemForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(19)))), ((int)(((byte)(10)))));
             this.cbo_MaLoaiSP.ItemHeight = 26;
             this.cbo_MaLoaiSP.ItemHighLightColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(209)))), ((int)(((byte)(175)))));
-            this.cbo_MaLoaiSP.Location = new System.Drawing.Point(33, 151);
+            this.cbo_MaLoaiSP.Location = new System.Drawing.Point(33, 191);
             this.cbo_MaLoaiSP.MaximumSize = new System.Drawing.Size(5000, 0);
             this.cbo_MaLoaiSP.Name = "cbo_MaLoaiSP";
             this.cbo_MaLoaiSP.Size = new System.Drawing.Size(330, 32);
@@ -577,6 +584,7 @@ namespace BachHoaXanh_Store
             this.cbo_DVT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(216)))), ((int)(((byte)(211)))));
             this.cbo_DVT.BorderRadius = 17;
             this.cbo_DVT.Color = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(92)))), ((int)(((byte)(83)))));
+            this.tableLayoutPanel2.SetColumnSpan(this.cbo_DVT, 2);
             this.cbo_DVT.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
             this.cbo_DVT.DisabledColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.cbo_DVT.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -604,19 +612,94 @@ namespace BachHoaXanh_Store
             "Túi",
             "Thùng",
             "Kilogram"});
-            this.cbo_DVT.Location = new System.Drawing.Point(33, 191);
+            this.cbo_DVT.Location = new System.Drawing.Point(33, 231);
             this.cbo_DVT.MaximumSize = new System.Drawing.Size(5000, 0);
             this.cbo_DVT.Name = "cbo_DVT";
-            this.cbo_DVT.Size = new System.Drawing.Size(176, 32);
+            this.cbo_DVT.Size = new System.Drawing.Size(330, 32);
             this.cbo_DVT.TabIndex = 8;
             this.cbo_DVT.Text = null;
+            // 
+            // txt_MaSP
+            // 
+            this.txt_MaSP.AcceptsReturn = false;
+            this.txt_MaSP.AcceptsTab = false;
+            this.txt_MaSP.AnimationSpeed = 200;
+            this.txt_MaSP.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txt_MaSP.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txt_MaSP.BackColor = System.Drawing.Color.Transparent;
+            this.txt_MaSP.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txt_MaSP.BackgroundImage")));
+            this.txt_MaSP.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(92)))), ((int)(((byte)(83)))));
+            this.txt_MaSP.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(223)))), ((int)(((byte)(135)))));
+            this.txt_MaSP.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(186)))), ((int)(((byte)(27)))));
+            this.txt_MaSP.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(92)))), ((int)(((byte)(83)))));
+            this.txt_MaSP.BorderRadius = 35;
+            this.txt_MaSP.BorderThickness = 1;
+            this.txt_MaSP.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.tableLayoutPanel2.SetColumnSpan(this.txt_MaSP, 2);
+            this.txt_MaSP.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_MaSP.DefaultFont = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_MaSP.DefaultText = "";
+            this.txt_MaSP.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt_MaSP.FillColor = System.Drawing.Color.White;
+            this.txt_MaSP.HideSelection = true;
+            this.txt_MaSP.IconLeft = null;
+            this.txt_MaSP.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_MaSP.IconPadding = 10;
+            this.txt_MaSP.IconRight = null;
+            this.txt_MaSP.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_MaSP.Lines = new string[0];
+            this.txt_MaSP.Location = new System.Drawing.Point(33, 71);
+            this.txt_MaSP.MaxLength = 32767;
+            this.txt_MaSP.MinimumSize = new System.Drawing.Size(100, 35);
+            this.txt_MaSP.Modified = false;
+            this.txt_MaSP.Multiline = false;
+            this.txt_MaSP.Name = "txt_MaSP";
+            stateProperties17.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(92)))), ((int)(((byte)(83)))));
+            stateProperties17.FillColor = System.Drawing.Color.Empty;
+            stateProperties17.ForeColor = System.Drawing.Color.Empty;
+            stateProperties17.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txt_MaSP.OnActiveState = stateProperties17;
+            stateProperties18.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(223)))), ((int)(((byte)(135)))));
+            stateProperties18.FillColor = System.Drawing.Color.White;
+            stateProperties18.ForeColor = System.Drawing.Color.Empty;
+            stateProperties18.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txt_MaSP.OnDisabledState = stateProperties18;
+            stateProperties19.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(186)))), ((int)(((byte)(27)))));
+            stateProperties19.FillColor = System.Drawing.Color.Empty;
+            stateProperties19.ForeColor = System.Drawing.Color.Empty;
+            stateProperties19.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txt_MaSP.OnHoverState = stateProperties19;
+            stateProperties20.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(92)))), ((int)(((byte)(83)))));
+            stateProperties20.FillColor = System.Drawing.Color.White;
+            stateProperties20.ForeColor = System.Drawing.Color.Empty;
+            stateProperties20.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txt_MaSP.OnIdleState = stateProperties20;
+            this.txt_MaSP.PasswordChar = '\0';
+            this.txt_MaSP.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txt_MaSP.PlaceholderText = "Mã sản phẩm";
+            this.txt_MaSP.ReadOnly = false;
+            this.txt_MaSP.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txt_MaSP.SelectedText = "";
+            this.txt_MaSP.SelectionLength = 0;
+            this.txt_MaSP.SelectionStart = 0;
+            this.txt_MaSP.ShortcutsEnabled = true;
+            this.txt_MaSP.Size = new System.Drawing.Size(330, 35);
+            this.txt_MaSP.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            this.txt_MaSP.TabIndex = 9;
+            this.txt_MaSP.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txt_MaSP.TextMarginBottom = 0;
+            this.txt_MaSP.TextMarginLeft = 5;
+            this.txt_MaSP.TextMarginTop = 0;
+            this.txt_MaSP.TextPlaceholder = "Mã sản phẩm";
+            this.txt_MaSP.UseSystemPasswordChar = false;
+            this.txt_MaSP.WordWrap = true;
             // 
             // FormChinhSuaSP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(216)))), ((int)(((byte)(211)))));
-            this.ClientSize = new System.Drawing.Size(434, 406);
+            this.ClientSize = new System.Drawing.Size(434, 428);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -646,5 +729,6 @@ namespace BachHoaXanh_Store
         private Bunifu.UI.WinForms.BunifuDropdown cbo_NhaCungCap;
         private Bunifu.UI.WinForms.BunifuDropdown cbo_MaLoaiSP;
         private Bunifu.UI.WinForms.BunifuDropdown cbo_DVT;
+        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txt_MaSP;
     }
 }
