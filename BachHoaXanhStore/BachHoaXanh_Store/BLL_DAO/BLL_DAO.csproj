@@ -73,6 +73,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="CustomerBLL.cs" />
+    <Compile Include="OrderCustomerBLL.cs" />
     <Compile Include="OrderStoreBLL.cs" />
     <Compile Include="OrderStoreDetailBLL.cs" />
     <Compile Include="ProductBLL.cs" />
