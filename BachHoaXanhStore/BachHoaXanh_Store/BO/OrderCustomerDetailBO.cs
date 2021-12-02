@@ -10,6 +10,7 @@ namespace BO
     {
         public int MaHDDat { get; set; }
         public string MaSP { get; set; }
+        public int GiaVon { get; set; }
         public int SoLuong { get; set; }
         public int ThanhTien { get; set; }
     }

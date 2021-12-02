@@ -21,6 +21,7 @@ namespace BachHoaXanh_Store
             txt_NhaCungCap.Text = FormDatHang.objUser.UserFullName;
             txt_NgayDat.Text = DateTime.Now.ToString();
             txt_TongTien.Text = FormDatHang.intTotalPrice.ToString();
+            dgv_Order.DataSource = lstOrderTmp;
         }
 
         private void btn_Huy_Click(object sender, EventArgs e)

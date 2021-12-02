@@ -56,6 +56,7 @@ namespace BachHoaXanh_Store
                         OrderCustomerDetailBO objOrderCustomerDetailBO = new OrderCustomerDetailBO();
                         objOrderCustomerDetailBO.MaSP = dgv_Order["MaSP", i].Value.ToString();
                         objOrderCustomerDetailBO.SoLuong = int.Parse(dgv_Order["SoLuong", i].Value.ToString());
+                        objOrderCustomerDetailBO.GiaVon = int.Parse(dgv_Order["GiaVon", i].Value.ToString());
                         objOrderCustomerDetailBO.ThanhTien = int.Parse(dgv_Order["col_ThanhTien", i].Value.ToString());
                         lstOrderCustomerDetailBO.Add(objOrderCustomerDetailBO);
                         intTotalPrice += int.Parse(dgv_Order["col_ThanhTien", i].Value.ToString());
