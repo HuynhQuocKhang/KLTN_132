@@ -233,7 +233,7 @@ namespace BachHoaXanh_Store
             this.txt_NhaCungCap.SelectionLength = 0;
             this.txt_NhaCungCap.SelectionStart = 0;
             this.txt_NhaCungCap.ShortcutsEnabled = true;
-            this.txt_NhaCungCap.Size = new System.Drawing.Size(273, 39);
+            this.txt_NhaCungCap.Size = new System.Drawing.Size(272, 39);
             this.txt_NhaCungCap.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txt_NhaCungCap.TabIndex = 0;
             this.txt_NhaCungCap.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -309,7 +309,7 @@ namespace BachHoaXanh_Store
             this.txt_TongTien.SelectionLength = 0;
             this.txt_TongTien.SelectionStart = 0;
             this.txt_TongTien.ShortcutsEnabled = true;
-            this.txt_TongTien.Size = new System.Drawing.Size(273, 39);
+            this.txt_TongTien.Size = new System.Drawing.Size(272, 39);
             this.txt_TongTien.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txt_TongTien.TabIndex = 1;
             this.txt_TongTien.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -385,7 +385,7 @@ namespace BachHoaXanh_Store
             this.txt_NgayDat.SelectionLength = 0;
             this.txt_NgayDat.SelectionStart = 0;
             this.txt_NgayDat.ShortcutsEnabled = true;
-            this.txt_NgayDat.Size = new System.Drawing.Size(273, 39);
+            this.txt_NgayDat.Size = new System.Drawing.Size(272, 39);
             this.txt_NgayDat.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txt_NgayDat.TabIndex = 3;
             this.txt_NgayDat.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -461,7 +461,7 @@ namespace BachHoaXanh_Store
             this.txt_TinhTrang.SelectionLength = 0;
             this.txt_TinhTrang.SelectionStart = 0;
             this.txt_TinhTrang.ShortcutsEnabled = true;
-            this.txt_TinhTrang.Size = new System.Drawing.Size(273, 39);
+            this.txt_TinhTrang.Size = new System.Drawing.Size(272, 39);
             this.txt_TinhTrang.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txt_TinhTrang.TabIndex = 4;
             this.txt_TinhTrang.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -510,7 +510,7 @@ namespace BachHoaXanh_Store
             this.btn_TraHang.IdleIconLeftImage = null;
             this.btn_TraHang.IdleIconRightImage = null;
             this.btn_TraHang.IndicateFocus = false;
-            this.btn_TraHang.Location = new System.Drawing.Point(197, 252);
+            this.btn_TraHang.Location = new System.Drawing.Point(196, 252);
             this.btn_TraHang.Name = "btn_TraHang";
             stateProperties17.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(221)))), ((int)(((byte)(158)))));
             stateProperties17.BorderRadius = 25;
@@ -535,6 +535,7 @@ namespace BachHoaXanh_Store
             this.btn_TraHang.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_TraHang.TextMarginLeft = 0;
             this.btn_TraHang.UseDefaultRadiusAndThickness = true;
+            this.btn_TraHang.Click += new System.EventHandler(this.btn_TraHang_Click);
             // 
             // tableLayoutPanel3
             // 
@@ -602,7 +603,7 @@ namespace BachHoaXanh_Store
             this.btn_Huy.IdleIconLeftImage = null;
             this.btn_Huy.IdleIconRightImage = null;
             this.btn_Huy.IndicateFocus = false;
-            this.btn_Huy.Location = new System.Drawing.Point(82, 252);
+            this.btn_Huy.Location = new System.Drawing.Point(81, 252);
             this.btn_Huy.Name = "btn_Huy";
             stateProperties19.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(124)))), ((int)(((byte)(75)))));
             stateProperties19.BorderRadius = 25;
@@ -627,6 +628,7 @@ namespace BachHoaXanh_Store
             this.btn_Huy.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Huy.TextMarginLeft = 0;
             this.btn_Huy.UseDefaultRadiusAndThickness = true;
+            this.btn_Huy.Click += new System.EventHandler(this.btn_Huy_Click);
             // 
             // panel2
             // 
@@ -635,7 +637,7 @@ namespace BachHoaXanh_Store
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(33, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(273, 63);
+            this.panel2.Size = new System.Drawing.Size(272, 63);
             this.panel2.TabIndex = 6;
             // 
             // bunifuLabel1
@@ -649,7 +651,7 @@ namespace BachHoaXanh_Store
             this.bunifuLabel1.Location = new System.Drawing.Point(0, 0);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(273, 63);
+            this.bunifuLabel1.Size = new System.Drawing.Size(272, 63);
             this.bunifuLabel1.TabIndex = 6;
             this.bunifuLabel1.Text = "THÔNG TIN ĐƠN ĐẶT HÀNG";
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -661,7 +663,7 @@ namespace BachHoaXanh_Store
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 58.57143F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 41.42857F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 37F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 38F));
             this.tableLayoutPanel2.Controls.Add(this.txt_NhaCungCap, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.txt_TongTien, 1, 2);
             this.tableLayoutPanel2.Controls.Add(this.txt_NgayDat, 1, 3);
@@ -745,6 +747,7 @@ namespace BachHoaXanh_Store
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormDonDatHang";
             this.Padding = new System.Windows.Forms.Padding(16);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormDonDatHang";
             ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);

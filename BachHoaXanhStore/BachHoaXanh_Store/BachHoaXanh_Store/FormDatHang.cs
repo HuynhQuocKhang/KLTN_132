@@ -14,11 +14,11 @@ namespace BachHoaXanh_Store
 {
     public partial class FormDatHang : Form
     {
-        public UserBO objUser = new UserBO();
+        public static UserBO objUser = new UserBO();
         CustomerBLL objCustomerBLL = new CustomerBLL();
         ProductBLL objProductBll = new ProductBLL();
         public static List<OrderCustomerDetailBO> lstOrderCustomerDetailBO = new List<OrderCustomerDetailBO>();
-
+        public static int intTotalPrice = 0;
         public FormDatHang()
         {
             InitializeComponent();
@@ -31,9 +31,48 @@ namespace BachHoaXanh_Store
 
         private void bunifuButton1_Click(object sender, EventArgs e)
         {
+            if (dgv_Order.Rows.Count > 0)
+            {
+                bool isOpen = true;
+                for (int i = 0; i < dgv_Order.Rows.Count; i++)
+                {
+                    int intStock;
+                    if (!int.TryParse(dgv_Order["SoLuong", i].Value.ToString(), out intStock))
+                    {
+                        MessageBox.Show("Sản phẩm [ " + dgv_Order["MaSP", i].Value.ToString() + " - " + dgv_DSSP["col_TenSP", i].Value.ToString() + " ] có số lượng đặt phải là số nguyên dương và lớn hơn 0");
+                        isOpen = false;
+                        lstOrderCustomerDetailBO = new List<OrderCustomerDetailBO>();
+                        return;
+                    }
+                    //else if (intStock > objProductBll.GetProductByKeys(dgv_Order["MaSP", i].Value.ToString(), 0, int.Parse(cbo_NhaCungCap.SelectedValue.ToString())).FirstOrDefault().SoLuong)
+                    //{
+                    //    MessageBox.Show("Sản phẩm [ " + dgv_Order["MaSP", i].Value.ToString() + " - " + dgv_DSSP["col_TenSP", i].Value.ToString() + " ] có số lượng đặt phải bé hơn số lượng tồn của kho");
+                    //    isOpen = false;
+                    //    lstOrderCustomerDetailBO = new List<OrderCustomerDetailBO>();
+                    //    return;
+                    //}
+                    else
+                    {
+                        OrderCustomerDetailBO objOrderCustomerDetailBO = new OrderCustomerDetailBO();
+                        objOrderCustomerDetailBO.MaSP = dgv_Order["MaSP", i].Value.ToString();
+                        objOrderCustomerDetailBO.SoLuong = int.Parse(dgv_Order["SoLuong", i].Value.ToString());
+                        objOrderCustomerDetailBO.ThanhTien = int.Parse(dgv_Order["col_ThanhTien", i].Value.ToString());
+                        lstOrderCustomerDetailBO.Add(objOrderCustomerDetailBO);
+                        intTotalPrice += int.Parse(dgv_Order["col_ThanhTien", i].Value.ToString());
+                    }
+                }
 
-            Program.frmDonDatHang = new FormDonDatHang();
-            Program.frmDonDatHang.ShowDialog();
+                if (isOpen == true)
+                {
+                    Program.frmDonDatHang = new FormDonDatHang();
+                    Program.frmDonDatHang.ShowDialog();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Danh sách hàng hóa cần đặt không được rỗng");
+            }
+
         }
 
         private void btn_TimKiem_Click(object sender, EventArgs e)
@@ -49,7 +88,7 @@ namespace BachHoaXanh_Store
                     MessageBox.Show("Nhà cung cấp BHX chỉ áp dụng cho siêu thị");
                 }
             }
-            
+
         }
         private void Search(string strProductName, string strCustomerId)
         {
@@ -73,7 +112,7 @@ namespace BachHoaXanh_Store
             else
             {
                 int indexOrder = -1;
-                for (int i = 0; i < dgv_Order.Rows.Count ; i++)
+                for (int i = 0; i < dgv_Order.Rows.Count; i++)
                 {
                     if (dgv_DSSP["col_MaSP", index].Value.ToString() == dgv_Order["MaSP", i].Value.ToString() && dgv_Order["MaSP", i].Value != null)
                     {
@@ -88,7 +127,28 @@ namespace BachHoaXanh_Store
                     this.dgv_Order.Rows.Add(dgv_DSSP["col_MaSP", index].Value.ToString(), dgv_DSSP["col_TenSP", index].Value.ToString(), "1", dgv_DSSP["col_GiaVon", index].Value.ToString(), dgv_DSSP["col_GiaVon", index].Value.ToString());
                 }
             }
-            
+
+        }
+
+        private void bunifuButton4_Click(object sender, EventArgs e)
+        {
+
+            if (dgv_Order.Rows.Count == 0)
+            {
+                MessageBox.Show("Danh sách sản phẩm cần đặt hiện đang trống");
+            }
+            else
+            {
+                int index = dgv_Order.CurrentCell.RowIndex;
+                if (index >= 0)
+                {
+                    dgv_Order.Rows.RemoveAt(index);
+                }
+                if (index < 0)
+                {
+                    MessageBox.Show("Vui lòng chọn sản phẩm cần xóa");
+                }
+            }
         }
     }
 }
