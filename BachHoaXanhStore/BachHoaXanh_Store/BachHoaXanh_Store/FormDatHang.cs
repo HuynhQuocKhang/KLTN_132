@@ -27,6 +27,7 @@ namespace BachHoaXanh_Store
             cbo_NhaCungCap.DataSource = objCustomerBLL.GetListALlCustomer();
             cbo_NhaCungCap.DisplayMember = "FullName";
             cbo_NhaCungCap.ValueMember = "MaNCC";
+            toolTip1.SetToolTip(cbo_LoaiSP, "Loại sản phẩm");
         }
 
         private void bunifuButton1_Click(object sender, EventArgs e)

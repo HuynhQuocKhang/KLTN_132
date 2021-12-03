@@ -23,7 +23,7 @@ namespace BachHoaXanh_Store
         public static int indexProductTypeId = 0;
         public static bool isEdit = false;
         #endregion
-
+        
         public FormDanhSachSP()
         {
             InitializeComponent();
@@ -114,7 +114,12 @@ namespace BachHoaXanh_Store
             }
         }
 
-        private void bunifuButton1_Click(object sender, EventArgs e)
+        private void bunifuButton2_Click(object sender, EventArgs e)
+        {
+            Search(txtKeyWord.Text, cbo_NhaCungCap.SelectedValue.ToString());
+        }
+
+        private void bunifuButton1_Click_1(object sender, EventArgs e)
         {
             isEdit = false;
             Program.frmChinhSuaSP = new FormChinhSuaSP();

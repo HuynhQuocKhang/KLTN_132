@@ -1886,6 +1886,8 @@ namespace BLL_DAO
 		
 		private System.Nullable<bool> _Isdeleted;
 		
+		private string _createUser;
+		
 		private EntitySet<CTDonDatHang> _CTDonDatHangs;
 		
 		private EntitySet<PhieuXuatKho> _PhieuXuatKhos;
@@ -1908,6 +1910,8 @@ namespace BLL_DAO
     partial void OnTongTienChanged();
     partial void OnIsdeletedChanging(System.Nullable<bool> value);
     partial void OnIsdeletedChanged();
+    partial void OncreateUserChanging(string value);
+    partial void OncreateUserChanged();
     #endregion
 		
 		public DonDatHang()
@@ -2042,6 +2046,26 @@ namespace BLL_DAO
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_createUser", DbType="NVarChar(30)")]
+		public string createUser
+		{
+			get
+			{
+				return this._createUser;
+			}
+			set
+			{
+				if ((this._createUser != value))
+				{
+					this.OncreateUserChanging(value);
+					this.SendPropertyChanging();
+					this._createUser = value;
+					this.SendPropertyChanged("createUser");
+					this.OncreateUserChanged();
+				}
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="DonDatHang_CTDonDatHang", Storage="_CTDonDatHangs", ThisKey="MaDH", OtherKey="MaDH")]
 		public EntitySet<CTDonDatHang> CTDonDatHangs
 		{
@@ -2165,6 +2189,8 @@ namespace BLL_DAO
 		
 		private System.Nullable<bool> _Isdeleted;
 		
+		private string _createUser;
+		
 		private EntitySet<CTHoaDonDatNCC> _CTHoaDonDatNCCs;
 		
 		private EntitySet<PhieuGiaoHangNCC> _PhieuGiaoHangNCCs;
@@ -2187,6 +2213,8 @@ namespace BLL_DAO
     partial void OnTinhTrangChanged();
     partial void OnIsdeletedChanging(System.Nullable<bool> value);
     partial void OnIsdeletedChanged();
+    partial void OncreateUserChanging(string value);
+    partial void OncreateUserChanged();
     #endregion
 		
 		public HoaDonDatNCC()
@@ -2317,6 +2345,26 @@ namespace BLL_DAO
 					this._Isdeleted = value;
 					this.SendPropertyChanged("Isdeleted");
 					this.OnIsdeletedChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_createUser", DbType="NVarChar(30)")]
+		public string createUser
+		{
+			get
+			{
+				return this._createUser;
+			}
+			set
+			{
+				if ((this._createUser != value))
+				{
+					this.OncreateUserChanging(value);
+					this.SendPropertyChanging();
+					this._createUser = value;
+					this.SendPropertyChanged("createUser");
+					this.OncreateUserChanged();
 				}
 			}
 		}
@@ -3525,6 +3573,8 @@ namespace BLL_DAO
 		
 		private System.Nullable<bool> _Isdeleted;
 		
+		private string _createUser;
+		
 		private EntitySet<CTPhieuXuatKho> _CTPhieuXuatKhos;
 		
 		private EntityRef<DonDatHang> _DonDatHang;
@@ -3547,6 +3597,8 @@ namespace BLL_DAO
     partial void OnNgayXuatChanged();
     partial void OnIsdeletedChanging(System.Nullable<bool> value);
     partial void OnIsdeletedChanged();
+    partial void OncreateUserChanging(string value);
+    partial void OncreateUserChanged();
     #endregion
 		
 		public PhieuXuatKho()
@@ -3681,6 +3733,26 @@ namespace BLL_DAO
 					this._Isdeleted = value;
 					this.SendPropertyChanged("Isdeleted");
 					this.OnIsdeletedChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_createUser", DbType="NVarChar(30)")]
+		public string createUser
+		{
+			get
+			{
+				return this._createUser;
+			}
+			set
+			{
+				if ((this._createUser != value))
+				{
+					this.OncreateUserChanging(value);
+					this.SendPropertyChanging();
+					this._createUser = value;
+					this.SendPropertyChanged("createUser");
+					this.OncreateUserChanged();
 				}
 			}
 		}

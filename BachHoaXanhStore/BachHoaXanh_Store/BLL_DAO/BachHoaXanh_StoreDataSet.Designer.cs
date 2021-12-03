@@ -293,15 +293,9 @@ namespace BLL_DAO {
             
             private global::System.Data.DataColumn columnGiaVon;
             
+            private global::System.Data.DataColumn columnSoLuong;
+            
             private global::System.Data.DataColumn columnIsdeleted;
-            
-            private global::System.Data.DataColumn columnDeletedUser;
-            
-            private global::System.Data.DataColumn columnDeletedDate;
-            
-            private global::System.Data.DataColumn columnCreatedUser;
-            
-            private global::System.Data.DataColumn columnCreatdate;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -394,41 +388,17 @@ namespace BLL_DAO {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SoLuongColumn {
+                get {
+                    return this.columnSoLuong;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn IsdeletedColumn {
                 get {
                     return this.columnIsdeleted;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn DeletedUserColumn {
-                get {
-                    return this.columnDeletedUser;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn DeletedDateColumn {
-                get {
-                    return this.columnDeletedDate;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn CreatedUserColumn {
-                get {
-                    return this.columnCreatedUser;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn CreatdateColumn {
-                get {
-                    return this.columnCreatdate;
                 }
             }
             
@@ -469,7 +439,7 @@ namespace BLL_DAO {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public SanPhamRow AddSanPhamRow(string MaSP, string TenSP, int MaLoaiSP, int MaNCC, string DVT, int GiaBan, int GiaVon, bool Isdeleted, string DeletedUser, System.DateTime DeletedDate, string CreatedUser, System.DateTime Creatdate) {
+            public SanPhamRow AddSanPhamRow(string MaSP, string TenSP, int MaLoaiSP, int MaNCC, string DVT, int GiaBan, int GiaVon, int SoLuong, bool Isdeleted) {
                 SanPhamRow rowSanPhamRow = ((SanPhamRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         MaSP,
@@ -479,11 +449,8 @@ namespace BLL_DAO {
                         DVT,
                         GiaBan,
                         GiaVon,
-                        Isdeleted,
-                        DeletedUser,
-                        DeletedDate,
-                        CreatedUser,
-                        Creatdate};
+                        SoLuong,
+                        Isdeleted};
                 rowSanPhamRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowSanPhamRow);
                 return rowSanPhamRow;
@@ -520,11 +487,8 @@ namespace BLL_DAO {
                 this.columnDVT = base.Columns["DVT"];
                 this.columnGiaBan = base.Columns["GiaBan"];
                 this.columnGiaVon = base.Columns["GiaVon"];
+                this.columnSoLuong = base.Columns["SoLuong"];
                 this.columnIsdeleted = base.Columns["Isdeleted"];
-                this.columnDeletedUser = base.Columns["DeletedUser"];
-                this.columnDeletedDate = base.Columns["DeletedDate"];
-                this.columnCreatedUser = base.Columns["CreatedUser"];
-                this.columnCreatdate = base.Columns["Creatdate"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -544,16 +508,10 @@ namespace BLL_DAO {
                 base.Columns.Add(this.columnGiaBan);
                 this.columnGiaVon = new global::System.Data.DataColumn("GiaVon", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnGiaVon);
+                this.columnSoLuong = new global::System.Data.DataColumn("SoLuong", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSoLuong);
                 this.columnIsdeleted = new global::System.Data.DataColumn("Isdeleted", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnIsdeleted);
-                this.columnDeletedUser = new global::System.Data.DataColumn("DeletedUser", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDeletedUser);
-                this.columnDeletedDate = new global::System.Data.DataColumn("DeletedDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDeletedDate);
-                this.columnCreatedUser = new global::System.Data.DataColumn("CreatedUser", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCreatedUser);
-                this.columnCreatdate = new global::System.Data.DataColumn("Creatdate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCreatdate);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnMaSP}, true));
                 this.columnMaSP.AllowDBNull = false;
@@ -561,8 +519,6 @@ namespace BLL_DAO {
                 this.columnMaSP.MaxLength = 30;
                 this.columnTenSP.MaxLength = 30;
                 this.columnDVT.MaxLength = 20;
-                this.columnDeletedUser.MaxLength = 30;
-                this.columnCreatedUser.MaxLength = 30;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -812,6 +768,22 @@ namespace BLL_DAO {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int SoLuong {
+                get {
+                    try {
+                        return ((int)(this[this.tableSanPham.SoLuongColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SoLuong\' in table \'SanPham\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSanPham.SoLuongColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Isdeleted {
                 get {
                     try {
@@ -823,70 +795,6 @@ namespace BLL_DAO {
                 }
                 set {
                     this[this.tableSanPham.IsdeletedColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string DeletedUser {
-                get {
-                    try {
-                        return ((string)(this[this.tableSanPham.DeletedUserColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'DeletedUser\' in table \'SanPham\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableSanPham.DeletedUserColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime DeletedDate {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tableSanPham.DeletedDateColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'DeletedDate\' in table \'SanPham\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableSanPham.DeletedDateColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string CreatedUser {
-                get {
-                    try {
-                        return ((string)(this[this.tableSanPham.CreatedUserColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'CreatedUser\' in table \'SanPham\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableSanPham.CreatedUserColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime Creatdate {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tableSanPham.CreatdateColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Creatdate\' in table \'SanPham\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableSanPham.CreatdateColumn] = value;
                 }
             }
             
@@ -964,6 +872,18 @@ namespace BLL_DAO {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSoLuongNull() {
+                return this.IsNull(this.tableSanPham.SoLuongColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSoLuongNull() {
+                this[this.tableSanPham.SoLuongColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsIsdeletedNull() {
                 return this.IsNull(this.tableSanPham.IsdeletedColumn);
             }
@@ -972,54 +892,6 @@ namespace BLL_DAO {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetIsdeletedNull() {
                 this[this.tableSanPham.IsdeletedColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsDeletedUserNull() {
-                return this.IsNull(this.tableSanPham.DeletedUserColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetDeletedUserNull() {
-                this[this.tableSanPham.DeletedUserColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsDeletedDateNull() {
-                return this.IsNull(this.tableSanPham.DeletedDateColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetDeletedDateNull() {
-                this[this.tableSanPham.DeletedDateColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsCreatedUserNull() {
-                return this.IsNull(this.tableSanPham.CreatedUserColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetCreatedUserNull() {
-                this[this.tableSanPham.CreatedUserColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsCreatdateNull() {
-                return this.IsNull(this.tableSanPham.CreatdateColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetCreatdateNull() {
-                this[this.tableSanPham.CreatdateColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1189,15 +1061,12 @@ namespace BLL_DAO.BachHoaXanh_StoreDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("DVT", "DVT");
             tableMapping.ColumnMappings.Add("GiaBan", "GiaBan");
             tableMapping.ColumnMappings.Add("GiaVon", "GiaVon");
+            tableMapping.ColumnMappings.Add("SoLuong", "SoLuong");
             tableMapping.ColumnMappings.Add("Isdeleted", "Isdeleted");
-            tableMapping.ColumnMappings.Add("DeletedUser", "DeletedUser");
-            tableMapping.ColumnMappings.Add("DeletedDate", "DeletedDate");
-            tableMapping.ColumnMappings.Add("CreatedUser", "CreatedUser");
-            tableMapping.ColumnMappings.Add("Creatdate", "Creatdate");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[SanPham] WHERE (([MaSP] = @Original_MaSP) AND ((@IsNull_TenSP = 1 AND [TenSP] IS NULL) OR ([TenSP] = @Original_TenSP)) AND ((@IsNull_MaLoaiSP = 1 AND [MaLoaiSP] IS NULL) OR ([MaLoaiSP] = @Original_MaLoaiSP)) AND ((@IsNull_MaNCC = 1 AND [MaNCC] IS NULL) OR ([MaNCC] = @Original_MaNCC)) AND ((@IsNull_DVT = 1 AND [DVT] IS NULL) OR ([DVT] = @Original_DVT)) AND ((@IsNull_GiaBan = 1 AND [GiaBan] IS NULL) OR ([GiaBan] = @Original_GiaBan)) AND ((@IsNull_GiaVon = 1 AND [GiaVon] IS NULL) OR ([GiaVon] = @Original_GiaVon)) AND ((@IsNull_Isdeleted = 1 AND [Isdeleted] IS NULL) OR ([Isdeleted] = @Original_Isdeleted)) AND ((@IsNull_DeletedUser = 1 AND [DeletedUser] IS NULL) OR ([DeletedUser] = @Original_DeletedUser)) AND ((@IsNull_DeletedDate = 1 AND [DeletedDate] IS NULL) OR ([DeletedDate] = @Original_DeletedDate)) AND ((@IsNull_CreatedUser = 1 AND [CreatedUser] IS NULL) OR ([CreatedUser] = @Original_CreatedUser)) AND ((@IsNull_Creatdate = 1 AND [Creatdate] IS NULL) OR ([Creatdate] = @Original_Creatdate)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[SanPham] WHERE (([MaSP] = @Original_MaSP) AND ((@IsNull_TenSP = 1 AND [TenSP] IS NULL) OR ([TenSP] = @Original_TenSP)) AND ((@IsNull_MaLoaiSP = 1 AND [MaLoaiSP] IS NULL) OR ([MaLoaiSP] = @Original_MaLoaiSP)) AND ((@IsNull_MaNCC = 1 AND [MaNCC] IS NULL) OR ([MaNCC] = @Original_MaNCC)) AND ((@IsNull_DVT = 1 AND [DVT] IS NULL) OR ([DVT] = @Original_DVT)) AND ((@IsNull_GiaBan = 1 AND [GiaBan] IS NULL) OR ([GiaBan] = @Original_GiaBan)) AND ((@IsNull_GiaVon = 1 AND [GiaVon] IS NULL) OR ([GiaVon] = @Original_GiaVon)) AND ((@IsNull_SoLuong = 1 AND [SoLuong] IS NULL) OR ([SoLuong] = @Original_SoLuong)) AND ((@IsNull_Isdeleted = 1 AND [Isdeleted] IS NULL) OR ([Isdeleted] = @Original_Isdeleted)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MaSP", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MaSP", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_TenSP", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TenSP", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -1212,20 +1081,14 @@ namespace BLL_DAO.BachHoaXanh_StoreDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GiaBan", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GiaBan", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_GiaVon", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GiaVon", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GiaVon", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GiaVon", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SoLuong", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SoLuong", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SoLuong", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SoLuong", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Isdeleted", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Isdeleted", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Isdeleted", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Isdeleted", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DeletedUser", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DeletedUser", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DeletedUser", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DeletedUser", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DeletedDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DeletedDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DeletedDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DeletedDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_CreatedUser", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CreatedUser", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CreatedUser", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CreatedUser", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Creatdate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Creatdate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Creatdate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Creatdate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[SanPham] ([MaSP], [TenSP], [MaLoaiSP], [MaNCC], [DVT], [GiaBan], [GiaVon], [Isdeleted], [DeletedUser], [DeletedDate], [CreatedUser], [Creatdate]) VALUES (@MaSP, @TenSP, @MaLoaiSP, @MaNCC, @DVT, @GiaBan, @GiaVon, @Isdeleted, @DeletedUser, @DeletedDate, @CreatedUser, @Creatdate);
-SELECT MaSP, TenSP, MaLoaiSP, MaNCC, DVT, GiaBan, GiaVon, Isdeleted, DeletedUser, DeletedDate, CreatedUser, Creatdate FROM SanPham WHERE (MaSP = @MaSP)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[SanPham] ([MaSP], [TenSP], [MaLoaiSP], [MaNCC], [DVT], [GiaBan], [GiaVon], [SoLuong], [Isdeleted]) VALUES (@MaSP, @TenSP, @MaLoaiSP, @MaNCC, @DVT, @GiaBan, @GiaVon, @SoLuong, @Isdeleted);
+SELECT MaSP, TenSP, MaLoaiSP, MaNCC, DVT, GiaBan, GiaVon, SoLuong, Isdeleted FROM SanPham WHERE (MaSP = @MaSP)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MaSP", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MaSP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TenSP", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TenSP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1234,15 +1097,12 @@ SELECT MaSP, TenSP, MaLoaiSP, MaNCC, DVT, GiaBan, GiaVon, Isdeleted, DeletedUser
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DVT", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DVT", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GiaBan", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GiaBan", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GiaVon", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GiaVon", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SoLuong", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SoLuong", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Isdeleted", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Isdeleted", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DeletedUser", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DeletedUser", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DeletedDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DeletedDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CreatedUser", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CreatedUser", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Creatdate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Creatdate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[SanPham] SET [MaSP] = @MaSP, [TenSP] = @TenSP, [MaLoaiSP] = @MaLoaiSP, [MaNCC] = @MaNCC, [DVT] = @DVT, [GiaBan] = @GiaBan, [GiaVon] = @GiaVon, [Isdeleted] = @Isdeleted, [DeletedUser] = @DeletedUser, [DeletedDate] = @DeletedDate, [CreatedUser] = @CreatedUser, [Creatdate] = @Creatdate WHERE (([MaSP] = @Original_MaSP) AND ((@IsNull_TenSP = 1 AND [TenSP] IS NULL) OR ([TenSP] = @Original_TenSP)) AND ((@IsNull_MaLoaiSP = 1 AND [MaLoaiSP] IS NULL) OR ([MaLoaiSP] = @Original_MaLoaiSP)) AND ((@IsNull_MaNCC = 1 AND [MaNCC] IS NULL) OR ([MaNCC] = @Original_MaNCC)) AND ((@IsNull_DVT = 1 AND [DVT] IS NULL) OR ([DVT] = @Original_DVT)) AND ((@IsNull_GiaBan = 1 AND [GiaBan] IS NULL) OR ([GiaBan] = @Original_GiaBan)) AND ((@IsNull_GiaVon = 1 AND [GiaVon] IS NULL) OR ([GiaVon] = @Original_GiaVon)) AND ((@IsNull_Isdeleted = 1 AND [Isdeleted] IS NULL) OR ([Isdeleted] = @Original_Isdeleted)) AND ((@IsNull_DeletedUser = 1 AND [DeletedUser] IS NULL) OR ([DeletedUser] = @Original_DeletedUser)) AND ((@IsNull_DeletedDate = 1 AND [DeletedDate] IS NULL) OR ([DeletedDate] = @Original_DeletedDate)) AND ((@IsNull_CreatedUser = 1 AND [CreatedUser] IS NULL) OR ([CreatedUser] = @Original_CreatedUser)) AND ((@IsNull_Creatdate = 1 AND [Creatdate] IS NULL) OR ([Creatdate] = @Original_Creatdate)));
-SELECT MaSP, TenSP, MaLoaiSP, MaNCC, DVT, GiaBan, GiaVon, Isdeleted, DeletedUser, DeletedDate, CreatedUser, Creatdate FROM SanPham WHERE (MaSP = @MaSP)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[SanPham] SET [MaSP] = @MaSP, [TenSP] = @TenSP, [MaLoaiSP] = @MaLoaiSP, [MaNCC] = @MaNCC, [DVT] = @DVT, [GiaBan] = @GiaBan, [GiaVon] = @GiaVon, [SoLuong] = @SoLuong, [Isdeleted] = @Isdeleted WHERE (([MaSP] = @Original_MaSP) AND ((@IsNull_TenSP = 1 AND [TenSP] IS NULL) OR ([TenSP] = @Original_TenSP)) AND ((@IsNull_MaLoaiSP = 1 AND [MaLoaiSP] IS NULL) OR ([MaLoaiSP] = @Original_MaLoaiSP)) AND ((@IsNull_MaNCC = 1 AND [MaNCC] IS NULL) OR ([MaNCC] = @Original_MaNCC)) AND ((@IsNull_DVT = 1 AND [DVT] IS NULL) OR ([DVT] = @Original_DVT)) AND ((@IsNull_GiaBan = 1 AND [GiaBan] IS NULL) OR ([GiaBan] = @Original_GiaBan)) AND ((@IsNull_GiaVon = 1 AND [GiaVon] IS NULL) OR ([GiaVon] = @Original_GiaVon)) AND ((@IsNull_SoLuong = 1 AND [SoLuong] IS NULL) OR ([SoLuong] = @Original_SoLuong)) AND ((@IsNull_Isdeleted = 1 AND [Isdeleted] IS NULL) OR ([Isdeleted] = @Original_Isdeleted)));
+SELECT MaSP, TenSP, MaLoaiSP, MaNCC, DVT, GiaBan, GiaVon, SoLuong, Isdeleted FROM SanPham WHERE (MaSP = @MaSP)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MaSP", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MaSP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TenSP", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TenSP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1251,11 +1111,8 @@ SELECT MaSP, TenSP, MaLoaiSP, MaNCC, DVT, GiaBan, GiaVon, Isdeleted, DeletedUser
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DVT", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DVT", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GiaBan", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GiaBan", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GiaVon", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GiaVon", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SoLuong", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SoLuong", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Isdeleted", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Isdeleted", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DeletedUser", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DeletedUser", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DeletedDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DeletedDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CreatedUser", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CreatedUser", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Creatdate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Creatdate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MaSP", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MaSP", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_TenSP", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TenSP", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TenSP", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TenSP", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -1269,16 +1126,10 @@ SELECT MaSP, TenSP, MaLoaiSP, MaNCC, DVT, GiaBan, GiaVon, Isdeleted, DeletedUser
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GiaBan", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GiaBan", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_GiaVon", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GiaVon", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GiaVon", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GiaVon", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SoLuong", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SoLuong", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SoLuong", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SoLuong", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Isdeleted", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Isdeleted", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Isdeleted", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Isdeleted", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DeletedUser", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DeletedUser", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DeletedUser", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DeletedUser", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DeletedDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DeletedDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DeletedDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DeletedDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_CreatedUser", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CreatedUser", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CreatedUser", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CreatedUser", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Creatdate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Creatdate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Creatdate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Creatdate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1294,8 +1145,8 @@ SELECT MaSP, TenSP, MaLoaiSP, MaNCC, DVT, GiaBan, GiaVon, Isdeleted, DeletedUser
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT MaSP, TenSP, MaLoaiSP, MaNCC, DVT, GiaBan, GiaVon, Isdeleted, DeletedUser," +
-                " DeletedDate, CreatedUser, Creatdate FROM dbo.SanPham";
+            this._commandCollection[0].CommandText = "SELECT MaSP, TenSP, MaLoaiSP, MaNCC, DVT, GiaBan, GiaVon, SoLuong, Isdeleted FROM" +
+                " dbo.SanPham";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1356,7 +1207,7 @@ SELECT MaSP, TenSP, MaLoaiSP, MaNCC, DVT, GiaBan, GiaVon, Isdeleted, DeletedUser
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_MaSP, string Original_TenSP, global::System.Nullable<int> Original_MaLoaiSP, global::System.Nullable<int> Original_MaNCC, string Original_DVT, global::System.Nullable<int> Original_GiaBan, global::System.Nullable<int> Original_GiaVon, global::System.Nullable<bool> Original_Isdeleted, string Original_DeletedUser, global::System.Nullable<global::System.DateTime> Original_DeletedDate, string Original_CreatedUser, global::System.Nullable<global::System.DateTime> Original_Creatdate) {
+        public virtual int Delete(string Original_MaSP, string Original_TenSP, global::System.Nullable<int> Original_MaLoaiSP, global::System.Nullable<int> Original_MaNCC, string Original_DVT, global::System.Nullable<int> Original_GiaBan, global::System.Nullable<int> Original_GiaVon, global::System.Nullable<int> Original_SoLuong, global::System.Nullable<bool> Original_Isdeleted) {
             if ((Original_MaSP == null)) {
                 throw new global::System.ArgumentNullException("Original_MaSP");
             }
@@ -1411,45 +1262,21 @@ SELECT MaSP, TenSP, MaLoaiSP, MaNCC, DVT, GiaBan, GiaVon, Isdeleted, DeletedUser
                 this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
-            if ((Original_Isdeleted.HasValue == true)) {
+            if ((Original_SoLuong.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[14].Value = ((bool)(Original_Isdeleted.Value));
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((int)(Original_SoLuong.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
-            if ((Original_DeletedUser == null)) {
+            if ((Original_Isdeleted.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[16].Value = ((bool)(Original_Isdeleted.Value));
+            }
+            else {
                 this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[16].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[16].Value = ((string)(Original_DeletedUser));
-            }
-            if ((Original_DeletedDate.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[18].Value = ((System.DateTime)(Original_DeletedDate.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[18].Value = global::System.DBNull.Value;
-            }
-            if ((Original_CreatedUser == null)) {
-                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[20].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[20].Value = ((string)(Original_CreatedUser));
-            }
-            if ((Original_Creatdate.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[22].Value = ((System.DateTime)(Original_Creatdate.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[22].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1471,7 +1298,7 @@ SELECT MaSP, TenSP, MaLoaiSP, MaNCC, DVT, GiaBan, GiaVon, Isdeleted, DeletedUser
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string MaSP, string TenSP, global::System.Nullable<int> MaLoaiSP, global::System.Nullable<int> MaNCC, string DVT, global::System.Nullable<int> GiaBan, global::System.Nullable<int> GiaVon, global::System.Nullable<bool> Isdeleted, string DeletedUser, global::System.Nullable<global::System.DateTime> DeletedDate, string CreatedUser, global::System.Nullable<global::System.DateTime> Creatdate) {
+        public virtual int Insert(string MaSP, string TenSP, global::System.Nullable<int> MaLoaiSP, global::System.Nullable<int> MaNCC, string DVT, global::System.Nullable<int> GiaBan, global::System.Nullable<int> GiaVon, global::System.Nullable<int> SoLuong, global::System.Nullable<bool> Isdeleted) {
             if ((MaSP == null)) {
                 throw new global::System.ArgumentNullException("MaSP");
             }
@@ -1514,35 +1341,17 @@ SELECT MaSP, TenSP, MaLoaiSP, MaNCC, DVT, GiaBan, GiaVon, Isdeleted, DeletedUser
             else {
                 this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            if ((Isdeleted.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((bool)(Isdeleted.Value));
+            if ((SoLuong.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((int)(SoLuong.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
-            if ((DeletedUser == null)) {
+            if ((Isdeleted.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((bool)(Isdeleted.Value));
+            }
+            else {
                 this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(DeletedUser));
-            }
-            if ((DeletedDate.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[9].Value = ((System.DateTime)(DeletedDate.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
-            }
-            if ((CreatedUser == null)) {
-                this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[10].Value = ((string)(CreatedUser));
-            }
-            if ((Creatdate.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[11].Value = ((System.DateTime)(Creatdate.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1572,11 +1381,8 @@ SELECT MaSP, TenSP, MaLoaiSP, MaNCC, DVT, GiaBan, GiaVon, Isdeleted, DeletedUser
                     string DVT, 
                     global::System.Nullable<int> GiaBan, 
                     global::System.Nullable<int> GiaVon, 
+                    global::System.Nullable<int> SoLuong, 
                     global::System.Nullable<bool> Isdeleted, 
-                    string DeletedUser, 
-                    global::System.Nullable<global::System.DateTime> DeletedDate, 
-                    string CreatedUser, 
-                    global::System.Nullable<global::System.DateTime> Creatdate, 
                     string Original_MaSP, 
                     string Original_TenSP, 
                     global::System.Nullable<int> Original_MaLoaiSP, 
@@ -1584,11 +1390,8 @@ SELECT MaSP, TenSP, MaLoaiSP, MaNCC, DVT, GiaBan, GiaVon, Isdeleted, DeletedUser
                     string Original_DVT, 
                     global::System.Nullable<int> Original_GiaBan, 
                     global::System.Nullable<int> Original_GiaVon, 
-                    global::System.Nullable<bool> Original_Isdeleted, 
-                    string Original_DeletedUser, 
-                    global::System.Nullable<global::System.DateTime> Original_DeletedDate, 
-                    string Original_CreatedUser, 
-                    global::System.Nullable<global::System.DateTime> Original_Creatdate) {
+                    global::System.Nullable<int> Original_SoLuong, 
+                    global::System.Nullable<bool> Original_Isdeleted) {
             if ((MaSP == null)) {
                 throw new global::System.ArgumentNullException("MaSP");
             }
@@ -1631,129 +1434,87 @@ SELECT MaSP, TenSP, MaLoaiSP, MaNCC, DVT, GiaBan, GiaVon, Isdeleted, DeletedUser
             else {
                 this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            if ((Isdeleted.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((bool)(Isdeleted.Value));
+            if ((SoLuong.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(SoLuong.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
-            if ((DeletedUser == null)) {
+            if ((Isdeleted.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((bool)(Isdeleted.Value));
+            }
+            else {
                 this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(DeletedUser));
-            }
-            if ((DeletedDate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((System.DateTime)(DeletedDate.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
-            }
-            if ((CreatedUser == null)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(CreatedUser));
-            }
-            if ((Creatdate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((System.DateTime)(Creatdate.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
             if ((Original_MaSP == null)) {
                 throw new global::System.ArgumentNullException("Original_MaSP");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_MaSP));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_MaSP));
             }
             if ((Original_TenSP == null)) {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_TenSP));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_TenSP));
             }
             if ((Original_MaLoaiSP.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(Original_MaLoaiSP.Value));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_MaLoaiSP.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
             if ((Original_MaNCC.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((int)(Original_MaNCC.Value));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(Original_MaNCC.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
             }
             if ((Original_DVT == null)) {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Original_DVT));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_DVT));
             }
             if ((Original_GiaBan.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((int)(Original_GiaBan.Value));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((int)(Original_GiaBan.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
             }
             if ((Original_GiaVon.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((int)(Original_GiaVon.Value));
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((int)(Original_GiaVon.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
+            }
+            if ((Original_SoLuong.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((int)(Original_SoLuong.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
             }
             if ((Original_Isdeleted.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((bool)(Original_Isdeleted.Value));
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((bool)(Original_Isdeleted.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
-            }
-            if ((Original_DeletedUser == null)) {
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((string)(Original_DeletedUser));
-            }
-            if ((Original_DeletedDate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((System.DateTime)(Original_DeletedDate.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[30].Value = global::System.DBNull.Value;
-            }
-            if ((Original_CreatedUser == null)) {
-                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[32].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[32].Value = ((string)(Original_CreatedUser));
-            }
-            if ((Original_Creatdate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[34].Value = ((System.DateTime)(Original_Creatdate.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[34].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1782,11 +1543,8 @@ SELECT MaSP, TenSP, MaLoaiSP, MaNCC, DVT, GiaBan, GiaVon, Isdeleted, DeletedUser
                     string DVT, 
                     global::System.Nullable<int> GiaBan, 
                     global::System.Nullable<int> GiaVon, 
+                    global::System.Nullable<int> SoLuong, 
                     global::System.Nullable<bool> Isdeleted, 
-                    string DeletedUser, 
-                    global::System.Nullable<global::System.DateTime> DeletedDate, 
-                    string CreatedUser, 
-                    global::System.Nullable<global::System.DateTime> Creatdate, 
                     string Original_MaSP, 
                     string Original_TenSP, 
                     global::System.Nullable<int> Original_MaLoaiSP, 
@@ -1794,12 +1552,9 @@ SELECT MaSP, TenSP, MaLoaiSP, MaNCC, DVT, GiaBan, GiaVon, Isdeleted, DeletedUser
                     string Original_DVT, 
                     global::System.Nullable<int> Original_GiaBan, 
                     global::System.Nullable<int> Original_GiaVon, 
-                    global::System.Nullable<bool> Original_Isdeleted, 
-                    string Original_DeletedUser, 
-                    global::System.Nullable<global::System.DateTime> Original_DeletedDate, 
-                    string Original_CreatedUser, 
-                    global::System.Nullable<global::System.DateTime> Original_Creatdate) {
-            return this.Update(Original_MaSP, TenSP, MaLoaiSP, MaNCC, DVT, GiaBan, GiaVon, Isdeleted, DeletedUser, DeletedDate, CreatedUser, Creatdate, Original_MaSP, Original_TenSP, Original_MaLoaiSP, Original_MaNCC, Original_DVT, Original_GiaBan, Original_GiaVon, Original_Isdeleted, Original_DeletedUser, Original_DeletedDate, Original_CreatedUser, Original_Creatdate);
+                    global::System.Nullable<int> Original_SoLuong, 
+                    global::System.Nullable<bool> Original_Isdeleted) {
+            return this.Update(Original_MaSP, TenSP, MaLoaiSP, MaNCC, DVT, GiaBan, GiaVon, SoLuong, Isdeleted, Original_MaSP, Original_TenSP, Original_MaLoaiSP, Original_MaNCC, Original_DVT, Original_GiaBan, Original_GiaVon, Original_SoLuong, Original_Isdeleted);
         }
     }
     
