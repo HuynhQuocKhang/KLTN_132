@@ -14,14 +14,13 @@ namespace BachHoaXanh_Store
 {
     public partial class FormChinhSuaSP : Form
     {
-        ProductBO objProductTmp = new ProductBO();
+        ProductBO objProductTmp = FormDanhSachSP.objProductBO;
         CustomerBLL customerBLL = new CustomerBLL();
         ProductTypeBLL objProductTypeBLL = new ProductTypeBLL();
         ProductBLL objProductBLL = new ProductBLL();
         public FormChinhSuaSP()
         {
             InitializeComponent();
-            objProductTmp = FormDanhSachSP.objProductBO; 
             cbo_NhaCungCap.DataSource = customerBLL.GetListALlCustomer();
             cbo_NhaCungCap.DisplayMember = "FullName";
             cbo_NhaCungCap.ValueMember = "MaNCC";
@@ -61,6 +60,7 @@ namespace BachHoaXanh_Store
             {
                 if (FormDanhSachSP.isEdit != true)
                 {
+                    objProductTmp = new ProductBO();
                     objProductTmp.MaSP = txt_MaSP.Text.Trim();
                 }
                 objProductTmp.TenSP = txt_TenSP.Text;

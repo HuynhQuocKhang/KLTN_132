@@ -105,29 +105,36 @@ namespace BachHoaXanh_Store
 
         private void bunifuButton3_Click(object sender, EventArgs e)
         {
-            int index = dgv_DSSP.CurrentCell.RowIndex;
-            if (dgv_Order.Rows.Count == 0)
+            if (dgv_DSSP.Rows.Count == 0)
             {
-                this.dgv_Order.Rows.Add(dgv_DSSP["col_MaSP", index].Value.ToString(), dgv_DSSP["col_TenSP", index].Value.ToString(), "1", dgv_DSSP["col_GiaVon", index].Value.ToString(), dgv_DSSP["col_GiaVon", index].Value.ToString());
+                MessageBox.Show("Dữ liệu của danh sách đang rông. Xin vui lòng thử lại");
             }
             else
             {
-                int indexOrder = -1;
-                for (int i = 0; i < dgv_Order.Rows.Count; i++)
-                {
-                    if (dgv_DSSP["col_MaSP", index].Value.ToString() == dgv_Order["MaSP", i].Value.ToString() && dgv_Order["MaSP", i].Value != null)
-                    {
-                        dgv_Order["SoLuong", i].Value = (int.Parse(dgv_Order["SoLuong", index].Value.ToString()) + 1).ToString();
-                        dgv_Order["col_ThanhTien", i].Value = (int.Parse(dgv_Order["SoLuong", i].Value.ToString()) * int.Parse(dgv_Order["GiaVon", i].Value.ToString())).ToString();
-                        indexOrder = i;
-                        return;
-                    }
-                }
-                if (indexOrder == -1)
+                int index = dgv_DSSP.CurrentCell.RowIndex;
+                if (dgv_Order.Rows.Count == 0)
                 {
                     this.dgv_Order.Rows.Add(dgv_DSSP["col_MaSP", index].Value.ToString(), dgv_DSSP["col_TenSP", index].Value.ToString(), "1", dgv_DSSP["col_GiaVon", index].Value.ToString(), dgv_DSSP["col_GiaVon", index].Value.ToString());
                 }
-            }
+                else
+                {
+                    int indexOrder = -1;
+                    for (int i = 0; i < dgv_Order.Rows.Count; i++)
+                    {
+                        if (dgv_DSSP["col_MaSP", index].Value.ToString() == dgv_Order["MaSP", i].Value.ToString() && dgv_Order["MaSP", i].Value != null)
+                        {
+                            dgv_Order["SoLuong", i].Value = (int.Parse(dgv_Order["SoLuong", index].Value.ToString()) + 1).ToString();
+                            dgv_Order["col_ThanhTien", i].Value = (int.Parse(dgv_Order["SoLuong", i].Value.ToString()) * int.Parse(dgv_Order["GiaVon", i].Value.ToString())).ToString();
+                            indexOrder = i;
+                            return;
+                        }
+                    }
+                    if (indexOrder == -1)
+                    {
+                        this.dgv_Order.Rows.Add(dgv_DSSP["col_MaSP", index].Value.ToString(), dgv_DSSP["col_TenSP", index].Value.ToString(), "1", dgv_DSSP["col_GiaVon", index].Value.ToString(), dgv_DSSP["col_GiaVon", index].Value.ToString());
+                    }
+                }
+            }    
 
         }
 
