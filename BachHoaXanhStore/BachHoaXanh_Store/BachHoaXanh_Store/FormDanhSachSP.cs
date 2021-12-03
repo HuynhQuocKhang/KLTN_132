@@ -32,7 +32,8 @@ namespace BachHoaXanh_Store
             cbo_NhaCungCap.DataSource = objcustomerBLL.GetListALlCustomer();
             cbo_NhaCungCap.DisplayMember = "FullName";
             cbo_NhaCungCap.ValueMember = "MaNCC";
-        }
+            objProductBO = null;
+    }
 
         private void dgv_DSSP_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {

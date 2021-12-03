@@ -14,14 +14,14 @@ namespace BachHoaXanh_Store
 {
     public partial class FormChinhSuaSP : Form
     {
-        ProductBO objProductTmp = FormDanhSachSP.objProductBO;
+        ProductBO objProductTmp = new ProductBO();
         CustomerBLL customerBLL = new CustomerBLL();
         ProductTypeBLL objProductTypeBLL = new ProductTypeBLL();
         ProductBLL objProductBLL = new ProductBLL();
         public FormChinhSuaSP()
         {
             InitializeComponent();
-
+            objProductTmp = FormDanhSachSP.objProductBO; 
             cbo_NhaCungCap.DataSource = customerBLL.GetListALlCustomer();
             cbo_NhaCungCap.DisplayMember = "FullName";
             cbo_NhaCungCap.ValueMember = "MaNCC";
@@ -31,6 +31,8 @@ namespace BachHoaXanh_Store
             cbo_MaLoaiSP.ValueMember = "MaLoaiSP";
             if (FormDanhSachSP.isEdit == true)
             {
+                txt_MaSP.ReadOnly = true;
+                txt_MaSP.Text = objProductTmp.MaSP.ToString();
                 bunifuLabel1.Text = "THÔNG TIN SẢN PHẢM";
                 txt_TenSP.Text = objProductTmp.TenSP;
                 cbo_MaLoaiSP.Text = objProductTmp.MaLoaiSP.ToString();
@@ -57,16 +59,22 @@ namespace BachHoaXanh_Store
             string strNote = CheckValuePrice(txt_GiaBan.Text.Trim(), txt_GiaVon.Text.Trim());
             if (strNote.Trim() == null || strNote == string.Empty)
             {
+                if (FormDanhSachSP.isEdit != true)
+                {
+                    objProductTmp.MaSP = txt_MaSP.Text.Trim();
+                }
                 objProductTmp.TenSP = txt_TenSP.Text;
                 objProductTmp.MaLoaiSP = int.Parse(cbo_MaLoaiSP.SelectedValue.ToString());
                 objProductTmp.MaNCC = int.Parse(cbo_NhaCungCap.SelectedValue.ToString());
                 objProductTmp.DVT = cbo_DVT.Text;
                 objProductTmp.GiaBan = int.Parse(txt_GiaBan.Text.Trim());
                 objProductTmp.GiaVon = int.Parse(txt_GiaVon.Text.Trim());
+                objProductTmp.SoLuong = 0;
                 if (objProductBLL.InsertOrUpdate(objProductTmp))
                 {
                     MessageBox.Show("Cập Nhật Thông Tin Thành Công");
                     FormMain.lstProduct = objProductBLL.GetListAllProduct();
+                    FormDanhSachSP.objProductBO = null;
                     this.Close();
                 }
                 else

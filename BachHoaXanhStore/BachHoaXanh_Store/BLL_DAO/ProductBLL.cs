@@ -173,6 +173,7 @@ namespace BLL_DAO
                 if (objCheckDuplicate == null)
                 {
                     SanPham objSanPham = new SanPham();
+                    objSanPham.MaSP = model.MaSP;
                     objSanPham.TenSP = model.TenSP;
                     objSanPham.MaLoaiSP = model.MaLoaiSP;
                     objSanPham.MaNCC = model.MaNCC;
@@ -191,6 +192,7 @@ namespace BLL_DAO
                     objCheckDuplicate.DVT = model.DVT;
                     objCheckDuplicate.GiaBan = model.GiaBan;
                     objCheckDuplicate.GiaVon = model.GiaVon;
+                    objCheckDuplicate.SoLuong = model.SoLuong;
                     db.SubmitChanges();
                 }
                 
