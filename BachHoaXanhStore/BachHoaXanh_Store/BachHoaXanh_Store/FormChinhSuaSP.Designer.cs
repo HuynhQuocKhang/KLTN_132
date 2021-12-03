@@ -66,8 +66,8 @@ namespace BachHoaXanh_Store
             this.txt_GiaVon = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.cbo_MaLoaiSP = new Bunifu.UI.WinForms.BunifuDropdown();
             this.cbo_DVT = new Bunifu.UI.WinForms.BunifuDropdown();
-            this.crystalDarkTheme1 = new Telerik.WinControls.Themes.CrystalDarkTheme();
             this.txt_MaSP = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
+            this.crystalDarkTheme1 = new Telerik.WinControls.Themes.CrystalDarkTheme();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();

@@ -173,6 +173,7 @@ namespace BLL_DAO
                 if (objCheckDuplicate == null)
                 {
                     SanPham objSanPham = new SanPham();
+                    objSanPham.MaSP = model.MaSP;
                     objSanPham.TenSP = model.TenSP;
                     objSanPham.MaLoaiSP = model.MaLoaiSP;
                     objSanPham.MaNCC = model.MaNCC;
@@ -191,6 +192,7 @@ namespace BLL_DAO
                     objCheckDuplicate.DVT = model.DVT;
                     objCheckDuplicate.GiaBan = model.GiaBan;
                     objCheckDuplicate.GiaVon = model.GiaVon;
+                    objCheckDuplicate.SoLuong = model.SoLuong;
                     db.SubmitChanges();
                 }
                 
@@ -199,6 +201,68 @@ namespace BLL_DAO
             catch
             {
                 return false;
+            }
+        }
+
+        public List<ProductOrderCustomerBO> GetProductByKeysForOrderCustomer(string strkeywords = "", int intProductTypeId = 0, int intCustomerId = 0)
+        {
+            if (intCustomerId == 0 && intProductTypeId == 0)
+            {
+                var model = from objProduct in db.SanPhams
+                            join objProductType in db.LoaiSPs
+                            on objProduct.MaLoaiSP equals objProductType.MaLoaiSP
+                            join objCustomer in db.NhaCungCaps
+                            on objProduct.MaNCC equals objCustomer.MaNCC
+                            where objProduct.Isdeleted == false && (objProduct.TenSP.Contains(strkeywords.Trim()) || objProduct.MaSP.Contains(strkeywords.Trim()))
+                            select new ProductOrderCustomerBO()
+                            {
+                                MaSP = objProduct.MaSP,
+                                TenSP = objProduct.TenSP,
+                                DVT = objProduct.DVT,
+                                GiaVon = objProduct.GiaVon,
+                                SoLuong = objProduct.SoLuong
+                            };
+                model.OrderByDescending(x => x.MaSP);
+
+                return model.ToList();
+            }
+            if (intCustomerId == 0)
+            {
+                var model = from objProduct in db.SanPhams
+                            join objProductType in db.LoaiSPs
+                            on objProduct.MaLoaiSP equals objProductType.MaLoaiSP
+                            join objCustomer in db.NhaCungCaps
+                            on objProduct.MaNCC equals objCustomer.MaNCC
+                            where objProduct.Isdeleted == false && objProduct.MaLoaiSP == intProductTypeId && (objProduct.TenSP.Contains(strkeywords.Trim()) || objProduct.MaSP.Contains(strkeywords.Trim()))
+                            select new ProductOrderCustomerBO()
+                            {
+                                MaSP = objProduct.MaSP,
+                                TenSP = objProduct.TenSP,
+                                DVT = objProduct.DVT,
+                                GiaVon = objProduct.GiaVon,
+                                SoLuong = objProduct.SoLuong
+                            };
+                model.OrderByDescending(x => x.MaSP);
+                return model.ToList();
+            }
+            else
+            {
+                var model = from objProduct in db.SanPhams
+                            join objProductType in db.LoaiSPs
+                            on objProduct.MaLoaiSP equals objProductType.MaLoaiSP
+                            join objCustomer in db.NhaCungCaps
+                            on objProduct.MaNCC equals objCustomer.MaNCC
+                            where objProduct.Isdeleted == false && objProduct.MaNCC == intCustomerId && (objProduct.TenSP.Contains(strkeywords.Trim()) || objProduct.MaSP.Contains(strkeywords.Trim()))
+                            select new ProductOrderCustomerBO()
+                            {
+                                MaSP = objProduct.MaSP,
+                                TenSP = objProduct.TenSP,
+                                DVT = objProduct.DVT,
+                                GiaVon = objProduct.GiaVon,
+                                SoLuong = objProduct.SoLuong
+                            };
+                model.OrderByDescending(x => x.MaSP);
+                return model.ToList();
             }
         }
     }
