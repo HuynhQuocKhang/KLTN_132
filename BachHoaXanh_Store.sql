@@ -2,16 +2,6 @@
 use BachHoaXanh_Store
 --drop database BachHoaXanh_Store
 
-create table NhanVien
-(
-	Username char(30) not null,
-	pPassword char(30),
-	Permission int,--  1:Quản lí kho, 2:Cửa hàng trưởng, 3:Nhân viên 
-	UserType nvarchar(30),-- Quản lí kho || Quản lí cửa hàng || Nhân viên bán hàng
-	NameofUser nvarchar(30),
-	constraint PK_NhanVien primary key (Username),
-)
-
 create table LoaiSP
 (
 	MaLoaiSP int IDENTITY(1,1),
