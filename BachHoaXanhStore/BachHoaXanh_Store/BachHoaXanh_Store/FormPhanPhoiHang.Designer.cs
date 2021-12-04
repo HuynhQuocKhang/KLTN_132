@@ -68,13 +68,13 @@ namespace BachHoaXanh_Store
             this.panel2 = new System.Windows.Forms.Panel();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.chk_AllStore = new Bunifu.UI.WinForms.BunifuCheckBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.dtp_NgayBatDau = new Bunifu.UI.WinForms.BunifuDatePicker();
+            this.btn_TimKiem = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.panel4 = new System.Windows.Forms.Panel();
             this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
             this.dtp_NgayKetThuc = new Bunifu.UI.WinForms.BunifuDatePicker();
-            this.btn_TimKiem = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.dtp_NgayBatDau = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.panel6 = new System.Windows.Forms.Panel();
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.cbo_TinhTrang = new Bunifu.UI.WinForms.BunifuDropdown();
@@ -87,8 +87,8 @@ namespace BachHoaXanh_Store
             this.tableLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -553,116 +553,6 @@ namespace BachHoaXanh_Store
             this.chk_AllStore.ThreeState = false;
             this.chk_AllStore.ToolTipText = null;
             // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.bunifuLabel3);
-            this.panel3.Controls.Add(this.dtp_NgayBatDau);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(645, 3);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(315, 57);
-            this.panel3.TabIndex = 2;
-            // 
-            // bunifuLabel3
-            // 
-            this.bunifuLabel3.AutoEllipsis = false;
-            this.bunifuLabel3.AutoSize = false;
-            this.bunifuLabel3.CursorType = null;
-            this.bunifuLabel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bunifuLabel3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(18)))), ((int)(((byte)(10)))));
-            this.bunifuLabel3.Location = new System.Drawing.Point(0, 9);
-            this.bunifuLabel3.Name = "bunifuLabel3";
-            this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel3.Size = new System.Drawing.Size(315, 16);
-            this.bunifuLabel3.TabIndex = 1;
-            this.bunifuLabel3.Text = "Đặt hàng từ ngày";
-            this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuLabel3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // dtp_NgayBatDau
-            // 
-            this.dtp_NgayBatDau.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(216)))), ((int)(((byte)(211)))));
-            this.dtp_NgayBatDau.BorderRadius = 13;
-            this.dtp_NgayBatDau.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(18)))), ((int)(((byte)(10)))));
-            this.dtp_NgayBatDau.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(247)))), ((int)(((byte)(228)))));
-            this.dtp_NgayBatDau.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(187)))), ((int)(((byte)(89)))));
-            this.dtp_NgayBatDau.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(18)))), ((int)(((byte)(10)))));
-            this.dtp_NgayBatDau.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(187)))), ((int)(((byte)(89)))));
-            this.dtp_NgayBatDau.Color = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(92)))), ((int)(((byte)(83)))));
-            this.dtp_NgayBatDau.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thick;
-            this.dtp_NgayBatDau.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
-            this.dtp_NgayBatDau.DisabledColor = System.Drawing.Color.Gray;
-            this.dtp_NgayBatDau.DisplayWeekNumbers = false;
-            this.dtp_NgayBatDau.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dtp_NgayBatDau.DPHeight = 0;
-            this.dtp_NgayBatDau.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.dtp_NgayBatDau.FillDatePicker = false;
-            this.dtp_NgayBatDau.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(92)))), ((int)(((byte)(83)))));
-            this.dtp_NgayBatDau.Icon = ((System.Drawing.Image)(resources.GetObject("dtp_NgayBatDau.Icon")));
-            this.dtp_NgayBatDau.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(139)))), ((int)(((byte)(125)))));
-            this.dtp_NgayBatDau.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
-            this.dtp_NgayBatDau.Location = new System.Drawing.Point(0, 25);
-            this.dtp_NgayBatDau.MinimumSize = new System.Drawing.Size(100, 32);
-            this.dtp_NgayBatDau.Name = "dtp_NgayBatDau";
-            this.dtp_NgayBatDau.Size = new System.Drawing.Size(315, 32);
-            this.dtp_NgayBatDau.TabIndex = 0;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.bunifuLabel4);
-            this.panel4.Controls.Add(this.dtp_NgayKetThuc);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(966, 3);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(317, 57);
-            this.panel4.TabIndex = 3;
-            // 
-            // bunifuLabel4
-            // 
-            this.bunifuLabel4.AutoEllipsis = false;
-            this.bunifuLabel4.AutoSize = false;
-            this.bunifuLabel4.CursorType = null;
-            this.bunifuLabel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bunifuLabel4.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(18)))), ((int)(((byte)(10)))));
-            this.bunifuLabel4.Location = new System.Drawing.Point(0, 8);
-            this.bunifuLabel4.Name = "bunifuLabel4";
-            this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel4.Size = new System.Drawing.Size(317, 17);
-            this.bunifuLabel4.TabIndex = 2;
-            this.bunifuLabel4.Text = "Đến ngày";
-            this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuLabel4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // dtp_NgayKetThuc
-            // 
-            this.dtp_NgayKetThuc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(216)))), ((int)(((byte)(211)))));
-            this.dtp_NgayKetThuc.BorderRadius = 13;
-            this.dtp_NgayKetThuc.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(18)))), ((int)(((byte)(10)))));
-            this.dtp_NgayKetThuc.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(247)))), ((int)(((byte)(228)))));
-            this.dtp_NgayKetThuc.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(187)))), ((int)(((byte)(89)))));
-            this.dtp_NgayKetThuc.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(18)))), ((int)(((byte)(10)))));
-            this.dtp_NgayKetThuc.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(187)))), ((int)(((byte)(89)))));
-            this.dtp_NgayKetThuc.Color = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(92)))), ((int)(((byte)(83)))));
-            this.dtp_NgayKetThuc.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thick;
-            this.dtp_NgayKetThuc.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
-            this.dtp_NgayKetThuc.DisabledColor = System.Drawing.Color.Gray;
-            this.dtp_NgayKetThuc.DisplayWeekNumbers = false;
-            this.dtp_NgayKetThuc.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dtp_NgayKetThuc.DPHeight = 0;
-            this.dtp_NgayKetThuc.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.dtp_NgayKetThuc.FillDatePicker = false;
-            this.dtp_NgayKetThuc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(92)))), ((int)(((byte)(83)))));
-            this.dtp_NgayKetThuc.Icon = ((System.Drawing.Image)(resources.GetObject("dtp_NgayKetThuc.Icon")));
-            this.dtp_NgayKetThuc.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(139)))), ((int)(((byte)(125)))));
-            this.dtp_NgayKetThuc.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
-            this.dtp_NgayKetThuc.Location = new System.Drawing.Point(0, 25);
-            this.dtp_NgayKetThuc.MinimumSize = new System.Drawing.Size(100, 32);
-            this.dtp_NgayKetThuc.Name = "dtp_NgayKetThuc";
-            this.dtp_NgayKetThuc.Size = new System.Drawing.Size(317, 32);
-            this.dtp_NgayKetThuc.TabIndex = 2;
-            // 
             // btn_TimKiem
             // 
             this.btn_TimKiem.AllowToggling = false;
@@ -726,6 +616,116 @@ namespace BachHoaXanh_Store
             this.btn_TimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_TimKiem.TextMarginLeft = 0;
             this.btn_TimKiem.UseDefaultRadiusAndThickness = true;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.bunifuLabel4);
+            this.panel4.Controls.Add(this.dtp_NgayKetThuc);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(966, 3);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(317, 57);
+            this.panel4.TabIndex = 3;
+            // 
+            // bunifuLabel4
+            // 
+            this.bunifuLabel4.AutoEllipsis = false;
+            this.bunifuLabel4.AutoSize = false;
+            this.bunifuLabel4.CursorType = null;
+            this.bunifuLabel4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.bunifuLabel4.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(18)))), ((int)(((byte)(10)))));
+            this.bunifuLabel4.Location = new System.Drawing.Point(0, 8);
+            this.bunifuLabel4.Name = "bunifuLabel4";
+            this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel4.Size = new System.Drawing.Size(317, 17);
+            this.bunifuLabel4.TabIndex = 2;
+            this.bunifuLabel4.Text = "Đến ngày";
+            this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bunifuLabel4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // dtp_NgayKetThuc
+            // 
+            this.dtp_NgayKetThuc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(216)))), ((int)(((byte)(211)))));
+            this.dtp_NgayKetThuc.BorderRadius = 13;
+            this.dtp_NgayKetThuc.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(18)))), ((int)(((byte)(10)))));
+            this.dtp_NgayKetThuc.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(247)))), ((int)(((byte)(228)))));
+            this.dtp_NgayKetThuc.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(187)))), ((int)(((byte)(89)))));
+            this.dtp_NgayKetThuc.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(18)))), ((int)(((byte)(10)))));
+            this.dtp_NgayKetThuc.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(187)))), ((int)(((byte)(89)))));
+            this.dtp_NgayKetThuc.Color = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(92)))), ((int)(((byte)(83)))));
+            this.dtp_NgayKetThuc.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thick;
+            this.dtp_NgayKetThuc.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
+            this.dtp_NgayKetThuc.DisabledColor = System.Drawing.Color.Gray;
+            this.dtp_NgayKetThuc.DisplayWeekNumbers = false;
+            this.dtp_NgayKetThuc.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dtp_NgayKetThuc.DPHeight = 0;
+            this.dtp_NgayKetThuc.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.dtp_NgayKetThuc.FillDatePicker = false;
+            this.dtp_NgayKetThuc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(92)))), ((int)(((byte)(83)))));
+            this.dtp_NgayKetThuc.Icon = ((System.Drawing.Image)(resources.GetObject("dtp_NgayKetThuc.Icon")));
+            this.dtp_NgayKetThuc.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(139)))), ((int)(((byte)(125)))));
+            this.dtp_NgayKetThuc.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
+            this.dtp_NgayKetThuc.Location = new System.Drawing.Point(0, 25);
+            this.dtp_NgayKetThuc.MinimumSize = new System.Drawing.Size(100, 32);
+            this.dtp_NgayKetThuc.Name = "dtp_NgayKetThuc";
+            this.dtp_NgayKetThuc.Size = new System.Drawing.Size(317, 32);
+            this.dtp_NgayKetThuc.TabIndex = 2;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.bunifuLabel3);
+            this.panel3.Controls.Add(this.dtp_NgayBatDau);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(645, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(315, 57);
+            this.panel3.TabIndex = 2;
+            // 
+            // bunifuLabel3
+            // 
+            this.bunifuLabel3.AutoEllipsis = false;
+            this.bunifuLabel3.AutoSize = false;
+            this.bunifuLabel3.CursorType = null;
+            this.bunifuLabel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.bunifuLabel3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(18)))), ((int)(((byte)(10)))));
+            this.bunifuLabel3.Location = new System.Drawing.Point(0, 9);
+            this.bunifuLabel3.Name = "bunifuLabel3";
+            this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel3.Size = new System.Drawing.Size(315, 16);
+            this.bunifuLabel3.TabIndex = 1;
+            this.bunifuLabel3.Text = "Đặt hàng từ ngày";
+            this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bunifuLabel3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // dtp_NgayBatDau
+            // 
+            this.dtp_NgayBatDau.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(216)))), ((int)(((byte)(211)))));
+            this.dtp_NgayBatDau.BorderRadius = 13;
+            this.dtp_NgayBatDau.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(18)))), ((int)(((byte)(10)))));
+            this.dtp_NgayBatDau.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(247)))), ((int)(((byte)(228)))));
+            this.dtp_NgayBatDau.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(187)))), ((int)(((byte)(89)))));
+            this.dtp_NgayBatDau.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(18)))), ((int)(((byte)(10)))));
+            this.dtp_NgayBatDau.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(187)))), ((int)(((byte)(89)))));
+            this.dtp_NgayBatDau.Color = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(92)))), ((int)(((byte)(83)))));
+            this.dtp_NgayBatDau.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thick;
+            this.dtp_NgayBatDau.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
+            this.dtp_NgayBatDau.DisabledColor = System.Drawing.Color.Gray;
+            this.dtp_NgayBatDau.DisplayWeekNumbers = false;
+            this.dtp_NgayBatDau.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dtp_NgayBatDau.DPHeight = 0;
+            this.dtp_NgayBatDau.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.dtp_NgayBatDau.FillDatePicker = false;
+            this.dtp_NgayBatDau.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(92)))), ((int)(((byte)(83)))));
+            this.dtp_NgayBatDau.Icon = ((System.Drawing.Image)(resources.GetObject("dtp_NgayBatDau.Icon")));
+            this.dtp_NgayBatDau.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(139)))), ((int)(((byte)(125)))));
+            this.dtp_NgayBatDau.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
+            this.dtp_NgayBatDau.Location = new System.Drawing.Point(0, 25);
+            this.dtp_NgayBatDau.MinimumSize = new System.Drawing.Size(100, 32);
+            this.dtp_NgayBatDau.Name = "dtp_NgayBatDau";
+            this.dtp_NgayBatDau.Size = new System.Drawing.Size(315, 32);
+            this.dtp_NgayBatDau.TabIndex = 0;
             // 
             // panel6
             // 
@@ -805,8 +805,8 @@ namespace BachHoaXanh_Store
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.ResumeLayout(false);
 

@@ -32,7 +32,10 @@ namespace BachHoaXanh_Store
             cbo_NhaCungCap.DataSource = objcustomerBLL.GetListALlCustomer();
             cbo_NhaCungCap.DisplayMember = "FullName";
             cbo_NhaCungCap.ValueMember = "MaNCC";
-    }
+            toolTip1.SetToolTip(cbo_LoaiSP, "Chọn tìm kiếm theo loại sản phẩm");
+            toolTip1.SetToolTip(cbo_NhaCungCap, "Chọn tìm kiếm theo nhà cung cấp");
+            toolTip1.SetToolTip(txtKeyWord, "Tìm kiếm dữ liệu sản phẩm");
+        }
 
         private void dgv_DSSP_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
