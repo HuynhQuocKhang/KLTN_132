@@ -22,7 +22,7 @@ namespace BachHoaXanh_Store
         public static FormMain frmMain = null;
         public static FormReport frmReport = null;
         public static FormBanHang frmBanHang = null;
-
+        public static FormLogin frmLogin = null;
         [STAThread]
         static void Main()
         {
@@ -34,10 +34,16 @@ namespace BachHoaXanh_Store
             // frmTraHangNCC = new FormTraHangNCC();
             //frmPhieuTraHang = new FormPhieuTraHang();
             //frmDanhSachSP = new FormDanhSachSP();
+<<<<<<< HEAD
             //frmDangNhap = new FormDangNhap();
             //FormReport frmReport = new FormReport();
             frmMain = new FormMain();
             Application.Run(frmMain);
+=======
+            frmLogin = new FormLogin();
+            //FormReport frmReport = new FormReport();
+            Application.Run(frmLogin);
+>>>>>>> Add-Login-Form
         }
 
 
