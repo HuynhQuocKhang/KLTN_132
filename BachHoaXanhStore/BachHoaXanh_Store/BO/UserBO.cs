@@ -11,8 +11,8 @@ namespace BO
         public int UserId { get; set; }
         public string UserName { get; set; }
         public string PassWord { get; set; }
-        public string Permission { get; set; }
-        public string StoreId { get; set; }
+        public int? Permission { get; set; }
+        public int StoreId { get; set; }
         public string UserFullName { get; set; }
     }
 }

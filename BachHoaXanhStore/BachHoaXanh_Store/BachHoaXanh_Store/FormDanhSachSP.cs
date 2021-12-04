@@ -28,13 +28,17 @@ namespace BachHoaXanh_Store
         {
             InitializeComponent();
             //Load dữ liệu ban đầu
-            dgv_DSSP.DataSource = objProductBLL.GetListAllProduct();
+            //dgv_DSSP.DataSource = objProductBLL.GetListAllProduct();
             cbo_NhaCungCap.DataSource = objcustomerBLL.GetListALlCustomer();
             cbo_NhaCungCap.DisplayMember = "FullName";
             cbo_NhaCungCap.ValueMember = "MaNCC";
             toolTip1.SetToolTip(cbo_LoaiSP, "Chọn tìm kiếm theo loại sản phẩm");
             toolTip1.SetToolTip(cbo_NhaCungCap, "Chọn tìm kiếm theo nhà cung cấp");
             toolTip1.SetToolTip(txtKeyWord, "Tìm kiếm dữ liệu sản phẩm");
+
+            cbo_LoaiSP.DataSource = objProductTypeBLL.GetALLProductType();
+            cbo_LoaiSP.DisplayMember = "FullName";
+            cbo_LoaiSP.ValueMember = "MaLoaiSP";
         }
 
         private void dgv_DSSP_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -44,19 +48,27 @@ namespace BachHoaXanh_Store
 
         private void btn_TimKiem_Click(object sender, EventArgs e)
         {
-            Search(txtKeyWord.Text, cbo_NhaCungCap.SelectedValue.ToString());
+            Search(txtKeyWord.Text, cbo_NhaCungCap.SelectedValue.ToString(), cbo_LoaiSP.SelectedValue.ToString());
 
         }
         //Tìm kiếm sản phẩm theo key and customerid
-        private void Search(string strProductName, string strCustomerId)
+        private void Search(string strProductName, string strCustomerId, string strProductTypeId)
         {
-            if (int.Parse(strCustomerId) == 1)
+            if (int.Parse(strCustomerId) == 1 && int.Parse(strProductTypeId) == 1)
             {
                 dgv_DSSP.DataSource = objProductBLL.GetProductByKeys(strProductName.Trim(), 0, 0);
             }
-            else
+            else if (int.Parse(strCustomerId) == 1)
+            {
+                dgv_DSSP.DataSource = objProductBLL.GetProductByKeys(strProductName.Trim(), int.Parse(strProductTypeId), 0);
+            }
+            else if (int.Parse(strProductTypeId) == 1)
             {
                 dgv_DSSP.DataSource = objProductBLL.GetProductByKeys(strProductName.Trim(), 0, int.Parse(strCustomerId));
+            }
+            else
+            {
+                dgv_DSSP.DataSource = objProductBLL.GetProductByKeys(strProductName.Trim(), int.Parse(strProductTypeId), int.Parse(strCustomerId));
             }
         }
         private void dgv_DSSP_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -107,7 +119,7 @@ namespace BachHoaXanh_Store
                 if (objProductBLL.DeleteMultiProduct(lstProduct))
                 {
                     MessageBox.Show("Xóa Sản Phẩm Thành Công");
-                    Search(txtKeyWord.Text, cbo_NhaCungCap.SelectedValue.ToString());
+                    Search(txtKeyWord.Text, cbo_NhaCungCap.SelectedValue.ToString(), cbo_LoaiSP.SelectedValue.ToString());
                     FormMain.lstProduct = objProductBLL.GetListAllProduct();
                 }
                 else
@@ -119,7 +131,7 @@ namespace BachHoaXanh_Store
 
         private void bunifuButton2_Click(object sender, EventArgs e)
         {
-            Search(txtKeyWord.Text, cbo_NhaCungCap.SelectedValue.ToString());
+            Search(txtKeyWord.Text, cbo_NhaCungCap.SelectedValue.ToString(), cbo_LoaiSP.SelectedValue.ToString());
         }
 
         private void bunifuButton1_Click_1(object sender, EventArgs e)

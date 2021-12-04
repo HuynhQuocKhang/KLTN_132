@@ -52,6 +52,7 @@ namespace BLL_DAO
             try
             {
                 HoaDonDatNCC objHoaDonDatNCC = new HoaDonDatNCC();
+                objHoaDonDatNCC.NguoiLapPhieu = model.NguoiLapPhieu;
                 objHoaDonDatNCC.MaNCC = model.MaNCC;
                 objHoaDonDatNCC.TongTien = model.TongTien;
                 objHoaDonDatNCC.NgayDat = model.NgayDat;
@@ -72,6 +73,30 @@ namespace BLL_DAO
             {
                 var objOrderCustomerBO = db.HoaDonDatNCCs.SingleOrDefault(t => t.MaHDDat == model.MaHDDat);
                 objOrderCustomerBO.Isdeleted = true;
+                db.SubmitChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public int GetOrderCustomerIdNew()
+        {
+            return db.HoaDonDatNCCs.OrderByDescending(t => t.MaHDDat).Select(t => t.MaHDDat).FirstOrDefault();
+        }
+
+        public bool InsertOrderCustomerDetail(int intOrderId, string strProductId, int intStock, int TotalPrice)
+        {
+            try
+            {
+                CTHoaDonDatNCC model = new CTHoaDonDatNCC();
+                model.MaHDDat = intOrderId;
+                model.MaSP = strProductId;
+                model.SoLuong = intStock;
+                model.ThanhTien = TotalPrice;
+                db.CTHoaDonDatNCCs.InsertOnSubmit(model);
                 db.SubmitChanges();
                 return true;
             }

@@ -43,8 +43,8 @@ namespace BachHoaXanh_Store
             }
             else
             {
-                Program.frmMain = new FormMain();
-                Program.frmMain.Show();
+                FormMain frm = new FormMain();
+                frm.Show();
                 this.Hide();
             }
 
