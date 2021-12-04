@@ -35,13 +35,18 @@ namespace BachHoaXanh_Store
 
         private void btn_Login_Click(object sender, EventArgs e)
         {
-            if(txt_username.Text== "admin")
+            if(radDropDownList1.Text=="Nhân viên")
             {
-                Program.frmDatHang = new FormDatHang();
-                Program.frmDatHang.Show();
+                Program.frmBanHang = new FormBanHang();
+                Program.frmBanHang.Show();
                 this.Hide();
-            }    
-
+            }
+            else
+            {
+                Program.frmMain = new FormMain();
+                Program.frmMain.Show();
+                this.Hide();
+            }
 
         }
     }

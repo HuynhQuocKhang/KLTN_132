@@ -282,6 +282,9 @@
     </Compile>
     <Compile Include="XuLiGiaoDien.cs" />
     <Compile Include="XuLiSuKien.cs" />
+    <EmbeddedResource Include="FormBanHang.resx">
+      <DependentUpon>FormBanHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormChinhSuaSP.resx">
       <DependentUpon>FormChinhSuaSP.cs</DependentUpon>
     </EmbeddedResource>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BachHoaXanh_Store" Class="BachHoaXanhDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=162860-VHBSON;Initial Catalog=BachHoaXanh_Store;Integrated Security=True" SettingsObjectName="BLL_DAO.Properties.Settings" SettingsPropertyName="BachHoaXanh_StoreConnectionString1" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-HAF1U2R\HUYNHKHANG;Initial Catalog=BachHoaXanh_Store;Integrated Security=True" SettingsObjectName="BLL_DAO.Properties.Settings" SettingsPropertyName="BachHoaXanh_StoreConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.CTDonDatHang" Member="CTDonDatHangs">
     <Type Name="CTDonDatHang">
       <Column Name="MaCTDDH" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -83,6 +83,7 @@
       <Column Name="TinhTrang" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
       <Column Name="TongTien" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="Isdeleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="createUser" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
       <Association Name="DonDatHang_CTDonDatHang" Member="CTDonDatHangs" ThisKey="MaDH" OtherKey="MaDH" Type="CTDonDatHang" />
       <Association Name="DonDatHang_PhieuXuatKho" Member="PhieuXuatKhos" ThisKey="MaDH" OtherKey="MaDH" Type="PhieuXuatKho" />
       <Association Name="SieuThi_DonDatHang" Member="SieuThi" ThisKey="MaST" OtherKey="MaST" Type="SieuThi" IsForeignKey="true" />
@@ -96,6 +97,7 @@
       <Column Name="NgayDat" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Column Name="TinhTrang" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
       <Column Name="Isdeleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="createUser" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
       <Association Name="HoaDonDatNCC_CTHoaDonDatNCC" Member="CTHoaDonDatNCCs" ThisKey="MaHDDat" OtherKey="MaHDDat" Type="CTHoaDonDatNCC" />
       <Association Name="HoaDonDatNCC_PhieuGiaoHangNCC" Member="PhieuGiaoHangNCCs" ThisKey="MaHDDat" OtherKey="MaHDDat" Type="PhieuGiaoHangNCC" />
       <Association Name="NhaCungCap_HoaDonDatNCC" Member="NhaCungCap" ThisKey="MaNCC" OtherKey="MaNCC" Type="NhaCungCap" IsForeignKey="true" />
@@ -164,6 +166,7 @@
       <Column Name="TongTien" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="NgayXuat" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Column Name="Isdeleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="createUser" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
       <Association Name="PhieuXuatKho_CTPhieuXuatKho" Member="CTPhieuXuatKhos" ThisKey="MaPXK" OtherKey="MaPXK" Type="CTPhieuXuatKho" />
       <Association Name="DonDatHang_PhieuXuatKho" Member="DonDatHang" ThisKey="MaDH" OtherKey="MaDH" Type="DonDatHang" IsForeignKey="true" />
       <Association Name="SieuThi_PhieuXuatKho" Member="SieuThi" ThisKey="MaST" OtherKey="MaST" Type="SieuThi" IsForeignKey="true" />

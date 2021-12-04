@@ -52,6 +52,8 @@ namespace BLL_DAO
                             join objCustomer in db.NhaCungCaps
                             on objProduct.MaNCC equals objCustomer.MaNCC
                             where objProduct.Isdeleted == false && (objProduct.TenSP.Contains(strkeywords.Trim()) || objProduct.MaSP.Contains(strkeywords.Trim()))
+                            orderby objProduct.MaSP descending
+
                             select new ProductBO()
                             {
                                 MaSP = objProduct.MaSP,

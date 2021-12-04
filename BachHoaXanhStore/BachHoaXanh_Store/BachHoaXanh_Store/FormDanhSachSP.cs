@@ -23,7 +23,7 @@ namespace BachHoaXanh_Store
         public static int indexProductTypeId = 0;
         public static bool isEdit = false;
         #endregion
-
+        
         public FormDanhSachSP()
         {
             InitializeComponent();
@@ -32,7 +32,10 @@ namespace BachHoaXanh_Store
             cbo_NhaCungCap.DataSource = objcustomerBLL.GetListALlCustomer();
             cbo_NhaCungCap.DisplayMember = "FullName";
             cbo_NhaCungCap.ValueMember = "MaNCC";
-    }
+            toolTip1.SetToolTip(cbo_LoaiSP, "Chọn tìm kiếm theo loại sản phẩm");
+            toolTip1.SetToolTip(cbo_NhaCungCap, "Chọn tìm kiếm theo nhà cung cấp");
+            toolTip1.SetToolTip(txtKeyWord, "Tìm kiếm dữ liệu sản phẩm");
+        }
 
         private void dgv_DSSP_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -114,7 +117,12 @@ namespace BachHoaXanh_Store
             }
         }
 
-        private void bunifuButton1_Click(object sender, EventArgs e)
+        private void bunifuButton2_Click(object sender, EventArgs e)
+        {
+            Search(txtKeyWord.Text, cbo_NhaCungCap.SelectedValue.ToString());
+        }
+
+        private void bunifuButton1_Click_1(object sender, EventArgs e)
         {
             isEdit = false;
             Program.frmChinhSuaSP = new FormChinhSuaSP();

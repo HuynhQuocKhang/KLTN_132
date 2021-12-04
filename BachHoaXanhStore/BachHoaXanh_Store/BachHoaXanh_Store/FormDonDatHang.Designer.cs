@@ -55,11 +55,20 @@ namespace BachHoaXanh_Store
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties19 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties20 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties21 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties22 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties23 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties24 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDonDatHang));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.telerikMetroTheme1 = new Telerik.WinControls.Themes.TelerikMetroTheme();
             this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
             this.dgv_Order = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.MaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GiaVon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txt_NhaCungCap = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.txt_TongTien = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.txt_NgayDat = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
@@ -71,15 +80,11 @@ namespace BachHoaXanh_Store
             this.panel2 = new System.Windows.Forms.Panel();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.txt_NguoiDat = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.MaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GiaVon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Order)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -106,7 +111,7 @@ namespace BachHoaXanh_Store
             this.bunifuLabel3.Location = new System.Drawing.Point(3, 3);
             this.bunifuLabel3.Name = "bunifuLabel3";
             this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel3.Size = new System.Drawing.Size(570, 62);
+            this.bunifuLabel3.Size = new System.Drawing.Size(556, 62);
             this.bunifuLabel3.TabIndex = 7;
             this.bunifuLabel3.Text = "CHI TIẾT ĐƠN ĐẶT HÀNG";
             this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -154,8 +159,38 @@ namespace BachHoaXanh_Store
             this.dgv_Order.Location = new System.Drawing.Point(3, 71);
             this.dgv_Order.Name = "dgv_Order";
             this.dgv_Order.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgv_Order.Size = new System.Drawing.Size(570, 223);
+            this.dgv_Order.Size = new System.Drawing.Size(556, 266);
             this.dgv_Order.TabIndex = 8;
+            // 
+            // MaSP
+            // 
+            this.MaSP.DataPropertyName = "MaSP";
+            this.MaSP.HeaderText = "Mã sản phẩm";
+            this.MaSP.Name = "MaSP";
+            // 
+            // TenSP
+            // 
+            this.TenSP.DataPropertyName = "TenSP";
+            this.TenSP.HeaderText = "Tên Sản Phẩm";
+            this.TenSP.Name = "TenSP";
+            // 
+            // SoLuong
+            // 
+            this.SoLuong.DataPropertyName = "SoLuong";
+            this.SoLuong.HeaderText = "Số lượng";
+            this.SoLuong.Name = "SoLuong";
+            // 
+            // GiaVon
+            // 
+            this.GiaVon.DataPropertyName = "GiaVon";
+            this.GiaVon.HeaderText = "Giá Vốn";
+            this.GiaVon.Name = "GiaVon";
+            // 
+            // col_ThanhTien
+            // 
+            this.col_ThanhTien.DataPropertyName = "ThanhTien";
+            this.col_ThanhTien.HeaderText = "Thành tiền";
+            this.col_ThanhTien.Name = "col_ThanhTien";
             // 
             // txt_NhaCungCap
             // 
@@ -187,7 +222,7 @@ namespace BachHoaXanh_Store
             this.txt_NhaCungCap.IconRight = null;
             this.txt_NhaCungCap.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_NhaCungCap.Lines = new string[0];
-            this.txt_NhaCungCap.Location = new System.Drawing.Point(33, 72);
+            this.txt_NhaCungCap.Location = new System.Drawing.Point(33, 117);
             this.txt_NhaCungCap.MaxLength = 32767;
             this.txt_NhaCungCap.MinimumSize = new System.Drawing.Size(100, 35);
             this.txt_NhaCungCap.Modified = false;
@@ -215,21 +250,21 @@ namespace BachHoaXanh_Store
             this.txt_NhaCungCap.OnIdleState = stateProperties4;
             this.txt_NhaCungCap.PasswordChar = '\0';
             this.txt_NhaCungCap.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txt_NhaCungCap.PlaceholderText = "Enter text";
+            this.txt_NhaCungCap.PlaceholderText = "Nhà cung cấp";
             this.txt_NhaCungCap.ReadOnly = false;
             this.txt_NhaCungCap.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_NhaCungCap.SelectedText = "";
             this.txt_NhaCungCap.SelectionLength = 0;
             this.txt_NhaCungCap.SelectionStart = 0;
             this.txt_NhaCungCap.ShortcutsEnabled = true;
-            this.txt_NhaCungCap.Size = new System.Drawing.Size(271, 39);
+            this.txt_NhaCungCap.Size = new System.Drawing.Size(270, 39);
             this.txt_NhaCungCap.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txt_NhaCungCap.TabIndex = 0;
             this.txt_NhaCungCap.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_NhaCungCap.TextMarginBottom = 0;
             this.txt_NhaCungCap.TextMarginLeft = 5;
             this.txt_NhaCungCap.TextMarginTop = 0;
-            this.txt_NhaCungCap.TextPlaceholder = "Enter text";
+            this.txt_NhaCungCap.TextPlaceholder = "Nhà cung cấp";
             this.txt_NhaCungCap.UseSystemPasswordChar = false;
             this.txt_NhaCungCap.WordWrap = true;
             // 
@@ -263,7 +298,7 @@ namespace BachHoaXanh_Store
             this.txt_TongTien.IconRight = null;
             this.txt_TongTien.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_TongTien.Lines = new string[0];
-            this.txt_TongTien.Location = new System.Drawing.Point(33, 117);
+            this.txt_TongTien.Location = new System.Drawing.Point(33, 162);
             this.txt_TongTien.MaxLength = 32767;
             this.txt_TongTien.MinimumSize = new System.Drawing.Size(100, 35);
             this.txt_TongTien.Modified = false;
@@ -291,21 +326,21 @@ namespace BachHoaXanh_Store
             this.txt_TongTien.OnIdleState = stateProperties8;
             this.txt_TongTien.PasswordChar = '\0';
             this.txt_TongTien.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txt_TongTien.PlaceholderText = "Enter text";
+            this.txt_TongTien.PlaceholderText = "Tổng tiền";
             this.txt_TongTien.ReadOnly = false;
             this.txt_TongTien.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_TongTien.SelectedText = "";
             this.txt_TongTien.SelectionLength = 0;
             this.txt_TongTien.SelectionStart = 0;
             this.txt_TongTien.ShortcutsEnabled = true;
-            this.txt_TongTien.Size = new System.Drawing.Size(271, 39);
+            this.txt_TongTien.Size = new System.Drawing.Size(270, 39);
             this.txt_TongTien.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txt_TongTien.TabIndex = 1;
             this.txt_TongTien.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_TongTien.TextMarginBottom = 0;
             this.txt_TongTien.TextMarginLeft = 5;
             this.txt_TongTien.TextMarginTop = 0;
-            this.txt_TongTien.TextPlaceholder = "Enter text";
+            this.txt_TongTien.TextPlaceholder = "Tổng tiền";
             this.txt_TongTien.UseSystemPasswordChar = false;
             this.txt_TongTien.WordWrap = true;
             // 
@@ -339,7 +374,7 @@ namespace BachHoaXanh_Store
             this.txt_NgayDat.IconRight = null;
             this.txt_NgayDat.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_NgayDat.Lines = new string[0];
-            this.txt_NgayDat.Location = new System.Drawing.Point(33, 162);
+            this.txt_NgayDat.Location = new System.Drawing.Point(33, 207);
             this.txt_NgayDat.MaxLength = 32767;
             this.txt_NgayDat.MinimumSize = new System.Drawing.Size(100, 35);
             this.txt_NgayDat.Modified = false;
@@ -367,21 +402,21 @@ namespace BachHoaXanh_Store
             this.txt_NgayDat.OnIdleState = stateProperties12;
             this.txt_NgayDat.PasswordChar = '\0';
             this.txt_NgayDat.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txt_NgayDat.PlaceholderText = "Enter text";
+            this.txt_NgayDat.PlaceholderText = "Ngày đặt";
             this.txt_NgayDat.ReadOnly = false;
             this.txt_NgayDat.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_NgayDat.SelectedText = "";
             this.txt_NgayDat.SelectionLength = 0;
             this.txt_NgayDat.SelectionStart = 0;
             this.txt_NgayDat.ShortcutsEnabled = true;
-            this.txt_NgayDat.Size = new System.Drawing.Size(271, 39);
+            this.txt_NgayDat.Size = new System.Drawing.Size(270, 39);
             this.txt_NgayDat.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txt_NgayDat.TabIndex = 3;
             this.txt_NgayDat.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_NgayDat.TextMarginBottom = 0;
             this.txt_NgayDat.TextMarginLeft = 5;
             this.txt_NgayDat.TextMarginTop = 0;
-            this.txt_NgayDat.TextPlaceholder = "Enter text";
+            this.txt_NgayDat.TextPlaceholder = "Ngày đặt";
             this.txt_NgayDat.UseSystemPasswordChar = false;
             this.txt_NgayDat.WordWrap = true;
             // 
@@ -415,7 +450,7 @@ namespace BachHoaXanh_Store
             this.txt_TinhTrang.IconRight = null;
             this.txt_TinhTrang.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_TinhTrang.Lines = new string[0];
-            this.txt_TinhTrang.Location = new System.Drawing.Point(33, 207);
+            this.txt_TinhTrang.Location = new System.Drawing.Point(33, 252);
             this.txt_TinhTrang.MaxLength = 32767;
             this.txt_TinhTrang.MinimumSize = new System.Drawing.Size(100, 35);
             this.txt_TinhTrang.Modified = false;
@@ -443,21 +478,21 @@ namespace BachHoaXanh_Store
             this.txt_TinhTrang.OnIdleState = stateProperties16;
             this.txt_TinhTrang.PasswordChar = '\0';
             this.txt_TinhTrang.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txt_TinhTrang.PlaceholderText = "Enter text";
+            this.txt_TinhTrang.PlaceholderText = "Tình trạng";
             this.txt_TinhTrang.ReadOnly = false;
             this.txt_TinhTrang.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_TinhTrang.SelectedText = "";
             this.txt_TinhTrang.SelectionLength = 0;
             this.txt_TinhTrang.SelectionStart = 0;
             this.txt_TinhTrang.ShortcutsEnabled = true;
-            this.txt_TinhTrang.Size = new System.Drawing.Size(271, 39);
+            this.txt_TinhTrang.Size = new System.Drawing.Size(270, 39);
             this.txt_TinhTrang.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txt_TinhTrang.TabIndex = 4;
             this.txt_TinhTrang.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_TinhTrang.TextMarginBottom = 0;
             this.txt_TinhTrang.TextMarginLeft = 5;
             this.txt_TinhTrang.TextMarginTop = 0;
-            this.txt_TinhTrang.TextPlaceholder = "Enter text";
+            this.txt_TinhTrang.TextPlaceholder = "Tình trạng";
             this.txt_TinhTrang.UseSystemPasswordChar = false;
             this.txt_TinhTrang.WordWrap = true;
             // 
@@ -499,7 +534,7 @@ namespace BachHoaXanh_Store
             this.btn_TraHang.IdleIconLeftImage = null;
             this.btn_TraHang.IdleIconRightImage = null;
             this.btn_TraHang.IndicateFocus = false;
-            this.btn_TraHang.Location = new System.Drawing.Point(195, 252);
+            this.btn_TraHang.Location = new System.Drawing.Point(171, 297);
             this.btn_TraHang.Name = "btn_TraHang";
             stateProperties17.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(221)))), ((int)(((byte)(158)))));
             stateProperties17.BorderRadius = 25;
@@ -519,7 +554,7 @@ namespace BachHoaXanh_Store
             stateProperties18.IconLeftImage = null;
             stateProperties18.IconRightImage = null;
             this.btn_TraHang.OnPressedState = stateProperties18;
-            this.btn_TraHang.Size = new System.Drawing.Size(109, 35);
+            this.btn_TraHang.Size = new System.Drawing.Size(132, 39);
             this.btn_TraHang.TabIndex = 2;
             this.btn_TraHang.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_TraHang.TextMarginLeft = 0;
@@ -541,17 +576,17 @@ namespace BachHoaXanh_Store
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(576, 330);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(562, 373);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.tableLayoutPanel3);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(356, 82);
+            this.panel3.Location = new System.Drawing.Point(352, 67);
             this.panel3.Name = "panel3";
             this.tableLayoutPanel1.SetRowSpan(this.panel3, 3);
-            this.panel3.Size = new System.Drawing.Size(576, 330);
+            this.panel3.Size = new System.Drawing.Size(562, 373);
             this.panel3.TabIndex = 1;
             // 
             // btn_Huy
@@ -577,7 +612,7 @@ namespace BachHoaXanh_Store
             this.btn_Huy.DisabledBorderColor = System.Drawing.Color.Empty;
             this.btn_Huy.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btn_Huy.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btn_Huy.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_Huy.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_Huy.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
             this.btn_Huy.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Huy.ForeColor = System.Drawing.Color.White;
@@ -592,7 +627,7 @@ namespace BachHoaXanh_Store
             this.btn_Huy.IdleIconLeftImage = null;
             this.btn_Huy.IdleIconRightImage = null;
             this.btn_Huy.IndicateFocus = false;
-            this.btn_Huy.Location = new System.Drawing.Point(80, 252);
+            this.btn_Huy.Location = new System.Drawing.Point(33, 297);
             this.btn_Huy.Name = "btn_Huy";
             stateProperties19.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(124)))), ((int)(((byte)(75)))));
             stateProperties19.BorderRadius = 25;
@@ -612,7 +647,7 @@ namespace BachHoaXanh_Store
             stateProperties20.IconLeftImage = null;
             stateProperties20.IconRightImage = null;
             this.btn_Huy.OnPressedState = stateProperties20;
-            this.btn_Huy.Size = new System.Drawing.Size(109, 35);
+            this.btn_Huy.Size = new System.Drawing.Size(132, 39);
             this.btn_Huy.TabIndex = 5;
             this.btn_Huy.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Huy.TextMarginLeft = 0;
@@ -626,7 +661,7 @@ namespace BachHoaXanh_Store
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(33, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(271, 63);
+            this.panel2.Size = new System.Drawing.Size(270, 63);
             this.panel2.TabIndex = 6;
             // 
             // bunifuLabel1
@@ -640,7 +675,7 @@ namespace BachHoaXanh_Store
             this.bunifuLabel1.Location = new System.Drawing.Point(0, 0);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(271, 63);
+            this.bunifuLabel1.Size = new System.Drawing.Size(270, 63);
             this.bunifuLabel1.TabIndex = 6;
             this.bunifuLabel1.Text = "THÔNG TIN ĐƠN ĐẶT HÀNG";
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -650,29 +685,107 @@ namespace BachHoaXanh_Store
             // 
             this.tableLayoutPanel2.ColumnCount = 4;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 58.57143F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 41.42857F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 39F));
-            this.tableLayoutPanel2.Controls.Add(this.txt_NhaCungCap, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.txt_TongTien, 1, 2);
-            this.tableLayoutPanel2.Controls.Add(this.txt_NgayDat, 1, 3);
-            this.tableLayoutPanel2.Controls.Add(this.txt_TinhTrang, 1, 4);
-            this.tableLayoutPanel2.Controls.Add(this.btn_TraHang, 2, 5);
-            this.tableLayoutPanel2.Controls.Add(this.btn_Huy, 1, 5);
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 36F));
+            this.tableLayoutPanel2.Controls.Add(this.txt_NhaCungCap, 1, 2);
+            this.tableLayoutPanel2.Controls.Add(this.txt_TongTien, 1, 3);
+            this.tableLayoutPanel2.Controls.Add(this.txt_NgayDat, 1, 4);
+            this.tableLayoutPanel2.Controls.Add(this.txt_TinhTrang, 1, 5);
+            this.tableLayoutPanel2.Controls.Add(this.btn_TraHang, 2, 6);
+            this.tableLayoutPanel2.Controls.Add(this.btn_Huy, 1, 6);
             this.tableLayoutPanel2.Controls.Add(this.panel2, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.txt_NguoiDat, 1, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 7;
+            this.tableLayoutPanel2.RowCount = 8;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 69F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 44F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(347, 330);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(343, 373);
             this.tableLayoutPanel2.TabIndex = 0;
+            // 
+            // txt_NguoiDat
+            // 
+            this.txt_NguoiDat.AcceptsReturn = false;
+            this.txt_NguoiDat.AcceptsTab = false;
+            this.txt_NguoiDat.AnimationSpeed = 200;
+            this.txt_NguoiDat.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txt_NguoiDat.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txt_NguoiDat.BackColor = System.Drawing.Color.Transparent;
+            this.txt_NguoiDat.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txt_NguoiDat.BackgroundImage")));
+            this.txt_NguoiDat.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(92)))), ((int)(((byte)(83)))));
+            this.txt_NguoiDat.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(223)))), ((int)(((byte)(135)))));
+            this.txt_NguoiDat.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(186)))), ((int)(((byte)(27)))));
+            this.txt_NguoiDat.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(92)))), ((int)(((byte)(83)))));
+            this.txt_NguoiDat.BorderRadius = 35;
+            this.txt_NguoiDat.BorderThickness = 1;
+            this.txt_NguoiDat.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.tableLayoutPanel2.SetColumnSpan(this.txt_NguoiDat, 2);
+            this.txt_NguoiDat.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_NguoiDat.DefaultFont = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_NguoiDat.DefaultText = "";
+            this.txt_NguoiDat.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt_NguoiDat.Enabled = false;
+            this.txt_NguoiDat.FillColor = System.Drawing.Color.White;
+            this.txt_NguoiDat.HideSelection = true;
+            this.txt_NguoiDat.IconLeft = null;
+            this.txt_NguoiDat.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_NguoiDat.IconPadding = 10;
+            this.txt_NguoiDat.IconRight = null;
+            this.txt_NguoiDat.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_NguoiDat.Lines = new string[0];
+            this.txt_NguoiDat.Location = new System.Drawing.Point(33, 72);
+            this.txt_NguoiDat.MaxLength = 32767;
+            this.txt_NguoiDat.MinimumSize = new System.Drawing.Size(100, 35);
+            this.txt_NguoiDat.Modified = false;
+            this.txt_NguoiDat.Multiline = false;
+            this.txt_NguoiDat.Name = "txt_NguoiDat";
+            stateProperties21.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(92)))), ((int)(((byte)(83)))));
+            stateProperties21.FillColor = System.Drawing.Color.Empty;
+            stateProperties21.ForeColor = System.Drawing.Color.Empty;
+            stateProperties21.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txt_NguoiDat.OnActiveState = stateProperties21;
+            stateProperties22.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(223)))), ((int)(((byte)(135)))));
+            stateProperties22.FillColor = System.Drawing.Color.White;
+            stateProperties22.ForeColor = System.Drawing.Color.Empty;
+            stateProperties22.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txt_NguoiDat.OnDisabledState = stateProperties22;
+            stateProperties23.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(186)))), ((int)(((byte)(27)))));
+            stateProperties23.FillColor = System.Drawing.Color.Empty;
+            stateProperties23.ForeColor = System.Drawing.Color.Empty;
+            stateProperties23.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txt_NguoiDat.OnHoverState = stateProperties23;
+            stateProperties24.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(92)))), ((int)(((byte)(83)))));
+            stateProperties24.FillColor = System.Drawing.Color.White;
+            stateProperties24.ForeColor = System.Drawing.Color.Empty;
+            stateProperties24.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txt_NguoiDat.OnIdleState = stateProperties24;
+            this.txt_NguoiDat.PasswordChar = '\0';
+            this.txt_NguoiDat.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txt_NguoiDat.PlaceholderText = "Người đặt";
+            this.txt_NguoiDat.ReadOnly = false;
+            this.txt_NguoiDat.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txt_NguoiDat.SelectedText = "";
+            this.txt_NguoiDat.SelectionLength = 0;
+            this.txt_NguoiDat.SelectionStart = 0;
+            this.txt_NguoiDat.ShortcutsEnabled = true;
+            this.txt_NguoiDat.Size = new System.Drawing.Size(270, 39);
+            this.txt_NguoiDat.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            this.txt_NguoiDat.TabIndex = 0;
+            this.txt_NguoiDat.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txt_NguoiDat.TextMarginBottom = 0;
+            this.txt_NguoiDat.TextMarginLeft = 5;
+            this.txt_NguoiDat.TextMarginTop = 0;
+            this.txt_NguoiDat.TextPlaceholder = "Người đặt";
+            this.txt_NguoiDat.UseSystemPasswordChar = false;
+            this.txt_NguoiDat.WordWrap = true;
             // 
             // bunifuLabel2
             // 
@@ -686,7 +799,7 @@ namespace BachHoaXanh_Store
             this.bunifuLabel2.Location = new System.Drawing.Point(3, 3);
             this.bunifuLabel2.Name = "bunifuLabel2";
             this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel2.Size = new System.Drawing.Size(929, 73);
+            this.bunifuLabel2.Size = new System.Drawing.Size(911, 58);
             this.bunifuLabel2.TabIndex = 7;
             this.bunifuLabel2.Text = "ĐƠN ĐẶT HÀNG";
             this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -696,17 +809,17 @@ namespace BachHoaXanh_Store
             // 
             this.panel1.Controls.Add(this.tableLayoutPanel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 82);
+            this.panel1.Location = new System.Drawing.Point(3, 67);
             this.panel1.Name = "panel1";
             this.tableLayoutPanel1.SetRowSpan(this.panel1, 3);
-            this.panel1.Size = new System.Drawing.Size(347, 330);
+            this.panel1.Size = new System.Drawing.Size(343, 373);
             this.panel1.TabIndex = 0;
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.86096F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62.13904F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.16794F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.83206F));
             this.tableLayoutPanel1.Controls.Add(this.bunifuLabel2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.panel3, 1, 1);
@@ -714,11 +827,11 @@ namespace BachHoaXanh_Store
             this.tableLayoutPanel1.Location = new System.Drawing.Point(16, 16);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 141F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 64F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 117F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 78F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(935, 415);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(917, 443);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // bunifuElipse2
@@ -726,42 +839,12 @@ namespace BachHoaXanh_Store
             this.bunifuElipse2.ElipseRadius = 35;
             this.bunifuElipse2.TargetControl = this;
             // 
-            // MaSP
-            // 
-            this.MaSP.DataPropertyName = "MaSP";
-            this.MaSP.HeaderText = "Mã sản phẩm";
-            this.MaSP.Name = "MaSP";
-            // 
-            // TenSP
-            // 
-            this.TenSP.DataPropertyName = "TenSP";
-            this.TenSP.HeaderText = "Tên Sản Phẩm";
-            this.TenSP.Name = "TenSP";
-            // 
-            // SoLuong
-            // 
-            this.SoLuong.DataPropertyName = "SoLuong";
-            this.SoLuong.HeaderText = "Số lượng";
-            this.SoLuong.Name = "SoLuong";
-            // 
-            // GiaVon
-            // 
-            this.GiaVon.DataPropertyName = "GiaVon";
-            this.GiaVon.HeaderText = "Giá Vốn";
-            this.GiaVon.Name = "GiaVon";
-            // 
-            // col_ThanhTien
-            // 
-            this.col_ThanhTien.DataPropertyName = "ThanhTien";
-            this.col_ThanhTien.HeaderText = "Thành tiền";
-            this.col_ThanhTien.Name = "col_ThanhTien";
-            // 
             // FormDonDatHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(216)))), ((int)(((byte)(211)))));
-            this.ClientSize = new System.Drawing.Size(967, 447);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(247)))), ((int)(((byte)(228)))));
+            this.ClientSize = new System.Drawing.Size(949, 475);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormDonDatHang";
@@ -805,5 +888,6 @@ namespace BachHoaXanh_Store
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn GiaVon;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_ThanhTien;
+        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txt_NguoiDat;
     }
 }
