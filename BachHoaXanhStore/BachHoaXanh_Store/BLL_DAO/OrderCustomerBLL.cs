@@ -80,5 +80,29 @@ namespace BLL_DAO
                 return false;
             }
         }
+
+        public int GetOrderCustomerIdNew()
+        {
+            return db.HoaDonDatNCCs.OrderByDescending(t => t.MaHDDat).Select(t => t.MaHDDat).FirstOrDefault();
+        }
+
+        public bool InsertOrderCustomerDetail(int intOrderId, string strProductId, int intStock, int TotalPrice)
+        {
+            try
+            {
+                CTHoaDonDatNCC model = new CTHoaDonDatNCC();
+                model.MaHDDat = intOrderId;
+                model.MaSP = strProductId;
+                model.SoLuong = intStock;
+                model.ThanhTien = TotalPrice;
+                db.CTHoaDonDatNCCs.InsertOnSubmit(model);
+                db.SubmitChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
 }

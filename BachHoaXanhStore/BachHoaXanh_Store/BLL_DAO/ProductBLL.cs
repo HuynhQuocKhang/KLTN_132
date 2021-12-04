@@ -53,7 +53,6 @@ namespace BLL_DAO
                             on objProduct.MaNCC equals objCustomer.MaNCC
                             where objProduct.Isdeleted == false && (objProduct.TenSP.Contains(strkeywords.Trim()) || objProduct.MaSP.Contains(strkeywords.Trim()))
                             orderby objProduct.MaSP descending
-
                             select new ProductBO()
                             {
                                 MaSP = objProduct.MaSP,
@@ -67,11 +66,11 @@ namespace BLL_DAO
                                 GiaVon = objProduct.GiaVon,
                                 SoLuong = objProduct.SoLuong
                             };
-                model.OrderByDescending(x => x.MaSP);
+                
 
-                return model.ToList();
+                return model.OrderByDescending(x => x.MaSP).Take(10).ToList();
             }
-            if (intCustomerId == 0)
+            if (intCustomerId == 0 && intProductTypeId != 0)
             {
                 var model = from objProduct in db.SanPhams
                             join objProductType in db.LoaiSPs
@@ -92,10 +91,9 @@ namespace BLL_DAO
                                 GiaVon = objProduct.GiaVon,
                                 SoLuong = objProduct.SoLuong
                             };
-                model.OrderByDescending(x => x.MaSP);
-                return model.ToList();
+                return model.OrderByDescending(x => x.MaSP).Take(10).ToList();
             }
-            else
+            if (intCustomerId != 0 && intProductTypeId == 0)
             {
                 var model = from objProduct in db.SanPhams
                             join objProductType in db.LoaiSPs
@@ -116,8 +114,30 @@ namespace BLL_DAO
                                 GiaVon = objProduct.GiaVon,
                                 SoLuong = objProduct.SoLuong
                             };
-                model.OrderByDescending(x => x.MaSP);
-                return model.ToList();
+                return model.OrderByDescending(x => x.MaSP).Take(10).ToList();
+            }
+            else
+            {
+                var model = from objProduct in db.SanPhams
+                            join objProductType in db.LoaiSPs
+                            on objProduct.MaLoaiSP equals objProductType.MaLoaiSP
+                            join objCustomer in db.NhaCungCaps
+                            on objProduct.MaNCC equals objCustomer.MaNCC
+                            where objProduct.Isdeleted == false && objProduct.MaNCC == intCustomerId && (objProduct.TenSP.Contains(strkeywords.Trim()) || objProduct.MaSP.Contains(strkeywords.Trim()) && objProduct.MaLoaiSP == intProductTypeId)
+                            select new ProductBO()
+                            {
+                                MaSP = objProduct.MaSP,
+                                TenSP = objProduct.TenSP,
+                                MaLoaiSP = objProduct.MaLoaiSP,
+                                TenLoaiSP = objProductType.TenLoaiSP,
+                                MaNCC = objProduct.MaNCC,
+                                TenNCC = objCustomer.TenNCC,
+                                DVT = objProduct.DVT,
+                                GiaBan = objProduct.GiaBan,
+                                GiaVon = objProduct.GiaVon,
+                                SoLuong = objProduct.SoLuong
+                            };
+                return model.OrderByDescending(x => x.MaSP).Take(10).ToList();
             }
         }
 
@@ -206,7 +226,7 @@ namespace BLL_DAO
             }
         }
 
-        public List<ProductOrderCustomerBO> GetProductByKeysForOrderCustomer(string strkeywords = "", int intProductTypeId = 0, int intCustomerId = 0)
+        public List<ProductOrderCustomerBO> GetProductByKeysForOrderCustomer(string strkeywords = "", int intProductTypeId = 0, int intCustomerId = 0, int intStock = 0)
         {
             if (intCustomerId == 0 && intProductTypeId == 0)
             {
@@ -215,7 +235,7 @@ namespace BLL_DAO
                             on objProduct.MaLoaiSP equals objProductType.MaLoaiSP
                             join objCustomer in db.NhaCungCaps
                             on objProduct.MaNCC equals objCustomer.MaNCC
-                            where objProduct.Isdeleted == false && (objProduct.TenSP.Contains(strkeywords.Trim()) || objProduct.MaSP.Contains(strkeywords.Trim()))
+                            where objProduct.Isdeleted == false && (objProduct.TenSP.Contains(strkeywords.Trim()) || objProduct.MaSP.Contains(strkeywords.Trim()) && objProduct.SoLuong <= intStock)
                             select new ProductOrderCustomerBO()
                             {
                                 MaSP = objProduct.MaSP,
@@ -224,18 +244,17 @@ namespace BLL_DAO
                                 GiaVon = objProduct.GiaVon,
                                 SoLuong = objProduct.SoLuong
                             };
-                model.OrderByDescending(x => x.MaSP);
 
-                return model.ToList();
+                return model.OrderByDescending(x => x.MaSP).Take(50).ToList();
             }
-            if (intCustomerId == 0)
+            if (intCustomerId == 0 && intProductTypeId != 0)
             {
                 var model = from objProduct in db.SanPhams
                             join objProductType in db.LoaiSPs
                             on objProduct.MaLoaiSP equals objProductType.MaLoaiSP
                             join objCustomer in db.NhaCungCaps
                             on objProduct.MaNCC equals objCustomer.MaNCC
-                            where objProduct.Isdeleted == false && objProduct.MaLoaiSP == intProductTypeId && (objProduct.TenSP.Contains(strkeywords.Trim()) || objProduct.MaSP.Contains(strkeywords.Trim()))
+                            where objProduct.Isdeleted == false && objProduct.MaLoaiSP == intProductTypeId && (objProduct.TenSP.Contains(strkeywords.Trim()) || objProduct.MaSP.Contains(strkeywords.Trim()) && objProduct.SoLuong <= intStock)
                             select new ProductOrderCustomerBO()
                             {
                                 MaSP = objProduct.MaSP,
@@ -244,8 +263,26 @@ namespace BLL_DAO
                                 GiaVon = objProduct.GiaVon,
                                 SoLuong = objProduct.SoLuong
                             };
-                model.OrderByDescending(x => x.MaSP);
-                return model.ToList();
+                return model.OrderByDescending(x => x.MaSP).Take(50).ToList();
+            }
+            if (intProductTypeId == 0 && intCustomerId != 0)
+            {
+                var model = from objProduct in db.SanPhams
+                            join objProductType in db.LoaiSPs
+                            on objProduct.MaLoaiSP equals objProductType.MaLoaiSP
+                            join objCustomer in db.NhaCungCaps
+                            on objProduct.MaNCC equals objCustomer.MaNCC
+                            where objProduct.Isdeleted == false && objProduct.MaNCC == intCustomerId && (objProduct.TenSP.Contains(strkeywords.Trim()) || objProduct.MaSP.Contains(strkeywords.Trim()) && objProduct.SoLuong <= intStock)
+                            select new ProductOrderCustomerBO()
+                            {
+                                MaSP = objProduct.MaSP,
+                                TenSP = objProduct.TenSP,
+                                DVT = objProduct.DVT,
+                                GiaVon = objProduct.GiaVon,
+                                SoLuong = objProduct.SoLuong
+                            };
+
+                return model.OrderByDescending(x => x.MaSP).Take(50).ToList();
             }
             else
             {
@@ -254,7 +291,7 @@ namespace BLL_DAO
                             on objProduct.MaLoaiSP equals objProductType.MaLoaiSP
                             join objCustomer in db.NhaCungCaps
                             on objProduct.MaNCC equals objCustomer.MaNCC
-                            where objProduct.Isdeleted == false && objProduct.MaNCC == intCustomerId && (objProduct.TenSP.Contains(strkeywords.Trim()) || objProduct.MaSP.Contains(strkeywords.Trim()))
+                            where objProduct.Isdeleted == false && objProduct.MaNCC == intCustomerId && (objProduct.TenSP.Contains(strkeywords.Trim()) || objProduct.MaSP.Contains(strkeywords.Trim()) && objProduct.SoLuong <= intStock && objProduct.MaLoaiSP == intProductTypeId)
                             select new ProductOrderCustomerBO()
                             {
                                 MaSP = objProduct.MaSP,
@@ -263,8 +300,7 @@ namespace BLL_DAO
                                 GiaVon = objProduct.GiaVon,
                                 SoLuong = objProduct.SoLuong
                             };
-                model.OrderByDescending(x => x.MaSP);
-                return model.ToList();
+                return model.OrderByDescending(x => x.MaSP).Take(50).ToList();
             }
         }
     }

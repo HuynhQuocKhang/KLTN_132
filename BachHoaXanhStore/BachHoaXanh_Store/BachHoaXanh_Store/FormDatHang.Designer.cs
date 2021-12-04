@@ -65,15 +65,10 @@ namespace BachHoaXanh_Store
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.txtKeyWord = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.btn_TimKiem = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.cbo_NhaCungCap = new Bunifu.UI.WinForms.BunifuDropdown();
             this.txtSoLuong = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
+            this.cbo_NhaCungCap = new Bunifu.UI.WinForms.BunifuDropdown();
             this.cbo_LoaiSP = new Bunifu.UI.WinForms.BunifuDropdown();
             this.dgv_DSSP = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.col_MaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_TenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_DonViTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_GiaVon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv_Order = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.MaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -88,6 +83,11 @@ namespace BachHoaXanh_Store
             this.bunifuButton2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.col_MaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_TenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_DonViTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_GiaVon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DSSP)).BeginInit();
@@ -290,38 +290,6 @@ namespace BachHoaXanh_Store
             this.btn_TimKiem.UseDefaultRadiusAndThickness = true;
             this.btn_TimKiem.Click += new System.EventHandler(this.btn_TimKiem_Click);
             // 
-            // cbo_NhaCungCap
-            // 
-            this.cbo_NhaCungCap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(216)))), ((int)(((byte)(211)))));
-            this.cbo_NhaCungCap.BorderRadius = 13;
-            this.cbo_NhaCungCap.Color = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(92)))), ((int)(((byte)(83)))));
-            this.cbo_NhaCungCap.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
-            this.cbo_NhaCungCap.DisabledColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.cbo_NhaCungCap.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbo_NhaCungCap.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thick;
-            this.cbo_NhaCungCap.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbo_NhaCungCap.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.cbo_NhaCungCap.FillDropDown = false;
-            this.cbo_NhaCungCap.FillIndicator = false;
-            this.cbo_NhaCungCap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbo_NhaCungCap.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbo_NhaCungCap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(19)))), ((int)(((byte)(10)))));
-            this.cbo_NhaCungCap.FormattingEnabled = true;
-            this.cbo_NhaCungCap.Icon = null;
-            this.cbo_NhaCungCap.IndicatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(92)))), ((int)(((byte)(83)))));
-            this.cbo_NhaCungCap.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.cbo_NhaCungCap.ItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(247)))), ((int)(((byte)(228)))));
-            this.cbo_NhaCungCap.ItemBorderColor = System.Drawing.Color.Transparent;
-            this.cbo_NhaCungCap.ItemForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(19)))), ((int)(((byte)(10)))));
-            this.cbo_NhaCungCap.ItemHeight = 26;
-            this.cbo_NhaCungCap.ItemHighLightColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(209)))), ((int)(((byte)(175)))));
-            this.cbo_NhaCungCap.Location = new System.Drawing.Point(774, 3);
-            this.cbo_NhaCungCap.MaximumSize = new System.Drawing.Size(5000, 0);
-            this.cbo_NhaCungCap.Name = "cbo_NhaCungCap";
-            this.cbo_NhaCungCap.Size = new System.Drawing.Size(250, 32);
-            this.cbo_NhaCungCap.TabIndex = 4;
-            this.cbo_NhaCungCap.Text = null;
-            // 
             // txtSoLuong
             // 
             this.txtSoLuong.AcceptsReturn = false;
@@ -396,6 +364,39 @@ namespace BachHoaXanh_Store
             this.txtSoLuong.TextPlaceholder = "Số lượng";
             this.txtSoLuong.UseSystemPasswordChar = false;
             this.txtSoLuong.WordWrap = true;
+            this.txtSoLuong.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoLuong_KeyPress);
+            // 
+            // cbo_NhaCungCap
+            // 
+            this.cbo_NhaCungCap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(216)))), ((int)(((byte)(211)))));
+            this.cbo_NhaCungCap.BorderRadius = 13;
+            this.cbo_NhaCungCap.Color = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(92)))), ((int)(((byte)(83)))));
+            this.cbo_NhaCungCap.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
+            this.cbo_NhaCungCap.DisabledColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.cbo_NhaCungCap.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbo_NhaCungCap.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thick;
+            this.cbo_NhaCungCap.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_NhaCungCap.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.cbo_NhaCungCap.FillDropDown = false;
+            this.cbo_NhaCungCap.FillIndicator = false;
+            this.cbo_NhaCungCap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbo_NhaCungCap.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbo_NhaCungCap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(19)))), ((int)(((byte)(10)))));
+            this.cbo_NhaCungCap.FormattingEnabled = true;
+            this.cbo_NhaCungCap.Icon = null;
+            this.cbo_NhaCungCap.IndicatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(92)))), ((int)(((byte)(83)))));
+            this.cbo_NhaCungCap.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.cbo_NhaCungCap.ItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(247)))), ((int)(((byte)(228)))));
+            this.cbo_NhaCungCap.ItemBorderColor = System.Drawing.Color.Transparent;
+            this.cbo_NhaCungCap.ItemForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(19)))), ((int)(((byte)(10)))));
+            this.cbo_NhaCungCap.ItemHeight = 26;
+            this.cbo_NhaCungCap.ItemHighLightColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(209)))), ((int)(((byte)(175)))));
+            this.cbo_NhaCungCap.Location = new System.Drawing.Point(774, 3);
+            this.cbo_NhaCungCap.MaximumSize = new System.Drawing.Size(5000, 0);
+            this.cbo_NhaCungCap.Name = "cbo_NhaCungCap";
+            this.cbo_NhaCungCap.Size = new System.Drawing.Size(250, 32);
+            this.cbo_NhaCungCap.TabIndex = 4;
+            this.cbo_NhaCungCap.Text = null;
             // 
             // cbo_LoaiSP
             // 
@@ -476,41 +477,6 @@ namespace BachHoaXanh_Store
             this.dgv_DSSP.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_DSSP.Size = new System.Drawing.Size(616, 620);
             this.dgv_DSSP.TabIndex = 1;
-            // 
-            // col_MaSP
-            // 
-            this.col_MaSP.DataPropertyName = "MaSP";
-            this.col_MaSP.HeaderText = "Mã sản phẩm";
-            this.col_MaSP.Name = "col_MaSP";
-            this.col_MaSP.ReadOnly = true;
-            // 
-            // col_TenSP
-            // 
-            this.col_TenSP.DataPropertyName = "TenSP";
-            this.col_TenSP.HeaderText = "Tên sản phẩm";
-            this.col_TenSP.Name = "col_TenSP";
-            this.col_TenSP.ReadOnly = true;
-            // 
-            // col_DonViTinh
-            // 
-            this.col_DonViTinh.DataPropertyName = "DVT";
-            this.col_DonViTinh.HeaderText = "ĐVT";
-            this.col_DonViTinh.Name = "col_DonViTinh";
-            this.col_DonViTinh.ReadOnly = true;
-            // 
-            // col_GiaVon
-            // 
-            this.col_GiaVon.DataPropertyName = "GiaVon";
-            this.col_GiaVon.HeaderText = "GiaVon";
-            this.col_GiaVon.Name = "col_GiaVon";
-            this.col_GiaVon.ReadOnly = true;
-            // 
-            // col_SoLuong
-            // 
-            this.col_SoLuong.DataPropertyName = "SoLuong";
-            this.col_SoLuong.HeaderText = "SoLuong";
-            this.col_SoLuong.Name = "col_SoLuong";
-            this.col_SoLuong.ReadOnly = true;
             // 
             // dgv_Order
             // 
@@ -811,6 +777,7 @@ namespace BachHoaXanh_Store
             this.bunifuButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuButton2.TextMarginLeft = 0;
             this.bunifuButton2.UseDefaultRadiusAndThickness = true;
+            this.bunifuButton2.Click += new System.EventHandler(this.bunifuButton2_Click);
             // 
             // bunifuButton1
             // 
@@ -883,6 +850,41 @@ namespace BachHoaXanh_Store
             this.toolTip1.IsBalloon = true;
             this.toolTip1.OwnerDraw = true;
             // 
+            // col_MaSP
+            // 
+            this.col_MaSP.DataPropertyName = "MaSP";
+            this.col_MaSP.HeaderText = "Mã sản phẩm";
+            this.col_MaSP.Name = "col_MaSP";
+            this.col_MaSP.ReadOnly = true;
+            // 
+            // col_TenSP
+            // 
+            this.col_TenSP.DataPropertyName = "TenSP";
+            this.col_TenSP.HeaderText = "Tên sản phẩm";
+            this.col_TenSP.Name = "col_TenSP";
+            this.col_TenSP.ReadOnly = true;
+            // 
+            // col_DonViTinh
+            // 
+            this.col_DonViTinh.DataPropertyName = "DVT";
+            this.col_DonViTinh.HeaderText = "ĐVT";
+            this.col_DonViTinh.Name = "col_DonViTinh";
+            this.col_DonViTinh.ReadOnly = true;
+            // 
+            // col_GiaVon
+            // 
+            this.col_GiaVon.DataPropertyName = "GiaVon";
+            this.col_GiaVon.HeaderText = "Gía Vốn";
+            this.col_GiaVon.Name = "col_GiaVon";
+            this.col_GiaVon.ReadOnly = true;
+            // 
+            // col_SoLuong
+            // 
+            this.col_SoLuong.DataPropertyName = "SoLuong";
+            this.col_SoLuong.HeaderText = "Số Lượng";
+            this.col_SoLuong.Name = "col_SoLuong";
+            this.col_SoLuong.ReadOnly = true;
+            // 
             // FormDatHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -922,11 +924,6 @@ namespace BachHoaXanh_Store
         private System.Windows.Forms.Panel panel4;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton2;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_TimKiem;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_MaSP;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_TenSP;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_DonViTinh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_GiaVon;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_SoLuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaSP;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenSP;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
@@ -935,5 +932,10 @@ namespace BachHoaXanh_Store
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txtSoLuong;
         private Bunifu.UI.WinForms.BunifuDropdown cbo_LoaiSP;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_MaSP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_TenSP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_DonViTinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_GiaVon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_SoLuong;
     }
 }

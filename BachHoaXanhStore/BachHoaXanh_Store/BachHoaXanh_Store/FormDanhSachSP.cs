@@ -28,7 +28,7 @@ namespace BachHoaXanh_Store
         {
             InitializeComponent();
             //Load dữ liệu ban đầu
-            dgv_DSSP.DataSource = objProductBLL.GetListAllProduct();
+            //dgv_DSSP.DataSource = objProductBLL.GetListAllProduct();
             cbo_NhaCungCap.DataSource = objcustomerBLL.GetListALlCustomer();
             cbo_NhaCungCap.DisplayMember = "FullName";
             cbo_NhaCungCap.ValueMember = "MaNCC";

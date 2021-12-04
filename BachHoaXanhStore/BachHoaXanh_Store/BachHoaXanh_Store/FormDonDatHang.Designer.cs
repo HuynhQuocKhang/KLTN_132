@@ -326,7 +326,7 @@ namespace BachHoaXanh_Store
             this.txt_TongTien.OnIdleState = stateProperties8;
             this.txt_TongTien.PasswordChar = '\0';
             this.txt_TongTien.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txt_TongTien.PlaceholderText = "Tổng tiền";
+            this.txt_TongTien.PlaceholderText = "";
             this.txt_TongTien.ReadOnly = false;
             this.txt_TongTien.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_TongTien.SelectedText = "";
@@ -340,7 +340,7 @@ namespace BachHoaXanh_Store
             this.txt_TongTien.TextMarginBottom = 0;
             this.txt_TongTien.TextMarginLeft = 5;
             this.txt_TongTien.TextMarginTop = 0;
-            this.txt_TongTien.TextPlaceholder = "Tổng tiền";
+            this.txt_TongTien.TextPlaceholder = "";
             this.txt_TongTien.UseSystemPasswordChar = false;
             this.txt_TongTien.WordWrap = true;
             // 
@@ -687,7 +687,7 @@ namespace BachHoaXanh_Store
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 36F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 37F));
             this.tableLayoutPanel2.Controls.Add(this.txt_NhaCungCap, 1, 2);
             this.tableLayoutPanel2.Controls.Add(this.txt_TongTien, 1, 3);
             this.tableLayoutPanel2.Controls.Add(this.txt_NgayDat, 1, 4);

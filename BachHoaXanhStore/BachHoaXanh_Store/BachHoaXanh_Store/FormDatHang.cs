@@ -17,8 +17,11 @@ namespace BachHoaXanh_Store
         public static UserBO objUser = new UserBO();
         CustomerBLL objCustomerBLL = new CustomerBLL();
         ProductBLL objProductBll = new ProductBLL();
+        ProductTypeBLL objProductTyepBLL = new ProductTypeBLL();
         public static List<OrderCustomerDetailBO> lstOrderCustomerDetailBO = new List<OrderCustomerDetailBO>();
         public static int intTotalPrice = 0;
+        public static string strCustomerName = string.Empty;
+        public static int intCustomerId = 0;
         public FormDatHang()
         {
             InitializeComponent();
@@ -31,6 +34,10 @@ namespace BachHoaXanh_Store
             toolTip1.SetToolTip(cbo_NhaCungCap, "Chọn tìm kiếm theo nhà cung cấp");
             toolTip1.SetToolTip(txtSoLuong, "Tìm kiếm những sản phẩm có số lượng nhỏ hơn hoặc bằng số lượng nhập vào");
             toolTip1.SetToolTip(txtKeyWord, "Tìm kiếm dữ liệu sản phẩm");
+
+            cbo_LoaiSP.DataSource = objProductTyepBLL.GetALLProductType();
+            cbo_LoaiSP.DisplayMember = "FullName";
+            cbo_LoaiSP.ValueMember = "MaLoaiSP";
         }
 
         private void bunifuButton1_Click(object sender, EventArgs e)
@@ -59,11 +66,14 @@ namespace BachHoaXanh_Store
                     {
                         OrderCustomerDetailBO objOrderCustomerDetailBO = new OrderCustomerDetailBO();
                         objOrderCustomerDetailBO.MaSP = dgv_Order["MaSP", i].Value.ToString();
+                        objOrderCustomerDetailBO.TenSP = dgv_Order["TenSP", i].Value.ToString();
                         objOrderCustomerDetailBO.SoLuong = int.Parse(dgv_Order["SoLuong", i].Value.ToString());
                         objOrderCustomerDetailBO.GiaVon = int.Parse(dgv_Order["GiaVon", i].Value.ToString());
                         objOrderCustomerDetailBO.ThanhTien = int.Parse(dgv_Order["col_ThanhTien", i].Value.ToString());
                         lstOrderCustomerDetailBO.Add(objOrderCustomerDetailBO);
                         intTotalPrice += int.Parse(dgv_Order["col_ThanhTien", i].Value.ToString());
+                        strCustomerName = cbo_NhaCungCap.Text;
+                        intCustomerId = int.Parse(cbo_NhaCungCap.SelectedValue.ToString());
                     }
                 }
 
@@ -86,7 +96,7 @@ namespace BachHoaXanh_Store
             {
                 if (cbo_NhaCungCap.SelectedValue.ToString() != "1")
                 {
-                    Search(txtKeyWord.Text.Trim(), cbo_LoaiSP.SelectedValue.ToString(),cbo_NhaCungCap.SelectedValue.ToString());
+                    Search(txtKeyWord.Text.Trim(), cbo_LoaiSP.SelectedValue.ToString(),cbo_NhaCungCap.SelectedValue.ToString(), txtSoLuong.Text);
                 }
                 else
                 {
@@ -95,9 +105,9 @@ namespace BachHoaXanh_Store
             }
 
         }
-        private void Search(string strProductName, string strProductTypeId, string strCustomerId)
+        private void Search(string strProductName, string strProductTypeId, string strCustomerId, string strStock)
         {
-            if (txtSoLuong.Text == null)
+            if (strStock == null || strStock.Trim() == String.Empty)
             {
                 MessageBox.Show("Só lượng phải lớn hoặc hoặc bằng 0 và là số nguyên dương");
             }
@@ -105,19 +115,19 @@ namespace BachHoaXanh_Store
             {
                 if (int.Parse(strCustomerId) == 1 && int.Parse(strProductTypeId) == 1)
                 {
-                    dgv_DSSP.DataSource = objProductBll.GetProductByKeysForOrderCustomer(strProductName.Trim(), 0, 0);
+                    dgv_DSSP.DataSource = objProductBll.GetProductByKeysForOrderCustomer(strProductName.Trim(), 0, 0, int.Parse(strStock));
                 }
                 else if (int.Parse(strCustomerId) == 1 && int.Parse(strProductTypeId) != 1)
                 {
-                    dgv_DSSP.DataSource = objProductBll.GetProductByKeysForOrderCustomer(strProductName.Trim(), int.Parse(strProductTypeId), 0);
+                    dgv_DSSP.DataSource = objProductBll.GetProductByKeysForOrderCustomer(strProductName.Trim(), int.Parse(strProductTypeId), 0, int.Parse(strStock));
                 }
                 else if (int.Parse(strCustomerId) != 1 && int.Parse(strProductTypeId) == 1)
                 {
-                    dgv_DSSP.DataSource = objProductBll.GetProductByKeysForOrderCustomer(strProductName.Trim(), 0, int.Parse(strCustomerId));
+                    dgv_DSSP.DataSource = objProductBll.GetProductByKeysForOrderCustomer(strProductName.Trim(), 0, int.Parse(strCustomerId), int.Parse(strStock));
                 }
                 else
                 {
-                    dgv_DSSP.DataSource = objProductBll.GetProductByKeysForOrderCustomer(strProductName.Trim(), int.Parse(strProductTypeId), int.Parse(strCustomerId));
+                    dgv_DSSP.DataSource = objProductBll.GetProductByKeysForOrderCustomer(strProductName.Trim(), int.Parse(strProductTypeId), int.Parse(strCustomerId), int.Parse(strStock));
                 }
             }
         }
@@ -131,6 +141,7 @@ namespace BachHoaXanh_Store
             else
             {
                 int index = dgv_DSSP.CurrentCell.RowIndex;
+                cbo_NhaCungCap.Enabled = false;
                 if (dgv_Order.Rows.Count == 0)
                 {
                     this.dgv_Order.Rows.Add(dgv_DSSP["col_MaSP", index].Value.ToString(), dgv_DSSP["col_TenSP", index].Value.ToString(), "1", dgv_DSSP["col_GiaVon", index].Value.ToString(), dgv_DSSP["col_GiaVon", index].Value.ToString());
@@ -170,12 +181,27 @@ namespace BachHoaXanh_Store
                 if (index >= 0)
                 {
                     dgv_Order.Rows.RemoveAt(index);
+                    if (dgv_Order.Rows.Count == 0)
+                    {
+                        cbo_NhaCungCap.Enabled = true;
+                    }
                 }
                 if (index < 0)
                 {
                     MessageBox.Show("Vui lòng chọn sản phẩm cần xóa");
                 }
             }
+        }
+
+        private void txtSoLuong_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
+        }
+
+        private void bunifuButton2_Click(object sender, EventArgs e)
+        {
+            dgv_DSSP.DataSource = objProductBll.GetProductByKeysForOrderCustomer("", 0, 0, 1000);
         }
     }
 }
