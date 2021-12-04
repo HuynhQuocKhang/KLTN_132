@@ -49,7 +49,7 @@ namespace BachHoaXanh_Store
 
         private void btn_Huy_Click(object sender, EventArgs e)
         {
-            FormDanhSachSP.objProductBO = null;
+            FormDanhSachSP.objProductBO = new ProductBO();
             this.Close();
         }
 
@@ -74,7 +74,7 @@ namespace BachHoaXanh_Store
                 {
                     MessageBox.Show("Cập Nhật Thông Tin Thành Công");
                     FormMain.lstProduct = objProductBLL.GetListAllProduct();
-                    FormDanhSachSP.objProductBO = null;
+                    FormDanhSachSP.objProductBO = new ProductBO();
                     this.Close();
                 }
                 else
