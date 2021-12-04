@@ -8,10 +8,11 @@ namespace BO
 {
     public class UserBO
     {
+        public int UserId { get; set; }
         public string UserName { get; set; }
         public string PassWord { get; set; }
         public string Permission { get; set; }
-        public string UserType { get; set; }
+        public string StoreId { get; set; }
         public string UserFullName { get; set; }
     }
 }
