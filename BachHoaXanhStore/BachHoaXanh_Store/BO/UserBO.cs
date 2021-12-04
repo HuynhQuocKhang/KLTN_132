@@ -12,7 +12,7 @@ namespace BO
         public string UserName { get; set; }
         public string PassWord { get; set; }
         public int? Permission { get; set; }
-        public string StoreId { get; set; }
+        public int StoreId { get; set; }
         public string UserFullName { get; set; }
     }
 }

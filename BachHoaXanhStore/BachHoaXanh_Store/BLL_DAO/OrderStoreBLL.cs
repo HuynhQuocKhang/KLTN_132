@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -29,13 +30,14 @@ namespace BLL_DAO
         }
 
         //Tạo đơn đặt hàng
-        public bool InsertOrderStore(DonDatHang model)
+        public bool InsertOrderStore(OrderStoreBO model)
         {
             try
             {
                 DonDatHang objDonDatHang = new DonDatHang();
                 objDonDatHang.MaST = model.MaST;
                 objDonDatHang.NgayDat = DateTime.Now;
+                objDonDatHang.NguoiLapPhieu = model.NguoiLapPhieu;
                 objDonDatHang.TinhTrang = 0;
                 objDonDatHang.TongTien = model.TongTien;
                 objDonDatHang.Isdeleted = false;
@@ -62,6 +64,11 @@ namespace BLL_DAO
             {
                 return false;
             }
+        }
+
+        public int GetOrderStoreIdNew()
+        {
+            return db.DonDatHangs.OrderByDescending(t => t.MaDH).Select(t => t.MaDH).FirstOrDefault();
         }
     }
 }

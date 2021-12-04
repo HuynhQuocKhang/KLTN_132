@@ -245,11 +245,9 @@ namespace BLL_DAO
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private int _MaCTDDH;
+		private int _MaDH;
 		
 		private string _MaSP;
-		
-		private System.Nullable<int> _MaDH;
 		
 		private System.Nullable<int> _SoLuong;
 		
@@ -263,12 +261,10 @@ namespace BLL_DAO
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OnMaCTDDHChanging(int value);
-    partial void OnMaCTDDHChanged();
+    partial void OnMaDHChanging(int value);
+    partial void OnMaDHChanged();
     partial void OnMaSPChanging(string value);
     partial void OnMaSPChanged();
-    partial void OnMaDHChanging(System.Nullable<int> value);
-    partial void OnMaDHChanged();
     partial void OnSoLuongChanging(System.Nullable<int> value);
     partial void OnSoLuongChanged();
     partial void OnThanhTienChanging(System.Nullable<int> value);
@@ -282,22 +278,26 @@ namespace BLL_DAO
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaCTDDH", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int MaCTDDH
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaDH", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int MaDH
 		{
 			get
 			{
-				return this._MaCTDDH;
+				return this._MaDH;
 			}
 			set
 			{
-				if ((this._MaCTDDH != value))
+				if ((this._MaDH != value))
 				{
-					this.OnMaCTDDHChanging(value);
+					if (this._DonDatHang.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnMaDHChanging(value);
 					this.SendPropertyChanging();
-					this._MaCTDDH = value;
-					this.SendPropertyChanged("MaCTDDH");
-					this.OnMaCTDDHChanged();
+					this._MaDH = value;
+					this.SendPropertyChanged("MaDH");
+					this.OnMaDHChanged();
 				}
 			}
 		}
@@ -322,30 +322,6 @@ namespace BLL_DAO
 					this._MaSP = value;
 					this.SendPropertyChanged("MaSP");
 					this.OnMaSPChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaDH", DbType="Int")]
-		public System.Nullable<int> MaDH
-		{
-			get
-			{
-				return this._MaDH;
-			}
-			set
-			{
-				if ((this._MaDH != value))
-				{
-					if (this._DonDatHang.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnMaDHChanging(value);
-					this.SendPropertyChanging();
-					this._MaDH = value;
-					this.SendPropertyChanged("MaDH");
-					this.OnMaDHChanged();
 				}
 			}
 		}
@@ -417,7 +393,7 @@ namespace BLL_DAO
 					}
 					else
 					{
-						this._MaDH = default(Nullable<int>);
+						this._MaDH = default(int);
 					}
 					this.SendPropertyChanged("DonDatHang");
 				}
@@ -1956,6 +1932,8 @@ namespace BLL_DAO
 		
 		private System.Nullable<int> _TongTien;
 		
+		private string _NguoiLapPhieu;
+		
 		private System.Nullable<System.DateTime> _NgayDat;
 		
 		private System.Nullable<int> _TinhTrang;
@@ -1976,6 +1954,8 @@ namespace BLL_DAO
     partial void OnMaNCCChanged();
     partial void OnTongTienChanging(System.Nullable<int> value);
     partial void OnTongTienChanged();
+    partial void OnNguoiLapPhieuChanging(string value);
+    partial void OnNguoiLapPhieuChanged();
     partial void OnNgayDatChanging(System.Nullable<System.DateTime> value);
     partial void OnNgayDatChanged();
     partial void OnTinhTrangChanging(System.Nullable<int> value);
@@ -2051,6 +2031,26 @@ namespace BLL_DAO
 					this._TongTien = value;
 					this.SendPropertyChanged("TongTien");
 					this.OnTongTienChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NguoiLapPhieu", DbType="NVarChar(30)")]
+		public string NguoiLapPhieu
+		{
+			get
+			{
+				return this._NguoiLapPhieu;
+			}
+			set
+			{
+				if ((this._NguoiLapPhieu != value))
+				{
+					this.OnNguoiLapPhieuChanging(value);
+					this.SendPropertyChanging();
+					this._NguoiLapPhieu = value;
+					this.SendPropertyChanged("NguoiLapPhieu");
+					this.OnNguoiLapPhieuChanged();
 				}
 			}
 		}

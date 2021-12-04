@@ -52,6 +52,7 @@ namespace BLL_DAO
             try
             {
                 HoaDonDatNCC objHoaDonDatNCC = new HoaDonDatNCC();
+                objHoaDonDatNCC.NguoiLapPhieu = model.NguoiLapPhieu;
                 objHoaDonDatNCC.MaNCC = model.MaNCC;
                 objHoaDonDatNCC.TongTien = model.TongTien;
                 objHoaDonDatNCC.NgayDat = model.NgayDat;

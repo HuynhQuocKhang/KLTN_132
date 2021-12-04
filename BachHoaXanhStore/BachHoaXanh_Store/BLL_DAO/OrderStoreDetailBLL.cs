@@ -15,7 +15,7 @@ namespace BLL_DAO
             return data.CTDonDatHangs.Select(t => t).Where(t => t.MaDH == intOrderStoreId);
         }
 
-        public bool InserOrderStoreDetail(List<ProductBO> lstProduct, int intOrderStoreId)
+        public bool InserOrderStoreDetail(List<OrderCustomerDetailBO> lstProduct, int intOrderStoreId)
         {
             try
             {
@@ -25,7 +25,7 @@ namespace BLL_DAO
                     objCTDonDatHang.MaDH = intOrderStoreId;
                     objCTDonDatHang.MaSP = item.MaSP;
                     objCTDonDatHang.SoLuong = item.SoLuong;
-                    objCTDonDatHang.ThanhTien = item.SoLuong * item.GiaBan;
+                    objCTDonDatHang.ThanhTien = item.ThanhTien;
                     data.CTDonDatHangs.InsertOnSubmit(objCTDonDatHang);
                     data.SubmitChanges();
                 }

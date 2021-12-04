@@ -50,6 +50,7 @@ create table HoaDonDatNCC
 	MaHDDat int IDENTITY(1,1),
 	MaNCC int,
 	TongTien int,
+	NguoiLapPhieu nvarchar (30),
 	NgayDat date,
 	TinhTrang int,
 	Isdeleted bit,
@@ -123,12 +124,11 @@ create table DonDatHang
 
 create table CTDonDatHang 
 (
-	MaCTDDH int IDENTITY(1,1),
-	MaSP nvarchar(30),
-	MaDH int,
+	MaDH int not null,
+	MaSP nvarchar(30) not null,
 	SoLuong int,
 	ThanhTien int,
-	constraint PK_CTDDH primary key (MaCTDDH,MaSP),
+	constraint PK_CTDDH primary key (MaDH,MaSP),
 	constraint FK_CTDDH_SanPham foreign key (MaSP) references SanPham(MaSP),
 	constraint FK_CTDDH_DonDatHang foreign key (MaDH) references DonDatHang(MaDH)
 )
@@ -189,7 +189,7 @@ Create table NhanVien
 	UserName nvarchar (30),
 	Pass nvarchar (30),
 	StoreId int,
-	Permisson nvarchar (30)
+	Permisson int --  1:Quản lí kho, 2:Cửa hàng trưởng, 3:Nhân viên
 )
 
 
@@ -198,3 +198,9 @@ set Isdeleted = 'false'
 
 update LoaiSP
 set Isdeleted = 'false'
+
+update SanPham
+set SoLuong = 50
+
+select * from HoaDonDatNCC
+select * from CTHoaDonDatNCC
