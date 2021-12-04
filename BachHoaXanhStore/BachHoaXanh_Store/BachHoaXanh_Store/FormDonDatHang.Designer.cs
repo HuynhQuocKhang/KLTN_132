@@ -259,7 +259,7 @@ namespace BachHoaXanh_Store
             this.txt_NhaCungCap.ShortcutsEnabled = true;
             this.txt_NhaCungCap.Size = new System.Drawing.Size(270, 39);
             this.txt_NhaCungCap.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
-            this.txt_NhaCungCap.TabIndex = 0;
+            this.txt_NhaCungCap.TabIndex = 1;
             this.txt_NhaCungCap.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_NhaCungCap.TextMarginBottom = 0;
             this.txt_NhaCungCap.TextMarginLeft = 5;
@@ -335,7 +335,7 @@ namespace BachHoaXanh_Store
             this.txt_TongTien.ShortcutsEnabled = true;
             this.txt_TongTien.Size = new System.Drawing.Size(270, 39);
             this.txt_TongTien.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
-            this.txt_TongTien.TabIndex = 1;
+            this.txt_TongTien.TabIndex = 2;
             this.txt_TongTien.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_TongTien.TextMarginBottom = 0;
             this.txt_TongTien.TextMarginLeft = 5;
@@ -555,7 +555,7 @@ namespace BachHoaXanh_Store
             stateProperties18.IconRightImage = null;
             this.btn_TraHang.OnPressedState = stateProperties18;
             this.btn_TraHang.Size = new System.Drawing.Size(132, 39);
-            this.btn_TraHang.TabIndex = 2;
+            this.btn_TraHang.TabIndex = 5;
             this.btn_TraHang.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_TraHang.TextMarginLeft = 0;
             this.btn_TraHang.UseDefaultRadiusAndThickness = true;
@@ -648,7 +648,7 @@ namespace BachHoaXanh_Store
             stateProperties20.IconRightImage = null;
             this.btn_Huy.OnPressedState = stateProperties20;
             this.btn_Huy.Size = new System.Drawing.Size(132, 39);
-            this.btn_Huy.TabIndex = 5;
+            this.btn_Huy.TabIndex = 6;
             this.btn_Huy.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Huy.TextMarginLeft = 0;
             this.btn_Huy.UseDefaultRadiusAndThickness = true;
@@ -687,7 +687,7 @@ namespace BachHoaXanh_Store
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 36F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 37F));
             this.tableLayoutPanel2.Controls.Add(this.txt_NhaCungCap, 1, 2);
             this.tableLayoutPanel2.Controls.Add(this.txt_TongTien, 1, 3);
             this.tableLayoutPanel2.Controls.Add(this.txt_NgayDat, 1, 4);

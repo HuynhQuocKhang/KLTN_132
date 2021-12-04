@@ -70,11 +70,19 @@ namespace BachHoaXanh_Store
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.bunifuButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuButton3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.bunifuDropdown1 = new Bunifu.UI.WinForms.BunifuDropdown();
+            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.chk_AllStore = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DSSP)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -92,13 +100,15 @@ namespace BachHoaXanh_Store
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.dgv_DSSP, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 2, 5);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel4, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(16, 16);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 7;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 62.17304F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 37.82696F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
@@ -165,7 +175,7 @@ namespace BachHoaXanh_Store
             this.bunifuButton2.IdleIconLeftImage = null;
             this.bunifuButton2.IdleIconRightImage = null;
             this.bunifuButton2.IndicateFocus = false;
-            this.bunifuButton2.Location = new System.Drawing.Point(1032, 3);
+            this.bunifuButton2.Location = new System.Drawing.Point(1035, 3);
             this.bunifuButton2.Name = "bunifuButton2";
             stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(221)))), ((int)(((byte)(158)))));
             stateProperties1.BorderRadius = 35;
@@ -185,7 +195,7 @@ namespace BachHoaXanh_Store
             stateProperties2.IconLeftImage = null;
             stateProperties2.IconRightImage = null;
             this.bunifuButton2.OnPressedState = stateProperties2;
-            this.bunifuButton2.Size = new System.Drawing.Size(253, 34);
+            this.bunifuButton2.Size = new System.Drawing.Size(250, 34);
             this.bunifuButton2.TabIndex = 8;
             this.bunifuButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuButton2.TextMarginLeft = 0;
@@ -219,10 +229,10 @@ namespace BachHoaXanh_Store
             this.cbo_LoaiSP.ItemHighLightColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(209)))), ((int)(((byte)(175)))));
             this.cbo_LoaiSP.Items.AddRange(new object[] {
             "ALL"});
-            this.cbo_LoaiSP.Location = new System.Drawing.Point(689, 3);
+            this.cbo_LoaiSP.Location = new System.Drawing.Point(691, 3);
             this.cbo_LoaiSP.MaximumSize = new System.Drawing.Size(5000, 0);
             this.cbo_LoaiSP.Name = "cbo_LoaiSP";
-            this.cbo_LoaiSP.Size = new System.Drawing.Size(337, 32);
+            this.cbo_LoaiSP.Size = new System.Drawing.Size(338, 32);
             this.cbo_LoaiSP.TabIndex = 4;
             this.cbo_LoaiSP.Text = null;
             // 
@@ -290,7 +300,7 @@ namespace BachHoaXanh_Store
             this.txtKeyWord.SelectionLength = 0;
             this.txtKeyWord.SelectionStart = 0;
             this.txtKeyWord.ShortcutsEnabled = true;
-            this.txtKeyWord.Size = new System.Drawing.Size(337, 34);
+            this.txtKeyWord.Size = new System.Drawing.Size(338, 34);
             this.txtKeyWord.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtKeyWord.TabIndex = 2;
             this.txtKeyWord.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -329,10 +339,10 @@ namespace BachHoaXanh_Store
             this.cbo_NhaCungCap.ItemHighLightColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(209)))), ((int)(((byte)(175)))));
             this.cbo_NhaCungCap.Items.AddRange(new object[] {
             "ALL"});
-            this.cbo_NhaCungCap.Location = new System.Drawing.Point(346, 3);
+            this.cbo_NhaCungCap.Location = new System.Drawing.Point(347, 3);
             this.cbo_NhaCungCap.MaximumSize = new System.Drawing.Size(5000, 0);
             this.cbo_NhaCungCap.Name = "cbo_NhaCungCap";
-            this.cbo_NhaCungCap.Size = new System.Drawing.Size(337, 32);
+            this.cbo_NhaCungCap.Size = new System.Drawing.Size(338, 32);
             this.cbo_NhaCungCap.TabIndex = 4;
             this.cbo_NhaCungCap.Text = null;
             // 
@@ -376,7 +386,7 @@ namespace BachHoaXanh_Store
             this.dgv_DSSP.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(186)))), ((int)(((byte)(27)))));
             this.dgv_DSSP.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(139)))), ((int)(((byte)(125)))));
             this.dgv_DSSP.HeaderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(223)))), ((int)(((byte)(135)))));
-            this.dgv_DSSP.Location = new System.Drawing.Point(23, 88);
+            this.dgv_DSSP.Location = new System.Drawing.Point(23, 98);
             this.dgv_DSSP.Name = "dgv_DSSP";
             this.dgv_DSSP.ReadOnly = true;
             this.dgv_DSSP.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -391,7 +401,7 @@ namespace BachHoaXanh_Store
             this.dgv_DSSP.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.tableLayoutPanel1.SetRowSpan(this.dgv_DSSP, 2);
             this.dgv_DSSP.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dgv_DSSP.Size = new System.Drawing.Size(1288, 579);
+            this.dgv_DSSP.Size = new System.Drawing.Size(1288, 569);
             this.dgv_DSSP.TabIndex = 2;
             this.dgv_DSSP.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DSSP_CellClick);
             this.dgv_DSSP.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DSSP_CellContentClick);
@@ -518,7 +528,7 @@ namespace BachHoaXanh_Store
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(641, 39);
             this.tableLayoutPanel3.TabIndex = 19;
             // 
@@ -651,6 +661,147 @@ namespace BachHoaXanh_Store
             this.bunifuButton3.TextMarginLeft = 0;
             this.bunifuButton3.UseDefaultRadiusAndThickness = true;
             // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 2;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 108F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.Controls.Add(this.bunifuDropdown1, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.bunifuLabel1, 0, 0);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(23, 673);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(641, 39);
+            this.tableLayoutPanel4.TabIndex = 20;
+            // 
+            // bunifuDropdown1
+            // 
+            this.bunifuDropdown1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(216)))), ((int)(((byte)(211)))));
+            this.bunifuDropdown1.BorderRadius = 13;
+            this.bunifuDropdown1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(92)))), ((int)(((byte)(83)))));
+            this.bunifuDropdown1.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
+            this.bunifuDropdown1.DisabledColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.bunifuDropdown1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.bunifuDropdown1.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thick;
+            this.bunifuDropdown1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.bunifuDropdown1.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.bunifuDropdown1.FillDropDown = false;
+            this.bunifuDropdown1.FillIndicator = false;
+            this.bunifuDropdown1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bunifuDropdown1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuDropdown1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(19)))), ((int)(((byte)(10)))));
+            this.bunifuDropdown1.FormattingEnabled = true;
+            this.bunifuDropdown1.Icon = null;
+            this.bunifuDropdown1.IndicatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(92)))), ((int)(((byte)(83)))));
+            this.bunifuDropdown1.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.bunifuDropdown1.ItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(247)))), ((int)(((byte)(228)))));
+            this.bunifuDropdown1.ItemBorderColor = System.Drawing.Color.Transparent;
+            this.bunifuDropdown1.ItemForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(19)))), ((int)(((byte)(10)))));
+            this.bunifuDropdown1.ItemHeight = 26;
+            this.bunifuDropdown1.ItemHighLightColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(209)))), ((int)(((byte)(175)))));
+            this.bunifuDropdown1.Items.AddRange(new object[] {
+            "ALL"});
+            this.bunifuDropdown1.Location = new System.Drawing.Point(111, 3);
+            this.bunifuDropdown1.MaximumSize = new System.Drawing.Size(5000, 0);
+            this.bunifuDropdown1.Name = "bunifuDropdown1";
+            this.bunifuDropdown1.Size = new System.Drawing.Size(79, 32);
+            this.bunifuDropdown1.TabIndex = 4;
+            this.bunifuDropdown1.Text = null;
+            // 
+            // bunifuLabel1
+            // 
+            this.bunifuLabel1.AutoEllipsis = false;
+            this.bunifuLabel1.AutoSize = false;
+            this.bunifuLabel1.CursorType = null;
+            this.bunifuLabel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bunifuLabel1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(46)))), ((int)(((byte)(41)))));
+            this.bunifuLabel1.Location = new System.Drawing.Point(3, 3);
+            this.bunifuLabel1.Name = "bunifuLabel1";
+            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel1.Size = new System.Drawing.Size(102, 33);
+            this.bunifuLabel1.TabIndex = 5;
+            this.bunifuLabel1.Text = "Dữ liệu/Trang";
+            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
+            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.bunifuCustomLabel1);
+            this.panel2.Controls.Add(this.chk_AllStore);
+            this.panel2.Location = new System.Drawing.Point(23, 68);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(315, 24);
+            this.panel2.TabIndex = 21;
+            // 
+            // bunifuCustomLabel1
+            // 
+            this.bunifuCustomLabel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(46)))), ((int)(((byte)(41)))));
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(21, 0);
+            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
+            this.bunifuCustomLabel1.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(294, 21);
+            this.bunifuCustomLabel1.TabIndex = 1;
+            this.bunifuCustomLabel1.Text = "Xem kho KM siêu thị";
+            this.bunifuCustomLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // chk_AllStore
+            // 
+            this.chk_AllStore.AllowBindingControlAnimation = true;
+            this.chk_AllStore.AllowBindingControlColorChanges = false;
+            this.chk_AllStore.AllowBindingControlLocation = true;
+            this.chk_AllStore.AllowCheckBoxAnimation = false;
+            this.chk_AllStore.AllowCheckmarkAnimation = true;
+            this.chk_AllStore.AllowOnHoverStates = true;
+            this.chk_AllStore.AutoCheck = true;
+            this.chk_AllStore.BackColor = System.Drawing.Color.Transparent;
+            this.chk_AllStore.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chk_AllStore.BackgroundImage")));
+            this.chk_AllStore.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.chk_AllStore.BindingControl = null;
+            this.chk_AllStore.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
+            this.chk_AllStore.Checked = true;
+            this.chk_AllStore.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Checked;
+            this.chk_AllStore.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.chk_AllStore.CustomCheckmarkImage = null;
+            this.chk_AllStore.Dock = System.Windows.Forms.DockStyle.Left;
+            this.chk_AllStore.Location = new System.Drawing.Point(0, 0);
+            this.chk_AllStore.MinimumSize = new System.Drawing.Size(17, 17);
+            this.chk_AllStore.Name = "chk_AllStore";
+            this.chk_AllStore.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(42)))));
+            this.chk_AllStore.OnCheck.BorderRadius = 2;
+            this.chk_AllStore.OnCheck.BorderThickness = 2;
+            this.chk_AllStore.OnCheck.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(42)))));
+            this.chk_AllStore.OnCheck.CheckmarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(239)))), ((int)(((byte)(228)))));
+            this.chk_AllStore.OnCheck.CheckmarkThickness = 2;
+            this.chk_AllStore.OnDisable.BorderColor = System.Drawing.Color.LightGray;
+            this.chk_AllStore.OnDisable.BorderRadius = 2;
+            this.chk_AllStore.OnDisable.BorderThickness = 2;
+            this.chk_AllStore.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.chk_AllStore.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
+            this.chk_AllStore.OnDisable.CheckmarkThickness = 2;
+            this.chk_AllStore.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(86)))), ((int)(((byte)(49)))));
+            this.chk_AllStore.OnHoverChecked.BorderRadius = 2;
+            this.chk_AllStore.OnHoverChecked.BorderThickness = 2;
+            this.chk_AllStore.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(86)))), ((int)(((byte)(49)))));
+            this.chk_AllStore.OnHoverChecked.CheckmarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(244)))), ((int)(((byte)(215)))));
+            this.chk_AllStore.OnHoverChecked.CheckmarkThickness = 2;
+            this.chk_AllStore.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(86)))), ((int)(((byte)(49)))));
+            this.chk_AllStore.OnHoverUnchecked.BorderRadius = 2;
+            this.chk_AllStore.OnHoverUnchecked.BorderThickness = 2;
+            this.chk_AllStore.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.chk_AllStore.OnUncheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(186)))), ((int)(((byte)(27)))));
+            this.chk_AllStore.OnUncheck.BorderRadius = 2;
+            this.chk_AllStore.OnUncheck.BorderThickness = 2;
+            this.chk_AllStore.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.chk_AllStore.Size = new System.Drawing.Size(21, 21);
+            this.chk_AllStore.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
+            this.chk_AllStore.TabIndex = 0;
+            this.chk_AllStore.ThreeState = false;
+            this.chk_AllStore.ToolTipText = null;
+            // 
             // FormDanhSachSP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -666,6 +817,8 @@ namespace BachHoaXanh_Store
             this.tableLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DSSP)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -696,5 +849,11 @@ namespace BachHoaXanh_Store
         private System.Windows.Forms.DataGridViewTextBoxColumn col_GiaBan;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_GiaVon;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private Bunifu.UI.WinForms.BunifuDropdown bunifuDropdown1;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
+        private System.Windows.Forms.Panel panel2;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
+        private Bunifu.UI.WinForms.BunifuCheckBox chk_AllStore;
     }
 }

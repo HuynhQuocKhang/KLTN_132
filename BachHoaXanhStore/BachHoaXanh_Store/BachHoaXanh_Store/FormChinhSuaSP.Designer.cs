@@ -99,8 +99,8 @@ namespace BachHoaXanh_Store
             // 
             this.tableLayoutPanel2.ColumnCount = 4;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 54.16667F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.83333F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.tableLayoutPanel2.Controls.Add(this.cbo_NhaCungCap, 1, 3);
             this.tableLayoutPanel2.Controls.Add(this.txt_TenSP, 1, 2);
@@ -160,7 +160,7 @@ namespace BachHoaXanh_Store
             this.cbo_NhaCungCap.MaximumSize = new System.Drawing.Size(5000, 0);
             this.cbo_NhaCungCap.Name = "cbo_NhaCungCap";
             this.cbo_NhaCungCap.Size = new System.Drawing.Size(330, 32);
-            this.cbo_NhaCungCap.TabIndex = 5;
+            this.cbo_NhaCungCap.TabIndex = 2;
             this.cbo_NhaCungCap.Text = null;
             // 
             // txt_TenSP
@@ -229,7 +229,7 @@ namespace BachHoaXanh_Store
             this.txt_TenSP.ShortcutsEnabled = true;
             this.txt_TenSP.Size = new System.Drawing.Size(330, 35);
             this.txt_TenSP.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
-            this.txt_TenSP.TabIndex = 0;
+            this.txt_TenSP.TabIndex = 1;
             this.txt_TenSP.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_TenSP.TextMarginBottom = 0;
             this.txt_TenSP.TextMarginLeft = 5;
@@ -288,7 +288,7 @@ namespace BachHoaXanh_Store
             this.btn_TraHang.DisabledBorderColor = System.Drawing.Color.Empty;
             this.btn_TraHang.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btn_TraHang.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btn_TraHang.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_TraHang.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_TraHang.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
             this.btn_TraHang.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_TraHang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(46)))), ((int)(((byte)(41)))));
@@ -303,7 +303,7 @@ namespace BachHoaXanh_Store
             this.btn_TraHang.IdleIconLeftImage = null;
             this.btn_TraHang.IdleIconRightImage = null;
             this.btn_TraHang.IndicateFocus = false;
-            this.btn_TraHang.Location = new System.Drawing.Point(244, 351);
+            this.btn_TraHang.Location = new System.Drawing.Point(201, 351);
             this.btn_TraHang.Name = "btn_TraHang";
             stateProperties5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(221)))), ((int)(((byte)(158)))));
             stateProperties5.BorderRadius = 25;
@@ -323,8 +323,8 @@ namespace BachHoaXanh_Store
             stateProperties6.IconLeftImage = null;
             stateProperties6.IconRightImage = null;
             this.btn_TraHang.OnPressedState = stateProperties6;
-            this.btn_TraHang.Size = new System.Drawing.Size(119, 39);
-            this.btn_TraHang.TabIndex = 2;
+            this.btn_TraHang.Size = new System.Drawing.Size(162, 39);
+            this.btn_TraHang.TabIndex = 7;
             this.btn_TraHang.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_TraHang.TextMarginLeft = 0;
             this.btn_TraHang.UseDefaultRadiusAndThickness = true;
@@ -353,7 +353,7 @@ namespace BachHoaXanh_Store
             this.btn_Huy.DisabledBorderColor = System.Drawing.Color.Empty;
             this.btn_Huy.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btn_Huy.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btn_Huy.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_Huy.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_Huy.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
             this.btn_Huy.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Huy.ForeColor = System.Drawing.Color.White;
@@ -368,7 +368,7 @@ namespace BachHoaXanh_Store
             this.btn_Huy.IdleIconLeftImage = null;
             this.btn_Huy.IdleIconRightImage = null;
             this.btn_Huy.IndicateFocus = false;
-            this.btn_Huy.Location = new System.Drawing.Point(105, 351);
+            this.btn_Huy.Location = new System.Drawing.Point(33, 351);
             this.btn_Huy.Name = "btn_Huy";
             stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(124)))), ((int)(((byte)(75)))));
             stateProperties7.BorderRadius = 25;
@@ -388,8 +388,8 @@ namespace BachHoaXanh_Store
             stateProperties8.IconLeftImage = null;
             stateProperties8.IconRightImage = null;
             this.btn_Huy.OnPressedState = stateProperties8;
-            this.btn_Huy.Size = new System.Drawing.Size(104, 39);
-            this.btn_Huy.TabIndex = 5;
+            this.btn_Huy.Size = new System.Drawing.Size(162, 39);
+            this.btn_Huy.TabIndex = 8;
             this.btn_Huy.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Huy.TextMarginLeft = 0;
             this.btn_Huy.UseDefaultRadiusAndThickness = true;
@@ -461,7 +461,7 @@ namespace BachHoaXanh_Store
             this.txt_GiaBan.ShortcutsEnabled = true;
             this.txt_GiaBan.Size = new System.Drawing.Size(330, 35);
             this.txt_GiaBan.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
-            this.txt_GiaBan.TabIndex = 1;
+            this.txt_GiaBan.TabIndex = 5;
             this.txt_GiaBan.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_GiaBan.TextMarginBottom = 0;
             this.txt_GiaBan.TextMarginLeft = 5;
@@ -536,7 +536,7 @@ namespace BachHoaXanh_Store
             this.txt_GiaVon.ShortcutsEnabled = true;
             this.txt_GiaVon.Size = new System.Drawing.Size(330, 35);
             this.txt_GiaVon.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
-            this.txt_GiaVon.TabIndex = 3;
+            this.txt_GiaVon.TabIndex = 6;
             this.txt_GiaVon.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_GiaVon.TextMarginBottom = 0;
             this.txt_GiaVon.TextMarginLeft = 5;
@@ -576,7 +576,7 @@ namespace BachHoaXanh_Store
             this.cbo_MaLoaiSP.MaximumSize = new System.Drawing.Size(5000, 0);
             this.cbo_MaLoaiSP.Name = "cbo_MaLoaiSP";
             this.cbo_MaLoaiSP.Size = new System.Drawing.Size(330, 32);
-            this.cbo_MaLoaiSP.TabIndex = 7;
+            this.cbo_MaLoaiSP.TabIndex = 3;
             this.cbo_MaLoaiSP.Text = null;
             // 
             // cbo_DVT
@@ -616,7 +616,7 @@ namespace BachHoaXanh_Store
             this.cbo_DVT.MaximumSize = new System.Drawing.Size(5000, 0);
             this.cbo_DVT.Name = "cbo_DVT";
             this.cbo_DVT.Size = new System.Drawing.Size(330, 32);
-            this.cbo_DVT.TabIndex = 8;
+            this.cbo_DVT.TabIndex = 4;
             this.cbo_DVT.Text = null;
             // 
             // txt_MaSP
@@ -685,7 +685,7 @@ namespace BachHoaXanh_Store
             this.txt_MaSP.ShortcutsEnabled = true;
             this.txt_MaSP.Size = new System.Drawing.Size(330, 35);
             this.txt_MaSP.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
-            this.txt_MaSP.TabIndex = 9;
+            this.txt_MaSP.TabIndex = 0;
             this.txt_MaSP.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_MaSP.TextMarginBottom = 0;
             this.txt_MaSP.TextMarginLeft = 5;

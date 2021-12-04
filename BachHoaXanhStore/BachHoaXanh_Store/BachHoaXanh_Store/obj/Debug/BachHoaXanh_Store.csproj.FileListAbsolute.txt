@@ -833,3 +833,4 @@ E:\KhoaLuanTotNghiep\BachHoaXanhStore\BachHoaXanh_Store\BachHoaXanh_Store\bin\De
 E:\KhoaLuanTotNghiep\BachHoaXanhStore\BachHoaXanh_Store\BachHoaXanh_Store\bin\Debug\ja\DevExpress.Diagram.v20.1.Core.resources.dll
 E:\KhoaLuanTotNghiep\BachHoaXanhStore\BachHoaXanh_Store\BachHoaXanh_Store\bin\Debug\ru\DevExpress.Diagram.v20.1.Core.resources.dll
 E:\09DHTH5\KLTN\SoDoLop\KLTN_132\BachHoaXanhStore\BachHoaXanh_Store\BachHoaXanh_Store\obj\Debug\BachHoaXanh_Store.FormBanHang.resources
+E:\09DHTH5\KLTN\SoDoLop\KLTN_132\BachHoaXanhStore\BachHoaXanh_Store\BachHoaXanh_Store\obj\Debug\BachHoaXanh_Store.FormLogin.resources
