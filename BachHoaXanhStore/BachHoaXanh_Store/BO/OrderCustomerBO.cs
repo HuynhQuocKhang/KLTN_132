@@ -12,7 +12,7 @@ namespace BO
         public int? MaNCC { get; set; }
         public int? TongTien { get; set; }
         public DateTime? NgayDat { get; set; }
-        public string TinhTrang { get; set; }
+        public int? TinhTrang { get; set; }
         public bool? Isdeleted { get; set; }
     }
 }

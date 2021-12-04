@@ -139,9 +139,9 @@ namespace BachHoaXanh_Store
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Controls.Add(this.txtKeyWord, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btn_TimKiem, 4, 0);
-            this.tableLayoutPanel2.Controls.Add(this.cbo_NhaCungCap, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.txtSoLuong, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.cbo_LoaiSP, 3, 0);
+            this.tableLayoutPanel2.Controls.Add(this.cbo_NhaCungCap, 3, 0);
+            this.tableLayoutPanel2.Controls.Add(this.cbo_LoaiSP, 2, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(23, 23);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -315,7 +315,7 @@ namespace BachHoaXanh_Store
             this.cbo_NhaCungCap.ItemForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(19)))), ((int)(((byte)(10)))));
             this.cbo_NhaCungCap.ItemHeight = 26;
             this.cbo_NhaCungCap.ItemHighLightColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(209)))), ((int)(((byte)(175)))));
-            this.cbo_NhaCungCap.Location = new System.Drawing.Point(517, 3);
+            this.cbo_NhaCungCap.Location = new System.Drawing.Point(774, 3);
             this.cbo_NhaCungCap.MaximumSize = new System.Drawing.Size(5000, 0);
             this.cbo_NhaCungCap.Name = "cbo_NhaCungCap";
             this.cbo_NhaCungCap.Size = new System.Drawing.Size(250, 32);
@@ -422,7 +422,7 @@ namespace BachHoaXanh_Store
             this.cbo_LoaiSP.ItemForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(19)))), ((int)(((byte)(10)))));
             this.cbo_LoaiSP.ItemHeight = 26;
             this.cbo_LoaiSP.ItemHighLightColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(209)))), ((int)(((byte)(175)))));
-            this.cbo_LoaiSP.Location = new System.Drawing.Point(774, 3);
+            this.cbo_LoaiSP.Location = new System.Drawing.Point(517, 3);
             this.cbo_LoaiSP.MaximumSize = new System.Drawing.Size(5000, 0);
             this.cbo_LoaiSP.Name = "cbo_LoaiSP";
             this.cbo_LoaiSP.Size = new System.Drawing.Size(250, 32);

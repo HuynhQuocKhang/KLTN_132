@@ -51,7 +51,7 @@ create table HoaDonDatNCC
 	MaNCC int,
 	TongTien int,
 	NgayDat date,
-	TinhTrang nvarchar(30),
+	TinhTrang int,
 	Isdeleted bit,
 	constraint PK_HoaDonDatNCC primary key (MaHDDat),
 	constraint FK_HoaDonDatNCC_NhaCungCap foreign key (MaNCC) references NhaCungCap(MaNCC)
@@ -113,7 +113,7 @@ create table DonDatHang
 	MaST int,
 	NguoiLapPhieu nvarchar (30),
 	NgayDat date,
-	TinhTrang nvarchar(30),
+	TinhTrang int,
 	TongTien int,
 	Isdeleted bit,
 	constraint PK_DonDatHang primary key (MaDH),
@@ -166,7 +166,7 @@ create table PhieuTraHang
 	NgayTra date,
 	TongTien int,
 	Isdeleted bit,
-	TinhTrang nvarchar(30),
+	TinhTrang int,
 	constraint PK_PhieuTraHang primary key (MaPTH),
 	constraint FK_PhieuTraHang_SieuThi foreign key(MaST) references SieuThi(MaST)
 )

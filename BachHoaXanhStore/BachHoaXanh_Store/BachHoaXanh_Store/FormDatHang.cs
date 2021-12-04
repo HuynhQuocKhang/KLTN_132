@@ -23,7 +23,7 @@ namespace BachHoaXanh_Store
         {
             InitializeComponent();
             objUser.UserFullName = "Võ Hoàng Bảo Sơn";
-            objUser.Permission = "Kho";
+            objUser.Permission = 0;
             cbo_NhaCungCap.DataSource = objCustomerBLL.GetListALlCustomer();
             cbo_NhaCungCap.DisplayMember = "FullName";
             cbo_NhaCungCap.ValueMember = "MaNCC";
@@ -82,11 +82,11 @@ namespace BachHoaXanh_Store
 
         private void btn_TimKiem_Click(object sender, EventArgs e)
         {
-            if (objUser.Permission == "Kho")
+            if (objUser.Permission == 0)
             {
                 if (cbo_NhaCungCap.SelectedValue.ToString() != "1")
                 {
-                    Search(txtKeyWord.Text.Trim(), cbo_NhaCungCap.SelectedValue.ToString());
+                    Search(txtKeyWord.Text.Trim(), cbo_LoaiSP.SelectedValue.ToString(),cbo_NhaCungCap.SelectedValue.ToString());
                 }
                 else
                 {
@@ -95,15 +95,30 @@ namespace BachHoaXanh_Store
             }
 
         }
-        private void Search(string strProductName, string strCustomerId)
+        private void Search(string strProductName, string strProductTypeId, string strCustomerId)
         {
-            if (int.Parse(strCustomerId) == 1)
+            if (txtSoLuong.Text == null)
             {
-                dgv_DSSP.DataSource = objProductBll.GetProductByKeys(strProductName.Trim(), 0, 0);
+                MessageBox.Show("Só lượng phải lớn hoặc hoặc bằng 0 và là số nguyên dương");
             }
             else
             {
-                dgv_DSSP.DataSource = objProductBll.GetProductByKeysForOrderCustomer(strProductName.Trim(), 0, int.Parse(strCustomerId));
+                if (int.Parse(strCustomerId) == 1 && int.Parse(strProductTypeId) == 1)
+                {
+                    dgv_DSSP.DataSource = objProductBll.GetProductByKeysForOrderCustomer(strProductName.Trim(), 0, 0);
+                }
+                else if (int.Parse(strCustomerId) == 1 && int.Parse(strProductTypeId) != 1)
+                {
+                    dgv_DSSP.DataSource = objProductBll.GetProductByKeysForOrderCustomer(strProductName.Trim(), int.Parse(strProductTypeId), 0);
+                }
+                else if (int.Parse(strCustomerId) != 1 && int.Parse(strProductTypeId) == 1)
+                {
+                    dgv_DSSP.DataSource = objProductBll.GetProductByKeysForOrderCustomer(strProductName.Trim(), 0, int.Parse(strCustomerId));
+                }
+                else
+                {
+                    dgv_DSSP.DataSource = objProductBll.GetProductByKeysForOrderCustomer(strProductName.Trim(), int.Parse(strProductTypeId), int.Parse(strCustomerId));
+                }
             }
         }
 

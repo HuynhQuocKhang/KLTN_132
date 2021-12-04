@@ -34,9 +34,10 @@ namespace BachHoaXanh_Store
             // frmTraHangNCC = new FormTraHangNCC();
             //frmPhieuTraHang = new FormPhieuTraHang();
             //frmDanhSachSP = new FormDanhSachSP();
-            frmDangNhap = new FormDangNhap();
+            //frmDangNhap = new FormDangNhap();
             //FormReport frmReport = new FormReport();
-            Application.Run(frmDangNhap);
+            frmMain = new FormMain();
+            Application.Run(frmMain);
         }
 
 
