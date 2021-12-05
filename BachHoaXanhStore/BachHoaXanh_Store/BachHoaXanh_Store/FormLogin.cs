@@ -20,18 +20,11 @@ namespace BachHoaXanh_Store
 
         private void btn_DangNhap_Click(object sender, EventArgs e)
         {
-            if (cbo_LoaiTK.Text!= "Nhân viên bán hàng")
-            {
+            
                 Program.frmMain = new FormMain();
                 Program.frmMain.Show();
                 this.Hide();
-            }
-            else
-            {
-                Program.frmBanHang = new FormBanHang();
-                Program.frmBanHang.Show();
-                this.Hide();
-            }
+           
             
         }
     }
