@@ -1,9 +1,11 @@
-﻿using BLL_DAO;
+﻿using BachHoaXanh_Store.ReportForm;
+using BLL_DAO;
 using BO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -64,6 +66,9 @@ namespace BachHoaXanh_Store
                     }
                 }
                 MessageBox.Show("Đặt hàng thành công");
+                Program.frmReport = new FormReport();
+                Program.frmReport.ShowDialog();
+                
                 this.Close();
             }
             else
