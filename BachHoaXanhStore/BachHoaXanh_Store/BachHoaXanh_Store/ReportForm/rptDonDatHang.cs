@@ -24,6 +24,7 @@ namespace BachHoaXanh_Store.ReportForm
             pMaNhaCungCap.Text = FormDatHang.strCustomerName; ;
             pTongTien.Text = FormDatHang.intTotalPrice.ToString();
             pNgayTra.Text = DateTime.Now.Day.ToString() + "/" + DateTime.Now.Month.ToString() + "/" + DateTime.Now.Year.ToString();
+            xrLabel16.Text = "TP.HCM, ngày "+ DateTime.Now.Day.ToString() + " tháng "+ DateTime.Now.Month.ToString() + " năm " + DateTime.Now.Year.ToString();
         }
         public string GenerateCode()
         {
