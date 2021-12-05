@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DonDatHangRPModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CTDonDatHang">
+    <Key>
+      <PropertyRef Name="MaDH" />
+      <PropertyRef Name="MaSP" />
+    </Key>
+    <Property Name="MaDH" Type="Int32" Nullable="false" />
+    <Property Name="MaSP" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SoLuong" Type="Int32" />
+    <Property Name="ThanhTien" Type="Int32" />
+    <NavigationProperty Name="DonDatHang" Relationship="Self.FK_CTDDH_DonDatHang" FromRole="CTDonDatHang" ToRole="DonDatHang" />
+  </EntityType>
+  <EntityType Name="DonDatHang">
+    <Key>
+      <PropertyRef Name="MaDH" />
+    </Key>
+    <Property Name="MaDH" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaST" Type="Int32" />
+    <Property Name="NguoiLapPhieu" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="NgayDat" Type="DateTime" Precision="0" />
+    <Property Name="TinhTrang" Type="Int32" />
+    <Property Name="TongTien" Type="Int32" />
+    <Property Name="Isdeleted" Type="Boolean" />
+    <NavigationProperty Name="CTDonDatHangs" Relationship="Self.FK_CTDDH_DonDatHang" FromRole="DonDatHang" ToRole="CTDonDatHang" />
+  </EntityType>
+  <EntityType Name="NhaCungCap">
+    <Key>
+      <PropertyRef Name="MaNCC" />
+    </Key>
+    <Property Name="MaNCC" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenNCC" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DiaChi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_CTDDH_DonDatHang">
+    <End Role="DonDatHang" Type="Self.DonDatHang" Multiplicity="1" />
+    <End Role="CTDonDatHang" Type="Self.CTDonDatHang" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DonDatHang">
+        <PropertyRef Name="MaDH" />
+      </Principal>
+      <Dependent Role="CTDonDatHang">
+        <PropertyRef Name="MaDH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="BachHoaXanh_StoreEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CTDonDatHangs" EntityType="Self.CTDonDatHang" />
+    <EntitySet Name="DonDatHangs" EntityType="Self.DonDatHang" />
+    <EntitySet Name="NhaCungCaps" EntityType="Self.NhaCungCap" />
+    <AssociationSet Name="FK_CTDDH_DonDatHang" Association="Self.FK_CTDDH_DonDatHang">
+      <End Role="DonDatHang" EntitySet="DonDatHangs" />
+      <End Role="CTDonDatHang" EntitySet="CTDonDatHangs" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

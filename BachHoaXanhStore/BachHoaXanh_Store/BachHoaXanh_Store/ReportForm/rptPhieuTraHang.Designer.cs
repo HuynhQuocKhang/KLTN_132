@@ -30,6 +30,10 @@ namespace BachHoaXanh_Store.ReportForm
         private void InitializeComponent()
         {
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
+            this.pTongTien = new DevExpress.XtraReports.UI.XRLabel();
+            this.pNgayTra = new DevExpress.XtraReports.UI.XRLabel();
+            this.pMaSieuThi = new DevExpress.XtraReports.UI.XRLabel();
+            this.pMaPhieuTra = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLine4 = new DevExpress.XtraReports.UI.XRLine();
             this.xrLine3 = new DevExpress.XtraReports.UI.XRLine();
             this.xrLine1 = new DevExpress.XtraReports.UI.XRLine();
@@ -52,10 +56,6 @@ namespace BachHoaXanh_Store.ReportForm
             this.pNgayHetHan = new DevExpress.XtraReports.UI.XRLabel();
             this.pSoLuong = new DevExpress.XtraReports.UI.XRLabel();
             this.pMaSP = new DevExpress.XtraReports.UI.XRLabel();
-            this.pMaPhieuTra = new DevExpress.XtraReports.UI.XRLabel();
-            this.pMaSieuThi = new DevExpress.XtraReports.UI.XRLabel();
-            this.pNgayTra = new DevExpress.XtraReports.UI.XRLabel();
-            this.pTongTien = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // TopMargin
@@ -80,6 +80,50 @@ namespace BachHoaXanh_Store.ReportForm
             this.xrLabel1});
             this.TopMargin.HeightF = 197.8637F;
             this.TopMargin.Name = "TopMargin";
+            // 
+            // pTongTien
+            // 
+            this.pTongTien.LocationFloat = new DevExpress.Utils.PointFloat(471.0416F, 98.2917F);
+            this.pTongTien.Multiline = true;
+            this.pTongTien.Name = "pTongTien";
+            this.pTongTien.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.pTongTien.SizeF = new System.Drawing.SizeF(131.5276F, 23F);
+            this.pTongTien.StylePriority.UseTextAlignment = false;
+            this.pTongTien.Text = "pTongTien";
+            this.pTongTien.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            // 
+            // pNgayTra
+            // 
+            this.pNgayTra.LocationFloat = new DevExpress.Utils.PointFloat(471.0416F, 135.3751F);
+            this.pNgayTra.Multiline = true;
+            this.pNgayTra.Name = "pNgayTra";
+            this.pNgayTra.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.pNgayTra.SizeF = new System.Drawing.SizeF(131.5276F, 23F);
+            this.pNgayTra.StylePriority.UseTextAlignment = false;
+            this.pNgayTra.Text = "pNgayTra";
+            this.pNgayTra.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            // 
+            // pMaSieuThi
+            // 
+            this.pMaSieuThi.LocationFloat = new DevExpress.Utils.PointFloat(217.639F, 135.3751F);
+            this.pMaSieuThi.Multiline = true;
+            this.pMaSieuThi.Name = "pMaSieuThi";
+            this.pMaSieuThi.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.pMaSieuThi.SizeF = new System.Drawing.SizeF(131.5276F, 23F);
+            this.pMaSieuThi.StylePriority.UseTextAlignment = false;
+            this.pMaSieuThi.Text = "pMaSieuThi";
+            this.pMaSieuThi.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            // 
+            // pMaPhieuTra
+            // 
+            this.pMaPhieuTra.LocationFloat = new DevExpress.Utils.PointFloat(217.639F, 98.2917F);
+            this.pMaPhieuTra.Multiline = true;
+            this.pMaPhieuTra.Name = "pMaPhieuTra";
+            this.pMaPhieuTra.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.pMaPhieuTra.SizeF = new System.Drawing.SizeF(131.5276F, 23F);
+            this.pMaPhieuTra.StylePriority.UseTextAlignment = false;
+            this.pMaPhieuTra.Text = "pMaPhieuTra";
+            this.pMaPhieuTra.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             // 
             // xrLine4
             // 
@@ -303,49 +347,11 @@ namespace BachHoaXanh_Store.ReportForm
             this.pMaSP.Text = "pMaSP";
             this.pMaSP.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             // 
-            // pMaPhieuTra
+            // rptDataSet1
             // 
-            this.pMaPhieuTra.LocationFloat = new DevExpress.Utils.PointFloat(217.639F, 98.2917F);
-            this.pMaPhieuTra.Multiline = true;
-            this.pMaPhieuTra.Name = "pMaPhieuTra";
-            this.pMaPhieuTra.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.pMaPhieuTra.SizeF = new System.Drawing.SizeF(131.5276F, 23F);
-            this.pMaPhieuTra.StylePriority.UseTextAlignment = false;
-            this.pMaPhieuTra.Text = "pMaPhieuTra";
-            this.pMaPhieuTra.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             // 
-            // pMaSieuThi
+            // cTDonDatHangTableAdapter
             // 
-            this.pMaSieuThi.LocationFloat = new DevExpress.Utils.PointFloat(217.639F, 135.3751F);
-            this.pMaSieuThi.Multiline = true;
-            this.pMaSieuThi.Name = "pMaSieuThi";
-            this.pMaSieuThi.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.pMaSieuThi.SizeF = new System.Drawing.SizeF(131.5276F, 23F);
-            this.pMaSieuThi.StylePriority.UseTextAlignment = false;
-            this.pMaSieuThi.Text = "pMaSieuThi";
-            this.pMaSieuThi.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
-            // 
-            // pNgayTra
-            // 
-            this.pNgayTra.LocationFloat = new DevExpress.Utils.PointFloat(471.0416F, 135.3751F);
-            this.pNgayTra.Multiline = true;
-            this.pNgayTra.Name = "pNgayTra";
-            this.pNgayTra.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.pNgayTra.SizeF = new System.Drawing.SizeF(131.5276F, 23F);
-            this.pNgayTra.StylePriority.UseTextAlignment = false;
-            this.pNgayTra.Text = "pNgayTra";
-            this.pNgayTra.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
-            // 
-            // pTongTien
-            // 
-            this.pTongTien.LocationFloat = new DevExpress.Utils.PointFloat(471.0416F, 98.2917F);
-            this.pTongTien.Multiline = true;
-            this.pTongTien.Name = "pTongTien";
-            this.pTongTien.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.pTongTien.SizeF = new System.Drawing.SizeF(131.5276F, 23F);
-            this.pTongTien.StylePriority.UseTextAlignment = false;
-            this.pTongTien.Text = "pTongTien";
-            this.pTongTien.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             // 
             // rptPhieuTraHang
             // 
@@ -353,6 +359,8 @@ namespace BachHoaXanh_Store.ReportForm
             this.TopMargin,
             this.BottomMargin,
             this.Detail});
+            this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] { });
+            this.DataMember = "CTDonDatHang";
             this.Font = new System.Drawing.Font("Arial", 9.75F);
             this.Margins = new System.Drawing.Printing.Margins(100, 100, 198, 100);
             this.Version = "20.1";
@@ -389,5 +397,6 @@ namespace BachHoaXanh_Store.ReportForm
         private DevExpress.XtraReports.UI.XRLabel pNgayTra;
         private DevExpress.XtraReports.UI.XRLabel pMaSieuThi;
         private DevExpress.XtraReports.UI.XRLabel pMaPhieuTra;
+        
     }
 }
