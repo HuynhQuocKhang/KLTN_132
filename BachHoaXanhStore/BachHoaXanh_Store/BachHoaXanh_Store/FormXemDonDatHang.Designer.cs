@@ -56,21 +56,21 @@ namespace BachHoaXanh_Store
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
             this.cbo_NhaCungCap = new Bunifu.UI.WinForms.BunifuDropdown();
-            this.bunifuDropdown1 = new Bunifu.UI.WinForms.BunifuDropdown();
+            this.cbo_TinhTrang = new Bunifu.UI.WinForms.BunifuDropdown();
             this.btn_TimKiem = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.bunifuCustomDataGrid1 = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.col_MaDH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_MaST = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_NgayDat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_TinhTrang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_TongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bunifuCustomDataGrid2 = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.col_MaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_TenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_GiaBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_MaDH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_MaST = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_NgayDat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_TinhTrang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_TongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -119,7 +119,7 @@ namespace BachHoaXanh_Store
             this.tableLayoutPanel2.Controls.Add(this.bunifuLabel2, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.bunifuLabel3, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.cbo_NhaCungCap, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.bunifuDropdown1, 1, 2);
+            this.tableLayoutPanel2.Controls.Add(this.cbo_TinhTrang, 1, 2);
             this.tableLayoutPanel2.Controls.Add(this.btn_TimKiem, 2, 3);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(23, 29);
@@ -333,7 +333,7 @@ namespace BachHoaXanh_Store
             this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel3.Size = new System.Drawing.Size(69, 34);
             this.bunifuLabel3.TabIndex = 3;
-            this.bunifuLabel3.Text = "Siêu thị";
+            this.bunifuLabel3.Text = "Tình trạng";
             this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
             this.bunifuLabel3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -370,39 +370,39 @@ namespace BachHoaXanh_Store
             this.cbo_NhaCungCap.TabIndex = 4;
             this.cbo_NhaCungCap.Text = null;
             // 
-            // bunifuDropdown1
+            // cbo_TinhTrang
             // 
-            this.bunifuDropdown1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(216)))), ((int)(((byte)(211)))));
-            this.bunifuDropdown1.BorderRadius = 13;
-            this.bunifuDropdown1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(92)))), ((int)(((byte)(83)))));
-            this.tableLayoutPanel2.SetColumnSpan(this.bunifuDropdown1, 2);
-            this.bunifuDropdown1.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
-            this.bunifuDropdown1.DisabledColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.bunifuDropdown1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuDropdown1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.bunifuDropdown1.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thick;
-            this.bunifuDropdown1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.bunifuDropdown1.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.bunifuDropdown1.FillDropDown = false;
-            this.bunifuDropdown1.FillIndicator = false;
-            this.bunifuDropdown1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bunifuDropdown1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuDropdown1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(92)))), ((int)(((byte)(83)))));
-            this.bunifuDropdown1.FormattingEnabled = true;
-            this.bunifuDropdown1.Icon = null;
-            this.bunifuDropdown1.IndicatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(92)))), ((int)(((byte)(83)))));
-            this.bunifuDropdown1.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.bunifuDropdown1.ItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(247)))), ((int)(((byte)(228)))));
-            this.bunifuDropdown1.ItemBorderColor = System.Drawing.Color.Transparent;
-            this.bunifuDropdown1.ItemForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(19)))), ((int)(((byte)(10)))));
-            this.bunifuDropdown1.ItemHeight = 26;
-            this.bunifuDropdown1.ItemHighLightColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(92)))), ((int)(((byte)(83)))));
-            this.bunifuDropdown1.Location = new System.Drawing.Point(78, 83);
-            this.bunifuDropdown1.MaximumSize = new System.Drawing.Size(5000, 0);
-            this.bunifuDropdown1.Name = "bunifuDropdown1";
-            this.bunifuDropdown1.Size = new System.Drawing.Size(250, 32);
-            this.bunifuDropdown1.TabIndex = 4;
-            this.bunifuDropdown1.Text = null;
+            this.cbo_TinhTrang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(216)))), ((int)(((byte)(211)))));
+            this.cbo_TinhTrang.BorderRadius = 13;
+            this.cbo_TinhTrang.Color = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(92)))), ((int)(((byte)(83)))));
+            this.tableLayoutPanel2.SetColumnSpan(this.cbo_TinhTrang, 2);
+            this.cbo_TinhTrang.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
+            this.cbo_TinhTrang.DisabledColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.cbo_TinhTrang.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cbo_TinhTrang.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbo_TinhTrang.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thick;
+            this.cbo_TinhTrang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_TinhTrang.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.cbo_TinhTrang.FillDropDown = false;
+            this.cbo_TinhTrang.FillIndicator = false;
+            this.cbo_TinhTrang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbo_TinhTrang.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbo_TinhTrang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(92)))), ((int)(((byte)(83)))));
+            this.cbo_TinhTrang.FormattingEnabled = true;
+            this.cbo_TinhTrang.Icon = null;
+            this.cbo_TinhTrang.IndicatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(92)))), ((int)(((byte)(83)))));
+            this.cbo_TinhTrang.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.cbo_TinhTrang.ItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(247)))), ((int)(((byte)(228)))));
+            this.cbo_TinhTrang.ItemBorderColor = System.Drawing.Color.Transparent;
+            this.cbo_TinhTrang.ItemForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(19)))), ((int)(((byte)(10)))));
+            this.cbo_TinhTrang.ItemHeight = 26;
+            this.cbo_TinhTrang.ItemHighLightColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(92)))), ((int)(((byte)(83)))));
+            this.cbo_TinhTrang.Location = new System.Drawing.Point(78, 83);
+            this.cbo_TinhTrang.MaximumSize = new System.Drawing.Size(5000, 0);
+            this.cbo_TinhTrang.Name = "cbo_TinhTrang";
+            this.cbo_TinhTrang.Size = new System.Drawing.Size(250, 32);
+            this.cbo_TinhTrang.TabIndex = 4;
+            this.cbo_TinhTrang.Text = null;
             // 
             // btn_TimKiem
             // 
@@ -530,6 +530,32 @@ namespace BachHoaXanh_Store
             this.bunifuCustomDataGrid1.Size = new System.Drawing.Size(926, 212);
             this.bunifuCustomDataGrid1.TabIndex = 0;
             // 
+            // col_MaDH
+            // 
+            this.col_MaDH.HeaderText = "Mã đơn hàng";
+            this.col_MaDH.Name = "col_MaDH";
+            // 
+            // col_MaST
+            // 
+            this.col_MaST.HeaderText = "Mã siêu thị";
+            this.col_MaST.Name = "col_MaST";
+            // 
+            // col_NgayDat
+            // 
+            this.col_NgayDat.HeaderText = "Ngày đặt";
+            this.col_NgayDat.Name = "col_NgayDat";
+            // 
+            // col_TinhTrang
+            // 
+            this.col_TinhTrang.HeaderText = "Tình trạng";
+            this.col_TinhTrang.Name = "col_TinhTrang";
+            this.col_TinhTrang.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // col_TongTien
+            // 
+            this.col_TongTien.HeaderText = "Tổng tiền";
+            this.col_TongTien.Name = "col_TongTien";
+            // 
             // bunifuCustomDataGrid2
             // 
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -599,32 +625,6 @@ namespace BachHoaXanh_Store
             this.col_ThanhTien.HeaderText = "Thành tiền";
             this.col_ThanhTien.Name = "col_ThanhTien";
             // 
-            // col_MaDH
-            // 
-            this.col_MaDH.HeaderText = "Mã đơn hàng";
-            this.col_MaDH.Name = "col_MaDH";
-            // 
-            // col_MaST
-            // 
-            this.col_MaST.HeaderText = "Mã siêu thị";
-            this.col_MaST.Name = "col_MaST";
-            // 
-            // col_NgayDat
-            // 
-            this.col_NgayDat.HeaderText = "Ngày đặt";
-            this.col_NgayDat.Name = "col_NgayDat";
-            // 
-            // col_TinhTrang
-            // 
-            this.col_TinhTrang.HeaderText = "Tình trạng";
-            this.col_TinhTrang.Name = "col_TinhTrang";
-            this.col_TinhTrang.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // col_TongTien
-            // 
-            this.col_TongTien.HeaderText = "Tổng tiền";
-            this.col_TongTien.Name = "col_TongTien";
-            // 
             // FormXemDonDatHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -668,7 +668,7 @@ namespace BachHoaXanh_Store
         private System.Windows.Forms.DataGridViewTextBoxColumn col_ThanhTien;
         private System.Windows.Forms.Panel panel1;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel3;
-        private Bunifu.UI.WinForms.BunifuDropdown bunifuDropdown1;
+        private Bunifu.UI.WinForms.BunifuDropdown cbo_TinhTrang;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_MaDH;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_MaST;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_NgayDat;
