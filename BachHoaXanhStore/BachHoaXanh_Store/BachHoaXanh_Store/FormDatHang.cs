@@ -14,7 +14,7 @@ namespace BachHoaXanh_Store
 {
     public partial class FormDatHang : Form
     {
-        public static UserBO objUser = new UserBO();
+        UserBO objUser = FormLogin.objUserBO;
         CustomerBLL objCustomerBLL = new CustomerBLL();
         ProductBLL objProductBll = new ProductBLL();
         ProductTypeBLL objProductTyepBLL = new ProductTypeBLL();
@@ -27,9 +27,6 @@ namespace BachHoaXanh_Store
         public FormDatHang()
         {
             InitializeComponent();
-            objUser.UserFullName = "162860 - Võ Hoàng Bảo Sơn";
-            objUser.Permission = 2;
-            objUser.StoreId = 1;
             cbo_NhaCungCap.DataSource = objCustomerBLL.GetListALlCustomer();
             cbo_NhaCungCap.DisplayMember = "FullName";
             cbo_NhaCungCap.ValueMember = "MaNCC";
@@ -150,19 +147,19 @@ namespace BachHoaXanh_Store
                 {
                     if (int.Parse(strCustomerId) == 1 && int.Parse(strProductTypeId) == 1)
                     {
-                        dgv_DSSP.DataSource = objOrderStoreBLL.GetProductFromStore(strProductName.Trim(), 0, 0, int.Parse(strStock), objUser.StoreId);
+                        dgv_DSSP.DataSource = objOrderStoreBLL.GetProductFromStore(strProductName.Trim(), 0, 0, int.Parse(strStock), (int) objUser.StoreId);
                     }
                     else if (int.Parse(strCustomerId) == 1 && int.Parse(strProductTypeId) != 1)
                     {
-                        dgv_DSSP.DataSource = objOrderStoreBLL.GetProductFromStore(strProductName.Trim(), int.Parse(strProductTypeId), 0, int.Parse(strStock), objUser.StoreId);
+                        dgv_DSSP.DataSource = objOrderStoreBLL.GetProductFromStore(strProductName.Trim(), int.Parse(strProductTypeId), 0, int.Parse(strStock), (int)objUser.StoreId);
                     }
                     else if (int.Parse(strCustomerId) != 1 && int.Parse(strProductTypeId) == 1)
                     {
-                        dgv_DSSP.DataSource = objOrderStoreBLL.GetProductFromStore(strProductName.Trim(), 0, int.Parse(strCustomerId), int.Parse(strStock), objUser.StoreId);
+                        dgv_DSSP.DataSource = objOrderStoreBLL.GetProductFromStore(strProductName.Trim(), 0, int.Parse(strCustomerId), int.Parse(strStock), (int)objUser.StoreId);
                     }
                     else
                     {
-                        dgv_DSSP.DataSource = objOrderStoreBLL.GetProductFromStore(strProductName.Trim(), int.Parse(strProductTypeId), int.Parse(strCustomerId), int.Parse(strStock), objUser.StoreId);
+                        dgv_DSSP.DataSource = objOrderStoreBLL.GetProductFromStore(strProductName.Trim(), int.Parse(strProductTypeId), int.Parse(strCustomerId), int.Parse(strStock), (int) objUser.StoreId);
                     }
                 }
             }

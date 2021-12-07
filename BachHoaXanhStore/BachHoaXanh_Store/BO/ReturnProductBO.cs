@@ -10,7 +10,7 @@ namespace BO
     {
         public int MaPTH { get; set; }
         public string NguoiLapPhieu { get; set; }
-        public int MaST { get; set; }
+        public int? MaST { get; set; }
         public int MaNCC { get; set; }
         public DateTime NgayTra { get; set; }
         public int TongTien { get; set; }

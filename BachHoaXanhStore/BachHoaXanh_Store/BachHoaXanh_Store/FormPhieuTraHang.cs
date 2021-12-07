@@ -22,7 +22,7 @@ namespace BachHoaXanh_Store
         {
             InitializeComponent();
             
-            txt_NguoiDat.Text = FormTraHangNCC.objUser.UserFullName;
+            txt_NguoiDat.Text = FormLogin.objUserBO.UserFullName;
             txt_NgayTra.Text = DateTime.Now.ToString();
             txt_NhaCungCap.Text = FormTraHangNCC.strCustomerName;
             txt_TinhTrang.Text = "Trả Hàng";
@@ -38,7 +38,7 @@ namespace BachHoaXanh_Store
         private void btn_TraHang_Click(object sender, EventArgs e)
         {
             ReturnProductBO objReturnProductBO = new ReturnProductBO();
-            if (FormTraHangNCC.objUser.Permission == 1)
+            if (FormLogin.objUserBO.Permission == 1)
             {
                 objReturnProductBO.MaNCC = FormTraHangNCC.intCustomerId;
                 objReturnProductBO.MaST = 0;
@@ -46,7 +46,7 @@ namespace BachHoaXanh_Store
             else
             {
                 objReturnProductBO.MaNCC = 0;
-                objReturnProductBO.MaST = FormTraHangNCC.objUser.StoreId;
+                objReturnProductBO.MaST = FormLogin.objUserBO.StoreId;
             }
             objReturnProductBO.NguoiLapPhieu = txt_NguoiDat.Text;
            

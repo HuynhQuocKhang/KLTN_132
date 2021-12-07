@@ -28,8 +28,8 @@ namespace BachHoaXanh_Store
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            frmMain = new FormMain();
-            Application.Run(frmMain);
+            frmLogin = new FormLogin();
+            Application.Run(frmLogin);
         }
 
 

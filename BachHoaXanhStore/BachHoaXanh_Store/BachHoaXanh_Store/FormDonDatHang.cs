@@ -22,7 +22,7 @@ namespace BachHoaXanh_Store
         {
             InitializeComponent();
             List<OrderCustomerDetailBO> lstOrderTmp = FormDatHang.lstOrderCustomerDetailBO;
-            txt_NguoiDat.Text = FormDatHang.objUser.UserFullName;
+            txt_NguoiDat.Text = FormLogin.objUserBO.UserFullName;
             txt_NhaCungCap.Text = FormDatHang.strCustomerName;
             txt_NgayDat.Text = DateTime.Now.ToString("d");
             txt_TongTien.Text = FormDatHang.intTotalPrice.ToString();
@@ -39,7 +39,7 @@ namespace BachHoaXanh_Store
 
         private void btn_TraHang_Click(object sender, EventArgs e)
         {
-            if (FormDatHang.objUser.Permission == 1)
+            if (FormLogin.objUserBO.Permission == 1)
             {
                 OrderCustomerBO objOrderCustomerBO = new OrderCustomerBO();
                 objOrderCustomerBO.NguoiLapPhieu = txt_NguoiDat.Text;
@@ -75,11 +75,9 @@ namespace BachHoaXanh_Store
             }
             else
             {
-                //Hiện tại đang gán cứng mã siêu thị = 1 để test chức năng phân phối hàng hóa
-                //Cải thiện sau khi hoàn thành xong form đăng nhập
                 OrderStoreBO objOrderStoreBO = new OrderStoreBO();
                 objOrderStoreBO.NguoiLapPhieu = txt_NguoiDat.Text;
-                objOrderStoreBO.MaST = FormDatHang.objUser.StoreId;
+                objOrderStoreBO.MaST = FormLogin.objUserBO.StoreId;
                 objOrderStoreBO.TongTien = int.Parse(txt_TongTien.Text);
                 objOrderStoreBO.NgayDat = DateTime.Now;
                 objOrderStoreBO.TinhTrang = 0;

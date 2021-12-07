@@ -1,4 +1,6 @@
-﻿using DevExpress.XtraEditors;
+﻿using BLL_DAO;
+using BO;
+using DevExpress.XtraEditors;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +15,8 @@ namespace BachHoaXanh_Store
 {
     public partial class FormLogin : DevExpress.XtraEditors.XtraForm
     {
+        UserBLL objUserBLL = new UserBLL();
+        public static UserBO objUserBO = new UserBO();
         public FormLogin()
         {
             InitializeComponent();
@@ -20,12 +24,27 @@ namespace BachHoaXanh_Store
 
         private void btn_DangNhap_Click(object sender, EventArgs e)
         {
-            
-                Program.frmMain = new FormMain();
-                Program.frmMain.Show();
-                this.Hide();
-           
-            
+            objUserBO = objUserBLL.GetUserByKey(txt_user.Text.Trim(), txt_pass.Text.Trim());
+            if (objUserBO == null)
+            {
+                MessageBox.Show("Tên đăng nhập hoặc mật khẩu không chính xác." + Environment.NewLine + "Xin vui lòng kiểm tra lại.");
+            }
+            else
+            {
+                if (objUserBO.Permission == 3)
+                {
+                    Program.frmBanHang = new FormBanHang();
+                    Program.frmBanHang.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    FormMain frm = new FormMain();
+                    frm.Show();
+                    this.Hide();
+                }
+            }
+
         }
     }
 }

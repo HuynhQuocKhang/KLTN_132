@@ -126,9 +126,9 @@ namespace BachHoaXanh_Store
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 256F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Controls.Add(this.btn_TimKiem, 3, 0);
-            this.tableLayoutPanel2.Controls.Add(this.cbo_LoaiSP, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.txtKeyWord, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.cbo_NhaCungCap, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.cbo_NhaCungCap, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.cbo_LoaiSP, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(23, 23);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -230,7 +230,7 @@ namespace BachHoaXanh_Store
             this.cbo_LoaiSP.ItemHighLightColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(209)))), ((int)(((byte)(175)))));
             this.cbo_LoaiSP.Items.AddRange(new object[] {
             "ALL"});
-            this.cbo_LoaiSP.Location = new System.Drawing.Point(691, 3);
+            this.cbo_LoaiSP.Location = new System.Drawing.Point(347, 3);
             this.cbo_LoaiSP.MaximumSize = new System.Drawing.Size(5000, 0);
             this.cbo_LoaiSP.Name = "cbo_LoaiSP";
             this.cbo_LoaiSP.Size = new System.Drawing.Size(338, 32);
@@ -340,7 +340,7 @@ namespace BachHoaXanh_Store
             this.cbo_NhaCungCap.ItemHighLightColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(209)))), ((int)(((byte)(175)))));
             this.cbo_NhaCungCap.Items.AddRange(new object[] {
             "ALL"});
-            this.cbo_NhaCungCap.Location = new System.Drawing.Point(347, 3);
+            this.cbo_NhaCungCap.Location = new System.Drawing.Point(691, 3);
             this.cbo_NhaCungCap.MaximumSize = new System.Drawing.Size(5000, 0);
             this.cbo_NhaCungCap.Name = "cbo_NhaCungCap";
             this.cbo_NhaCungCap.Size = new System.Drawing.Size(338, 32);

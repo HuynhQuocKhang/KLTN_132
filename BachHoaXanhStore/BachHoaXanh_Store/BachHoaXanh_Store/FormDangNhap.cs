@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BLL_DAO;
+using BO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +16,8 @@ namespace BachHoaXanh_Store
 {
     public partial class FormDangNhap : Telerik.WinControls.UI.RadForm
     {
+        UserBLL objUserBLL = new UserBLL();
+        public static UserBO objUserBO = new UserBO();
         public FormDangNhap()
         {
             InitializeComponent();
@@ -35,18 +39,7 @@ namespace BachHoaXanh_Store
 
         private void btn_Login_Click(object sender, EventArgs e)
         {
-            if(radDropDownList1.Text=="Nhân viên")
-            {
-                Program.frmBanHang = new FormBanHang();
-                Program.frmBanHang.Show();
-                this.Hide();
-            }
-            else
-            {
-                FormMain frm = new FormMain();
-                frm.Show();
-                this.Hide();
-            }
+            
 
         }
     }

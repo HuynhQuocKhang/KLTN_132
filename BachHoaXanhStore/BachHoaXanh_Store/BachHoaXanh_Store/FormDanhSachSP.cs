@@ -27,8 +27,6 @@ namespace BachHoaXanh_Store
         public FormDanhSachSP()
         {
             InitializeComponent();
-            //Load dữ liệu ban đầu
-            //dgv_DSSP.DataSource = objProductBLL.GetListAllProduct();
             cbo_NhaCungCap.DataSource = objcustomerBLL.GetListALlCustomer();
             cbo_NhaCungCap.DisplayMember = "FullName";
             cbo_NhaCungCap.ValueMember = "MaNCC";
@@ -79,7 +77,7 @@ namespace BachHoaXanh_Store
             //Sửa Sản phẩm
             if (dgv_DSSP["col_Sua", index].Selected)
             {
-                //Xét trạng form
+                //Xét trạng thái form
                 isEdit = true;
 
                 #region Truyền dữ liệu cho object chung

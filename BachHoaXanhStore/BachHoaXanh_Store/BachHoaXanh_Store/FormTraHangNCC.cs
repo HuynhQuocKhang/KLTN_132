@@ -14,7 +14,7 @@ namespace BachHoaXanh_Store
 {
     public partial class FormTraHangNCC : Form
     {
-        public static UserBO objUser = new UserBO();
+        UserBO objUser = FormLogin.objUserBO;
         CustomerBLL objCustomerBLL = new CustomerBLL();
         ProductBLL objProductBLL = new ProductBLL();
         ProductTypeBLL objProductTyepBLL = new ProductTypeBLL();
@@ -32,9 +32,6 @@ namespace BachHoaXanh_Store
             toolTip1.SetToolTip(cbo_NhaCungCap, "Chọn tìm kiếm theo nhà cung cấp");
             toolTip1.SetToolTip(txtKeyWord, "Tìm kiếm dữ liệu sản phẩm");
 
-            objUser.UserFullName = "162860 - Võ Hoàng Bảo Sơn";
-            objUser.Permission = 1;
-            objUser.StoreId = 1;
             cbo_NhaCungCap.DataSource = objCustomerBLL.GetListALlCustomer();
             cbo_NhaCungCap.DisplayMember = "FullName";
             cbo_NhaCungCap.ValueMember = "MaNCC";
@@ -78,7 +75,7 @@ namespace BachHoaXanh_Store
                     }
                     if (objUser.Permission == 2)
                     {
-                        objProductOrderCustomerBOTmp = objOrderStoreBLL.GetProductFromStore(dgv_Order["MaSP", i].Value.ToString().Trim(), 0, 0, int.MaxValue, 10, objUser.StoreId).FirstOrDefault();
+                        objProductOrderCustomerBOTmp = objOrderStoreBLL.GetProductFromStore(dgv_Order["MaSP", i].Value.ToString().Trim(), 0, 0, int.MaxValue, 10, (int)objUser.StoreId).FirstOrDefault();
                         strProductName = objProductOrderCustomerBOTmp.TenSP;
                         intStockProduct = objProductOrderCustomerBOTmp.SoLuong;
                     }
