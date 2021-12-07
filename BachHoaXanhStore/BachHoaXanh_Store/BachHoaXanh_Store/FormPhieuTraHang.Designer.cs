@@ -1,4 +1,6 @@
 ﻿
+using System;
+
 namespace BachHoaXanh_Store
 {
     partial class FormPhieuTraHang
@@ -861,6 +863,7 @@ namespace BachHoaXanh_Store
             this.ResumeLayout(false);
 
         }
+
 
         #endregion
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;

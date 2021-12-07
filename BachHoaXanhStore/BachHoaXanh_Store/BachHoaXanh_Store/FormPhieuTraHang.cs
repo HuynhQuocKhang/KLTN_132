@@ -21,7 +21,7 @@ namespace BachHoaXanh_Store
         public FormPhieuTraHang()
         {
             InitializeComponent();
-            
+
             txt_NguoiDat.Text = FormTraHangNCC.objUser.UserFullName;
             txt_NgayTra.Text = DateTime.Now.ToString();
             txt_NhaCungCap.Text = FormTraHangNCC.strCustomerName;
@@ -49,7 +49,7 @@ namespace BachHoaXanh_Store
                 objReturnProductBO.MaST = FormTraHangNCC.objUser.StoreId;
             }
             objReturnProductBO.NguoiLapPhieu = txt_NguoiDat.Text;
-           
+
             objReturnProductBO.NgayTra = DateTime.Now;
             objReturnProductBO.Isdeleted = false;
             objReturnProductBO.TinhTrang = 0;
