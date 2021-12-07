@@ -18,6 +18,8 @@ namespace BachHoaXanh_Store
         CustomerBLL objCustomerBLL = new CustomerBLL();
         ProductBLL objProductBll = new ProductBLL();
         ProductTypeBLL objProductTyepBLL = new ProductTypeBLL();
+        OrderStoreBLL objOrderStoreBLL = new OrderStoreBLL();
+        OrderCustomerBLL objOrderCustomerBLL = new OrderCustomerBLL();
         public static List<OrderCustomerDetailBO> lstOrderCustomerDetailBO = new List<OrderCustomerDetailBO>();
         public static int intTotalPrice = 0;
         public static string strCustomerName = string.Empty;
@@ -26,7 +28,7 @@ namespace BachHoaXanh_Store
         {
             InitializeComponent();
             objUser.UserFullName = "162860 - Võ Hoàng Bảo Sơn";
-            objUser.Permission = 1;
+            objUser.Permission = 2;
             objUser.StoreId = 1;
             cbo_NhaCungCap.DataSource = objCustomerBLL.GetListALlCustomer();
             cbo_NhaCungCap.DisplayMember = "FullName";
@@ -51,6 +53,7 @@ namespace BachHoaXanh_Store
             if (dgv_Order.Rows.Count > 0)
             {
                 bool isOpen = true;
+                int Id = objOrderCustomerBLL.GetOrderCustomerIdNew() + 1;
                 for (int i = 0; i < dgv_Order.Rows.Count; i++)
                 {
                     int intStock;
@@ -71,6 +74,7 @@ namespace BachHoaXanh_Store
                     else
                     {
                         OrderCustomerDetailBO objOrderCustomerDetailBO = new OrderCustomerDetailBO();
+                        objOrderCustomerDetailBO.MaHDDat = Id;
                         objOrderCustomerDetailBO.MaSP = dgv_Order["MaSP", i].Value.ToString();
                         objOrderCustomerDetailBO.TenSP = dgv_Order["TenSP", i].Value.ToString();
                         objOrderCustomerDetailBO.SoLuong = int.Parse(dgv_Order["SoLuong", i].Value.ToString());
@@ -123,21 +127,43 @@ namespace BachHoaXanh_Store
             }
             else
             {
-                if (int.Parse(strCustomerId) == 1 && int.Parse(strProductTypeId) == 1)
+                if (objUser.Permission == 1)
                 {
-                    dgv_DSSP.DataSource = objProductBll.GetProductByKeysForOrderCustomer(strProductName.Trim(), 0, 0, int.Parse(strStock));
-                }
-                else if (int.Parse(strCustomerId) == 1 && int.Parse(strProductTypeId) != 1)
-                {
-                    dgv_DSSP.DataSource = objProductBll.GetProductByKeysForOrderCustomer(strProductName.Trim(), int.Parse(strProductTypeId), 0, int.Parse(strStock));
-                }
-                else if (int.Parse(strCustomerId) != 1 && int.Parse(strProductTypeId) == 1)
-                {
-                    dgv_DSSP.DataSource = objProductBll.GetProductByKeysForOrderCustomer(strProductName.Trim(), 0, int.Parse(strCustomerId), int.Parse(strStock));
+                    if (int.Parse(strCustomerId) == 1 && int.Parse(strProductTypeId) == 1)
+                    {
+                        dgv_DSSP.DataSource = objProductBll.GetProductByKeysForOrderCustomer(strProductName.Trim(), 0, 0, int.Parse(strStock));
+                    }
+                    else if (int.Parse(strCustomerId) == 1 && int.Parse(strProductTypeId) != 1)
+                    {
+                        dgv_DSSP.DataSource = objProductBll.GetProductByKeysForOrderCustomer(strProductName.Trim(), int.Parse(strProductTypeId), 0, int.Parse(strStock));
+                    }
+                    else if (int.Parse(strCustomerId) != 1 && int.Parse(strProductTypeId) == 1)
+                    {
+                        dgv_DSSP.DataSource = objProductBll.GetProductByKeysForOrderCustomer(strProductName.Trim(), 0, int.Parse(strCustomerId), int.Parse(strStock));
+                    }
+                    else
+                    {
+                        dgv_DSSP.DataSource = objProductBll.GetProductByKeysForOrderCustomer(strProductName.Trim(), int.Parse(strProductTypeId), int.Parse(strCustomerId), int.Parse(strStock));
+                    }
                 }
                 else
                 {
-                    dgv_DSSP.DataSource = objProductBll.GetProductByKeysForOrderCustomer(strProductName.Trim(), int.Parse(strProductTypeId), int.Parse(strCustomerId), int.Parse(strStock));
+                    if (int.Parse(strCustomerId) == 1 && int.Parse(strProductTypeId) == 1)
+                    {
+                        dgv_DSSP.DataSource = objOrderStoreBLL.GetProductFromStore(strProductName.Trim(), 0, 0, int.Parse(strStock), objUser.StoreId);
+                    }
+                    else if (int.Parse(strCustomerId) == 1 && int.Parse(strProductTypeId) != 1)
+                    {
+                        dgv_DSSP.DataSource = objOrderStoreBLL.GetProductFromStore(strProductName.Trim(), int.Parse(strProductTypeId), 0, int.Parse(strStock), objUser.StoreId);
+                    }
+                    else if (int.Parse(strCustomerId) != 1 && int.Parse(strProductTypeId) == 1)
+                    {
+                        dgv_DSSP.DataSource = objOrderStoreBLL.GetProductFromStore(strProductName.Trim(), 0, int.Parse(strCustomerId), int.Parse(strStock), objUser.StoreId);
+                    }
+                    else
+                    {
+                        dgv_DSSP.DataSource = objOrderStoreBLL.GetProductFromStore(strProductName.Trim(), int.Parse(strProductTypeId), int.Parse(strCustomerId), int.Parse(strStock), objUser.StoreId);
+                    }
                 }
             }
         }
@@ -163,7 +189,7 @@ namespace BachHoaXanh_Store
                     {
                         if (dgv_DSSP["col_MaSP", index].Value.ToString() == dgv_Order["MaSP", i].Value.ToString() && dgv_Order["MaSP", i].Value != null)
                         {
-                            dgv_Order["SoLuong", i].Value = (int.Parse(dgv_Order["SoLuong", index].Value.ToString()) + 1).ToString();
+                            dgv_Order["SoLuong", i].Value = (int.Parse(dgv_Order["SoLuong", i].Value.ToString()) + 1).ToString();
                             dgv_Order["col_ThanhTien", i].Value = (int.Parse(dgv_Order["SoLuong", i].Value.ToString()) * int.Parse(dgv_Order["GiaVon", i].Value.ToString())).ToString();
                             indexOrder = i;
                             return;
