@@ -39,6 +39,7 @@ namespace BachHoaXanh_Store
             cbo_LoaiSP.DataSource = objProductTypeBLL.GetALLProductType();
             cbo_LoaiSP.DisplayMember = "FullName";
             cbo_LoaiSP.ValueMember = "MaLoaiSP";
+            cbo_PageSize.SelectedIndex = 0;
         }
 
         private void dgv_DSSP_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -48,27 +49,27 @@ namespace BachHoaXanh_Store
 
         private void btn_TimKiem_Click(object sender, EventArgs e)
         {
-            Search(txtKeyWord.Text, cbo_NhaCungCap.SelectedValue.ToString(), cbo_LoaiSP.SelectedValue.ToString());
+            Search(txtKeyWord.Text, cbo_NhaCungCap.SelectedValue.ToString(), cbo_LoaiSP.SelectedValue.ToString(), cbo_PageSize.Text);
 
         }
         //Tìm kiếm sản phẩm theo key and customerid
-        private void Search(string strProductName, string strCustomerId, string strProductTypeId)
+        private void Search(string strProductName, string strCustomerId, string strProductTypeId, string strPageSize)
         {
             if (int.Parse(strCustomerId) == 1 && int.Parse(strProductTypeId) == 1)
             {
-                dgv_DSSP.DataSource = objProductBLL.GetProductByKeys(strProductName.Trim(), 0, 0);
+                dgv_DSSP.DataSource = objProductBLL.GetProductByKeys(strProductName.Trim(), 0, 0, int.Parse(strPageSize.Trim()));
             }
             else if (int.Parse(strCustomerId) == 1)
             {
-                dgv_DSSP.DataSource = objProductBLL.GetProductByKeys(strProductName.Trim(), int.Parse(strProductTypeId), 0);
+                dgv_DSSP.DataSource = objProductBLL.GetProductByKeys(strProductName.Trim(), int.Parse(strProductTypeId), 0, int.Parse(strPageSize.Trim()));
             }
             else if (int.Parse(strProductTypeId) == 1)
             {
-                dgv_DSSP.DataSource = objProductBLL.GetProductByKeys(strProductName.Trim(), 0, int.Parse(strCustomerId));
+                dgv_DSSP.DataSource = objProductBLL.GetProductByKeys(strProductName.Trim(), 0, int.Parse(strCustomerId), int.Parse(strPageSize.Trim()));
             }
             else
             {
-                dgv_DSSP.DataSource = objProductBLL.GetProductByKeys(strProductName.Trim(), int.Parse(strProductTypeId), int.Parse(strCustomerId));
+                dgv_DSSP.DataSource = objProductBLL.GetProductByKeys(strProductName.Trim(), int.Parse(strProductTypeId), int.Parse(strCustomerId), int.Parse(strPageSize.Trim()));
             }
         }
         private void dgv_DSSP_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -119,7 +120,7 @@ namespace BachHoaXanh_Store
                 if (objProductBLL.DeleteMultiProduct(lstProduct))
                 {
                     MessageBox.Show("Xóa Sản Phẩm Thành Công");
-                    Search(txtKeyWord.Text, cbo_NhaCungCap.SelectedValue.ToString(), cbo_LoaiSP.SelectedValue.ToString());
+                    Search(txtKeyWord.Text, cbo_NhaCungCap.SelectedValue.ToString(), cbo_LoaiSP.SelectedValue.ToString(), cbo_PageSize.Text);
                     FormMain.lstProduct = objProductBLL.GetListAllProduct();
                 }
                 else
@@ -129,16 +130,21 @@ namespace BachHoaXanh_Store
             }
         }
 
-        private void bunifuButton2_Click(object sender, EventArgs e)
-        {
-            Search(txtKeyWord.Text, cbo_NhaCungCap.SelectedValue.ToString(), cbo_LoaiSP.SelectedValue.ToString());
-        }
-
         private void bunifuButton1_Click_1(object sender, EventArgs e)
         {
             isEdit = false;
             Program.frmChinhSuaSP = new FormChinhSuaSP();
             Program.frmChinhSuaSP.ShowDialog();
+        }
+
+        private void cbo_PageSize_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Search(txtKeyWord.Text, cbo_NhaCungCap.SelectedValue.ToString(), cbo_LoaiSP.SelectedValue.ToString(), cbo_PageSize.Text);
+        }
+
+        private void bunifuButton3_Click(object sender, EventArgs e)
+        {
+            Search(txtKeyWord.Text, cbo_NhaCungCap.SelectedValue.ToString(), cbo_LoaiSP.SelectedValue.ToString(), cbo_PageSize.Text);
         }
     }
 }

@@ -14,5 +14,15 @@ namespace BO
         public int GiaVon { get; set; }
         public int SoLuong { get; set; }
         public int ThanhTien { get; set; }
+        public string Ngay { get; set; }
+    }
+
+    public class OrderDetailBO
+    {
+        public int MaHD { get; set; }
+        public string MaSP { get; set; }
+        public string TenSP { get; set; }
+        public int SoLuong { get; set; }
+        public string Ngay { get; set; }
     }
 }

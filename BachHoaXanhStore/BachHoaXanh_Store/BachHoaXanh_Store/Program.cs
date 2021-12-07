@@ -23,24 +23,13 @@ namespace BachHoaXanh_Store
         public static FormReport frmReport = null;
         public static FormBanHang frmBanHang = null;
         public static FormLogin frmLogin = null;
-        public static FormNhapHang frmNhapHang = null;
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //frmDangNhap = new FormDangNhap();
-            //frmDatHang = new FormDatHangNCC();
-            //frmPhanPhoiHang = new FormPhanPhoiHang();
-            // frmTraHangNCC = new FormTraHangNCC();
-            //frmPhieuTraHang = new FormPhieuTraHang();
-            //frmDanhSachSP = new FormDanhSachSP();
-
-            //frmDangNhap = new FormDangNhap();
-            //frmReport = new FormReport();
-            frmLogin = new FormLogin();
-            Application.Run(frmLogin);
-
+            frmMain = new FormMain();
+            Application.Run(frmMain);
         }
 
 

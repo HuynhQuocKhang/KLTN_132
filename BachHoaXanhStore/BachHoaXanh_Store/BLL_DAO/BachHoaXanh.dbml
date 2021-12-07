@@ -19,7 +19,6 @@
       <Association Name="SieuThi_DonDatHang" Member="DonDatHangs" ThisKey="MaST" OtherKey="MaST" Type="DonDatHang" />
       <Association Name="SieuThi_KhoHangKM" Member="KhoHangKMs" ThisKey="MaST" OtherKey="MaST" Type="KhoHangKM" />
       <Association Name="SieuThi_KhoSieuThi" Member="KhoSieuThis" ThisKey="MaST" OtherKey="MaST" Type="KhoSieuThi" />
-      <Association Name="SieuThi_PhieuTraHang" Member="PhieuTraHangs" ThisKey="MaST" OtherKey="MaST" Type="PhieuTraHang" />
       <Association Name="SieuThi_PhieuXuatKho" Member="PhieuXuatKhos" ThisKey="MaST" OtherKey="MaST" Type="PhieuXuatKho" />
     </Type>
   </Table>
@@ -108,6 +107,13 @@
       <Association Name="SanPham_KhoSieuThi" Member="SanPham" ThisKey="MaSP" OtherKey="MaSP" Type="SanPham" IsForeignKey="true" />
     </Type>
   </Table>
+  <Table Name="dbo.KhoST$" Member="KhoST_s">
+    <Type Name="KhoST_">
+      <Column Name="MaST" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="MASP" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="SOLUONG" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
   <Table Name="dbo.LoaiSP" Member="LoaiSPs">
     <Type Name="LoaiSP">
       <Column Name="MaLoaiSP" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -139,13 +145,13 @@
     <Type Name="PhieuTraHang">
       <Column Name="MaPTH" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="MaST" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaNCC" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="NguoiLapPhieu" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
       <Column Name="NgayTra" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Column Name="TongTien" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="Isdeleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
       <Column Name="TinhTrang" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="PhieuTraHang_CTPhieuTraHang" Member="CTPhieuTraHangs" ThisKey="MaPTH" OtherKey="MaPTH" Type="CTPhieuTraHang" />
-      <Association Name="SieuThi_PhieuTraHang" Member="SieuThi" ThisKey="MaST" OtherKey="MaST" Type="SieuThi" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.PhieuXuatKho" Member="PhieuXuatKhos">
