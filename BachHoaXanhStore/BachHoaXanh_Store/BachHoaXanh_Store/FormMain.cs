@@ -26,13 +26,6 @@ namespace BachHoaXanh_Store
 
         private void btn_DatHangNCC_Click(object sender, EventArgs e)
         {
-            panel9.Visible = true;
-            bunifuButton1.Visible = true;
-            reportType = "DatHang";
-            label1.Text = "Số đơn đã đặt";
-            label3.Text = "Tổng giá trị đặt";
-            Program.frmDatHang = new FormDatHang();
-            ViewChildForm(Program.frmDatHang);
         }
 
         public bool IsFormActive(Form pForm)
@@ -207,6 +200,25 @@ namespace BachHoaXanh_Store
             {
                 panel9.Visible = false;
             }
+        }
+
+        private void accordionControlElement6_Click_1(object sender, EventArgs e)
+        {
+            panel9.Visible = true;
+            bunifuButton1.Visible = true;
+            reportType = "DatHang";
+            label1.Text = "Số đơn đã đặt";
+            label3.Text = "Tổng giá trị đặt";
+            Program.frmDatHang = new FormDatHang();
+            ViewChildForm(Program.frmDatHang);
+        }
+
+        private void accordionControlElement9_Click(object sender, EventArgs e)
+        {
+            panel9.Visible = false;
+            bunifuButton1.Visible = false;
+            Program.frmNhapHang = new FormNhapHang();
+            ViewChildForm(Program.frmNhapHang);
         }
     }
 }
