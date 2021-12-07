@@ -273,9 +273,9 @@ namespace BachHoaXanh_Store
             this.tableLayoutPanel4.RowCount = 4;
             this.tableLayoutPanel3.SetRowSpan(this.tableLayoutPanel4, 2);
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.62184F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.546218F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 79.83193F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 90F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(638, 639);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
@@ -295,7 +295,7 @@ namespace BachHoaXanh_Store
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(632, 81);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(632, 84);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // txtKeyWord
@@ -542,7 +542,7 @@ namespace BachHoaXanh_Store
             this.bunifuCustomDataGrid1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(186)))), ((int)(((byte)(27)))));
             this.bunifuCustomDataGrid1.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(139)))), ((int)(((byte)(125)))));
             this.bunifuCustomDataGrid1.HeaderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(223)))), ((int)(((byte)(135)))));
-            this.bunifuCustomDataGrid1.Location = new System.Drawing.Point(3, 163);
+            this.bunifuCustomDataGrid1.Location = new System.Drawing.Point(3, 173);
             this.bunifuCustomDataGrid1.Name = "bunifuCustomDataGrid1";
             this.bunifuCustomDataGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -553,7 +553,7 @@ namespace BachHoaXanh_Store
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.bunifuCustomDataGrid1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.bunifuCustomDataGrid1.Size = new System.Drawing.Size(632, 473);
+            this.bunifuCustomDataGrid1.Size = new System.Drawing.Size(632, 463);
             this.bunifuCustomDataGrid1.TabIndex = 1;
             // 
             // col_MaDH
@@ -587,9 +587,9 @@ namespace BachHoaXanh_Store
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(46)))), ((int)(((byte)(41)))));
-            this.label1.Location = new System.Drawing.Point(3, 127);
+            this.label1.Location = new System.Drawing.Point(3, 130);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(313, 33);
+            this.label1.Size = new System.Drawing.Size(313, 40);
             this.label1.TabIndex = 1;
             this.label1.Text = "Thông tin đơn đặt hàng";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
