@@ -12,7 +12,7 @@ namespace BLL_DAO
         BachHoaXanhDataContext db = new BachHoaXanhDataContext();
         public ProductBLL()
         {
-
+             
         }
         //Lấy danh sách tất cả sản phẩm
         public List<ProductBO> GetListAllProduct()
