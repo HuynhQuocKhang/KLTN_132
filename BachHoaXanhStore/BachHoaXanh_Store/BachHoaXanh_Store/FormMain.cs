@@ -226,8 +226,8 @@ namespace BachHoaXanh_Store
             reportType = "DatHang";
             label1.Text = "Số đơn đã đặt";
             label3.Text = "Tổng giá trị đặt";
-            Program.frmNhapHang = new FormNhapHang();
-            ViewChildForm(Program.frmNhapHang);
+            //Program.frmNhapHang = new FormNhapHang();
+            //ViewChildForm(Program.frmNhapHang);
         }
     }
 }
