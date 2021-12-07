@@ -1,11 +1,9 @@
-﻿using BachHoaXanh_Store.ReportForm;
-using BLL_DAO;
+﻿using BLL_DAO;
 using BO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -26,7 +24,7 @@ namespace BachHoaXanh_Store
             List<OrderCustomerDetailBO> lstOrderTmp = FormDatHang.lstOrderCustomerDetailBO;
             txt_NguoiDat.Text = FormDatHang.objUser.UserFullName;
             txt_NhaCungCap.Text = FormDatHang.strCustomerName;
-            txt_NgayDat.Text = DateTime.Now.ToString();
+            txt_NgayDat.Text = DateTime.Now.ToString("d");
             txt_TongTien.Text = FormDatHang.intTotalPrice.ToString();
             txt_TinhTrang.Text = "Đặt hàng";
             dgv_Order.DataSource = lstOrderTmp;
@@ -57,19 +55,23 @@ namespace BachHoaXanh_Store
                 else
                 {
                     int OrderId = objOrderCustomerBLL.GetOrderCustomerIdNew();
+                    bool isDone = true;
                     foreach (OrderCustomerDetailBO item in FormDatHang.lstOrderCustomerDetailBO)
                     {
                         if (!objOrderCustomerBLL.InsertOrderCustomerDetail(OrderId, item.MaSP, item.SoLuong, item.ThanhTien))
                         {
                             MessageBox.Show("Lỗi trong quá trình thực hiện. Xin vui lòng thử lại sau");
+                            isDone = false;
+                            return;
                         }
                     }
+                    if (isDone == true)
+                    {
+                        MessageBox.Show("Đặt hàng thành công");
+                        this.Close();
+                    }
                 }
-                MessageBox.Show("Đặt hàng thành công");
-                Program.frmReport = new FormReport();
-                Program.frmReport.ShowDialog();
                 
-                this.Close();
             }
             else
             {

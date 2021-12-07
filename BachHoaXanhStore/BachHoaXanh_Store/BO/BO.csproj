@@ -45,6 +45,7 @@
     <Compile Include="OrderStoreBO.cs" />
     <Compile Include="ProductBO.cs" />
     <Compile Include="ProductTypeBO.cs" />
+    <Compile Include="ReturnProductBO.cs" />
     <Compile Include="UserBO.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
