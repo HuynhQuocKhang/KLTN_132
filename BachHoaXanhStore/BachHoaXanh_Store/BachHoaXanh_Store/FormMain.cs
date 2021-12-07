@@ -183,6 +183,12 @@ namespace BachHoaXanh_Store
                     label1.Text = "Số đơn chưa xử lí";
                     label3.Text = "Số đơn đã xử lí";
                 }
+                else if (xtraTabbedMdiManager1.SelectedPage.Text == "FormNhapHang")
+                {
+                    bunifuButton1.Visible = false;
+                    label1.Text = "Số đơn chưa xử lí";
+                    label3.Text = "Số đơn đã xử lí";
+                }
             }
 
         }
@@ -215,8 +221,11 @@ namespace BachHoaXanh_Store
 
         private void accordionControlElement9_Click(object sender, EventArgs e)
         {
-            panel9.Visible = false;
-            bunifuButton1.Visible = false;
+            panel9.Visible = true;
+            bunifuButton1.Visible = true;
+            reportType = "DatHang";
+            label1.Text = "Số đơn đã đặt";
+            label3.Text = "Tổng giá trị đặt";
             Program.frmNhapHang = new FormNhapHang();
             ViewChildForm(Program.frmNhapHang);
         }
