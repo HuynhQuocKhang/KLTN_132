@@ -152,13 +152,13 @@ create table PhieuTraHang
 (
 	MaPTH int IDENTITY (1,1),
 	MaST int,
+	MaNCC int,
 	NguoiLapPhieu nvarchar (30),
 	NgayTra date,
 	TongTien int,
 	Isdeleted bit,
 	TinhTrang int,
-	constraint PK_PhieuTraHang primary key (MaPTH),
-	constraint FK_PhieuTraHang_SieuThi foreign key(MaST) references SieuThi(MaST)
+	constraint PK_PhieuTraHang primary key (MaPTH)
 )
 
 create table CTPhieuTraHang
@@ -190,7 +190,17 @@ update LoaiSP
 set Isdeleted = 'false'
 
 update SanPham
-set SoLuong = 50
+set SoLuong = 50 where MaSP = '1012841000006'
+
 
 select * from HoaDonDatNCC
 select * from CTHoaDonDatNCC
+
+select * from SanPham where SoLuong <= 10
+select * from CTDonDatHang
+
+select * from PhieuTraHang
+
+select * from CTPhieuTraHang
+
+select * from KhoSieuThi

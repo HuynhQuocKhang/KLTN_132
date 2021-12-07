@@ -190,6 +190,14 @@ namespace BLL_DAO
 			}
 		}
 		
+		public System.Data.Linq.Table<KhoST_> KhoST_s
+		{
+			get
+			{
+				return this.GetTable<KhoST_>();
+			}
+		}
+		
 		public System.Data.Linq.Table<LoaiSP> LoaiSPs
 		{
 			get
@@ -475,8 +483,6 @@ namespace BLL_DAO
 		
 		private EntitySet<KhoSieuThi> _KhoSieuThis;
 		
-		private EntitySet<PhieuTraHang> _PhieuTraHangs;
-		
 		private EntitySet<PhieuXuatKho> _PhieuXuatKhos;
 		
     #region Extensibility Method Definitions
@@ -498,7 +504,6 @@ namespace BLL_DAO
 			this._DonDatHangs = new EntitySet<DonDatHang>(new Action<DonDatHang>(this.attach_DonDatHangs), new Action<DonDatHang>(this.detach_DonDatHangs));
 			this._KhoHangKMs = new EntitySet<KhoHangKM>(new Action<KhoHangKM>(this.attach_KhoHangKMs), new Action<KhoHangKM>(this.detach_KhoHangKMs));
 			this._KhoSieuThis = new EntitySet<KhoSieuThi>(new Action<KhoSieuThi>(this.attach_KhoSieuThis), new Action<KhoSieuThi>(this.detach_KhoSieuThis));
-			this._PhieuTraHangs = new EntitySet<PhieuTraHang>(new Action<PhieuTraHang>(this.attach_PhieuTraHangs), new Action<PhieuTraHang>(this.detach_PhieuTraHangs));
 			this._PhieuXuatKhos = new EntitySet<PhieuXuatKho>(new Action<PhieuXuatKho>(this.attach_PhieuXuatKhos), new Action<PhieuXuatKho>(this.detach_PhieuXuatKhos));
 			OnCreated();
 		}
@@ -622,19 +627,6 @@ namespace BLL_DAO
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="SieuThi_PhieuTraHang", Storage="_PhieuTraHangs", ThisKey="MaST", OtherKey="MaST")]
-		public EntitySet<PhieuTraHang> PhieuTraHangs
-		{
-			get
-			{
-				return this._PhieuTraHangs;
-			}
-			set
-			{
-				this._PhieuTraHangs.Assign(value);
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="SieuThi_PhieuXuatKho", Storage="_PhieuXuatKhos", ThisKey="MaST", OtherKey="MaST")]
 		public EntitySet<PhieuXuatKho> PhieuXuatKhos
 		{
@@ -699,18 +691,6 @@ namespace BLL_DAO
 		}
 		
 		private void detach_KhoSieuThis(KhoSieuThi entity)
-		{
-			this.SendPropertyChanging();
-			entity.SieuThi = null;
-		}
-		
-		private void attach_PhieuTraHangs(PhieuTraHang entity)
-		{
-			this.SendPropertyChanging();
-			entity.SieuThi = this;
-		}
-		
-		private void detach_PhieuTraHangs(PhieuTraHang entity)
 		{
 			this.SendPropertyChanging();
 			entity.SieuThi = null;
@@ -2542,6 +2522,69 @@ namespace BLL_DAO
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.KhoST$")]
+	public partial class KhoST_
+	{
+		
+		private System.Nullable<double> _MaST;
+		
+		private string _MASP;
+		
+		private System.Nullable<double> _SOLUONG;
+		
+		public KhoST_()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaST", DbType="Float")]
+		public System.Nullable<double> MaST
+		{
+			get
+			{
+				return this._MaST;
+			}
+			set
+			{
+				if ((this._MaST != value))
+				{
+					this._MaST = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MASP", DbType="NVarChar(255)")]
+		public string MASP
+		{
+			get
+			{
+				return this._MASP;
+			}
+			set
+			{
+				if ((this._MASP != value))
+				{
+					this._MASP = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SOLUONG", DbType="Float")]
+		public System.Nullable<double> SOLUONG
+		{
+			get
+			{
+				return this._SOLUONG;
+			}
+			set
+			{
+				if ((this._SOLUONG != value))
+				{
+					this._SOLUONG = value;
+				}
+			}
+		}
+	}
+	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.LoaiSP")]
 	public partial class LoaiSP : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -3038,6 +3081,8 @@ namespace BLL_DAO
 		
 		private System.Nullable<int> _MaST;
 		
+		private System.Nullable<int> _MaNCC;
+		
 		private string _NguoiLapPhieu;
 		
 		private System.Nullable<System.DateTime> _NgayTra;
@@ -3050,8 +3095,6 @@ namespace BLL_DAO
 		
 		private EntitySet<CTPhieuTraHang> _CTPhieuTraHangs;
 		
-		private EntityRef<SieuThi> _SieuThi;
-		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -3060,6 +3103,8 @@ namespace BLL_DAO
     partial void OnMaPTHChanged();
     partial void OnMaSTChanging(System.Nullable<int> value);
     partial void OnMaSTChanged();
+    partial void OnMaNCCChanging(System.Nullable<int> value);
+    partial void OnMaNCCChanged();
     partial void OnNguoiLapPhieuChanging(string value);
     partial void OnNguoiLapPhieuChanged();
     partial void OnNgayTraChanging(System.Nullable<System.DateTime> value);
@@ -3075,7 +3120,6 @@ namespace BLL_DAO
 		public PhieuTraHang()
 		{
 			this._CTPhieuTraHangs = new EntitySet<CTPhieuTraHang>(new Action<CTPhieuTraHang>(this.attach_CTPhieuTraHangs), new Action<CTPhieuTraHang>(this.detach_CTPhieuTraHangs));
-			this._SieuThi = default(EntityRef<SieuThi>);
 			OnCreated();
 		}
 		
@@ -3110,15 +3154,31 @@ namespace BLL_DAO
 			{
 				if ((this._MaST != value))
 				{
-					if (this._SieuThi.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
 					this.OnMaSTChanging(value);
 					this.SendPropertyChanging();
 					this._MaST = value;
 					this.SendPropertyChanged("MaST");
 					this.OnMaSTChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaNCC", DbType="Int")]
+		public System.Nullable<int> MaNCC
+		{
+			get
+			{
+				return this._MaNCC;
+			}
+			set
+			{
+				if ((this._MaNCC != value))
+				{
+					this.OnMaNCCChanging(value);
+					this.SendPropertyChanging();
+					this._MaNCC = value;
+					this.SendPropertyChanged("MaNCC");
+					this.OnMaNCCChanged();
 				}
 			}
 		}
@@ -3233,40 +3293,6 @@ namespace BLL_DAO
 			set
 			{
 				this._CTPhieuTraHangs.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="SieuThi_PhieuTraHang", Storage="_SieuThi", ThisKey="MaST", OtherKey="MaST", IsForeignKey=true)]
-		public SieuThi SieuThi
-		{
-			get
-			{
-				return this._SieuThi.Entity;
-			}
-			set
-			{
-				SieuThi previousValue = this._SieuThi.Entity;
-				if (((previousValue != value) 
-							|| (this._SieuThi.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._SieuThi.Entity = null;
-						previousValue.PhieuTraHangs.Remove(this);
-					}
-					this._SieuThi.Entity = value;
-					if ((value != null))
-					{
-						value.PhieuTraHangs.Add(this);
-						this._MaST = value.MaST;
-					}
-					else
-					{
-						this._MaST = default(Nullable<int>);
-					}
-					this.SendPropertyChanged("SieuThi");
-				}
 			}
 		}
 		

@@ -663,3 +663,4 @@ E:\KhoaLuanTotNghiep\BachHoaXanhStore\BachHoaXanh_Store\BachHoaXanh_Store\bin\De
 E:\09DHTH5\KLTN\SoDoLop\KLTN_132\BachHoaXanhStore\BachHoaXanh_Store\BachHoaXanh_Store\obj\Debug\BachHoaXanh_Store.FormBanHang.resources
 E:\09DHTH5\KLTN\SoDoLop\KLTN_132\BachHoaXanhStore\BachHoaXanh_Store\BachHoaXanh_Store\obj\Debug\BachHoaXanh_Store.FormLogin.resources
 E:\KhoaLuanTotNghiep\BachHoaXanhStore\BachHoaXanh_Store\BachHoaXanh_Store\obj\Debug\BachHoaXanh_Store.FormBanHang.resources
+E:\KhoaLuanTotNghiep\BachHoaXanhStore\BachHoaXanh_Store\BachHoaXanh_Store\obj\Debug\BachHoaXanh_Store.FormLogin.resources

@@ -42,7 +42,7 @@ namespace BLL_DAO
         }
 
         //Lấy danh sách sản phẩm theo keyword và mã nhà cung cấp
-        public List<ProductBO> GetProductByKeys(string strkeywords = "", int intProductTypeId = 0, int intCustomerId = 0)
+        public List<ProductBO> GetProductByKeys(string strkeywords = "", int intProductTypeId = 0, int intCustomerId = 0, int intPageSize = 50)
         {
             if (intCustomerId == 0 && intProductTypeId == 0)
             {
@@ -68,7 +68,7 @@ namespace BLL_DAO
                             };
                 
 
-                return model.OrderByDescending(x => x.MaSP).Take(10).ToList();
+                return model.OrderByDescending(x => x.MaSP).Take(intPageSize).ToList();
             }
             if (intCustomerId == 0 && intProductTypeId != 0)
             {
@@ -91,7 +91,7 @@ namespace BLL_DAO
                                 GiaVon = objProduct.GiaVon,
                                 SoLuong = objProduct.SoLuong
                             };
-                return model.OrderByDescending(x => x.MaSP).Take(10).ToList();
+                return model.OrderByDescending(x => x.MaSP).Take(intPageSize).ToList();
             }
             if (intCustomerId != 0 && intProductTypeId == 0)
             {
@@ -114,7 +114,7 @@ namespace BLL_DAO
                                 GiaVon = objProduct.GiaVon,
                                 SoLuong = objProduct.SoLuong
                             };
-                return model.OrderByDescending(x => x.MaSP).Take(10).ToList();
+                return model.OrderByDescending(x => x.MaSP).Take(intPageSize).ToList();
             }
             else
             {
@@ -137,7 +137,7 @@ namespace BLL_DAO
                                 GiaVon = objProduct.GiaVon,
                                 SoLuong = objProduct.SoLuong
                             };
-                return model.OrderByDescending(x => x.MaSP).Take(10).ToList();
+                return model.OrderByDescending(x => x.MaSP).Take(intPageSize).ToList();
             }
         }
 
@@ -226,7 +226,7 @@ namespace BLL_DAO
             }
         }
 
-        public List<ProductOrderCustomerBO> GetProductByKeysForOrderCustomer(string strkeywords = "", int intProductTypeId = 0, int intCustomerId = 0, int intStock = 0)
+        public List<ProductOrderCustomerBO> GetProductByKeysForOrderCustomer(string strkeywords = "", int intProductTypeId = 0, int intCustomerId = 0, int intStock = 0, int intPageSize = 50)
         {
             if (intCustomerId == 0 && intProductTypeId == 0)
             {
@@ -235,7 +235,7 @@ namespace BLL_DAO
                             on objProduct.MaLoaiSP equals objProductType.MaLoaiSP
                             join objCustomer in db.NhaCungCaps
                             on objProduct.MaNCC equals objCustomer.MaNCC
-                            where objProduct.Isdeleted == false && (objProduct.TenSP.Contains(strkeywords.Trim()) || objProduct.MaSP.Contains(strkeywords.Trim()) && objProduct.SoLuong <= intStock)
+                            where objProduct.Isdeleted == false && objProduct.SoLuong <= intStock && (objProduct.TenSP.Contains(strkeywords.Trim()) || objProduct.MaSP.Contains(strkeywords.Trim()))
                             select new ProductOrderCustomerBO()
                             {
                                 MaSP = objProduct.MaSP,
@@ -245,7 +245,7 @@ namespace BLL_DAO
                                 SoLuong = objProduct.SoLuong
                             };
 
-                return model.OrderByDescending(x => x.MaSP).Take(50).ToList();
+                return model.OrderByDescending(x => x.MaSP).Where(x => x.SoLuong <= intStock).Take(intPageSize).ToList();
             }
             if (intCustomerId == 0 && intProductTypeId != 0)
             {
@@ -263,7 +263,7 @@ namespace BLL_DAO
                                 GiaVon = objProduct.GiaVon,
                                 SoLuong = objProduct.SoLuong
                             };
-                return model.OrderByDescending(x => x.MaSP).Take(50).ToList();
+                return model.OrderByDescending(x => x.MaSP).Where(x => x.SoLuong <= intStock).Take(intPageSize).ToList();
             }
             if (intProductTypeId == 0 && intCustomerId != 0)
             {
@@ -282,7 +282,7 @@ namespace BLL_DAO
                                 SoLuong = objProduct.SoLuong
                             };
 
-                return model.OrderByDescending(x => x.MaSP).Take(50).ToList();
+                return model.OrderByDescending(x => x.MaSP).Where(x => x.SoLuong <= intStock).Take(intPageSize).ToList();
             }
             else
             {
@@ -300,7 +300,7 @@ namespace BLL_DAO
                                 GiaVon = objProduct.GiaVon,
                                 SoLuong = objProduct.SoLuong
                             };
-                return model.OrderByDescending(x => x.MaSP).Take(50).ToList();
+                return model.OrderByDescending(x => x.MaSP).Where(x => x.SoLuong <= intStock).Take(intPageSize).ToList();
             }
         }
     }

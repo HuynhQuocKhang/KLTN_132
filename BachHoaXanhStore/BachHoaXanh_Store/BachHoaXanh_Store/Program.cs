@@ -28,22 +28,8 @@ namespace BachHoaXanh_Store
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //frmDangNhap = new FormDangNhap();
-            //frmDatHang = new FormDatHangNCC();
-            //frmPhanPhoiHang = new FormPhanPhoiHang();
-            // frmTraHangNCC = new FormTraHangNCC();
-            //frmPhieuTraHang = new FormPhieuTraHang();
-            //frmDanhSachSP = new FormDanhSachSP();
-<<<<<<< HEAD
-            //frmDangNhap = new FormDangNhap();
-            //FormReport frmReport = new FormReport();
             frmMain = new FormMain();
             Application.Run(frmMain);
-=======
-            frmLogin = new FormLogin();
-            //FormReport frmReport = new FormReport();
-            Application.Run(frmLogin);
->>>>>>> Add-Login-Form
         }
 
 
