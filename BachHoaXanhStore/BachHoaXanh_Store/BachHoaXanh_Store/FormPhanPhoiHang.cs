@@ -21,7 +21,7 @@ namespace BachHoaXanh_Store
         ProductBLL objProductBLL = new ProductBLL();
         public static List<ExportProductDetailBO> lstExportProductDetailBO = new List<ExportProductDetailBO>();
         public FormPhanPhoiHang()
-        { 
+        {
             InitializeComponent();
             cbo_SieuThi.DataSource = objStoreBLL.GetAllStore();
             cbo_SieuThi.DisplayMember = "FullName";
@@ -44,7 +44,7 @@ namespace BachHoaXanh_Store
                         lstExportProductDetailBO = new List<ExportProductDetailBO>();
                         return;
                     }
-                    if (intStock > int.Parse(dgv_DHDT["col_SoLuong", i].Value.ToString().Trim()))
+                    if (intStock > int.Parse(dgv_DHDT["col_SoLuong", i].Value.ToString().Trim()) || intStock <= 0)
                     {
                         MessageBox.Show("Sản phẩm [ " + dgv_DHDT["col_MaSP", i].Value.ToString() + " - " + dgv_DHDT["col_TenSP", i].Value.ToString() + " ] có số lượng xuất phải nhỏ hơn hoặc bằng số lượng của siêu thị");
                         isOpen = false;
@@ -56,7 +56,7 @@ namespace BachHoaXanh_Store
                         ExportProductDetailBO objExportProductDetailBO = new ExportProductDetailBO();
                         objExportProductDetailBO.MaSP = dgv_DHDT["col_MaSP", i].Value.ToString().Trim();
                         objExportProductDetailBO.TenSP = dgv_DHDT["col_TenSP", i].Value.ToString().Trim();
-                        objExportProductDetailBO.SoLuong = int.Parse(dgv_DHDT["col_SoLuong", i].Value.ToString().Trim());
+                        objExportProductDetailBO.SoLuong = int.Parse(dgv_DHDT["col_SoLuongXuat", i].Value.ToString().Trim());
                         objExportProductDetailBO.ThanhTien = intStock * (int)objProductBLL.GetProductByKeys(dgv_DHDT["col_MaSP", i].Value.ToString()).FirstOrDefault().GiaVon;
                         totalPrice += (int)objExportProductDetailBO.ThanhTien;
                         lstExportProductDetailBO.Add(objExportProductDetailBO);
@@ -89,7 +89,7 @@ namespace BachHoaXanh_Store
 
         private void btn_TimKiem_Click(object sender, EventArgs e)
         {
-            
+
             if (chk_AllStore.Checked == true)
             {
                 dgv_DSDH.DataSource = objOrderStoreBLL.GetOrderFromStoreBO(0, (DateTime)dtp_NgayBatDau.Value, (DateTime)dtp_NgayKetThuc.Value);
@@ -119,7 +119,7 @@ namespace BachHoaXanh_Store
             int index = dgv_DSDH.CurrentCell.RowIndex;
             if (dgv_DSDH.DataSource != null && index != -1)
             {
-                
+
                 dgv_DHDT.DataSource = objOrderStoreDetailBLL.GetListOrderStoreByOrderId(int.Parse(dgv_DSDH["col_MaDH", index].Value.ToString().Trim()));
             }
         }
