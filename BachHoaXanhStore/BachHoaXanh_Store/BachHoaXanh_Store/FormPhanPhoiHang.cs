@@ -37,29 +37,39 @@ namespace BachHoaXanh_Store
                 for (int i = 0; i < dgv_DHDT.Rows.Count; i++)
                 {
                     int intStock;
-                    if (!int.TryParse(dgv_DHDT["col_SoLuongXuat", i].Value.ToString().Trim(), out intStock))
+                    if(dgv_DHDT["col_SoLuongXuat", i].Value!=null)
+                    {
+                        if (!int.TryParse(dgv_DHDT["col_SoLuongXuat", i].Value.ToString().Trim(), out intStock))
+                        {
+                            MessageBox.Show("Sản phẩm [ " + dgv_DHDT["col_MaSP", i].Value.ToString() + " - " + dgv_DHDT["col_TenSP", i].Value.ToString() + " ] có số lượng xuất phải là số nguyên dương và lớn hơn 0");
+                            isOpen = false;
+                            lstExportProductDetailBO = new List<ExportProductDetailBO>();
+                            return;
+                        }
+                        if (intStock > int.Parse(dgv_DHDT["col_SoLuong", i].Value.ToString().Trim()) || intStock <= 0)
+                        {
+                            MessageBox.Show("Sản phẩm [ " + dgv_DHDT["col_MaSP", i].Value.ToString() + " - " + dgv_DHDT["col_TenSP", i].Value.ToString() + " ] có số lượng xuất phải nhỏ hơn hoặc bằng số lượng của siêu thị");
+                            isOpen = false;
+                            lstExportProductDetailBO = new List<ExportProductDetailBO>();
+                            return;
+                        }
+                        else
+                        {
+                            ExportProductDetailBO objExportProductDetailBO = new ExportProductDetailBO();
+                            objExportProductDetailBO.MaSP = dgv_DHDT["col_MaSP", i].Value.ToString().Trim();
+                            objExportProductDetailBO.TenSP = dgv_DHDT["col_TenSP", i].Value.ToString().Trim();
+                            objExportProductDetailBO.SoLuong = int.Parse(dgv_DHDT["col_SoLuongXuat", i].Value.ToString().Trim());
+                            objExportProductDetailBO.ThanhTien = intStock * (int)objProductBLL.GetProductByKeys(dgv_DHDT["col_MaSP", i].Value.ToString()).FirstOrDefault().GiaVon;
+                            totalPrice += (int)objExportProductDetailBO.ThanhTien;
+                            lstExportProductDetailBO.Add(objExportProductDetailBO);
+                        }
+                    }
+                    else
                     {
                         MessageBox.Show("Sản phẩm [ " + dgv_DHDT["col_MaSP", i].Value.ToString() + " - " + dgv_DHDT["col_TenSP", i].Value.ToString() + " ] có số lượng xuất phải là số nguyên dương và lớn hơn 0");
                         isOpen = false;
                         lstExportProductDetailBO = new List<ExportProductDetailBO>();
                         return;
-                    }
-                    if (intStock > int.Parse(dgv_DHDT["col_SoLuong", i].Value.ToString().Trim()) || intStock <= 0)
-                    {
-                        MessageBox.Show("Sản phẩm [ " + dgv_DHDT["col_MaSP", i].Value.ToString() + " - " + dgv_DHDT["col_TenSP", i].Value.ToString() + " ] có số lượng xuất phải nhỏ hơn hoặc bằng số lượng của siêu thị");
-                        isOpen = false;
-                        lstExportProductDetailBO = new List<ExportProductDetailBO>();
-                        return;
-                    }
-                    else
-                    {
-                        ExportProductDetailBO objExportProductDetailBO = new ExportProductDetailBO();
-                        objExportProductDetailBO.MaSP = dgv_DHDT["col_MaSP", i].Value.ToString().Trim();
-                        objExportProductDetailBO.TenSP = dgv_DHDT["col_TenSP", i].Value.ToString().Trim();
-                        objExportProductDetailBO.SoLuong = int.Parse(dgv_DHDT["col_SoLuongXuat", i].Value.ToString().Trim());
-                        objExportProductDetailBO.ThanhTien = intStock * (int)objProductBLL.GetProductByKeys(dgv_DHDT["col_MaSP", i].Value.ToString()).FirstOrDefault().GiaVon;
-                        totalPrice += (int)objExportProductDetailBO.ThanhTien;
-                        lstExportProductDetailBO.Add(objExportProductDetailBO);
                     }
                 }
                 if (isOpen == true)
