@@ -886,6 +886,7 @@ namespace BachHoaXanh_Store
             this.toolTip1.AutomaticDelay = 0;
             this.toolTip1.IsBalloon = true;
             this.toolTip1.OwnerDraw = true;
+            this.toolTip1.StripAmpersands = true;
             // 
             // FormDatHang
             // 

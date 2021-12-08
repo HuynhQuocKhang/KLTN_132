@@ -110,7 +110,7 @@ namespace BachHoaXanh_Store
             // 
             this.tableLayoutPanel2.ColumnCount = 4;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75.75757F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 128F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 118F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 128F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.24242F));
             this.tableLayoutPanel2.Controls.Add(this.bunifuLabel1, 0, 0);
@@ -140,7 +140,7 @@ namespace BachHoaXanh_Store
             this.bunifuLabel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.bunifuLabel1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(19)))), ((int)(((byte)(10)))));
-            this.bunifuLabel1.Location = new System.Drawing.Point(3, 3);
+            this.bunifuLabel1.Location = new System.Drawing.Point(11, 3);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.Padding = new System.Windows.Forms.Padding(0, 0, 8, 0);
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -180,7 +180,7 @@ namespace BachHoaXanh_Store
             this.bunifuTextBox1.IconRight = null;
             this.bunifuTextBox1.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBox1.Lines = new string[0];
-            this.bunifuTextBox1.Location = new System.Drawing.Point(78, 3);
+            this.bunifuTextBox1.Location = new System.Drawing.Point(86, 3);
             this.bunifuTextBox1.MaxLength = 32767;
             this.bunifuTextBox1.MinimumSize = new System.Drawing.Size(100, 20);
             this.bunifuTextBox1.Modified = false;
@@ -215,7 +215,7 @@ namespace BachHoaXanh_Store
             this.bunifuTextBox1.SelectionLength = 0;
             this.bunifuTextBox1.SelectionStart = 0;
             this.bunifuTextBox1.ShortcutsEnabled = true;
-            this.bunifuTextBox1.Size = new System.Drawing.Size(250, 34);
+            this.bunifuTextBox1.Size = new System.Drawing.Size(240, 34);
             this.bunifuTextBox1.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.bunifuTextBox1.TabIndex = 2;
             this.bunifuTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -309,7 +309,7 @@ namespace BachHoaXanh_Store
             this.bunifuLabel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.bunifuLabel2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(19)))), ((int)(((byte)(10)))));
-            this.bunifuLabel2.Location = new System.Drawing.Point(3, 43);
+            this.bunifuLabel2.Location = new System.Drawing.Point(11, 43);
             this.bunifuLabel2.Name = "bunifuLabel2";
             this.bunifuLabel2.Padding = new System.Windows.Forms.Padding(0, 0, 8, 0);
             this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -324,14 +324,14 @@ namespace BachHoaXanh_Store
             this.bunifuLabel3.AutoEllipsis = false;
             this.bunifuLabel3.AutoSize = false;
             this.bunifuLabel3.CursorType = null;
-            this.bunifuLabel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.bunifuLabel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bunifuLabel3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(19)))), ((int)(((byte)(10)))));
             this.bunifuLabel3.Location = new System.Drawing.Point(3, 83);
             this.bunifuLabel3.Name = "bunifuLabel3";
             this.bunifuLabel3.Padding = new System.Windows.Forms.Padding(0, 0, 8, 0);
             this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel3.Size = new System.Drawing.Size(69, 34);
+            this.bunifuLabel3.Size = new System.Drawing.Size(77, 34);
             this.bunifuLabel3.TabIndex = 3;
             this.bunifuLabel3.Text = "Tình trạng";
             this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
@@ -363,10 +363,10 @@ namespace BachHoaXanh_Store
             this.cbo_NhaCungCap.ItemForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(19)))), ((int)(((byte)(10)))));
             this.cbo_NhaCungCap.ItemHeight = 26;
             this.cbo_NhaCungCap.ItemHighLightColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(92)))), ((int)(((byte)(83)))));
-            this.cbo_NhaCungCap.Location = new System.Drawing.Point(78, 43);
+            this.cbo_NhaCungCap.Location = new System.Drawing.Point(86, 43);
             this.cbo_NhaCungCap.MaximumSize = new System.Drawing.Size(5000, 0);
             this.cbo_NhaCungCap.Name = "cbo_NhaCungCap";
-            this.cbo_NhaCungCap.Size = new System.Drawing.Size(250, 32);
+            this.cbo_NhaCungCap.Size = new System.Drawing.Size(240, 32);
             this.cbo_NhaCungCap.TabIndex = 4;
             this.cbo_NhaCungCap.Text = null;
             // 
@@ -397,10 +397,10 @@ namespace BachHoaXanh_Store
             this.cbo_TinhTrang.ItemForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(19)))), ((int)(((byte)(10)))));
             this.cbo_TinhTrang.ItemHeight = 26;
             this.cbo_TinhTrang.ItemHighLightColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(92)))), ((int)(((byte)(83)))));
-            this.cbo_TinhTrang.Location = new System.Drawing.Point(78, 83);
+            this.cbo_TinhTrang.Location = new System.Drawing.Point(86, 83);
             this.cbo_TinhTrang.MaximumSize = new System.Drawing.Size(5000, 0);
             this.cbo_TinhTrang.Name = "cbo_TinhTrang";
-            this.cbo_TinhTrang.Size = new System.Drawing.Size(250, 32);
+            this.cbo_TinhTrang.Size = new System.Drawing.Size(240, 32);
             this.cbo_TinhTrang.TabIndex = 4;
             this.cbo_TinhTrang.Text = null;
             // 
@@ -442,7 +442,7 @@ namespace BachHoaXanh_Store
             this.btn_TimKiem.IdleIconLeftImage = null;
             this.btn_TimKiem.IdleIconRightImage = null;
             this.btn_TimKiem.IndicateFocus = false;
-            this.btn_TimKiem.Location = new System.Drawing.Point(206, 123);
+            this.btn_TimKiem.Location = new System.Drawing.Point(204, 123);
             this.btn_TimKiem.Name = "btn_TimKiem";
             stateProperties5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(221)))), ((int)(((byte)(158)))));
             stateProperties5.BorderRadius = 35;

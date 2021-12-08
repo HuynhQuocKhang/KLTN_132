@@ -8,8 +8,7 @@ using System.Windows.Forms;
 namespace BachHoaXanh_Store
 {
     static class Program
-    {
-        public static FormDangNhap frmDangNhap = null;
+    {  
         public static FormDatHang frmDatHang = null;
         public static FormPhanPhoiHang frmPhanPhoiHang = null;
         public static FormTraHangNCC frmTraHangNCC = null;
