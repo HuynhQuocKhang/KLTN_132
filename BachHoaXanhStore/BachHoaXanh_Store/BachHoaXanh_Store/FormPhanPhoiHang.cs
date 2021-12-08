@@ -21,7 +21,7 @@ namespace BachHoaXanh_Store
         ProductBLL objProductBLL = new ProductBLL();
         public static List<ExportProductDetailBO> lstExportProductDetailBO = new List<ExportProductDetailBO>();
         public FormPhanPhoiHang()
-        {
+        { 
             InitializeComponent();
             cbo_SieuThi.DataSource = objStoreBLL.GetAllStore();
             cbo_SieuThi.DisplayMember = "FullName";
