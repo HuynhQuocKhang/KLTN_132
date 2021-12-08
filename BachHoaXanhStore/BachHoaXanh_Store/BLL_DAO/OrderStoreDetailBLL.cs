@@ -37,5 +37,20 @@ namespace BLL_DAO
             }
         }
 
+
+        public List<GetListOrderStoreByOrderIdBO> GetListOrderStoreByOrderId(int intOrderId)
+        {
+            var model = from objStoreOrder in data.CTDonDatHangs
+                        join objProduct in data.SanPhams
+                        on objStoreOrder.MaSP equals objProduct.MaSP
+                        where objStoreOrder.MaDH == intOrderId
+                        select new GetListOrderStoreByOrderIdBO()
+                        {
+                            MaSP = objStoreOrder.MaSP,
+                            TenSP = objProduct.TenSP,
+                            SoLuong = objStoreOrder.SoLuong
+                        };
+            return model.ToList();
+        }
     }
 }

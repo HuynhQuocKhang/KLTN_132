@@ -16,4 +16,12 @@ namespace BO
         public int? TongTien { get; set; }
         public bool Isdeleted { get; set; }
     }
+
+    public class GetOrderFromStoreBO
+    {
+        public int MaHD { get; set; }
+        public int? MaST { get; set; }
+        public DateTime? NgayDat { get; set; }
+        public int? TongTien { get; set; }
+    }
 }

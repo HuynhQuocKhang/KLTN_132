@@ -126,10 +126,13 @@
   <metadata name="col_MaSP.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="col_TenSP.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="col_SoLuong.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="col_ThanhTien.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="col_SoLuongXuat.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="col_MaDH.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -142,9 +145,6 @@
     <value>True</value>
   </metadata>
   <metadata name="col_TongTien.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="col_TinhTrang.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
@@ -191,10 +191,10 @@
   <data name="chk_AllStore.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACHSURBVDhPY6ApsJ8vz+EzSzPDe6ZmA1l4hkaB1xQtCahx
-        DAz+8/UFgBLvfWZp/acIz9T67jVLywBsKMiFIEFfdEXk4JlaFWBDQc7HqoAMDDJr1NBRQ0cNxaaAHDxq
-        KJqhs7WxKiQKQ/XCDQUVrBiKyMUzNQPAhoKA1wwtD5AtlGGNCAYGBgYAxScH85LWJwwAAAAASUVORK5C
-        YII=
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACaSURBVDhPY6ApqN8vz1G6SyqjdKd0Azm4bId0QckWeQmo
+        cQwM+fvlBcp2Sr0v2yX9nxJculPqe8lOKQOwoSAXggV3Sd/H5grisNRxkBklO6QrIIYCBSE2STeABcgA
+        GGaMGjpq6Kiho4aCBcgAOA0t2yW1H8QmB4P0ohgKKlghhlKOS3dIBoANBYGSHTIe6LaTioG1RwQDAwMD
+        ABUShanYk5ziAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="btn_TimKiem.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

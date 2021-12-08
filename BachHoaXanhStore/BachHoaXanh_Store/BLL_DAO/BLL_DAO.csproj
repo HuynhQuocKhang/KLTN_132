@@ -73,6 +73,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="CustomerBLL.cs" />
+    <Compile Include="ExportProductBLL.cs" />
     <Compile Include="OrderCustomerBLL.cs" />
     <Compile Include="OrderStoreBLL.cs" />
     <Compile Include="OrderStoreDetailBLL.cs" />
@@ -84,6 +85,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="ReturnProductBLL.cs" />
+    <Compile Include="StoreBLL.cs" />
     <Compile Include="UserBLL.cs" />
   </ItemGroup>
   <ItemGroup>

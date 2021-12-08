@@ -25,4 +25,11 @@ namespace BO
         public int SoLuong { get; set; }
         public string Ngay { get; set; }
     }
+
+    public class GetListOrderStoreByOrderIdBO
+    {
+        public string MaSP { get; set; }
+        public string TenSP { get; set; }
+        public int? SoLuong { get; set; }
+    }
 }

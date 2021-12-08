@@ -51,9 +51,9 @@ namespace BachHoaXanh_Store
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.btn_TimKiem = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.cbo_LoaiSP = new Bunifu.UI.WinForms.BunifuDropdown();
             this.txtKeyWord = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.cbo_NhaCungCap = new Bunifu.UI.WinForms.BunifuDropdown();
+            this.cbo_LoaiSP = new Bunifu.UI.WinForms.BunifuDropdown();
             this.dgv_DSSP = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.col_Sua = new System.Windows.Forms.DataGridViewButtonColumn();
             this.col_Xoa = new System.Windows.Forms.DataGridViewButtonColumn();
@@ -202,41 +202,6 @@ namespace BachHoaXanh_Store
             this.btn_TimKiem.UseDefaultRadiusAndThickness = true;
             this.btn_TimKiem.Click += new System.EventHandler(this.btn_TimKiem_Click);
             // 
-            // cbo_LoaiSP
-            // 
-            this.cbo_LoaiSP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(216)))), ((int)(((byte)(211)))));
-            this.cbo_LoaiSP.BorderRadius = 13;
-            this.cbo_LoaiSP.Color = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(92)))), ((int)(((byte)(83)))));
-            this.cbo_LoaiSP.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
-            this.cbo_LoaiSP.DisabledColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.cbo_LoaiSP.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cbo_LoaiSP.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbo_LoaiSP.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thick;
-            this.cbo_LoaiSP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbo_LoaiSP.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.cbo_LoaiSP.FillDropDown = false;
-            this.cbo_LoaiSP.FillIndicator = false;
-            this.cbo_LoaiSP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbo_LoaiSP.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbo_LoaiSP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(19)))), ((int)(((byte)(10)))));
-            this.cbo_LoaiSP.FormattingEnabled = true;
-            this.cbo_LoaiSP.Icon = null;
-            this.cbo_LoaiSP.IndicatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(92)))), ((int)(((byte)(83)))));
-            this.cbo_LoaiSP.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.cbo_LoaiSP.ItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(247)))), ((int)(((byte)(228)))));
-            this.cbo_LoaiSP.ItemBorderColor = System.Drawing.Color.Transparent;
-            this.cbo_LoaiSP.ItemForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(19)))), ((int)(((byte)(10)))));
-            this.cbo_LoaiSP.ItemHeight = 26;
-            this.cbo_LoaiSP.ItemHighLightColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(209)))), ((int)(((byte)(175)))));
-            this.cbo_LoaiSP.Items.AddRange(new object[] {
-            "ALL"});
-            this.cbo_LoaiSP.Location = new System.Drawing.Point(347, 3);
-            this.cbo_LoaiSP.MaximumSize = new System.Drawing.Size(5000, 0);
-            this.cbo_LoaiSP.Name = "cbo_LoaiSP";
-            this.cbo_LoaiSP.Size = new System.Drawing.Size(338, 32);
-            this.cbo_LoaiSP.TabIndex = 4;
-            this.cbo_LoaiSP.Text = null;
-            // 
             // txtKeyWord
             // 
             this.txtKeyWord.AcceptsReturn = false;
@@ -346,6 +311,41 @@ namespace BachHoaXanh_Store
             this.cbo_NhaCungCap.Size = new System.Drawing.Size(338, 32);
             this.cbo_NhaCungCap.TabIndex = 4;
             this.cbo_NhaCungCap.Text = null;
+            // 
+            // cbo_LoaiSP
+            // 
+            this.cbo_LoaiSP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(216)))), ((int)(((byte)(211)))));
+            this.cbo_LoaiSP.BorderRadius = 13;
+            this.cbo_LoaiSP.Color = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(92)))), ((int)(((byte)(83)))));
+            this.cbo_LoaiSP.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
+            this.cbo_LoaiSP.DisabledColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.cbo_LoaiSP.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cbo_LoaiSP.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbo_LoaiSP.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thick;
+            this.cbo_LoaiSP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_LoaiSP.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.cbo_LoaiSP.FillDropDown = false;
+            this.cbo_LoaiSP.FillIndicator = false;
+            this.cbo_LoaiSP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbo_LoaiSP.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbo_LoaiSP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(19)))), ((int)(((byte)(10)))));
+            this.cbo_LoaiSP.FormattingEnabled = true;
+            this.cbo_LoaiSP.Icon = null;
+            this.cbo_LoaiSP.IndicatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(92)))), ((int)(((byte)(83)))));
+            this.cbo_LoaiSP.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.cbo_LoaiSP.ItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(247)))), ((int)(((byte)(228)))));
+            this.cbo_LoaiSP.ItemBorderColor = System.Drawing.Color.Transparent;
+            this.cbo_LoaiSP.ItemForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(19)))), ((int)(((byte)(10)))));
+            this.cbo_LoaiSP.ItemHeight = 26;
+            this.cbo_LoaiSP.ItemHighLightColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(209)))), ((int)(((byte)(175)))));
+            this.cbo_LoaiSP.Items.AddRange(new object[] {
+            "ALL"});
+            this.cbo_LoaiSP.Location = new System.Drawing.Point(347, 3);
+            this.cbo_LoaiSP.MaximumSize = new System.Drawing.Size(5000, 0);
+            this.cbo_LoaiSP.Name = "cbo_LoaiSP";
+            this.cbo_LoaiSP.Size = new System.Drawing.Size(338, 32);
+            this.cbo_LoaiSP.TabIndex = 4;
+            this.cbo_LoaiSP.Text = null;
             // 
             // dgv_DSSP
             // 

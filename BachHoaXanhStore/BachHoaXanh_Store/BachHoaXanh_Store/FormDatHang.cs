@@ -145,21 +145,13 @@ namespace BachHoaXanh_Store
                 }
                 else
                 {
-                    if (int.Parse(strCustomerId) == 1 && int.Parse(strProductTypeId) == 1)
+                    if (int.Parse(strProductTypeId) == 1)
                     {
-                        dgv_DSSP.DataSource = objOrderStoreBLL.GetProductFromStore(strProductName.Trim(), 0, 0, int.Parse(strStock), (int) objUser.StoreId);
-                    }
-                    else if (int.Parse(strCustomerId) == 1 && int.Parse(strProductTypeId) != 1)
-                    {
-                        dgv_DSSP.DataSource = objOrderStoreBLL.GetProductFromStore(strProductName.Trim(), int.Parse(strProductTypeId), 0, int.Parse(strStock), (int)objUser.StoreId);
-                    }
-                    else if (int.Parse(strCustomerId) != 1 && int.Parse(strProductTypeId) == 1)
-                    {
-                        dgv_DSSP.DataSource = objOrderStoreBLL.GetProductFromStore(strProductName.Trim(), 0, int.Parse(strCustomerId), int.Parse(strStock), (int)objUser.StoreId);
+                        dgv_DSSP.DataSource = objOrderStoreBLL.GetProductBOFromStore(strProductName.Trim(), 0, 0, int.MaxValue, 100, (int) objUser.StoreId);
                     }
                     else
                     {
-                        dgv_DSSP.DataSource = objOrderStoreBLL.GetProductFromStore(strProductName.Trim(), int.Parse(strProductTypeId), int.Parse(strCustomerId), int.Parse(strStock), (int) objUser.StoreId);
+                        dgv_DSSP.DataSource = objOrderStoreBLL.GetProductBOFromStore(strProductName.Trim(), int.Parse(strProductTypeId), 0, int.Parse(strStock), 100, (int) objUser.StoreId);
                     }
                 }
             }

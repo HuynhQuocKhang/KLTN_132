@@ -126,9 +126,9 @@ create table CTDonDatHang
 create table PhieuXuatKho
 (
 	MaPXK int IDENTITY(1,1) not null,
+	MaDH int,
 	MaST int,
 	NguoiLapPhieu nvarchar (30),
-	MaDH int,
 	TongTien int,
 	NgayXuat date,
 	Isdeleted bit,
@@ -201,6 +201,15 @@ select * from CTDonDatHang
 
 select * from PhieuTraHang
 
-select * from CTPhieuTraHang
+select * from PhieuTraHang
 
-select * from KhoSieuThi
+select * from KhoSieuThi where MaST = 1
+
+select * from NhanVien
+
+update NhanVien
+set UserName = '090900' where UserId = 3
+
+select * from PhieuXuatKho
+select * from CTPhieuXuatKho
+alter table  PhieuXuatKho

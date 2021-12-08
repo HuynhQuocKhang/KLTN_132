@@ -40,12 +40,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CustomerBO.cs" />
+    <Compile Include="ExportProductBO.cs" />
     <Compile Include="OrderCustomerBO.cs" />
     <Compile Include="OrderCustomerDetailBO.cs" />
     <Compile Include="OrderStoreBO.cs" />
     <Compile Include="ProductBO.cs" />
     <Compile Include="ProductTypeBO.cs" />
     <Compile Include="ReturnProductBO.cs" />
+    <Compile Include="StoreBO.cs" />
     <Compile Include="UserBO.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
