@@ -67,6 +67,8 @@ namespace BachHoaXanh_Store
                     }
                     if (isDone == true)
                     {
+                        Program.frmReport = new FormReport();
+                        Program.frmReport.ShowDialog();
                         MessageBox.Show("Đặt hàng thành công");
                         this.Close();
                     }

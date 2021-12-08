@@ -26,6 +26,10 @@ namespace BachHoaXanh_Store
             cbo_SieuThi.DataSource = objStoreBLL.GetAllStore();
             cbo_SieuThi.DisplayMember = "FullName";
             cbo_SieuThi.ValueMember = "MaST";
+            if(chk_AllStore.Checked==true)
+            {
+                cbo_SieuThi.Enabled = false;
+            }    
         }
 
         private void bunifuButton2_Click(object sender, EventArgs e)

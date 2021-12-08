@@ -16,7 +16,7 @@ namespace BachHoaXanh_Store.ReportForm
             InitializeComponent();
             pMaPhieuTra.Text = (db.PhieuTraHangs.Select(t => t).Count() + 1).ToString();
             pNgayTra.Text = DateTime.Now.Day.ToString()+"/"+ DateTime.Now.Month.ToString() + "/" + DateTime.Now.Year.ToString();
-            if (FormTraHangNCC.objUser.Permission == 1)
+            if (FormLogin.objUserBO.Permission == 1)
             {
                 lbl_MaSieuThi.Text = "Mã nhà cung cấp";
                 pMaSieuThi.Text = FormTraHangNCC.intCustomerId.ToString();
@@ -24,7 +24,7 @@ namespace BachHoaXanh_Store.ReportForm
             else
             {
                 lbl_MaSieuThi.Text = "Mã siêu thị";
-                pMaSieuThi.Text = FormTraHangNCC.objUser.StoreId.ToString();
+                pMaSieuThi.Text = FormLogin.objUserBO.StoreId.ToString();
             }
         }
 
