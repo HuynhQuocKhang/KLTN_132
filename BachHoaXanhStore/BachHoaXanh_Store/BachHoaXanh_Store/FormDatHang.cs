@@ -50,7 +50,15 @@ namespace BachHoaXanh_Store
             if (dgv_Order.Rows.Count > 0)
             {
                 bool isOpen = true;
-                int Id = objOrderCustomerBLL.GetOrderCustomerIdNew() + 1;
+                int Id = 0;
+                if (objUser.Permission == 1)
+                {
+                    Id = objOrderCustomerBLL.GetOrderCustomerIdNew() + 1;
+                }
+                if (objUser.Permission != 1)
+                {
+                    Id = objOrderStoreBLL.GetOrderStoreIdNew() + 1;
+                }
                 for (int i = 0; i < dgv_Order.Rows.Count; i++)
                 {
                     int intStock;
