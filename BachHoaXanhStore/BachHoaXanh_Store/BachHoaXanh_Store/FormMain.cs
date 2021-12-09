@@ -231,5 +231,11 @@ namespace BachHoaXanh_Store
             //Program.frmNhapHang = new FormNhapHang();
             //ViewChildForm(Program.frmNhapHang);
         }
+
+        private void FormMain_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Program.frmLogin.Show();
+            this.Hide();
+        }
     }
 }
