@@ -67,7 +67,7 @@ namespace BachHoaXanh_Store
                     }
                     if (isDone == true)
                     {
-                        Program.frmReport = new FormReport();
+                        Program.frmReport = new FormReport("DatHang");
                         Program.frmReport.ShowDialog();
                         MessageBox.Show("Đặt hàng thành công");
                         this.Close();
@@ -97,6 +97,8 @@ namespace BachHoaXanh_Store
                     }
                     else
                     {
+                        Program.frmReport = new FormReport("DatHang");
+                        Program.frmReport.ShowDialog();
                         MessageBox.Show("Đặt hàng thành công");
                         this.Close();
                     }

@@ -16,10 +16,14 @@ namespace BachHoaXanh_Store
     public partial class FormMain : DevExpress.XtraEditors.XtraForm
     {
         public static ProductBLL objProductBLL = new ProductBLL();
+        public static StoreBLL objStoreBLL = new StoreBLL();
         public static List<ProductBO> lstProduct = objProductBLL.GetListAllProduct();
         public FormMain()
         {
             InitializeComponent();
+            lbl_MaST.Text = objStoreBLL.getStoreNameByUser(FormLogin.objUserBO.StoreId);
+            lbl_MaNV.Text =FormLogin.objUserBO.UserName + " - " + FormLogin.objUserBO.UserFullName;
+
         }
         private string reportType;
         public string ReportType { get => reportType; set => reportType = value; }
@@ -196,8 +200,6 @@ namespace BachHoaXanh_Store
 
         private void bunifuButton1_Click(object sender, EventArgs e)
         {
-            Program.frmReport = new FormReport();
-            Program.frmReport.Show();
         }
 
         private void xtraTabbedMdiManager1_PageRemoved(object sender, DevExpress.XtraTabbedMdi.MdiTabPageEventArgs e)

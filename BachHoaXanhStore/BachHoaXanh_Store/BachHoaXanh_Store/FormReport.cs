@@ -14,17 +14,35 @@ namespace BachHoaXanh_Store
 {
     public partial class FormReport : Form
     {
-       
-        public FormReport()
+        private static string reportType;
+        public FormReport(string pReportType)
         {
             InitializeComponent();
+              reportType=pReportType;
         }
-        
+
+        public static string ReportType { get => reportType; set => reportType = value; }
+
         private void FormReport_Load(object sender, EventArgs e)
         {
+            if (reportType == "DatHang")
+            {
                 rptDonDatHang rptDDH = new rptDonDatHang();
                 documentViewer1.PrintingSystem = rptDDH.PrintingSystem;
                 rptDDH.CreateDocument();
+            }
+            else if (reportType == "XuatKho")
+            {
+                rptPhieuXuatKho rptPXK = new rptPhieuXuatKho();
+                documentViewer1.PrintingSystem = rptPXK.PrintingSystem;
+                rptPXK.CreateDocument();
+            }
+            else if (reportType == "TraHang")
+            {
+                rptPhieuTraHang rptPTH = new rptPhieuTraHang();
+                documentViewer1.PrintingSystem = rptPTH.PrintingSystem;
+                rptPTH.CreateDocument();
+            }
         }
     }
 }

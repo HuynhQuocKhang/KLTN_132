@@ -73,6 +73,8 @@ namespace BachHoaXanh_Store
                 }
                 if (isDone == true)
                 {
+                    Program.frmReport = new FormReport("TraHang");
+                    Program.frmReport.ShowDialog();
                     MessageBox.Show("Tạo Phiếu Trả Hàng Thành CÔng");
                     this.Close();
                 }
