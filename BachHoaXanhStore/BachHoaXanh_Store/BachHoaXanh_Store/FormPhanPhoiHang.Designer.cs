@@ -51,8 +51,16 @@ namespace BachHoaXanh_Store
             this.bunifuLabel5 = new Bunifu.UI.WinForms.BunifuLabel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgv_DHDT = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.col_MaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_TenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_SoLuongXuat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgv_DSDH = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.col_MaDH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_MaST = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_NgayDat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_TongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btn_LamMoi = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btn_LapPhieu = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -73,14 +81,6 @@ namespace BachHoaXanh_Store
             this.panel6 = new System.Windows.Forms.Panel();
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.cbo_TinhTrang = new Bunifu.UI.WinForms.BunifuDropdown();
-            this.col_MaDH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_MaST = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_NgayDat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_TongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_MaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_TenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_SoLuongXuat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -241,6 +241,32 @@ namespace BachHoaXanh_Store
             this.dgv_DHDT.Size = new System.Drawing.Size(656, 531);
             this.dgv_DHDT.TabIndex = 0;
             // 
+            // col_MaSP
+            // 
+            this.col_MaSP.DataPropertyName = "MaSP";
+            this.col_MaSP.HeaderText = "Mã sản phẩm";
+            this.col_MaSP.Name = "col_MaSP";
+            this.col_MaSP.ReadOnly = true;
+            // 
+            // col_TenSP
+            // 
+            this.col_TenSP.DataPropertyName = "TenSP";
+            this.col_TenSP.HeaderText = "Tên Sản Phẩm";
+            this.col_TenSP.Name = "col_TenSP";
+            this.col_TenSP.ReadOnly = true;
+            // 
+            // col_SoLuong
+            // 
+            this.col_SoLuong.DataPropertyName = "SoLuong";
+            this.col_SoLuong.HeaderText = "Số lượng";
+            this.col_SoLuong.Name = "col_SoLuong";
+            this.col_SoLuong.ReadOnly = true;
+            // 
+            // col_SoLuongXuat
+            // 
+            this.col_SoLuongXuat.HeaderText = "Số Lượng Xuất";
+            this.col_SoLuongXuat.Name = "col_SoLuongXuat";
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dgv_DSDH);
@@ -291,6 +317,34 @@ namespace BachHoaXanh_Store
             this.dgv_DSDH.Size = new System.Drawing.Size(612, 531);
             this.dgv_DSDH.TabIndex = 0;
             this.dgv_DSDH.SelectionChanged += new System.EventHandler(this.dgv_DSDH_SelectionChanged);
+            // 
+            // col_MaDH
+            // 
+            this.col_MaDH.DataPropertyName = "MaHD";
+            this.col_MaDH.HeaderText = "Mã đơn hàng";
+            this.col_MaDH.Name = "col_MaDH";
+            this.col_MaDH.ReadOnly = true;
+            // 
+            // col_MaST
+            // 
+            this.col_MaST.DataPropertyName = "MaST";
+            this.col_MaST.HeaderText = "Mã siêu thị";
+            this.col_MaST.Name = "col_MaST";
+            this.col_MaST.ReadOnly = true;
+            // 
+            // col_NgayDat
+            // 
+            this.col_NgayDat.DataPropertyName = "NgayDat";
+            this.col_NgayDat.HeaderText = "Ngày đặt";
+            this.col_NgayDat.Name = "col_NgayDat";
+            this.col_NgayDat.ReadOnly = true;
+            // 
+            // col_TongTien
+            // 
+            this.col_TongTien.DataPropertyName = "TongTien";
+            this.col_TongTien.HeaderText = "Tổng tiền";
+            this.col_TongTien.Name = "col_TongTien";
+            this.col_TongTien.ReadOnly = true;
             // 
             // panel5
             // 
@@ -823,60 +877,6 @@ namespace BachHoaXanh_Store
             this.cbo_TinhTrang.Size = new System.Drawing.Size(315, 32);
             this.cbo_TinhTrang.TabIndex = 0;
             this.cbo_TinhTrang.Text = null;
-            // 
-            // col_MaDH
-            // 
-            this.col_MaDH.DataPropertyName = "MaHD";
-            this.col_MaDH.HeaderText = "Mã đơn hàng";
-            this.col_MaDH.Name = "col_MaDH";
-            this.col_MaDH.ReadOnly = true;
-            // 
-            // col_MaST
-            // 
-            this.col_MaST.DataPropertyName = "MaST";
-            this.col_MaST.HeaderText = "Mã siêu thị";
-            this.col_MaST.Name = "col_MaST";
-            this.col_MaST.ReadOnly = true;
-            // 
-            // col_NgayDat
-            // 
-            this.col_NgayDat.DataPropertyName = "NgayDat";
-            this.col_NgayDat.HeaderText = "Ngày đặt";
-            this.col_NgayDat.Name = "col_NgayDat";
-            this.col_NgayDat.ReadOnly = true;
-            // 
-            // col_TongTien
-            // 
-            this.col_TongTien.DataPropertyName = "TongTien";
-            this.col_TongTien.HeaderText = "Tổng tiền";
-            this.col_TongTien.Name = "col_TongTien";
-            this.col_TongTien.ReadOnly = true;
-            // 
-            // col_MaSP
-            // 
-            this.col_MaSP.DataPropertyName = "MaSP";
-            this.col_MaSP.HeaderText = "Mã sản phẩm";
-            this.col_MaSP.Name = "col_MaSP";
-            this.col_MaSP.ReadOnly = true;
-            // 
-            // col_TenSP
-            // 
-            this.col_TenSP.DataPropertyName = "TenSP";
-            this.col_TenSP.HeaderText = "Tên Sản Phẩm";
-            this.col_TenSP.Name = "col_TenSP";
-            this.col_TenSP.ReadOnly = true;
-            // 
-            // col_SoLuong
-            // 
-            this.col_SoLuong.DataPropertyName = "SoLuong";
-            this.col_SoLuong.HeaderText = "Số lượng";
-            this.col_SoLuong.Name = "col_SoLuong";
-            this.col_SoLuong.ReadOnly = true;
-            // 
-            // col_SoLuongXuat
-            // 
-            this.col_SoLuongXuat.HeaderText = "Số Lượng Xuất";
-            this.col_SoLuongXuat.Name = "col_SoLuongXuat";
             // 
             // FormPhanPhoiHang
             // 

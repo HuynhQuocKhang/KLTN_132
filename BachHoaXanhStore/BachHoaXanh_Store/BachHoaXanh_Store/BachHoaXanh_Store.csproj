@@ -311,6 +311,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>rptPTH_DataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ReportForm\rptPXK_DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptPXK_DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="test.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -420,6 +425,17 @@
     </None>
     <None Include="ReportForm\rptPTH_DataSet.xss">
       <DependentUpon>rptPTH_DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ReportForm\rptPXK_DataSet.xsc">
+      <DependentUpon>rptPXK_DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ReportForm\rptPXK_DataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>rptPXK_DataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ReportForm\rptPXK_DataSet.xss">
+      <DependentUpon>rptPXK_DataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

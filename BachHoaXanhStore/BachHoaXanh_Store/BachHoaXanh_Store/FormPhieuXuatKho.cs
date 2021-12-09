@@ -51,9 +51,11 @@ namespace BachHoaXanh_Store
                 objOrderStoreBLL.UpdateOrderStoreStatus((int)FormPhanPhoiHang.objExportProductBO.MaDH);
                 if (objExportProductBLL.InsertExportProductDetail(FormPhanPhoiHang.lstExportProductDetailBO, intMaPXK))
                 {
-                    MessageBox.Show("Khởi tạo phiếu xuất kho thành công");
+                    Program.frmReport = new FormReport("XuatKho");
+                    Program.frmReport.ShowDialog();
                     FormPhanPhoiHang.lstExportProductDetailBO = new List<ExportProductDetailBO>();
                     FormPhanPhoiHang.objExportProductBO = new BO.ExportProductBO();
+                    MessageBox.Show("Khởi tạo phiếu xuất kho thành công");
                     this.Close();
                 }
                 else

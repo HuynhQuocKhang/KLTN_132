@@ -55,15 +55,11 @@ namespace BachHoaXanh_Store
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.lbl_MaST = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lbl_MaST = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lbl_MaNV = new System.Windows.Forms.Label();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.vToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.thôngTinSiêuThịToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.đổiMậtKhẩuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bunifuDropdown1 = new Bunifu.UI.WinForms.BunifuDropdown();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
@@ -77,6 +73,8 @@ namespace BachHoaXanh_Store
             this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
             this.accordionControlElement1 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_DatHangNCC = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement6 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement9 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_XuatHang = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_TraHangNCC = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_DSSP = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -89,13 +87,11 @@ namespace BachHoaXanh_Store
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.panel9 = new System.Windows.Forms.Panel();
             this.miniToolStrip = new System.Windows.Forms.MenuStrip();
-            this.accordionControlElement6 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement9 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -114,7 +110,7 @@ namespace BachHoaXanh_Store
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1350, 53);
+            this.panel1.Size = new System.Drawing.Size(1350, 64);
             this.panel1.TabIndex = 1;
             // 
             // panel8
@@ -124,59 +120,59 @@ namespace BachHoaXanh_Store
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel8.Location = new System.Drawing.Point(0, 0);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1350, 53);
+            this.panel8.Size = new System.Drawing.Size(1350, 64);
             this.panel8.TabIndex = 1;
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 5;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 256F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 36F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 39F));
-            this.tableLayoutPanel1.Controls.Add(this.lbl_MaST, 0, 1);
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 178F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.84746F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.15254F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 44F));
             this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel3, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.menuStrip1, 3, 1);
+            this.tableLayoutPanel1.Controls.Add(this.bunifuDropdown1, 3, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(851, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(763, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 31.03448F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 68.96552F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(499, 53);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 39.0625F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60.9375F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(587, 64);
             this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.panel2, 2);
+            this.panel2.Controls.Add(this.lbl_MaST);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(181, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(308, 19);
+            this.panel2.TabIndex = 0;
             // 
             // lbl_MaST
             // 
             this.lbl_MaST.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_MaST.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_MaST.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(247)))), ((int)(((byte)(228)))));
-            this.lbl_MaST.Location = new System.Drawing.Point(3, 16);
+            this.lbl_MaST.Location = new System.Drawing.Point(0, 0);
             this.lbl_MaST.Name = "lbl_MaST";
-            this.lbl_MaST.Size = new System.Drawing.Size(250, 37);
+            this.lbl_MaST.Size = new System.Drawing.Size(308, 19);
             this.lbl_MaST.TabIndex = 0;
             this.lbl_MaST.Text = "Mã siêu thị";
             this.lbl_MaST.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // panel2
-            // 
-            this.tableLayoutPanel1.SetColumnSpan(this.panel2, 2);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(259, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(162, 10);
-            this.panel2.TabIndex = 0;
             // 
             // panel3
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.panel3, 2);
             this.panel3.Controls.Add(this.lbl_MaNV);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(259, 19);
+            this.panel3.Location = new System.Drawing.Point(181, 28);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(162, 31);
+            this.panel3.Size = new System.Drawing.Size(308, 33);
             this.panel3.TabIndex = 1;
             // 
             // lbl_MaNV
@@ -186,52 +182,45 @@ namespace BachHoaXanh_Store
             this.lbl_MaNV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(247)))), ((int)(((byte)(228)))));
             this.lbl_MaNV.Location = new System.Drawing.Point(0, 0);
             this.lbl_MaNV.Name = "lbl_MaNV";
-            this.lbl_MaNV.Size = new System.Drawing.Size(162, 31);
+            this.lbl_MaNV.Size = new System.Drawing.Size(308, 33);
             this.lbl_MaNV.TabIndex = 0;
             this.lbl_MaNV.Text = "Mã NV - Tên NV";
             this.lbl_MaNV.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // menuStrip1
+            // bunifuDropdown1
             // 
-            this.menuStrip1.AutoSize = false;
-            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(34)))), ((int)(((byte)(9)))));
-            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.vToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(424, 16);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(36, 37);
-            this.menuStrip1.TabIndex = 3;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // vToolStripMenuItem
-            // 
-            this.vToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.thôngTinSiêuThịToolStripMenuItem,
-            this.đổiMậtKhẩuToolStripMenuItem,
-            this.đăngXuấtToolStripMenuItem});
-            this.vToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(247)))), ((int)(((byte)(228)))));
-            this.vToolStripMenuItem.Name = "vToolStripMenuItem";
-            this.vToolStripMenuItem.Size = new System.Drawing.Size(25, 33);
-            this.vToolStripMenuItem.Text = "v";
-            // 
-            // thôngTinSiêuThịToolStripMenuItem
-            // 
-            this.thôngTinSiêuThịToolStripMenuItem.Name = "thôngTinSiêuThịToolStripMenuItem";
-            this.thôngTinSiêuThịToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
-            this.thôngTinSiêuThịToolStripMenuItem.Text = "Thông tin siêu thị";
-            // 
-            // đổiMậtKhẩuToolStripMenuItem
-            // 
-            this.đổiMậtKhẩuToolStripMenuItem.Name = "đổiMậtKhẩuToolStripMenuItem";
-            this.đổiMậtKhẩuToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
-            this.đổiMậtKhẩuToolStripMenuItem.Text = "Đổi mật khẩu";
-            // 
-            // đăngXuấtToolStripMenuItem
-            // 
-            this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
-            this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
+            this.bunifuDropdown1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(34)))), ((int)(((byte)(9)))));
+            this.bunifuDropdown1.BorderRadius = 1;
+            this.bunifuDropdown1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(34)))), ((int)(((byte)(9)))));
+            this.bunifuDropdown1.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
+            this.bunifuDropdown1.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuDropdown1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bunifuDropdown1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.bunifuDropdown1.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
+            this.bunifuDropdown1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.bunifuDropdown1.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.bunifuDropdown1.FillDropDown = false;
+            this.bunifuDropdown1.FillIndicator = false;
+            this.bunifuDropdown1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bunifuDropdown1.ForeColor = System.Drawing.Color.Black;
+            this.bunifuDropdown1.FormattingEnabled = true;
+            this.bunifuDropdown1.Icon = null;
+            this.bunifuDropdown1.IndicatorColor = System.Drawing.Color.Honeydew;
+            this.bunifuDropdown1.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.bunifuDropdown1.ItemBackColor = System.Drawing.Color.White;
+            this.bunifuDropdown1.ItemBorderColor = System.Drawing.Color.White;
+            this.bunifuDropdown1.ItemForeColor = System.Drawing.Color.Black;
+            this.bunifuDropdown1.ItemHeight = 26;
+            this.bunifuDropdown1.ItemHighLightColor = System.Drawing.Color.Thistle;
+            this.bunifuDropdown1.Items.AddRange(new object[] {
+            "Thông tin chung",
+            "Đổi mật khẩu",
+            "Đăng xuất"});
+            this.bunifuDropdown1.Location = new System.Drawing.Point(495, 28);
+            this.bunifuDropdown1.Name = "bunifuDropdown1";
+            this.bunifuDropdown1.Size = new System.Drawing.Size(44, 32);
+            this.bunifuDropdown1.TabIndex = 2;
+            this.bunifuDropdown1.Text = null;
             // 
             // tableLayoutPanel2
             // 
@@ -240,7 +229,7 @@ namespace BachHoaXanh_Store
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 276F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 83.66248F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.33752F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 278F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 283F));
             this.tableLayoutPanel2.Controls.Add(this.panel5, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.bunifuButton1, 2, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -259,7 +248,7 @@ namespace BachHoaXanh_Store
             this.panel5.Location = new System.Drawing.Point(279, 3);
             this.panel5.Name = "panel5";
             this.tableLayoutPanel2.SetRowSpan(this.panel5, 2);
-            this.panel5.Size = new System.Drawing.Size(442, 94);
+            this.panel5.Size = new System.Drawing.Size(438, 94);
             this.panel5.TabIndex = 0;
             // 
             // tableLayoutPanel3
@@ -276,7 +265,7 @@ namespace BachHoaXanh_Store
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(442, 94);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(438, 94);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // panel6
@@ -289,7 +278,7 @@ namespace BachHoaXanh_Store
             this.panel6.Location = new System.Drawing.Point(6, 6);
             this.panel6.Name = "panel6";
             this.tableLayoutPanel3.SetRowSpan(this.panel6, 2);
-            this.panel6.Size = new System.Drawing.Size(212, 82);
+            this.panel6.Size = new System.Drawing.Size(210, 82);
             this.panel6.TabIndex = 0;
             // 
             // label2
@@ -299,7 +288,7 @@ namespace BachHoaXanh_Store
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(34)))), ((int)(((byte)(9)))));
             this.label2.Location = new System.Drawing.Point(0, 33);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(208, 29);
+            this.label2.Size = new System.Drawing.Size(206, 29);
             this.label2.TabIndex = 1;
             this.label2.Text = "label2";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -311,7 +300,7 @@ namespace BachHoaXanh_Store
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(34)))), ((int)(((byte)(9)))));
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(208, 33);
+            this.label1.Size = new System.Drawing.Size(206, 33);
             this.label1.TabIndex = 0;
             this.label1.Text = "label1";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -323,10 +312,10 @@ namespace BachHoaXanh_Store
             this.panel7.Controls.Add(this.label4);
             this.panel7.Controls.Add(this.label3);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(224, 6);
+            this.panel7.Location = new System.Drawing.Point(222, 6);
             this.panel7.Name = "panel7";
             this.tableLayoutPanel3.SetRowSpan(this.panel7, 2);
-            this.panel7.Size = new System.Drawing.Size(212, 82);
+            this.panel7.Size = new System.Drawing.Size(210, 82);
             this.panel7.TabIndex = 1;
             // 
             // label4
@@ -336,7 +325,7 @@ namespace BachHoaXanh_Store
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(34)))), ((int)(((byte)(9)))));
             this.label4.Location = new System.Drawing.Point(0, 33);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(208, 29);
+            this.label4.Size = new System.Drawing.Size(206, 29);
             this.label4.TabIndex = 1;
             this.label4.Text = "label4";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -348,7 +337,7 @@ namespace BachHoaXanh_Store
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(34)))), ((int)(((byte)(9)))));
             this.label3.Location = new System.Drawing.Point(0, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(208, 33);
+            this.label3.Size = new System.Drawing.Size(206, 33);
             this.label3.TabIndex = 0;
             this.label3.Text = "label3";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -390,7 +379,7 @@ namespace BachHoaXanh_Store
             this.bunifuButton1.IdleIconLeftImage = null;
             this.bunifuButton1.IdleIconRightImage = null;
             this.bunifuButton1.IndicateFocus = false;
-            this.bunifuButton1.Location = new System.Drawing.Point(727, 53);
+            this.bunifuButton1.Location = new System.Drawing.Point(723, 53);
             this.bunifuButton1.Name = "bunifuButton1";
             stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(42)))));
             stateProperties1.BorderRadius = 3;
@@ -410,7 +399,7 @@ namespace BachHoaXanh_Store
             stateProperties2.IconLeftImage = null;
             stateProperties2.IconRightImage = null;
             this.bunifuButton1.OnPressedState = stateProperties2;
-            this.bunifuButton1.Size = new System.Drawing.Size(81, 35);
+            this.bunifuButton1.Size = new System.Drawing.Size(80, 35);
             this.bunifuButton1.TabIndex = 1;
             this.bunifuButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuButton1.TextMarginLeft = 0;
@@ -459,12 +448,12 @@ namespace BachHoaXanh_Store
             this.accordionControlElement1,
             this.accordionControlElement2});
             this.accordionControl1.GroupHeight = 50;
-            this.accordionControl1.Location = new System.Drawing.Point(0, 53);
+            this.accordionControl1.Location = new System.Drawing.Point(0, 64);
             this.accordionControl1.Margin = new System.Windows.Forms.Padding(0);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Fluent;
             this.accordionControl1.ShowFilterControl = DevExpress.XtraBars.Navigation.ShowFilterControl.Always;
-            this.accordionControl1.Size = new System.Drawing.Size(260, 667);
+            this.accordionControl1.Size = new System.Drawing.Size(260, 656);
             this.accordionControl1.TabIndex = 2;
             this.accordionControl1.Text = "accordionControl1";
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
@@ -497,6 +486,22 @@ namespace BachHoaXanh_Store
             this.btn_DatHangNCC.SuperTip = superToolTip1;
             this.btn_DatHangNCC.Text = "ĐẶT HÀNG";
             this.btn_DatHangNCC.Click += new System.EventHandler(this.btn_DatHangNCC_Click);
+            // 
+            // accordionControlElement6
+            // 
+            this.accordionControlElement6.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("accordionControlElement6.ImageOptions.SvgImage")));
+            this.accordionControlElement6.Name = "accordionControlElement6";
+            this.accordionControlElement6.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement6.Text = "Đặt hàng";
+            this.accordionControlElement6.Click += new System.EventHandler(this.accordionControlElement6_Click_1);
+            // 
+            // accordionControlElement9
+            // 
+            this.accordionControlElement9.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("accordionControlElement9.ImageOptions.SvgImage")));
+            this.accordionControlElement9.Name = "accordionControlElement9";
+            this.accordionControlElement9.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement9.Text = "Nhập hàng";
+            this.accordionControlElement9.Click += new System.EventHandler(this.accordionControlElement9_Click);
             // 
             // btn_XuatHang
             // 
@@ -608,7 +613,7 @@ namespace BachHoaXanh_Store
             // 
             this.panel9.Controls.Add(this.tableLayoutPanel2);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel9.Location = new System.Drawing.Point(260, 53);
+            this.panel9.Location = new System.Drawing.Point(260, 64);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(1090, 100);
             this.panel9.TabIndex = 3;
@@ -626,22 +631,6 @@ namespace BachHoaXanh_Store
             this.miniToolStrip.Size = new System.Drawing.Size(36, 37);
             this.miniToolStrip.TabIndex = 3;
             // 
-            // accordionControlElement6
-            // 
-            this.accordionControlElement6.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("accordionControlElement6.ImageOptions.SvgImage")));
-            this.accordionControlElement6.Name = "accordionControlElement6";
-            this.accordionControlElement6.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement6.Text = "Đặt hàng";
-            this.accordionControlElement6.Click += new System.EventHandler(this.accordionControlElement6_Click_1);
-            // 
-            // accordionControlElement9
-            // 
-            this.accordionControlElement9.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("accordionControlElement9.ImageOptions.SvgImage")));
-            this.accordionControlElement9.Name = "accordionControlElement9";
-            this.accordionControlElement9.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement9.Text = "Nhập hàng";
-            this.accordionControlElement9.Click += new System.EventHandler(this.accordionControlElement9_Click);
-            // 
             // FormMain
             // 
             this.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(247)))), ((int)(((byte)(228)))));
@@ -658,9 +647,8 @@ namespace BachHoaXanh_Store
             this.panel1.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
@@ -706,14 +694,10 @@ namespace BachHoaXanh_Store
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lbl_MaNV;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem vToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem thôngTinSiêuThịToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem đổiMậtKhẩuToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.MenuStrip miniToolStrip;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement6;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement9;
+        private Bunifu.UI.WinForms.BunifuDropdown bunifuDropdown1;
     }
 }

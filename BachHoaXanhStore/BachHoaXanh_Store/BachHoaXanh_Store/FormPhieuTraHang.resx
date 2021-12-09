@@ -170,29 +170,6 @@
         TkSuQmCC
 </value>
   </data>
-  <data name="txt_TongTien.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAARgAAAAnCAYAAADU1VdAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPTSURBVHhe7d1LaFRnGMbxs3Tp0qXLLt3VOAVrVczFXKfW
-        y5lkLpkxxxhDehHTC0VFbRFF2nrBS6KG0pAGmxYbmtIiWAQrLYoglSq0LmqhRJ2MRm3N4pjHvMEOJpPJ
-        mbFU8//Btxhmck425+E93/ed9zgA8L9TsrruhZBb17446e4v82IXNEKRsM9gMJ7tMX49L1tbfzzkhjeH
-        3Nr5dtk/XQujK+bopEuTkcGa1lRmX3fXSM83J/3zv1x6NAA8+8av577vv/U7TvT47qa29CuJ1ZkyL9q7
-        YM2KeRYHxbMwWj17NNE+LvdiGZ30z8G/7F8BMBPcHEr7/T+c8l97o3lIQaNiw+KhMCqPSpsa0p1ffH7/
-        nwcP7HQAZioFjYqNJan6eouJYMqb4q9H33lz8M7dYTs0APi+io2Nu7bfqmpJ7re4mJ7l6xs7th74KE3V
-        AmAynSd6bldvSH5lsZGfsqaGt3d2HszYMQBgUp+e7LungsTiI7eQG345+X77IJULgHzpdmnKORnNDC9v
-        TtxgzgXAdKggCbd5N7U/zuLkSaVe7NBnX385Yn8DAHk7/fM5v8KLnbI4yfZitHpuVUuSSV0AgWlT3oQ7
-        f7V5RuvbABCUdgDrMQOLlce0FVi79QAgKN0BLUm6w9r9b9EytltXpY39BgAC27T7g0xJ5NVVFi+OszQV
-        2XOsr5fJXQAF01SLplwsXhyn3Iv2f3f2jH0NAMFduvqr5mEuW7xogjd2gXYLAIpB3RbU0sXiZfQWafQD
-        LRgAFIsaV1m8OI4+AECxZAUMS9QAiikrYDQho4kZACiUihUVLRYvjqPnB/QcAQAU6sq13/3SpobfLF4c
-        R4281WsXAAr148Xzfvm6+FmLF8cpidTVtH24Zci+B4DAdh8/8nfIrW2zeFEfmOisRfFVNPUGULCKdfE7
-        6s5g8TJGJY1KGwAI6on5l3EvRWpLva3vslYNILBtBz+5vTjhbrBYycZqEoCgJq1exum1kHpzm/0eAPKm
-        hSItGFmcTKxqfeP2PV0dhAyAvPUO9N+rbGnsthjJrbI5MTBw5jRLSgCmpE4MlS3Jn7QabRGSm35Y0Ry/
-        SMgAyEXhUtOaupzVIjMfChlVMrzhEcBExm6LVLlMM1z+Ta+RTby3Mc3DkABEvaM0oas5l7xvi3LR62T1
-        xLUOeu36H3YaADOJgmXX0UPDalA35WpREDrosrX117UVeMfhvXe181dr3wCePyomNMeyr7trpKY1lVGw
-        LIqtfMvi4OnRcwYL1oQ9PV6gjTVqLsNgMJ6voWJC/bpDbl17zndOA8B/z3EeAsrAEGETJLqbAAAAAElF
-        TkSuQmCC
-</value>
-  </data>
   <data name="txt_TinhTrang.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAARgAAAAnCAYAAADU1VdAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
