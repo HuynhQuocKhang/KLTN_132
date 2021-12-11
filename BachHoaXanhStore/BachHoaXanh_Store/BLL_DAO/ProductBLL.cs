@@ -310,5 +310,111 @@ namespace BLL_DAO
                 return model.Where(t => t.SoLuong <= intStock).Take(intPageSize).ToList();
             }
         }
+
+
+        public List<ProductPromotionBO> GetProductPromotionFromStore(string strkeywords = "", int intProductTypeId = 0, int intCustomerId = 0, int intStock = 0, int intPageSize = 50, int intStoreId = 1)
+        {
+            if (intCustomerId == 0 && intProductTypeId == 0)
+            {
+                var model = from objProduct in db.SanPhams
+                            join objStorePromotion in db.KhoHangKMs
+                            on objProduct.MaSP equals objStorePromotion.MaSP
+                            join objProductType in db.LoaiSPs
+                            on objProduct.MaLoaiSP equals objProductType.MaLoaiSP
+                            join objCustomer in db.NhaCungCaps
+                            on objProduct.MaNCC equals objCustomer.MaNCC
+                            where objProduct.Isdeleted == false && (objProduct.TenSP.Contains(strkeywords.Trim()) || objStorePromotion.MaSP.Contains(strkeywords.Trim()) && objStorePromotion.MaST == intStoreId)
+                            select new ProductPromotionBO()
+                            {
+                                MaSP = objProduct.MaSP,
+                                TenSP = objProduct.TenSP,
+                                MaLoaiSP = objProduct.MaLoaiSP,
+                                TenLoaiSP = objProductType.TenLoaiSP,
+                                MaNCC = objProduct.MaNCC,
+                                TenNCC = objCustomer.TenNCC,
+                                DVT = objProduct.DVT,
+                                SoLuong = objStorePromotion.SoLuong,
+                                NgayKM = objStorePromotion.NgayKM,
+                                NgayHetHan = objStorePromotion.NgayHetHan
+                            };
+                return model.OrderByDescending(x => x.MaSP).Where(x => x.SoLuong <= intStock).Take(intPageSize).ToList();
+            }
+            if (intCustomerId == 0 && intProductTypeId != 0)
+            {
+                var model = from objProduct in db.SanPhams
+                            join objStorePromotion in db.KhoHangKMs
+                            on objProduct.MaSP equals objStorePromotion.MaSP
+                            join objProductType in db.LoaiSPs
+                            on objProduct.MaLoaiSP equals objProductType.MaLoaiSP
+                            join objCustomer in db.NhaCungCaps
+                            on objProduct.MaNCC equals objCustomer.MaNCC
+                            where objProduct.Isdeleted == false && objProduct.MaLoaiSP == intProductTypeId && (objProduct.TenSP.Contains(strkeywords.Trim()) || objProduct.MaSP.Contains(strkeywords.Trim()) && objStorePromotion.SoLuong <= intStock && objStorePromotion.MaST == intStoreId)
+                            select new ProductPromotionBO()
+                            {
+                                MaSP = objProduct.MaSP,
+                                TenSP = objProduct.TenSP,
+                                MaLoaiSP = objProduct.MaLoaiSP,
+                                TenLoaiSP = objProductType.TenLoaiSP,
+                                MaNCC = objProduct.MaNCC,
+                                TenNCC = objCustomer.TenNCC,
+                                DVT = objProduct.DVT,
+                                SoLuong = objStorePromotion.SoLuong,
+                                NgayKM = objStorePromotion.NgayKM,
+                                NgayHetHan = objStorePromotion.NgayHetHan
+                            };
+                return model.OrderByDescending(x => x.MaSP).Where(x => x.SoLuong <= intStock).Take(intPageSize).ToList();
+            }
+            if (intProductTypeId == 0 && intCustomerId != 0)
+            {
+                var model = from objProduct in db.SanPhams
+                            join objStorePromotion in db.KhoHangKMs
+                            on objProduct.MaSP equals objStorePromotion.MaSP
+                            join objProductType in db.LoaiSPs
+                            on objProduct.MaLoaiSP equals objProductType.MaLoaiSP
+                            join objCustomer in db.NhaCungCaps
+                            on objProduct.MaNCC equals objCustomer.MaNCC
+                            where objProduct.Isdeleted == false && objProduct.MaNCC == intCustomerId && (objProduct.TenSP.Contains(strkeywords.Trim()) || objProduct.MaSP.Contains(strkeywords.Trim()) && objStorePromotion.SoLuong <= intStock && objStorePromotion.MaST == intStoreId)
+                            select new ProductPromotionBO()
+                            {
+                                MaSP = objProduct.MaSP,
+                                TenSP = objProduct.TenSP,
+                                MaLoaiSP = objProduct.MaLoaiSP,
+                                TenLoaiSP = objProductType.TenLoaiSP,
+                                MaNCC = objProduct.MaNCC,
+                                TenNCC = objCustomer.TenNCC,
+                                DVT = objProduct.DVT,
+                                SoLuong = objStorePromotion.SoLuong,
+                                NgayKM = objStorePromotion.NgayKM,
+                                NgayHetHan = objStorePromotion.NgayHetHan
+                            };
+
+                return model.OrderByDescending(x => x.MaSP).Where(x => x.SoLuong <= intStock).Take(intPageSize).ToList();
+            }
+            else
+            {
+                var model = from objProduct in db.SanPhams
+                            join objStorePromotion in db.KhoHangKMs
+                            on objProduct.MaSP equals objStorePromotion.MaSP
+                            join objProductType in db.LoaiSPs
+                            on objProduct.MaLoaiSP equals objProductType.MaLoaiSP
+                            join objCustomer in db.NhaCungCaps
+                            on objProduct.MaNCC equals objCustomer.MaNCC
+                            where objProduct.Isdeleted == false && objProduct.MaNCC == intCustomerId && (objProduct.TenSP.Contains(strkeywords.Trim()) || objProduct.MaSP.Contains(strkeywords.Trim()) && objStorePromotion.SoLuong <= intStock && objProduct.MaLoaiSP == intProductTypeId && objStorePromotion.MaST == intStoreId)
+                            select new ProductPromotionBO()
+                            {
+                                MaSP = objProduct.MaSP,
+                                TenSP = objProduct.TenSP,
+                                MaLoaiSP = objProduct.MaLoaiSP,
+                                TenLoaiSP = objProductType.TenLoaiSP,
+                                MaNCC = objProduct.MaNCC,
+                                TenNCC = objCustomer.TenNCC,
+                                DVT = objProduct.DVT,
+                                SoLuong = objStorePromotion.SoLuong,
+                                NgayKM = objStorePromotion.NgayKM,
+                                NgayHetHan = objStorePromotion.NgayHetHan
+                            };
+                return model.OrderByDescending(x => x.MaSP).Where(x => x.SoLuong <= intStock).Take(intPageSize).ToList();
+            }
+        }
     }
 }

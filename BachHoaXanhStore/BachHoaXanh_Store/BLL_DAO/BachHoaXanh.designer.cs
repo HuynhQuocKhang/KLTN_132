@@ -39,9 +39,6 @@ namespace BLL_DAO
     partial void InsertCTHoaDonDatNCC(CTHoaDonDatNCC instance);
     partial void UpdateCTHoaDonDatNCC(CTHoaDonDatNCC instance);
     partial void DeleteCTHoaDonDatNCC(CTHoaDonDatNCC instance);
-    partial void InsertCTKhoHangKM(CTKhoHangKM instance);
-    partial void UpdateCTKhoHangKM(CTKhoHangKM instance);
-    partial void DeleteCTKhoHangKM(CTKhoHangKM instance);
     partial void InsertCTPhieuTraHang(CTPhieuTraHang instance);
     partial void UpdateCTPhieuTraHang(CTPhieuTraHang instance);
     partial void DeleteCTPhieuTraHang(CTPhieuTraHang instance);
@@ -134,14 +131,6 @@ namespace BLL_DAO
 			}
 		}
 		
-		public System.Data.Linq.Table<CTKhoHangKM> CTKhoHangKMs
-		{
-			get
-			{
-				return this.GetTable<CTKhoHangKM>();
-			}
-		}
-		
 		public System.Data.Linq.Table<CTPhieuTraHang> CTPhieuTraHangs
 		{
 			get
@@ -187,14 +176,6 @@ namespace BLL_DAO
 			get
 			{
 				return this.GetTable<KhoSieuThi>();
-			}
-		}
-		
-		public System.Data.Linq.Table<KhoST_> KhoST_s
-		{
-			get
-			{
-				return this.GetTable<KhoST_>();
 			}
 		}
 		
@@ -893,246 +874,6 @@ namespace BLL_DAO
 					if ((value != null))
 					{
 						value.CTHoaDonDatNCCs.Add(this);
-						this._MaSP = value.MaSP;
-					}
-					else
-					{
-						this._MaSP = default(string);
-					}
-					this.SendPropertyChanged("SanPham");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.CTKhoHangKM")]
-	public partial class CTKhoHangKM : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private string _MaKhoKM;
-		
-		private string _MaSP;
-		
-		private System.Nullable<System.DateTime> _NgayKM;
-		
-		private System.Nullable<System.DateTime> _NgayHetHan;
-		
-		private System.Nullable<int> _SoLuong;
-		
-		private EntityRef<KhoHangKM> _KhoHangKM;
-		
-		private EntityRef<SanPham> _SanPham;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnMaKhoKMChanging(string value);
-    partial void OnMaKhoKMChanged();
-    partial void OnMaSPChanging(string value);
-    partial void OnMaSPChanged();
-    partial void OnNgayKMChanging(System.Nullable<System.DateTime> value);
-    partial void OnNgayKMChanged();
-    partial void OnNgayHetHanChanging(System.Nullable<System.DateTime> value);
-    partial void OnNgayHetHanChanged();
-    partial void OnSoLuongChanging(System.Nullable<int> value);
-    partial void OnSoLuongChanged();
-    #endregion
-		
-		public CTKhoHangKM()
-		{
-			this._KhoHangKM = default(EntityRef<KhoHangKM>);
-			this._SanPham = default(EntityRef<SanPham>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaKhoKM", DbType="NVarChar(30) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string MaKhoKM
-		{
-			get
-			{
-				return this._MaKhoKM;
-			}
-			set
-			{
-				if ((this._MaKhoKM != value))
-				{
-					if (this._KhoHangKM.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnMaKhoKMChanging(value);
-					this.SendPropertyChanging();
-					this._MaKhoKM = value;
-					this.SendPropertyChanged("MaKhoKM");
-					this.OnMaKhoKMChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaSP", DbType="NVarChar(30) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string MaSP
-		{
-			get
-			{
-				return this._MaSP;
-			}
-			set
-			{
-				if ((this._MaSP != value))
-				{
-					if (this._SanPham.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnMaSPChanging(value);
-					this.SendPropertyChanging();
-					this._MaSP = value;
-					this.SendPropertyChanged("MaSP");
-					this.OnMaSPChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NgayKM", DbType="Date")]
-		public System.Nullable<System.DateTime> NgayKM
-		{
-			get
-			{
-				return this._NgayKM;
-			}
-			set
-			{
-				if ((this._NgayKM != value))
-				{
-					this.OnNgayKMChanging(value);
-					this.SendPropertyChanging();
-					this._NgayKM = value;
-					this.SendPropertyChanged("NgayKM");
-					this.OnNgayKMChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NgayHetHan", DbType="Date")]
-		public System.Nullable<System.DateTime> NgayHetHan
-		{
-			get
-			{
-				return this._NgayHetHan;
-			}
-			set
-			{
-				if ((this._NgayHetHan != value))
-				{
-					this.OnNgayHetHanChanging(value);
-					this.SendPropertyChanging();
-					this._NgayHetHan = value;
-					this.SendPropertyChanged("NgayHetHan");
-					this.OnNgayHetHanChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SoLuong", DbType="Int")]
-		public System.Nullable<int> SoLuong
-		{
-			get
-			{
-				return this._SoLuong;
-			}
-			set
-			{
-				if ((this._SoLuong != value))
-				{
-					this.OnSoLuongChanging(value);
-					this.SendPropertyChanging();
-					this._SoLuong = value;
-					this.SendPropertyChanged("SoLuong");
-					this.OnSoLuongChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="KhoHangKM_CTKhoHangKM", Storage="_KhoHangKM", ThisKey="MaKhoKM", OtherKey="MaKhoKM", IsForeignKey=true)]
-		public KhoHangKM KhoHangKM
-		{
-			get
-			{
-				return this._KhoHangKM.Entity;
-			}
-			set
-			{
-				KhoHangKM previousValue = this._KhoHangKM.Entity;
-				if (((previousValue != value) 
-							|| (this._KhoHangKM.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._KhoHangKM.Entity = null;
-						previousValue.CTKhoHangKMs.Remove(this);
-					}
-					this._KhoHangKM.Entity = value;
-					if ((value != null))
-					{
-						value.CTKhoHangKMs.Add(this);
-						this._MaKhoKM = value.MaKhoKM;
-					}
-					else
-					{
-						this._MaKhoKM = default(string);
-					}
-					this.SendPropertyChanged("KhoHangKM");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="SanPham_CTKhoHangKM", Storage="_SanPham", ThisKey="MaSP", OtherKey="MaSP", IsForeignKey=true)]
-		public SanPham SanPham
-		{
-			get
-			{
-				return this._SanPham.Entity;
-			}
-			set
-			{
-				SanPham previousValue = this._SanPham.Entity;
-				if (((previousValue != value) 
-							|| (this._SanPham.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._SanPham.Entity = null;
-						previousValue.CTKhoHangKMs.Remove(this);
-					}
-					this._SanPham.Entity = value;
-					if ((value != null))
-					{
-						value.CTKhoHangKMs.Add(this);
 						this._MaSP = value.MaSP;
 					}
 					else
@@ -2183,11 +1924,17 @@ namespace BLL_DAO
 		
 		private int _MaST;
 		
-		private string _MaKhoKM;
+		private string _MaSP;
 		
-		private EntitySet<CTKhoHangKM> _CTKhoHangKMs;
+		private System.Nullable<System.DateTime> _NgayKM;
+		
+		private System.Nullable<System.DateTime> _NgayHetHan;
+		
+		private System.Nullable<int> _SoLuong;
 		
 		private EntityRef<SieuThi> _SieuThi;
+		
+		private EntityRef<SanPham> _SanPham;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -2195,18 +1942,24 @@ namespace BLL_DAO
     partial void OnCreated();
     partial void OnMaSTChanging(int value);
     partial void OnMaSTChanged();
-    partial void OnMaKhoKMChanging(string value);
-    partial void OnMaKhoKMChanged();
+    partial void OnMaSPChanging(string value);
+    partial void OnMaSPChanged();
+    partial void OnNgayKMChanging(System.Nullable<System.DateTime> value);
+    partial void OnNgayKMChanged();
+    partial void OnNgayHetHanChanging(System.Nullable<System.DateTime> value);
+    partial void OnNgayHetHanChanged();
+    partial void OnSoLuongChanging(System.Nullable<int> value);
+    partial void OnSoLuongChanged();
     #endregion
 		
 		public KhoHangKM()
 		{
-			this._CTKhoHangKMs = new EntitySet<CTKhoHangKM>(new Action<CTKhoHangKM>(this.attach_CTKhoHangKMs), new Action<CTKhoHangKM>(this.detach_CTKhoHangKMs));
 			this._SieuThi = default(EntityRef<SieuThi>);
+			this._SanPham = default(EntityRef<SanPham>);
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaST", DbType="Int NOT NULL")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaST", DbType="Int NOT NULL", IsPrimaryKey=true)]
 		public int MaST
 		{
 			get
@@ -2230,36 +1983,87 @@ namespace BLL_DAO
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaKhoKM", DbType="NVarChar(30) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string MaKhoKM
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaSP", DbType="NVarChar(30) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string MaSP
 		{
 			get
 			{
-				return this._MaKhoKM;
+				return this._MaSP;
 			}
 			set
 			{
-				if ((this._MaKhoKM != value))
+				if ((this._MaSP != value))
 				{
-					this.OnMaKhoKMChanging(value);
+					if (this._SanPham.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnMaSPChanging(value);
 					this.SendPropertyChanging();
-					this._MaKhoKM = value;
-					this.SendPropertyChanged("MaKhoKM");
-					this.OnMaKhoKMChanged();
+					this._MaSP = value;
+					this.SendPropertyChanged("MaSP");
+					this.OnMaSPChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="KhoHangKM_CTKhoHangKM", Storage="_CTKhoHangKMs", ThisKey="MaKhoKM", OtherKey="MaKhoKM")]
-		public EntitySet<CTKhoHangKM> CTKhoHangKMs
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NgayKM", DbType="Date")]
+		public System.Nullable<System.DateTime> NgayKM
 		{
 			get
 			{
-				return this._CTKhoHangKMs;
+				return this._NgayKM;
 			}
 			set
 			{
-				this._CTKhoHangKMs.Assign(value);
+				if ((this._NgayKM != value))
+				{
+					this.OnNgayKMChanging(value);
+					this.SendPropertyChanging();
+					this._NgayKM = value;
+					this.SendPropertyChanged("NgayKM");
+					this.OnNgayKMChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NgayHetHan", DbType="Date")]
+		public System.Nullable<System.DateTime> NgayHetHan
+		{
+			get
+			{
+				return this._NgayHetHan;
+			}
+			set
+			{
+				if ((this._NgayHetHan != value))
+				{
+					this.OnNgayHetHanChanging(value);
+					this.SendPropertyChanging();
+					this._NgayHetHan = value;
+					this.SendPropertyChanged("NgayHetHan");
+					this.OnNgayHetHanChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SoLuong", DbType="Int")]
+		public System.Nullable<int> SoLuong
+		{
+			get
+			{
+				return this._SoLuong;
+			}
+			set
+			{
+				if ((this._SoLuong != value))
+				{
+					this.OnSoLuongChanging(value);
+					this.SendPropertyChanging();
+					this._SoLuong = value;
+					this.SendPropertyChanged("SoLuong");
+					this.OnSoLuongChanged();
+				}
 			}
 		}
 		
@@ -2297,6 +2101,40 @@ namespace BLL_DAO
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="SanPham_KhoHangKM", Storage="_SanPham", ThisKey="MaSP", OtherKey="MaSP", IsForeignKey=true)]
+		public SanPham SanPham
+		{
+			get
+			{
+				return this._SanPham.Entity;
+			}
+			set
+			{
+				SanPham previousValue = this._SanPham.Entity;
+				if (((previousValue != value) 
+							|| (this._SanPham.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._SanPham.Entity = null;
+						previousValue.KhoHangKMs.Remove(this);
+					}
+					this._SanPham.Entity = value;
+					if ((value != null))
+					{
+						value.KhoHangKMs.Add(this);
+						this._MaSP = value.MaSP;
+					}
+					else
+					{
+						this._MaSP = default(string);
+					}
+					this.SendPropertyChanged("SanPham");
+				}
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -2315,18 +2153,6 @@ namespace BLL_DAO
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
-		}
-		
-		private void attach_CTKhoHangKMs(CTKhoHangKM entity)
-		{
-			this.SendPropertyChanging();
-			entity.KhoHangKM = this;
-		}
-		
-		private void detach_CTKhoHangKMs(CTKhoHangKM entity)
-		{
-			this.SendPropertyChanging();
-			entity.KhoHangKM = null;
 		}
 	}
 	
@@ -2518,69 +2344,6 @@ namespace BLL_DAO
 			if ((this.PropertyChanged != null))
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.KhoST$")]
-	public partial class KhoST_
-	{
-		
-		private System.Nullable<double> _MaST;
-		
-		private string _MASP;
-		
-		private System.Nullable<double> _SOLUONG;
-		
-		public KhoST_()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaST", DbType="Float")]
-		public System.Nullable<double> MaST
-		{
-			get
-			{
-				return this._MaST;
-			}
-			set
-			{
-				if ((this._MaST != value))
-				{
-					this._MaST = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MASP", DbType="NVarChar(255)")]
-		public string MASP
-		{
-			get
-			{
-				return this._MASP;
-			}
-			set
-			{
-				if ((this._MASP != value))
-				{
-					this._MASP = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SOLUONG", DbType="Float")]
-		public System.Nullable<double> SOLUONG
-		{
-			get
-			{
-				return this._SOLUONG;
-			}
-			set
-			{
-				if ((this._SOLUONG != value))
-				{
-					this._SOLUONG = value;
-				}
 			}
 		}
 	}
@@ -3337,11 +3100,11 @@ namespace BLL_DAO
 		
 		private int _MaPXK;
 		
+		private System.Nullable<int> _MaDH;
+		
 		private System.Nullable<int> _MaST;
 		
 		private string _NguoiLapPhieu;
-		
-		private System.Nullable<int> _MaDH;
 		
 		private System.Nullable<int> _TongTien;
 		
@@ -3361,12 +3124,12 @@ namespace BLL_DAO
     partial void OnCreated();
     partial void OnMaPXKChanging(int value);
     partial void OnMaPXKChanged();
+    partial void OnMaDHChanging(System.Nullable<int> value);
+    partial void OnMaDHChanged();
     partial void OnMaSTChanging(System.Nullable<int> value);
     partial void OnMaSTChanged();
     partial void OnNguoiLapPhieuChanging(string value);
     partial void OnNguoiLapPhieuChanged();
-    partial void OnMaDHChanging(System.Nullable<int> value);
-    partial void OnMaDHChanged();
     partial void OnTongTienChanging(System.Nullable<int> value);
     partial void OnTongTienChanged();
     partial void OnNgayXuatChanging(System.Nullable<System.DateTime> value);
@@ -3399,6 +3162,30 @@ namespace BLL_DAO
 					this._MaPXK = value;
 					this.SendPropertyChanged("MaPXK");
 					this.OnMaPXKChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaDH", DbType="Int")]
+		public System.Nullable<int> MaDH
+		{
+			get
+			{
+				return this._MaDH;
+			}
+			set
+			{
+				if ((this._MaDH != value))
+				{
+					if (this._DonDatHang.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnMaDHChanging(value);
+					this.SendPropertyChanging();
+					this._MaDH = value;
+					this.SendPropertyChanged("MaDH");
+					this.OnMaDHChanged();
 				}
 			}
 		}
@@ -3443,30 +3230,6 @@ namespace BLL_DAO
 					this._NguoiLapPhieu = value;
 					this.SendPropertyChanged("NguoiLapPhieu");
 					this.OnNguoiLapPhieuChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaDH", DbType="Int")]
-		public System.Nullable<int> MaDH
-		{
-			get
-			{
-				return this._MaDH;
-			}
-			set
-			{
-				if ((this._MaDH != value))
-				{
-					if (this._DonDatHang.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnMaDHChanging(value);
-					this.SendPropertyChanging();
-					this._MaDH = value;
-					this.SendPropertyChanged("MaDH");
-					this.OnMaDHChanged();
 				}
 			}
 		}
@@ -3673,11 +3436,11 @@ namespace BLL_DAO
 		
 		private EntitySet<CTHoaDonDatNCC> _CTHoaDonDatNCCs;
 		
-		private EntitySet<CTKhoHangKM> _CTKhoHangKMs;
-		
 		private EntitySet<CTPhieuTraHang> _CTPhieuTraHangs;
 		
 		private EntitySet<CTPhieuXuatKho> _CTPhieuXuatKhos;
+		
+		private EntitySet<KhoHangKM> _KhoHangKMs;
 		
 		private EntitySet<KhoSieuThi> _KhoSieuThis;
 		
@@ -3713,9 +3476,9 @@ namespace BLL_DAO
 		{
 			this._CTDonDatHangs = new EntitySet<CTDonDatHang>(new Action<CTDonDatHang>(this.attach_CTDonDatHangs), new Action<CTDonDatHang>(this.detach_CTDonDatHangs));
 			this._CTHoaDonDatNCCs = new EntitySet<CTHoaDonDatNCC>(new Action<CTHoaDonDatNCC>(this.attach_CTHoaDonDatNCCs), new Action<CTHoaDonDatNCC>(this.detach_CTHoaDonDatNCCs));
-			this._CTKhoHangKMs = new EntitySet<CTKhoHangKM>(new Action<CTKhoHangKM>(this.attach_CTKhoHangKMs), new Action<CTKhoHangKM>(this.detach_CTKhoHangKMs));
 			this._CTPhieuTraHangs = new EntitySet<CTPhieuTraHang>(new Action<CTPhieuTraHang>(this.attach_CTPhieuTraHangs), new Action<CTPhieuTraHang>(this.detach_CTPhieuTraHangs));
 			this._CTPhieuXuatKhos = new EntitySet<CTPhieuXuatKho>(new Action<CTPhieuXuatKho>(this.attach_CTPhieuXuatKhos), new Action<CTPhieuXuatKho>(this.detach_CTPhieuXuatKhos));
+			this._KhoHangKMs = new EntitySet<KhoHangKM>(new Action<KhoHangKM>(this.attach_KhoHangKMs), new Action<KhoHangKM>(this.detach_KhoHangKMs));
 			this._KhoSieuThis = new EntitySet<KhoSieuThi>(new Action<KhoSieuThi>(this.attach_KhoSieuThis), new Action<KhoSieuThi>(this.detach_KhoSieuThis));
 			this._LoaiSP = default(EntityRef<LoaiSP>);
 			this._NhaCungCap = default(EntityRef<NhaCungCap>);
@@ -3936,19 +3699,6 @@ namespace BLL_DAO
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="SanPham_CTKhoHangKM", Storage="_CTKhoHangKMs", ThisKey="MaSP", OtherKey="MaSP")]
-		public EntitySet<CTKhoHangKM> CTKhoHangKMs
-		{
-			get
-			{
-				return this._CTKhoHangKMs;
-			}
-			set
-			{
-				this._CTKhoHangKMs.Assign(value);
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="SanPham_CTPhieuTraHang", Storage="_CTPhieuTraHangs", ThisKey="MaSP", OtherKey="MaSP")]
 		public EntitySet<CTPhieuTraHang> CTPhieuTraHangs
 		{
@@ -3972,6 +3722,19 @@ namespace BLL_DAO
 			set
 			{
 				this._CTPhieuXuatKhos.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="SanPham_KhoHangKM", Storage="_KhoHangKMs", ThisKey="MaSP", OtherKey="MaSP")]
+		public EntitySet<KhoHangKM> KhoHangKMs
+		{
+			get
+			{
+				return this._KhoHangKMs;
+			}
+			set
+			{
+				this._KhoHangKMs.Assign(value);
 			}
 		}
 		
@@ -4100,18 +3863,6 @@ namespace BLL_DAO
 			entity.SanPham = null;
 		}
 		
-		private void attach_CTKhoHangKMs(CTKhoHangKM entity)
-		{
-			this.SendPropertyChanging();
-			entity.SanPham = this;
-		}
-		
-		private void detach_CTKhoHangKMs(CTKhoHangKM entity)
-		{
-			this.SendPropertyChanging();
-			entity.SanPham = null;
-		}
-		
 		private void attach_CTPhieuTraHangs(CTPhieuTraHang entity)
 		{
 			this.SendPropertyChanging();
@@ -4131,6 +3882,18 @@ namespace BLL_DAO
 		}
 		
 		private void detach_CTPhieuXuatKhos(CTPhieuXuatKho entity)
+		{
+			this.SendPropertyChanging();
+			entity.SanPham = null;
+		}
+		
+		private void attach_KhoHangKMs(KhoHangKM entity)
+		{
+			this.SendPropertyChanging();
+			entity.SanPham = this;
+		}
+		
+		private void detach_KhoHangKMs(KhoHangKM entity)
 		{
 			this.SendPropertyChanging();
 			entity.SanPham = null;

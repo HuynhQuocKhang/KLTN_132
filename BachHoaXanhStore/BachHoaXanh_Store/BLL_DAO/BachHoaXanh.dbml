@@ -32,17 +32,6 @@
       <Association Name="SanPham_CTHoaDonDatNCC" Member="SanPham" ThisKey="MaSP" OtherKey="MaSP" Type="SanPham" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.CTKhoHangKM" Member="CTKhoHangKMs">
-    <Type Name="CTKhoHangKM">
-      <Column Name="MaKhoKM" Type="System.String" DbType="NVarChar(30) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="MaSP" Type="System.String" DbType="NVarChar(30) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="NgayKM" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-      <Column Name="NgayHetHan" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-      <Column Name="SoLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="KhoHangKM_CTKhoHangKM" Member="KhoHangKM" ThisKey="MaKhoKM" OtherKey="MaKhoKM" Type="KhoHangKM" IsForeignKey="true" />
-      <Association Name="SanPham_CTKhoHangKM" Member="SanPham" ThisKey="MaSP" OtherKey="MaSP" Type="SanPham" IsForeignKey="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.CTPhieuTraHang" Member="CTPhieuTraHangs">
     <Type Name="CTPhieuTraHang">
       <Column Name="MaPTH" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -92,10 +81,13 @@
   </Table>
   <Table Name="dbo.KhoHangKM" Member="KhoHangKMs">
     <Type Name="KhoHangKM">
-      <Column Name="MaST" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="MaKhoKM" Type="System.String" DbType="NVarChar(30) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Association Name="KhoHangKM_CTKhoHangKM" Member="CTKhoHangKMs" ThisKey="MaKhoKM" OtherKey="MaKhoKM" Type="CTKhoHangKM" />
+      <Column Name="MaST" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaSP" Type="System.String" DbType="NVarChar(30) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NgayKM" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="NgayHetHan" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="SoLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="SieuThi_KhoHangKM" Member="SieuThi" ThisKey="MaST" OtherKey="MaST" Type="SieuThi" IsForeignKey="true" />
+      <Association Name="SanPham_KhoHangKM" Member="SanPham" ThisKey="MaSP" OtherKey="MaSP" Type="SanPham" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.KhoSieuThi" Member="KhoSieuThis">
@@ -105,13 +97,6 @@
       <Column Name="SoLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="SieuThi_KhoSieuThi" Member="SieuThi" ThisKey="MaST" OtherKey="MaST" Type="SieuThi" IsForeignKey="true" />
       <Association Name="SanPham_KhoSieuThi" Member="SanPham" ThisKey="MaSP" OtherKey="MaSP" Type="SanPham" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.KhoST$" Member="KhoST_s">
-    <Type Name="KhoST_">
-      <Column Name="MaST" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="MASP" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="SOLUONG" Type="System.Double" DbType="Float" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.LoaiSP" Member="LoaiSPs">
@@ -157,9 +142,9 @@
   <Table Name="dbo.PhieuXuatKho" Member="PhieuXuatKhos">
     <Type Name="PhieuXuatKho">
       <Column Name="MaPXK" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MaDH" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="MaST" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="NguoiLapPhieu" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
-      <Column Name="MaDH" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="TongTien" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="NgayXuat" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Column Name="Isdeleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
@@ -181,9 +166,9 @@
       <Column Name="Isdeleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
       <Association Name="SanPham_CTDonDatHang" Member="CTDonDatHangs" ThisKey="MaSP" OtherKey="MaSP" Type="CTDonDatHang" />
       <Association Name="SanPham_CTHoaDonDatNCC" Member="CTHoaDonDatNCCs" ThisKey="MaSP" OtherKey="MaSP" Type="CTHoaDonDatNCC" />
-      <Association Name="SanPham_CTKhoHangKM" Member="CTKhoHangKMs" ThisKey="MaSP" OtherKey="MaSP" Type="CTKhoHangKM" />
       <Association Name="SanPham_CTPhieuTraHang" Member="CTPhieuTraHangs" ThisKey="MaSP" OtherKey="MaSP" Type="CTPhieuTraHang" />
       <Association Name="SanPham_CTPhieuXuatKho" Member="CTPhieuXuatKhos" ThisKey="MaSP" OtherKey="MaSP" Type="CTPhieuXuatKho" />
+      <Association Name="SanPham_KhoHangKM" Member="KhoHangKMs" ThisKey="MaSP" OtherKey="MaSP" Type="KhoHangKM" />
       <Association Name="SanPham_KhoSieuThi" Member="KhoSieuThis" ThisKey="MaSP" OtherKey="MaSP" Type="KhoSieuThi" />
       <Association Name="LoaiSP_SanPham" Member="LoaiSP" ThisKey="MaLoaiSP" OtherKey="MaLoaiSP" Type="LoaiSP" IsForeignKey="true" />
       <Association Name="NhaCungCap_SanPham" Member="NhaCungCap" ThisKey="MaNCC" OtherKey="MaNCC" Type="NhaCungCap" IsForeignKey="true" />

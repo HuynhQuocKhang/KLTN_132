@@ -28,4 +28,18 @@ namespace BO
         public int? GiaVon { get; set; }
         public int? SoLuong { get; set; }
     }
+
+    public class ProductPromotionBO
+    {
+        public string MaSP { get; set; }
+        public string TenSP { get; set; }
+        public int? MaLoaiSP { get; set; }
+        public string TenLoaiSP { get; set; }
+        public int? MaNCC { get; set; }
+        public string TenNCC { get; set; }
+        public string DVT { get; set; }
+        public int? SoLuong { get; set; }
+        public DateTime? NgayKM { get; set; }
+        public DateTime? NgayHetHan { get; set; }
+    }
 }

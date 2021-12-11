@@ -81,21 +81,13 @@ create table KhoSieuThi
 create table KhoHangKM
 (
 	MaST int not null,
-	MaKhoKM nvarchar(30) not null,
-	constraint PK_KhoHangKM primary key (MaKhoKM),
-	constraint FK_KhoHangKM_SieuThi foreign key (MaST) references SieuThi(MaST)
-)
-
-create table CTKhoHangKM
-(
-	MaKhoKM nvarchar(30) not null, 
 	MaSP nvarchar(30) not null,
 	NgayKM date,
 	NgayHetHan date,
-	SoLuong int, 
-	constraint PK_CTKhoKM primary key (MaKhoKM,MaSP),
-	constraint FK_CTKhoKM_KhoHangKM foreign key (MaKhoKM) references KhoHangKM(MaKhoKM),
-	constraint FK_CTKhoKM_SanPham foreign key (MaSP) references SanPham(MaSP)
+	SoLuong int,
+	constraint PK_KhoHangKM primary key (MaST,MaSP),
+	constraint FK_KhoHangKM_SieuThi foreign key (MaST) references SieuThi(MaST),
+	constraint FK_KhoHangKM_SanPham foreign key (MaSP) references SanPham(MaSP)
 )
 
 create table DonDatHang
@@ -214,3 +206,4 @@ select * from PhieuXuatKho
 select * from CTPhieuXuatKho
 select * from DonDatHang
 select * from CTDonDatHang
+SELECT * FROM KhoHangKM
