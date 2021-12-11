@@ -193,9 +193,9 @@ update SanPham
 set SoLuong = 50 where MaSP = '1012841000006'
 
 
+
 select * from HoaDonDatNCC
 select * from CTHoaDonDatNCC
-
 select * from SanPham where SoLuong <= 10
 select * from CTDonDatHang
 
@@ -212,4 +212,5 @@ set UserName = '090900' where UserId = 3
 
 select * from PhieuXuatKho
 select * from CTPhieuXuatKho
-alter table  PhieuXuatKho
+select * from DonDatHang
+select * from CTDonDatHang

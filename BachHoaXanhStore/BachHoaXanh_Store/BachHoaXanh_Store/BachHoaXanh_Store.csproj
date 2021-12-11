@@ -283,6 +283,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportForm\Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportForm\Report.Designer.cs">
+      <DependentUpon>Report.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReportForm\rptDDH_DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -315,6 +321,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>rptPXK_DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm\rptSTDatHang.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportForm\rptSTDatHang.Designer.cs">
+      <DependentUpon>rptSTDatHang.cs</DependentUpon>
     </Compile>
     <Compile Include="test.cs">
       <SubType>Form</SubType>
@@ -382,6 +394,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ReportForm\Report.resx">
+      <DependentUpon>Report.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReportForm\rptDonDatHang.resx">
       <DependentUpon>rptDonDatHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -390,6 +405,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReportForm\rptPhieuXuatKho.resx">
       <DependentUpon>rptPhieuXuatKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\rptSTDatHang.resx">
+      <DependentUpon>rptSTDatHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="test.resx">
       <DependentUpon>test.cs</DependentUpon>

@@ -60,6 +60,7 @@ namespace BachHoaXanh_Store.ReportForm
             this.xrLabel16 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel17 = new DevExpress.XtraReports.UI.XRLabel();
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
+            this.xrLine13 = new DevExpress.XtraReports.UI.XRLine();
             this.xrLine11 = new DevExpress.XtraReports.UI.XRLine();
             this.xrLine9 = new DevExpress.XtraReports.UI.XRLine();
             this.xrLabel15 = new DevExpress.XtraReports.UI.XRLabel();
@@ -71,7 +72,6 @@ namespace BachHoaXanh_Store.ReportForm
             this.xrLine8 = new DevExpress.XtraReports.UI.XRLine();
             this.rptDDH_DataSet1 = new BachHoaXanh_Store.ReportForm.rptDDH_DataSet();
             this.cTHoaDonDatNCCTableAdapter = new BachHoaXanh_Store.ReportForm.rptDDH_DataSetTableAdapters.CTHoaDonDatNCCTableAdapter();
-            this.xrLine13 = new DevExpress.XtraReports.UI.XRLine();
             ((System.ComponentModel.ISupportInitialize)(this.rptDDH_DataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -413,6 +413,12 @@ namespace BachHoaXanh_Store.ReportForm
             this.Detail.HeightF = 34.41536F;
             this.Detail.Name = "Detail";
             // 
+            // xrLine13
+            // 
+            this.xrLine13.LocationFloat = new DevExpress.Utils.PointFloat(8.144526F, 31.46837F);
+            this.xrLine13.Name = "xrLine13";
+            this.xrLine13.SizeF = new System.Drawing.SizeF(634.0001F, 2.946991F);
+            // 
             // xrLine11
             // 
             this.xrLine11.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
@@ -508,12 +514,6 @@ namespace BachHoaXanh_Store.ReportForm
             // cTHoaDonDatNCCTableAdapter
             // 
             this.cTHoaDonDatNCCTableAdapter.ClearBeforeFill = true;
-            // 
-            // xrLine13
-            // 
-            this.xrLine13.LocationFloat = new DevExpress.Utils.PointFloat(8.144526F, 31.46837F);
-            this.xrLine13.Name = "xrLine13";
-            this.xrLine13.SizeF = new System.Drawing.SizeF(634.0001F, 2.946991F);
             // 
             // rptDonDatHang
             // 

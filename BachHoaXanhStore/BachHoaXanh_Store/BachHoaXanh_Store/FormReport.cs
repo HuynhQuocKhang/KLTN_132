@@ -31,6 +31,12 @@ namespace BachHoaXanh_Store
                 documentViewer1.PrintingSystem = rptDDH.PrintingSystem;
                 rptDDH.CreateDocument();
             }
+            else if (reportType == "STDatHang")
+            {
+                Report rptDDHST = new Report();
+                documentViewer1.PrintingSystem = rptDDHST.PrintingSystem;
+                rptDDHST.CreateDocument();
+            }
             else if (reportType == "XuatKho")
             {
                 rptPhieuXuatKho rptPXK = new rptPhieuXuatKho();

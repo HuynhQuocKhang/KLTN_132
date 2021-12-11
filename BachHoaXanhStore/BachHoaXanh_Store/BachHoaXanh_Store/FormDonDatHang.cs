@@ -97,7 +97,7 @@ namespace BachHoaXanh_Store
                     }
                     else
                     {
-                        Program.frmReport = new FormReport("DatHang");
+                        Program.frmReport = new FormReport("STDatHang");
                         Program.frmReport.ShowDialog();
                         MessageBox.Show("Đặt hàng thành công");
                         this.Close();
