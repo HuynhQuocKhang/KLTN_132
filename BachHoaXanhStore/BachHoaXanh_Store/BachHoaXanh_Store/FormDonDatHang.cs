@@ -83,7 +83,6 @@ namespace BachHoaXanh_Store
                 objOrderStoreBO.TongTien = int.Parse(txt_TongTien.Text);
                 objOrderStoreBO.NgayDat = DateTime.Now;
                 objOrderStoreBO.TinhTrang = 0;
-                objOrderStoreBO.Isdeleted = false;
                 if (!objOrderStoreBLL.InsertOrderStore(objOrderStoreBO))
                 {
                     MessageBox.Show("Lỗi trong quá trình thực hiện. Xin vui lòng thử lại sau");

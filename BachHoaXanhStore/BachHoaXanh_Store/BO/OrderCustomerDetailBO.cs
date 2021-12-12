@@ -32,4 +32,14 @@ namespace BO
         public string TenSP { get; set; }
         public int? SoLuong { get; set; }
     }
+
+    public class GetDetailsOrderStoreByOrderIdBO
+    {
+        public string MaSP { get; set; }
+        public string TenSP { get; set; }
+        public int? SoLuong { get; set; }
+        public int? GiaBan { get; set; }
+        public int? ThanhTien { get; set; }
+
+    }
 }

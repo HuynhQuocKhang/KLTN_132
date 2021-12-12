@@ -1,5 +1,6 @@
 ﻿using BLL_DAO;
 using BO;
+using DevExpress.XtraBars;
 using DevExpress.XtraEditors;
 using System;
 using System.Collections.Generic;
@@ -22,8 +23,7 @@ namespace BachHoaXanh_Store
         {
             InitializeComponent();
             lbl_MaST.Text = objStoreBLL.getStoreNameByUser(FormLogin.objUserBO.StoreId);
-            lbl_MaNV.Text =FormLogin.objUserBO.UserName + " - " + FormLogin.objUserBO.UserFullName;
-
+            lbl_MaNV.Text = FormLogin.objUserBO.UserName + " - " + FormLogin.objUserBO.UserFullName;
         }
         private string reportType;
         public string ReportType { get => reportType; set => reportType = value; }
@@ -35,15 +35,15 @@ namespace BachHoaXanh_Store
         public bool IsFormActive(Form pForm)
         {
             bool Isopend = false;
-            if(MdiChildren.Count()>0)
+            if (MdiChildren.Count() > 0)
             {
-                foreach(var item in MdiChildren)
+                foreach (var item in MdiChildren)
                 {
-                    if(pForm.Name==item.Name)
+                    if (pForm.Name == item.Name)
                     {
                         xtraTabbedMdiManager1.Pages[item].MdiChild.Activate();
                         Isopend = true;
-                    }    
+                    }
                 }
             }
             return Isopend;
@@ -51,7 +51,7 @@ namespace BachHoaXanh_Store
 
         public void ViewChildForm(Form pForm)
         {
-            if(!IsFormActive(pForm))
+            if (!IsFormActive(pForm))
             {
                 pForm.MdiParent = this;
                 pForm.Show();
@@ -76,7 +76,7 @@ namespace BachHoaXanh_Store
             reportType = "TraHang";
             label1.Text = "Số sản phẩm trả về";
             label3.Text = "Tổng giá trị trả về";
-            Program.frmTraHangNCC = new  FormTraHangNCC();
+            Program.frmTraHangNCC = new FormTraHangNCC();
             ViewChildForm(Program.frmTraHangNCC);
         }
 
@@ -96,7 +96,7 @@ namespace BachHoaXanh_Store
             bunifuButton1.Visible = false;
             label1.Text = "Số đơn chưa xử lí";
             label3.Text = "Số đơn đã xử lí";
-            Program.frmXemDonDatHang = new  FormXemDonDatHang();
+            Program.frmXemDonDatHang = new FormXemDonDatHang();
             ViewChildForm(Program.frmXemDonDatHang);
         }
 
@@ -118,7 +118,7 @@ namespace BachHoaXanh_Store
             reportType = "TraHang";
             label1.Text = "Số sản phẩm trả về";
             label3.Text = "Tổng giá trị trả về";
-            Program.frmTraHangNCC = new  FormTraHangNCC();
+            Program.frmTraHangNCC = new FormTraHangNCC();
             ViewChildForm(Program.frmTraHangNCC);
         }
 
@@ -128,7 +128,7 @@ namespace BachHoaXanh_Store
             bunifuButton1.Visible = false;
             label1.Text = "Số sản phẩm còn";
             label3.Text = "Số sản phẩm đã hết";
-            Program.frmDanhSachSP = new  FormDanhSachSP();
+            Program.frmDanhSachSP = new FormDanhSachSP();
             ViewChildForm(Program.frmDanhSachSP);
         }
 
@@ -138,7 +138,7 @@ namespace BachHoaXanh_Store
             bunifuButton1.Visible = false;
             label1.Text = "Số đơn chưa xử lí";
             label3.Text = "Số đơn đã xử lí";
-            Program.frmXemDonDatHang = new  FormXemDonDatHang();
+            Program.frmXemDonDatHang = new FormXemDonDatHang();
             ViewChildForm(Program.frmXemDonDatHang);
         }
 
@@ -172,8 +172,8 @@ namespace BachHoaXanh_Store
                     bunifuButton1.Visible = false;
                     label1.Text = "Số sản phẩm còn";
                     label3.Text = "Số sản phẩm đã hết";
-                    
-                    
+
+
                     int intProductStock = 0;
                     int intProductOOT = 0;
                     intProductStock = lstProduct.Count(x => x.SoLuong > 0);
