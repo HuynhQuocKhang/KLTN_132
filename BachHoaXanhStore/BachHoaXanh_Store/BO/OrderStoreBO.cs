@@ -14,7 +14,6 @@ namespace BO
         public DateTime? NgayDat { get; set; }
         public int? TinhTrang { get; set; }
         public int? TongTien { get; set; }
-        public bool Isdeleted { get; set; }
     }
 
     public class GetOrderFromStoreBO

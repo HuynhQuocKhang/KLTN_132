@@ -276,6 +276,74 @@ namespace BLL_DAO
             }
         }
 
+        public List<OrderStoreBO> GetOrderFromStoreBO(int intStoreId, int pTinhTrang, string strkeywords = "")
+        {
+            if (pTinhTrang == 3)
+            {
+                if (intStoreId == 0)
+                {
+                    var model = from objOrderStore in db.DonDatHangs
+                                where objOrderStore.NguoiLapPhieu.ToLower().Contains(strkeywords.ToLower().Trim()) || objOrderStore.MaDH.ToString().Contains(strkeywords.Trim())
+                                select new OrderStoreBO()
+                                {
+                                    MaHD = objOrderStore.MaDH,
+                                    MaST = objOrderStore.MaST,
+                                    NguoiLapPhieu = objOrderStore.NguoiLapPhieu,
+                                    NgayDat = objOrderStore.NgayDat,
+                                    TongTien = objOrderStore.TongTien,
+                                    TinhTrang = objOrderStore.TinhTrang
+                                };
+                    return model.OrderByDescending(x => x.MaHD).ToList();
+                }
+                else
+                {
+                    var model = from objOrderStore in db.DonDatHangs
+                                where objOrderStore.NguoiLapPhieu.ToLower().Contains(strkeywords.ToLower().Trim()) || objOrderStore.MaDH.ToString().Contains(strkeywords.Trim())
+                                select new OrderStoreBO()
+                                {
+                                    MaHD = objOrderStore.MaDH,
+                                    MaST = objOrderStore.MaST,
+                                    NguoiLapPhieu = objOrderStore.NguoiLapPhieu,
+                                    NgayDat = objOrderStore.NgayDat,
+                                    TongTien = objOrderStore.TongTien,
+                                    TinhTrang = objOrderStore.TinhTrang
+                                };
+                    return model.OrderByDescending(x => x.MaHD).Where(x => x.MaST == intStoreId).ToList();
+                }
+            }
+            else
+            {
+                if (intStoreId == 0)
+                {
+                    var model = from objOrderStore in db.DonDatHangs
+                                select new OrderStoreBO()
+                                {
+                                    MaHD = objOrderStore.MaDH,
+                                    MaST = objOrderStore.MaST,
+                                    NguoiLapPhieu = objOrderStore.NguoiLapPhieu,
+                                    NgayDat = objOrderStore.NgayDat,
+                                    TongTien = objOrderStore.TongTien,
+                                    TinhTrang = objOrderStore.TinhTrang
+                                };
+                    return model.OrderByDescending(x => x.MaHD).Where(x => x.TinhTrang == pTinhTrang).ToList();
+                }
+                else
+                {
+                    var model = from objOrderStore in db.DonDatHangs
+                                select new OrderStoreBO()
+                                {
+                                    MaHD = objOrderStore.MaDH,
+                                    MaST = objOrderStore.MaST,
+                                    NguoiLapPhieu = objOrderStore.NguoiLapPhieu,
+                                    NgayDat = objOrderStore.NgayDat,
+                                    TongTien = objOrderStore.TongTien,
+                                    TinhTrang = objOrderStore.TinhTrang
+                                };
+                    return model.OrderByDescending(x => x.MaHD).Where(x => x.TinhTrang == pTinhTrang && x.MaST == intStoreId).ToList();
+                }
+            }
+        }
+
         public bool UpdateOrderStoreStatus(int intOrderStoreId)
         {
             try
