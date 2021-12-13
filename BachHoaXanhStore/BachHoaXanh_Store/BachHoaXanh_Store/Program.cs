@@ -22,6 +22,7 @@ namespace BachHoaXanh_Store
         public static FormReport frmReport = null;
         public static FormBanHang frmBanHang = null;
         public static FormLogin frmLogin = null;
+        public static FormDuyetPhieuTraHang frmDuyetPhieuTraHang = null;
         [STAThread]
         static void Main()
         {
