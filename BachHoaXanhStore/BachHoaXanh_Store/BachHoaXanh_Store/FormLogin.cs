@@ -63,11 +63,7 @@ namespace BachHoaXanh_Store
 
         private void FormLogin_FormClosed(object sender, FormClosedEventArgs e)
         {
-            DialogResult dr = MessageBox.Show("Bạn có muốn thoát", "Thoát?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dr == DialogResult.Yes)
-            {
-                this.Close();
-            }
+            
         }
     }
 }
