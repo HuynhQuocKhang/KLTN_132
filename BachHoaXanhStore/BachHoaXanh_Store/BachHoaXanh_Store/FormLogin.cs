@@ -46,5 +46,28 @@ namespace BachHoaXanh_Store
             }
 
         }
+
+        private void btn_Thoat_Click(object sender, EventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("Bạn có muốn thoát", "Thoát?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dr == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
+
+        private void FormLogin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormLogin_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("Bạn có muốn thoát", "Thoát?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dr == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
     }
 }

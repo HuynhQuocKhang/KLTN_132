@@ -237,5 +237,18 @@ namespace BachHoaXanh_Store
             Program.frmLogin.Show();
             this.Hide();
         }
+
+        private void comboBoxEdit1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxEdit1.SelectedItem.ToString() == "Đăng xuất")
+            {
+                DialogResult dr = MessageBox.Show("Bạn có muốn đăng xuất", "Đăng xuất?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dr == DialogResult.Yes)
+                {
+                    Program.frmLogin.Show();
+                    this.Hide();
+                }
+            }
+        }
     }
 }
