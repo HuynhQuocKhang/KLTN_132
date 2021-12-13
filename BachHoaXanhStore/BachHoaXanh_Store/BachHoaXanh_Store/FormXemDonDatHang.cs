@@ -19,22 +19,48 @@ namespace BachHoaXanh_Store
         public FormXemDonDatHang()
         {
             InitializeComponent();
-            cbo_SieuThi.DataSource = objStoreBLL.GetAllStore();
-            cbo_SieuThi.DisplayMember = "FullName";
-            cbo_SieuThi.ValueMember = "MaST";
+            if (FormLogin.objUserBO.Permission == 1)
+            {
+                cbo_SieuThi.DataSource = objStoreBLL.GetAllStore();
+                cbo_SieuThi.DisplayMember = "FullName";
+                cbo_SieuThi.ValueMember = "MaST";
+            }
+            else
+            {
+                cbo_SieuThi.Text = objStoreBLL.getStoreNameByUser(FormLogin.objUserBO.StoreId);
+                cbo_SieuThi.Enabled = false;
+                chk_AllStore.Visible = false;
+                bunifuCustomLabel1.Visible = false;
+            }
+
             cbo_TinhTrang.SelectedIndex = 3;
         }
 
         private void btn_TimKiem_Click(object sender, EventArgs e)
         {
-            if (chk_AllStore.Checked == true)
+            if (chk_AllStore.Visible == true)
             {
-                dgv_DSDH.DataSource = objOrderStoreBLL.GetOrderFromStoreBO(0,int.Parse(cbo_TinhTrang.SelectedIndex.ToString()), txtKeyword.Text);
+                if (chk_AllStore.Checked == true)
+                {
+                    dgv_DSDH.DataSource = objOrderStoreBLL.GetOrderFromStoreBO(0,int.Parse(cbo_TinhTrang.SelectedIndex.ToString()), txtKeyword.Text);
+                }
+                else
+                {
+                    dgv_DSDH.DataSource = objOrderStoreBLL.GetOrderFromStoreBO(int.Parse(cbo_SieuThi.SelectedValue.ToString()),int.Parse(cbo_TinhTrang.SelectedIndex.ToString()), txtKeyword.Text);
+                }
             }
             else
             {
-                dgv_DSDH.DataSource = objOrderStoreBLL.GetOrderFromStoreBO(int.Parse(cbo_SieuThi.SelectedValue.ToString()), int.Parse(cbo_TinhTrang.SelectedIndex.ToString()), txtKeyword.Text);
-            }
+                if (chk_AllStore.Checked == true)
+                {
+                    dgv_DSDH.DataSource = objOrderStoreBLL.GetOrderFromStoreBO(0, int.Parse(cbo_TinhTrang.SelectedIndex.ToString()), txtKeyword.Text);
+                }
+                else
+                {
+                    dgv_DSDH.DataSource = objOrderStoreBLL.GetOrderFromStoreBO(int.Parse(cbo_SieuThi.SelectedValue.ToString()),int.Parse(cbo_TinhTrang.SelectedIndex.ToString()), txtKeyword.Text);
+                }
+            }    
+
         }
 
         private void chk_AllStore_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs e)
