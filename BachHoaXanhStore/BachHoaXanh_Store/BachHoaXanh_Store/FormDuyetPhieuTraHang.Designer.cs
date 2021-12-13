@@ -97,8 +97,8 @@ namespace BachHoaXanh_Store
             // 
             this.tableLayoutPanel1.ColumnCount = 4;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 624F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.bunifuCustomDataGrid2, 2, 3);
@@ -111,8 +111,8 @@ namespace BachHoaXanh_Store
             this.tableLayoutPanel1.RowCount = 5;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 70F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.059022F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 94.94098F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1334, 736);
             this.tableLayoutPanel1.TabIndex = 1;
@@ -123,7 +123,7 @@ namespace BachHoaXanh_Store
             this.tableLayoutPanel1.SetColumnSpan(this.tableLayoutPanel2, 2);
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.00001F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 258F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 259F));
             this.tableLayoutPanel2.Controls.Add(this.bunifuTextBox1, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.cbo_MaSieuThi, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btn_TimKiem, 2, 0);
@@ -201,7 +201,7 @@ namespace BachHoaXanh_Store
             this.bunifuTextBox1.SelectionLength = 0;
             this.bunifuTextBox1.SelectionStart = 0;
             this.bunifuTextBox1.ShortcutsEnabled = true;
-            this.bunifuTextBox1.Size = new System.Drawing.Size(509, 34);
+            this.bunifuTextBox1.Size = new System.Drawing.Size(508, 34);
             this.bunifuTextBox1.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.bunifuTextBox1.TabIndex = 2;
             this.bunifuTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -283,7 +283,7 @@ namespace BachHoaXanh_Store
             this.btn_TimKiem.IdleIconLeftImage = null;
             this.btn_TimKiem.IdleIconRightImage = null;
             this.btn_TimKiem.IndicateFocus = false;
-            this.btn_TimKiem.Location = new System.Drawing.Point(1032, 3);
+            this.btn_TimKiem.Location = new System.Drawing.Point(1031, 3);
             this.btn_TimKiem.Name = "btn_TimKiem";
             stateProperties5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(221)))), ((int)(((byte)(158)))));
             stateProperties5.BorderRadius = 35;
@@ -303,7 +303,7 @@ namespace BachHoaXanh_Store
             stateProperties6.IconLeftImage = null;
             stateProperties6.IconRightImage = null;
             this.btn_TimKiem.OnPressedState = stateProperties6;
-            this.btn_TimKiem.Size = new System.Drawing.Size(253, 34);
+            this.btn_TimKiem.Size = new System.Drawing.Size(254, 34);
             this.btn_TimKiem.TabIndex = 7;
             this.btn_TimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_TimKiem.TextMarginLeft = 0;
@@ -412,7 +412,7 @@ namespace BachHoaXanh_Store
             this.bunifuCustomDataGrid2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(186)))), ((int)(((byte)(27)))));
             this.bunifuCustomDataGrid2.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(139)))), ((int)(((byte)(125)))));
             this.bunifuCustomDataGrid2.HeaderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(223)))), ((int)(((byte)(135)))));
-            this.bunifuCustomDataGrid2.Location = new System.Drawing.Point(647, 129);
+            this.bunifuCustomDataGrid2.Location = new System.Drawing.Point(670, 127);
             this.bunifuCustomDataGrid2.Name = "bunifuCustomDataGrid2";
             this.bunifuCustomDataGrid2.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -423,7 +423,7 @@ namespace BachHoaXanh_Store
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.bunifuCustomDataGrid2.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.bunifuCustomDataGrid2.Size = new System.Drawing.Size(664, 564);
+            this.bunifuCustomDataGrid2.Size = new System.Drawing.Size(641, 567);
             this.bunifuCustomDataGrid2.TabIndex = 8;
             // 
             // col_MaSP
@@ -490,7 +490,7 @@ namespace BachHoaXanh_Store
             this.bunifuCustomDataGrid1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(186)))), ((int)(((byte)(27)))));
             this.bunifuCustomDataGrid1.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(139)))), ((int)(((byte)(125)))));
             this.bunifuCustomDataGrid1.HeaderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(223)))), ((int)(((byte)(135)))));
-            this.bunifuCustomDataGrid1.Location = new System.Drawing.Point(23, 129);
+            this.bunifuCustomDataGrid1.Location = new System.Drawing.Point(23, 127);
             this.bunifuCustomDataGrid1.Name = "bunifuCustomDataGrid1";
             this.bunifuCustomDataGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -501,7 +501,7 @@ namespace BachHoaXanh_Store
             dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.bunifuCustomDataGrid1.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            this.bunifuCustomDataGrid1.Size = new System.Drawing.Size(618, 564);
+            this.bunifuCustomDataGrid1.Size = new System.Drawing.Size(641, 567);
             this.bunifuCustomDataGrid1.TabIndex = 0;
             // 
             // col_MaDH
@@ -542,17 +542,17 @@ namespace BachHoaXanh_Store
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(23, 99);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(618, 24);
+            this.panel2.Size = new System.Drawing.Size(641, 22);
             this.panel2.TabIndex = 8;
             // 
             // bunifuCustomLabel2
             // 
             this.bunifuCustomLabel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.bunifuCustomLabel2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(453, 0);
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(476, 0);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
             this.bunifuCustomLabel2.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.bunifuCustomLabel2.Size = new System.Drawing.Size(144, 24);
+            this.bunifuCustomLabel2.Size = new System.Drawing.Size(144, 22);
             this.bunifuCustomLabel2.TabIndex = 1;
             this.bunifuCustomLabel2.Text = "Chọn tất cả";
             this.bunifuCustomLabel2.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -576,7 +576,7 @@ namespace BachHoaXanh_Store
             this.chk_SelectAll.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chk_SelectAll.CustomCheckmarkImage = null;
             this.chk_SelectAll.Dock = System.Windows.Forms.DockStyle.Right;
-            this.chk_SelectAll.Location = new System.Drawing.Point(597, 0);
+            this.chk_SelectAll.Location = new System.Drawing.Point(620, 0);
             this.chk_SelectAll.MinimumSize = new System.Drawing.Size(17, 17);
             this.chk_SelectAll.Name = "chk_SelectAll";
             this.chk_SelectAll.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(186)))), ((int)(((byte)(27)))));
@@ -616,9 +616,9 @@ namespace BachHoaXanh_Store
             this.panel4.Controls.Add(this.bunifuButton2);
             this.panel4.Controls.Add(this.btn_DuyetDonTraHang);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(647, 699);
+            this.panel4.Location = new System.Drawing.Point(670, 700);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(664, 34);
+            this.panel4.Size = new System.Drawing.Size(641, 33);
             this.panel4.TabIndex = 9;
             // 
             // bunifuButton2
@@ -659,7 +659,7 @@ namespace BachHoaXanh_Store
             this.bunifuButton2.IdleIconLeftImage = null;
             this.bunifuButton2.IdleIconRightImage = null;
             this.bunifuButton2.IndicateFocus = false;
-            this.bunifuButton2.Location = new System.Drawing.Point(152, 0);
+            this.bunifuButton2.Location = new System.Drawing.Point(141, 0);
             this.bunifuButton2.Name = "bunifuButton2";
             stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(221)))), ((int)(((byte)(158)))));
             stateProperties7.BorderRadius = 35;
@@ -679,7 +679,7 @@ namespace BachHoaXanh_Store
             stateProperties8.IconLeftImage = null;
             stateProperties8.IconRightImage = null;
             this.bunifuButton2.OnPressedState = stateProperties8;
-            this.bunifuButton2.Size = new System.Drawing.Size(256, 34);
+            this.bunifuButton2.Size = new System.Drawing.Size(250, 33);
             this.bunifuButton2.TabIndex = 19;
             this.bunifuButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuButton2.TextMarginLeft = 0;
@@ -723,7 +723,7 @@ namespace BachHoaXanh_Store
             this.btn_DuyetDonTraHang.IdleIconLeftImage = null;
             this.btn_DuyetDonTraHang.IdleIconRightImage = null;
             this.btn_DuyetDonTraHang.IndicateFocus = false;
-            this.btn_DuyetDonTraHang.Location = new System.Drawing.Point(408, 0);
+            this.btn_DuyetDonTraHang.Location = new System.Drawing.Point(391, 0);
             this.btn_DuyetDonTraHang.Name = "btn_DuyetDonTraHang";
             stateProperties9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(221)))), ((int)(((byte)(158)))));
             stateProperties9.BorderRadius = 35;
@@ -743,7 +743,7 @@ namespace BachHoaXanh_Store
             stateProperties10.IconLeftImage = null;
             stateProperties10.IconRightImage = null;
             this.btn_DuyetDonTraHang.OnPressedState = stateProperties10;
-            this.btn_DuyetDonTraHang.Size = new System.Drawing.Size(256, 34);
+            this.btn_DuyetDonTraHang.Size = new System.Drawing.Size(250, 33);
             this.btn_DuyetDonTraHang.TabIndex = 15;
             this.btn_DuyetDonTraHang.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_DuyetDonTraHang.TextMarginLeft = 0;

@@ -113,13 +113,7 @@ namespace BachHoaXanh_Store
 
         private void accordionControlElement4_Click(object sender, EventArgs e)
         {
-            panel9.Visible = true;
-            bunifuButton1.Visible = true;
-            reportType = "TraHang";
-            label1.Text = "Số sản phẩm trả về";
-            label3.Text = "Tổng giá trị trả về";
-            Program.frmTraHangNCC = new FormTraHangNCC();
-            ViewChildForm(Program.frmTraHangNCC);
+            
         }
 
         private void accordionControlElement5_Click(object sender, EventArgs e)
@@ -249,6 +243,28 @@ namespace BachHoaXanh_Store
                     this.Hide();
                 }
             }
+        }
+
+        private void accordionControlElement10_Click(object sender, EventArgs e)
+        {
+            panel9.Visible = true;
+            bunifuButton1.Visible = true;
+            reportType = "TraHang";
+            label1.Text = "Số sản phẩm trả về";
+            label3.Text = "Tổng giá trị trả về";
+            Program.frmTraHangNCC = new FormTraHangNCC();
+            ViewChildForm(Program.frmTraHangNCC);
+        }
+
+        private void accordionControlElement11_Click(object sender, EventArgs e)
+        {
+            panel9.Visible = true;
+            bunifuButton1.Visible = true;
+            reportType = "DuyetTraHang";
+            label1.Text = "Số đơn đã duyệt";
+            label3.Text = "Số đơn chưa duyệt";
+            Program.frmDuyetPhieuTraHang = new FormDuyetPhieuTraHang();
+            ViewChildForm(Program.frmDuyetPhieuTraHang);
         }
     }
 }

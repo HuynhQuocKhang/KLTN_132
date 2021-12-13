@@ -88,6 +88,8 @@ namespace BachHoaXanh_Store
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.panel9 = new System.Windows.Forms.Panel();
             this.miniToolStrip = new System.Windows.Forms.MenuStrip();
+            this.accordionControlElement10 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement11 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -133,7 +135,7 @@ namespace BachHoaXanh_Store
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.84746F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.15254F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 28F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 46F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 47F));
             this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel3, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel4, 3, 1);
@@ -153,7 +155,7 @@ namespace BachHoaXanh_Store
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(181, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(328, 16);
+            this.panel2.Size = new System.Drawing.Size(327, 16);
             this.panel2.TabIndex = 0;
             // 
             // lbl_MaST
@@ -163,7 +165,7 @@ namespace BachHoaXanh_Store
             this.lbl_MaST.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(247)))), ((int)(((byte)(228)))));
             this.lbl_MaST.Location = new System.Drawing.Point(0, 0);
             this.lbl_MaST.Name = "lbl_MaST";
-            this.lbl_MaST.Size = new System.Drawing.Size(328, 16);
+            this.lbl_MaST.Size = new System.Drawing.Size(327, 16);
             this.lbl_MaST.TabIndex = 0;
             this.lbl_MaST.Text = "Mã siêu thị";
             this.lbl_MaST.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -175,7 +177,7 @@ namespace BachHoaXanh_Store
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(181, 25);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(328, 30);
+            this.panel3.Size = new System.Drawing.Size(327, 30);
             this.panel3.TabIndex = 1;
             // 
             // lbl_MaNV
@@ -185,7 +187,7 @@ namespace BachHoaXanh_Store
             this.lbl_MaNV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(247)))), ((int)(((byte)(228)))));
             this.lbl_MaNV.Location = new System.Drawing.Point(0, 0);
             this.lbl_MaNV.Name = "lbl_MaNV";
-            this.lbl_MaNV.Size = new System.Drawing.Size(328, 30);
+            this.lbl_MaNV.Size = new System.Drawing.Size(327, 30);
             this.lbl_MaNV.TabIndex = 0;
             this.lbl_MaNV.Text = "Mã NV - Tên NV";
             this.lbl_MaNV.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -197,7 +199,7 @@ namespace BachHoaXanh_Store
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.Controls.Add(this.comboBoxEdit1, 1, 1);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(515, 25);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(514, 25);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 3;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -234,7 +236,7 @@ namespace BachHoaXanh_Store
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 276F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 83.66248F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.33752F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 289F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 290F));
             this.tableLayoutPanel2.Controls.Add(this.panel5, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.bunifuButton1, 2, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -253,7 +255,7 @@ namespace BachHoaXanh_Store
             this.panel5.Location = new System.Drawing.Point(279, 3);
             this.panel5.Name = "panel5";
             this.tableLayoutPanel2.SetRowSpan(this.panel5, 2);
-            this.panel5.Size = new System.Drawing.Size(433, 94);
+            this.panel5.Size = new System.Drawing.Size(432, 94);
             this.panel5.TabIndex = 0;
             // 
             // tableLayoutPanel3
@@ -270,7 +272,7 @@ namespace BachHoaXanh_Store
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(433, 94);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(432, 94);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // panel6
@@ -283,7 +285,7 @@ namespace BachHoaXanh_Store
             this.panel6.Location = new System.Drawing.Point(6, 6);
             this.panel6.Name = "panel6";
             this.tableLayoutPanel3.SetRowSpan(this.panel6, 2);
-            this.panel6.Size = new System.Drawing.Size(208, 82);
+            this.panel6.Size = new System.Drawing.Size(207, 82);
             this.panel6.TabIndex = 0;
             // 
             // label2
@@ -293,7 +295,7 @@ namespace BachHoaXanh_Store
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(34)))), ((int)(((byte)(9)))));
             this.label2.Location = new System.Drawing.Point(0, 33);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(204, 29);
+            this.label2.Size = new System.Drawing.Size(203, 29);
             this.label2.TabIndex = 1;
             this.label2.Text = "label2";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -305,7 +307,7 @@ namespace BachHoaXanh_Store
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(34)))), ((int)(((byte)(9)))));
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(204, 33);
+            this.label1.Size = new System.Drawing.Size(203, 33);
             this.label1.TabIndex = 0;
             this.label1.Text = "label1";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -317,7 +319,7 @@ namespace BachHoaXanh_Store
             this.panel7.Controls.Add(this.label4);
             this.panel7.Controls.Add(this.label3);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(220, 6);
+            this.panel7.Location = new System.Drawing.Point(219, 6);
             this.panel7.Name = "panel7";
             this.tableLayoutPanel3.SetRowSpan(this.panel7, 2);
             this.panel7.Size = new System.Drawing.Size(207, 82);
@@ -384,7 +386,7 @@ namespace BachHoaXanh_Store
             this.bunifuButton1.IdleIconLeftImage = null;
             this.bunifuButton1.IdleIconRightImage = null;
             this.bunifuButton1.IndicateFocus = false;
-            this.bunifuButton1.Location = new System.Drawing.Point(718, 53);
+            this.bunifuButton1.Location = new System.Drawing.Point(717, 53);
             this.bunifuButton1.Name = "bunifuButton1";
             stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(42)))));
             stateProperties1.BorderRadius = 3;
@@ -484,6 +486,7 @@ namespace BachHoaXanh_Store
             this.btn_DatHangNCC.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accordionControlElement6,
             this.accordionControlElement9});
+            this.btn_DatHangNCC.Expanded = true;
             this.btn_DatHangNCC.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btn_DatHangNCC.ImageOptions.SvgImage")));
             this.btn_DatHangNCC.Name = "btn_DatHangNCC";
             toolTipItem1.Text = "Đặt hàng từ nhà cung cấp";
@@ -521,9 +524,12 @@ namespace BachHoaXanh_Store
             // 
             // btn_TraHangNCC
             // 
+            this.btn_TraHangNCC.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.accordionControlElement10,
+            this.accordionControlElement11});
+            this.btn_TraHangNCC.Expanded = true;
             this.btn_TraHangNCC.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btn_TraHangNCC.ImageOptions.SvgImage")));
             this.btn_TraHangNCC.Name = "btn_TraHangNCC";
-            this.btn_TraHangNCC.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             toolTipItem3.Text = "Trả hàng về nhà cung cấp";
             superToolTip3.Items.Add(toolTipItem3);
             this.btn_TraHangNCC.SuperTip = superToolTip3;
@@ -636,6 +642,22 @@ namespace BachHoaXanh_Store
             this.miniToolStrip.Size = new System.Drawing.Size(36, 37);
             this.miniToolStrip.TabIndex = 3;
             // 
+            // accordionControlElement10
+            // 
+            this.accordionControlElement10.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("accordionControlElement10.ImageOptions.SvgImage")));
+            this.accordionControlElement10.Name = "accordionControlElement10";
+            this.accordionControlElement10.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement10.Text = "Trả hàng";
+            this.accordionControlElement10.Click += new System.EventHandler(this.accordionControlElement10_Click);
+            // 
+            // accordionControlElement11
+            // 
+            this.accordionControlElement11.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("accordionControlElement11.ImageOptions.SvgImage")));
+            this.accordionControlElement11.Name = "accordionControlElement11";
+            this.accordionControlElement11.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement11.Text = "Duyệt đơn trả hàng";
+            this.accordionControlElement11.Click += new System.EventHandler(this.accordionControlElement11_Click);
+            // 
             // FormMain
             // 
             this.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(247)))), ((int)(((byte)(228)))));
@@ -708,5 +730,7 @@ namespace BachHoaXanh_Store
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement9;
         private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement10;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement11;
     }
 }
