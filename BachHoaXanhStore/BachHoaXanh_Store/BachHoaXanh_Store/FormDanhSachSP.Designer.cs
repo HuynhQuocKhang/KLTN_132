@@ -77,6 +77,8 @@ namespace BachHoaXanh_Store
             this.col_SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_GiaBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_GiaVon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_NgayKM = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_NgayHetHan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DSSP)).BeginInit();
@@ -379,7 +381,9 @@ namespace BachHoaXanh_Store
             this.col_DonViTinh,
             this.col_SoLuong,
             this.col_GiaBan,
-            this.col_GiaVon});
+            this.col_GiaVon,
+            this.col_NgayKM,
+            this.col_NgayHetHan});
             this.tableLayoutPanel1.SetColumnSpan(this.dgv_DSSP, 2);
             this.dgv_DSSP.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_DSSP.DoubleBuffered = true;
@@ -644,6 +648,7 @@ namespace BachHoaXanh_Store
             this.bunifuCustomLabel1.TabIndex = 1;
             this.bunifuCustomLabel1.Text = "Xem kho KM siêu thị";
             this.bunifuCustomLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bunifuCustomLabel1.Visible = false;
             // 
             // chk_AllStore
             // 
@@ -698,6 +703,7 @@ namespace BachHoaXanh_Store
             this.chk_AllStore.TabIndex = 0;
             this.chk_AllStore.ThreeState = false;
             this.chk_AllStore.ToolTipText = null;
+            this.chk_AllStore.Visible = false;
             // 
             // col_Sua
             // 
@@ -814,6 +820,20 @@ namespace BachHoaXanh_Store
             this.col_GiaVon.Name = "col_GiaVon";
             this.col_GiaVon.ReadOnly = true;
             // 
+            // col_NgayKM
+            // 
+            this.col_NgayKM.DataPropertyName = "NgayKM";
+            this.col_NgayKM.HeaderText = "Ngày Khuyến Mãi";
+            this.col_NgayKM.Name = "col_NgayKM";
+            this.col_NgayKM.ReadOnly = true;
+            // 
+            // col_NgayHetHan
+            // 
+            this.col_NgayHetHan.DataPropertyName = "NgayHetHan";
+            this.col_NgayHetHan.HeaderText = "Ngày Hết Hạn";
+            this.col_NgayHetHan.Name = "col_NgayHetHan";
+            this.col_NgayHetHan.ReadOnly = true;
+            // 
             // FormDanhSachSP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -868,5 +888,7 @@ namespace BachHoaXanh_Store
         private System.Windows.Forms.DataGridViewTextBoxColumn col_SoLuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_GiaBan;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_GiaVon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_NgayKM;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_NgayHetHan;
     }
 }

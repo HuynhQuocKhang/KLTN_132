@@ -37,10 +37,13 @@ namespace BachHoaXanh_Store
                 bunifuButton3.Visible = false;
                 cbo_NhaCungCap.SelectedIndex = 0;
                 cbo_NhaCungCap.Enabled = false;
-                dgv_DSSP.Columns["col_Sua"].ReadOnly = true;
-                dgv_DSSP.Columns["col_Xoa"].ReadOnly = true;
+                dgv_DSSP.Columns["col_Sua"].Visible = false;
+                dgv_DSSP.Columns["col_Xoa"].Visible = false;
+                chk_AllStore.Visible = true;
+                chk_AllStore.Checked = false;
+                bunifuCustomLabel1.Visible = true;
             }
-            
+
             toolTip1.SetToolTip(cbo_LoaiSP, "Chọn tìm kiếm theo loại sản phẩm");
             toolTip1.SetToolTip(cbo_NhaCungCap, "Chọn tìm kiếm theo nhà cung cấp");
             toolTip1.SetToolTip(txtKeyWord, "Tìm kiếm dữ liệu sản phẩm");
@@ -53,7 +56,7 @@ namespace BachHoaXanh_Store
 
         private void dgv_DSSP_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
         }
 
         private void btn_TimKiem_Click(object sender, EventArgs e)
@@ -66,18 +69,35 @@ namespace BachHoaXanh_Store
         {
             if (FormLogin.objUserBO.Permission != 1)
             {
-                if (int.Parse(strProductTypeId) == 1)
+                if (chk_AllStore.Checked == true)
                 {
-                    dgv_DSSP.DataSource = objOrderStoreBLL.GetProductBOFromStore(strProductName.Trim(), 0, 0, int.MaxValue, int.Parse(strPageSize.Trim()), (int)FormLogin.objUserBO.StoreId);
+                    if (int.Parse(strProductTypeId) == 1)
+                    {
+                        dgv_DSSP.DataSource = objProductBLL.GetProductPromotionFromStore(strProductName.Trim(), 0, 0, int.MaxValue, int.Parse(strPageSize.Trim()), (int)FormLogin.objUserBO.StoreId);
+                    }
+                    else
+                    {
+                        dgv_DSSP.DataSource = objProductBLL.GetProductPromotionFromStore(strProductName.Trim(), int.Parse(strProductTypeId), 0, int.MaxValue, int.Parse(strPageSize.Trim()), (int)FormLogin.objUserBO.StoreId);
+                    }
+
                 }
                 else
                 {
-                    dgv_DSSP.DataSource = objOrderStoreBLL.GetProductBOFromStore(strProductName.Trim(), int.Parse(strProductTypeId), 0, int.MaxValue, int.Parse(strPageSize.Trim()), (int)FormLogin.objUserBO.StoreId);
+                    if (int.Parse(strProductTypeId) == 1)
+                    {
+                        dgv_DSSP.DataSource = objOrderStoreBLL.GetProductBOFromStore(strProductName.Trim(), 0, 0, int.MaxValue, int.Parse(strPageSize.Trim()), (int)FormLogin.objUserBO.StoreId);
+                    }
+                    else
+                    {
+                        dgv_DSSP.DataSource = objOrderStoreBLL.GetProductBOFromStore(strProductName.Trim(), int.Parse(strProductTypeId), 0, int.MaxValue, int.Parse(strPageSize.Trim()), (int)FormLogin.objUserBO.StoreId);
+                    }
+
                 }
-                
             }
             else
             {
+                dgv_DSSP.Columns["col_NgayKM"].Visible = false;
+                dgv_DSSP.Columns["col_NgayHetHan"].Visible = false;
                 if (int.Parse(strCustomerId) == 1 && int.Parse(strProductTypeId) == 1)
                 {
                     dgv_DSSP.DataSource = objProductBLL.GetProductByKeys(strProductName.Trim(), 0, 0, int.Parse(strPageSize.Trim()));
@@ -138,7 +158,7 @@ namespace BachHoaXanh_Store
                     Program.frmChinhSuaSP = new FormChinhSuaSP();
                     Program.frmChinhSuaSP.ShowDialog();
                 }
-                
+
             }
             //Xóa Sản Phẩm
             if (dgv_DSSP["col_Xoa", index].Selected)
@@ -183,6 +203,24 @@ namespace BachHoaXanh_Store
         private void bunifuButton3_Click(object sender, EventArgs e)
         {
             Search(txtKeyWord.Text, cbo_NhaCungCap.SelectedValue.ToString(), cbo_LoaiSP.SelectedValue.ToString(), cbo_PageSize.Text);
+        }
+
+        private void AddColumnDataGridview(DataGridView dgv, string strColunmName, string strHeader, string strDataName)
+        {
+            DataGridViewColumn col = new DataGridViewColumn();
+            DataGridViewCell cell = new DataGridViewTextBoxCell();
+            col.HeaderText = strHeader;
+            col.Name = strColunmName;
+            col.Visible = true;
+            col.Width = 100;
+            col.CellTemplate = cell;
+            col.DataPropertyName = strDataName;
+            dgv.Columns.Add(col);
+        }
+
+        private void RemoveColumnDataGridView(DataGridView dgv, string strColunmName)
+        {
+            dgv.Columns.Remove(strColunmName);
         }
     }
 }

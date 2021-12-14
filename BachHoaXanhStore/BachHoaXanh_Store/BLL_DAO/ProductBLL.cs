@@ -334,6 +334,7 @@ namespace BLL_DAO
                                 TenNCC = objCustomer.TenNCC,
                                 DVT = objProduct.DVT,
                                 SoLuong = objStorePromotion.SoLuong,
+                                GiaVon = objProduct.GiaVon,
                                 NgayKM = objStorePromotion.NgayKM,
                                 NgayHetHan = objStorePromotion.NgayHetHan
                             };
@@ -359,6 +360,7 @@ namespace BLL_DAO
                                 TenNCC = objCustomer.TenNCC,
                                 DVT = objProduct.DVT,
                                 SoLuong = objStorePromotion.SoLuong,
+                                GiaVon = objProduct.GiaVon,
                                 NgayKM = objStorePromotion.NgayKM,
                                 NgayHetHan = objStorePromotion.NgayHetHan
                             };
@@ -384,6 +386,7 @@ namespace BLL_DAO
                                 TenNCC = objCustomer.TenNCC,
                                 DVT = objProduct.DVT,
                                 SoLuong = objStorePromotion.SoLuong,
+                                GiaVon = objProduct.GiaVon,
                                 NgayKM = objStorePromotion.NgayKM,
                                 NgayHetHan = objStorePromotion.NgayHetHan
                             };
@@ -410,6 +413,7 @@ namespace BLL_DAO
                                 TenNCC = objCustomer.TenNCC,
                                 DVT = objProduct.DVT,
                                 SoLuong = objStorePromotion.SoLuong,
+                                GiaVon = objProduct.GiaVon,
                                 NgayKM = objStorePromotion.NgayKM,
                                 NgayHetHan = objStorePromotion.NgayHetHan
                             };
