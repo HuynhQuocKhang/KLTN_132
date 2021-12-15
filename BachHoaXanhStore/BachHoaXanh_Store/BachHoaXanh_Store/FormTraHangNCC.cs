@@ -50,7 +50,7 @@ namespace BachHoaXanh_Store
                 cbo_NhaCungCap.SelectedIndex = 1;
                 cbo_PageSize.SelectedIndex = 0;
             }
-            
+            txtKeyWord.Text = DateTime.Now.ToString("d");
         }
 
         private void btn_LapPhieu_Click(object sender, EventArgs e)
@@ -66,7 +66,7 @@ namespace BachHoaXanh_Store
                     int? intStockProduct = 0;
                     ProductBO objProductTmp = new ProductBO();
                     ProductOrderCustomerBO objProductOrderCustomerBOTmp = new ProductOrderCustomerBO();
-                    DateTime dDate = DateTime.Now;
+                    DateTime dDate = DateTime.Now.Date;
                     if (objUser.Permission == 1)
                     {
                         objProductTmp = objProductBLL.GetProductByKeys(dgv_Order["MaSP", i].Value.ToString().Trim()).FirstOrDefault();
@@ -123,7 +123,7 @@ namespace BachHoaXanh_Store
                             objOrderCustomerDetailBO.MaSP = dgv_Order["MaSP", i].Value.ToString();
                             objOrderCustomerDetailBO.TenSP = dgv_Order["TenSP", i].Value.ToString();
                             objOrderCustomerDetailBO.SoLuong = int.Parse(dgv_Order["SoLuong", i].Value.ToString());
-                            objOrderCustomerDetailBO.Ngay = dDate.ToString("d");
+                            objOrderCustomerDetailBO.Ngay = dgv_Order["col_NgayHetHan", i].Value.ToString();
                             lstOrderDetailBO.Add(objOrderCustomerDetailBO);
                             strCustomerName = cbo_NhaCungCap.Text;
                             intCustomerId = int.Parse(cbo_NhaCungCap.SelectedValue.ToString());

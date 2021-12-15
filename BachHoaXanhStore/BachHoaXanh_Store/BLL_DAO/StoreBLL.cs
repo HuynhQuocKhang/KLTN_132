@@ -13,6 +13,7 @@ namespace BLL_DAO
         public List<StoreBO> GetAllStore()
         {
             var model = from objStore in db.SieuThis
+                        orderby objStore.MaST ascending
                         select new StoreBO()
                         {
                             MaST = objStore.MaST,
@@ -20,7 +21,7 @@ namespace BLL_DAO
                             DiaChi = objStore.DiaChi,
                             SDT = objStore.SDT
                         };
-            return model.OrderByDescending(x => x.MaST).ToList();
+            return model.Select(x => x).ToList();
         }
         public string getStoreNameByUser(int? pStoreId)
         {

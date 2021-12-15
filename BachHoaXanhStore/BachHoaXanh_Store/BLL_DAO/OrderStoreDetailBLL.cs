@@ -68,5 +68,22 @@ namespace BLL_DAO
                         };
             return model.ToList();
         }
+
+        public List<GetDetailsReturnProductStoreByOrderIdBO> GetDetailsReturnProductStoreByOrderId(int intOrderId)
+        {
+            var model = from objStoreOrder in data.CTPhieuTraHangs
+                        join objProduct in data.SanPhams
+                        on objStoreOrder.MaSP equals objProduct.MaSP
+                        where objStoreOrder.MaPTH == intOrderId
+                        select new GetDetailsReturnProductStoreByOrderIdBO()
+                        {
+                            MaSP = objStoreOrder.MaSP,
+                            TenSP = objProduct.TenSP,
+                            SoLuong = objStoreOrder.SoLuong,
+                            NgayHetHan=objStoreOrder.NgayHetHan
+                        };
+            return model.ToList();
+        }
+
     }
 }

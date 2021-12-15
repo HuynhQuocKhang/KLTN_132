@@ -42,4 +42,6 @@ namespace BO
         public DateTime? NgayKM { get; set; }
         public DateTime? NgayHetHan { get; set; }
     }
+
+   
 }

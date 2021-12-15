@@ -23,4 +23,13 @@ namespace BO
         public DateTime? NgayDat { get; set; }
         public int? TongTien { get; set; }
     }
+    public class GetReturnProductsBO
+    {
+        public int MaPTH { get; set; }
+        public int? MaST { get; set; }
+        public int? MaNCC { get; set; }
+        public string NguoiLapPhieu { get; set; }
+        public DateTime? NgayTra { get; set; }
+        public int? TongTien { get; set; }
+    }
 }

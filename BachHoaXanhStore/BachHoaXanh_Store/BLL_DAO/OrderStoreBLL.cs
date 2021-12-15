@@ -358,5 +358,58 @@ namespace BLL_DAO
                 return false;
             }
         }
+
+        public bool UpdateReturnProductStoreStatus(int intOrderStoreId)
+        {
+            try
+            {
+                var objPhieuTraHang = db.PhieuTraHangs.Where(x => x.MaPTH == intOrderStoreId).FirstOrDefault();
+                objPhieuTraHang.TinhTrang = 1;
+                db.SubmitChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public List<GetReturnProductsBO> GetReturnProductOrder(string pKeyWord, string strStoreId)
+        {
+            if (pKeyWord != "")
+            {
+                var model = from objOrderStore in db.PhieuTraHangs
+                            where (objOrderStore.MaPTH.ToString().Contains(pKeyWord.Trim()) ||
+                                   objOrderStore.NguoiLapPhieu.ToString().Contains(pKeyWord.Trim())) &&
+                                   objOrderStore.MaST == int.Parse(strStoreId.ToLower().Trim()) &&
+                                   objOrderStore.TinhTrang == 0
+                            select new GetReturnProductsBO()
+                            {
+                                MaPTH = objOrderStore.MaPTH,
+                                MaST = objOrderStore.MaST,
+                                MaNCC = objOrderStore.MaNCC,
+                                NgayTra = objOrderStore.NgayTra,
+                                NguoiLapPhieu = objOrderStore.NguoiLapPhieu,
+                                TongTien = objOrderStore.TongTien
+                            };
+                return model.OrderBy(x => x.MaPTH).ToList();
+            }
+            else
+            {
+                var model = from objOrderStore in db.PhieuTraHangs
+                            where objOrderStore.MaST == (int.Parse(strStoreId.ToLower().Trim())) && objOrderStore.TinhTrang == 0
+                            select new GetReturnProductsBO()
+                            {
+                                MaPTH = objOrderStore.MaPTH,
+                                MaST = objOrderStore.MaST,
+                                MaNCC = objOrderStore.MaNCC,
+                                NgayTra = objOrderStore.NgayTra,
+                                NguoiLapPhieu = objOrderStore.NguoiLapPhieu,
+                                TongTien = objOrderStore.TongTien
+                            };
+                return model.OrderBy(x => x.MaPTH).ToList();
+            }
+
+        }
     }
 }
