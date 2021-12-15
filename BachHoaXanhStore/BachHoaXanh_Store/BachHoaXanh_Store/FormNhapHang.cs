@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BLL_DAO;
+using BO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,11 +14,138 @@ namespace BachHoaXanh_Store
 {
     public partial class FormNhapHang : Form
     {
+        OrderStoreBLL objOrderStoreBLL = new OrderStoreBLL();
+        OrderStoreDetailBLL objOrderStoreDetailBLL = new OrderStoreDetailBLL();
+        OrderCustomerBLL objOrderCustomerBLL = new OrderCustomerBLL();
+        CustomerBLL objCustomerBLL = new CustomerBLL();
+        WHStoreBLL objWHStoreBLL = new WHStoreBLL();
         public FormNhapHang()
         {
             InitializeComponent();
-            toolTip1.SetToolTip(cbo_NhaCungCap, "Tìm kiếm đơn hàng từ nhà cung cấp nào");
-            toolTip1.SetToolTip(cbo_TinhTrang, "Tìm kiếm theo tình trạng đơn hàng");
+            toolTip1.SetToolTip(cbo_NhaCungCap, "Tìm kiếm đơn hàng từ nhà cung cấp");
+            if (FormLogin.objUserBO.Permission != 1)
+            {
+                cbo_NhaCungCap.Text = "1 - Bách Hóa Xanh";
+            }
+            else
+            {
+                cbo_NhaCungCap.DataSource = objCustomerBLL.GetListALlCustomer();
+                cbo_NhaCungCap.DisplayMember = "FullName";
+                cbo_NhaCungCap.ValueMember = "MaNCC";
+
+                dgv_DSDH.Columns["col_MaDH"].DataPropertyName = "MaHDDat";
+                dgv_DSDH.Columns["col_MaST"].DataPropertyName = "MaNCC";
+                dgv_DSDH.Columns["col_MaST"].HeaderText = "Mã nhà cung cáp";
+            }
+        }
+
+        private void btn_TimKiem_Click(object sender, EventArgs e)
+        {
+            Search();
+        }
+
+        private void Search()
+        {
+            if (FormLogin.objUserBO.Permission != 1)
+            {
+                dgv_DSDH.DataSource = objOrderStoreBLL.GetOrderFromStoreBO((int)FormLogin.objUserBO.StoreId, 1, txtKeyWord.Text.Trim());
+            }
+            else
+            {
+                int intOrderStoreId = 0;
+                if (txtKeyWord.Text.Trim() != "")
+                {
+                    if (!int.TryParse(txtKeyWord.Text.Trim(), out intOrderStoreId))
+                    {
+                        MessageBox.Show("Mã đơn hàng phải là số nguyên dương và lớn hơn 0 hoặc không cần nhập. Xin vui lòng thử lại");
+                    }
+                }
+                if (intOrderStoreId < 0)
+                {
+                    MessageBox.Show("Mã đơn hàng phải là số nguyên dương và lớn hơn 0. Xin vui lòng thử lại");
+                }
+                else
+                {
+                    dgv_DSDH.DataSource = objOrderCustomerBLL.GetListOrderCustomer(intOrderStoreId, int.Parse(cbo_NhaCungCap.SelectedValue.ToString().Trim()), 0);
+                }
+            }
+        }
+
+        private void dgv_DSDH_SelectionChanged(object sender, EventArgs e)
+        {
+            int index = dgv_DSDH.CurrentCell.RowIndex;
+            if (FormLogin.objUserBO.Permission != 1)
+            {
+                if (dgv_DSDH.DataSource != null && index != -1)
+                {
+                    dgv_DSCTDH.DataSource = objOrderStoreDetailBLL.GetListOrderStoreByOrderId(int.Parse(dgv_DSDH["col_MaDH", index].Value.ToString().Trim()));
+                }
+                
+            }
+            else
+            {
+                dgv_DSCTDH.DataSource = objOrderCustomerBLL.GetListOrderCustomerDetail(int.Parse(dgv_DSDH["col_MaDH", index].Value.ToString().Trim()));
+            }
+        }
+
+        private void bunifuButton1_Click(object sender, EventArgs e)
+        {
+            if (dgv_DSCTDH.Rows.Count > 0)
+            {
+                List<ProductBO> lstProductBO = new List<ProductBO>();
+                for (int i = 0; i < dgv_DSCTDH.Rows.Count; i++)
+                {
+                    int intStock;
+                    if (dgv_DSCTDH["col_SoLuongNhap", i].Value != null)
+                    {
+                        if (!int.TryParse(dgv_DSCTDH["col_SoLuongNhap", i].Value.ToString().Trim(), out intStock))
+                        {
+                            MessageBox.Show("Sản phẩm [ " + dgv_DSCTDH["col_MaSP", i].Value.ToString() + " - " + dgv_DSCTDH["col_TenSP", i].Value.ToString() + " ] có số lượng nhập phải là số nguyên dương lớn hơn 0" + Environment.NewLine + "Và có sô lượng nhập phải bé hơn hoặc bằng số lượng đặt của Phiếu đặt hàng");
+                            return;
+                        }
+                        if (intStock > int.Parse(dgv_DSCTDH["col_SoLuong", i].Value.ToString().Trim()) || intStock < 0)
+                        {
+                            MessageBox.Show("Sản phẩm [ " + dgv_DSCTDH["col_MaSP", i].Value.ToString() + " - " + dgv_DSCTDH["col_TenSP", i].Value.ToString() + " ] có số lượng nhập phải nhỏ hơn hoặc bằng số lượng đặt của siêu thị");
+                            return;
+                        }
+                        else
+                        {
+                            ProductBO objProductBO = new ProductBO();
+                            objProductBO.MaSP = dgv_DSCTDH["col_MaSP", i].Value.ToString().Trim();
+                            objProductBO.SoLuong = intStock;
+                            lstProductBO.Add(objProductBO);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Sản phẩm [ " + dgv_DSCTDH["col_MaSP", i].Value.ToString() + " - " + dgv_DSCTDH["col_TenSP", i].Value.ToString() + " ] có số lượng xuất phải là số nguyên dương và lớn hơn 0");
+                        return;
+                    }
+                }
+                if (lstProductBO.Count == dgv_DSCTDH.Rows.Count)
+                {
+                    int index = dgv_DSDH.CurrentCell.RowIndex;
+                    if (FormLogin.objUserBO.Permission != 1)
+                    {
+                        if (objWHStoreBLL.UpdateStockOfProductFromStore((int)FormLogin.objUserBO.StoreId, lstProductBO))
+                        {
+                            objOrderStoreBLL.UpdateOrderStoreStatus(int.Parse(dgv_DSDH["col_MaDH", index].Value.ToString().Trim()));
+                        }
+                    }
+
+                    else
+                    {
+                        objOrderCustomerBLL.UpdateCustomerOrder(int.Parse(dgv_DSDH["col_MaDH", index].Value.ToString().Trim()), lstProductBO);
+                    }
+                    for (int i = 0; i < dgv_DSCTDH.Rows.Count; i++)
+                    {
+                        dgv_DSCTDH.Rows.RemoveAt(i);
+                    }
+                    dgv_DSDH.DataSource = null;
+                    MessageBox.Show("Nhập hàng thành công!");
+                    Search();
+                }
+            }
         }
     }
 }

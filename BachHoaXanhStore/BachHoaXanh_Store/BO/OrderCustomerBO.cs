@@ -14,6 +14,5 @@ namespace BO
         public string NguoiLapPhieu { get; set; }
         public DateTime? NgayDat { get; set; }
         public int? TinhTrang { get; set; }
-        public bool? Isdeleted { get; set; }
     }
 }

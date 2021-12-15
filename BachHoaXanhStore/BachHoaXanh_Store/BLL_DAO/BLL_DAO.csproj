@@ -87,6 +87,7 @@
     <Compile Include="ReturnProductBLL.cs" />
     <Compile Include="StoreBLL.cs" />
     <Compile Include="UserBLL.cs" />
+    <Compile Include="WHStoreBLL.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

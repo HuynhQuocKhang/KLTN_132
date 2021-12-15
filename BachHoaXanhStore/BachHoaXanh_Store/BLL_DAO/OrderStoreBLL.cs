@@ -17,16 +17,20 @@ namespace BLL_DAO
         }
 
         //Lấy danh sách đơn đặt hàng theo điều kiện
-        public IQueryable<DonDatHang> GetListOrderStoreByKey(int intStoreId, DateTime dateFrom, DateTime dateTo)
+        public List<OrderStoreBO> GetListOrderStoreByKey(int intStoreId/*, DateTime dateFrom, DateTime dateTo*/, int intStatus)
         {
-            if (intStoreId == 0)
-            {
-                return db.DonDatHangs.Select(t => t).Where(t => t.NgayDat >= dateFrom && t.NgayDat <= dateTo);
-            }
-            else
-            {
-                return db.DonDatHangs.Select(t => t).Where(t => t.MaST == intStoreId && t.NgayDat >= dateFrom && t.NgayDat <= dateTo);
-            }
+            var model = from objOrderStore in db.DonDatHangs
+                        where objOrderStore.TinhTrang == intStatus && objOrderStore.MaST == intStoreId
+                        select new OrderStoreBO()
+                        {
+                            MaHD = objOrderStore.MaDH,
+                            MaST = objOrderStore.MaST,
+                            NguoiLapPhieu = objOrderStore.NguoiLapPhieu,
+                            NgayDat = objOrderStore.NgayDat,
+                            TinhTrang = objOrderStore.TinhTrang,
+                            TongTien = objOrderStore.TongTien
+                        };
+            return model.OrderByDescending(x => x.MaHD).ToList();
         }
 
         //Tạo đơn đặt hàng
@@ -349,7 +353,7 @@ namespace BLL_DAO
             try
             {
                 var objDonDatHang = db.DonDatHangs.Where(x => x.MaDH == intOrderStoreId).FirstOrDefault();
-                objDonDatHang.TinhTrang = 1;
+                objDonDatHang.TinhTrang += 1;
                 db.SubmitChanges();
                 return true;
             }

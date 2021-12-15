@@ -10,20 +10,21 @@ namespace BLL_DAO
     public class OrderCustomerBLL
     {
         BachHoaXanhDataContext db = new BachHoaXanhDataContext();
-        public List<OrderCustomerBO> GetListOrderCustomer(int intOrderId, int intCustomerId)
+        public List<OrderCustomerBO> GetListOrderCustomer(int intOrderId, int intCustomerId, int intStatus)
         {
             if (intOrderId == 0)
             {
                 var model = from objOrderCustomer in db.HoaDonDatNCCs
-                            where objOrderCustomer.Isdeleted == false && objOrderCustomer.MaNCC == intCustomerId
+                            where objOrderCustomer.Isdeleted == false && objOrderCustomer.MaNCC == intCustomerId && objOrderCustomer.TinhTrang == intStatus
                             select new OrderCustomerBO()
                             {
                                 MaHDDat = objOrderCustomer.MaHDDat,
                                 MaNCC = objOrderCustomer.MaNCC,
+                                NguoiLapPhieu = objOrderCustomer.NguoiLapPhieu,
                                 TongTien = objOrderCustomer.TongTien,
-                                NgayDat = objOrderCustomer.NgayDat,
-                                TinhTrang = objOrderCustomer.TinhTrang,
-                                Isdeleted = objOrderCustomer.Isdeleted
+                                NgayDat = objOrderCustomer.NgayDat
+                                //TinhTrang = objOrderCustomer.TinhTrang,
+                                //Isdeleted = objOrderCustomer.Isdeleted
                             };
                 model.OrderByDescending(x => x.MaHDDat);
                 return model.ToList();
@@ -32,15 +33,16 @@ namespace BLL_DAO
             else
             {
                 var model = from objOrderCustomer in db.HoaDonDatNCCs
-                            where objOrderCustomer.Isdeleted == false && objOrderCustomer.MaHDDat == intOrderId && objOrderCustomer.MaNCC == intCustomerId
+                            where objOrderCustomer.Isdeleted == false && objOrderCustomer.MaHDDat == intOrderId && objOrderCustomer.MaNCC == intCustomerId && objOrderCustomer.TinhTrang == intStatus
                             select new OrderCustomerBO()
                             {
                                 MaHDDat = objOrderCustomer.MaHDDat,
                                 MaNCC = objOrderCustomer.MaNCC,
+                                NguoiLapPhieu = objOrderCustomer.NguoiLapPhieu,
                                 TongTien = objOrderCustomer.TongTien,
-                                NgayDat = objOrderCustomer.NgayDat,
-                                TinhTrang = objOrderCustomer.TinhTrang,
-                                Isdeleted = objOrderCustomer.Isdeleted
+                                NgayDat = objOrderCustomer.NgayDat
+                                //TinhTrang = objOrderCustomer.TinhTrang,
+                                //Isdeleted = objOrderCustomer.Isdeleted
                             };
                 model.OrderByDescending(x => x.MaHDDat);
                 return model.ToList();
@@ -97,6 +99,58 @@ namespace BLL_DAO
                 model.SoLuong = intStock;
                 model.ThanhTien = TotalPrice;
                 db.CTHoaDonDatNCCs.InsertOnSubmit(model);
+                db.SubmitChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public List<GetListOrderStoreByOrderIdBO> GetListOrderCustomerDetail(int intOrderId)
+        {
+            if (intOrderId == 0)
+            {
+                var model = from objCTHoaDonDatNCC in db.CTHoaDonDatNCCs
+                            join objProduct in db.SanPhams
+                            on objCTHoaDonDatNCC.MaSP equals objProduct.MaSP
+                            select new GetListOrderStoreByOrderIdBO()
+                            {
+                                MaSP = objCTHoaDonDatNCC.MaSP,
+                                TenSP = objProduct.TenSP,
+                                SoLuong = objCTHoaDonDatNCC.SoLuong
+                            };
+                return model.ToList();
+            }
+            else
+            {
+                var model = from objCTHoaDonDatNCC in db.CTHoaDonDatNCCs
+                            join objProduct in db.SanPhams
+                            on objCTHoaDonDatNCC.MaSP equals objProduct.MaSP
+                            where objCTHoaDonDatNCC.MaHDDat == intOrderId
+                            select new GetListOrderStoreByOrderIdBO()
+                            {
+                                MaSP = objCTHoaDonDatNCC.MaSP,
+                                TenSP = objProduct.TenSP,
+                                SoLuong = objCTHoaDonDatNCC.SoLuong
+                            };
+                return model.ToList();
+            }
+        }
+
+        public bool UpdateCustomerOrder(int intOrderId, List<ProductBO> lstProduct)
+        {
+            try
+            {
+                foreach (ProductBO item in lstProduct)
+                {
+                    var objProduct = db.SanPhams.Where(x => x.MaSP == item.MaSP).FirstOrDefault();
+                    objProduct.SoLuong += item.SoLuong;
+                    db.SubmitChanges();
+                }
+                var objOrderCustomer = db.HoaDonDatNCCs.Where(x => x.MaHDDat == intOrderId).FirstOrDefault();
+                objOrderCustomer.TinhTrang = 1;
                 db.SubmitChanges();
                 return true;
             }

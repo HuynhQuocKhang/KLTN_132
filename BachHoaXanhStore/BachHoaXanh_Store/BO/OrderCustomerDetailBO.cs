@@ -14,7 +14,6 @@ namespace BO
         public int GiaVon { get; set; }
         public int SoLuong { get; set; }
         public int ThanhTien { get; set; }
-        public string Ngay { get; set; }
     }
 
     public class OrderDetailBO

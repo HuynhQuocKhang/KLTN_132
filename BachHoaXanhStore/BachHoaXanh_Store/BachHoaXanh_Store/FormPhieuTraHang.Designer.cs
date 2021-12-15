@@ -310,7 +310,7 @@ namespace BachHoaXanh_Store
             this.txt_NgayTra.SelectionLength = 0;
             this.txt_NgayTra.SelectionStart = 0;
             this.txt_NgayTra.ShortcutsEnabled = true;
-            this.txt_NgayTra.Size = new System.Drawing.Size(280, 39);
+            //this.txt_NgayTra.Size = new System.Drawing.Size(280, 39);
             this.txt_NgayTra.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txt_NgayTra.TabIndex = 1;
             this.txt_NgayTra.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
