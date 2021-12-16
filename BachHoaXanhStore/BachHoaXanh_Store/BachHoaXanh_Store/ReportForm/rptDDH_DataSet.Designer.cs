@@ -2248,7 +2248,7 @@ namespace BachHoaXanh_Store.ReportForm.rptDDH_DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::BachHoaXanh_Store.Properties.Settings.Default.BachHoaXanh_StoreConnectionString1;
+            this._connection.ConnectionString = global::BachHoaXanh_Store.Properties.Settings.Default.BachHoaXanh_StoreConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2480,7 +2480,7 @@ SELECT MaHDDat, MaNCC, TongTien, NguoiLapPhieu, NgayDat, TinhTrang, Isdeleted FR
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::BachHoaXanh_Store.Properties.Settings.Default.BachHoaXanh_StoreConnectionString1;
+            this._connection.ConnectionString = global::BachHoaXanh_Store.Properties.Settings.Default.BachHoaXanh_StoreConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2993,7 +2993,7 @@ SELECT MaSP, TenSP, MaLoaiSP, MaNCC, DVT, GiaBan, GiaVon, SoLuong, Isdeleted FRO
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::BachHoaXanh_Store.Properties.Settings.Default.BachHoaXanh_StoreConnectionString1;
+            this._connection.ConnectionString = global::BachHoaXanh_Store.Properties.Settings.Default.BachHoaXanh_StoreConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

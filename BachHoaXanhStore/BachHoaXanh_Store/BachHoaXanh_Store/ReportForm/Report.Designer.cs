@@ -82,7 +82,7 @@ namespace BachHoaXanh_Store.ReportForm
             // 
             // sqlDataSource1
             // 
-            this.sqlDataSource1.ConnectionName = "BachHoaXanh_StoreConnectionString1";
+            this.sqlDataSource1.ConnectionName = "BachHoaXanh_StoreConnectionString";
             this.sqlDataSource1.Name = "sqlDataSource1";
             customSqlQuery1.Name = "CTDonDatHang";
             customSqlQuery1.Sql = resources.GetString("customSqlQuery1.Sql");
