@@ -374,7 +374,7 @@ namespace BLL_DAO
             }
         }
 
-        public List<GetReturnProductsBO> GetReturnProductOrder(string pKeyWord, string strStoreId)
+        public List<GetReturnProductsBO> GetReturnProductOrder(string pKeyWord, string strStoreId, DateTime dateFrom, DateTime dateTo)
         {
             if (pKeyWord != "")
             {
@@ -392,7 +392,7 @@ namespace BLL_DAO
                                 NguoiLapPhieu = objOrderStore.NguoiLapPhieu,
                                 TongTien = objOrderStore.TongTien
                             };
-                return model.OrderBy(x => x.MaPTH).ToList();
+                return model.OrderBy(x => x.MaPTH).Where(x => x.NgayTra <= dateTo && x.NgayTra >= dateFrom).ToList();
             }
             else
             {
@@ -407,7 +407,7 @@ namespace BLL_DAO
                                 NguoiLapPhieu = objOrderStore.NguoiLapPhieu,
                                 TongTien = objOrderStore.TongTien
                             };
-                return model.OrderBy(x => x.MaPTH).ToList();
+                return model.OrderBy(x => x.MaPTH).Where(x => x.NgayTra <= dateTo && x.NgayTra >= dateFrom).ToList();
             }
 
         }

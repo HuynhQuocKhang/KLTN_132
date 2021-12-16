@@ -50,7 +50,6 @@ namespace BachHoaXanh_Store
                 cbo_NhaCungCap.SelectedIndex = 1;
                 cbo_PageSize.SelectedIndex = 0;
             }
-            txtKeyWord.Text = DateTime.Now.ToString("d");
         }
 
         private void btn_LapPhieu_Click(object sender, EventArgs e)

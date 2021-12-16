@@ -27,11 +27,11 @@ namespace BachHoaXanh_Store
 
         private void btn_TimKiem_Click(object sender, EventArgs e)
         {
-            Search(txtKeyWord.Text.Trim(), cbo_MaSieuThi.SelectedValue.ToString());
+            Search(txtKeyWord.Text.Trim(), cbo_MaSieuThi.SelectedValue.ToString(), (DateTime)dtp_NgayBatDau.Value, (DateTime)dtp_NgayKetThuc.Value);
         }
-        private void Search(string pKeyWord, string strStoreId)
+        private void Search(string pKeyWord, string strStoreId, DateTime dateFrom, DateTime dateTo)
         {
-            dgv_DSPTH.DataSource = objOrderStoreBLL.GetReturnProductOrder(pKeyWord.Trim(), strStoreId);
+            dgv_DSPTH.DataSource = objOrderStoreBLL.GetReturnProductOrder(pKeyWord.Trim(), strStoreId, dateFrom, dateTo);
         }
 
         private void chk_SelectAll_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs e)
@@ -84,7 +84,7 @@ namespace BachHoaXanh_Store
 
         private void bunifuButton2_Click(object sender, EventArgs e)
         {
-            Search(txtKeyWord.Text.Trim(), cbo_MaSieuThi.SelectedValue.ToString());
+            Search(txtKeyWord.Text.Trim(), cbo_MaSieuThi.SelectedValue.ToString(), (DateTime)dtp_NgayBatDau.Value, (DateTime)dtp_NgayKetThuc.Value);
         }
 
 
