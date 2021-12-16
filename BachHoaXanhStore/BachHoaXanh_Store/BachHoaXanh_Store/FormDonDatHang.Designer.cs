@@ -219,7 +219,7 @@ namespace BachHoaXanh_Store
             stateProperties4.FillColor = System.Drawing.Color.White;
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txt_NhaCungCap.OnIdleState = stateProperties4;
+            //this.txt_NhaCungCap.OnIdleState = stateProperties4;
             this.txt_NhaCungCap.PasswordChar = '\0';
             this.txt_NhaCungCap.PlaceholderForeColor = System.Drawing.Color.Silver;
             //this.txt_NhaCungCap.PlaceholderText = "Nhà cung cấp";
