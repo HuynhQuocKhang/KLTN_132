@@ -209,7 +209,7 @@ namespace BachHoaXanh_Store
             stateProperties2.FillColor = System.Drawing.Color.White;
             stateProperties2.ForeColor = System.Drawing.Color.Empty;
             stateProperties2.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txt_NhaCungCap.OnDisabledState = stateProperties2;
+            //this.txt_NhaCungCap.OnDisabledState = stateProperties2;
             stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(186)))), ((int)(((byte)(27)))));
             stateProperties3.FillColor = System.Drawing.Color.Empty;
             stateProperties3.ForeColor = System.Drawing.Color.Empty;
@@ -234,8 +234,8 @@ namespace BachHoaXanh_Store
             this.txt_NhaCungCap.TabIndex = 1;
             this.txt_NhaCungCap.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_NhaCungCap.TextMarginBottom = 0;
-            this.txt_NhaCungCap.TextMarginLeft = 5;
-            this.txt_NhaCungCap.TextMarginTop = 0;
+            //this.txt_NhaCungCap.TextMarginLeft = 5;
+            //this.txt_NhaCungCap.TextMarginTop = 0;
             //this.txt_NhaCungCap.TextPlaceholder = "Nhà cung cấp";
             this.txt_NhaCungCap.UseSystemPasswordChar = false;
             this.txt_NhaCungCap.WordWrap = true;
@@ -749,7 +749,7 @@ namespace BachHoaXanh_Store
             this.txt_NguoiDat.SelectionStart = 0;
             this.txt_NguoiDat.ShortcutsEnabled = true;
             this.txt_NguoiDat.Size = new System.Drawing.Size(270, 39);
-            this.txt_NguoiDat.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            //this.txt_NguoiDat.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txt_NguoiDat.TabIndex = 0;
             this.txt_NguoiDat.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_NguoiDat.TextMarginBottom = 0;

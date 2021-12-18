@@ -136,7 +136,7 @@ namespace BachHoaXanh_Store
                 {
                     if (int.Parse(strCustomerId) == 1 && int.Parse(strProductTypeId) == 1)
                     {
-                        dgv_DSSP.DataSource = objProductBll.GetProductByKeysForOrderCustomer(strProductName.Trim(), 0, 0, int.Parse(strStock),50);
+                        dgv_DSSP.DataSource = objProductBll.GetProductByKeysForOrderCustomer(strProductName.Trim(), 0, 0, int.Parse(strStock), 50);
                     }
                     else if (int.Parse(strCustomerId) == 1 && int.Parse(strProductTypeId) != 1)
                     {
@@ -155,11 +155,11 @@ namespace BachHoaXanh_Store
                 {
                     if (int.Parse(strProductTypeId) == 1)
                     {
-                        dgv_DSSP.DataSource = objOrderStoreBLL.GetProductBOFromStore(strProductName.Trim(), 0, 0, int.Parse(txtSoLuong.Text), 100, (int) objUser.StoreId);
+                        dgv_DSSP.DataSource = objOrderStoreBLL.GetProductBOFromStore(strProductName.Trim(), 0, 0, int.Parse(txtSoLuong.Text), 100, (int)objUser.StoreId);
                     }
                     else
                     {
-                        dgv_DSSP.DataSource = objOrderStoreBLL.GetProductBOFromStore(strProductName.Trim(), int.Parse(strProductTypeId), 0, int.Parse(txtSoLuong.Text), 100, (int) objUser.StoreId);
+                        dgv_DSSP.DataSource = objOrderStoreBLL.GetProductBOFromStore(strProductName.Trim(), int.Parse(strProductTypeId), 0, int.Parse(txtSoLuong.Text), 100, (int)objUser.StoreId);
                     }
                 }
             }
@@ -197,7 +197,7 @@ namespace BachHoaXanh_Store
                         this.dgv_Order.Rows.Add(dgv_DSSP["col_MaSP", index].Value.ToString(), dgv_DSSP["col_TenSP", index].Value.ToString(), "1", dgv_DSSP["col_GiaVon", index].Value.ToString(), dgv_DSSP["col_GiaVon", index].Value.ToString());
                     }
                 }
-            }    
+            }
 
         }
 

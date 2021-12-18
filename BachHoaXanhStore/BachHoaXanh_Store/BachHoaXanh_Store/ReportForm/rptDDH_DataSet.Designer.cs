@@ -30,9 +30,9 @@ namespace BachHoaXanh_Store.ReportForm {
         
         private SanPhamDataTable tableSanPham;
         
-        private global::System.Data.DataRelation relationFK_CTHHD_HDDat;
-        
         private global::System.Data.DataRelation relationFK_CTHDD_SanPham;
+        
+        private global::System.Data.DataRelation relationFK_CTHHD_HDDat;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -246,8 +246,8 @@ namespace BachHoaXanh_Store.ReportForm {
                     this.tableSanPham.InitVars();
                 }
             }
-            this.relationFK_CTHHD_HDDat = this.Relations["FK_CTHHD_HDDat"];
             this.relationFK_CTHDD_SanPham = this.Relations["FK_CTHDD_SanPham"];
+            this.relationFK_CTHHD_HDDat = this.Relations["FK_CTHHD_HDDat"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -264,14 +264,14 @@ namespace BachHoaXanh_Store.ReportForm {
             base.Tables.Add(this.tableHoaDonDatNCC);
             this.tableSanPham = new SanPhamDataTable();
             base.Tables.Add(this.tableSanPham);
-            this.relationFK_CTHHD_HDDat = new global::System.Data.DataRelation("FK_CTHHD_HDDat", new global::System.Data.DataColumn[] {
-                        this.tableHoaDonDatNCC.MaHDDatColumn}, new global::System.Data.DataColumn[] {
-                        this.tableCTHoaDonDatNCC.MaHDDatColumn}, false);
-            this.Relations.Add(this.relationFK_CTHHD_HDDat);
             this.relationFK_CTHDD_SanPham = new global::System.Data.DataRelation("FK_CTHDD_SanPham", new global::System.Data.DataColumn[] {
                         this.tableSanPham.MaSPColumn}, new global::System.Data.DataColumn[] {
                         this.tableCTHoaDonDatNCC.MaSPColumn}, false);
             this.Relations.Add(this.relationFK_CTHDD_SanPham);
+            this.relationFK_CTHHD_HDDat = new global::System.Data.DataRelation("FK_CTHHD_HDDat", new global::System.Data.DataColumn[] {
+                        this.tableHoaDonDatNCC.MaHDDatColumn}, new global::System.Data.DataColumn[] {
+                        this.tableCTHoaDonDatNCC.MaHDDatColumn}, false);
+            this.Relations.Add(this.relationFK_CTHHD_HDDat);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1486,23 +1486,23 @@ namespace BachHoaXanh_Store.ReportForm {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public HoaDonDatNCCRow HoaDonDatNCCRow {
-                get {
-                    return ((HoaDonDatNCCRow)(this.GetParentRow(this.Table.ParentRelations["FK_CTHHD_HDDat"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_CTHHD_HDDat"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public SanPhamRow SanPhamRow {
                 get {
                     return ((SanPhamRow)(this.GetParentRow(this.Table.ParentRelations["FK_CTHDD_SanPham"])));
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK_CTHDD_SanPham"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public HoaDonDatNCCRow HoaDonDatNCCRow {
+                get {
+                    return ((HoaDonDatNCCRow)(this.GetParentRow(this.Table.ParentRelations["FK_CTHHD_HDDat"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_CTHHD_HDDat"]);
                 }
             }
             
