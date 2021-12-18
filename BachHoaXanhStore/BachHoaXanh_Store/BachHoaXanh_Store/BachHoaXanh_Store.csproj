@@ -269,6 +269,12 @@
     <Compile Include="FormReport.Designer.cs">
       <DependentUpon>FormReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormThemSPKM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormThemSPKM.Designer.cs">
+      <DependentUpon>FormThemSPKM.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormTraHangNCC.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -288,6 +294,9 @@
     </Compile>
     <Compile Include="ReportForm\Report.Designer.cs">
       <DependentUpon>Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm\rptDDH_DataSet.cs">
+      <DependentUpon>rptDDH_DataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="ReportForm\rptDDH_DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -377,6 +386,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormReport.resx">
       <DependentUpon>FormReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormThemSPKM.resx">
+      <DependentUpon>FormThemSPKM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTraHangNCC.resx">
       <DependentUpon>FormTraHangNCC.cs</DependentUpon>

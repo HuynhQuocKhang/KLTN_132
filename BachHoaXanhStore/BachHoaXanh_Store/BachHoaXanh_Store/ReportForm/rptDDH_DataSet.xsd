@@ -9,7 +9,7 @@
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CTHoaDonDatNCCTableAdapter" GeneratorDataComponentClassName="CTHoaDonDatNCCTableAdapter" Name="CTHoaDonDatNCC" UserDataComponentName="CTHoaDonDatNCCTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="BachHoaXanh_StoreConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="BachHoaXanh_StoreConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        ct.MaHDDat, ct.MaSP, ct.SoLuong, ct.ThanhTien, sp.TenSP
@@ -224,7 +224,7 @@ SELECT MaSP, TenSP, MaLoaiSP, MaNCC, DVT, GiaBan, GiaVon, SoLuong, Isdeleted FRO
   <xs:element name="rptDDH_DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="rptDDH_DataSet" msprop:Generator_UserDSName="rptDDH_DataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="CTHoaDonDatNCC" msprop:Generator_TableClassName="CTHoaDonDatNCCDataTable" msprop:Generator_TableVarName="tableCTHoaDonDatNCC" msprop:Generator_TablePropName="CTHoaDonDatNCC" msprop:Generator_RowDeletingName="CTHoaDonDatNCCRowDeleting" msprop:Generator_RowChangingName="CTHoaDonDatNCCRowChanging" msprop:Generator_RowEvHandlerName="CTHoaDonDatNCCRowChangeEventHandler" msprop:Generator_RowDeletedName="CTHoaDonDatNCCRowDeleted" msprop:Generator_UserTableName="CTHoaDonDatNCC" msprop:Generator_RowChangedName="CTHoaDonDatNCCRowChanged" msprop:Generator_RowEvArgName="CTHoaDonDatNCCRowChangeEvent" msprop:Generator_RowClassName="CTHoaDonDatNCCRow">
+        <xs:element name="CTHoaDonDatNCC" msprop:Generator_TableClassName="CTHoaDonDatNCCDataTable" msprop:Generator_TableVarName="tableCTHoaDonDatNCC" msprop:Generator_RowChangedName="CTHoaDonDatNCCRowChanged" msprop:Generator_TablePropName="CTHoaDonDatNCC" msprop:Generator_RowDeletingName="CTHoaDonDatNCCRowDeleting" msprop:Generator_RowChangingName="CTHoaDonDatNCCRowChanging" msprop:Generator_RowEvHandlerName="CTHoaDonDatNCCRowChangeEventHandler" msprop:Generator_RowDeletedName="CTHoaDonDatNCCRowDeleted" msprop:Generator_RowClassName="CTHoaDonDatNCCRow" msprop:Generator_UserTableName="CTHoaDonDatNCC" msprop:Generator_RowEvArgName="CTHoaDonDatNCCRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="MaHDDat" msprop:Generator_ColumnVarNameInTable="columnMaHDDat" msprop:Generator_ColumnPropNameInRow="MaHDDat" msprop:Generator_ColumnPropNameInTable="MaHDDatColumn" msprop:Generator_UserColumnName="MaHDDat" type="xs:int" />
@@ -247,7 +247,7 @@ SELECT MaSP, TenSP, MaLoaiSP, MaNCC, DVT, GiaBan, GiaVon, SoLuong, Isdeleted FRO
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="HoaDonDatNCC" msprop:Generator_TableClassName="HoaDonDatNCCDataTable" msprop:Generator_TableVarName="tableHoaDonDatNCC" msprop:Generator_TablePropName="HoaDonDatNCC" msprop:Generator_RowDeletingName="HoaDonDatNCCRowDeleting" msprop:Generator_RowChangingName="HoaDonDatNCCRowChanging" msprop:Generator_RowEvHandlerName="HoaDonDatNCCRowChangeEventHandler" msprop:Generator_RowDeletedName="HoaDonDatNCCRowDeleted" msprop:Generator_UserTableName="HoaDonDatNCC" msprop:Generator_RowChangedName="HoaDonDatNCCRowChanged" msprop:Generator_RowEvArgName="HoaDonDatNCCRowChangeEvent" msprop:Generator_RowClassName="HoaDonDatNCCRow">
+        <xs:element name="HoaDonDatNCC" msprop:Generator_TableClassName="HoaDonDatNCCDataTable" msprop:Generator_TableVarName="tableHoaDonDatNCC" msprop:Generator_RowChangedName="HoaDonDatNCCRowChanged" msprop:Generator_TablePropName="HoaDonDatNCC" msprop:Generator_RowDeletingName="HoaDonDatNCCRowDeleting" msprop:Generator_RowChangingName="HoaDonDatNCCRowChanging" msprop:Generator_RowEvHandlerName="HoaDonDatNCCRowChangeEventHandler" msprop:Generator_RowDeletedName="HoaDonDatNCCRowDeleted" msprop:Generator_RowClassName="HoaDonDatNCCRow" msprop:Generator_UserTableName="HoaDonDatNCC" msprop:Generator_RowEvArgName="HoaDonDatNCCRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="MaHDDat" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnMaHDDat" msprop:Generator_ColumnPropNameInRow="MaHDDat" msprop:Generator_ColumnPropNameInTable="MaHDDatColumn" msprop:Generator_UserColumnName="MaHDDat" type="xs:int" />
@@ -266,7 +266,7 @@ SELECT MaSP, TenSP, MaLoaiSP, MaNCC, DVT, GiaBan, GiaVon, SoLuong, Isdeleted FRO
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="SanPham" msprop:Generator_TableClassName="SanPhamDataTable" msprop:Generator_TableVarName="tableSanPham" msprop:Generator_TablePropName="SanPham" msprop:Generator_RowDeletingName="SanPhamRowDeleting" msprop:Generator_RowChangingName="SanPhamRowChanging" msprop:Generator_RowEvHandlerName="SanPhamRowChangeEventHandler" msprop:Generator_RowDeletedName="SanPhamRowDeleted" msprop:Generator_UserTableName="SanPham" msprop:Generator_RowChangedName="SanPhamRowChanged" msprop:Generator_RowEvArgName="SanPhamRowChangeEvent" msprop:Generator_RowClassName="SanPhamRow">
+        <xs:element name="SanPham" msprop:Generator_TableClassName="SanPhamDataTable" msprop:Generator_TableVarName="tableSanPham" msprop:Generator_RowChangedName="SanPhamRowChanged" msprop:Generator_TablePropName="SanPham" msprop:Generator_RowDeletingName="SanPhamRowDeleting" msprop:Generator_RowChangingName="SanPhamRowChanging" msprop:Generator_RowEvHandlerName="SanPhamRowChangeEventHandler" msprop:Generator_RowDeletedName="SanPhamRowDeleted" msprop:Generator_RowClassName="SanPhamRow" msprop:Generator_UserTableName="SanPham" msprop:Generator_RowEvArgName="SanPhamRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="MaSP" msprop:Generator_ColumnVarNameInTable="columnMaSP" msprop:Generator_ColumnPropNameInRow="MaSP" msprop:Generator_ColumnPropNameInTable="MaSPColumn" msprop:Generator_UserColumnName="MaSP">
@@ -317,8 +317,8 @@ SELECT MaSP, TenSP, MaLoaiSP, MaNCC, DVT, GiaBan, GiaVon, SoLuong, Isdeleted FRO
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_CTHHD_HDDat" msdata:parent="HoaDonDatNCC" msdata:child="CTHoaDonDatNCC" msdata:parentkey="MaHDDat" msdata:childkey="MaHDDat" msprop:Generator_UserChildTable="CTHoaDonDatNCC" msprop:Generator_ChildPropName="GetCTHoaDonDatNCCRows" msprop:Generator_UserRelationName="FK_CTHHD_HDDat" msprop:Generator_RelationVarName="relationFK_CTHHD_HDDat" msprop:Generator_UserParentTable="HoaDonDatNCC" msprop:Generator_ParentPropName="HoaDonDatNCCRow" />
-      <msdata:Relationship name="FK_CTHDD_SanPham" msdata:parent="SanPham" msdata:child="CTHoaDonDatNCC" msdata:parentkey="MaSP" msdata:childkey="MaSP" msprop:Generator_UserChildTable="CTHoaDonDatNCC" msprop:Generator_ChildPropName="GetCTHoaDonDatNCCRows" msprop:Generator_UserRelationName="FK_CTHDD_SanPham" msprop:Generator_RelationVarName="relationFK_CTHDD_SanPham" msprop:Generator_UserParentTable="SanPham" msprop:Generator_ParentPropName="SanPhamRow" />
+      <msdata:Relationship name="FK_CTHDD_SanPham" msdata:parent="SanPham" msdata:child="CTHoaDonDatNCC" msdata:parentkey="MaSP" msdata:childkey="MaSP" msprop:Generator_UserChildTable="CTHoaDonDatNCC" msprop:Generator_ChildPropName="GetCTHoaDonDatNCCRows" msprop:Generator_UserRelationName="FK_CTHDD_SanPham" msprop:Generator_ParentPropName="SanPhamRow" msprop:Generator_RelationVarName="relationFK_CTHDD_SanPham" msprop:Generator_UserParentTable="SanPham" />
+      <msdata:Relationship name="FK_CTHHD_HDDat" msdata:parent="HoaDonDatNCC" msdata:child="CTHoaDonDatNCC" msdata:parentkey="MaHDDat" msdata:childkey="MaHDDat" msprop:Generator_UserChildTable="CTHoaDonDatNCC" msprop:Generator_ChildPropName="GetCTHoaDonDatNCCRows" msprop:Generator_UserRelationName="FK_CTHHD_HDDat" msprop:Generator_ParentPropName="HoaDonDatNCCRow" msprop:Generator_RelationVarName="relationFK_CTHHD_HDDat" msprop:Generator_UserParentTable="HoaDonDatNCC" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>
