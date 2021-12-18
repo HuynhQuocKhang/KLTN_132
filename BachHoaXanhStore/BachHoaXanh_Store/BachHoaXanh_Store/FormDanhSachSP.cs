@@ -19,12 +19,15 @@ namespace BachHoaXanh_Store
         CustomerBLL objcustomerBLL = new CustomerBLL();
         ProductTypeBLL objProductTypeBLL = new ProductTypeBLL();
         OrderStoreBLL objOrderStoreBLL = new OrderStoreBLL();
+        #endregion
+
+        #region Biến public sử dụng chung cho các form
         public static ProductBO objProductBO = new ProductBO();
         public static int indexCustomerId = 0;
         public static int indexProductTypeId = 0;
         public static bool isEdit = false;
+        public static ProductPromotionBO objPromotion = new ProductPromotionBO();
         #endregion
-
         public FormDanhSachSP()
         {
             InitializeComponent();
@@ -33,7 +36,6 @@ namespace BachHoaXanh_Store
             cbo_NhaCungCap.ValueMember = "MaNCC";
             if (FormLogin.objUserBO.Permission != 1)
             {
-                bunifuButton1.Visible = false;
                 bunifuButton3.Visible = false;
                 cbo_NhaCungCap.SelectedIndex = 0;
                 cbo_NhaCungCap.Enabled = false;
@@ -42,6 +44,7 @@ namespace BachHoaXanh_Store
                 chk_AllStore.Visible = true;
                 chk_AllStore.Checked = false;
                 bunifuCustomLabel1.Visible = true;
+                bunifuButton1.Text = "Cập Nhật Sản Phẩm Khuyến Mãi";
             }
 
             toolTip1.SetToolTip(cbo_LoaiSP, "Chọn tìm kiếm theo loại sản phẩm");
@@ -79,6 +82,7 @@ namespace BachHoaXanh_Store
                     {
                         dgv_DSSP.DataSource = objProductBLL.GetProductPromotionFromStore(strProductName.Trim(), int.Parse(strProductTypeId), 0, int.MaxValue, int.Parse(strPageSize.Trim()), (int)FormLogin.objUserBO.StoreId);
                     }
+                    bunifuButton1.Visible = false;
 
                 }
                 else
@@ -91,7 +95,7 @@ namespace BachHoaXanh_Store
                     {
                         dgv_DSSP.DataSource = objOrderStoreBLL.GetProductBOFromStore(strProductName.Trim(), int.Parse(strProductTypeId), 0, int.MaxValue, int.Parse(strPageSize.Trim()), (int)FormLogin.objUserBO.StoreId);
                     }
-
+                    bunifuButton1.Visible = true;
                 }
             }
             else
@@ -191,8 +195,37 @@ namespace BachHoaXanh_Store
         private void bunifuButton1_Click_1(object sender, EventArgs e)
         {
             isEdit = false;
-            Program.frmChinhSuaSP = new FormChinhSuaSP();
-            Program.frmChinhSuaSP.ShowDialog();
+
+
+            if (FormLogin.objUserBO.Permission == 1)
+            {
+                Program.frmChinhSuaSP = new FormChinhSuaSP();
+                Program.frmChinhSuaSP.ShowDialog();
+            }
+            else
+            {
+                int index = dgv_DSSP.CurrentCell.RowIndex;
+                objPromotion = objOrderStoreBLL.GetProductPromotionFromStore(dgv_DSSP["col_MaSP", index].Value.ToString().Trim());
+                if (objPromotion == null)
+                {
+                    isEdit = false;
+                }
+                else
+                {
+                    isEdit = true;
+                }
+
+                #region Truyền dữ liệu cho object chung
+                objProductBO.MaSP = dgv_DSSP["col_MaSP", index].Value.ToString();
+                objProductBO.TenSP = dgv_DSSP["col_TenSP", index].Value.ToString();
+                objProductBO.MaLoaiSP = int.Parse(dgv_DSSP["col_MaLoaiSP", index].Value.ToString());
+                objProductBO.MaNCC = int.Parse(dgv_DSSP["col_MaNCC", index].Value.ToString());
+                objProductBO.SoLuong = int.Parse(dgv_DSSP["col_SoLuong", index].Value.ToString());
+                #endregion
+
+                Program.frmThemSPKM = new FormThemSPKM();
+                Program.frmThemSPKM.ShowDialog();
+            }
         }
 
         private void cbo_PageSize_SelectedIndexChanged(object sender, EventArgs e)

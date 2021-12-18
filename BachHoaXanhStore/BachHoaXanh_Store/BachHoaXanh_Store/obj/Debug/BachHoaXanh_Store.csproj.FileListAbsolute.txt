@@ -677,3 +677,4 @@ E:\KhoaLuanTotNghiep\BachHoaXanhStore\BachHoaXanh_Store\BachHoaXanh_Store\obj\De
 E:\KhoaLuanTotNghiep\BachHoaXanhStore\BachHoaXanh_Store\BachHoaXanh_Store\obj\Debug\BachHoaXanh_Store.ReportForm.Report.resources
 E:\KhoaLuanTotNghiep\BachHoaXanhStore\BachHoaXanh_Store\BachHoaXanh_Store\obj\Debug\BachHoaXanh_Store.ReportForm.rptSTDatHang.resources
 E:\09DHTH5\KLTN\SoDoLop\KLTN_132\BachHoaXanhStore\BachHoaXanh_Store\BachHoaXanh_Store\obj\Debug\BachHoaXanh_Store.FormThemSPKM.resources
+E:\KhoaLuanTotNghiep\BachHoaXanhStore\BachHoaXanh_Store\BachHoaXanh_Store\obj\Debug\BachHoaXanh_Store.FormThemSPKM.resources

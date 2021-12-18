@@ -156,7 +156,7 @@ namespace BLL_DAO
                             on objProduct.MaLoaiSP equals objProductType.MaLoaiSP
                             join objCustomer in db.NhaCungCaps
                             on objProduct.MaNCC equals objCustomer.MaNCC
-                            where objProduct.Isdeleted == false && (objProduct.TenSP.Contains(strkeywords.Trim()) || objStore.MaSP.Contains(strkeywords.Trim()) && objStore.MaST == intStoreId)
+                            where objProduct.Isdeleted == false && (objProduct.TenSP.Contains(strkeywords.Trim()) || objStore.MaSP.Contains(strkeywords.Trim())) && objStore.MaST == intStoreId
                             select new ProductBO()
                             {
                                 MaSP = objProduct.MaSP,
@@ -181,7 +181,7 @@ namespace BLL_DAO
                             on objProduct.MaLoaiSP equals objProductType.MaLoaiSP
                             join objCustomer in db.NhaCungCaps
                             on objProduct.MaNCC equals objCustomer.MaNCC
-                            where objProduct.Isdeleted == false && objProduct.MaLoaiSP == intProductTypeId && (objProduct.TenSP.Contains(strkeywords.Trim()) || objProduct.MaSP.Contains(strkeywords.Trim()) && objStore.SoLuong <= intStock && objStore.MaST == intStoreId)
+                            where objProduct.Isdeleted == false && objProduct.MaLoaiSP == intProductTypeId && (objProduct.TenSP.Contains(strkeywords.Trim()) || objProduct.MaSP.Contains(strkeywords.Trim())) && objStore.SoLuong <= intStock && objStore.MaST == intStoreId
                             select new ProductBO()
                             {
                                 MaSP = objProduct.MaSP,
@@ -206,7 +206,7 @@ namespace BLL_DAO
                             on objProduct.MaLoaiSP equals objProductType.MaLoaiSP
                             join objCustomer in db.NhaCungCaps
                             on objProduct.MaNCC equals objCustomer.MaNCC
-                            where objProduct.Isdeleted == false && objProduct.MaNCC == intCustomerId && (objProduct.TenSP.Contains(strkeywords.Trim()) || objProduct.MaSP.Contains(strkeywords.Trim()) && objStore.SoLuong <= intStock && objStore.MaST == intStoreId)
+                            where objProduct.Isdeleted == false && objProduct.MaNCC == intCustomerId && (objProduct.TenSP.Contains(strkeywords.Trim()) || objProduct.MaSP.Contains(strkeywords.Trim())) && objStore.SoLuong <= intStock && objStore.MaST == intStoreId
                             select new ProductBO()
                             {
                                 MaSP = objProduct.MaSP,
@@ -232,7 +232,7 @@ namespace BLL_DAO
                             on objProduct.MaLoaiSP equals objProductType.MaLoaiSP
                             join objCustomer in db.NhaCungCaps
                             on objProduct.MaNCC equals objCustomer.MaNCC
-                            where objProduct.Isdeleted == false && objProduct.MaNCC == intCustomerId && (objProduct.TenSP.Contains(strkeywords.Trim()) || objProduct.MaSP.Contains(strkeywords.Trim()) && objStore.SoLuong <= intStock && objProduct.MaLoaiSP == intProductTypeId && objStore.MaST == intStoreId)
+                            where objProduct.Isdeleted == false && objProduct.MaNCC == intCustomerId && (objProduct.TenSP.Contains(strkeywords.Trim()) || objProduct.MaSP.Contains(strkeywords.Trim())) && objStore.SoLuong <= intStock && objProduct.MaLoaiSP == intProductTypeId && objStore.MaST == intStoreId
                             select new ProductBO()
                             {
                                 MaSP = objStore.MaSP,
@@ -415,5 +415,98 @@ namespace BLL_DAO
             }
 
         }
+
+        public ProductPromotionBO GetProductPromotionFromStore(string strProductId)
+        {
+            try
+            {
+                var model = from objProductPromo in db.KhoHangKMs
+                            join objProduct in db.SanPhams
+                            on objProductPromo.MaSP equals objProduct.MaSP
+                            where objProductPromo.MaSP == strProductId
+                            select new ProductPromotionBO()
+                            {
+                                MaSP = objProductPromo.MaSP,
+                                TenSP = objProduct.TenSP,
+                                MaLoaiSP = objProduct.MaLoaiSP,
+                                MaNCC = objProduct.MaNCC,
+                                DVT = objProduct.DVT,
+                                GiaVon = objProduct.GiaVon,
+                                SoLuong = objProductPromo.SoLuong,
+                                NgayKM = objProductPromo.NgayKM,
+                                NgayHetHan = objProductPromo.NgayHetHan
+                            };
+                return model.FirstOrDefault();
+            }
+            catch
+            {
+                return new ProductPromotionBO();
+            }
+        }
+
+
+        public bool InsertOrUpdateProductPromotion(ProductPromotionBO objProductPromotionBO, int intStoreId, bool isUpdate)
+        {
+            var objProductStore = db.KhoSieuThis.Where(x => x.MaSP == objProductPromotionBO.MaSP && x.MaST == intStoreId).FirstOrDefault();
+            try
+            {
+                if (isUpdate)
+                {
+                    var objProductPromo = db.KhoHangKMs.Where(x => x.MaSP == objProductPromotionBO.MaSP && x.MaST == intStoreId).FirstOrDefault();
+
+                    if (objProductPromo.SoLuong > objProductPromotionBO.SoLuong)
+                    {
+                        int? intStockUpdate = objProductPromo.SoLuong - objProductPromotionBO.SoLuong;
+                        objProductPromo.SoLuong = objProductPromotionBO.SoLuong;
+                        objProductStore.SoLuong += intStockUpdate;
+                        db.SubmitChanges();
+                        return true;
+                    }
+                    else
+                    {
+                        int? intStockUpdate = objProductPromotionBO.SoLuong - objProductPromo.SoLuong;
+                        objProductPromo.SoLuong = objProductPromotionBO.SoLuong;
+                        objProductStore.SoLuong -= intStockUpdate;
+                        db.SubmitChanges();
+                        return true;
+                    }
+                }
+                else
+                {
+                    KhoHangKM objKhoHangKM = new KhoHangKM();
+                    objKhoHangKM.MaSP = objProductPromotionBO.MaSP;
+                    objKhoHangKM.MaST = intStoreId;
+                    objKhoHangKM.NgayKM = objProductPromotionBO.NgayKM;
+                    objKhoHangKM.NgayHetHan = objProductPromotionBO.NgayHetHan;
+                    objKhoHangKM.SoLuong = objProductPromotionBO.SoLuong;
+                    db.KhoHangKMs.InsertOnSubmit(objKhoHangKM);
+                    objProductStore.SoLuong -= objProductPromotionBO.SoLuong;
+                    db.SubmitChanges();
+                    return true;
+                }
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public bool DeleteProductPromoTion(ProductPromotionBO objProductPromotionBO, int intStoreId)
+        {
+            try
+            {
+                var objProductStore = db.KhoSieuThis.Where(x => x.MaSP == objProductPromotionBO.MaSP && x.MaST == intStoreId).FirstOrDefault();
+                objProductStore.SoLuong += objProductPromotionBO.SoLuong;
+                var objProductPromo = db.KhoHangKMs.Where(x => x.MaSP == objProductPromotionBO.MaSP && x.MaST == intStoreId).FirstOrDefault();
+                db.KhoHangKMs.DeleteOnSubmit(objProductPromo);
+                db.SubmitChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
     }
 }

@@ -209,3 +209,5 @@ select * from CTPhieuXuatKho
 select * from DonDatHang
 select * from CTDonDatHang
 SELECT * FROM KhoHangKM
+
+select * from KhoSieuThi where MaSP = '9932848000036'

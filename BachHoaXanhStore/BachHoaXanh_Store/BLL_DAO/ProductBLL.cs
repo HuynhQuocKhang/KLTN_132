@@ -323,7 +323,7 @@ namespace BLL_DAO
                             on objProduct.MaLoaiSP equals objProductType.MaLoaiSP
                             join objCustomer in db.NhaCungCaps
                             on objProduct.MaNCC equals objCustomer.MaNCC
-                            where objProduct.Isdeleted == false && (objProduct.TenSP.Contains(strkeywords.Trim()) || objStorePromotion.MaSP.Contains(strkeywords.Trim()) && objStorePromotion.MaST == intStoreId)
+                            where objProduct.Isdeleted == false && (objProduct.TenSP.Contains(strkeywords.Trim()) || objStorePromotion.MaSP.Contains(strkeywords.Trim())) && objStorePromotion.MaST == intStoreId
                             select new ProductPromotionBO()
                             {
                                 MaSP = objProduct.MaSP,
@@ -349,7 +349,7 @@ namespace BLL_DAO
                             on objProduct.MaLoaiSP equals objProductType.MaLoaiSP
                             join objCustomer in db.NhaCungCaps
                             on objProduct.MaNCC equals objCustomer.MaNCC
-                            where objProduct.Isdeleted == false && objProduct.MaLoaiSP == intProductTypeId && (objProduct.TenSP.Contains(strkeywords.Trim()) || objProduct.MaSP.Contains(strkeywords.Trim()) && objStorePromotion.SoLuong <= intStock && objStorePromotion.MaST == intStoreId)
+                            where objProduct.Isdeleted == false && objProduct.MaLoaiSP == intProductTypeId && (objProduct.TenSP.Contains(strkeywords.Trim()) || objProduct.MaSP.Contains(strkeywords.Trim())) && objStorePromotion.SoLuong <= intStock && objStorePromotion.MaST == intStoreId
                             select new ProductPromotionBO()
                             {
                                 MaSP = objProduct.MaSP,
@@ -375,7 +375,7 @@ namespace BLL_DAO
                             on objProduct.MaLoaiSP equals objProductType.MaLoaiSP
                             join objCustomer in db.NhaCungCaps
                             on objProduct.MaNCC equals objCustomer.MaNCC
-                            where objProduct.Isdeleted == false && objProduct.MaNCC == intCustomerId && (objProduct.TenSP.Contains(strkeywords.Trim()) || objProduct.MaSP.Contains(strkeywords.Trim()) && objStorePromotion.SoLuong <= intStock && objStorePromotion.MaST == intStoreId)
+                            where objProduct.Isdeleted == false && objProduct.MaNCC == intCustomerId && (objProduct.TenSP.Contains(strkeywords.Trim()) || objProduct.MaSP.Contains(strkeywords.Trim())) && objStorePromotion.SoLuong <= intStock && objStorePromotion.MaST == intStoreId
                             select new ProductPromotionBO()
                             {
                                 MaSP = objProduct.MaSP,
@@ -402,7 +402,7 @@ namespace BLL_DAO
                             on objProduct.MaLoaiSP equals objProductType.MaLoaiSP
                             join objCustomer in db.NhaCungCaps
                             on objProduct.MaNCC equals objCustomer.MaNCC
-                            where objProduct.Isdeleted == false && objProduct.MaNCC == intCustomerId && (objProduct.TenSP.Contains(strkeywords.Trim()) || objProduct.MaSP.Contains(strkeywords.Trim()) && objStorePromotion.SoLuong <= intStock && objProduct.MaLoaiSP == intProductTypeId && objStorePromotion.MaST == intStoreId)
+                            where objProduct.Isdeleted == false && objProduct.MaNCC == intCustomerId && (objProduct.TenSP.Contains(strkeywords.Trim()) || objProduct.MaSP.Contains(strkeywords.Trim())) && objStorePromotion.SoLuong <= intStock && objProduct.MaLoaiSP == intProductTypeId && objStorePromotion.MaST == intStoreId
                             select new ProductPromotionBO()
                             {
                                 MaSP = objProduct.MaSP,
