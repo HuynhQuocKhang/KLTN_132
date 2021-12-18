@@ -62,6 +62,11 @@ namespace BachHoaXanh_Store
                 MessageBox.Show("Số lượng Khuyến Mãi cho sản phẩm [ " + txt_ProductFullName.Text + " ] phải nhỏ hơn hoặc bằng số lượng tồn của của Kho Siêu Thị" + Environment.NewLine + "Xin vui lòng kiểm tra lại!");
                 isSuccess = false;
             }
+            if (FormDanhSachSP.isEdit == false && dtp_NgayApDung.Value < DateTime.Now)
+            {
+                MessageBox.Show("Ngày bắt đầu khuyến mãi không được nhỏ hơn ngày hiện tại. Xin vui lòng kiểm tra lại!");
+                isSuccess = false;
+            }
             if (dtp_NgayApDung.Value > dtp_NgayKetThuc.Value)
             {
                 MessageBox.Show("Ngày bắt đầu khuyến mãi không được nhỏ hơn ngày kết thúc. Xin vui lòng kiểm tra lại!");
