@@ -30,9 +30,8 @@ namespace BachHoaXanh_Store
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //frmLogin = new FormLogin();
-            frmThemSPKM = new FormThemSPKM();
-            Application.Run(frmThemSPKM);
+            frmLogin = new FormLogin();
+            Application.Run(frmLogin);
         }
 
 
