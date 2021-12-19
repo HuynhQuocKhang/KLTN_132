@@ -227,7 +227,7 @@ select * from HoaDonDatNCC
 select * from NhanVien
 
 update NhanVien
-set UserName = '090900' where UserId = 3
+set TenDN = '090900' where MaNV = 3
 
 select * from PhieuXuatKho
 select * from CTPhieuXuatKho
