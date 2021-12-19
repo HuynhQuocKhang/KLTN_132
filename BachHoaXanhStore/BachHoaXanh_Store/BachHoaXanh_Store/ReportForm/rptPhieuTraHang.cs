@@ -1,4 +1,5 @@
-﻿using BLL_DAO;
+﻿using BarcodeLib;
+using BLL_DAO;
 using DevExpress.XtraReports.UI;
 using System;
 using System.Collections;
@@ -10,6 +11,7 @@ namespace BachHoaXanh_Store.ReportForm
 {
     public partial class rptPhieuTraHang : DevExpress.XtraReports.UI.XtraReport
     {
+        Barcode barcode;
         BachHoaXanhDataContext db = new BachHoaXanhDataContext();
         public rptPhieuTraHang()
         {
@@ -26,6 +28,10 @@ namespace BachHoaXanh_Store.ReportForm
                 lbl_MaSieuThi.Text = "Mã siêu thị";
                 pMaSieuThi.Text = FormLogin.objUserBO.StoreId.ToString();
             }
+            string strBarcode = pMaPhieuTra.Text + pMaSieuThi.Text + DateTime.Now.Day.ToString() + DateTime.Now.Month.ToString() + DateTime.Now.Year.ToString() + pMaPhieuTra.Text;
+            barcode = new Barcode();
+            Image barCodeImage = barcode.Encode(TYPE.CODE128, strBarcode);
+            img_barcode.Image = barCodeImage;
         }
 
     }
