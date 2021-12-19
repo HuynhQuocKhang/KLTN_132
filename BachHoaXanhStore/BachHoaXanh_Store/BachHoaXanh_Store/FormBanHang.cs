@@ -14,6 +14,7 @@ namespace BachHoaXanh_Store
     public partial class FormBanHang : Form
     {
         StoreBLL objStoreBll = new StoreBLL();
+
         public FormBanHang()
         {
             InitializeComponent();
@@ -24,7 +25,7 @@ namespace BachHoaXanh_Store
         {
             label4.Text = DateTime.Now.DayOfWeek.ToString() + ", " + DateTime.Now.Day.ToString() + "/" + DateTime.Now.Month.ToString() + "/" + DateTime.Now.Year.ToString();
             label1.Text = DateTime.Now.ToString("T");
-            lbl_MaSieuThi.Text = FormLogin.objUserBO.StoreId.ToString() + objStoreBll.getStoreNameByUser(FormLogin.objUserBO.StoreId);
+            lbl_MaSieuThi.Text = FormLogin.objUserBO.StoreId.ToString() + " - " + objStoreBll.getStoreNameByUser(FormLogin.objUserBO.StoreId);
             lbl_MaNhanVien.Text = FormLogin.objUserBO.UserFullName;
         }
     }
