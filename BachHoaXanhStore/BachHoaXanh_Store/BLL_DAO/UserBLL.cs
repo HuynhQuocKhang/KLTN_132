@@ -13,15 +13,15 @@ namespace BLL_DAO
         public UserBO GetUserByKey(string strUsertName, string strPassWord)
         {
             var model = from objNhanVien in data.NhanViens
-                        where objNhanVien.UserName == strUsertName && objNhanVien.Pass == strPassWord
+                        where objNhanVien.TenDN == strUsertName && objNhanVien.MatKhau == strPassWord
                         select new UserBO()
                         {
-                            UserId = objNhanVien.UserId,
-                            UserName = objNhanVien.UserName,
-                            PassWord = objNhanVien.Pass,
-                            Permission = objNhanVien.Permisson,
-                            StoreId = objNhanVien.StoreId,
-                            UserFullName = objNhanVien.FullName
+                            UserId = objNhanVien.MaNV,
+                            UserName = objNhanVien.TenDN,
+                            PassWord = objNhanVien.MatKhau,
+                            Permission = objNhanVien.Quyen,
+                            StoreId = objNhanVien.MaST,
+                            UserFullName = objNhanVien.HoTen
                         };
             return model.FirstOrDefault();
         }

@@ -166,13 +166,38 @@ create table CTPhieuTraHang
 
 Create table NhanVien
 (
-	UserId int IDENTITY (1,1) primary key,
-	FullName nvarchar (30),
-	UserName nvarchar (30),
-	Pass nvarchar (30),
-	StoreId int,
-	Permisson int --  1:Quản lí kho, 2:Cửa hàng trưởng, 3:Nhân viên
+	MaNV int IDENTITY (1,1) primary key,
+	HoTen nvarchar (30),
+	TenDN nvarchar (30),
+	MatKhau nvarchar (30),
+	MaST int,
+	Quyen int --  1:Quản lí kho, 2:Cửa hàng trưởng, 3:Nhân viên
 )
+
+Create Table HoaDonBanHang
+(
+	MaHD char(30) not null primary key,
+	MaST int,
+	MaNV int,
+	NgayTao date,
+	Isdeleted bit,
+	TongSP int,
+	ThanhTien int,
+	Constraint FK_HoaDonBanHang_SieuThi foreign key (MaST) references SieuThi(MaST),
+	Constraint FK_HoaDonBanHang_NhanVien foreign key (MaNV) references NhanVien(MaNV)
+)
+
+Create Table CTHoaDonBanHang
+(
+	MaHD char(30) not null,
+	MaSP nvarchar(30) not null,
+	SoLuong int,
+	ThanhTien int,
+	constraint PK_CTHoaDonBanHang primary key (MaHD,MaSP),
+	Constraint FK_CTHoaDonBanHang_HoaDonBanHang foreign key (MaHD) references HoaDonBanHang(MaHD),
+	constraint FK_CTHoaDonBanHang_SanPham foreign key (MaSP) references SanPham(MaSP)
+)
+
 
 
 update SanPham
