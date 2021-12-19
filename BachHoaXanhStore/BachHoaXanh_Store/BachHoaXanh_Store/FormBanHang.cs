@@ -28,5 +28,15 @@ namespace BachHoaXanh_Store
             lbl_MaSieuThi.Text = FormLogin.objUserBO.StoreId.ToString() + " - " + objStoreBll.getStoreNameByUser(FormLogin.objUserBO.StoreId);
             lbl_MaNhanVien.Text = FormLogin.objUserBO.UserFullName;
         }
+
+        private void dgv_DSSP_SelectionChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgv_DSSP_SelectionChanged_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
