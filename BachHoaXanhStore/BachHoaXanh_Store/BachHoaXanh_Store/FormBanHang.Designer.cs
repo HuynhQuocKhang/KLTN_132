@@ -1301,6 +1301,7 @@ namespace BachHoaXanh_Store
             this.btn_ThanhToan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_ThanhToan.TextMarginLeft = 0;
             this.btn_ThanhToan.UseDefaultRadiusAndThickness = true;
+            this.btn_ThanhToan.Click += new System.EventHandler(this.btn_ThanhToan_Click);
             // 
             // timer1
             // 

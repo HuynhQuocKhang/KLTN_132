@@ -235,4 +235,9 @@ select * from DonDatHang
 select * from CTDonDatHang
 SELECT * FROM KhoHangKM
 
-select * from KhoSieuThi where MaST = 1
+select * from KhoSieuThi where MaST = 1 and MaSP = '1012841000006'
+select * from HoaDonBanHang
+select * from CTHoaDonBanHang
+
+select * from SieuThi
+select * from NhanVien

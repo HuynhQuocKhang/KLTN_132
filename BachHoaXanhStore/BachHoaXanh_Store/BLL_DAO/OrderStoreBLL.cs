@@ -55,6 +55,7 @@ namespace BLL_DAO
             }
         }
 
+        //Xóa đơn đặt hàng ST
         public bool DeleteOrderStore(DonDatHang model)
         {
             try
@@ -70,11 +71,13 @@ namespace BLL_DAO
             }
         }
 
+        //Lấy mã đơn hàng mới nhất
         public int GetOrderStoreIdNew()
         {
             return db.DonDatHangs.OrderByDescending(t => t.MaDH).Select(t => t.MaDH).FirstOrDefault();
         }
 
+        //Lấy danh sách sản phẩm từ kho ST
         public List<ProductOrderCustomerBO> GetProductFromStore(string strkeywords = "", int intProductTypeId = 0, int intCustomerId = 0, int intStock = 0, int intPageSize = 50, int intStoreId = 1)
         {
             if (intCustomerId == 0 && intProductTypeId == 0)
@@ -144,7 +147,7 @@ namespace BLL_DAO
             }
         }
 
-
+        //Lấy danh sách sản phẩm từ kho ST
         public List<ProductBO> GetProductBOFromStore(string strkeywords = "", int intProductTypeId = 0, int intCustomerId = 0, int intStock = 0, int intPageSize = 50, int intStoreId = 1)
         {
             if (intCustomerId == 0 && intProductTypeId == 0)
@@ -250,6 +253,7 @@ namespace BLL_DAO
             }
         }
 
+        //Get danh sách ddonwd dặt hàng
         public List<GetOrderFromStoreBO> GetOrderFromStoreBO(int intStoreId, DateTime dateFrom, DateTime dateTo)
         {
             if (intStoreId == 0)
@@ -416,6 +420,7 @@ namespace BLL_DAO
 
         }
 
+        //Lấy Danh sách Sản phẩm Kho KM
         public ProductPromotionBO GetProductPromotionFromStore(string strProductId)
         {
             try
@@ -508,5 +513,22 @@ namespace BLL_DAO
             }
         }
 
+        public bool UpdateMultiProductFromStore(List<ProductBO> lstProduct, int intMaST)
+        {
+            try
+            {
+                for (int i = 0; i < lstProduct.Count; i++)
+                {
+                    var objProduct = db.KhoSieuThis.Where(x => x.MaST == intMaST && x.MaSP == lstProduct[i].MaSP).FirstOrDefault();
+                    objProduct.SoLuong -= lstProduct[i].SoLuong;
+                }
+                db.SubmitChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
 }

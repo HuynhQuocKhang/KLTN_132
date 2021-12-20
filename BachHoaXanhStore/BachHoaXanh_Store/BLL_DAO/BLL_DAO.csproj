@@ -74,6 +74,7 @@
     </Compile>
     <Compile Include="CustomerBLL.cs" />
     <Compile Include="ExportProductBLL.cs" />
+    <Compile Include="InvoiceBLL.cs" />
     <Compile Include="OrderCustomerBLL.cs" />
     <Compile Include="OrderStoreBLL.cs" />
     <Compile Include="OrderStoreDetailBLL.cs" />

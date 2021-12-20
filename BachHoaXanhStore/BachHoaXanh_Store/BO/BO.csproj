@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="CustomerBO.cs" />
     <Compile Include="ExportProductBO.cs" />
+    <Compile Include="InvoiceBO.cs" />
     <Compile Include="OrderCustomerBO.cs" />
     <Compile Include="OrderCustomerDetailBO.cs" />
     <Compile Include="OrderStoreBO.cs" />
