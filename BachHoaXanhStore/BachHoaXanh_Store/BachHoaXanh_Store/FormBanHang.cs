@@ -221,5 +221,17 @@ namespace BachHoaXanh_Store
             btn_ApDungKM.OnIdleState.BorderColor = rgb;
             btn_ApDungKM.OnIdleState.FillColor = rgb;
         }
+
+        private void btn_TimKiem_Click(object sender, EventArgs e)
+        {
+            Program.frmTimKiem = new FormTimKiem();
+            Program.frmTimKiem.ShowDialog();
+        }
+
+        private void btn_Ketca_Click(object sender, EventArgs e)
+        {
+            Program.frmKetCa = new FormKetCa();
+            Program.frmKetCa.ShowDialog();
+        }
     }
 }

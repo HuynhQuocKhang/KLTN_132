@@ -1305,6 +1305,7 @@ namespace BachHoaXanh_Store
             this.btn_TimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_TimKiem.TextMarginLeft = 0;
             this.btn_TimKiem.UseDefaultRadiusAndThickness = true;
+            this.btn_TimKiem.Click += new System.EventHandler(this.btn_TimKiem_Click);
             // 
             // btn_Ketca
             // 
@@ -1368,6 +1369,7 @@ namespace BachHoaXanh_Store
             this.btn_Ketca.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Ketca.TextMarginLeft = 0;
             this.btn_Ketca.UseDefaultRadiusAndThickness = true;
+            this.btn_Ketca.Click += new System.EventHandler(this.btn_Ketca_Click);
             // 
             // panel6
             // 
