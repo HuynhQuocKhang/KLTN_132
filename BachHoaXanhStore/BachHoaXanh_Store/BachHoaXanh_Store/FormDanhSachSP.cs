@@ -205,7 +205,7 @@ namespace BachHoaXanh_Store
             else
             {
                 int index = dgv_DSSP.CurrentCell.RowIndex;
-                objPromotion = objOrderStoreBLL.GetProductPromotionFromStore(dgv_DSSP["col_MaSP", index].Value.ToString().Trim());
+                objPromotion = objOrderStoreBLL.GetProductPromotionFromStore(dgv_DSSP["col_MaSP", index].Value.ToString().Trim(), (int)FormLogin.objUserBO.StoreId).FirstOrDefault();
                 if (objPromotion == null)
                 {
                     isEdit = false;

@@ -236,8 +236,11 @@ select * from CTDonDatHang
 SELECT * FROM KhoHangKM
 
 select * from KhoSieuThi where MaST = 1 and MaSP = '1012841000006'
-select * from HoaDonBanHang
-select * from CTHoaDonBanHang
+select * from KhoHangKM where MaST = 1 and MaSP = '2701122062900'
+select * from HoaDonBanHang where MaHD = '12221220213'
+select * from CTHoaDonBanHang where MaHD = '12221220213'
 
-select * from SieuThi
-select * from NhanVien
+
+
+update KhoHangKM
+set SoLuong = 2

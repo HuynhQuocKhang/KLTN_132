@@ -104,10 +104,6 @@ namespace BachHoaXanh_Store
             this.panel8 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.dgv_DSKM = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -129,6 +125,9 @@ namespace BachHoaXanh_Store
             this.btn_ThanhToan = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.MaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -544,6 +543,7 @@ namespace BachHoaXanh_Store
             this.btn_Them.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Them.TextMarginLeft = 0;
             this.btn_Them.UseDefaultRadiusAndThickness = true;
+            this.btn_Them.Click += new System.EventHandler(this.btn_Them_Click);
             // 
             // panel4
             // 
@@ -748,10 +748,9 @@ namespace BachHoaXanh_Store
             this.dgv_DSKM.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgv_DSKM.ColumnHeadersHeight = 35;
             this.dgv_DSKM.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4});
+            this.MaSP,
+            this.TenSP,
+            this.SoLuong});
             this.tableLayoutPanel5.SetColumnSpan(this.dgv_DSKM, 2);
             this.dgv_DSKM.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_DSKM.DoubleBuffered = true;
@@ -775,34 +774,6 @@ namespace BachHoaXanh_Store
             this.dgv_DSKM.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_DSKM.Size = new System.Drawing.Size(328, 138);
             this.dgv_DSKM.TabIndex = 3;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "MaSP";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Mã sản phẩm";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "TenSP";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Tên sản phẩm";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "SoLuong";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Số Lượng";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "GiaBan";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Giá bán";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
             // panel9
             // 
@@ -1242,6 +1213,7 @@ namespace BachHoaXanh_Store
             this.btn_XoaDonHang.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_XoaDonHang.TextMarginLeft = 0;
             this.btn_XoaDonHang.UseDefaultRadiusAndThickness = true;
+            this.btn_XoaDonHang.Click += new System.EventHandler(this.btn_XoaDonHang_Click);
             // 
             // btn_TimKiem
             // 
@@ -1455,6 +1427,27 @@ namespace BachHoaXanh_Store
             this.timer2.Interval = 3000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
+            // MaSP
+            // 
+            this.MaSP.DataPropertyName = "MaSP";
+            this.MaSP.HeaderText = "Mã sản phẩm";
+            this.MaSP.Name = "MaSP";
+            this.MaSP.ReadOnly = true;
+            // 
+            // TenSP
+            // 
+            this.TenSP.DataPropertyName = "TenSP";
+            this.TenSP.HeaderText = "Tên sản phẩm";
+            this.TenSP.Name = "TenSP";
+            this.TenSP.ReadOnly = true;
+            // 
+            // SoLuong
+            // 
+            this.SoLuong.DataPropertyName = "SoLuong";
+            this.SoLuong.HeaderText = "Số Lượng";
+            this.SoLuong.Name = "SoLuong";
+            this.SoLuong.ReadOnly = true;
+            // 
             // FormBanHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1538,12 +1531,11 @@ namespace BachHoaXanh_Store
         private System.Windows.Forms.DataGridViewTextBoxColumn col_GiaBan;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_ThanhTien;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dgv_DSKM;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.Timer timer2;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_Them;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_ApDungKM;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaSP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenSP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
     }
 }

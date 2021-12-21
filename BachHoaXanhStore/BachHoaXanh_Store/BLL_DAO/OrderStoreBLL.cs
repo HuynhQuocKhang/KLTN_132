@@ -421,14 +421,14 @@ namespace BLL_DAO
         }
 
         //Lấy Danh sách Sản phẩm Kho KM
-        public ProductPromotionBO GetProductPromotionFromStore(string strProductId)
+        public List<ProductPromotionBO> GetProductPromotionFromStore(string strProductId, int intStoreId)
         {
             try
             {
                 var model = from objProductPromo in db.KhoHangKMs
                             join objProduct in db.SanPhams
                             on objProductPromo.MaSP equals objProduct.MaSP
-                            where objProductPromo.MaSP == strProductId
+                            where objProductPromo.MaSP == strProductId && objProductPromo.MaST == intStoreId
                             select new ProductPromotionBO()
                             {
                                 MaSP = objProductPromo.MaSP,
@@ -441,14 +441,31 @@ namespace BLL_DAO
                                 NgayKM = objProductPromo.NgayKM,
                                 NgayHetHan = objProductPromo.NgayHetHan
                             };
-                return model.FirstOrDefault();
+                return model.ToList();
             }
             catch
             {
-                return new ProductPromotionBO();
+                return new List<ProductPromotionBO>();
             }
         }
 
+        public bool UpdateListProductPromotion(List<ProductBO> lstProduct, int intStoreId)
+        {
+            try
+            {
+                foreach (ProductBO item in lstProduct)
+                {
+                    var objPromo = db.KhoHangKMs.Where(x => x.MaSP == item.MaSP && x.MaST == intStoreId).FirstOrDefault();
+                    objPromo.SoLuong -= item.SoLuong;
+                    db.SubmitChanges();
+                }
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
 
         public bool InsertOrUpdateProductPromotion(ProductPromotionBO objProductPromotionBO, int intStoreId, bool isUpdate)
         {
