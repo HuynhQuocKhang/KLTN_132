@@ -230,6 +230,12 @@
     <Compile Include="FormDuyetPhieuTraHang.Designer.cs">
       <DependentUpon>FormDuyetPhieuTraHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormKetCa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKetCa.Designer.cs">
+      <DependentUpon>FormKetCa.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -277,6 +283,12 @@
     </Compile>
     <Compile Include="FormThemSPKM.Designer.cs">
       <DependentUpon>FormThemSPKM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTimKiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTimKiem.Designer.cs">
+      <DependentUpon>FormTimKiem.cs</DependentUpon>
     </Compile>
     <Compile Include="FormTraHangNCC.cs">
       <SubType>Form</SubType>
@@ -369,6 +381,9 @@
     <EmbeddedResource Include="FormDuyetPhieuTraHang.resx">
       <DependentUpon>FormDuyetPhieuTraHang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormKetCa.resx">
+      <DependentUpon>FormKetCa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -392,6 +407,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormThemSPKM.resx">
       <DependentUpon>FormThemSPKM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTimKiem.resx">
+      <DependentUpon>FormTimKiem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTraHangNCC.resx">
       <DependentUpon>FormTraHangNCC.cs</DependentUpon>

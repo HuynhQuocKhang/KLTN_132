@@ -24,14 +24,16 @@ namespace BachHoaXanh_Store
         public static FormLogin frmLogin = null;
         public static FormDuyetPhieuTraHang frmDuyetPhieuTraHang = null;
         public static FormThemSPKM frmThemSPKM = null;
+        public static FormTimKiem frmTimKiem = null;
+        public static FormKetCa frmKetCa = null;
 
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            frmLogin = new FormLogin();
-            Application.Run(frmLogin);
+            frmKetCa = new  FormKetCa();
+            Application.Run(frmKetCa);
         }
 
 

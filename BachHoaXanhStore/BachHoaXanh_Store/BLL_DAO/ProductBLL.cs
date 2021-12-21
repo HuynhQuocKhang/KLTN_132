@@ -311,7 +311,24 @@ namespace BLL_DAO
             }
         }
 
-
+        public List<ProductOrderCustomerBO> GetProductByKey(string strKeyword)
+        {
+            var model = from objProduct in db.SanPhams
+                        select new ProductOrderCustomerBO
+                        {
+                            MaSP = objProduct.MaSP,
+                            TenSP = objProduct.TenSP,
+                            DVT = objProduct.DVT,
+                            GiaVon = objProduct.GiaVon,
+                            SoLuong = objProduct.SoLuong
+                        };
+            if(!string.IsNullOrEmpty(strKeyword))
+            {
+                string name = strKeyword.ToLower().Trim().ToString();
+                model = model.Where(t => (t.MaSP.ToLower().ToString().Contains(name) || t.TenSP.ToLower().ToString().Contains(name)));
+            }    
+            return model.ToList();
+        }
         public List<ProductPromotionBO> GetProductPromotionFromStore(string strkeywords = "", int intProductTypeId = 0, int intCustomerId = 0, int intStock = 0, int intPageSize = 50, int intStoreId = 1)
         {
             if (intCustomerId == 0 && intProductTypeId == 0)
