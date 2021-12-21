@@ -45,7 +45,7 @@ namespace BachHoaXanh_Store
             {
                 e.Handled = true;
             }
-            
+
         }
 
         private void timer2_Tick(object sender, EventArgs e)
@@ -82,6 +82,31 @@ namespace BachHoaXanh_Store
                     txt_SoLuong.Clear();
                 }
             }
+        }
+
+        private void btn_ApDungKM_Click(object sender, EventArgs e)
+        {
+            if (Tag == "1")
+            {
+                setColor(Color.Red);
+                Tag = "0";
+            }
+            else
+            {
+                setColor(Color.FromArgb(76, 154, 42));
+                Tag = "1";
+            }
+        }
+        public void setColor(Color rgb)
+        {
+            btn_ApDungKM.IdleFillColor = rgb;
+            btn_ApDungKM.IdleBorderColor = rgb;
+            btn_ApDungKM.onHoverState.FillColor = rgb;
+            btn_ApDungKM.onHoverState.BorderColor = rgb;
+            btn_ApDungKM.OnPressedState.BorderColor = rgb;
+            btn_ApDungKM.OnPressedState.FillColor = rgb;
+            btn_ApDungKM.OnIdleState.BorderColor = rgb;
+            btn_ApDungKM.OnIdleState.FillColor = rgb;
         }
     }
 }

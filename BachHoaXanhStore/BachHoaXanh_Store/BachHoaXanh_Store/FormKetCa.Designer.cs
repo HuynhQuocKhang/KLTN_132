@@ -1078,8 +1078,8 @@ namespace BachHoaXanh_Store
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.ColumnCount = 2;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.85742F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 54.14258F));
             this.tableLayoutPanel3.Controls.Add(this.label13, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.label14, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.label15, 0, 2);
@@ -1123,57 +1123,58 @@ namespace BachHoaXanh_Store
             this.label14.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label14.Location = new System.Drawing.Point(3, 106);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(253, 40);
+            this.label14.Size = new System.Drawing.Size(231, 40);
             this.label14.TabIndex = 3;
             this.label14.Text = "Doanh thu trong ngày";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label15
             // 
             this.label15.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label15.Location = new System.Drawing.Point(3, 146);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(253, 40);
+            this.label15.Size = new System.Drawing.Size(231, 40);
             this.label15.TabIndex = 3;
             this.label15.Text = "Doanh thu thực tế";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label16
             // 
             this.label16.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label16.Location = new System.Drawing.Point(3, 186);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(253, 40);
+            this.label16.Size = new System.Drawing.Size(231, 40);
             this.label16.TabIndex = 3;
             this.label16.Text = "Số tiền chênh lệch";
-            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label17
             // 
             this.label17.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label17.Location = new System.Drawing.Point(3, 226);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(253, 40);
+            this.label17.Size = new System.Drawing.Size(231, 40);
             this.label17.TabIndex = 3;
             this.label17.Text = "Nhân viên kết ca";
-            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label18
             // 
             this.label18.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label18.Location = new System.Drawing.Point(3, 266);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(253, 40);
+            this.label18.Size = new System.Drawing.Size(231, 40);
             this.label18.TabIndex = 3;
             this.label18.Text = "Thời gian";
-            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_DoanhThuNgay
             // 
             this.lbl_DoanhThuNgay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_DoanhThuNgay.Location = new System.Drawing.Point(262, 106);
+            this.lbl_DoanhThuNgay.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_DoanhThuNgay.Location = new System.Drawing.Point(240, 106);
             this.lbl_DoanhThuNgay.Name = "lbl_DoanhThuNgay";
-            this.lbl_DoanhThuNgay.Size = new System.Drawing.Size(254, 40);
+            this.lbl_DoanhThuNgay.Size = new System.Drawing.Size(276, 40);
             this.lbl_DoanhThuNgay.TabIndex = 3;
             this.lbl_DoanhThuNgay.Text = "lbl_DoanhThuNgay";
             this.lbl_DoanhThuNgay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1181,9 +1182,10 @@ namespace BachHoaXanh_Store
             // lbl_DoanhThuThucTe
             // 
             this.lbl_DoanhThuThucTe.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_DoanhThuThucTe.Location = new System.Drawing.Point(262, 146);
+            this.lbl_DoanhThuThucTe.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_DoanhThuThucTe.Location = new System.Drawing.Point(240, 146);
             this.lbl_DoanhThuThucTe.Name = "lbl_DoanhThuThucTe";
-            this.lbl_DoanhThuThucTe.Size = new System.Drawing.Size(254, 40);
+            this.lbl_DoanhThuThucTe.Size = new System.Drawing.Size(276, 40);
             this.lbl_DoanhThuThucTe.TabIndex = 3;
             this.lbl_DoanhThuThucTe.Text = "lbl_DoanhThuThucTe";
             this.lbl_DoanhThuThucTe.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1191,9 +1193,10 @@ namespace BachHoaXanh_Store
             // lbl_ChenhLech
             // 
             this.lbl_ChenhLech.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_ChenhLech.Location = new System.Drawing.Point(262, 186);
+            this.lbl_ChenhLech.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_ChenhLech.Location = new System.Drawing.Point(240, 186);
             this.lbl_ChenhLech.Name = "lbl_ChenhLech";
-            this.lbl_ChenhLech.Size = new System.Drawing.Size(254, 40);
+            this.lbl_ChenhLech.Size = new System.Drawing.Size(276, 40);
             this.lbl_ChenhLech.TabIndex = 3;
             this.lbl_ChenhLech.Text = "lbl_ChenhLech";
             this.lbl_ChenhLech.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1201,9 +1204,10 @@ namespace BachHoaXanh_Store
             // lbl_NhanVienKetCa
             // 
             this.lbl_NhanVienKetCa.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_NhanVienKetCa.Location = new System.Drawing.Point(262, 226);
+            this.lbl_NhanVienKetCa.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_NhanVienKetCa.Location = new System.Drawing.Point(240, 226);
             this.lbl_NhanVienKetCa.Name = "lbl_NhanVienKetCa";
-            this.lbl_NhanVienKetCa.Size = new System.Drawing.Size(254, 40);
+            this.lbl_NhanVienKetCa.Size = new System.Drawing.Size(276, 40);
             this.lbl_NhanVienKetCa.TabIndex = 3;
             this.lbl_NhanVienKetCa.Text = "lbl_NhanVienKetCa";
             this.lbl_NhanVienKetCa.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1211,9 +1215,10 @@ namespace BachHoaXanh_Store
             // lbl_ThoiGianKetCa
             // 
             this.lbl_ThoiGianKetCa.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_ThoiGianKetCa.Location = new System.Drawing.Point(262, 266);
+            this.lbl_ThoiGianKetCa.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_ThoiGianKetCa.Location = new System.Drawing.Point(240, 266);
             this.lbl_ThoiGianKetCa.Name = "lbl_ThoiGianKetCa";
-            this.lbl_ThoiGianKetCa.Size = new System.Drawing.Size(254, 40);
+            this.lbl_ThoiGianKetCa.Size = new System.Drawing.Size(276, 40);
             this.lbl_ThoiGianKetCa.TabIndex = 3;
             this.lbl_ThoiGianKetCa.Text = "lbl_ThoiGianKetCa";
             this.lbl_ThoiGianKetCa.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1256,7 +1261,7 @@ namespace BachHoaXanh_Store
             this.btn_KetCa.IdleIconLeftImage = null;
             this.btn_KetCa.IdleIconRightImage = null;
             this.btn_KetCa.IndicateFocus = false;
-            this.btn_KetCa.Location = new System.Drawing.Point(262, 309);
+            this.btn_KetCa.Location = new System.Drawing.Point(240, 309);
             this.btn_KetCa.Name = "btn_KetCa";
             stateProperties41.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(42)))));
             stateProperties41.BorderRadius = 3;
@@ -1276,7 +1281,7 @@ namespace BachHoaXanh_Store
             stateProperties42.IconLeftImage = null;
             stateProperties42.IconRightImage = null;
             this.btn_KetCa.OnPressedState = stateProperties42;
-            this.btn_KetCa.Size = new System.Drawing.Size(254, 34);
+            this.btn_KetCa.Size = new System.Drawing.Size(276, 34);
             this.btn_KetCa.TabIndex = 4;
             this.btn_KetCa.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_KetCa.TextMarginLeft = 0;

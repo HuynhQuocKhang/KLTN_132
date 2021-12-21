@@ -32,8 +32,8 @@ namespace BachHoaXanh_Store
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            frmKetCa = new  FormKetCa();
-            Application.Run(frmKetCa);
+            frmBanHang = new   FormBanHang();
+            Application.Run(frmBanHang);
         }
 
 
