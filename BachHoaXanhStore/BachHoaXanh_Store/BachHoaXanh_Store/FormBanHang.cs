@@ -531,14 +531,14 @@ namespace BachHoaXanh_Store
                             MessageBox.Show("Có lỗi trong quá trình thao tác. Xin vui lòng kiểm tra lại!");
                         }
                     }
-                    
+
                 }
                 else
                 {
                     MessageBox.Show("Khởi tạo hóa đơn thất bại. Xin vui lòng kiểm tra lại dữ liệu trước khi thanh toán!");
                 }
             }
-            
+
         }
 
         private void btn_ApDungKM_Click(object sender, EventArgs e)
@@ -584,10 +584,15 @@ namespace BachHoaXanh_Store
 
         private void btn_Ketca_Click(object sender, EventArgs e)
         {
-            Program.frmKetCa = new FormKetCa();
-            Program.frmKetCa.ShowDialog();
+            FormKetCa frmKetCa = new FormKetCa();
+            frmKetCa.CloseDialogEvent += frmKetCa_CloseDialogEvent;
+            frmKetCa.ShowDialog();
         }
-
+        void frmKetCa_CloseDialogEvent()
+        {
+            this.Close();
+            Program.frmLogin.Show();
+        }
         private void btn_Them_Click(object sender, EventArgs e)
         {
             if (isApplyPromo == false)
@@ -781,6 +786,11 @@ namespace BachHoaXanh_Store
         {
             int index = dgv_DSSP.CurrentCell.RowIndex;
             dgv_DSSP.Rows.RemoveAt(index);
+        }
+
+        private void FormBanHang_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Program.frmLogin.Show();
         }
     }
 }

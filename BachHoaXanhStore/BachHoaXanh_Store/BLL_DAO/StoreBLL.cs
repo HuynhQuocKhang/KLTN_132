@@ -34,7 +34,18 @@ namespace BLL_DAO
                              DiaChi = objStore.DiaChi,
                              SDT = objStore.SDT
                          });
-            return model.Select(t=>t.TenST).SingleOrDefault();
+            return model.Select(t => t.TenST).SingleOrDefault();
+        }
+
+        public int GetSaleOfStore(DateTime datCurrentDay, int intStoreId, int intUserId)
+        {
+            int totoalSale = 0;
+            List<HoaDonBanHang> lstInvoice = db.HoaDonBanHangs.Where(x => x.NgayTao == datCurrentDay && x.MaST == intStoreId && x.MaNV == intUserId).ToList();
+            foreach (HoaDonBanHang item in lstInvoice)
+            {
+                totoalSale += (int)item.ThanhTien;
+            }
+            return totoalSale;
         }
     }
 }
