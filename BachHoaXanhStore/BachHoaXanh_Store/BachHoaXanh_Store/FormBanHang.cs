@@ -21,7 +21,7 @@ namespace BachHoaXanh_Store
         public static List<ProductBO> lstProduct = new List<ProductBO>();
         public static List<ProductBO> lstProductPromotion = new List<ProductBO>();
         public static List<InvoiceDetailBO> lsInvoiceDetail = new List<InvoiceDetailBO>();
-        bool isApplyPromo = false;
+        public static bool isApplyPromo = false;
         public FormBanHang()
         {
             InitializeComponent();
@@ -30,6 +30,180 @@ namespace BachHoaXanh_Store
             txt_SoLuong.Text = "1";
             lbl_TongTien.Text = "0";
             lbl_SoLuong.Text = "0";
+        }
+
+        void frmTimKiem_InsertProductEvent(string strProductName, string strProductId, int intStock, int intPrice, int TotalPrice)
+        {
+            //if (dgv_DSSP.Rows.Count == 0)
+            //{
+            //    dgv_DSSP.Rows.Add(strProductName, strProductId, intStock, intPrice, TotalPrice);
+            //}
+            if (isApplyPromo == false)
+            {
+                List<ProductOrderCustomerBO> lstResult = new List<ProductOrderCustomerBO>();
+                lstResult = objOrderStoreBLL.GetProductFromStore(strProductName.Trim(), 0, 0, int.MaxValue, 10, (int)FormLogin.objUserBO.StoreId);
+                if (lstResult.Count == 1)
+                {
+                    ProductOrderCustomerBO objResult = lstResult.FirstOrDefault();
+                    if (objResult.SoLuong == 0)
+                    {
+                        MessageBox.Show("Sản phẩm [ " + objResult.MaSP.Trim() + " - " + objResult.TenSP.Trim() + " ] hiện tại đã hết trên hệ thống. Xin vui lòng chọn sản phẩm khác để thanh toán!");
+                    }
+                    if (objResult.SoLuong > 0)
+                    {
+                        var objProduct = objProductBLL.GetProductByKeys(txt_MaSP.Text.Trim(), 0, 0, 5);
+                        if (dgv_DSSP.Rows.Count == 0)
+                        {
+                            if (intStock > objResult.SoLuong)
+                            {
+                                MessageBox.Show("Số lượng sản phẩm [ " + objResult.MaSP.Trim() + " - " + objResult.TenSP.Trim() + " ] hiện đang vượt quá số lượng tồn trên hệ thống [ " + objResult.SoLuong + " ]. Xin vui lòng kiểm tra lại!");
+                                txt_MaSP.Clear();
+                                txt_SoLuong.Clear();
+                            }
+                            else
+                            {
+                                lbl_TongTien.Text = (intStock * objProduct.FirstOrDefault().GiaBan).ToString();
+                                lbl_SoLuong.Text = intStock.ToString();
+                                dgv_DSSP.Rows.Add(objResult.MaSP.ToString(), objResult.TenSP.ToString(), txt_SoLuong.Text, objProduct.FirstOrDefault().GiaBan.ToString(), intStock * objProduct.FirstOrDefault().GiaBan);
+                                txt_MaSP.Clear();
+                                txt_SoLuong.Clear();
+                            }
+                        }
+                        else
+                        {
+                            int intIndex = -1;
+                            bool isExists = false;
+                            for (int i = 0; i < dgv_DSSP.Rows.Count; i++)
+                            {
+                                if (strProductName.Trim() == dgv_DSSP["col_MaSP", i].Value.ToString())
+                                {
+                                    isExists = true;
+                                    intIndex = i;
+                                    break;
+                                }
+                            }
+                            if (isExists)
+                            {
+                                int intSoluong = int.Parse(dgv_DSSP["col_SoLuong", intIndex].Value.ToString().Trim()) + intStock;
+                                int intTotalPrice = intSoluong * int.Parse(dgv_DSSP["col_GiaBan", intIndex].Value.ToString().Trim());
+                                if (intSoluong > objResult.SoLuong)
+                                {
+                                    MessageBox.Show("Số lượng sản phẩm [ " + objResult.MaSP.Trim() + " - " + objResult.TenSP.Trim() + " ] hiện đang vượt quá số lượng tồn trên hệ thống [ " + objResult.SoLuong + " ]. Xin vui lòng kiểm tra lại!");
+                                    txt_MaSP.Clear();
+                                    txt_SoLuong.Clear();
+                                }
+                                else
+                                {
+                                    dgv_DSSP["col_SoLuong", intIndex].Value = intSoluong;
+                                    dgv_DSSP["col_ThanhTien", intIndex].Value = intTotalPrice;
+                                    txt_MaSP.Clear();
+                                    txt_SoLuong.Clear();
+                                }
+                            }
+                            if (!isExists)
+                            {
+                                dgv_DSSP.Rows.Add(strProductName, strProductId, intStock, intPrice, TotalPrice);
+                                txt_MaSP.Clear();
+                                txt_SoLuong.Clear();
+                            }
+                            int totalPrice = 0;
+                            int totalStock = 0;
+                            for (int i = 0; i < dgv_DSSP.Rows.Count; i++)
+                            {
+                                totalPrice += int.Parse(dgv_DSSP["col_ThanhTien", i].Value.ToString().Trim());
+                                totalStock += int.Parse(dgv_DSSP["col_SoLuong", i].Value.ToString().Trim());
+                            }
+                            lbl_TongTien.Text = totalPrice.ToString();
+                            lbl_SoLuong.Text = totalStock.ToString();
+                        }
+                    }
+                }
+            }
+            if (isApplyPromo == true)
+            {
+                List<ProductPromotionBO> lstResult = new List<ProductPromotionBO>();
+                lstResult = objOrderStoreBLL.GetProductPromotionFromStore(strProductName.Trim(), (int)FormLogin.objUserBO.StoreId);
+                if (lstResult.Count == 1)
+                {
+                    ProductPromotionBO objResult = lstResult.FirstOrDefault();
+                    if (objResult.NgayKM <= DateTime.Now && objResult.NgayHetHan >= DateTime.Now)
+                    {
+                        if (objResult.SoLuong == 0)
+                        {
+                            MessageBox.Show("Sản phẩm [ " + objResult.MaSP.Trim() + " - " + objResult.TenSP.Trim() + " ] hiện tại đã hết hàng KM trên hệ thống. Xin vui lòng chọn sản phẩm khác để thay thế!");
+                        }
+                        if (objResult.SoLuong > 0)
+                        {
+                            if (dgv_DSKM.Rows.Count == 0)
+                            {
+                                if (intStock > objResult.SoLuong)
+                                {
+                                    MessageBox.Show("Số lượng sản phẩm [ " + objResult.MaSP.Trim() + " - " + objResult.TenSP.Trim() + " ] hiện đang vượt quá số lượng tồn KM trên hệ thống [ " + objResult.SoLuong + " ]. Xin vui lòng kiểm tra lại!");
+                                    txt_MaSP.Clear();
+                                    txt_SoLuong.Clear();
+                                }
+                                else
+                                {
+                                    lbl_SoLuong.Text = (int.Parse(lbl_SoLuong.Text) + intStock).ToString();
+                                    dgv_DSKM.Rows.Add(objResult.MaSP.ToString(), objResult.TenSP.ToString(), intStock);
+                                    txt_MaSP.Clear();
+                                    txt_SoLuong.Clear();
+                                }
+                            }
+                            else
+                            {
+                                int intIndex = -1;
+                                bool isExists = false;
+                                for (int i = 0; i < dgv_DSKM.Rows.Count; i++)
+                                {
+                                    if (strProductName.Trim() == dgv_DSKM["MaSP", i].Value.ToString())
+                                    {
+                                        isExists = true;
+                                        intIndex = i;
+                                        break;
+                                    }
+                                }
+                                if (isExists)
+                                {
+                                    int intSoluong = int.Parse(dgv_DSKM["SoLuong", intIndex].Value.ToString().Trim()) + intStock;
+                                    if (intSoluong > objResult.SoLuong)
+                                    {
+                                        MessageBox.Show("Số lượng sản phẩm [ " + objResult.MaSP.Trim() + " - " + objResult.TenSP.Trim() + " ] hiện đang vượt quá số lượng tồn trên hệ thống [ " + objResult.SoLuong + " ]. Xin vui lòng kiểm tra lại!");
+                                        txt_MaSP.Clear();
+                                        txt_SoLuong.Clear();
+                                    }
+                                    else
+                                    {
+                                        dgv_DSKM["SoLuong", intIndex].Value = intSoluong;
+                                        txt_MaSP.Clear();
+                                        txt_SoLuong.Clear();
+                                    }
+                                }
+                                if (!isExists)
+                                {
+                                    dgv_DSKM.Rows.Add(objResult.MaSP.ToString(), objResult.TenSP.ToString(), intStock);
+                                    txt_MaSP.Clear();
+                                    txt_SoLuong.Clear();
+                                }
+                                int totalStock = 0;
+                                for (int i = 0; i < dgv_DSKM.Rows.Count; i++)
+                                {
+                                    totalStock += int.Parse(dgv_DSKM["SoLuong", i].Value.ToString().Trim());
+                                }
+                                for (int i = 0; i < dgv_DSSP.Rows.Count; i++)
+                                {
+                                    totalStock += int.Parse(dgv_DSSP["col_SoLuong", i].Value.ToString().Trim());
+                                }
+                                lbl_SoLuong.Text = totalStock.ToString();
+                            }
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Sản phẩm [ " + objResult.MaSP.Trim() + " - " + objResult.TenSP.Trim() + " ] chỉ áp dụng khuyến mãi trong khoản [ " + objResult.NgayKM + " -> " + objResult.NgayHetHan + " ]. Xin vui lòng kiểm tra lại!");
+                    }
+                }
+            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -403,8 +577,9 @@ namespace BachHoaXanh_Store
 
         private void btn_TimKiem_Click(object sender, EventArgs e)
         {
-            Program.frmTimKiem = new FormTimKiem();
-            Program.frmTimKiem.ShowDialog();
+            FormTimKiem frmTimKiem = new FormTimKiem();
+            frmTimKiem.InsertProductEvent += frmTimKiem_InsertProductEvent;
+            frmTimKiem.ShowDialog();
         }
 
         private void btn_Ketca_Click(object sender, EventArgs e)
@@ -600,6 +775,12 @@ namespace BachHoaXanh_Store
             lbl_SoLuong.Text = "0";
             dgv_DSSP.Rows.Clear();
             dgv_DSKM.Rows.Clear();
+        }
+
+        private void btn_TruHang_Click(object sender, EventArgs e)
+        {
+            int index = dgv_DSSP.CurrentCell.RowIndex;
+            dgv_DSSP.Rows.RemoveAt(index);
         }
     }
 }

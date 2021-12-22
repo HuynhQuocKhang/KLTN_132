@@ -44,5 +44,10 @@ namespace BO
         public DateTime? NgayHetHan { get; set; }
     }
 
-   
+    public class ProductFromStoreFromSearch {
+        public string MaSP { get; set; }
+        public string TenSP { get; set; }
+        public int? GiaBan { get; set; }
+        public int? SoLuong { get; set; }
+    }
 }

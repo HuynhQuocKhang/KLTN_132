@@ -48,11 +48,14 @@ namespace BachHoaXanh_Store
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.txt_MaSP = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
+            this.txt_Keyword = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.btn_TimKiem = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.col_Add = new System.Windows.Forms.DataGridViewButtonColumn();
             this.col_MaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_TenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_Soluong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_GiaBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DSSP)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -73,6 +76,7 @@ namespace BachHoaXanh_Store
             // 
             this.dgv_DSSP.AccessibleName = "";
             this.dgv_DSSP.AllowUserToAddRows = false;
+            this.dgv_DSSP.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgv_DSSP.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_DSSP.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -89,8 +93,11 @@ namespace BachHoaXanh_Store
             this.dgv_DSSP.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_DSSP.ColumnHeadersHeight = 35;
             this.dgv_DSSP.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.col_Add,
             this.col_MaSP,
-            this.col_TenSP});
+            this.col_TenSP,
+            this.col_Soluong,
+            this.col_GiaBan});
             this.dgv_DSSP.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_DSSP.DoubleBuffered = true;
             this.dgv_DSSP.EnableHeadersVisualStyles = false;
@@ -105,6 +112,7 @@ namespace BachHoaXanh_Store
             this.dgv_DSSP.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_DSSP.Size = new System.Drawing.Size(726, 267);
             this.dgv_DSSP.TabIndex = 3;
+            this.dgv_DSSP.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DSSP_CellClick);
             // 
             // timer2
             // 
@@ -145,7 +153,7 @@ namespace BachHoaXanh_Store
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 256F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Controls.Add(this.bunifuLabel1, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.txt_MaSP, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.txt_Keyword, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.btn_TimKiem, 1, 1);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(23, 23);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -171,81 +179,81 @@ namespace BachHoaXanh_Store
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // txt_MaSP
+            // txt_Keyword
             // 
-            this.txt_MaSP.AcceptsReturn = false;
-            this.txt_MaSP.AcceptsTab = false;
-            this.txt_MaSP.AnimationSpeed = 200;
-            this.txt_MaSP.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.txt_MaSP.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.txt_MaSP.AutoSize = true;
-            this.txt_MaSP.BackColor = System.Drawing.Color.Transparent;
-            this.txt_MaSP.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txt_MaSP.BackgroundImage")));
-            this.txt_MaSP.BorderColorActive = System.Drawing.Color.DodgerBlue;
-            this.txt_MaSP.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.txt_MaSP.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.txt_MaSP.BorderColorIdle = System.Drawing.Color.Silver;
-            this.txt_MaSP.BorderRadius = 1;
-            this.txt_MaSP.BorderThickness = 1;
-            this.txt_MaSP.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txt_MaSP.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_MaSP.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
-            this.txt_MaSP.DefaultText = "";
-            this.txt_MaSP.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txt_MaSP.FillColor = System.Drawing.Color.White;
-            this.txt_MaSP.HideSelection = true;
-            this.txt_MaSP.IconLeft = null;
-            this.txt_MaSP.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_MaSP.IconPadding = 10;
-            this.txt_MaSP.IconRight = null;
-            this.txt_MaSP.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_MaSP.Lines = new string[0];
-            this.txt_MaSP.Location = new System.Drawing.Point(3, 29);
-            this.txt_MaSP.MaxLength = 32767;
-            this.txt_MaSP.MinimumSize = new System.Drawing.Size(100, 35);
-            this.txt_MaSP.Modified = false;
-            this.txt_MaSP.Multiline = false;
-            this.txt_MaSP.Name = "txt_MaSP";
+            this.txt_Keyword.AcceptsReturn = false;
+            this.txt_Keyword.AcceptsTab = false;
+            this.txt_Keyword.AnimationSpeed = 200;
+            this.txt_Keyword.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txt_Keyword.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txt_Keyword.AutoSize = true;
+            this.txt_Keyword.BackColor = System.Drawing.Color.Transparent;
+            this.txt_Keyword.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txt_Keyword.BackgroundImage")));
+            this.txt_Keyword.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.txt_Keyword.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.txt_Keyword.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.txt_Keyword.BorderColorIdle = System.Drawing.Color.Silver;
+            this.txt_Keyword.BorderRadius = 1;
+            this.txt_Keyword.BorderThickness = 1;
+            this.txt_Keyword.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txt_Keyword.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_Keyword.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            this.txt_Keyword.DefaultText = "";
+            this.txt_Keyword.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt_Keyword.FillColor = System.Drawing.Color.White;
+            this.txt_Keyword.HideSelection = true;
+            this.txt_Keyword.IconLeft = null;
+            this.txt_Keyword.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_Keyword.IconPadding = 10;
+            this.txt_Keyword.IconRight = null;
+            this.txt_Keyword.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_Keyword.Lines = new string[0];
+            this.txt_Keyword.Location = new System.Drawing.Point(3, 29);
+            this.txt_Keyword.MaxLength = 32767;
+            this.txt_Keyword.MinimumSize = new System.Drawing.Size(100, 35);
+            this.txt_Keyword.Modified = false;
+            this.txt_Keyword.Multiline = false;
+            this.txt_Keyword.Name = "txt_Keyword";
             stateProperties1.BorderColor = System.Drawing.Color.DodgerBlue;
             stateProperties1.FillColor = System.Drawing.Color.Empty;
             stateProperties1.ForeColor = System.Drawing.Color.Empty;
             stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txt_MaSP.OnActiveState = stateProperties1;
+            this.txt_Keyword.OnActiveState = stateProperties1;
             stateProperties2.BorderColor = System.Drawing.Color.Empty;
             stateProperties2.FillColor = System.Drawing.Color.White;
             stateProperties2.ForeColor = System.Drawing.Color.Empty;
             stateProperties2.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txt_MaSP.OnDisabledState = stateProperties2;
+            this.txt_Keyword.OnDisabledState = stateProperties2;
             stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             stateProperties3.FillColor = System.Drawing.Color.Empty;
             stateProperties3.ForeColor = System.Drawing.Color.Empty;
             stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txt_MaSP.OnHoverState = stateProperties3;
+            this.txt_Keyword.OnHoverState = stateProperties3;
             stateProperties4.BorderColor = System.Drawing.Color.Silver;
             stateProperties4.FillColor = System.Drawing.Color.White;
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txt_MaSP.OnIdleState = stateProperties4;
-            this.txt_MaSP.PasswordChar = '\0';
-            this.txt_MaSP.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txt_MaSP.PlaceholderText = "Enter text";
-            this.txt_MaSP.ReadOnly = false;
-            this.txt_MaSP.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txt_MaSP.SelectedText = "";
-            this.txt_MaSP.SelectionLength = 0;
-            this.txt_MaSP.SelectionStart = 0;
-            this.txt_MaSP.ShortcutsEnabled = true;
-            this.txt_MaSP.Size = new System.Drawing.Size(250, 35);
-            this.txt_MaSP.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
-            this.txt_MaSP.TabIndex = 2;
-            this.txt_MaSP.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txt_MaSP.TextMarginBottom = 0;
-            this.txt_MaSP.TextMarginLeft = 5;
-            this.txt_MaSP.TextMarginTop = 0;
-            this.txt_MaSP.TextPlaceholder = "Enter text";
-            this.txt_MaSP.UseSystemPasswordChar = false;
-            this.txt_MaSP.WordWrap = true;
-            this.txt_MaSP.TextChanged += new System.EventHandler(this.txt_MaSP_TextChanged);
+            this.txt_Keyword.OnIdleState = stateProperties4;
+            this.txt_Keyword.PasswordChar = '\0';
+            this.txt_Keyword.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txt_Keyword.PlaceholderText = "Enter text";
+            this.txt_Keyword.ReadOnly = false;
+            this.txt_Keyword.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txt_Keyword.SelectedText = "";
+            this.txt_Keyword.SelectionLength = 0;
+            this.txt_Keyword.SelectionStart = 0;
+            this.txt_Keyword.ShortcutsEnabled = true;
+            this.txt_Keyword.Size = new System.Drawing.Size(250, 35);
+            this.txt_Keyword.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            this.txt_Keyword.TabIndex = 2;
+            this.txt_Keyword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txt_Keyword.TextMarginBottom = 0;
+            this.txt_Keyword.TextMarginLeft = 5;
+            this.txt_Keyword.TextMarginTop = 0;
+            this.txt_Keyword.TextPlaceholder = "Enter text";
+            this.txt_Keyword.UseSystemPasswordChar = false;
+            this.txt_Keyword.WordWrap = true;
+            this.txt_Keyword.TextChanged += new System.EventHandler(this.txt_MaSP_TextChanged);
             // 
             // btn_TimKiem
             // 
@@ -309,10 +317,22 @@ namespace BachHoaXanh_Store
             this.btn_TimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_TimKiem.TextMarginLeft = 0;
             this.btn_TimKiem.UseDefaultRadiusAndThickness = true;
+            this.btn_TimKiem.Click += new System.EventHandler(this.btn_TimKiem_Click);
             // 
             // timer1
             // 
             this.timer1.Enabled = true;
+            // 
+            // col_Add
+            // 
+            this.col_Add.HeaderText = "Thao Tác";
+            this.col_Add.Name = "col_Add";
+            this.col_Add.ReadOnly = true;
+            this.col_Add.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.col_Add.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.col_Add.Text = "Thêm";
+            this.col_Add.ToolTipText = "Thêm Sản Phẩm";
+            this.col_Add.UseColumnTextForButtonValue = true;
             // 
             // col_MaSP
             // 
@@ -327,6 +347,20 @@ namespace BachHoaXanh_Store
             this.col_TenSP.HeaderText = "Tên sản phẩm";
             this.col_TenSP.Name = "col_TenSP";
             this.col_TenSP.ReadOnly = true;
+            // 
+            // col_Soluong
+            // 
+            this.col_Soluong.DataPropertyName = "SoLuong";
+            this.col_Soluong.HeaderText = "Số Lượng";
+            this.col_Soluong.Name = "col_Soluong";
+            this.col_Soluong.ReadOnly = true;
+            // 
+            // col_GiaBan
+            // 
+            this.col_GiaBan.DataPropertyName = "GiaBan";
+            this.col_GiaBan.HeaderText = "Giá Bán";
+            this.col_GiaBan.Name = "col_GiaBan";
+            this.col_GiaBan.ReadOnly = true;
             // 
             // FormTimKiem
             // 
@@ -356,9 +390,12 @@ namespace BachHoaXanh_Store
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
-        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txt_MaSP;
+        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txt_Keyword;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_TimKiem;
+        private System.Windows.Forms.DataGridViewButtonColumn col_Add;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_MaSP;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_TenSP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_Soluong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_GiaBan;
     }
 }
