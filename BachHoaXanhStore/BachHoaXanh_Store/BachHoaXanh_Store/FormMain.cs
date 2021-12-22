@@ -100,7 +100,7 @@ namespace BachHoaXanh_Store
 
         private void accordionControlElement4_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void accordionControlElement5_Click(object sender, EventArgs e)
@@ -133,7 +133,7 @@ namespace BachHoaXanh_Store
                     reportType = "DatHang";
                     label1.Text = "Số đơn đã đặt";
                     label3.Text = "Tổng giá trị đặt";
-                    label2.Text=objOrderStoreBLL.countOrderFromStore().ToString();
+                    label2.Text = objOrderStoreBLL.countOrderFromStore().ToString();
                     label4.Text = objOrderStoreBLL.sumValueOrderFormStore().ToString();
                 }
                 else if (xtraTabbedMdiManager1.SelectedPage.Text == "FormPhanPhoiHang")
@@ -159,18 +159,29 @@ namespace BachHoaXanh_Store
                     bunifuButton1.Visible = false;
                     label1.Text = "Số sản phẩm còn";
                     label3.Text = "Số sản phẩm đã hết";
-                    int intProductStock = 0;
-                    int intProductOOT = 0;
-                    intProductStock = lstProduct.Count(x => x.SoLuong > 0);
-                    intProductOOT = lstProduct.Count(x => x.SoLuong == 0);
-                    label2.Text = intProductStock.ToString();
-                    label4.Text = intProductOOT.ToString();
+                    if (FormLogin.objUserBO.Permission == 1)
+                    {
+                        int intProductStock = 0;
+                        int intProductOOT = 0;
+                        intProductStock = lstProduct.Where(x => x.SoLuong > 0).Count();
+                        intProductOOT = lstProduct.Count(x => x.SoLuong == 0);
+                        label2.Text = intProductStock.ToString();
+                        label4.Text = intProductOOT.ToString();
+                    }
+                    else
+                    {
+                        int intProductOOT = 0;
+                        intProductOOT = lstProduct.Count(x => x.SoLuong == 0);
+                        label2.Text= objProductBLL.CountProductStore().ToString();
+                        label4.Text = intProductOOT.ToString();
+                    }
+
                 }
                 else if (xtraTabbedMdiManager1.SelectedPage.Text == "FormXemDonDatHang")
                 {
                     bunifuButton1.Visible = false;
                     label1.Text = "Số đơn chưa xử lí";
-                    label3.Text = "Số đơn đã xử lí"; 
+                    label3.Text = "Số đơn đã xử lí";
                     label2.Text = objOrderStoreBLL.countOrderFromStore().ToString();
                     label4.Text = objOrderStoreBLL.countTransferFromStore().ToString();
                 }

@@ -41,6 +41,17 @@ namespace BLL_DAO
             return model.ToList();
         }
 
+
+        public int CountProductStore()
+        {
+            var model = from objProductStore in db.KhoSieuThis
+                        select new ProductBO()
+                        {
+                            MaSP = objProductStore.MaSP,
+                        };
+            return model.ToList().Count();
+        }
+
         //Lấy danh sách sản phẩm theo keyword và mã nhà cung cấp
         public List<ProductBO> GetProductByKeys(string strkeywords = "", int intProductTypeId = 0, int intCustomerId = 0, int intPageSize = 50)
         {
