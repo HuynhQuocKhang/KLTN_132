@@ -283,6 +283,79 @@ namespace BLL_DAO
                 return model.OrderByDescending(x => x.MaHD).Where(x => x.NgayDat <= dateTo && x.NgayDat >= dateFrom && x.MaST == intStoreId).ToList();
             }
         }
+        public int countAllOrderFromStore()
+        {
+            var entities = from objOrderStore in db.DonDatHangs
+                           select new OrderStoreBO()
+                           {
+                               MaHD = objOrderStore.MaDH,
+                               MaST = objOrderStore.MaST,
+                               NguoiLapPhieu = objOrderStore.NguoiLapPhieu,
+                               NgayDat = objOrderStore.NgayDat,
+                               TongTien = objOrderStore.TongTien,
+                               TinhTrang = objOrderStore.TinhTrang
+                           };
+            return entities.Count();
+        }
+        public int countOrderFromStore()
+        {
+            var entities = from objOrderStore in db.DonDatHangs
+                           where objOrderStore.TinhTrang == 0
+                           select new OrderStoreBO()
+                           {
+                               MaHD = objOrderStore.MaDH,
+                               MaST = objOrderStore.MaST,
+                               NguoiLapPhieu = objOrderStore.NguoiLapPhieu,
+                               NgayDat = objOrderStore.NgayDat,
+                               TongTien = objOrderStore.TongTien,
+                               TinhTrang = objOrderStore.TinhTrang
+                           };
+            return entities.Count();
+        }
+        public int countTransferFromStore()
+        {
+            var entities = from objOrderStore in db.DonDatHangs
+                           where objOrderStore.TinhTrang == 1
+                           select new OrderStoreBO()
+                           {
+                               MaHD = objOrderStore.MaDH,
+                               MaST = objOrderStore.MaST,
+                               NguoiLapPhieu = objOrderStore.NguoiLapPhieu,
+                               NgayDat = objOrderStore.NgayDat,
+                               TongTien = objOrderStore.TongTien,
+                               TinhTrang = objOrderStore.TinhTrang
+                           };
+            return entities.Count();
+        }
+        public int sumAllValueOrderFormStore()
+        {
+            var entities = from objOrderStore in db.DonDatHangs
+                           select new OrderStoreBO()
+                           {
+                               MaHD = objOrderStore.MaDH,
+                               MaST = objOrderStore.MaST,
+                               NguoiLapPhieu = objOrderStore.NguoiLapPhieu,
+                               NgayDat = objOrderStore.NgayDat,
+                               TongTien = objOrderStore.TongTien,
+                               TinhTrang = objOrderStore.TinhTrang
+                           };
+            return int.Parse(entities.Sum(x => x.TongTien).ToString());
+        }
+        public int sumValueOrderFormStore()
+        {
+            var entities = from objOrderStore in db.DonDatHangs
+                           where objOrderStore.TinhTrang == 0
+                           select new OrderStoreBO()
+                           {
+                               MaHD = objOrderStore.MaDH,
+                               MaST = objOrderStore.MaST,
+                               NguoiLapPhieu = objOrderStore.NguoiLapPhieu,
+                               NgayDat = objOrderStore.NgayDat,
+                               TongTien = objOrderStore.TongTien,
+                               TinhTrang = objOrderStore.TinhTrang
+                           };
+            return int.Parse(entities.Sum(x=>x.TongTien).ToString());
+        }
 
         public List<OrderStoreBO> GetOrderFromStoreBO(int intStoreId, int pTinhTrang, string strkeywords = "")
         {
@@ -381,7 +454,36 @@ namespace BLL_DAO
                 return false;
             }
         }
-
+        public int countReturnProductOrder()
+        {
+            var model = from objOrderStore in db.PhieuTraHangs
+                        where objOrderStore.TinhTrang == 0
+                        select new GetReturnProductsBO()
+                        {
+                            MaPTH = objOrderStore.MaPTH,
+                            MaST = objOrderStore.MaST,
+                            MaNCC = objOrderStore.MaNCC,
+                            NgayTra = objOrderStore.NgayTra,
+                            NguoiLapPhieu = objOrderStore.NguoiLapPhieu,
+                            TongTien = objOrderStore.TongTien
+                        };
+            return model.Count();
+        }
+        public int sumValueReturnProductOrder()
+        {
+            var model = from objOrderStore in db.PhieuTraHangs
+                        where objOrderStore.TinhTrang == 0
+                        select new GetReturnProductsBO()
+                        {
+                            MaPTH = objOrderStore.MaPTH,
+                            MaST = objOrderStore.MaST,
+                            MaNCC = objOrderStore.MaNCC,
+                            NgayTra = objOrderStore.NgayTra,
+                            NguoiLapPhieu = objOrderStore.NguoiLapPhieu,
+                            TongTien = objOrderStore.TongTien
+                        };
+            return (int)model.Sum(x=>x.TongTien);
+        }
         public List<GetReturnProductsBO> GetReturnProductOrder(string pKeyWord, string strStoreId, DateTime dateFrom, DateTime dateTo)
         {
             if (pKeyWord != "")

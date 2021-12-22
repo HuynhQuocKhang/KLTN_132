@@ -58,5 +58,37 @@ namespace BLL_DAO
             }
         }
 
+       public int countExportProduct()
+        {
+            var entities = from objExportDetail in db.CTPhieuTraHangs
+                           join objProduct in db.SanPhams
+                           on objExportDetail.MaSP equals objProduct.MaSP
+                           join objExport in db.PhieuTraHangs
+                           on objExportDetail.MaPTH equals objExport.MaPTH
+                           select new ExportProductDetailBO
+                           {
+                               MaSP = objExportDetail.MaSP,
+                               TenSP = objProduct.TenSP,
+                               SoLuong = objExportDetail.SoLuong,
+                               ThanhTien = objExport.TongTien
+                           };
+            return int.Parse(entities.Sum(x => x.SoLuong).ToString());
+        }
+        public int sumValueExportProduct()
+        {
+            var entities = from objExportDetail in db.CTPhieuTraHangs
+                           join objProduct in db.SanPhams
+                           on objExportDetail.MaSP equals objProduct.MaSP
+                           join objExport in db.PhieuTraHangs
+                           on objExportDetail.MaPTH equals objExport.MaPTH
+                           select new ExportProductDetailBO
+                           {
+                               MaSP = objExportDetail.MaSP,
+                               TenSP = objProduct.TenSP,
+                               SoLuong = objExportDetail.SoLuong,
+                               ThanhTien = objExport.TongTien
+                           };
+            return int.Parse(entities.Sum(x => x.ThanhTien).ToString());
+        }
     }
 }

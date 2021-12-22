@@ -117,23 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="comboBoxEdit1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="bunifuButton1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAE8AAAAjCAYAAADVAlenAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADZSURBVGhD7dDBCcJAGAXh7UJYFSzFCqxGk6I8S0gES7EB
-        T1agRuZkQg7P6zyYy+5/+or7c2232rVDPTfD+mXLHft6Gb2gK6UZNrdTP39ss92hG/FmD2wh6MRLgk68
-        JOjES4JOvCToxEuCTrwk6MRLgk68JOjES4JOvCToxEuCTrwk6MRLgk68JOjES4JOvCToxEuCTrwk6MRL
-        gk68JOjES4JOvCToxEuCTrwk6MRLgk68JOjES4JOvCTovnj3309bqj6hK6W9rvefx8f0yKbV56nbHqBz
-        2Up5A7VHtTtUgg9vAAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAAE4AAAAjCAYAAAA6wDyZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADZSURBVGhD7dCxCcJQGEXht4WQKDiKEziNJkNZS0gER8kC
+        Vk6gRk6jMcXF9lw4zXt/9RX3x9putW2H6tQM9cOWO/TVebKCrZRmWF+P/e9jmzXCNsH9PLCFYBMuDTbh
+        0mATLg024dJgEy4NNuHSYBMuDTbh0mATLg024dJgEy4NNuHSYBMuDTbh0mATLg024dJgEy4NNuHSYBMu
+        DTbh0mATLg024dJgEy4NNuHSYBMuDTbh0mATLg024dJge8ON35+2VHWHrZT2Uu9ej7f5kX1W3Y/dZg+b
+        y1fKE9MMabH3622dAAAAAElFTkSuQmCC
 </value>
   </data>
-  <metadata name="accordionControl1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>154, 17</value>
-  </metadata>
   <assembly alias="DevExpress.Data.v20.1" name="DevExpress.Data.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
   <data name="accordionControlElement6.ImageOptions.SvgImage" type="DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v20.1" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

@@ -70,12 +70,6 @@ namespace BachHoaXanh_Store
             this.dtp_NgayKetThuc = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.dgv_DSCT = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.dgv_DSPTH = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.bunifuButton2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.btn_DuyetDonTraHang = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.chk_SelectAll = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.col_check = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.col_MaDH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_MaST = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -84,10 +78,16 @@ namespace BachHoaXanh_Store
             this.col_NguoiLap = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_TinhTrang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_TongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.bunifuButton2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.btn_DuyetDonTraHang = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.chk_SelectAll = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.col_MaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_TenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_NgayHetHan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -582,7 +582,7 @@ namespace BachHoaXanh_Store
             this.col_MaSP,
             this.col_TenSP,
             this.col_SoLuong,
-            this.col_ThanhTien});
+            this.col_NgayHetHan});
             this.dgv_DSCT.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_DSCT.DoubleBuffered = true;
             this.dgv_DSCT.EnableHeadersVisualStyles = false;
@@ -663,6 +663,73 @@ namespace BachHoaXanh_Store
             this.dgv_DSPTH.Size = new System.Drawing.Size(641, 574);
             this.dgv_DSPTH.TabIndex = 0;
             this.dgv_DSPTH.SelectionChanged += new System.EventHandler(this.dgv_DSPTH_SelectionChanged);
+            // 
+            // col_check
+            // 
+            this.col_check.FalseValue = "F";
+            this.col_check.HeaderText = "Chọn";
+            this.col_check.Name = "col_check";
+            this.col_check.TrueValue = "T";
+            this.col_check.Width = 44;
+            // 
+            // col_MaDH
+            // 
+            this.col_MaDH.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.col_MaDH.DataPropertyName = "MaPTH";
+            this.col_MaDH.HeaderText = "Mã đơn hàng";
+            this.col_MaDH.Name = "col_MaDH";
+            this.col_MaDH.Width = 104;
+            // 
+            // col_MaST
+            // 
+            this.col_MaST.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.col_MaST.DataPropertyName = "MaST";
+            this.col_MaST.HeaderText = "Mã siêu thị";
+            this.col_MaST.Name = "col_MaST";
+            this.col_MaST.Width = 93;
+            // 
+            // col_MaNCC
+            // 
+            this.col_MaNCC.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.col_MaNCC.DataPropertyName = "MaNCC";
+            this.col_MaNCC.HeaderText = "Mã nhà cung cấp";
+            this.col_MaNCC.Name = "col_MaNCC";
+            this.col_MaNCC.Visible = false;
+            this.col_MaNCC.Width = 107;
+            // 
+            // col_NgayDat
+            // 
+            this.col_NgayDat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.col_NgayDat.DataPropertyName = "NgayTra";
+            this.col_NgayDat.HeaderText = "Ngày trả";
+            this.col_NgayDat.Name = "col_NgayDat";
+            this.col_NgayDat.Width = 80;
+            // 
+            // col_NguoiLap
+            // 
+            this.col_NguoiLap.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.col_NguoiLap.DataPropertyName = "NguoiLapPhieu";
+            this.col_NguoiLap.HeaderText = "Người lập phiếu";
+            this.col_NguoiLap.Name = "col_NguoiLap";
+            // 
+            // col_TinhTrang
+            // 
+            this.col_TinhTrang.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.col_TinhTrang.DataPropertyName = "TinhTrang";
+            this.col_TinhTrang.HeaderText = "Tình trạng";
+            this.col_TinhTrang.Name = "col_TinhTrang";
+            this.col_TinhTrang.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.col_TinhTrang.Visible = false;
+            this.col_TinhTrang.Width = 89;
+            // 
+            // col_TongTien
+            // 
+            this.col_TongTien.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.col_TongTien.DataPropertyName = "TongTien";
+            this.col_TongTien.HeaderText = "Tổng tiền";
+            this.col_TongTien.Name = "col_TongTien";
+            this.col_TongTien.Visible = false;
+            this.col_TongTien.Width = 84;
             // 
             // panel4
             // 
@@ -880,73 +947,6 @@ namespace BachHoaXanh_Store
             this.chk_SelectAll.ToolTipText = null;
             this.chk_SelectAll.CheckedChanged += new System.EventHandler<Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs>(this.chk_SelectAll_CheckedChanged);
             // 
-            // col_check
-            // 
-            this.col_check.FalseValue = "F";
-            this.col_check.HeaderText = "Chọn";
-            this.col_check.Name = "col_check";
-            this.col_check.TrueValue = "T";
-            this.col_check.Width = 44;
-            // 
-            // col_MaDH
-            // 
-            this.col_MaDH.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.col_MaDH.DataPropertyName = "MaPTH";
-            this.col_MaDH.HeaderText = "Mã đơn hàng";
-            this.col_MaDH.Name = "col_MaDH";
-            this.col_MaDH.Width = 104;
-            // 
-            // col_MaST
-            // 
-            this.col_MaST.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.col_MaST.DataPropertyName = "MaST";
-            this.col_MaST.HeaderText = "Mã siêu thị";
-            this.col_MaST.Name = "col_MaST";
-            this.col_MaST.Width = 93;
-            // 
-            // col_MaNCC
-            // 
-            this.col_MaNCC.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.col_MaNCC.DataPropertyName = "MaNCC";
-            this.col_MaNCC.HeaderText = "Mã nhà cung cấp";
-            this.col_MaNCC.Name = "col_MaNCC";
-            this.col_MaNCC.Visible = false;
-            this.col_MaNCC.Width = 107;
-            // 
-            // col_NgayDat
-            // 
-            this.col_NgayDat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.col_NgayDat.DataPropertyName = "NgayTra";
-            this.col_NgayDat.HeaderText = "Ngày trả";
-            this.col_NgayDat.Name = "col_NgayDat";
-            this.col_NgayDat.Width = 80;
-            // 
-            // col_NguoiLap
-            // 
-            this.col_NguoiLap.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.col_NguoiLap.DataPropertyName = "NguoiLapPhieu";
-            this.col_NguoiLap.HeaderText = "Người lập phiếu";
-            this.col_NguoiLap.Name = "col_NguoiLap";
-            // 
-            // col_TinhTrang
-            // 
-            this.col_TinhTrang.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.col_TinhTrang.DataPropertyName = "TinhTrang";
-            this.col_TinhTrang.HeaderText = "Tình trạng";
-            this.col_TinhTrang.Name = "col_TinhTrang";
-            this.col_TinhTrang.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.col_TinhTrang.Visible = false;
-            this.col_TinhTrang.Width = 89;
-            // 
-            // col_TongTien
-            // 
-            this.col_TongTien.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.col_TongTien.DataPropertyName = "TongTien";
-            this.col_TongTien.HeaderText = "Tổng tiền";
-            this.col_TongTien.Name = "col_TongTien";
-            this.col_TongTien.Visible = false;
-            this.col_TongTien.Width = 84;
-            // 
             // col_MaSP
             // 
             this.col_MaSP.DataPropertyName = "MaSP";
@@ -969,12 +969,12 @@ namespace BachHoaXanh_Store
             this.col_SoLuong.Name = "col_SoLuong";
             this.col_SoLuong.ReadOnly = true;
             // 
-            // col_ThanhTien
+            // col_NgayHetHan
             // 
-            this.col_ThanhTien.DataPropertyName = "ThanhTien";
-            this.col_ThanhTien.HeaderText = "Thành tiền";
-            this.col_ThanhTien.Name = "col_ThanhTien";
-            this.col_ThanhTien.ReadOnly = true;
+            this.col_NgayHetHan.DataPropertyName = "NgayHetHan";
+            this.col_NgayHetHan.HeaderText = "Ngày hết hạn";
+            this.col_NgayHetHan.Name = "col_NgayHetHan";
+            this.col_NgayHetHan.ReadOnly = true;
             // 
             // FormDuyetPhieuTraHang
             // 
@@ -1029,10 +1029,6 @@ namespace BachHoaXanh_Store
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_MaSP;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_TenSP;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_SoLuong;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_ThanhTien;
         private System.Windows.Forms.DataGridViewCheckBoxColumn col_check;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_MaDH;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_MaST;
@@ -1041,5 +1037,9 @@ namespace BachHoaXanh_Store
         private System.Windows.Forms.DataGridViewTextBoxColumn col_NguoiLap;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_TinhTrang;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_TongTien;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_MaSP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_TenSP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_SoLuong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_NgayHetHan;
     }
 }
