@@ -18,6 +18,7 @@ namespace BachHoaXanh_Store
         ProductBLL objProductBLL = new ProductBLL();
         OrderStoreBLL objOrderStoreBLL = new OrderStoreBLL();
         InvoiceBLL objInvoiceBLL = new InvoiceBLL();
+        public static InvoiceBO objInvoiceBO;
         public static List<ProductBO> lstProduct = new List<ProductBO>();
         public static List<ProductBO> lstProductPromotion = new List<ProductBO>();
         public static List<InvoiceDetailBO> lsInvoiceDetail = new List<InvoiceDetailBO>();
@@ -431,7 +432,7 @@ namespace BachHoaXanh_Store
             else
             {
                 string strMaHD = FormLogin.objUserBO.StoreId.ToString() + FormLogin.objUserBO.UserId + DateTime.Now.Day.ToString() + DateTime.Now.Month.ToString() + DateTime.Now.Year.ToString() + (objInvoiceBLL.CountInvoicebyCreateDate(DateTime.Now) + 1).ToString();
-                InvoiceBO objInvoiceBO = new InvoiceBO();
+                objInvoiceBO = new InvoiceBO();
                 objInvoiceBO.MaHD = strMaHD;
                 objInvoiceBO.MaST = (int)FormLogin.objUserBO.StoreId;
                 objInvoiceBO.MaNV = (int)FormLogin.objUserBO.UserId;
@@ -514,6 +515,8 @@ namespace BachHoaXanh_Store
                         if (objInvoiceBLL.InsertInvoiceDetail(lsInvoiceDetail) && objOrderStoreBLL.UpdateMultiProductFromStore(lstProduct, (int)FormLogin.objUserBO.StoreId))
                         {
                             MessageBox.Show("Tạo hóa đơn thành công");
+                            Program.frmReport = new FormReport("Bill");
+                            Program.frmReport.ShowDialog();
                             lstProduct = new List<ProductBO>();
                             lsInvoiceDetail = new List<InvoiceDetailBO>();
                             lstProductPromotion = new List<ProductBO>();

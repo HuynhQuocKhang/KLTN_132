@@ -49,6 +49,12 @@ namespace BachHoaXanh_Store
                 documentViewer1.PrintingSystem = rptPTH.PrintingSystem;
                 rptPTH.CreateDocument();
             }
+            else if(reportType=="Bill")
+            {
+                rptDonBanHang rptBill = new rptDonBanHang();
+                documentViewer1.PrintingSystem = rptBill.PrintingSystem;
+                rptBill.CreateDocument();
+            }    
         }
     }
 }
