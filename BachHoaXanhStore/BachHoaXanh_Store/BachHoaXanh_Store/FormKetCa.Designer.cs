@@ -1315,7 +1315,7 @@ namespace BachHoaXanh_Store
             this.ClientSize = new System.Drawing.Size(894, 464);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "FormKetCa";
-            this.Text = "FormKetCa";
+            this.Text = "Kết Ca";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();

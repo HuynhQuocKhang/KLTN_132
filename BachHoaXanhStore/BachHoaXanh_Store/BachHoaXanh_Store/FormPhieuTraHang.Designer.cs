@@ -311,7 +311,7 @@ namespace BachHoaXanh_Store
             this.txt_NgayTra.SelectionLength = 0;
             this.txt_NgayTra.SelectionStart = 0;
             this.txt_NgayTra.ShortcutsEnabled = true;
-            //this.txt_NgayTra.Size = new System.Drawing.Size(280, 39);
+            this.txt_NgayTra.Size = new System.Drawing.Size(280, 39);
             this.txt_NgayTra.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txt_NgayTra.TabIndex = 1;
             this.txt_NgayTra.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -706,7 +706,7 @@ namespace BachHoaXanh_Store
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(216)))), ((int)(((byte)(211)))));
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Honeydew;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -773,7 +773,7 @@ namespace BachHoaXanh_Store
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormPhieuTraHang";
             this.Padding = new System.Windows.Forms.Padding(16);
-            this.Text = "FormPhieuTraHang";
+            this.Text = "Phiếu Trả Hàng";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);

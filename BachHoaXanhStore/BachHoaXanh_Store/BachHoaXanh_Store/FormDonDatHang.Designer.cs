@@ -64,6 +64,12 @@ namespace BachHoaXanh_Store
             this.telerikMetroTheme1 = new Telerik.WinControls.Themes.TelerikMetroTheme();
             this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
             this.dgv_Order = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GiaVon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txt_NhaCungCap = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.txt_TongTien = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.txt_NgayDat = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
@@ -80,12 +86,6 @@ namespace BachHoaXanh_Store
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GiaVon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Order)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -164,6 +164,42 @@ namespace BachHoaXanh_Store
             this.dgv_Order.Size = new System.Drawing.Size(556, 266);
             this.dgv_Order.TabIndex = 8;
             // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "MaHDDat";
+            this.Column1.HeaderText = "Mã HDD";
+            this.Column1.Name = "Column1";
+            // 
+            // MaSP
+            // 
+            this.MaSP.DataPropertyName = "MaSP";
+            this.MaSP.HeaderText = "Mã sản phẩm";
+            this.MaSP.Name = "MaSP";
+            // 
+            // TenSP
+            // 
+            this.TenSP.DataPropertyName = "TenSP";
+            this.TenSP.HeaderText = "Tên Sản Phẩm";
+            this.TenSP.Name = "TenSP";
+            // 
+            // SoLuong
+            // 
+            this.SoLuong.DataPropertyName = "SoLuong";
+            this.SoLuong.HeaderText = "Số lượng";
+            this.SoLuong.Name = "SoLuong";
+            // 
+            // GiaVon
+            // 
+            this.GiaVon.DataPropertyName = "GiaVon";
+            this.GiaVon.HeaderText = "Giá Vốn";
+            this.GiaVon.Name = "GiaVon";
+            // 
+            // col_ThanhTien
+            // 
+            this.col_ThanhTien.DataPropertyName = "ThanhTien";
+            this.col_ThanhTien.HeaderText = "Thành tiền";
+            this.col_ThanhTien.Name = "col_ThanhTien";
+            // 
             // txt_NhaCungCap
             // 
             this.txt_NhaCungCap.AcceptsReturn = false;
@@ -204,39 +240,39 @@ namespace BachHoaXanh_Store
             stateProperties1.FillColor = System.Drawing.Color.Empty;
             stateProperties1.ForeColor = System.Drawing.Color.Empty;
             stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
-            //this.txt_NhaCungCap.OnActiveState = stateProperties1;
+            this.txt_NhaCungCap.OnActiveState = stateProperties1;
             stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(223)))), ((int)(((byte)(135)))));
             stateProperties2.FillColor = System.Drawing.Color.White;
             stateProperties2.ForeColor = System.Drawing.Color.Empty;
             stateProperties2.PlaceholderForeColor = System.Drawing.Color.Silver;
-            //this.txt_NhaCungCap.OnDisabledState = stateProperties2;
+            this.txt_NhaCungCap.OnDisabledState = stateProperties2;
             stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(186)))), ((int)(((byte)(27)))));
             stateProperties3.FillColor = System.Drawing.Color.Empty;
             stateProperties3.ForeColor = System.Drawing.Color.Empty;
             stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
-            //this.txt_NhaCungCap.OnHoverState = stateProperties3;
+            this.txt_NhaCungCap.OnHoverState = stateProperties3;
             stateProperties4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(92)))), ((int)(((byte)(83)))));
             stateProperties4.FillColor = System.Drawing.Color.White;
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
-            //this.txt_NhaCungCap.OnIdleState = stateProperties4;
+            this.txt_NhaCungCap.OnIdleState = stateProperties4;
             this.txt_NhaCungCap.PasswordChar = '\0';
             this.txt_NhaCungCap.PlaceholderForeColor = System.Drawing.Color.Silver;
-            //this.txt_NhaCungCap.PlaceholderText = "Nhà cung cấp";
+            this.txt_NhaCungCap.PlaceholderText = "Enter text";
             this.txt_NhaCungCap.ReadOnly = false;
             this.txt_NhaCungCap.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_NhaCungCap.SelectedText = "";
             this.txt_NhaCungCap.SelectionLength = 0;
             this.txt_NhaCungCap.SelectionStart = 0;
             this.txt_NhaCungCap.ShortcutsEnabled = true;
-            //this.txt_NhaCungCap.Size = new System.Drawing.Size(270, 39);
-            //this.txt_NhaCungCap.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            this.txt_NhaCungCap.Size = new System.Drawing.Size(270, 39);
+            this.txt_NhaCungCap.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txt_NhaCungCap.TabIndex = 1;
             this.txt_NhaCungCap.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_NhaCungCap.TextMarginBottom = 0;
-            //this.txt_NhaCungCap.TextMarginLeft = 5;
-            //this.txt_NhaCungCap.TextMarginTop = 0;
-            //this.txt_NhaCungCap.TextPlaceholder = "Nhà cung cấp";
+            this.txt_NhaCungCap.TextMarginLeft = 5;
+            this.txt_NhaCungCap.TextMarginTop = 0;
+            this.txt_NhaCungCap.TextPlaceholder = "Enter text";
             this.txt_NhaCungCap.UseSystemPasswordChar = false;
             this.txt_NhaCungCap.WordWrap = true;
             // 
@@ -306,7 +342,7 @@ namespace BachHoaXanh_Store
             this.txt_TongTien.SelectionStart = 0;
             this.txt_TongTien.ShortcutsEnabled = true;
             this.txt_TongTien.Size = new System.Drawing.Size(270, 39);
-            //this.txt_TongTien.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            this.txt_TongTien.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txt_TongTien.TabIndex = 2;
             this.txt_TongTien.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_TongTien.TextMarginBottom = 0;
@@ -381,8 +417,8 @@ namespace BachHoaXanh_Store
             this.txt_NgayDat.SelectionLength = 0;
             this.txt_NgayDat.SelectionStart = 0;
             this.txt_NgayDat.ShortcutsEnabled = true;
-            //this.txt_NgayDat.Size = new System.Drawing.Size(270, 39);
-            //this.txt_NgayDat.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            this.txt_NgayDat.Size = new System.Drawing.Size(270, 39);
+            this.txt_NgayDat.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txt_NgayDat.TabIndex = 3;
             this.txt_NgayDat.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_NgayDat.TextMarginBottom = 0;
@@ -741,7 +777,7 @@ namespace BachHoaXanh_Store
             this.txt_NguoiDat.OnIdleState = stateProperties16;
             this.txt_NguoiDat.PasswordChar = '\0';
             this.txt_NguoiDat.PlaceholderForeColor = System.Drawing.Color.Silver;
-            //this.txt_NguoiDat.PlaceholderText = "Người đặt";
+            this.txt_NguoiDat.PlaceholderText = "Người đặt";
             this.txt_NguoiDat.ReadOnly = false;
             this.txt_NguoiDat.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_NguoiDat.SelectedText = "";
@@ -749,12 +785,12 @@ namespace BachHoaXanh_Store
             this.txt_NguoiDat.SelectionStart = 0;
             this.txt_NguoiDat.ShortcutsEnabled = true;
             this.txt_NguoiDat.Size = new System.Drawing.Size(270, 39);
-            //this.txt_NguoiDat.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            this.txt_NguoiDat.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txt_NguoiDat.TabIndex = 0;
             this.txt_NguoiDat.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_NguoiDat.TextMarginBottom = 0;
             this.txt_NguoiDat.TextMarginLeft = 5;
-            //this.txt_NguoiDat.TextMarginTop = 0;
+            this.txt_NguoiDat.TextMarginTop = 0;
             this.txt_NguoiDat.TextPlaceholder = "Người đặt";
             this.txt_NguoiDat.UseSystemPasswordChar = false;
             this.txt_NguoiDat.WordWrap = true;
@@ -811,42 +847,6 @@ namespace BachHoaXanh_Store
             this.bunifuElipse2.ElipseRadius = 35;
             this.bunifuElipse2.TargetControl = this;
             // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "MaHDDat";
-            this.Column1.HeaderText = "Mã HDD";
-            this.Column1.Name = "Column1";
-            // 
-            // MaSP
-            // 
-            this.MaSP.DataPropertyName = "MaSP";
-            this.MaSP.HeaderText = "Mã sản phẩm";
-            this.MaSP.Name = "MaSP";
-            // 
-            // TenSP
-            // 
-            this.TenSP.DataPropertyName = "TenSP";
-            this.TenSP.HeaderText = "Tên Sản Phẩm";
-            this.TenSP.Name = "TenSP";
-            // 
-            // SoLuong
-            // 
-            this.SoLuong.DataPropertyName = "SoLuong";
-            this.SoLuong.HeaderText = "Số lượng";
-            this.SoLuong.Name = "SoLuong";
-            // 
-            // GiaVon
-            // 
-            this.GiaVon.DataPropertyName = "GiaVon";
-            this.GiaVon.HeaderText = "Giá Vốn";
-            this.GiaVon.Name = "GiaVon";
-            // 
-            // col_ThanhTien
-            // 
-            this.col_ThanhTien.DataPropertyName = "ThanhTien";
-            this.col_ThanhTien.HeaderText = "Thành tiền";
-            this.col_ThanhTien.Name = "col_ThanhTien";
-            // 
             // FormDonDatHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -858,7 +858,7 @@ namespace BachHoaXanh_Store
             this.Name = "FormDonDatHang";
             this.Padding = new System.Windows.Forms.Padding(16);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormDonDatHang";
+            this.Text = "Chi Tiết Hóa Đơn Đặt";
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Order)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.panel3.ResumeLayout(false);

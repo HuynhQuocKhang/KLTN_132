@@ -706,7 +706,7 @@ namespace BachHoaXanh_Store
             this.Name = "FormChinhSuaSP";
             this.Padding = new System.Windows.Forms.Padding(16);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormChinhSuaSP";
+            this.Text = "Chỉnh Sửa Sản Phẩm";
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);

@@ -42,6 +42,11 @@ namespace BachHoaXanh_Store
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgv_DSSP = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.col_Add = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.col_MaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_TenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_Soluong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_GiaBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.telerikMetroTheme1 = new Telerik.WinControls.Themes.TelerikMetroTheme();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -51,11 +56,6 @@ namespace BachHoaXanh_Store
             this.txt_Keyword = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.btn_TimKiem = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.col_Add = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.col_MaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_TenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_Soluong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_GiaBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DSSP)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -113,6 +113,45 @@ namespace BachHoaXanh_Store
             this.dgv_DSSP.Size = new System.Drawing.Size(726, 267);
             this.dgv_DSSP.TabIndex = 3;
             this.dgv_DSSP.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DSSP_CellClick);
+            // 
+            // col_Add
+            // 
+            this.col_Add.HeaderText = "Thao Tác";
+            this.col_Add.Name = "col_Add";
+            this.col_Add.ReadOnly = true;
+            this.col_Add.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.col_Add.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.col_Add.Text = "Thêm";
+            this.col_Add.ToolTipText = "Thêm Sản Phẩm";
+            this.col_Add.UseColumnTextForButtonValue = true;
+            // 
+            // col_MaSP
+            // 
+            this.col_MaSP.DataPropertyName = "MaSP";
+            this.col_MaSP.HeaderText = "Mã sản phẩm";
+            this.col_MaSP.Name = "col_MaSP";
+            this.col_MaSP.ReadOnly = true;
+            // 
+            // col_TenSP
+            // 
+            this.col_TenSP.DataPropertyName = "TenSP";
+            this.col_TenSP.HeaderText = "Tên sản phẩm";
+            this.col_TenSP.Name = "col_TenSP";
+            this.col_TenSP.ReadOnly = true;
+            // 
+            // col_Soluong
+            // 
+            this.col_Soluong.DataPropertyName = "SoLuong";
+            this.col_Soluong.HeaderText = "Số Lượng";
+            this.col_Soluong.Name = "col_Soluong";
+            this.col_Soluong.ReadOnly = true;
+            // 
+            // col_GiaBan
+            // 
+            this.col_GiaBan.DataPropertyName = "GiaBan";
+            this.col_GiaBan.HeaderText = "Giá Bán";
+            this.col_GiaBan.Name = "col_GiaBan";
+            this.col_GiaBan.ReadOnly = true;
             // 
             // timer2
             // 
@@ -323,45 +362,6 @@ namespace BachHoaXanh_Store
             // 
             this.timer1.Enabled = true;
             // 
-            // col_Add
-            // 
-            this.col_Add.HeaderText = "Thao Tác";
-            this.col_Add.Name = "col_Add";
-            this.col_Add.ReadOnly = true;
-            this.col_Add.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.col_Add.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.col_Add.Text = "Thêm";
-            this.col_Add.ToolTipText = "Thêm Sản Phẩm";
-            this.col_Add.UseColumnTextForButtonValue = true;
-            // 
-            // col_MaSP
-            // 
-            this.col_MaSP.DataPropertyName = "MaSP";
-            this.col_MaSP.HeaderText = "Mã sản phẩm";
-            this.col_MaSP.Name = "col_MaSP";
-            this.col_MaSP.ReadOnly = true;
-            // 
-            // col_TenSP
-            // 
-            this.col_TenSP.DataPropertyName = "TenSP";
-            this.col_TenSP.HeaderText = "Tên sản phẩm";
-            this.col_TenSP.Name = "col_TenSP";
-            this.col_TenSP.ReadOnly = true;
-            // 
-            // col_Soluong
-            // 
-            this.col_Soluong.DataPropertyName = "SoLuong";
-            this.col_Soluong.HeaderText = "Số Lượng";
-            this.col_Soluong.Name = "col_Soluong";
-            this.col_Soluong.ReadOnly = true;
-            // 
-            // col_GiaBan
-            // 
-            this.col_GiaBan.DataPropertyName = "GiaBan";
-            this.col_GiaBan.HeaderText = "Giá Bán";
-            this.col_GiaBan.Name = "col_GiaBan";
-            this.col_GiaBan.ReadOnly = true;
-            // 
             // FormTimKiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -369,7 +369,7 @@ namespace BachHoaXanh_Store
             this.ClientSize = new System.Drawing.Size(772, 386);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "FormTimKiem";
-            this.Text = "FormTimKiem";
+            this.Text = "Tìm Kiếm Sản Phẩm";
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DSSP)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);

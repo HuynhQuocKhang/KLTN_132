@@ -18,6 +18,8 @@ namespace BachHoaXanh_Store
         CustomerBLL customerBLL = new CustomerBLL();
         ProductTypeBLL objProductTypeBLL = new ProductTypeBLL();
         ProductBLL objProductBLL = new ProductBLL();
+        public delegate void CloseDialog();
+        public event CloseDialog CloseDialogEvent;
         public FormChinhSuaSP()
         {
             InitializeComponent();
@@ -49,6 +51,7 @@ namespace BachHoaXanh_Store
 
         private void btn_Huy_Click(object sender, EventArgs e)
         {
+            CloseDialogEvent();
             FormDanhSachSP.objProductBO = new ProductBO();
             this.Close();
         }
@@ -73,6 +76,7 @@ namespace BachHoaXanh_Store
                 if (objProductBLL.InsertOrUpdate(objProductTmp))
                 {
                     MessageBox.Show("Cập Nhật Thông Tin Thành Công");
+                    CloseDialogEvent();
                     FormMain.lstProduct = objProductBLL.GetListAllProduct();
                     FormDanhSachSP.objProductBO = new ProductBO();
                     this.Close();

@@ -18,6 +18,8 @@ namespace BachHoaXanh_Store
         OrderCustomerBLL objOrderCustomerBLL = new OrderCustomerBLL();
         OrderStoreBLL objOrderStoreBLL = new OrderStoreBLL();
         OrderStoreDetailBLL objOrderStoreDetailBLL = new OrderStoreDetailBLL();
+        public delegate void CloseDialog();
+        public event CloseDialog CloseDialogEvent;
         public FormDonDatHang()
         {
             InitializeComponent();
@@ -34,6 +36,7 @@ namespace BachHoaXanh_Store
         {
             FormDatHang.lstOrderCustomerDetailBO = new List<OrderCustomerDetailBO>();
             FormDatHang.intTotalPrice = 0;
+            CloseDialogEvent();
             this.Close();
         }
 
@@ -69,6 +72,9 @@ namespace BachHoaXanh_Store
                         Program.frmReport = new FormReport("DatHang");
                         Program.frmReport.ShowDialog();
                         MessageBox.Show("Đặt hàng thành công");
+                        FormDatHang.lstOrderCustomerDetailBO = new List<OrderCustomerDetailBO>();
+                        FormDatHang.intTotalPrice = 0;
+                        CloseDialogEvent();
                         this.Close();
                     }
                 }
@@ -98,6 +104,9 @@ namespace BachHoaXanh_Store
                         Program.frmReport = new FormReport("STDatHang");
                         Program.frmReport.ShowDialog();
                         MessageBox.Show("Đặt hàng thành công");
+                        FormDatHang.lstOrderCustomerDetailBO = new List<OrderCustomerDetailBO>();
+                        FormDatHang.intTotalPrice = 0;
+                        CloseDialogEvent();
                         this.Close();
                     }
                 }

@@ -844,7 +844,7 @@ namespace BachHoaXanh_Store
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormDanhSachSP";
             this.Padding = new System.Windows.Forms.Padding(16);
-            this.Text = "FormDanhSachSP";
+            this.Text = "Danh Sách Sản Phẩm";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DSSP)).EndInit();

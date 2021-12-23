@@ -898,7 +898,7 @@ namespace BachHoaXanh_Store
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormDatHang";
             this.Padding = new System.Windows.Forms.Padding(16);
-            this.Text = "FormDatHang";
+            this.Text = "Đặt Hàng";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DSSP)).EndInit();

@@ -664,7 +664,7 @@ namespace BachHoaXanh_Store
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormXemDonDatHang";
             this.Padding = new System.Windows.Forms.Padding(16);
-            this.Text = "FormXemDonDatHang";
+            this.Text = "Xem Hóa Đơn Đặt";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);

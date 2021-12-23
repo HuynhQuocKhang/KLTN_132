@@ -132,14 +132,21 @@ namespace BachHoaXanh_Store
 
                 if (isOpen == true)
                 {
-                    Program.frmPhieuTraHang = new FormPhieuTraHang();
-                    Program.frmPhieuTraHang.ShowDialog();
+                    FormPhieuTraHang frmPhieuTraHang = new FormPhieuTraHang();
+                    frmPhieuTraHang.CloseDialogEvent += frmPhieuTraHang_Event;
+                    frmPhieuTraHang.ShowDialog();
                 }
             }
             else
             {
                 MessageBox.Show("Danh sách hàng hóa cần đặt không được rỗng");
             }
+        }
+
+        private void frmPhieuTraHang_Event()
+        {
+            dgv_Order.Rows.Clear();
+            Search(txtKeyWord.Text, cbo_NhaCungCap.SelectedValue.ToString(), cbo_LoaiSP.SelectedValue.ToString(), cbo_PageSize.Text);
         }
 
         private void Search(string strProductName, string strCustomerId, string strProductTypeId, string strPageSize)

@@ -189,45 +189,45 @@
   </data>
   <data name="txtKeyWord.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAOAAAAAiCAYAAABGDdVeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANiSURBVHhe7d1dSFNhHAbwXXbZZZdddtld6QIzDTe/dVjp
-        2dyHR3ecU+xDtA+iJCtCkb4MLTUlEhOzMMkoBEOwMAxBkgrKiwxi2ZxflV6snnxFhzrn3JHK5wfv1eY5
-        Xuzhf877/s97NET0DwpLT92hlVJLomSpSq9YXmNojQYvB8f/PuZ/7zE5pgatZDijlVJ2i1ioK8Kctg0n
-        3S8bXckF2Z7rTY2zzY/bvf1vBv8Mos1g/vfe9uyJt7a12SsVF7r32dI9esXcEp6RtlPEJXQizElbfyf+
-        Sqxi8eCkn11fxL9CRDA65vZ2PO/yHjjiGEMQUaxEfNYH5VVnz3TX3b/3/efMjDgdEa0EQUSxis42mUSM
-        ghNrtx42nzjqmpiaFIcmokCgWBWVl31LdMpVIk5rE5+XVVt647KbVY8oeHWtzeNJ+fJDEavA6O2Zxy/V
-        VXvEMYhoHe60t02joIl4+aeVDHvl0yUuVj6i0MHl6Kr3hJi5iXfYvvKejyi0UNAMhcoo1s9F3JbSKZaa
-        u48ezIq/IaIQ6n710hunWLpE3HztMidtT3TKnHQhUhEW7ZftnMHiIdYviEg96KBBG5uI3QK00mA1n4jU
-        gyvMaFmaRHeZiJ5GE2ZMTUZpFN8hIhUVV1zwhGcYFBE/jQYd3rfbWjj5QrQBcKuHzIn4zQXwaW+P+JiI
-        1DT4/u3SAGKKlIjU927449IA4jEjIlLfi4F+3wCGGw2VhRfPjonPiUhFFQ23fmhNhnoRP7SgmbdEWg/x
-        eT+iDRCXa51A44uI35zYXGsvSiMRqQf3fzp75gcRuwV7jCk6pfQk1wKJVHSu+up4lE3KF7HzhUZRzoYS
-        qWPF6jcPOzphUxnxfSIKIUx0outMxG15iXlZZZWNtQwhUQi1dHZMJzizmkTM/Etw2Do7e7o5JUoUAngC
-        IsEp92G1QUTMP3wxzmEdYAiJ1gfhSy7IHvJ5+iEQCCEqITdnIgrO3GUnKt8aw7cYdkiznSpyo4GUiFaH
-        neMx4YJ7voAvO/3BTml6xTKEgw6PfBKnIaLFELzy+ppJvDtl1dnOYOCgMTmmEbTSnL95bQqdM1jbINqM
-        UIxwj4eXFOFlRQhepOXgMREX9aCPDU/0on0NC4vo7Obg2GwDxQj7u+A1fX63GySiv5FG8wth/oe+0FDK
-        RAAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAAN8AAAAiCAYAAADf9QzrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANgSURBVHhe7d1bSBRRHAbweeyxxx577LG30g3MNNz1rouV
+        zq57cXTHdRW7iHYhSrIiFOlmaKkpkZiYhUlGIRiCRWEIklRQPmQQm63rrdKHrS/PYou26roDpd8PztOu
+        Mz7sx3/mnP+ckYjoPxORmb5NJ6eXxShyjUG1vsLQmYw+Do71PPy/9bg8c5NONp7SyWk7RSS0FWXJ2IKT
+        7lVM7tSiXO/Vlua51oedvoHXQ78H0Xrn/613PHnkq29v9cmlxZ499kyvQbW0RWZlbBdRCZ8oS8rmX2m/
+        FK9avTjpJ/dn8a8Q0di4x9f1tMe375BzHCFEkRLRWRuUVb0j29Nw9863H7Oz4nREtBSEEEUqNtdsFhEK
+        TbzDdtBy7LB7cnpKHJqIloMiVVJZ8TXZpdSIKK1OYkFOffm1ix5WO6LQNLS3TqQUKvdFpFbG4Mg+eqGh
+        1iuOQUQhutXZMYNCJqIVnE427lZOlrlZ8YjCA5egy94DYpYm0Wn/wns8ovBBITMWq2NYGxdRW0yvWutu
+        P7g3J/6GiMKk9+VzX4Jq7RFRC7TDkrI12aVwgoVII1iQX7IjBouDWKMgIm2gMwataSJyC9Aig5V6ItIG
+        ripjFXkKHWMidpIUYUpPRUkU3yEijZRWnfNGZhlVET1JQrf2zY42TrQQaQy3dsibiN58+B7394mPiUgr
+        Q+/eLA4fpkKJSFtvRz4sDh8eFSIibT0bHAgMX6TJWF18/vS4+JyINFLVdOO7zmxsFNFDW5llU7TtAJ/X
+        I9JYQr5tEg0tInrz4vNt/SiJRKQN3O/pHdnvReQW7DKl6dXy41zrI9LImdrLEzF2uVBELhAaPznrSRR+
+        f616fth9CZvAiO8TUZhgQhOdZCJqS0suyKmobq5nAInCpK27aybJldMiIhZcktPe3d3Xy6lPojXCkwxJ
+        LuUFVhREvILDFxOctkEGkCh0CF5qUe5wwFMMK4EAogJyIyWi1Zu/1ETFW2Xw/oSdzOwnSjxoCCWi4LCb
+        OyZXcI+34kvNYLCjmUG1DuOgI6MfxWmIyA+hq2ysm8J7TJad1QwFDhqXZx5Fi8zZ61em0RGD9QuijQZF
+        CPd0eFkQXhqE0EVb9x8RUdEOetPwNC5a0rBwiC5tDo6NNFCEsB8LXpMXdEtAIvrXSNJPOTkMZD14z8kA
+        AAAASUVORK5CYII=
 </value>
   </data>
   <data name="btn_TimKiem.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        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
+        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
 </value>
   </data>
   <data name="bunifuLabel1.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 1.2px; margin: auto; padding-top: 7px;font-family: 'Tahoma'; font-size: 9.75pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: #1D2E29; text-align: right; }</value>
+    <value>#bunifu-label { padding: 1.2px; margin: auto; padding-top: 7px;font-family: 'Tahoma'; font-size: 9,75pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: #1D2E29; text-align: right; }</value>
   </data>
   <data name="bunifuLabel2.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 1.2px; margin: auto; padding-top: -1px;font-family: 'Tahoma'; font-size: 9pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: ; text-align: center; }</value>

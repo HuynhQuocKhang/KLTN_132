@@ -16,6 +16,8 @@ namespace BachHoaXanh_Store
     {
         ExportProductBLL objExportProductBLL = new ExportProductBLL();
         OrderStoreBLL objOrderStoreBLL = new OrderStoreBLL();
+        public delegate void CloseDialog();
+        public event CloseDialog CloseDialogEvent;
         public FormPhieuXuatKho()
         {
             InitializeComponent();
@@ -36,6 +38,7 @@ namespace BachHoaXanh_Store
         {
             FormPhanPhoiHang.objExportProductBO = new BO.ExportProductBO();
             FormPhanPhoiHang.lstExportProductDetailBO = new List<ExportProductDetailBO>();
+            CloseDialogEvent();
             this.Close();
         }
 
@@ -56,6 +59,7 @@ namespace BachHoaXanh_Store
                     FormPhanPhoiHang.lstExportProductDetailBO = new List<ExportProductDetailBO>();
                     FormPhanPhoiHang.objExportProductBO = new BO.ExportProductBO();
                     MessageBox.Show("Khởi tạo phiếu xuất kho thành công");
+                    CloseDialogEvent();
                     this.Close();
                 }
                 else

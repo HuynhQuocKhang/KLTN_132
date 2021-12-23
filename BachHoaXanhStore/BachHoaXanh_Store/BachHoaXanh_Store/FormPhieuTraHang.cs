@@ -18,6 +18,9 @@ namespace BachHoaXanh_Store
         OrderStoreBLL objOrderStoreBLL = new OrderStoreBLL();
         OrderStoreDetailBLL objOrderStoreDetailBLL = new OrderStoreDetailBLL();
         ReturnProductBLL objReturnProductBLL = new ReturnProductBLL();
+        public delegate void CloseDialog();
+        public event CloseDialog CloseDialogEvent;
+
         public FormPhieuTraHang()
         {
             InitializeComponent();
@@ -32,6 +35,7 @@ namespace BachHoaXanh_Store
         private void btn_Huy_Click(object sender, EventArgs e)
         {
             FormDatHang.lstOrderCustomerDetailBO = new List<OrderCustomerDetailBO>();
+            CloseDialogEvent();
             this.Close();
         }
 
@@ -76,6 +80,8 @@ namespace BachHoaXanh_Store
                     Program.frmReport = new FormReport("TraHang");
                     Program.frmReport.ShowDialog();
                     MessageBox.Show("Tạo Phiếu Trả Hàng Thành CÔng");
+                    FormDatHang.lstOrderCustomerDetailBO = new List<OrderCustomerDetailBO>();
+                    CloseDialogEvent();
                     this.Close();
                 }
             }

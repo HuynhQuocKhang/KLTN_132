@@ -482,7 +482,12 @@ namespace BLL_DAO
                             NguoiLapPhieu = objOrderStore.NguoiLapPhieu,
                             TongTien = objOrderStore.TongTien
                         };
-            return (int)model.Sum(x=>x.TongTien);
+            int total = 0;
+            foreach (var item in model)
+            {
+                total += (int)item.TongTien;
+            }
+            return total;
         }
         public List<GetReturnProductsBO> GetReturnProductOrder(string pKeyWord, string strStoreId, DateTime dateFrom, DateTime dateTo)
         {

@@ -80,7 +80,7 @@ namespace BLL_DAO
                             MaSP = objStoreOrder.MaSP,
                             TenSP = objProduct.TenSP,
                             SoLuong = objStoreOrder.SoLuong,
-                            NgayHetHan=objStoreOrder.NgayHetHan
+                            NgayHetHan = objStoreOrder.NgayHetHan
                         };
             return model.ToList();
         }

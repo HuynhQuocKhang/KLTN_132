@@ -30,12 +30,13 @@ namespace BachHoaXanh_Store
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDangNhap));
             Telerik.WinControls.UI.RadListDataItem radListDataItem1 = new Telerik.WinControls.UI.RadListDataItem();
             Telerik.WinControls.UI.RadListDataItem radListDataItem2 = new Telerik.WinControls.UI.RadListDataItem();
             Telerik.WinControls.UI.RadListDataItem radListDataItem3 = new Telerik.WinControls.UI.RadListDataItem();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDangNhap));
             this.txt_username = new Telerik.WinControls.UI.RadTextBox();
             this.radPanel1 = new Telerik.WinControls.UI.RadPanel();
+            this.radDropDownList1 = new Telerik.WinControls.UI.RadDropDownList();
             this.btn_Close = new Telerik.WinControls.UI.RadButton();
             this.btn_Login = new Telerik.WinControls.UI.RadButton();
             this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
@@ -45,10 +46,10 @@ namespace BachHoaXanh_Store
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.radThemeManager1 = new Telerik.WinControls.RadThemeManager();
             this.telerikMetroTheme1 = new Telerik.WinControls.Themes.TelerikMetroTheme();
-            this.radDropDownList1 = new Telerik.WinControls.UI.RadDropDownList();
             ((System.ComponentModel.ISupportInitialize)(this.txt_username)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel1)).BeginInit();
             this.radPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radDropDownList1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Close)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Login)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
@@ -56,7 +57,6 @@ namespace BachHoaXanh_Store
             ((System.ComponentModel.ISupportInitialize)(this.radPanel2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel3)).BeginInit();
             this.radPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radDropDownList1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,6 +83,21 @@ namespace BachHoaXanh_Store
             this.radPanel1.Size = new System.Drawing.Size(270, 248);
             this.radPanel1.TabIndex = 2;
             this.radPanel1.ThemeName = "TelerikMetro";
+            // 
+            // radDropDownList1
+            // 
+            this.radDropDownList1.DropDownAnimationEnabled = true;
+            radListDataItem1.Text = "Quản lí kho";
+            radListDataItem2.Text = "Cửa hàng trưởng";
+            radListDataItem3.Text = "Nhân viên";
+            this.radDropDownList1.Items.Add(radListDataItem1);
+            this.radDropDownList1.Items.Add(radListDataItem2);
+            this.radDropDownList1.Items.Add(radListDataItem3);
+            this.radDropDownList1.Location = new System.Drawing.Point(27, 172);
+            this.radDropDownList1.Name = "radDropDownList1";
+            this.radDropDownList1.Size = new System.Drawing.Size(221, 24);
+            this.radDropDownList1.TabIndex = 6;
+            this.radDropDownList1.ThemeName = "TelerikMetro";
             // 
             // btn_Close
             // 
@@ -155,21 +170,6 @@ namespace BachHoaXanh_Store
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // radDropDownList1
-            // 
-            this.radDropDownList1.DropDownAnimationEnabled = true;
-            radListDataItem1.Text = "Quản lí kho";
-            radListDataItem2.Text = "Cửa hàng trưởng";
-            radListDataItem3.Text = "Nhân viên";
-            this.radDropDownList1.Items.Add(radListDataItem1);
-            this.radDropDownList1.Items.Add(radListDataItem2);
-            this.radDropDownList1.Items.Add(radListDataItem3);
-            this.radDropDownList1.Location = new System.Drawing.Point(27, 172);
-            this.radDropDownList1.Name = "radDropDownList1";
-            this.radDropDownList1.Size = new System.Drawing.Size(221, 24);
-            this.radDropDownList1.TabIndex = 6;
-            this.radDropDownList1.ThemeName = "TelerikMetro";
-            // 
             // FormDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -183,12 +183,13 @@ namespace BachHoaXanh_Store
             // 
             // 
             this.RootElement.ApplyShapeToControl = true;
-            this.Text = "FormDangNhap";
+            this.Text = "Đăng Nhập";
             this.ThemeName = "TelerikMetro";
             ((System.ComponentModel.ISupportInitialize)(this.txt_username)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel1)).EndInit();
             this.radPanel1.ResumeLayout(false);
             this.radPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radDropDownList1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Close)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Login)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
@@ -196,7 +197,6 @@ namespace BachHoaXanh_Store
             ((System.ComponentModel.ISupportInitialize)(this.radPanel2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel3)).EndInit();
             this.radPanel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.radDropDownList1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 

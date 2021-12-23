@@ -63,6 +63,10 @@ namespace BachHoaXanh_Store
             this.telerikMetroTheme1 = new Telerik.WinControls.Themes.TelerikMetroTheme();
             this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
             this.dgv_CTPX = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.col_MaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_TenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txt_MaST = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.txt_DonDatHang = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.txt_TongTien = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
@@ -79,10 +83,6 @@ namespace BachHoaXanh_Store
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.col_MaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_TenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_CTPX)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -153,6 +153,30 @@ namespace BachHoaXanh_Store
             this.dgv_CTPX.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgv_CTPX.Size = new System.Drawing.Size(562, 260);
             this.dgv_CTPX.TabIndex = 8;
+            // 
+            // col_MaSP
+            // 
+            this.col_MaSP.DataPropertyName = "MaSP";
+            this.col_MaSP.HeaderText = "Mã sản phẩm";
+            this.col_MaSP.Name = "col_MaSP";
+            // 
+            // col_TenSP
+            // 
+            this.col_TenSP.DataPropertyName = "TenSP";
+            this.col_TenSP.HeaderText = "Tên sản phẩm";
+            this.col_TenSP.Name = "col_TenSP";
+            // 
+            // col_SoLuong
+            // 
+            this.col_SoLuong.DataPropertyName = "SoLuong";
+            this.col_SoLuong.HeaderText = "Số lượng";
+            this.col_SoLuong.Name = "col_SoLuong";
+            // 
+            // col_ThanhTien
+            // 
+            this.col_ThanhTien.DataPropertyName = "ThanhTien";
+            this.col_ThanhTien.HeaderText = "Thành Tiền";
+            this.col_ThanhTien.Name = "col_ThanhTien";
             // 
             // txt_MaST
             // 
@@ -270,7 +294,7 @@ namespace BachHoaXanh_Store
             stateProperties1.FillColor = System.Drawing.Color.Empty;
             stateProperties1.ForeColor = System.Drawing.Color.Empty;
             stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
-            //this.txt_DonDatHang.OnActiveState = stateProperties1;
+            this.txt_DonDatHang.OnActiveState = stateProperties1;
             stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(223)))), ((int)(((byte)(135)))));
             stateProperties2.FillColor = System.Drawing.Color.White;
             stateProperties2.ForeColor = System.Drawing.Color.Empty;
@@ -801,30 +825,6 @@ namespace BachHoaXanh_Store
             this.bunifuElipse1.ElipseRadius = 35;
             this.bunifuElipse1.TargetControl = this;
             // 
-            // col_MaSP
-            // 
-            this.col_MaSP.DataPropertyName = "MaSP";
-            this.col_MaSP.HeaderText = "Mã sản phẩm";
-            this.col_MaSP.Name = "col_MaSP";
-            // 
-            // col_TenSP
-            // 
-            this.col_TenSP.DataPropertyName = "TenSP";
-            this.col_TenSP.HeaderText = "Tên sản phẩm";
-            this.col_TenSP.Name = "col_TenSP";
-            // 
-            // col_SoLuong
-            // 
-            this.col_SoLuong.DataPropertyName = "SoLuong";
-            this.col_SoLuong.HeaderText = "Số lượng";
-            this.col_SoLuong.Name = "col_SoLuong";
-            // 
-            // col_ThanhTien
-            // 
-            this.col_ThanhTien.DataPropertyName = "ThanhTien";
-            this.col_ThanhTien.HeaderText = "Thành Tiền";
-            this.col_ThanhTien.Name = "col_ThanhTien";
-            // 
             // FormPhieuXuatKho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -835,7 +835,7 @@ namespace BachHoaXanh_Store
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormPhieuXuatKho";
             this.Padding = new System.Windows.Forms.Padding(16);
-            this.Text = "FormPhieuXuatKho";
+            this.Text = "Phiếu Xuất Kho";
             ((System.ComponentModel.ISupportInitialize)(this.dgv_CTPX)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.panel3.ResumeLayout(false);

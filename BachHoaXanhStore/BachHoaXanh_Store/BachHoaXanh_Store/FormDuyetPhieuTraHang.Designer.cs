@@ -69,6 +69,10 @@ namespace BachHoaXanh_Store
             this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
             this.dtp_NgayKetThuc = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.dgv_DSCT = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.col_MaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_TenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_NgayHetHan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv_DSPTH = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.col_check = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.col_MaDH = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -84,10 +88,6 @@ namespace BachHoaXanh_Store
             this.panel2 = new System.Windows.Forms.Panel();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.chk_SelectAll = new Bunifu.UI.WinForms.BunifuCheckBox();
-            this.col_MaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_TenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_NgayHetHan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -604,6 +604,30 @@ namespace BachHoaXanh_Store
             this.dgv_DSCT.Size = new System.Drawing.Size(641, 574);
             this.dgv_DSCT.TabIndex = 8;
             // 
+            // col_MaSP
+            // 
+            this.col_MaSP.HeaderText = "Mã sản phẩm";
+            this.col_MaSP.Name = "col_MaSP";
+            this.col_MaSP.ReadOnly = true;
+            // 
+            // col_TenSP
+            // 
+            this.col_TenSP.HeaderText = "Tên sản phẩm";
+            this.col_TenSP.Name = "col_TenSP";
+            this.col_TenSP.ReadOnly = true;
+            // 
+            // col_SoLuong
+            // 
+            this.col_SoLuong.HeaderText = "Số lượng";
+            this.col_SoLuong.Name = "col_SoLuong";
+            this.col_SoLuong.ReadOnly = true;
+            // 
+            // col_NgayHetHan
+            // 
+            this.col_NgayHetHan.HeaderText = "Ngày hết hạn";
+            this.col_NgayHetHan.Name = "col_NgayHetHan";
+            this.col_NgayHetHan.ReadOnly = true;
+            // 
             // dgv_DSPTH
             // 
             this.dgv_DSPTH.AllowUserToAddRows = false;
@@ -947,35 +971,6 @@ namespace BachHoaXanh_Store
             this.chk_SelectAll.ToolTipText = null;
             this.chk_SelectAll.CheckedChanged += new System.EventHandler<Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs>(this.chk_SelectAll_CheckedChanged);
             // 
-            // col_MaSP
-            // 
-            this.col_MaSP.DataPropertyName = "MaSP";
-            this.col_MaSP.HeaderText = "Mã sản phẩm";
-            this.col_MaSP.Name = "col_MaSP";
-            this.col_MaSP.ReadOnly = true;
-            this.col_MaSP.Visible = false;
-            // 
-            // col_TenSP
-            // 
-            this.col_TenSP.DataPropertyName = "TenSP";
-            this.col_TenSP.HeaderText = "Tên sản phẩm";
-            this.col_TenSP.Name = "col_TenSP";
-            this.col_TenSP.ReadOnly = true;
-            // 
-            // col_SoLuong
-            // 
-            this.col_SoLuong.DataPropertyName = "SoLuong";
-            this.col_SoLuong.HeaderText = "Số lượng";
-            this.col_SoLuong.Name = "col_SoLuong";
-            this.col_SoLuong.ReadOnly = true;
-            // 
-            // col_NgayHetHan
-            // 
-            this.col_NgayHetHan.DataPropertyName = "NgayHetHan";
-            this.col_NgayHetHan.HeaderText = "Ngày hết hạn";
-            this.col_NgayHetHan.Name = "col_NgayHetHan";
-            this.col_NgayHetHan.ReadOnly = true;
-            // 
             // FormDuyetPhieuTraHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -986,7 +981,7 @@ namespace BachHoaXanh_Store
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormDuyetPhieuTraHang";
             this.Padding = new System.Windows.Forms.Padding(16);
-            this.Text = "FormDuyetDonDatHang";
+            this.Text = "Duyệt Phiếu Trả Hàng";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);

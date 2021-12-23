@@ -94,8 +94,9 @@ namespace BachHoaXanh_Store
 
                 if (isOpen == true)
                 {
-                    Program.frmDonDatHang = new FormDonDatHang();
-                    Program.frmDonDatHang.ShowDialog();
+                    FormDonDatHang frmDonDatHang = new FormDonDatHang();
+                    frmDonDatHang.CloseDialogEvent += frmDonDatHang_Event;
+                    frmDonDatHang.ShowDialog();
                 }
             }
             else
@@ -104,7 +105,11 @@ namespace BachHoaXanh_Store
             }
 
         }
-
+        private void frmDonDatHang_Event()
+        {
+            Search(txtKeyWord.Text.Trim(), cbo_LoaiSP.SelectedValue.ToString(), cbo_NhaCungCap.SelectedValue.ToString(), txtSoLuong.Text);
+            dgv_Order.Rows.Clear();
+        }
         private void btn_TimKiem_Click(object sender, EventArgs e)
         {
             if (objUser.Permission == 1)

@@ -261,7 +261,7 @@ namespace BachHoaXanh_Store
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_pass.OnIdleState = stateProperties4;
-            this.txt_pass.PasswordChar = '\0';
+            this.txt_pass.PasswordChar = '●';
             this.txt_pass.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txt_pass.PlaceholderText = "Enter text";
             this.txt_pass.ReadOnly = false;
@@ -278,7 +278,7 @@ namespace BachHoaXanh_Store
             this.txt_pass.TextMarginLeft = 5;
             this.txt_pass.TextMarginTop = 0;
             this.txt_pass.TextPlaceholder = "Enter text";
-            this.txt_pass.UseSystemPasswordChar = false;
+            this.txt_pass.UseSystemPasswordChar = true;
             this.txt_pass.WordWrap = true;
             // 
             // tableLayoutPanel3
@@ -404,7 +404,7 @@ namespace BachHoaXanh_Store
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormLogin";
+            this.Text = "Đăng Nhập";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormLogin_FormClosed);
             this.Load += new System.EventHandler(this.FormLogin_Load);
             this.tableLayoutPanel1.ResumeLayout(false);

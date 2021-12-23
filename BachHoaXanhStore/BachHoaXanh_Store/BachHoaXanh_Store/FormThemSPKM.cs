@@ -17,6 +17,8 @@ namespace BachHoaXanh_Store
         OrderStoreBLL objOrderStoreBLL = new OrderStoreBLL();
         ProductBO objProduct = FormDanhSachSP.objProductBO;
         ProductPromotionBO objPromotion = FormDanhSachSP.objPromotion;
+        public delegate void CloseDialog();
+        public event CloseDialog CloseDialogEvent;
         public FormThemSPKM()
         {
             InitializeComponent();
@@ -40,6 +42,7 @@ namespace BachHoaXanh_Store
         {
             FormDanhSachSP.objProductBO = new ProductBO();
             FormDanhSachSP.objPromotion = new ProductPromotionBO();
+            CloseDialogEvent();
             this.Close();
         }
 
@@ -85,11 +88,13 @@ namespace BachHoaXanh_Store
                         MessageBox.Show("Cập nhật sản phẩm cho Kho Khuyến Mãi thành công!");
                         FormDanhSachSP.objProductBO = new ProductBO();
                         FormDanhSachSP.objPromotion = new ProductPromotionBO();
+                        CloseDialogEvent();
                         this.Close();
                     }
                 }
                 else
                 {
+                    objPromotion.MaSP = objProduct.MaSP;
                     objPromotion.NgayKM = dtp_NgayApDung.Value;
                     objPromotion.NgayHetHan = dtp_NgayKetThuc.Value;
                     objPromotion.SoLuong = intStockUpdate;
@@ -102,6 +107,7 @@ namespace BachHoaXanh_Store
                         MessageBox.Show("Cập nhật sản phẩm cho Kho Khuyến Mãi thành công!");
                         FormDanhSachSP.objProductBO = new ProductBO();
                         FormDanhSachSP.objPromotion = new ProductPromotionBO();
+                        CloseDialogEvent();
                         this.Close();
                     }
                 }

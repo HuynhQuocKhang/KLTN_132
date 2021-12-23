@@ -888,7 +888,7 @@ namespace BachHoaXanh_Store
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormPhanPhoiHang";
             this.Padding = new System.Windows.Forms.Padding(16);
-            this.Text = "FormPhanPhoiHang";
+            this.Text = "Phân Phối Hàng Hóa";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);

@@ -85,10 +85,24 @@ namespace BachHoaXanh_Store
                 MessageBox.Show("Danh sách hàng hóa cần xuất không được rỗng");
             }
 
-            Program.frmPhieuXuatKho = new FormPhieuXuatKho();
-            Program.frmPhieuXuatKho.ShowDialog();
+            FormPhieuXuatKho frmPhieuXuatKho = new FormPhieuXuatKho();
+            frmPhieuXuatKho.CloseDialogEvent += frmPhieuXuatKho_Event;
+            frmPhieuXuatKho.ShowDialog();
         }
 
+        private void frmPhieuXuatKho_Event()
+        {
+            dgv_DHDT.Rows.Clear();
+            if (chk_AllStore.Checked == true)
+            {
+                dgv_DSDH.DataSource = objOrderStoreBLL.GetOrderFromStoreBO(0, (DateTime)dtp_NgayBatDau.Value, (DateTime)dtp_NgayKetThuc.Value);
+            }
+            else
+            {
+                dgv_DSDH.DataSource = objOrderStoreBLL.GetOrderFromStoreBO(int.Parse(cbo_SieuThi.SelectedValue.ToString()), (DateTime)dtp_NgayBatDau.Value, (DateTime)dtp_NgayKetThuc.Value);
+
+            }
+        }
         private void chk_AllStore_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs e)
         {
             if (chk_AllStore.Checked == true)
@@ -126,11 +140,16 @@ namespace BachHoaXanh_Store
 
         private void dgv_DSDH_SelectionChanged(object sender, EventArgs e)
         {
+            dgv_DHDT.Rows.Clear();
             int index = dgv_DSDH.CurrentCell.RowIndex;
             if (dgv_DSDH.DataSource != null && index != -1)
             {
-
-                dgv_DHDT.DataSource = objOrderStoreDetailBLL.GetListOrderStoreByOrderId(int.Parse(dgv_DSDH["col_MaDH", index].Value.ToString().Trim()));
+                List<GetListOrderStoreByOrderIdBO> lstOrder = objOrderStoreDetailBLL.GetListOrderStoreByOrderId(int.Parse(dgv_DSDH["col_MaDH", index].Value.ToString().Trim()));
+                foreach (GetListOrderStoreByOrderIdBO item in lstOrder)
+                {
+                    dgv_DHDT.Rows.Add(item.MaSP, item.TenSP, item.SoLuong, item.SoLuong);
+                }
+                //dgv_DHDT.DataSource = objOrderStoreDetailBLL.GetListOrderStoreByOrderId(int.Parse(dgv_DSDH["col_MaDH", index].Value.ToString().Trim()));
             }
         }
 

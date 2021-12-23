@@ -760,7 +760,7 @@ namespace BachHoaXanh_Store
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormNhapHang";
             this.Padding = new System.Windows.Forms.Padding(16);
-            this.Text = "FormNhapHang";
+            this.Text = "Nhập Hàng";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);

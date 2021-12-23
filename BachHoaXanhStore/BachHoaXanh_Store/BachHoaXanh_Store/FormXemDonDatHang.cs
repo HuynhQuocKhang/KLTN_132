@@ -1,4 +1,5 @@
 ﻿using BLL_DAO;
+using BO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -81,7 +82,12 @@ namespace BachHoaXanh_Store
             int index = dgv_DSDH.CurrentCell.RowIndex;
             if (dgv_DSDH.DataSource != null && index != -1)
             {
-                dgv_DHDT.DataSource = objOrderStoreDetailBLL.GetDetailsOrderStoreByOrderId(int.Parse(dgv_DSDH["col_MaDH", index].Value.ToString().Trim()));
+                dgv_DHDT.Rows.Clear();
+                List<GetDetailsOrderStoreByOrderIdBO> lstOrder = objOrderStoreDetailBLL.GetDetailsOrderStoreByOrderId(int.Parse(dgv_DSDH["col_MaDH", index].Value.ToString().Trim()));
+                foreach (GetDetailsOrderStoreByOrderIdBO item in lstOrder)
+                {
+                    dgv_DHDT.Rows.Add(item.MaSP, item.TenSP, item.GiaBan, item.SoLuong, item.ThanhTien);
+                }
             }
         }
     }

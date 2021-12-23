@@ -1,4 +1,5 @@
 ﻿using BLL_DAO;
+using BO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -57,7 +58,12 @@ namespace BachHoaXanh_Store
             int index = dgv_DSPTH.CurrentCell.RowIndex;
             if (dgv_DSPTH.DataSource != null && index != -1)
             {
-                dgv_DSCT.DataSource = objOrderStoreDetailBLL.GetDetailsReturnProductStoreByOrderId(int.Parse(dgv_DSPTH["col_MaDH", index].Value.ToString().Trim()));
+                dgv_DSCT.Rows.Clear();
+                List<GetDetailsReturnProductStoreByOrderIdBO> lstReturnProduct = objOrderStoreDetailBLL.GetDetailsReturnProductStoreByOrderId(int.Parse(dgv_DSPTH["col_MaDH", index].Value.ToString().Trim()));
+                foreach (GetDetailsReturnProductStoreByOrderIdBO item in lstReturnProduct)
+                {
+                    dgv_DSCT.Rows.Add(item.MaSP, item.TenSP, item.SoLuong, ((DateTime)item.NgayHetHan).ToString("d"));
+                }
             }
         }
 
@@ -72,6 +78,8 @@ namespace BachHoaXanh_Store
                     if (objOrderStoreBLL.UpdateReturnProductStoreStatus(int.Parse(dgv_DSPTH.Rows[i].Cells[2].Value.ToString())))
                     {
                         MessageBox.Show("Duyệt đơn trả hàng thành công");
+                        dgv_DSCT.Rows.Clear();
+                        Search(txtKeyWord.Text.Trim(), cbo_MaSieuThi.SelectedValue.ToString(), (DateTime)dtp_NgayBatDau.Value, (DateTime)dtp_NgayKetThuc.Value);
                     }
                     else
                     {

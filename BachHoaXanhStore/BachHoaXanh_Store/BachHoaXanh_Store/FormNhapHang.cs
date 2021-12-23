@@ -78,13 +78,23 @@ namespace BachHoaXanh_Store
             {
                 if (dgv_DSDH.DataSource != null && index != -1)
                 {
-                    dgv_DSCTDH.DataSource = objOrderStoreDetailBLL.GetListOrderStoreByOrderId(int.Parse(dgv_DSDH["col_MaDH", index].Value.ToString().Trim()));
+                    dgv_DSCTDH.Rows.Clear();
+                    List<GetListOrderStoreByOrderIdBO> lstOrder = objOrderStoreDetailBLL.GetListOrderStoreByOrderId(int.Parse(dgv_DSDH["col_MaDH", index].Value.ToString().Trim()));
+                    foreach (GetListOrderStoreByOrderIdBO item in lstOrder)
+                    {
+                        dgv_DSCTDH.Rows.Add(item.MaSP, item.TenSP, item.SoLuong, item.SoLuong);
+                    }
                 }
                 
             }
             else
             {
-                dgv_DSCTDH.DataSource = objOrderCustomerBLL.GetListOrderCustomerDetail(int.Parse(dgv_DSDH["col_MaDH", index].Value.ToString().Trim()));
+                dgv_DSCTDH.Rows.Clear();
+                List<GetListOrderStoreByOrderIdBO> lstOrder = objOrderCustomerBLL.GetListOrderCustomerDetail(int.Parse(dgv_DSDH["col_MaDH", index].Value.ToString().Trim()));
+                foreach (GetListOrderStoreByOrderIdBO item in lstOrder)
+                {
+                    dgv_DSCTDH.Rows.Add(item.MaSP, item.TenSP, item.SoLuong, item.SoLuong);
+                }
             }
         }
 
@@ -141,8 +151,8 @@ namespace BachHoaXanh_Store
                     {
                         dgv_DSCTDH.Rows.RemoveAt(i);
                     }
-                    dgv_DSDH.DataSource = null;
                     MessageBox.Show("Nhập hàng thành công!");
+                    dgv_DSCTDH.Rows.Clear();
                     Search();
                 }
             }

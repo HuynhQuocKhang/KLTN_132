@@ -159,8 +159,9 @@ namespace BachHoaXanh_Store
                     {
                         objProductBO.DVT = dgv_DSSP["col_DonViTinh", index].Value.ToString();
                     }
-                    Program.frmChinhSuaSP = new FormChinhSuaSP();
-                    Program.frmChinhSuaSP.ShowDialog();
+                    FormChinhSuaSP frmChinhSuaSP = new FormChinhSuaSP();
+                    frmChinhSuaSP.CloseDialogEvent += frmChinhSuaSP_Event;
+                    frmChinhSuaSP.ShowDialog();
                 }
 
             }
@@ -199,8 +200,9 @@ namespace BachHoaXanh_Store
 
             if (FormLogin.objUserBO.Permission == 1)
             {
-                Program.frmChinhSuaSP = new FormChinhSuaSP();
-                Program.frmChinhSuaSP.ShowDialog();
+                FormChinhSuaSP frmChinhSuaSP = new FormChinhSuaSP();
+                frmChinhSuaSP.CloseDialogEvent += frmChinhSuaSP_Event;
+                frmChinhSuaSP.ShowDialog();
             }
             else
             {
@@ -208,6 +210,7 @@ namespace BachHoaXanh_Store
                 objPromotion = objOrderStoreBLL.GetProductPromotionFromStore(dgv_DSSP["col_MaSP", index].Value.ToString().Trim(), (int)FormLogin.objUserBO.StoreId).FirstOrDefault();
                 if (objPromotion == null)
                 {
+                    objPromotion = new ProductPromotionBO();
                     isEdit = false;
                 }
                 else
@@ -223,11 +226,19 @@ namespace BachHoaXanh_Store
                 objProductBO.SoLuong = int.Parse(dgv_DSSP["col_SoLuong", index].Value.ToString());
                 #endregion
 
-                Program.frmThemSPKM = new FormThemSPKM();
-                Program.frmThemSPKM.ShowDialog();
+                FormThemSPKM frmThemSPKM = new FormThemSPKM();
+                frmThemSPKM.CloseDialogEvent += frmThemSPKM_Event;
+                frmThemSPKM.ShowDialog();
             }
         }
-
+        void frmThemSPKM_Event()
+        {
+            Search(txtKeyWord.Text, cbo_NhaCungCap.SelectedValue.ToString(), cbo_LoaiSP.SelectedValue.ToString(), cbo_PageSize.Text);
+        }
+        void frmChinhSuaSP_Event()
+        {
+            Search(txtKeyWord.Text, cbo_NhaCungCap.SelectedValue.ToString(), cbo_LoaiSP.SelectedValue.ToString(), cbo_PageSize.Text);
+        }
         private void cbo_PageSize_SelectedIndexChanged(object sender, EventArgs e)
         {
             Search(txtKeyWord.Text, cbo_NhaCungCap.SelectedValue.ToString(), cbo_LoaiSP.SelectedValue.ToString(), cbo_PageSize.Text);
@@ -236,24 +247,6 @@ namespace BachHoaXanh_Store
         private void bunifuButton3_Click(object sender, EventArgs e)
         {
             Search(txtKeyWord.Text, cbo_NhaCungCap.SelectedValue.ToString(), cbo_LoaiSP.SelectedValue.ToString(), cbo_PageSize.Text);
-        }
-
-        private void AddColumnDataGridview(DataGridView dgv, string strColunmName, string strHeader, string strDataName)
-        {
-            DataGridViewColumn col = new DataGridViewColumn();
-            DataGridViewCell cell = new DataGridViewTextBoxCell();
-            col.HeaderText = strHeader;
-            col.Name = strColunmName;
-            col.Visible = true;
-            col.Width = 100;
-            col.CellTemplate = cell;
-            col.DataPropertyName = strDataName;
-            dgv.Columns.Add(col);
-        }
-
-        private void RemoveColumnDataGridView(DataGridView dgv, string strColunmName)
-        {
-            dgv.Columns.Remove(strColunmName);
         }
     }
 }
