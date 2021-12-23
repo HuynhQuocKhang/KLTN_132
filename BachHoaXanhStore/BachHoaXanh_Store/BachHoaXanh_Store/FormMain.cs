@@ -26,6 +26,14 @@ namespace BachHoaXanh_Store
             InitializeComponent();
             lbl_MaST.Text = objStoreBLL.getStoreNameByUser(FormLogin.objUserBO.StoreId);
             lbl_MaNV.Text = FormLogin.objUserBO.UserName + " - " + FormLogin.objUserBO.UserFullName;
+            if(FormLogin.objUserBO.Permission==1)
+            {
+                accordionControlElement2.Visible = false;
+            }    
+            else
+            {
+                accordionControlElement1.Visible = false;
+            }    
         }
         private string reportType;
         public string ReportType { get => reportType; set => reportType = value; }
@@ -89,18 +97,18 @@ namespace BachHoaXanh_Store
 
         private void accordionControlElement3_Click(object sender, EventArgs e)
         {
-            panel9.Visible = true;
-            bunifuButton1.Visible = true;
-            reportType = "DatHang";
-            label1.Text = "Số đơn đã đặt";
-            label3.Text = "Tổng giá trị đặt";
-            Program.frmDatHang = new FormDatHang();
-            ViewChildForm(Program.frmDatHang);
+           
         }
 
         private void accordionControlElement4_Click(object sender, EventArgs e)
         {
-
+            panel9.Visible = true;
+            bunifuButton1.Visible = true;
+            reportType = "TraHang";
+            label1.Text = "Số sản phẩm trả về";
+            label3.Text = "Tổng giá trị trả về";
+            Program.frmTraHangNCC = new FormTraHangNCC();
+            ViewChildForm(Program.frmTraHangNCC);
         }
 
         private void accordionControlElement5_Click(object sender, EventArgs e)
@@ -279,6 +287,33 @@ namespace BachHoaXanh_Store
             label3.Text = "Số đơn chưa duyệt";
             Program.frmDuyetPhieuTraHang = new FormDuyetPhieuTraHang();
             ViewChildForm(Program.frmDuyetPhieuTraHang);
+        }
+
+        private void accordionControlElement12_Click(object sender, EventArgs e)
+        {
+            panel9.Visible = true;
+            bunifuButton1.Visible = true;
+            reportType = "DatHang";
+            label1.Text = "Số đơn đã đặt";
+            label3.Text = "Tổng giá trị đặt";
+            Program.frmDatHang = new FormDatHang();
+            ViewChildForm(Program.frmDatHang);
+        }
+
+        private void accordionControlElement13_Click(object sender, EventArgs e)
+        {
+            panel9.Visible = true;
+            bunifuButton1.Visible = true;
+            reportType = "DatHang";
+            label1.Text = "Số đơn đã đặt";
+            label3.Text = "Tổng giá trị đặt";
+            FormNhapHang frmNhapHang = new FormNhapHang();
+            ViewChildForm(frmNhapHang);
+        }
+
+        private void accordionControlElement2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
