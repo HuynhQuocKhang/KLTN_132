@@ -80,9 +80,9 @@ namespace BachHoaXanh_Store
         private void dgv_DSDH_SelectionChanged(object sender, EventArgs e)
         {
             int index = dgv_DSDH.CurrentCell.RowIndex;
+            dgv_DHDT.Rows.Clear();
             if (dgv_DSDH.DataSource != null && index != -1)
             {
-                dgv_DHDT.Rows.Clear();
                 List<GetDetailsOrderStoreByOrderIdBO> lstOrder = objOrderStoreDetailBLL.GetDetailsOrderStoreByOrderId(int.Parse(dgv_DSDH["col_MaDH", index].Value.ToString().Trim()));
                 foreach (GetDetailsOrderStoreByOrderIdBO item in lstOrder)
                 {

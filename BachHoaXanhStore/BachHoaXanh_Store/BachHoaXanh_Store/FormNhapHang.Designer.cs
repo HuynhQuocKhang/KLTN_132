@@ -69,19 +69,19 @@ namespace BachHoaXanh_Store
             this.panel4 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.dgv_DSCTDH = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.col_MaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_TenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_SoLuongNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.bunifuButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.bunifuDropdown1 = new Bunifu.UI.WinForms.BunifuDropdown();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.col_MaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_TenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_SoLuongNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -562,29 +562,6 @@ namespace BachHoaXanh_Store
             this.dgv_DSCTDH.Size = new System.Drawing.Size(632, 593);
             this.dgv_DSCTDH.TabIndex = 9;
             // 
-            // col_MaSP
-            // 
-            this.col_MaSP.DataPropertyName = "MaSP";
-            this.col_MaSP.HeaderText = "Mã sản phẩm";
-            this.col_MaSP.Name = "col_MaSP";
-            // 
-            // col_TenSP
-            // 
-            this.col_TenSP.DataPropertyName = "TenSP";
-            this.col_TenSP.HeaderText = "Tên sản phẩm";
-            this.col_TenSP.Name = "col_TenSP";
-            // 
-            // col_SoLuong
-            // 
-            this.col_SoLuong.DataPropertyName = "SoLuong";
-            this.col_SoLuong.HeaderText = "Số lượng đặt";
-            this.col_SoLuong.Name = "col_SoLuong";
-            // 
-            // col_SoLuongNhap
-            // 
-            this.col_SoLuongNhap.HeaderText = "Số lượng nhập";
-            this.col_SoLuongNhap.Name = "col_SoLuongNhap";
-            // 
             // label2
             // 
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -736,6 +713,15 @@ namespace BachHoaXanh_Store
             this.bunifuDropdown1.TabIndex = 4;
             this.bunifuDropdown1.Text = null;
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.bunifuLabel1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(3, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(102, 37);
+            this.panel3.TabIndex = 5;
+            // 
             // bunifuLabel1
             // 
             this.bunifuLabel1.AutoEllipsis = false;
@@ -753,14 +739,25 @@ namespace BachHoaXanh_Store
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
             this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // panel3
+            // col_MaSP
             // 
-            this.panel3.Controls.Add(this.bunifuLabel1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(3, 3);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(102, 37);
-            this.panel3.TabIndex = 5;
+            this.col_MaSP.HeaderText = "Mã sản phẩm";
+            this.col_MaSP.Name = "col_MaSP";
+            // 
+            // col_TenSP
+            // 
+            this.col_TenSP.HeaderText = "Tên sản phẩm";
+            this.col_TenSP.Name = "col_TenSP";
+            // 
+            // col_SoLuong
+            // 
+            this.col_SoLuong.HeaderText = "Số lượng đặt";
+            this.col_SoLuong.Name = "col_SoLuong";
+            // 
+            // col_SoLuongNhap
+            // 
+            this.col_SoLuongNhap.HeaderText = "Số lượng nhập";
+            this.col_SoLuongNhap.Name = "col_SoLuongNhap";
             // 
             // FormNhapHang
             // 
@@ -821,10 +818,10 @@ namespace BachHoaXanh_Store
         private System.Windows.Forms.DataGridViewTextBoxColumn col_NgayDat;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_TinhTrang;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_TongTien;
+        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_MaSP;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_TenSP;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_SoLuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_SoLuongNhap;
-        private System.Windows.Forms.Panel panel3;
     }
 }

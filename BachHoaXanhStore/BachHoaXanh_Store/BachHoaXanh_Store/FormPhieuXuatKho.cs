@@ -25,7 +25,7 @@ namespace BachHoaXanh_Store
             txt_MaST.Text = FormPhanPhoiHang.objExportProductBO.MaST.ToString();
             txt_DonDatHang.Text = FormPhanPhoiHang.objExportProductBO.MaDH.ToString();
             txt_TongTien.Text = FormPhanPhoiHang.objExportProductBO.TongTien.ToString();
-            txt_NgayXuat.Text = DateTime.Now.ToString();
+            txt_NgayXuat.Text = DateTime.Now.ToString("d");
             dgv_CTPX.DataSource = FormPhanPhoiHang.lstExportProductDetailBO;
         }
 

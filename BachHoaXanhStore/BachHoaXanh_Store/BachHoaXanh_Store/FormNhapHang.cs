@@ -147,11 +147,8 @@ namespace BachHoaXanh_Store
                     {
                         objOrderCustomerBLL.UpdateCustomerOrder(int.Parse(dgv_DSDH["col_MaDH", index].Value.ToString().Trim()), lstProductBO);
                     }
-                    for (int i = 0; i < dgv_DSCTDH.Rows.Count; i++)
-                    {
-                        dgv_DSCTDH.Rows.RemoveAt(i);
-                    }
                     MessageBox.Show("Nhập hàng thành công!");
+                    lstProductBO = new List<ProductBO>();
                     dgv_DSCTDH.Rows.Clear();
                     Search();
                 }

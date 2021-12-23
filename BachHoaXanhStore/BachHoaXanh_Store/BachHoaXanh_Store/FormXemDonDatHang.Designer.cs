@@ -582,6 +582,8 @@ namespace BachHoaXanh_Store
             // 
             // dgv_DHDT
             // 
+            this.dgv_DHDT.AllowUserToAddRows = false;
+            this.dgv_DHDT.AllowUserToDeleteRows = false;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgv_DHDT.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgv_DHDT.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -612,6 +614,7 @@ namespace BachHoaXanh_Store
             this.dgv_DHDT.HeaderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(223)))), ((int)(((byte)(135)))));
             this.dgv_DHDT.Location = new System.Drawing.Point(23, 235);
             this.dgv_DHDT.Name = "dgv_DHDT";
+            this.dgv_DHDT.ReadOnly = true;
             this.dgv_DHDT.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
@@ -629,30 +632,35 @@ namespace BachHoaXanh_Store
             this.col_MaSP.DataPropertyName = "MaSP";
             this.col_MaSP.HeaderText = "Mã sản phẩm";
             this.col_MaSP.Name = "col_MaSP";
+            this.col_MaSP.ReadOnly = true;
             // 
             // col_TenSP
             // 
             this.col_TenSP.DataPropertyName = "TenSP";
             this.col_TenSP.HeaderText = "Tên sản phẩm";
             this.col_TenSP.Name = "col_TenSP";
+            this.col_TenSP.ReadOnly = true;
             // 
             // col_GiaBan
             // 
             this.col_GiaBan.DataPropertyName = "GiaBan";
             this.col_GiaBan.HeaderText = "Giá bán";
             this.col_GiaBan.Name = "col_GiaBan";
+            this.col_GiaBan.ReadOnly = true;
             // 
             // col_SoLuong
             // 
             this.col_SoLuong.DataPropertyName = "SoLuong";
             this.col_SoLuong.HeaderText = "Số lượng";
             this.col_SoLuong.Name = "col_SoLuong";
+            this.col_SoLuong.ReadOnly = true;
             // 
             // col_ThanhTien
             // 
             this.col_ThanhTien.DataPropertyName = "ThanhTien";
             this.col_ThanhTien.HeaderText = "Thành tiền";
             this.col_ThanhTien.Name = "col_ThanhTien";
+            this.col_ThanhTien.ReadOnly = true;
             // 
             // FormXemDonDatHang
             // 

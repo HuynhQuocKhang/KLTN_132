@@ -207,7 +207,7 @@ update LoaiSP
 set Isdeleted = 'false'
 
 update SanPham
-set SoLuong = 50 where MaSP = '1012841000006'
+set SoLuong = 50 where MaSP = '9932979000038'
 
 
 
@@ -218,10 +218,10 @@ select * from CTDonDatHang
 
 select * from PhieuTraHang
 
-select * from PhieuTraHang
+select * from CTPhieuTraHang
 
-select * from KhoSieuThi where MaST = 1 and MaSP = '9932979000030'
-select * from SanPham Where MaSP = '1053156000001'
+select * from KhoSieuThi where MaST = 1 and MaSP = '9932979000038'
+select * from SanPham Where MaSP = '9932979000038'
 select * from SanPham Where MaSP = '1053156000002'
 select * from HoaDonDatNCC
 select * from NhanVien

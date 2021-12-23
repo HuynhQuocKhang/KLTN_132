@@ -440,12 +440,22 @@ namespace BLL_DAO
             }
         }
 
-        public bool UpdateReturnProductStoreStatus(int intOrderStoreId)
+        public bool UpdateReturnProductStoreStatus(int intOrderStoreId, List<ProductBO> lstProduct, int intStoreId)
         {
             try
             {
                 var objPhieuTraHang = db.PhieuTraHangs.Where(x => x.MaPTH == intOrderStoreId).FirstOrDefault();
                 objPhieuTraHang.TinhTrang = 1;
+                foreach (ProductBO item in lstProduct)
+                {
+                    var objProduct = db.SanPhams.Where(x => x.MaSP == item.MaSP).FirstOrDefault();
+                    objProduct.SoLuong += item.SoLuong;
+
+                    var objProductStore = db.KhoSieuThis.Where(x => x.MaST == intStoreId && x.MaSP == item.MaSP).FirstOrDefault();
+                    objProductStore.SoLuong -= item.SoLuong;
+                    db.SubmitChanges();
+                }
+
                 db.SubmitChanges();
                 return true;
             }

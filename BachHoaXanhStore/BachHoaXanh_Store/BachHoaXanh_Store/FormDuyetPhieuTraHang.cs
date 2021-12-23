@@ -70,12 +70,22 @@ namespace BachHoaXanh_Store
         private void btn_DuyetDonTraHang_Click(object sender, EventArgs e)
         {
             bool cellCheck;
+            
             for (int i = 0; i < dgv_DSPTH.Rows.Count; i++)
             {
                 var cbxCell = (DataGridViewCheckBoxCell)dgv_DSPTH.Rows[i].Cells["col_check"];
                 if ((string)cbxCell.Value == "T")
                 {
-                    if (objOrderStoreBLL.UpdateReturnProductStoreStatus(int.Parse(dgv_DSPTH.Rows[i].Cells[2].Value.ToString())))
+                    List<GetDetailsReturnProductStoreByOrderIdBO> lstReturnProduct = objOrderStoreDetailBLL.GetDetailsReturnProductStoreByOrderId(int.Parse(dgv_DSPTH["col_MaDH", i].Value.ToString().Trim()));
+                    List<ProductBO> lstProduct = new List<ProductBO>();
+                    foreach (GetDetailsReturnProductStoreByOrderIdBO item in lstReturnProduct)
+                    {
+                        ProductBO objProduct = new ProductBO();
+                        objProduct.MaSP = item.MaSP.Trim();
+                        objProduct.SoLuong = item.SoLuong;
+                        lstProduct.Add(objProduct);
+                    }
+                    if (objOrderStoreBLL.UpdateReturnProductStoreStatus(int.Parse(dgv_DSPTH["col_MaDH", i].Value.ToString().Trim()), lstProduct, int.Parse(dgv_DSPTH["col_MaST", i].Value.ToString().Trim())))
                     {
                         MessageBox.Show("Duyệt đơn trả hàng thành công");
                         dgv_DSCT.Rows.Clear();

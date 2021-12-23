@@ -220,7 +220,7 @@ namespace BachHoaXanh_Store
             this.txt_NhaCungCap.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_NhaCungCap.TextMarginBottom = 0;
             this.txt_NhaCungCap.TextMarginLeft = 5;
-            this.txt_NhaCungCap.TextMarginTop = 0;
+            //this.txt_NhaCungCap.TextMarginTop = 0;
             this.txt_NhaCungCap.TextPlaceholder = "";
             this.txt_NhaCungCap.UseSystemPasswordChar = false;
             this.txt_NhaCungCap.WordWrap = true;
@@ -297,7 +297,7 @@ namespace BachHoaXanh_Store
             this.txt_NgayTra.TextMarginBottom = 0;
             this.txt_NgayTra.TextMarginLeft = 5;
             this.txt_NgayTra.TextMarginTop = 0;
-            this.txt_NgayTra.TextPlaceholder = "";
+            //this.txt_NgayTra.TextPlaceholder = "";
             this.txt_NgayTra.UseSystemPasswordChar = false;
             this.txt_NgayTra.WordWrap = true;
             // 

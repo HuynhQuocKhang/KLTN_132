@@ -270,7 +270,7 @@ namespace BachHoaXanh_Store
             this.txt_NhaCungCap.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_NhaCungCap.TextMarginBottom = 0;
             this.txt_NhaCungCap.TextMarginLeft = 5;
-            this.txt_NhaCungCap.TextMarginTop = 0;
+            //this.txt_NhaCungCap.TextMarginTop = 0;
             this.txt_NhaCungCap.TextPlaceholder = "Enter text";
             this.txt_NhaCungCap.UseSystemPasswordChar = false;
             this.txt_NhaCungCap.WordWrap = true;
@@ -422,7 +422,7 @@ namespace BachHoaXanh_Store
             this.txt_NgayDat.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_NgayDat.TextMarginBottom = 0;
             this.txt_NgayDat.TextMarginLeft = 5;
-            this.txt_NgayDat.TextMarginTop = 0;
+            //this.txt_NgayDat.TextMarginTop = 0;
             this.txt_NgayDat.TextPlaceholder = "Ngày đặt";
             this.txt_NgayDat.UseSystemPasswordChar = false;
             this.txt_NgayDat.WordWrap = true;
@@ -784,7 +784,7 @@ namespace BachHoaXanh_Store
             this.txt_NguoiDat.SelectionStart = 0;
             this.txt_NguoiDat.ShortcutsEnabled = true;
             this.txt_NguoiDat.Size = new System.Drawing.Size(270, 39);
-            this.txt_NguoiDat.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            //this.txt_NguoiDat.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txt_NguoiDat.TabIndex = 0;
             this.txt_NguoiDat.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_NguoiDat.TextMarginBottom = 0;
