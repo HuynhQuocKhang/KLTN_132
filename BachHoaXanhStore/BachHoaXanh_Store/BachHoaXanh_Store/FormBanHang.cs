@@ -792,5 +792,11 @@ namespace BachHoaXanh_Store
         {
             Program.frmLogin.Show();
         }
+
+        private void btn_HangDoi_Click(object sender, EventArgs e)
+        {
+            Program.frmHangDoi = new FormHangDoi();
+            Program.frmHangDoi.ShowDialog();
+        }
     }
 }

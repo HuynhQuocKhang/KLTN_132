@@ -230,6 +230,12 @@
     <Compile Include="FormDuyetPhieuTraHang.Designer.cs">
       <DependentUpon>FormDuyetPhieuTraHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormHangDoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHangDoi.Designer.cs">
+      <DependentUpon>FormHangDoi.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormKetCa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -380,6 +386,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormDuyetPhieuTraHang.resx">
       <DependentUpon>FormDuyetPhieuTraHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHangDoi.resx">
+      <DependentUpon>FormHangDoi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormKetCa.resx">
       <DependentUpon>FormKetCa.cs</DependentUpon>

@@ -1108,6 +1108,7 @@ namespace BachHoaXanh_Store
             this.btn_HangDoi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_HangDoi.TextMarginLeft = 0;
             this.btn_HangDoi.UseDefaultRadiusAndThickness = true;
+            this.btn_HangDoi.Click += new System.EventHandler(this.btn_HangDoi_Click);
             // 
             // btn_TruHang
             // 
