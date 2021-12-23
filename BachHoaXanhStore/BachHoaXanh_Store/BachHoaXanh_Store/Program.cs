@@ -26,7 +26,7 @@ namespace BachHoaXanh_Store
         public static FormThemSPKM frmThemSPKM = null;
         public static FormTimKiem frmTimKiem = null;
         public static FormKetCa frmKetCa = null;
-
+        public static FormHangDoi frmHangDoi = null;
         [STAThread]
         static void Main()
         {
