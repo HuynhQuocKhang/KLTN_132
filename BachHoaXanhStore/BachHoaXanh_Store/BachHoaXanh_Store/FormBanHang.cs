@@ -22,6 +22,7 @@ namespace BachHoaXanh_Store
         public static List<ProductBO> lstProductPromotion = new List<ProductBO>();
         public static List<InvoiceDetailBO> lsInvoiceDetail = new List<InvoiceDetailBO>();
         public static bool isApplyPromo = false;
+        int Section = 2;
         public FormBanHang()
         {
             InitializeComponent();
@@ -543,24 +544,25 @@ namespace BachHoaXanh_Store
 
         private void btn_ApDungKM_Click(object sender, EventArgs e)
         {
-            if (Tag == "1")
+            if (int.Parse(lbl_TongTien.Text.Trim()) < 100000)
             {
-                if (int.Parse(lbl_TongTien.Text.Trim()) < 100000)
-                {
-                    MessageBox.Show("Gía trị của hóa đơn phải từ 100.000 trở lên mới được áp dụng khuyến mãi. Xin vui lòng kiểm tra lại!");
-                }
-                else
-                {
-                    setColor(Color.Red);
-                    isApplyPromo = true;
-                    Tag = "0";
-                }
+                MessageBox.Show("Gía trị của hóa đơn phải từ 100.000 trở lên mới được áp dụng khuyến mãi. Xin vui lòng kiểm tra lại!");
             }
             else
             {
-                setColor(Color.FromArgb(76, 154, 42));
-                isApplyPromo = false;
-                Tag = "1";
+                
+                if (Section % 2 == 0)
+                {
+                    Section++;
+                    setColor(Color.Red);
+                    isApplyPromo = true;
+                }
+                else
+                {
+                    setColor(Color.FromArgb(76, 154, 42));
+                    isApplyPromo = false;
+                    Section++;
+                }
             }
         }
         public void setColor(Color rgb)
