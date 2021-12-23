@@ -77,7 +77,7 @@ namespace BachHoaXanh_Store
                             bool isExists = false;
                             for (int i = 0; i < dgv_DSSP.Rows.Count; i++)
                             {
-                                if (strProductName.Trim() == dgv_DSSP["col_MaSP", i].Value.ToString())
+                                if (strProductName.Trim() == dgv_DSSP["col_MaSP", i].Value.ToString().Trim())
                                 {
                                     isExists = true;
                                     intIndex = i;
@@ -284,7 +284,7 @@ namespace BachHoaXanh_Store
                                 bool isExists = false;
                                 for (int i = 0; i < dgv_DSSP.Rows.Count; i++)
                                 {
-                                    if (txt_MaSP.Text.Trim() == dgv_DSSP["col_MaSP", i].Value.ToString())
+                                    if (txt_MaSP.Text.Trim() == dgv_DSSP["col_MaSP", i].Value.ToString().Trim())
                                     {
                                         isExists = true;
                                         intIndex = i;
@@ -641,7 +641,7 @@ namespace BachHoaXanh_Store
                             bool isExists = false;
                             for (int i = 0; i < dgv_DSSP.Rows.Count; i++)
                             {
-                                if (txt_MaSP.Text.Trim() == dgv_DSSP["col_MaSP", i].Value.ToString())
+                                if (txt_MaSP.Text.Trim() == dgv_DSSP["col_MaSP", i].Value.ToString().Trim())
                                 {
                                     isExists = true;
                                     intIndex = i;
@@ -789,8 +789,36 @@ namespace BachHoaXanh_Store
 
         private void btn_TruHang_Click(object sender, EventArgs e)
         {
-            int index = dgv_DSSP.CurrentCell.RowIndex;
-            dgv_DSSP.Rows.RemoveAt(index);
+            if (!isApplyPromo)
+            {
+                int index = dgv_DSSP.CurrentCell.RowIndex;
+                dgv_DSSP.Rows.RemoveAt(index);
+            }
+            else
+            {
+                int index = dgv_DSKM.CurrentCell.RowIndex;
+                dgv_DSKM.Rows.RemoveAt(index);
+            }
+            int totalPrice = 0;
+            int totalStock = 0;
+            for (int i = 0; i < dgv_DSSP.Rows.Count; i++)
+            {
+                totalPrice += int.Parse(dgv_DSSP["col_ThanhTien", i].Value.ToString().Trim());
+                totalStock += int.Parse(dgv_DSSP["col_SoLuong", i].Value.ToString().Trim());
+            }
+            for (int i = 0; i < dgv_DSSP.Rows.Count; i++)
+            {
+                totalStock += int.Parse(dgv_DSSP["col_SoLuong", i].Value.ToString().Trim());
+            }
+            lbl_TongTien.Text = totalPrice.ToString();
+            lbl_SoLuong.Text = totalStock.ToString();
+            if (totalPrice < 100000)
+            {
+                dgv_DSKM.Rows.Clear();
+                setColor(Color.FromArgb(76, 154, 42));
+                isApplyPromo = false;
+                Section++;
+            }
         }
 
         private void FormBanHang_FormClosed(object sender, FormClosedEventArgs e)

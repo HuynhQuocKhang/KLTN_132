@@ -67,6 +67,9 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
     </Compile>
+    <Compile Include="BachHoaXanh_StoreDataSet.cs">
+      <DependentUpon>BachHoaXanh_StoreDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="BachHoaXanh_StoreDataSet.Designer.cs">
       <DependentUpon>BachHoaXanh_StoreDataSet.xsd</DependentUpon>
       <AutoGen>True</AutoGen>
