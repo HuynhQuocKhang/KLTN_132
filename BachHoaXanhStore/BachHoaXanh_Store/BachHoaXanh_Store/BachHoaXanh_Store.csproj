@@ -324,6 +324,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>rptDDH_DataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ReportForm\rptDonBanHang.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportForm\rptDonBanHang.Designer.cs">
+      <DependentUpon>rptDonBanHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReportForm\rptDonDatHang.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -438,6 +444,9 @@
     </Compile>
     <EmbeddedResource Include="ReportForm\Report.resx">
       <DependentUpon>Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\rptDonBanHang.resx">
+      <DependentUpon>rptDonBanHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReportForm\rptDonDatHang.resx">
       <DependentUpon>rptDonDatHang.cs</DependentUpon>
