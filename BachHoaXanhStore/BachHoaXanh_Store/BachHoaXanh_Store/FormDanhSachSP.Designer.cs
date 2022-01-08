@@ -810,8 +810,7 @@ namespace BachHoaXanh_Store
             this.cbo_PageSize.Items.AddRange(new object[] {
             "10",
             "20",
-            "30",
-            "50"});
+            "30"});
             this.cbo_PageSize.Location = new System.Drawing.Point(111, 3);
             this.cbo_PageSize.MaximumSize = new System.Drawing.Size(5000, 0);
             this.cbo_PageSize.Name = "cbo_PageSize";

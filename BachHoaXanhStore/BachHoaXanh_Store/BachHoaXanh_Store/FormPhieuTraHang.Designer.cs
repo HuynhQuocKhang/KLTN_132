@@ -372,7 +372,7 @@ namespace BachHoaXanh_Store
             this.txt_TinhTrang.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_TinhTrang.TextMarginBottom = 0;
             this.txt_TinhTrang.TextMarginLeft = 5;
-            this.txt_TinhTrang.TextMarginTop = 0;
+            //this.txt_TinhTrang.TextMarginTop = 0;
             this.txt_TinhTrang.TextPlaceholder = "Tình trạng";
             this.txt_TinhTrang.UseSystemPasswordChar = false;
             this.txt_TinhTrang.WordWrap = true;

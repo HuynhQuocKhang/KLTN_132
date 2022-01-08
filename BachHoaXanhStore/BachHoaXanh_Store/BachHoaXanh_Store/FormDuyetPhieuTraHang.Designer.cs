@@ -463,7 +463,7 @@ namespace BachHoaXanh_Store
             this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel3.Size = new System.Drawing.Size(310, 10);
             this.bunifuLabel3.TabIndex = 1;
-            this.bunifuLabel3.Text = "Đặt hàng từ ngày";
+            this.bunifuLabel3.Text = "Trả hàng từ ngày";
             this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuLabel3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 

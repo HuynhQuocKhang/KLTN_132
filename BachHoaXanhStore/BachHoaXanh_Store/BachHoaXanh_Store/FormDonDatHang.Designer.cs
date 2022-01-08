@@ -257,7 +257,7 @@ namespace BachHoaXanh_Store
             this.txt_NhaCungCap.OnIdleState = stateProperties4;
             this.txt_NhaCungCap.PasswordChar = '\0';
             this.txt_NhaCungCap.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txt_NhaCungCap.PlaceholderText = "Enter text";
+            //this.txt_NhaCungCap.PlaceholderText = "Enter text";
             this.txt_NhaCungCap.ReadOnly = false;
             this.txt_NhaCungCap.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_NhaCungCap.SelectedText = "";
