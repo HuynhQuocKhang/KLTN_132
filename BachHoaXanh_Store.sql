@@ -24,7 +24,7 @@ create table SanPham
 	TenSP nvarchar(30),
 	MaLoaiSP int,
 	MaNCC int,
-	DVT nvarchar(20),
+	DVT nvarchar(30),
 	GiaBan int,
 	GiaVon int,
 	SoLuong int,
@@ -62,8 +62,8 @@ create table CTHoaDonDatNCC
 create table SieuThi
 (
 	MaST int IDENTITY(0,1),
-	TenST nvarchar (50),
-	DiaChi nvarchar(50),
+	TenST nvarchar (100),
+	DiaChi nvarchar(100),
 	SDT varchar(15),
 	constraint PK_SieuThi primary key (MaST)
 )
@@ -242,7 +242,7 @@ select * from KhoHangKM where MaST = 1 and MaSP = '2701122062900'
 select * from HoaDonBanHang where MaHD = '12221220213'
 select * from CTHoaDonBanHang where MaHD = '12221220213'
 
-
+select * from KhoHangKM
 
 update KhoHangKM
-set SoLuong = 2
+set GiaKM = 1000

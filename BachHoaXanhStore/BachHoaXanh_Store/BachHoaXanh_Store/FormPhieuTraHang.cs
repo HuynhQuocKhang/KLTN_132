@@ -45,11 +45,11 @@ namespace BachHoaXanh_Store
             if (FormLogin.objUserBO.Permission == 1)
             {
                 objReturnProductBO.MaNCC = FormTraHangNCC.intCustomerId;
-                objReturnProductBO.MaST = 0;
+                objReturnProductBO.MaST = -1;
             }
             else
             {
-                objReturnProductBO.MaNCC = 0;
+                objReturnProductBO.MaNCC = -1;
                 objReturnProductBO.MaST = FormLogin.objUserBO.StoreId;
             }
             objReturnProductBO.NguoiLapPhieu = txt_NguoiDat.Text;
