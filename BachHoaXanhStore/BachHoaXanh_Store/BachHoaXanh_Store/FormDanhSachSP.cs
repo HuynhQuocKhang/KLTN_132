@@ -76,7 +76,7 @@ namespace BachHoaXanh_Store
                 {
                     if (int.Parse(strProductTypeId) == 1)
                     {
-                        dgv_DSSP.DataSource = objProductBLL.GetProductPromotionFromStore(strProductName.Trim(), 0, 0, int.MaxValue, int.Parse(strPageSize.Trim()), (int)FormLogin.objUserBO.StoreId);
+                        dgv_DSSP.DataSource = objProductBLL.GetProductPromotionFromStore(strProductName.Trim(), 0, 0, int.MaxValue, 50, (int)FormLogin.objUserBO.StoreId);
                     }
                     else
                     {
@@ -89,7 +89,7 @@ namespace BachHoaXanh_Store
                 {
                     if (int.Parse(strProductTypeId) == 1)
                     {
-                        dgv_DSSP.DataSource = objOrderStoreBLL.GetProductBOFromStore(strProductName.Trim(), 0, 0, int.MaxValue, int.Parse(strPageSize.Trim()), (int)FormLogin.objUserBO.StoreId);
+                        dgv_DSSP.DataSource = objOrderStoreBLL.GetProductBOFromStore(strProductName.Trim(), 0, 0, int.MaxValue, 50, (int)FormLogin.objUserBO.StoreId);
                     }
                     else
                     {
@@ -112,7 +112,7 @@ namespace BachHoaXanh_Store
                 }
                 else if (int.Parse(strProductTypeId) == 1)
                 {
-                    dgv_DSSP.DataSource = objProductBLL.GetProductByKeys(strProductName.Trim(), 0, int.Parse(strCustomerId), int.Parse(strPageSize.Trim()));
+                    dgv_DSSP.DataSource = objProductBLL.GetProductByKeys(strProductName.Trim(), 0, int.Parse(strCustomerId),50);
                 }
                 else
                 {

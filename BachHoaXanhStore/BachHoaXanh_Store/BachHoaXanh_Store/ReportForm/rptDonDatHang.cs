@@ -33,7 +33,7 @@ namespace BachHoaXanh_Store.ReportForm
         }
         public string GenerateCode()
         {
-            var model = db.HoaDonDatNCCs.Select(t => t).Count() + 1;
+            var model = db.HoaDonDatNCCs.Select(t => t).Count();
             return model.ToString();
         }
     }

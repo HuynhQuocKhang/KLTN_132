@@ -61,7 +61,7 @@ create table CTHoaDonDatNCC
 
 create table SieuThi
 (
-	MaST int IDENTITY(1,1),
+	MaST int IDENTITY(0,1),
 	TenST nvarchar (50),
 	DiaChi nvarchar(50),
 	SDT varchar(15),
@@ -85,6 +85,7 @@ create table KhoHangKM
 	NgayKM date,
 	NgayHetHan date,
 	SoLuong int,
+	GiaKM int,
 	constraint PK_KhoHangKM primary key (MaST,MaSP),
 	constraint FK_KhoHangKM_SieuThi foreign key (MaST) references SieuThi(MaST),
 	constraint FK_KhoHangKM_SanPham foreign key (MaSP) references SanPham(MaSP)
@@ -172,6 +173,7 @@ Create table NhanVien
 	MatKhau nvarchar (30),
 	MaST int,
 	Quyen int --  1:Quản lí kho, 2:Cửa hàng trưởng, 3:Nhân viên
+	Constraint FK_NhanVien_SieuThi foreign key (MaST) references SieuThi(MAST)
 )
 
 Create Table HoaDonBanHang

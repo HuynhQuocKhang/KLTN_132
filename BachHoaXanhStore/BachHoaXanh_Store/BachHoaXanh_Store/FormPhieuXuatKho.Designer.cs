@@ -298,7 +298,7 @@ namespace BachHoaXanh_Store
             stateProperties2.FillColor = System.Drawing.Color.White;
             stateProperties2.ForeColor = System.Drawing.Color.Empty;
             stateProperties2.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txt_DonDatHang.OnDisabledState = stateProperties2;
+            //this.txt_DonDatHang.OnDisabledState = stateProperties2;
             stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(186)))), ((int)(((byte)(27)))));
             stateProperties3.FillColor = System.Drawing.Color.Empty;
             stateProperties3.ForeColor = System.Drawing.Color.Empty;
