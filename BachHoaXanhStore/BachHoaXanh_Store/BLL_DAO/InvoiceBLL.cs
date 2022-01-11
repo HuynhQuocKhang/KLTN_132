@@ -41,6 +41,7 @@ namespace BLL_DAO
                     CTHoaDonBanHang objCTHoaDonBanHang = new CTHoaDonBanHang();
                     objCTHoaDonBanHang.MaHD = item.MaHD;
                     objCTHoaDonBanHang.MaSP = item.MaSP;
+                    objCTHoaDonBanHang.KhuyenMai = item.KhuyenMai;
                     objCTHoaDonBanHang.SoLuong = item.SoLuong;
                     objCTHoaDonBanHang.ThanhTien = item.ThanhTien;
                     db.CTHoaDonBanHangs.InsertOnSubmit(objCTHoaDonBanHang);

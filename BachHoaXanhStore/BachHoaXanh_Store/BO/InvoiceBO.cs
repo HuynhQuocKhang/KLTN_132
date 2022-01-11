@@ -20,6 +20,7 @@ namespace BO
     public class InvoiceDetailBO
     {
         public string MaHD { get; set; }
+        public bool KhuyenMai { get; set; }
         public string MaSP { get; set; }
         public int? SoLuong { get; set; }
         public int? ThanhTien { get; set; }

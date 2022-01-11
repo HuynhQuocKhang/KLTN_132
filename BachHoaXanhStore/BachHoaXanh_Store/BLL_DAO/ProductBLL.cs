@@ -345,7 +345,8 @@ namespace BLL_DAO
                                 TenNCC = objCustomer.TenNCC,
                                 DVT = objProduct.DVT,
                                 SoLuong = objStorePromotion.SoLuong,
-                                GiaVon = objProduct.GiaVon,
+                                GiaBan = objProduct.GiaBan,
+                                GiaKM = objStorePromotion.GiaKM,
                                 NgayKM = objStorePromotion.NgayKM,
                                 NgayHetHan = objStorePromotion.NgayHetHan
                             };
@@ -371,7 +372,8 @@ namespace BLL_DAO
                                 TenNCC = objCustomer.TenNCC,
                                 DVT = objProduct.DVT,
                                 SoLuong = objStorePromotion.SoLuong,
-                                GiaVon = objProduct.GiaVon,
+                                GiaBan = objProduct.GiaBan,
+                                GiaKM = objStorePromotion.GiaKM,
                                 NgayKM = objStorePromotion.NgayKM,
                                 NgayHetHan = objStorePromotion.NgayHetHan
                             };
@@ -397,7 +399,8 @@ namespace BLL_DAO
                                 TenNCC = objCustomer.TenNCC,
                                 DVT = objProduct.DVT,
                                 SoLuong = objStorePromotion.SoLuong,
-                                GiaVon = objProduct.GiaVon,
+                                GiaBan = objProduct.GiaBan,
+                                GiaKM = objStorePromotion.GiaKM,
                                 NgayKM = objStorePromotion.NgayKM,
                                 NgayHetHan = objStorePromotion.NgayHetHan
                             };
@@ -424,7 +427,8 @@ namespace BLL_DAO
                                 TenNCC = objCustomer.TenNCC,
                                 DVT = objProduct.DVT,
                                 SoLuong = objStorePromotion.SoLuong,
-                                GiaVon = objProduct.GiaVon,
+                                GiaBan = objProduct.GiaBan,
+                                GiaKM = objStorePromotion.GiaKM,
                                 NgayKM = objStorePromotion.NgayKM,
                                 NgayHetHan = objStorePromotion.NgayHetHan
                             };

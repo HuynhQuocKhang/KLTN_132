@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BachHoaXanh_Store" Class="BachHoaXanhDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=162860-VHBSON;Initial Catalog=BachHoaXanh_Store;Integrated Security=True" SettingsObjectName="BLL_DAO.Properties.Settings" SettingsPropertyName="BachHoaXanh_StoreConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=162860-VHBSON;Initial Catalog=BachHoaXanh_Store;Integrated Security=True" SettingsObjectName="BLL_DAO.Properties.Settings" SettingsPropertyName="BachHoaXanh_StoreConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.CTDonDatHang" Member="CTDonDatHangs">
     <Type Name="CTDonDatHang">
       <Column Name="MaDH" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -13,13 +13,14 @@
   <Table Name="dbo.SieuThi" Member="SieuThis">
     <Type Name="SieuThi">
       <Column Name="MaST" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="TenST" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TenST" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
       <Column Name="SDT" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
       <Association Name="SieuThi_DonDatHang" Member="DonDatHangs" ThisKey="MaST" OtherKey="MaST" Type="DonDatHang" />
       <Association Name="SieuThi_HoaDonBanHang" Member="HoaDonBanHangs" ThisKey="MaST" OtherKey="MaST" Type="HoaDonBanHang" />
       <Association Name="SieuThi_KhoHangKM" Member="KhoHangKMs" ThisKey="MaST" OtherKey="MaST" Type="KhoHangKM" />
       <Association Name="SieuThi_KhoSieuThi" Member="KhoSieuThis" ThisKey="MaST" OtherKey="MaST" Type="KhoSieuThi" />
+      <Association Name="SieuThi_NhanVien" Member="NhanViens" ThisKey="MaST" OtherKey="MaST" Type="NhanVien" />
       <Association Name="SieuThi_PhieuXuatKho" Member="PhieuXuatKhos" ThisKey="MaST" OtherKey="MaST" Type="PhieuXuatKho" />
     </Type>
   </Table>
@@ -47,6 +48,7 @@
     <Type Name="CTHoaDonBanHang">
       <Column Name="MaHD" Type="System.String" DbType="Char(30) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="MaSP" Type="System.String" DbType="NVarChar(30) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="KhuyenMai" Type="System.Boolean" DbType="Bit NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="SoLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="ThanhTien" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="HoaDonBanHang_CTHoaDonBanHang" Member="HoaDonBanHang" ThisKey="MaHD" OtherKey="MaHD" Type="HoaDonBanHang" IsForeignKey="true" />
@@ -111,6 +113,7 @@
       <Column Name="NgayKM" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Column Name="NgayHetHan" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Column Name="SoLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GiaKM" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="SieuThi_KhoHangKM" Member="SieuThi" ThisKey="MaST" OtherKey="MaST" Type="SieuThi" IsForeignKey="true" />
       <Association Name="SanPham_KhoHangKM" Member="SanPham" ThisKey="MaSP" OtherKey="MaSP" Type="SanPham" IsForeignKey="true" />
     </Type>
@@ -150,6 +153,7 @@
       <Column Name="MaST" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="Quyen" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="NhanVien_HoaDonBanHang" Member="HoaDonBanHangs" ThisKey="MaNV" OtherKey="MaNV" Type="HoaDonBanHang" />
+      <Association Name="SieuThi_NhanVien" Member="SieuThi" ThisKey="MaST" OtherKey="MaST" Type="SieuThi" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.PhieuTraHang" Member="PhieuTraHangs">
@@ -185,7 +189,7 @@
       <Column Name="TenSP" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
       <Column Name="MaLoaiSP" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="MaNCC" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="DVT" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="DVT" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
       <Column Name="GiaBan" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="GiaVon" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="SoLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />

@@ -193,9 +193,10 @@ Create Table CTHoaDonBanHang
 (
 	MaHD char(30) not null,
 	MaSP nvarchar(30) not null,
+	KhuyenMai bit,
 	SoLuong int,
 	ThanhTien int,
-	constraint PK_CTHoaDonBanHang primary key (MaHD,MaSP),
+	constraint PK_CTHoaDonBanHang primary key (MaHD,MaSP,KhuyenMai),
 	Constraint FK_CTHoaDonBanHang_HoaDonBanHang foreign key (MaHD) references HoaDonBanHang(MaHD),
 	constraint FK_CTHoaDonBanHang_SanPham foreign key (MaSP) references SanPham(MaSP)
 )
@@ -244,5 +245,7 @@ select * from CTHoaDonBanHang where MaHD = '12221220213'
 
 select * from KhoHangKM
 
-update KhoHangKM
-set GiaKM = 1000
+update LoaiSP
+set Isdeleted = 0
+
+select * from LoaiSP

@@ -499,7 +499,6 @@ namespace BachHoaXanh_Store
             stateProperties9.FillColor = System.Drawing.Color.Empty;
             stateProperties9.ForeColor = System.Drawing.Color.Empty;
             stateProperties9.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txt_SLTon.OnActiveState = stateProperties9;
             stateProperties10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(223)))), ((int)(((byte)(135)))));
             stateProperties10.FillColor = System.Drawing.Color.White;
             stateProperties10.ForeColor = System.Drawing.Color.Empty;

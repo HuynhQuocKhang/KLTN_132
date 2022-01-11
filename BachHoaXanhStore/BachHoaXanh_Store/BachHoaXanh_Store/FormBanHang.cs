@@ -456,6 +456,7 @@ namespace BachHoaXanh_Store
                             objInvoiceDetail.MaSP = dgv_DSKM["MaSP", i].Value.ToString();
                             objInvoiceDetail.SoLuong = int.Parse(dgv_DSKM["SoLuong", i].Value.ToString().Trim());
                             objInvoiceDetail.ThanhTien = 0;
+                            objInvoiceDetail.KhuyenMai = true;
                             lsInvoiceDetail.Add(objInvoiceDetail);
                         }
 
@@ -472,6 +473,7 @@ namespace BachHoaXanh_Store
                             objInvoiceDetail.MaSP = dgv_DSSP["col_MaSP", i].Value.ToString();
                             objInvoiceDetail.SoLuong = int.Parse(dgv_DSSP["col_SoLuong", i].Value.ToString().Trim());
                             objInvoiceDetail.ThanhTien = int.Parse(dgv_DSSP["col_ThanhTien", i].Value.ToString().Trim());
+                            objInvoiceDetail.KhuyenMai = false;
                             lsInvoiceDetail.Add(objInvoiceDetail);
                         }
 
@@ -510,6 +512,7 @@ namespace BachHoaXanh_Store
                             objInvoiceDetail.MaSP = dgv_DSSP["col_MaSP", i].Value.ToString();
                             objInvoiceDetail.SoLuong = int.Parse(dgv_DSSP["col_SoLuong", i].Value.ToString().Trim());
                             objInvoiceDetail.ThanhTien = int.Parse(dgv_DSSP["col_ThanhTien", i].Value.ToString().Trim());
+                            objInvoiceDetail.KhuyenMai = false;
                             lsInvoiceDetail.Add(objInvoiceDetail);
                         }
 

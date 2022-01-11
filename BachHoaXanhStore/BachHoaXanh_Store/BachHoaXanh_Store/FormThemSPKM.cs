@@ -35,6 +35,7 @@ namespace BachHoaXanh_Store
                 txt_SLThem.Text = objPromotion.SoLuong.ToString();
                 dtp_NgayApDung.Value = (DateTime)objPromotion.NgayKM;
                 dtp_NgayKetThuc.Value = (DateTime)objPromotion.NgayHetHan;
+                txt_GiaKM.Text = objPromotion.GiaKM.ToString();
             }
         }
 
@@ -50,6 +51,7 @@ namespace BachHoaXanh_Store
         {
             int intStockUpdate = 0;
             bool isSuccess = true;
+            TimeSpan interval = dtp_NgayApDung.Value.Subtract(DateTime.Now);
             if (!int.TryParse(txt_SLThem.Text.Trim(), out intStockUpdate))
             {
                 MessageBox.Show("Số lượng Khuyến Mãi cho sản phẩm [ " + txt_ProductFullName.Text + " ] phải là số nguyên dương lớn hơn 0" + Environment.NewLine + "Và nhỏ hơn hoặc bằng số lượng tồn của của Kho Siêu Thị. Xin vui lòng kiểm tra lại!");
@@ -65,7 +67,7 @@ namespace BachHoaXanh_Store
                 MessageBox.Show("Số lượng Khuyến Mãi cho sản phẩm [ " + txt_ProductFullName.Text + " ] phải nhỏ hơn hoặc bằng số lượng tồn của của Kho Siêu Thị" + Environment.NewLine + "Xin vui lòng kiểm tra lại!");
                 isSuccess = false;
             }
-            if (FormDanhSachSP.isEdit == false && dtp_NgayApDung.Value < DateTime.Now)
+            if (FormDanhSachSP.isEdit == false && interval.Days < 0)
             {
                 MessageBox.Show("Ngày bắt đầu khuyến mãi không được nhỏ hơn ngày hiện tại. Xin vui lòng kiểm tra lại!");
                 isSuccess = false;

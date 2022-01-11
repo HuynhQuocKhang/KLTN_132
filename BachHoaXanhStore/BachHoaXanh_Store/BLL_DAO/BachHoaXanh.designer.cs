@@ -84,7 +84,7 @@ namespace BLL_DAO
     #endregion
 		
 		public BachHoaXanhDataContext() : 
-				base(global::BLL_DAO.Properties.Settings.Default.BachHoaXanh_StoreConnectionString, mappingSource)
+				base(global::BLL_DAO.Properties.Settings.Default.BachHoaXanh_StoreConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}
@@ -488,6 +488,8 @@ namespace BLL_DAO
 		
 		private EntitySet<KhoSieuThi> _KhoSieuThis;
 		
+		private EntitySet<NhanVien> _NhanViens;
+		
 		private EntitySet<PhieuXuatKho> _PhieuXuatKhos;
 		
     #region Extensibility Method Definitions
@@ -510,6 +512,7 @@ namespace BLL_DAO
 			this._HoaDonBanHangs = new EntitySet<HoaDonBanHang>(new Action<HoaDonBanHang>(this.attach_HoaDonBanHangs), new Action<HoaDonBanHang>(this.detach_HoaDonBanHangs));
 			this._KhoHangKMs = new EntitySet<KhoHangKM>(new Action<KhoHangKM>(this.attach_KhoHangKMs), new Action<KhoHangKM>(this.detach_KhoHangKMs));
 			this._KhoSieuThis = new EntitySet<KhoSieuThi>(new Action<KhoSieuThi>(this.attach_KhoSieuThis), new Action<KhoSieuThi>(this.detach_KhoSieuThis));
+			this._NhanViens = new EntitySet<NhanVien>(new Action<NhanVien>(this.attach_NhanViens), new Action<NhanVien>(this.detach_NhanViens));
 			this._PhieuXuatKhos = new EntitySet<PhieuXuatKho>(new Action<PhieuXuatKho>(this.attach_PhieuXuatKhos), new Action<PhieuXuatKho>(this.detach_PhieuXuatKhos));
 			OnCreated();
 		}
@@ -534,7 +537,7 @@ namespace BLL_DAO
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenST", DbType="NVarChar(50)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenST", DbType="NVarChar(100)")]
 		public string TenST
 		{
 			get
@@ -554,7 +557,7 @@ namespace BLL_DAO
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DiaChi", DbType="NVarChar(50)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DiaChi", DbType="NVarChar(100)")]
 		public string DiaChi
 		{
 			get
@@ -646,6 +649,19 @@ namespace BLL_DAO
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="SieuThi_NhanVien", Storage="_NhanViens", ThisKey="MaST", OtherKey="MaST")]
+		public EntitySet<NhanVien> NhanViens
+		{
+			get
+			{
+				return this._NhanViens;
+			}
+			set
+			{
+				this._NhanViens.Assign(value);
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="SieuThi_PhieuXuatKho", Storage="_PhieuXuatKhos", ThisKey="MaST", OtherKey="MaST")]
 		public EntitySet<PhieuXuatKho> PhieuXuatKhos
 		{
@@ -722,6 +738,18 @@ namespace BLL_DAO
 		}
 		
 		private void detach_KhoSieuThis(KhoSieuThi entity)
+		{
+			this.SendPropertyChanging();
+			entity.SieuThi = null;
+		}
+		
+		private void attach_NhanViens(NhanVien entity)
+		{
+			this.SendPropertyChanging();
+			entity.SieuThi = this;
+		}
+		
+		private void detach_NhanViens(NhanVien entity)
 		{
 			this.SendPropertyChanging();
 			entity.SieuThi = null;
@@ -1182,6 +1210,8 @@ namespace BLL_DAO
 		
 		private string _MaSP;
 		
+		private bool _KhuyenMai;
+		
 		private System.Nullable<int> _SoLuong;
 		
 		private System.Nullable<int> _ThanhTien;
@@ -1198,6 +1228,8 @@ namespace BLL_DAO
     partial void OnMaHDChanged();
     partial void OnMaSPChanging(string value);
     partial void OnMaSPChanged();
+    partial void OnKhuyenMaiChanging(bool value);
+    partial void OnKhuyenMaiChanged();
     partial void OnSoLuongChanging(System.Nullable<int> value);
     partial void OnSoLuongChanged();
     partial void OnThanhTienChanging(System.Nullable<int> value);
@@ -1255,6 +1287,26 @@ namespace BLL_DAO
 					this._MaSP = value;
 					this.SendPropertyChanged("MaSP");
 					this.OnMaSPChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KhuyenMai", DbType="Bit NOT NULL", IsPrimaryKey=true)]
+		public bool KhuyenMai
+		{
+			get
+			{
+				return this._KhuyenMai;
+			}
+			set
+			{
+				if ((this._KhuyenMai != value))
+				{
+					this.OnKhuyenMaiChanging(value);
+					this.SendPropertyChanging();
+					this._KhuyenMai = value;
+					this.SendPropertyChanged("KhuyenMai");
+					this.OnKhuyenMaiChanged();
 				}
 			}
 		}
@@ -2514,6 +2566,8 @@ namespace BLL_DAO
 		
 		private System.Nullable<int> _SoLuong;
 		
+		private System.Nullable<int> _GiaKM;
+		
 		private EntityRef<SieuThi> _SieuThi;
 		
 		private EntityRef<SanPham> _SanPham;
@@ -2532,6 +2586,8 @@ namespace BLL_DAO
     partial void OnNgayHetHanChanged();
     partial void OnSoLuongChanging(System.Nullable<int> value);
     partial void OnSoLuongChanged();
+    partial void OnGiaKMChanging(System.Nullable<int> value);
+    partial void OnGiaKMChanged();
     #endregion
 		
 		public KhoHangKM()
@@ -2645,6 +2701,26 @@ namespace BLL_DAO
 					this._SoLuong = value;
 					this.SendPropertyChanged("SoLuong");
 					this.OnSoLuongChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GiaKM", DbType="Int")]
+		public System.Nullable<int> GiaKM
+		{
+			get
+			{
+				return this._GiaKM;
+			}
+			set
+			{
+				if ((this._GiaKM != value))
+				{
+					this.OnGiaKMChanging(value);
+					this.SendPropertyChanging();
+					this._GiaKM = value;
+					this.SendPropertyChanged("GiaKM");
+					this.OnGiaKMChanged();
 				}
 			}
 		}
@@ -3254,6 +3330,8 @@ namespace BLL_DAO
 		
 		private EntitySet<HoaDonBanHang> _HoaDonBanHangs;
 		
+		private EntityRef<SieuThi> _SieuThi;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -3275,6 +3353,7 @@ namespace BLL_DAO
 		public NhanVien()
 		{
 			this._HoaDonBanHangs = new EntitySet<HoaDonBanHang>(new Action<HoaDonBanHang>(this.attach_HoaDonBanHangs), new Action<HoaDonBanHang>(this.detach_HoaDonBanHangs));
+			this._SieuThi = default(EntityRef<SieuThi>);
 			OnCreated();
 		}
 		
@@ -3369,6 +3448,10 @@ namespace BLL_DAO
 			{
 				if ((this._MaST != value))
 				{
+					if (this._SieuThi.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
 					this.OnMaSTChanging(value);
 					this.SendPropertyChanging();
 					this._MaST = value;
@@ -3408,6 +3491,40 @@ namespace BLL_DAO
 			set
 			{
 				this._HoaDonBanHangs.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="SieuThi_NhanVien", Storage="_SieuThi", ThisKey="MaST", OtherKey="MaST", IsForeignKey=true)]
+		public SieuThi SieuThi
+		{
+			get
+			{
+				return this._SieuThi.Entity;
+			}
+			set
+			{
+				SieuThi previousValue = this._SieuThi.Entity;
+				if (((previousValue != value) 
+							|| (this._SieuThi.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._SieuThi.Entity = null;
+						previousValue.NhanViens.Remove(this);
+					}
+					this._SieuThi.Entity = value;
+					if ((value != null))
+					{
+						value.NhanViens.Add(this);
+						this._MaST = value.MaST;
+					}
+					else
+					{
+						this._MaST = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("SieuThi");
+				}
 			}
 		}
 		
@@ -4186,7 +4303,7 @@ namespace BLL_DAO
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DVT", DbType="NVarChar(20)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DVT", DbType="NVarChar(30)")]
 		public string DVT
 		{
 			get

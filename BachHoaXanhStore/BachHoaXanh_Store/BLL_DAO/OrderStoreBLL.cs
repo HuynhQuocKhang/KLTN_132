@@ -299,17 +299,7 @@ namespace BLL_DAO
         }
         public int countOrderFromStore()
         {
-            var entities = from objOrderStore in db.DonDatHangs
-                           where objOrderStore.TinhTrang == 0
-                           select new OrderStoreBO()
-                           {
-                               MaHD = objOrderStore.MaDH,
-                               MaST = objOrderStore.MaST,
-                               NguoiLapPhieu = objOrderStore.NguoiLapPhieu,
-                               NgayDat = objOrderStore.NgayDat,
-                               TongTien = objOrderStore.TongTien,
-                               TinhTrang = objOrderStore.TinhTrang
-                           };
+            var entities = db.DonDatHangs.Where(x => x.TinhTrang == 0).ToList();
             return entities.Count();
         }
         public int countTransferFromStore()
@@ -343,18 +333,15 @@ namespace BLL_DAO
         }
         public int sumValueOrderFormStore()
         {
-            var entities = from objOrderStore in db.DonDatHangs
-                           where objOrderStore.TinhTrang == 0
-                           select new OrderStoreBO()
-                           {
-                               MaHD = objOrderStore.MaDH,
-                               MaST = objOrderStore.MaST,
-                               NguoiLapPhieu = objOrderStore.NguoiLapPhieu,
-                               NgayDat = objOrderStore.NgayDat,
-                               TongTien = objOrderStore.TongTien,
-                               TinhTrang = objOrderStore.TinhTrang
-                           };
-            return int.Parse(entities.Sum(x=>x.TongTien).ToString());
+            var entities = db.DonDatHangs.Where(x => x.TinhTrang == 0).ToList();
+            if (entities.Count > 0)
+            {
+                return int.Parse(entities.Sum(x => x.TongTien).ToString());
+            }
+            else
+            {
+                return 0;
+            }
         }
 
         public List<OrderStoreBO> GetOrderFromStoreBO(int intStoreId, int pTinhTrang, string strkeywords = "")
@@ -553,7 +540,8 @@ namespace BLL_DAO
                                 MaLoaiSP = objProduct.MaLoaiSP,
                                 MaNCC = objProduct.MaNCC,
                                 DVT = objProduct.DVT,
-                                GiaVon = objProduct.GiaVon,
+                                GiaBan = objProduct.GiaBan,
+                                GiaKM = objProductPromo.GiaKM,
                                 SoLuong = objProductPromo.SoLuong,
                                 NgayKM = objProductPromo.NgayKM,
                                 NgayHetHan = objProductPromo.NgayHetHan
@@ -745,7 +733,8 @@ namespace BLL_DAO
                                 MaLoaiSP = objProduct.MaLoaiSP,
                                 MaNCC = objProduct.MaNCC,
                                 DVT = objProduct.DVT,
-                                GiaVon = objProduct.GiaVon,
+                                GiaBan = objProduct.GiaBan,
+                                GiaKM = objProductPromo.GiaKM,
                                 SoLuong = objProductPromo.SoLuong,
                                 NgayKM = objProductPromo.NgayKM,
                                 NgayHetHan = objProductPromo.NgayHetHan
