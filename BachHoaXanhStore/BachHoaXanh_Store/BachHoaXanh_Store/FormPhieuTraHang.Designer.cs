@@ -79,6 +79,7 @@ namespace BachHoaXanh_Store
             this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgayHetHan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telerikMetroTheme1 = new Telerik.WinControls.Themes.TelerikMetroTheme();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -221,7 +222,7 @@ namespace BachHoaXanh_Store
             this.txt_NhaCungCap.TextMarginBottom = 0;
             this.txt_NhaCungCap.TextMarginLeft = 5;
             this.txt_NhaCungCap.TextMarginTop = 0;
-            this.txt_NhaCungCap.TextPlaceholder = "";
+            //this.txt_NhaCungCap.TextPlaceholder = "";
             this.txt_NhaCungCap.UseSystemPasswordChar = false;
             this.txt_NhaCungCap.WordWrap = true;
             // 
@@ -297,7 +298,7 @@ namespace BachHoaXanh_Store
             this.txt_NgayTra.TextMarginBottom = 0;
             this.txt_NgayTra.TextMarginLeft = 5;
             this.txt_NgayTra.TextMarginTop = 0;
-            this.txt_NgayTra.TextPlaceholder = "";
+            //this.txt_NgayTra.TextPlaceholder = "";
             this.txt_NgayTra.UseSystemPasswordChar = false;
             this.txt_NgayTra.WordWrap = true;
             // 
@@ -374,7 +375,7 @@ namespace BachHoaXanh_Store
             this.txt_TinhTrang.TextMarginBottom = 0;
             this.txt_TinhTrang.TextMarginLeft = 5;
             this.txt_TinhTrang.TextMarginTop = 0;
-            this.txt_TinhTrang.TextPlaceholder = "";
+            //this.txt_TinhTrang.TextPlaceholder = "";
             this.txt_TinhTrang.UseSystemPasswordChar = false;
             this.txt_TinhTrang.WordWrap = true;
             // 
@@ -607,7 +608,7 @@ namespace BachHoaXanh_Store
             this.txt_NguoiDat.TextMarginBottom = 0;
             this.txt_NguoiDat.TextMarginLeft = 5;
             this.txt_NguoiDat.TextMarginTop = 0;
-            this.txt_NguoiDat.TextPlaceholder = "";
+            //this.txt_NguoiDat.TextPlaceholder = "";
             this.txt_NguoiDat.UseSystemPasswordChar = false;
             this.txt_NguoiDat.WordWrap = true;
             // 
@@ -788,5 +789,6 @@ namespace BachHoaXanh_Store
         private System.Windows.Forms.DataGridViewTextBoxColumn TenSP;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayHetHan;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

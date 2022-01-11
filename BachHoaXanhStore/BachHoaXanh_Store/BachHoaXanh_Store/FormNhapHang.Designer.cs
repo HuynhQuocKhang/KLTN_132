@@ -262,7 +262,7 @@ namespace BachHoaXanh_Store
             this.txtKeyWord.TextMarginBottom = 0;
             this.txtKeyWord.TextMarginLeft = 5;
             this.txtKeyWord.TextMarginTop = 0;
-            this.txtKeyWord.TextPlaceholder = "";
+            //this.txtKeyWord.TextPlaceholder = "";
             this.txtKeyWord.UseSystemPasswordChar = false;
             this.txtKeyWord.WordWrap = true;
             // 

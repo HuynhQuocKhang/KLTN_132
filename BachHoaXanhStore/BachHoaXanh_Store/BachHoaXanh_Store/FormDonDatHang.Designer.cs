@@ -85,6 +85,7 @@ namespace BachHoaXanh_Store
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Order)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -271,7 +272,7 @@ namespace BachHoaXanh_Store
             this.txt_NhaCungCap.TextMarginBottom = 0;
             this.txt_NhaCungCap.TextMarginLeft = 5;
             this.txt_NhaCungCap.TextMarginTop = 0;
-            this.txt_NhaCungCap.TextPlaceholder = "";
+            //this.txt_NhaCungCap.TextPlaceholder = "";
             this.txt_NhaCungCap.UseSystemPasswordChar = false;
             this.txt_NhaCungCap.WordWrap = true;
             // 
@@ -347,7 +348,7 @@ namespace BachHoaXanh_Store
             this.txt_TongTien.TextMarginBottom = 0;
             this.txt_TongTien.TextMarginLeft = 5;
             this.txt_TongTien.TextMarginTop = 0;
-            this.txt_TongTien.TextPlaceholder = "";
+            //this.txt_TongTien.TextPlaceholder = "";
             this.txt_TongTien.UseSystemPasswordChar = false;
             this.txt_TongTien.WordWrap = true;
             // 
@@ -423,7 +424,7 @@ namespace BachHoaXanh_Store
             this.txt_NgayDat.TextMarginBottom = 0;
             this.txt_NgayDat.TextMarginLeft = 5;
             this.txt_NgayDat.TextMarginTop = 0;
-            this.txt_NgayDat.TextPlaceholder = "";
+            //this.txt_NgayDat.TextPlaceholder = "";
             this.txt_NgayDat.UseSystemPasswordChar = false;
             this.txt_NgayDat.WordWrap = true;
             // 
@@ -500,7 +501,7 @@ namespace BachHoaXanh_Store
             this.txt_TinhTrang.TextMarginBottom = 0;
             this.txt_TinhTrang.TextMarginLeft = 5;
             this.txt_TinhTrang.TextMarginTop = 0;
-            this.txt_TinhTrang.TextPlaceholder = "";
+            //this.txt_TinhTrang.TextPlaceholder = "";
             this.txt_TinhTrang.UseSystemPasswordChar = false;
             this.txt_TinhTrang.WordWrap = true;
             // 
@@ -791,7 +792,7 @@ namespace BachHoaXanh_Store
             this.txt_NguoiDat.TextMarginBottom = 0;
             this.txt_NguoiDat.TextMarginLeft = 5;
             this.txt_NguoiDat.TextMarginTop = 0;
-            this.txt_NguoiDat.TextPlaceholder = "";
+            //this.txt_NguoiDat.TextPlaceholder = "";
             this.txt_NguoiDat.UseSystemPasswordChar = false;
             this.txt_NguoiDat.WordWrap = true;
             // 
@@ -878,5 +879,6 @@ namespace BachHoaXanh_Store
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn GiaVon;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_ThanhTien;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

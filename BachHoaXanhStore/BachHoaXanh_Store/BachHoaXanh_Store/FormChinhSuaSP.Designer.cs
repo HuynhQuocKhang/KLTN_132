@@ -68,6 +68,7 @@ namespace BachHoaXanh_Store
             this.cbo_DVT = new Bunifu.UI.WinForms.BunifuDropdown();
             this.txt_MaSP = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.crystalDarkTheme1 = new Telerik.WinControls.Themes.CrystalDarkTheme();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tableLayoutPanel2.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -234,7 +235,7 @@ namespace BachHoaXanh_Store
             this.txt_TenSP.TextMarginBottom = 0;
             this.txt_TenSP.TextMarginLeft = 5;
             this.txt_TenSP.TextMarginTop = 0;
-            this.txt_TenSP.TextPlaceholder = "";
+            //this.txt_TenSP.TextPlaceholder = "";
             this.txt_TenSP.UseSystemPasswordChar = false;
             this.txt_TenSP.WordWrap = true;
             // 
@@ -466,7 +467,7 @@ namespace BachHoaXanh_Store
             this.txt_GiaBan.TextMarginBottom = 0;
             this.txt_GiaBan.TextMarginLeft = 5;
             this.txt_GiaBan.TextMarginTop = 0;
-            this.txt_GiaBan.TextPlaceholder = "";
+            //this.txt_GiaBan.TextPlaceholder = "";
             this.txt_GiaBan.UseSystemPasswordChar = false;
             this.txt_GiaBan.WordWrap = true;
             // 
@@ -541,7 +542,7 @@ namespace BachHoaXanh_Store
             this.txt_GiaVon.TextMarginBottom = 0;
             this.txt_GiaVon.TextMarginLeft = 5;
             this.txt_GiaVon.TextMarginTop = 0;
-            this.txt_GiaVon.TextPlaceholder = "";
+            //this.txt_GiaVon.TextPlaceholder = "";
             this.txt_GiaVon.UseSystemPasswordChar = false;
             this.txt_GiaVon.WordWrap = true;
             // 
@@ -690,7 +691,7 @@ namespace BachHoaXanh_Store
             this.txt_MaSP.TextMarginBottom = 0;
             this.txt_MaSP.TextMarginLeft = 5;
             this.txt_MaSP.TextMarginTop = 0;
-            this.txt_MaSP.TextPlaceholder = "";
+            //this.txt_MaSP.TextPlaceholder = "";
             this.txt_MaSP.UseSystemPasswordChar = false;
             this.txt_MaSP.WordWrap = true;
             // 
@@ -730,5 +731,6 @@ namespace BachHoaXanh_Store
         private Bunifu.UI.WinForms.BunifuDropdown cbo_MaLoaiSP;
         private Bunifu.UI.WinForms.BunifuDropdown cbo_DVT;
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txt_MaSP;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

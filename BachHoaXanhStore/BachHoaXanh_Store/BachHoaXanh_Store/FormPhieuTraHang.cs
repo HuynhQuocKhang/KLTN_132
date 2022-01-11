@@ -29,6 +29,12 @@ namespace BachHoaXanh_Store
             txt_NgayTra.Text = DateTime.Now.ToString();
             txt_NhaCungCap.Text = FormTraHangNCC.strCustomerName;
             dgv_Order.DataSource = FormTraHangNCC.lstOrderDetailBO;
+
+            toolTip1.SetToolTip(txt_NguoiDat, "Người đặt");
+            toolTip1.SetToolTip(txt_NhaCungCap, "Nhà cung cấp");
+            toolTip1.SetToolTip(txt_NgayTra, "Ngày trả");
+            toolTip1.SetToolTip(txt_TinhTrang, "Tình trạng");
+
         }
 
         private void btn_Huy_Click(object sender, EventArgs e)

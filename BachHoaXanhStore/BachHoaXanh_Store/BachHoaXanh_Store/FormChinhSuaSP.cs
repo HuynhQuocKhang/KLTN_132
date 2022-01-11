@@ -47,6 +47,14 @@ namespace BachHoaXanh_Store
                 bunifuLabel1.Text = "THÊM SẢN PHẢM";
                 btn_TraHang.Text = "Thêm Mới";
             }
+
+            toolTip1.SetToolTip(txt_MaSP, "Mã sản phẩm");
+            toolTip1.SetToolTip(txt_TenSP, "Tên sản phẩm");
+            toolTip1.SetToolTip(cbo_NhaCungCap, "Nhà cung cấp");
+            toolTip1.SetToolTip(cbo_MaLoaiSP, "Loại sản phẩm");
+            toolTip1.SetToolTip(cbo_DVT, "Đơn vị tính");
+            toolTip1.SetToolTip(txt_GiaBan, "Giá bán"); 
+            toolTip1.SetToolTip(txt_GiaVon, "Giá vốn");
         }
 
         private void btn_Huy_Click(object sender, EventArgs e)

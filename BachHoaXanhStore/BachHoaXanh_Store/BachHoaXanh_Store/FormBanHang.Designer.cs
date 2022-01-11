@@ -399,7 +399,7 @@ namespace BachHoaXanh_Store
             this.txt_MaSP.TextMarginBottom = 0;
             this.txt_MaSP.TextMarginLeft = 5;
             this.txt_MaSP.TextMarginTop = 0;
-            this.txt_MaSP.TextPlaceholder = "";
+            //this.txt_MaSP.TextPlaceholder = "";
             this.txt_MaSP.UseSystemPasswordChar = false;
             this.txt_MaSP.WordWrap = true;
             this.txt_MaSP.TextChange += new System.EventHandler(this.txt_MaSP_TextChange);
@@ -476,7 +476,7 @@ namespace BachHoaXanh_Store
             this.txt_SoLuong.TextMarginBottom = 0;
             this.txt_SoLuong.TextMarginLeft = 5;
             this.txt_SoLuong.TextMarginTop = 0;
-            this.txt_SoLuong.TextPlaceholder = "";
+            //this.txt_SoLuong.TextPlaceholder = "";
             this.txt_SoLuong.UseSystemPasswordChar = false;
             this.txt_SoLuong.WordWrap = true;
             this.txt_SoLuong.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_SoLuong_KeyPress);

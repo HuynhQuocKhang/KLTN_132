@@ -289,7 +289,7 @@ namespace BachHoaXanh_Store
             this.txt_Keyword.TextMarginBottom = 0;
             this.txt_Keyword.TextMarginLeft = 5;
             this.txt_Keyword.TextMarginTop = 0;
-            this.txt_Keyword.TextPlaceholder = "";
+            //this.txt_Keyword.TextPlaceholder = "";
             this.txt_Keyword.UseSystemPasswordChar = false;
             this.txt_Keyword.WordWrap = true;
             this.txt_Keyword.TextChanged += new System.EventHandler(this.txt_MaSP_TextChanged);

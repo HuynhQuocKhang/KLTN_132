@@ -277,7 +277,7 @@ namespace BachHoaXanh_Store
             this.txt_pass.TextMarginBottom = 0;
             this.txt_pass.TextMarginLeft = 5;
             this.txt_pass.TextMarginTop = 0;
-            this.txt_pass.TextPlaceholder = "Enter text";
+            //this.txt_pass.TextPlaceholder = "Enter text";
             this.txt_pass.UseSystemPasswordChar = true;
             this.txt_pass.WordWrap = true;
             // 
@@ -377,7 +377,7 @@ namespace BachHoaXanh_Store
             this.txt_user.TextMarginBottom = 0;
             this.txt_user.TextMarginLeft = 5;
             this.txt_user.TextMarginTop = 0;
-            this.txt_user.TextPlaceholder = "Enter text";
+            //this.txt_user.TextPlaceholder = "Enter text";
             this.txt_user.UseSystemPasswordChar = false;
             this.txt_user.WordWrap = true;
             // 

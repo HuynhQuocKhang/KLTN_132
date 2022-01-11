@@ -69,6 +69,7 @@ namespace BachHoaXanh_Store
             this.txt_SLTon = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.txt_SLThem = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.txt_GiaKM = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tableLayoutPanel2.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -341,7 +342,7 @@ namespace BachHoaXanh_Store
             this.txt_ProductFullName.TextMarginBottom = 0;
             this.txt_ProductFullName.TextMarginLeft = 5;
             this.txt_ProductFullName.TextMarginTop = 0;
-            this.txt_ProductFullName.TextPlaceholder = "";
+            //this.txt_ProductFullName.TextPlaceholder = "";
             this.txt_ProductFullName.UseSystemPasswordChar = false;
             this.txt_ProductFullName.WordWrap = true;
             // 
@@ -531,7 +532,7 @@ namespace BachHoaXanh_Store
             this.txt_SLTon.TextMarginBottom = 0;
             this.txt_SLTon.TextMarginLeft = 5;
             this.txt_SLTon.TextMarginTop = 0;
-            this.txt_SLTon.TextPlaceholder = "";
+            //this.txt_SLTon.TextPlaceholder = "";
             this.txt_SLTon.UseSystemPasswordChar = false;
             this.txt_SLTon.WordWrap = true;
             // 
@@ -606,7 +607,7 @@ namespace BachHoaXanh_Store
             this.txt_SLThem.TextMarginBottom = 0;
             this.txt_SLThem.TextMarginLeft = 5;
             this.txt_SLThem.TextMarginTop = 0;
-            this.txt_SLThem.TextPlaceholder = "";
+            //this.txt_SLThem.TextPlaceholder = "";
             this.txt_SLThem.UseSystemPasswordChar = false;
             this.txt_SLThem.WordWrap = true;
             // 
@@ -681,7 +682,7 @@ namespace BachHoaXanh_Store
             this.txt_GiaKM.TextMarginBottom = 0;
             this.txt_GiaKM.TextMarginLeft = 5;
             this.txt_GiaKM.TextMarginTop = 0;
-            this.txt_GiaKM.TextPlaceholder = "";
+            //this.txt_GiaKM.TextPlaceholder = "";
             this.txt_GiaKM.UseSystemPasswordChar = false;
             this.txt_GiaKM.WordWrap = true;
             // 
@@ -721,5 +722,6 @@ namespace BachHoaXanh_Store
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel4;
         private Bunifu.UI.WinForms.BunifuDatePicker dtp_NgayKetThuc;
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txt_GiaKM;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

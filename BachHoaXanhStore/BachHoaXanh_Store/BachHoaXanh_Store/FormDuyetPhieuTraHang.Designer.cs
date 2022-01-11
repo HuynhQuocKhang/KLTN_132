@@ -88,6 +88,7 @@ namespace BachHoaXanh_Store
             this.panel2 = new System.Windows.Forms.Panel();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.chk_SelectAll = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -380,7 +381,7 @@ namespace BachHoaXanh_Store
             this.txtKeyWord.TextMarginBottom = 0;
             this.txtKeyWord.TextMarginLeft = 5;
             this.txtKeyWord.TextMarginTop = 0;
-            this.txtKeyWord.TextPlaceholder = "";
+            //this.txtKeyWord.TextPlaceholder = "";
             this.txtKeyWord.UseSystemPasswordChar = false;
             this.txtKeyWord.WordWrap = true;
             // 
@@ -1036,5 +1037,6 @@ namespace BachHoaXanh_Store
         private System.Windows.Forms.DataGridViewTextBoxColumn col_TenSP;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_SoLuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_NgayHetHan;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

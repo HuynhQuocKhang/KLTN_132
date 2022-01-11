@@ -24,6 +24,8 @@ namespace BachHoaXanh_Store
             cbo_MaSieuThi.DataSource = objStoreBLL.GetAllStore();
             cbo_MaSieuThi.DisplayMember = "FullName";
             cbo_MaSieuThi.ValueMember = "MaST";
+            toolTip1.SetToolTip(cbo_MaSieuThi, "Mã siêu thị");
+            toolTip1.SetToolTip(txtKeyWord, "Tìm kiếm");
         }
 
         private void btn_TimKiem_Click(object sender, EventArgs e)

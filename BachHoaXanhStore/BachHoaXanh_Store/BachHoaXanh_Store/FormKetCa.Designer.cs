@@ -254,7 +254,7 @@ namespace BachHoaXanh_Store
             this.txt_500k.TextMarginBottom = 0;
             this.txt_500k.TextMarginLeft = 5;
             this.txt_500k.TextMarginTop = 0;
-            this.txt_500k.TextPlaceholder = "";
+            //this.txt_500k.TextPlaceholder = "";
             this.txt_500k.UseSystemPasswordChar = false;
             this.txt_500k.WordWrap = true;
             this.txt_500k.TextChange += new System.EventHandler(this.txt_500k_TextChange);
@@ -473,7 +473,7 @@ namespace BachHoaXanh_Store
             this.txt_200k.TextMarginBottom = 0;
             this.txt_200k.TextMarginLeft = 5;
             this.txt_200k.TextMarginTop = 0;
-            this.txt_200k.TextPlaceholder = "";
+            //this.txt_200k.TextPlaceholder = "";
             this.txt_200k.UseSystemPasswordChar = false;
             this.txt_200k.WordWrap = true;
             this.txt_200k.TextChange += new System.EventHandler(this.txt_200k_TextChange);
@@ -550,7 +550,7 @@ namespace BachHoaXanh_Store
             this.txt_100k.TextMarginBottom = 0;
             this.txt_100k.TextMarginLeft = 5;
             this.txt_100k.TextMarginTop = 0;
-            this.txt_100k.TextPlaceholder = "";
+            //this.txt_100k.TextPlaceholder = "";
             this.txt_100k.UseSystemPasswordChar = false;
             this.txt_100k.WordWrap = true;
             this.txt_100k.TextChange += new System.EventHandler(this.txt_100k_TextChange);
@@ -627,7 +627,7 @@ namespace BachHoaXanh_Store
             this.txt_50k.TextMarginBottom = 0;
             this.txt_50k.TextMarginLeft = 5;
             this.txt_50k.TextMarginTop = 0;
-            this.txt_50k.TextPlaceholder = "";
+            //this.txt_50k.TextPlaceholder = "";
             this.txt_50k.UseSystemPasswordChar = false;
             this.txt_50k.WordWrap = true;
             this.txt_50k.TextChange += new System.EventHandler(this.txt_50k_TextChange);
@@ -704,7 +704,7 @@ namespace BachHoaXanh_Store
             this.txt_20k.TextMarginBottom = 0;
             this.txt_20k.TextMarginLeft = 5;
             this.txt_20k.TextMarginTop = 0;
-            this.txt_20k.TextPlaceholder = "";
+            //this.txt_20k.TextPlaceholder = "";
             this.txt_20k.UseSystemPasswordChar = false;
             this.txt_20k.WordWrap = true;
             this.txt_20k.TextChange += new System.EventHandler(this.txt_20k_TextChange);
@@ -781,7 +781,7 @@ namespace BachHoaXanh_Store
             this.txt_10k.TextMarginBottom = 0;
             this.txt_10k.TextMarginLeft = 5;
             this.txt_10k.TextMarginTop = 0;
-            this.txt_10k.TextPlaceholder = "";
+            //this.txt_10k.TextPlaceholder = "";
             this.txt_10k.UseSystemPasswordChar = false;
             this.txt_10k.WordWrap = true;
             this.txt_10k.TextChange += new System.EventHandler(this.txt_10k_TextChange);
@@ -858,7 +858,7 @@ namespace BachHoaXanh_Store
             this.txt_5k.TextMarginBottom = 0;
             this.txt_5k.TextMarginLeft = 5;
             this.txt_5k.TextMarginTop = 0;
-            this.txt_5k.TextPlaceholder = "";
+            //this.txt_5k.TextPlaceholder = "";
             this.txt_5k.UseSystemPasswordChar = false;
             this.txt_5k.WordWrap = true;
             this.txt_5k.TextChange += new System.EventHandler(this.txt_5k_TextChange);
@@ -935,7 +935,7 @@ namespace BachHoaXanh_Store
             this.txt_2k.TextMarginBottom = 0;
             this.txt_2k.TextMarginLeft = 5;
             this.txt_2k.TextMarginTop = 0;
-            this.txt_2k.TextPlaceholder = "";
+            //this.txt_2k.TextPlaceholder = "";
             this.txt_2k.UseSystemPasswordChar = false;
             this.txt_2k.WordWrap = true;
             this.txt_2k.TextChange += new System.EventHandler(this.txt_2k_TextChange);
@@ -1012,7 +1012,7 @@ namespace BachHoaXanh_Store
             this.txt_1k.TextMarginBottom = 0;
             this.txt_1k.TextMarginLeft = 5;
             this.txt_1k.TextMarginTop = 0;
-            this.txt_1k.TextPlaceholder = "";
+            //this.txt_1k.TextPlaceholder = "";
             this.txt_1k.UseSystemPasswordChar = false;
             this.txt_1k.WordWrap = true;
             this.txt_1k.TextChange += new System.EventHandler(this.txt_1k_TextChange);
@@ -1089,7 +1089,7 @@ namespace BachHoaXanh_Store
             this.txt_500.TextMarginBottom = 0;
             this.txt_500.TextMarginLeft = 5;
             this.txt_500.TextMarginTop = 0;
-            this.txt_500.TextPlaceholder = "";
+            //this.txt_500.TextPlaceholder = "";
             this.txt_500.UseSystemPasswordChar = false;
             this.txt_500.WordWrap = true;
             this.txt_500.TextChange += new System.EventHandler(this.txt_500_TextChange);

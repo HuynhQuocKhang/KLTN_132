@@ -221,7 +221,7 @@ namespace BachHoaXanh_Store
             this.txtKeyWord.TextMarginBottom = 0;
             this.txtKeyWord.TextMarginLeft = 5;
             this.txtKeyWord.TextMarginTop = 0;
-            this.txtKeyWord.TextPlaceholder = "";
+            //this.txtKeyWord.TextPlaceholder = "";
             this.txtKeyWord.UseSystemPasswordChar = false;
             this.txtKeyWord.WordWrap = true;
             // 
@@ -361,7 +361,7 @@ namespace BachHoaXanh_Store
             this.txtSoLuong.TextMarginBottom = 0;
             this.txtSoLuong.TextMarginLeft = 5;
             this.txtSoLuong.TextMarginTop = 0;
-            this.txtSoLuong.TextPlaceholder = "";
+            //this.txtSoLuong.TextPlaceholder = "";
             this.txtSoLuong.UseSystemPasswordChar = false;
             this.txtSoLuong.WordWrap = true;
             this.txtSoLuong.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoLuong_KeyPress);
