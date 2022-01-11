@@ -586,6 +586,7 @@ namespace BLL_DAO
                         int? intStockUpdate = objProductPromo.SoLuong - objProductPromotionBO.SoLuong;
                         objProductPromo.SoLuong = objProductPromotionBO.SoLuong;
                         objProductStore.SoLuong += intStockUpdate;
+                        objProductPromo.GiaKM = objProductPromotionBO.GiaKM;
                         db.SubmitChanges();
                         return true;
                     }
@@ -594,6 +595,7 @@ namespace BLL_DAO
                         int? intStockUpdate = objProductPromotionBO.SoLuong - objProductPromo.SoLuong;
                         objProductPromo.SoLuong = objProductPromotionBO.SoLuong;
                         objProductStore.SoLuong -= intStockUpdate;
+                        objProductPromo.GiaKM = objProductPromotionBO.GiaKM;
                         db.SubmitChanges();
                         return true;
                     }

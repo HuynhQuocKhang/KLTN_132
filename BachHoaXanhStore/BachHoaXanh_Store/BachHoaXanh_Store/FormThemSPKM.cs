@@ -100,6 +100,7 @@ namespace BachHoaXanh_Store
                     objPromotion.NgayKM = dtp_NgayApDung.Value;
                     objPromotion.NgayHetHan = dtp_NgayKetThuc.Value;
                     objPromotion.SoLuong = intStockUpdate;
+                    objPromotion.GiaKM = int.Parse(txt_GiaKM.Text.Trim());
                     if (!objOrderStoreBLL.InsertOrUpdateProductPromotion(objPromotion, (int)FormLogin.objUserBO.StoreId, FormDanhSachSP.isEdit))
                     {
                         MessageBox.Show("Lỗi trong quá trình thao tác. Xin vui lòng kiểm tra lại dữ liệu!");
