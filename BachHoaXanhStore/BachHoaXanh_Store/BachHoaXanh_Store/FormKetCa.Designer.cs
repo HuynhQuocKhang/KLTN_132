@@ -248,7 +248,7 @@ namespace BachHoaXanh_Store
             this.txt_500k.SelectionStart = 0;
             this.txt_500k.ShortcutsEnabled = true;
             this.txt_500k.Size = new System.Drawing.Size(176, 35);
-            this.txt_500k.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            //this.txt_500k.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txt_500k.TabIndex = 3;
             this.txt_500k.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_500k.TextMarginBottom = 0;
@@ -467,7 +467,7 @@ namespace BachHoaXanh_Store
             this.txt_200k.SelectionStart = 0;
             this.txt_200k.ShortcutsEnabled = true;
             this.txt_200k.Size = new System.Drawing.Size(176, 35);
-            this.txt_200k.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            //this.txt_200k.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txt_200k.TabIndex = 3;
             this.txt_200k.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_200k.TextMarginBottom = 0;
@@ -544,7 +544,7 @@ namespace BachHoaXanh_Store
             this.txt_100k.SelectionStart = 0;
             this.txt_100k.ShortcutsEnabled = true;
             this.txt_100k.Size = new System.Drawing.Size(176, 35);
-            this.txt_100k.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            //this.txt_100k.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txt_100k.TabIndex = 3;
             this.txt_100k.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_100k.TextMarginBottom = 0;
@@ -621,7 +621,7 @@ namespace BachHoaXanh_Store
             this.txt_50k.SelectionStart = 0;
             this.txt_50k.ShortcutsEnabled = true;
             this.txt_50k.Size = new System.Drawing.Size(176, 35);
-            this.txt_50k.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            //this.txt_50k.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txt_50k.TabIndex = 3;
             this.txt_50k.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_50k.TextMarginBottom = 0;
@@ -698,7 +698,7 @@ namespace BachHoaXanh_Store
             this.txt_20k.SelectionStart = 0;
             this.txt_20k.ShortcutsEnabled = true;
             this.txt_20k.Size = new System.Drawing.Size(176, 35);
-            this.txt_20k.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            //this.txt_20k.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txt_20k.TabIndex = 3;
             this.txt_20k.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_20k.TextMarginBottom = 0;
@@ -775,7 +775,7 @@ namespace BachHoaXanh_Store
             this.txt_10k.SelectionStart = 0;
             this.txt_10k.ShortcutsEnabled = true;
             this.txt_10k.Size = new System.Drawing.Size(176, 35);
-            this.txt_10k.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            //this.txt_10k.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txt_10k.TabIndex = 3;
             this.txt_10k.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_10k.TextMarginBottom = 0;
@@ -852,7 +852,7 @@ namespace BachHoaXanh_Store
             this.txt_5k.SelectionStart = 0;
             this.txt_5k.ShortcutsEnabled = true;
             this.txt_5k.Size = new System.Drawing.Size(176, 35);
-            this.txt_5k.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            //this.txt_5k.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txt_5k.TabIndex = 3;
             this.txt_5k.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_5k.TextMarginBottom = 0;
@@ -929,7 +929,7 @@ namespace BachHoaXanh_Store
             this.txt_2k.SelectionStart = 0;
             this.txt_2k.ShortcutsEnabled = true;
             this.txt_2k.Size = new System.Drawing.Size(176, 35);
-            this.txt_2k.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            //this.txt_2k.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txt_2k.TabIndex = 3;
             this.txt_2k.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_2k.TextMarginBottom = 0;
@@ -1006,7 +1006,7 @@ namespace BachHoaXanh_Store
             this.txt_1k.SelectionStart = 0;
             this.txt_1k.ShortcutsEnabled = true;
             this.txt_1k.Size = new System.Drawing.Size(176, 35);
-            this.txt_1k.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            //this.txt_1k.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txt_1k.TabIndex = 3;
             this.txt_1k.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_1k.TextMarginBottom = 0;
@@ -1083,7 +1083,7 @@ namespace BachHoaXanh_Store
             this.txt_500.SelectionStart = 0;
             this.txt_500.ShortcutsEnabled = true;
             this.txt_500.Size = new System.Drawing.Size(176, 35);
-            this.txt_500.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            //this.txt_500.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txt_500.TabIndex = 3;
             this.txt_500.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_500.TextMarginBottom = 0;

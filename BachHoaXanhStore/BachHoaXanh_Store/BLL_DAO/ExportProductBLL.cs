@@ -58,7 +58,7 @@ namespace BLL_DAO
             }
         }
 
-       public int countExportProduct()
+       public int? countExportProduct()
         {
             var entities = from objExportDetail in db.CTPhieuTraHangs
                            join objProduct in db.SanPhams
@@ -72,9 +72,12 @@ namespace BLL_DAO
                                SoLuong = objExportDetail.SoLuong,
                                ThanhTien = objExport.TongTien
                            };
-            return int.Parse(entities.Sum(x => x.SoLuong).ToString());
+            if (entities != null)
+            { return entities.Sum(x => x.SoLuong); }
+            else return 0;
+            
         }
-        public int sumValueExportProduct()
+        public int? sumValueExportProduct()
         {
             var entities = from objExportDetail in db.CTPhieuTraHangs
                            join objProduct in db.SanPhams
@@ -88,7 +91,9 @@ namespace BLL_DAO
                                SoLuong = objExportDetail.SoLuong,
                                ThanhTien = objExport.TongTien
                            };
-            return int.Parse(entities.Sum(x => x.ThanhTien).ToString());
+            if (entities != null)
+            { return entities.Sum(x => x.ThanhTien); }
+            else return 0;
         }
     }
 }

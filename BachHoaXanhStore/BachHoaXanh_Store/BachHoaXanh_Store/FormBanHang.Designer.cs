@@ -393,7 +393,7 @@ namespace BachHoaXanh_Store
             this.txt_MaSP.SelectionStart = 0;
             this.txt_MaSP.ShortcutsEnabled = true;
             this.txt_MaSP.Size = new System.Drawing.Size(250, 40);
-            this.txt_MaSP.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            //this.txt_MaSP.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txt_MaSP.TabIndex = 2;
             this.txt_MaSP.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_MaSP.TextMarginBottom = 0;
@@ -470,7 +470,7 @@ namespace BachHoaXanh_Store
             this.txt_SoLuong.SelectionStart = 0;
             this.txt_SoLuong.ShortcutsEnabled = true;
             this.txt_SoLuong.Size = new System.Drawing.Size(250, 40);
-            this.txt_SoLuong.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            //this.txt_SoLuong.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txt_SoLuong.TabIndex = 2;
             this.txt_SoLuong.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_SoLuong.TextMarginBottom = 0;

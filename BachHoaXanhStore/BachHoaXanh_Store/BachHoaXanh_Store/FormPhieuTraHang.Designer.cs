@@ -216,7 +216,7 @@ namespace BachHoaXanh_Store
             this.txt_NhaCungCap.SelectionStart = 0;
             this.txt_NhaCungCap.ShortcutsEnabled = true;
             this.txt_NhaCungCap.Size = new System.Drawing.Size(280, 39);
-            this.txt_NhaCungCap.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            //this.txt_NhaCungCap.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txt_NhaCungCap.TabIndex = 0;
             this.txt_NhaCungCap.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_NhaCungCap.TextMarginBottom = 0;
@@ -292,7 +292,7 @@ namespace BachHoaXanh_Store
             this.txt_NgayTra.SelectionStart = 0;
             this.txt_NgayTra.ShortcutsEnabled = true;
             this.txt_NgayTra.Size = new System.Drawing.Size(280, 39);
-            this.txt_NgayTra.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            //this.txt_NgayTra.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txt_NgayTra.TabIndex = 1;
             this.txt_NgayTra.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_NgayTra.TextMarginBottom = 0;
@@ -369,7 +369,7 @@ namespace BachHoaXanh_Store
             this.txt_TinhTrang.SelectionStart = 8;
             this.txt_TinhTrang.ShortcutsEnabled = true;
             this.txt_TinhTrang.Size = new System.Drawing.Size(280, 39);
-            this.txt_TinhTrang.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            //this.txt_TinhTrang.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txt_TinhTrang.TabIndex = 4;
             this.txt_TinhTrang.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_TinhTrang.TextMarginBottom = 0;
@@ -602,7 +602,7 @@ namespace BachHoaXanh_Store
             this.txt_NguoiDat.SelectionStart = 0;
             this.txt_NguoiDat.ShortcutsEnabled = true;
             this.txt_NguoiDat.Size = new System.Drawing.Size(280, 39);
-            this.txt_NguoiDat.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            ////this.txt_NguoiDat.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txt_NguoiDat.TabIndex = 0;
             this.txt_NguoiDat.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_NguoiDat.TextMarginBottom = 0;

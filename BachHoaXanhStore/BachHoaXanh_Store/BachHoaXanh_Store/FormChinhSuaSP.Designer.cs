@@ -229,7 +229,7 @@ namespace BachHoaXanh_Store
             this.txt_TenSP.SelectionStart = 0;
             this.txt_TenSP.ShortcutsEnabled = true;
             this.txt_TenSP.Size = new System.Drawing.Size(330, 35);
-            this.txt_TenSP.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            //this.txt_TenSP.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txt_TenSP.TabIndex = 1;
             this.txt_TenSP.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_TenSP.TextMarginBottom = 0;
@@ -461,7 +461,7 @@ namespace BachHoaXanh_Store
             this.txt_GiaBan.SelectionStart = 0;
             this.txt_GiaBan.ShortcutsEnabled = true;
             this.txt_GiaBan.Size = new System.Drawing.Size(330, 35);
-            this.txt_GiaBan.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            //this.txt_GiaBan.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txt_GiaBan.TabIndex = 5;
             this.txt_GiaBan.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_GiaBan.TextMarginBottom = 0;
@@ -536,7 +536,7 @@ namespace BachHoaXanh_Store
             this.txt_GiaVon.SelectionStart = 0;
             this.txt_GiaVon.ShortcutsEnabled = true;
             this.txt_GiaVon.Size = new System.Drawing.Size(330, 35);
-            this.txt_GiaVon.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            //this.txt_GiaVon.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txt_GiaVon.TabIndex = 6;
             this.txt_GiaVon.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_GiaVon.TextMarginBottom = 0;
@@ -685,7 +685,7 @@ namespace BachHoaXanh_Store
             this.txt_MaSP.SelectionStart = 0;
             this.txt_MaSP.ShortcutsEnabled = true;
             this.txt_MaSP.Size = new System.Drawing.Size(330, 35);
-            this.txt_MaSP.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            //this.txt_MaSP.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txt_MaSP.TabIndex = 0;
             this.txt_MaSP.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_MaSP.TextMarginBottom = 0;

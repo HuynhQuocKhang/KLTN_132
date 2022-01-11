@@ -256,7 +256,7 @@ namespace BachHoaXanh_Store
             this.txtKeyWord.SelectionStart = 0;
             this.txtKeyWord.ShortcutsEnabled = true;
             this.txtKeyWord.Size = new System.Drawing.Size(310, 34);
-            this.txtKeyWord.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            //this.txtKeyWord.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtKeyWord.TabIndex = 2;
             this.txtKeyWord.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtKeyWord.TextMarginBottom = 0;
