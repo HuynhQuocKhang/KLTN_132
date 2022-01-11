@@ -220,7 +220,7 @@ namespace BachHoaXanh_Store
             this.txt_TenSP.OnIdleState = stateProperties4;
             this.txt_TenSP.PasswordChar = '\0';
             this.txt_TenSP.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txt_TenSP.PlaceholderText = "Tên sản phẩm";
+            this.txt_TenSP.PlaceholderText = "";
             this.txt_TenSP.ReadOnly = false;
             this.txt_TenSP.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_TenSP.SelectedText = "";
@@ -234,7 +234,7 @@ namespace BachHoaXanh_Store
             this.txt_TenSP.TextMarginBottom = 0;
             this.txt_TenSP.TextMarginLeft = 5;
             this.txt_TenSP.TextMarginTop = 0;
-            this.txt_TenSP.TextPlaceholder = "Tên sản phẩm";
+            this.txt_TenSP.TextPlaceholder = "";
             this.txt_TenSP.UseSystemPasswordChar = false;
             this.txt_TenSP.WordWrap = true;
             // 
@@ -452,7 +452,7 @@ namespace BachHoaXanh_Store
             this.txt_GiaBan.OnIdleState = stateProperties12;
             this.txt_GiaBan.PasswordChar = '\0';
             this.txt_GiaBan.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txt_GiaBan.PlaceholderText = "Giá bán";
+            this.txt_GiaBan.PlaceholderText = "";
             this.txt_GiaBan.ReadOnly = false;
             this.txt_GiaBan.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_GiaBan.SelectedText = "";
@@ -466,7 +466,7 @@ namespace BachHoaXanh_Store
             this.txt_GiaBan.TextMarginBottom = 0;
             this.txt_GiaBan.TextMarginLeft = 5;
             this.txt_GiaBan.TextMarginTop = 0;
-            this.txt_GiaBan.TextPlaceholder = "Giá bán";
+            this.txt_GiaBan.TextPlaceholder = "";
             this.txt_GiaBan.UseSystemPasswordChar = false;
             this.txt_GiaBan.WordWrap = true;
             // 
@@ -527,7 +527,7 @@ namespace BachHoaXanh_Store
             this.txt_GiaVon.OnIdleState = stateProperties16;
             this.txt_GiaVon.PasswordChar = '\0';
             this.txt_GiaVon.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txt_GiaVon.PlaceholderText = "Giá vốn";
+            this.txt_GiaVon.PlaceholderText = "";
             this.txt_GiaVon.ReadOnly = false;
             this.txt_GiaVon.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_GiaVon.SelectedText = "";
@@ -541,7 +541,7 @@ namespace BachHoaXanh_Store
             this.txt_GiaVon.TextMarginBottom = 0;
             this.txt_GiaVon.TextMarginLeft = 5;
             this.txt_GiaVon.TextMarginTop = 0;
-            this.txt_GiaVon.TextPlaceholder = "Giá vốn";
+            this.txt_GiaVon.TextPlaceholder = "";
             this.txt_GiaVon.UseSystemPasswordChar = false;
             this.txt_GiaVon.WordWrap = true;
             // 
@@ -676,7 +676,7 @@ namespace BachHoaXanh_Store
             this.txt_MaSP.OnIdleState = stateProperties20;
             this.txt_MaSP.PasswordChar = '\0';
             this.txt_MaSP.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txt_MaSP.PlaceholderText = "Mã sản phẩm";
+            this.txt_MaSP.PlaceholderText = "";
             this.txt_MaSP.ReadOnly = false;
             this.txt_MaSP.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_MaSP.SelectedText = "";
@@ -690,7 +690,7 @@ namespace BachHoaXanh_Store
             this.txt_MaSP.TextMarginBottom = 0;
             this.txt_MaSP.TextMarginLeft = 5;
             this.txt_MaSP.TextMarginTop = 0;
-            this.txt_MaSP.TextPlaceholder = "Mã sản phẩm";
+            this.txt_MaSP.TextPlaceholder = "";
             this.txt_MaSP.UseSystemPasswordChar = false;
             this.txt_MaSP.WordWrap = true;
             // 

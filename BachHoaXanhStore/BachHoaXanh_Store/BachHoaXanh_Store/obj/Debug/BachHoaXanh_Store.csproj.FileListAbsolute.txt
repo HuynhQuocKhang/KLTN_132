@@ -687,4 +687,3 @@ E:\09DHTH5\KLTN\SoDoLop\KLTN_132\BachHoaXanhStore\BachHoaXanh_Store\BachHoaXanh_
 E:\09DHTH5\KLTN\SoDoLop\KLTN_132\BachHoaXanhStore\BachHoaXanh_Store\BachHoaXanh_Store\obj\Debug\BachHoaXanh_Store.ReportForm.rptDonBanHang.resources
 E:\KhoaLuanTotNghiep\BachHoaXanhStore\BachHoaXanh_Store\BachHoaXanh_Store\obj\Debug\BachHoaXanh_Store.FormHangDoi.resources
 E:\KhoaLuanTotNghiep\BachHoaXanhStore\BachHoaXanh_Store\BachHoaXanh_Store\obj\Debug\BachHoaXanh_Store.ReportForm.rptDonBanHang.resources
-E:\09DHTH5\KLTN\SoDoLop\KLTN_132\BachHoaXanhStore\BachHoaXanh_Store\BachHoaXanh_Store\obj\Debug\BachHoaXanh_Store.csproj.CopyComplete

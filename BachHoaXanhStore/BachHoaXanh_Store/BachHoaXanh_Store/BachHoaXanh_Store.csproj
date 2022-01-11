@@ -200,12 +200,6 @@
     <Compile Include="FormChinhSuaSP.Designer.cs">
       <DependentUpon>FormChinhSuaSP.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormDangNhap.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormDangNhap.Designer.cs">
-      <DependentUpon>FormDangNhap.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormDanhSachSP.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -377,9 +371,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormChinhSuaSP.resx">
       <DependentUpon>FormChinhSuaSP.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormDangNhap.resx">
-      <DependentUpon>FormDangNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormDanhSachSP.resx">
       <DependentUpon>FormDanhSachSP.cs</DependentUpon>

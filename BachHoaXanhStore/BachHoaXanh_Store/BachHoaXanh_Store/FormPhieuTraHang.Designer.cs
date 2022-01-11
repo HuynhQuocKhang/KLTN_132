@@ -220,7 +220,7 @@ namespace BachHoaXanh_Store
             this.txt_NhaCungCap.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_NhaCungCap.TextMarginBottom = 0;
             this.txt_NhaCungCap.TextMarginLeft = 5;
-            //this.txt_NhaCungCap.TextMarginTop = 0;
+            this.txt_NhaCungCap.TextMarginTop = 0;
             this.txt_NhaCungCap.TextPlaceholder = "";
             this.txt_NhaCungCap.UseSystemPasswordChar = false;
             this.txt_NhaCungCap.WordWrap = true;
@@ -297,7 +297,7 @@ namespace BachHoaXanh_Store
             this.txt_NgayTra.TextMarginBottom = 0;
             this.txt_NgayTra.TextMarginLeft = 5;
             this.txt_NgayTra.TextMarginTop = 0;
-            //this.txt_NgayTra.TextPlaceholder = "";
+            this.txt_NgayTra.TextPlaceholder = "";
             this.txt_NgayTra.UseSystemPasswordChar = false;
             this.txt_NgayTra.WordWrap = true;
             // 
@@ -320,7 +320,7 @@ namespace BachHoaXanh_Store
             this.tableLayoutPanel2.SetColumnSpan(this.txt_TinhTrang, 2);
             this.txt_TinhTrang.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_TinhTrang.DefaultFont = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_TinhTrang.DefaultText = "";
+            this.txt_TinhTrang.DefaultText = "Trả hàng";
             this.txt_TinhTrang.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txt_TinhTrang.Enabled = false;
             this.txt_TinhTrang.FillColor = System.Drawing.Color.White;
@@ -330,7 +330,8 @@ namespace BachHoaXanh_Store
             this.txt_TinhTrang.IconPadding = 10;
             this.txt_TinhTrang.IconRight = null;
             this.txt_TinhTrang.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_TinhTrang.Lines = new string[0];
+            this.txt_TinhTrang.Lines = new string[] {
+        "Trả hàng"};
             this.txt_TinhTrang.Location = new System.Drawing.Point(33, 206);
             this.txt_TinhTrang.MaxLength = 32767;
             this.txt_TinhTrang.MinimumSize = new System.Drawing.Size(100, 35);
@@ -359,12 +360,12 @@ namespace BachHoaXanh_Store
             this.txt_TinhTrang.OnIdleState = stateProperties12;
             this.txt_TinhTrang.PasswordChar = '\0';
             this.txt_TinhTrang.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txt_TinhTrang.PlaceholderText = "Tình trạng";
+            this.txt_TinhTrang.PlaceholderText = "";
             this.txt_TinhTrang.ReadOnly = false;
             this.txt_TinhTrang.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_TinhTrang.SelectedText = "";
             this.txt_TinhTrang.SelectionLength = 0;
-            this.txt_TinhTrang.SelectionStart = 0;
+            this.txt_TinhTrang.SelectionStart = 8;
             this.txt_TinhTrang.ShortcutsEnabled = true;
             this.txt_TinhTrang.Size = new System.Drawing.Size(280, 39);
             this.txt_TinhTrang.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
@@ -372,8 +373,8 @@ namespace BachHoaXanh_Store
             this.txt_TinhTrang.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_TinhTrang.TextMarginBottom = 0;
             this.txt_TinhTrang.TextMarginLeft = 5;
-            //this.txt_TinhTrang.TextMarginTop = 0;
-            this.txt_TinhTrang.TextPlaceholder = "Tình trạng";
+            this.txt_TinhTrang.TextMarginTop = 0;
+            this.txt_TinhTrang.TextPlaceholder = "";
             this.txt_TinhTrang.UseSystemPasswordChar = false;
             this.txt_TinhTrang.WordWrap = true;
             // 
@@ -592,7 +593,7 @@ namespace BachHoaXanh_Store
             this.txt_NguoiDat.OnIdleState = stateProperties20;
             this.txt_NguoiDat.PasswordChar = '\0';
             this.txt_NguoiDat.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txt_NguoiDat.PlaceholderText = "Người lập phiếu";
+            this.txt_NguoiDat.PlaceholderText = "";
             this.txt_NguoiDat.ReadOnly = false;
             this.txt_NguoiDat.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_NguoiDat.SelectedText = "";
@@ -606,7 +607,7 @@ namespace BachHoaXanh_Store
             this.txt_NguoiDat.TextMarginBottom = 0;
             this.txt_NguoiDat.TextMarginLeft = 5;
             this.txt_NguoiDat.TextMarginTop = 0;
-            this.txt_NguoiDat.TextPlaceholder = "Người lập phiếu";
+            this.txt_NguoiDat.TextPlaceholder = "";
             this.txt_NguoiDat.UseSystemPasswordChar = false;
             this.txt_NguoiDat.WordWrap = true;
             // 

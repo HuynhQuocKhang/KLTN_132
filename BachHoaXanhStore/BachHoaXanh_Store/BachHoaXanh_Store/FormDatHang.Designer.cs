@@ -207,7 +207,7 @@ namespace BachHoaXanh_Store
             this.txtKeyWord.OnIdleState = stateProperties4;
             this.txtKeyWord.PasswordChar = '\0';
             this.txtKeyWord.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtKeyWord.PlaceholderText = "Tìm kiếm";
+            this.txtKeyWord.PlaceholderText = "";
             this.txtKeyWord.ReadOnly = false;
             this.txtKeyWord.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtKeyWord.SelectedText = "";
@@ -221,7 +221,7 @@ namespace BachHoaXanh_Store
             this.txtKeyWord.TextMarginBottom = 0;
             this.txtKeyWord.TextMarginLeft = 5;
             this.txtKeyWord.TextMarginTop = 0;
-            this.txtKeyWord.TextPlaceholder = "Tìm kiếm";
+            this.txtKeyWord.TextPlaceholder = "";
             this.txtKeyWord.UseSystemPasswordChar = false;
             this.txtKeyWord.WordWrap = true;
             // 
@@ -347,7 +347,7 @@ namespace BachHoaXanh_Store
             this.txtSoLuong.OnIdleState = stateProperties10;
             this.txtSoLuong.PasswordChar = '\0';
             this.txtSoLuong.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtSoLuong.PlaceholderText = "Số lượng";
+            this.txtSoLuong.PlaceholderText = "";
             this.txtSoLuong.ReadOnly = false;
             this.txtSoLuong.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtSoLuong.SelectedText = "";
@@ -361,7 +361,7 @@ namespace BachHoaXanh_Store
             this.txtSoLuong.TextMarginBottom = 0;
             this.txtSoLuong.TextMarginLeft = 5;
             this.txtSoLuong.TextMarginTop = 0;
-            this.txtSoLuong.TextPlaceholder = "Số lượng";
+            this.txtSoLuong.TextPlaceholder = "";
             this.txtSoLuong.UseSystemPasswordChar = false;
             this.txtSoLuong.WordWrap = true;
             this.txtSoLuong.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoLuong_KeyPress);

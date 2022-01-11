@@ -366,7 +366,7 @@ namespace BachHoaXanh_Store
             this.txtKeyWord.OnIdleState = stateProperties6;
             this.txtKeyWord.PasswordChar = '\0';
             this.txtKeyWord.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtKeyWord.PlaceholderText = "Enter text";
+            this.txtKeyWord.PlaceholderText = "";
             this.txtKeyWord.ReadOnly = false;
             this.txtKeyWord.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtKeyWord.SelectedText = "";
@@ -380,7 +380,7 @@ namespace BachHoaXanh_Store
             this.txtKeyWord.TextMarginBottom = 0;
             this.txtKeyWord.TextMarginLeft = 5;
             this.txtKeyWord.TextMarginTop = 0;
-            this.txtKeyWord.TextPlaceholder = "Enter text";
+            this.txtKeyWord.TextPlaceholder = "";
             this.txtKeyWord.UseSystemPasswordChar = false;
             this.txtKeyWord.WordWrap = true;
             // 

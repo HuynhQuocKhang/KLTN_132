@@ -28,7 +28,6 @@ namespace BachHoaXanh_Store
             txt_NguoiDat.Text = FormLogin.objUserBO.UserFullName;
             txt_NgayTra.Text = DateTime.Now.ToString();
             txt_NhaCungCap.Text = FormTraHangNCC.strCustomerName;
-            txt_TinhTrang.Text = "Trả Hàng";
             dgv_Order.DataSource = FormTraHangNCC.lstOrderDetailBO;
         }
 

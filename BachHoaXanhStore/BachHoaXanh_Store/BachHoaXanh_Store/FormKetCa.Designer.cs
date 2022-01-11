@@ -240,7 +240,7 @@ namespace BachHoaXanh_Store
             this.txt_500k.OnIdleState = stateProperties4;
             this.txt_500k.PasswordChar = '\0';
             this.txt_500k.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txt_500k.PlaceholderText = "Enter text";
+            this.txt_500k.PlaceholderText = "";
             this.txt_500k.ReadOnly = false;
             this.txt_500k.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_500k.SelectedText = "";
@@ -254,7 +254,7 @@ namespace BachHoaXanh_Store
             this.txt_500k.TextMarginBottom = 0;
             this.txt_500k.TextMarginLeft = 5;
             this.txt_500k.TextMarginTop = 0;
-            this.txt_500k.TextPlaceholder = "Enter text";
+            this.txt_500k.TextPlaceholder = "";
             this.txt_500k.UseSystemPasswordChar = false;
             this.txt_500k.WordWrap = true;
             this.txt_500k.TextChange += new System.EventHandler(this.txt_500k_TextChange);
@@ -459,7 +459,7 @@ namespace BachHoaXanh_Store
             this.txt_200k.OnIdleState = stateProperties8;
             this.txt_200k.PasswordChar = '\0';
             this.txt_200k.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txt_200k.PlaceholderText = "Enter text";
+            this.txt_200k.PlaceholderText = "";
             this.txt_200k.ReadOnly = false;
             this.txt_200k.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_200k.SelectedText = "";
@@ -473,7 +473,7 @@ namespace BachHoaXanh_Store
             this.txt_200k.TextMarginBottom = 0;
             this.txt_200k.TextMarginLeft = 5;
             this.txt_200k.TextMarginTop = 0;
-            this.txt_200k.TextPlaceholder = "Enter text";
+            this.txt_200k.TextPlaceholder = "";
             this.txt_200k.UseSystemPasswordChar = false;
             this.txt_200k.WordWrap = true;
             this.txt_200k.TextChange += new System.EventHandler(this.txt_200k_TextChange);
@@ -536,7 +536,7 @@ namespace BachHoaXanh_Store
             this.txt_100k.OnIdleState = stateProperties12;
             this.txt_100k.PasswordChar = '\0';
             this.txt_100k.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txt_100k.PlaceholderText = "Enter text";
+            this.txt_100k.PlaceholderText = "";
             this.txt_100k.ReadOnly = false;
             this.txt_100k.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_100k.SelectedText = "";
@@ -550,7 +550,7 @@ namespace BachHoaXanh_Store
             this.txt_100k.TextMarginBottom = 0;
             this.txt_100k.TextMarginLeft = 5;
             this.txt_100k.TextMarginTop = 0;
-            this.txt_100k.TextPlaceholder = "Enter text";
+            this.txt_100k.TextPlaceholder = "";
             this.txt_100k.UseSystemPasswordChar = false;
             this.txt_100k.WordWrap = true;
             this.txt_100k.TextChange += new System.EventHandler(this.txt_100k_TextChange);
@@ -613,7 +613,7 @@ namespace BachHoaXanh_Store
             this.txt_50k.OnIdleState = stateProperties16;
             this.txt_50k.PasswordChar = '\0';
             this.txt_50k.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txt_50k.PlaceholderText = "Enter text";
+            this.txt_50k.PlaceholderText = "";
             this.txt_50k.ReadOnly = false;
             this.txt_50k.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_50k.SelectedText = "";
@@ -627,7 +627,7 @@ namespace BachHoaXanh_Store
             this.txt_50k.TextMarginBottom = 0;
             this.txt_50k.TextMarginLeft = 5;
             this.txt_50k.TextMarginTop = 0;
-            this.txt_50k.TextPlaceholder = "Enter text";
+            this.txt_50k.TextPlaceholder = "";
             this.txt_50k.UseSystemPasswordChar = false;
             this.txt_50k.WordWrap = true;
             this.txt_50k.TextChange += new System.EventHandler(this.txt_50k_TextChange);
@@ -690,7 +690,7 @@ namespace BachHoaXanh_Store
             this.txt_20k.OnIdleState = stateProperties20;
             this.txt_20k.PasswordChar = '\0';
             this.txt_20k.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txt_20k.PlaceholderText = "Enter text";
+            this.txt_20k.PlaceholderText = "";
             this.txt_20k.ReadOnly = false;
             this.txt_20k.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_20k.SelectedText = "";
@@ -704,7 +704,7 @@ namespace BachHoaXanh_Store
             this.txt_20k.TextMarginBottom = 0;
             this.txt_20k.TextMarginLeft = 5;
             this.txt_20k.TextMarginTop = 0;
-            this.txt_20k.TextPlaceholder = "Enter text";
+            this.txt_20k.TextPlaceholder = "";
             this.txt_20k.UseSystemPasswordChar = false;
             this.txt_20k.WordWrap = true;
             this.txt_20k.TextChange += new System.EventHandler(this.txt_20k_TextChange);
@@ -767,7 +767,7 @@ namespace BachHoaXanh_Store
             this.txt_10k.OnIdleState = stateProperties24;
             this.txt_10k.PasswordChar = '\0';
             this.txt_10k.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txt_10k.PlaceholderText = "Enter text";
+            this.txt_10k.PlaceholderText = "";
             this.txt_10k.ReadOnly = false;
             this.txt_10k.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_10k.SelectedText = "";
@@ -781,7 +781,7 @@ namespace BachHoaXanh_Store
             this.txt_10k.TextMarginBottom = 0;
             this.txt_10k.TextMarginLeft = 5;
             this.txt_10k.TextMarginTop = 0;
-            this.txt_10k.TextPlaceholder = "Enter text";
+            this.txt_10k.TextPlaceholder = "";
             this.txt_10k.UseSystemPasswordChar = false;
             this.txt_10k.WordWrap = true;
             this.txt_10k.TextChange += new System.EventHandler(this.txt_10k_TextChange);
@@ -844,7 +844,7 @@ namespace BachHoaXanh_Store
             this.txt_5k.OnIdleState = stateProperties28;
             this.txt_5k.PasswordChar = '\0';
             this.txt_5k.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txt_5k.PlaceholderText = "Enter text";
+            this.txt_5k.PlaceholderText = "";
             this.txt_5k.ReadOnly = false;
             this.txt_5k.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_5k.SelectedText = "";
@@ -858,7 +858,7 @@ namespace BachHoaXanh_Store
             this.txt_5k.TextMarginBottom = 0;
             this.txt_5k.TextMarginLeft = 5;
             this.txt_5k.TextMarginTop = 0;
-            this.txt_5k.TextPlaceholder = "Enter text";
+            this.txt_5k.TextPlaceholder = "";
             this.txt_5k.UseSystemPasswordChar = false;
             this.txt_5k.WordWrap = true;
             this.txt_5k.TextChange += new System.EventHandler(this.txt_5k_TextChange);
@@ -921,7 +921,7 @@ namespace BachHoaXanh_Store
             this.txt_2k.OnIdleState = stateProperties32;
             this.txt_2k.PasswordChar = '\0';
             this.txt_2k.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txt_2k.PlaceholderText = "Enter text";
+            this.txt_2k.PlaceholderText = "";
             this.txt_2k.ReadOnly = false;
             this.txt_2k.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_2k.SelectedText = "";
@@ -935,7 +935,7 @@ namespace BachHoaXanh_Store
             this.txt_2k.TextMarginBottom = 0;
             this.txt_2k.TextMarginLeft = 5;
             this.txt_2k.TextMarginTop = 0;
-            this.txt_2k.TextPlaceholder = "Enter text";
+            this.txt_2k.TextPlaceholder = "";
             this.txt_2k.UseSystemPasswordChar = false;
             this.txt_2k.WordWrap = true;
             this.txt_2k.TextChange += new System.EventHandler(this.txt_2k_TextChange);
@@ -998,7 +998,7 @@ namespace BachHoaXanh_Store
             this.txt_1k.OnIdleState = stateProperties36;
             this.txt_1k.PasswordChar = '\0';
             this.txt_1k.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txt_1k.PlaceholderText = "Enter text";
+            this.txt_1k.PlaceholderText = "";
             this.txt_1k.ReadOnly = false;
             this.txt_1k.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_1k.SelectedText = "";
@@ -1012,7 +1012,7 @@ namespace BachHoaXanh_Store
             this.txt_1k.TextMarginBottom = 0;
             this.txt_1k.TextMarginLeft = 5;
             this.txt_1k.TextMarginTop = 0;
-            this.txt_1k.TextPlaceholder = "Enter text";
+            this.txt_1k.TextPlaceholder = "";
             this.txt_1k.UseSystemPasswordChar = false;
             this.txt_1k.WordWrap = true;
             this.txt_1k.TextChange += new System.EventHandler(this.txt_1k_TextChange);
@@ -1075,7 +1075,7 @@ namespace BachHoaXanh_Store
             this.txt_500.OnIdleState = stateProperties40;
             this.txt_500.PasswordChar = '\0';
             this.txt_500.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txt_500.PlaceholderText = "Enter text";
+            this.txt_500.PlaceholderText = "";
             this.txt_500.ReadOnly = false;
             this.txt_500.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_500.SelectedText = "";
@@ -1089,7 +1089,7 @@ namespace BachHoaXanh_Store
             this.txt_500.TextMarginBottom = 0;
             this.txt_500.TextMarginLeft = 5;
             this.txt_500.TextMarginTop = 0;
-            this.txt_500.TextPlaceholder = "Enter text";
+            this.txt_500.TextPlaceholder = "";
             this.txt_500.UseSystemPasswordChar = false;
             this.txt_500.WordWrap = true;
             this.txt_500.TextChange += new System.EventHandler(this.txt_500_TextChange);

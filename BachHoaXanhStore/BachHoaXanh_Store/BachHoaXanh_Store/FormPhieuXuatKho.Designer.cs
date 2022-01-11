@@ -235,7 +235,7 @@ namespace BachHoaXanh_Store
             this.txt_MaST.OnIdleState = stateProperties24;
             this.txt_MaST.PasswordChar = '\0';
             this.txt_MaST.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txt_MaST.PlaceholderText = "Mã siêu thị";
+            this.txt_MaST.PlaceholderText = "";
             this.txt_MaST.ReadOnly = false;
             this.txt_MaST.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_MaST.SelectedText = "";
@@ -249,7 +249,7 @@ namespace BachHoaXanh_Store
             this.txt_MaST.TextMarginBottom = 0;
             this.txt_MaST.TextMarginLeft = 5;
             this.txt_MaST.TextMarginTop = 0;
-            this.txt_MaST.TextPlaceholder = "Mã siêu thị";
+            this.txt_MaST.TextPlaceholder = "";
             this.txt_MaST.UseSystemPasswordChar = false;
             this.txt_MaST.WordWrap = true;
             // 
@@ -298,7 +298,7 @@ namespace BachHoaXanh_Store
             stateProperties2.FillColor = System.Drawing.Color.White;
             stateProperties2.ForeColor = System.Drawing.Color.Empty;
             stateProperties2.PlaceholderForeColor = System.Drawing.Color.Silver;
-            //this.txt_DonDatHang.OnDisabledState = stateProperties2;
+            this.txt_DonDatHang.OnDisabledState = stateProperties2;
             stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(186)))), ((int)(((byte)(27)))));
             stateProperties3.FillColor = System.Drawing.Color.Empty;
             stateProperties3.ForeColor = System.Drawing.Color.Empty;
@@ -311,7 +311,7 @@ namespace BachHoaXanh_Store
             this.txt_DonDatHang.OnIdleState = stateProperties4;
             this.txt_DonDatHang.PasswordChar = '\0';
             this.txt_DonDatHang.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txt_DonDatHang.PlaceholderText = "Mã đơn đặt";
+            this.txt_DonDatHang.PlaceholderText = "";
             this.txt_DonDatHang.ReadOnly = false;
             this.txt_DonDatHang.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_DonDatHang.SelectedText = "";
@@ -325,7 +325,7 @@ namespace BachHoaXanh_Store
             this.txt_DonDatHang.TextMarginBottom = 0;
             this.txt_DonDatHang.TextMarginLeft = 5;
             this.txt_DonDatHang.TextMarginTop = 0;
-            this.txt_DonDatHang.TextPlaceholder = "Mã đơn đặt";
+            this.txt_DonDatHang.TextPlaceholder = "";
             this.txt_DonDatHang.UseSystemPasswordChar = false;
             this.txt_DonDatHang.WordWrap = true;
             this.txt_DonDatHang.TextChanged += new System.EventHandler(this.txt_NgayTra_TextChanged);
@@ -388,7 +388,7 @@ namespace BachHoaXanh_Store
             this.txt_TongTien.OnIdleState = stateProperties8;
             this.txt_TongTien.PasswordChar = '\0';
             this.txt_TongTien.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txt_TongTien.PlaceholderText = "Tổng tiền";
+            this.txt_TongTien.PlaceholderText = "";
             this.txt_TongTien.ReadOnly = false;
             this.txt_TongTien.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_TongTien.SelectedText = "";
@@ -402,7 +402,7 @@ namespace BachHoaXanh_Store
             this.txt_TongTien.TextMarginBottom = 0;
             this.txt_TongTien.TextMarginLeft = 5;
             this.txt_TongTien.TextMarginTop = 0;
-            this.txt_TongTien.TextPlaceholder = "Tổng tiền";
+            this.txt_TongTien.TextPlaceholder = "";
             this.txt_TongTien.UseSystemPasswordChar = false;
             this.txt_TongTien.WordWrap = true;
             // 
@@ -464,7 +464,7 @@ namespace BachHoaXanh_Store
             this.txt_NgayXuat.OnIdleState = stateProperties12;
             this.txt_NgayXuat.PasswordChar = '\0';
             this.txt_NgayXuat.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txt_NgayXuat.PlaceholderText = "Ngày Xuất";
+            this.txt_NgayXuat.PlaceholderText = "";
             this.txt_NgayXuat.ReadOnly = false;
             this.txt_NgayXuat.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_NgayXuat.SelectedText = "";
@@ -478,7 +478,7 @@ namespace BachHoaXanh_Store
             this.txt_NgayXuat.TextMarginBottom = 0;
             this.txt_NgayXuat.TextMarginLeft = 5;
             this.txt_NgayXuat.TextMarginTop = 0;
-            this.txt_NgayXuat.TextPlaceholder = "Ngày Xuất";
+            this.txt_NgayXuat.TextPlaceholder = "";
             this.txt_NgayXuat.UseSystemPasswordChar = false;
             this.txt_NgayXuat.WordWrap = true;
             // 
@@ -754,7 +754,7 @@ namespace BachHoaXanh_Store
             this.txt_NguoiLap.OnIdleState = stateProperties20;
             this.txt_NguoiLap.PasswordChar = '\0';
             this.txt_NguoiLap.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txt_NguoiLap.PlaceholderText = "Người lập";
+            this.txt_NguoiLap.PlaceholderText = "";
             this.txt_NguoiLap.ReadOnly = false;
             this.txt_NguoiLap.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_NguoiLap.SelectedText = "";
@@ -768,7 +768,7 @@ namespace BachHoaXanh_Store
             this.txt_NguoiLap.TextMarginBottom = 0;
             this.txt_NguoiLap.TextMarginLeft = 5;
             this.txt_NguoiLap.TextMarginTop = 0;
-            this.txt_NguoiLap.TextPlaceholder = "Người lập";
+            this.txt_NguoiLap.TextPlaceholder = "";
             this.txt_NguoiLap.UseSystemPasswordChar = false;
             this.txt_NguoiLap.WordWrap = true;
             // 
