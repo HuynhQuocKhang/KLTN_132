@@ -64,12 +64,6 @@ namespace BachHoaXanh_Store
             this.telerikMetroTheme1 = new Telerik.WinControls.Themes.TelerikMetroTheme();
             this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
             this.dgv_Order = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GiaVon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txt_NhaCungCap = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.txt_TongTien = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.txt_NgayDat = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
@@ -86,6 +80,12 @@ namespace BachHoaXanh_Store
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GiaVon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Order)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -164,42 +164,6 @@ namespace BachHoaXanh_Store
             this.dgv_Order.Size = new System.Drawing.Size(556, 265);
             this.dgv_Order.TabIndex = 8;
             // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "MaHDDat";
-            this.Column1.HeaderText = "Mã HDD";
-            this.Column1.Name = "Column1";
-            // 
-            // MaSP
-            // 
-            this.MaSP.DataPropertyName = "MaSP";
-            this.MaSP.HeaderText = "Mã sản phẩm";
-            this.MaSP.Name = "MaSP";
-            // 
-            // TenSP
-            // 
-            this.TenSP.DataPropertyName = "TenSP";
-            this.TenSP.HeaderText = "Tên Sản Phẩm";
-            this.TenSP.Name = "TenSP";
-            // 
-            // SoLuong
-            // 
-            this.SoLuong.DataPropertyName = "SoLuong";
-            this.SoLuong.HeaderText = "Số lượng";
-            this.SoLuong.Name = "SoLuong";
-            // 
-            // GiaVon
-            // 
-            this.GiaVon.DataPropertyName = "GiaVon";
-            this.GiaVon.HeaderText = "Giá Vốn";
-            this.GiaVon.Name = "GiaVon";
-            // 
-            // col_ThanhTien
-            // 
-            this.col_ThanhTien.DataPropertyName = "ThanhTien";
-            this.col_ThanhTien.HeaderText = "Thành tiền";
-            this.col_ThanhTien.Name = "col_ThanhTien";
-            // 
             // txt_NhaCungCap
             // 
             this.txt_NhaCungCap.AcceptsReturn = false;
@@ -266,13 +230,13 @@ namespace BachHoaXanh_Store
             this.txt_NhaCungCap.SelectionStart = 0;
             this.txt_NhaCungCap.ShortcutsEnabled = true;
             this.txt_NhaCungCap.Size = new System.Drawing.Size(270, 39);
-            //this.txt_NhaCungCap.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            this.txt_NhaCungCap.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txt_NhaCungCap.TabIndex = 1;
             this.txt_NhaCungCap.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_NhaCungCap.TextMarginBottom = 0;
             this.txt_NhaCungCap.TextMarginLeft = 5;
             this.txt_NhaCungCap.TextMarginTop = 0;
-            //this.txt_NhaCungCap.TextPlaceholder = "";
+            this.txt_NhaCungCap.TextPlaceholder = "";
             this.txt_NhaCungCap.UseSystemPasswordChar = false;
             this.txt_NhaCungCap.WordWrap = true;
             // 
@@ -342,13 +306,13 @@ namespace BachHoaXanh_Store
             this.txt_TongTien.SelectionStart = 0;
             this.txt_TongTien.ShortcutsEnabled = true;
             this.txt_TongTien.Size = new System.Drawing.Size(270, 39);
-            //this.txt_TongTien.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            this.txt_TongTien.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txt_TongTien.TabIndex = 2;
             this.txt_TongTien.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_TongTien.TextMarginBottom = 0;
             this.txt_TongTien.TextMarginLeft = 5;
             this.txt_TongTien.TextMarginTop = 0;
-            //this.txt_TongTien.TextPlaceholder = "";
+            this.txt_TongTien.TextPlaceholder = "";
             this.txt_TongTien.UseSystemPasswordChar = false;
             this.txt_TongTien.WordWrap = true;
             // 
@@ -418,13 +382,13 @@ namespace BachHoaXanh_Store
             this.txt_NgayDat.SelectionStart = 0;
             this.txt_NgayDat.ShortcutsEnabled = true;
             this.txt_NgayDat.Size = new System.Drawing.Size(270, 39);
-            //this.txt_NgayDat.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            this.txt_NgayDat.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txt_NgayDat.TabIndex = 3;
             this.txt_NgayDat.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_NgayDat.TextMarginBottom = 0;
             this.txt_NgayDat.TextMarginLeft = 5;
             this.txt_NgayDat.TextMarginTop = 0;
-            //this.txt_NgayDat.TextPlaceholder = "";
+            this.txt_NgayDat.TextPlaceholder = "";
             this.txt_NgayDat.UseSystemPasswordChar = false;
             this.txt_NgayDat.WordWrap = true;
             // 
@@ -495,13 +459,13 @@ namespace BachHoaXanh_Store
             this.txt_TinhTrang.SelectionStart = 8;
             this.txt_TinhTrang.ShortcutsEnabled = true;
             this.txt_TinhTrang.Size = new System.Drawing.Size(270, 39);
-            //this.txt_TinhTrang.Style = /*Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu*/;
+            this.txt_TinhTrang.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txt_TinhTrang.TabIndex = 4;
             this.txt_TinhTrang.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_TinhTrang.TextMarginBottom = 0;
             this.txt_TinhTrang.TextMarginLeft = 5;
             this.txt_TinhTrang.TextMarginTop = 0;
-            //this.txt_TinhTrang.TextPlaceholder = "";
+            this.txt_TinhTrang.TextPlaceholder = "";
             this.txt_TinhTrang.UseSystemPasswordChar = false;
             this.txt_TinhTrang.WordWrap = true;
             // 
@@ -786,13 +750,13 @@ namespace BachHoaXanh_Store
             this.txt_NguoiDat.SelectionStart = 0;
             this.txt_NguoiDat.ShortcutsEnabled = true;
             this.txt_NguoiDat.Size = new System.Drawing.Size(270, 39);
-            //this.txt_NguoiDat.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            this.txt_NguoiDat.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txt_NguoiDat.TabIndex = 0;
             this.txt_NguoiDat.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_NguoiDat.TextMarginBottom = 0;
             this.txt_NguoiDat.TextMarginLeft = 5;
             this.txt_NguoiDat.TextMarginTop = 0;
-            //this.txt_NguoiDat.TextPlaceholder = "";
+            this.txt_NguoiDat.TextPlaceholder = "";
             this.txt_NguoiDat.UseSystemPasswordChar = false;
             this.txt_NguoiDat.WordWrap = true;
             // 
@@ -828,6 +792,43 @@ namespace BachHoaXanh_Store
             // 
             this.bunifuElipse2.ElipseRadius = 35;
             this.bunifuElipse2.TargetControl = this;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "MaHDDat";
+            this.Column1.HeaderText = "Mã HDD";
+            this.Column1.Name = "Column1";
+            this.Column1.Visible = false;
+            // 
+            // MaSP
+            // 
+            this.MaSP.DataPropertyName = "MaSP";
+            this.MaSP.HeaderText = "Mã sản phẩm";
+            this.MaSP.Name = "MaSP";
+            // 
+            // TenSP
+            // 
+            this.TenSP.DataPropertyName = "TenSP";
+            this.TenSP.HeaderText = "Tên Sản Phẩm";
+            this.TenSP.Name = "TenSP";
+            // 
+            // SoLuong
+            // 
+            this.SoLuong.DataPropertyName = "SoLuong";
+            this.SoLuong.HeaderText = "Số lượng";
+            this.SoLuong.Name = "SoLuong";
+            // 
+            // GiaVon
+            // 
+            this.GiaVon.DataPropertyName = "GiaVon";
+            this.GiaVon.HeaderText = "Giá Vốn";
+            this.GiaVon.Name = "GiaVon";
+            // 
+            // col_ThanhTien
+            // 
+            this.col_ThanhTien.DataPropertyName = "ThanhTien";
+            this.col_ThanhTien.HeaderText = "Thành tiền";
+            this.col_ThanhTien.Name = "col_ThanhTien";
             // 
             // FormDonDatHang
             // 
@@ -873,12 +874,12 @@ namespace BachHoaXanh_Store
         private Telerik.WinControls.Themes.TelerikMetroTheme telerikMetroTheme1;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txt_NguoiDat;
+        private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaSP;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenSP;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn GiaVon;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_ThanhTien;
-        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

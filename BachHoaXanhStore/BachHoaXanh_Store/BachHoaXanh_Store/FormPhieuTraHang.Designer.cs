@@ -73,13 +73,13 @@ namespace BachHoaXanh_Store
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
             this.dgv_Order = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.telerikMetroTheme1 = new Telerik.WinControls.Themes.TelerikMetroTheme();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.col_MaHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgayHetHan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telerikMetroTheme1 = new Telerik.WinControls.Themes.TelerikMetroTheme();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -216,13 +216,13 @@ namespace BachHoaXanh_Store
             this.txt_NhaCungCap.SelectionStart = 0;
             this.txt_NhaCungCap.ShortcutsEnabled = true;
             this.txt_NhaCungCap.Size = new System.Drawing.Size(280, 39);
-            //this.txt_NhaCungCap.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            this.txt_NhaCungCap.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txt_NhaCungCap.TabIndex = 0;
             this.txt_NhaCungCap.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_NhaCungCap.TextMarginBottom = 0;
             this.txt_NhaCungCap.TextMarginLeft = 5;
             this.txt_NhaCungCap.TextMarginTop = 0;
-            //this.txt_NhaCungCap.TextPlaceholder = "";
+            this.txt_NhaCungCap.TextPlaceholder = "";
             this.txt_NhaCungCap.UseSystemPasswordChar = false;
             this.txt_NhaCungCap.WordWrap = true;
             // 
@@ -292,13 +292,13 @@ namespace BachHoaXanh_Store
             this.txt_NgayTra.SelectionStart = 0;
             this.txt_NgayTra.ShortcutsEnabled = true;
             this.txt_NgayTra.Size = new System.Drawing.Size(280, 39);
-            //this.txt_NgayTra.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            this.txt_NgayTra.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txt_NgayTra.TabIndex = 1;
             this.txt_NgayTra.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_NgayTra.TextMarginBottom = 0;
             this.txt_NgayTra.TextMarginLeft = 5;
             this.txt_NgayTra.TextMarginTop = 0;
-            //this.txt_NgayTra.TextPlaceholder = "";
+            this.txt_NgayTra.TextPlaceholder = "";
             this.txt_NgayTra.UseSystemPasswordChar = false;
             this.txt_NgayTra.WordWrap = true;
             // 
@@ -369,13 +369,13 @@ namespace BachHoaXanh_Store
             this.txt_TinhTrang.SelectionStart = 8;
             this.txt_TinhTrang.ShortcutsEnabled = true;
             this.txt_TinhTrang.Size = new System.Drawing.Size(280, 39);
-            //this.txt_TinhTrang.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            this.txt_TinhTrang.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txt_TinhTrang.TabIndex = 4;
             this.txt_TinhTrang.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_TinhTrang.TextMarginBottom = 0;
             this.txt_TinhTrang.TextMarginLeft = 5;
             this.txt_TinhTrang.TextMarginTop = 0;
-            //this.txt_TinhTrang.TextPlaceholder = "";
+            this.txt_TinhTrang.TextPlaceholder = "";
             this.txt_TinhTrang.UseSystemPasswordChar = false;
             this.txt_TinhTrang.WordWrap = true;
             // 
@@ -602,13 +602,13 @@ namespace BachHoaXanh_Store
             this.txt_NguoiDat.SelectionStart = 0;
             this.txt_NguoiDat.ShortcutsEnabled = true;
             this.txt_NguoiDat.Size = new System.Drawing.Size(280, 39);
-            ////this.txt_NguoiDat.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            this.txt_NguoiDat.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txt_NguoiDat.TabIndex = 0;
             this.txt_NguoiDat.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_NguoiDat.TextMarginBottom = 0;
             this.txt_NguoiDat.TextMarginLeft = 5;
             this.txt_NguoiDat.TextMarginTop = 0;
-            //this.txt_NguoiDat.TextPlaceholder = "";
+            this.txt_NguoiDat.TextPlaceholder = "";
             this.txt_NguoiDat.UseSystemPasswordChar = false;
             this.txt_NguoiDat.WordWrap = true;
             // 
@@ -714,6 +714,7 @@ namespace BachHoaXanh_Store
             this.col_MaHD.HeaderText = "Mã HD";
             this.col_MaHD.Name = "col_MaHD";
             this.col_MaHD.ReadOnly = true;
+            this.col_MaHD.Visible = false;
             // 
             // MaSP
             // 
@@ -784,11 +785,11 @@ namespace BachHoaXanh_Store
         private Bunifu.Framework.UI.BunifuCustomDataGrid dgv_Order;
         private Telerik.WinControls.Themes.TelerikMetroTheme telerikMetroTheme1;
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txt_NguoiDat;
+        private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_MaHD;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaSP;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenSP;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayHetHan;
-        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
