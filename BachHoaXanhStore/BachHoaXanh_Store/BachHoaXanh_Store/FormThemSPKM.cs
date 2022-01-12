@@ -27,6 +27,8 @@ namespace BachHoaXanh_Store
             toolTip1.SetToolTip(txt_SLTon, "Số lượng tồn");
             toolTip1.SetToolTip(txt_SLThem, "Số lượng thêm");
             toolTip1.SetToolTip(txt_GiaKM, "Giá KM");
+            toolTip1.SetToolTip(txtGiaBan, "Giá sản phẩm");
+            
             if (FormDanhSachSP.isEdit == false)
             {
                 txt_ProductFullName.Text = string.Format(objProduct.MaSP + " - " + objProduct.TenSP);
