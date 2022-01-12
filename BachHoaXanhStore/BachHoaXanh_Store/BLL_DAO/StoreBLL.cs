@@ -36,6 +36,19 @@ namespace BLL_DAO
                          });
             return model.Select(t => t.TenST).SingleOrDefault();
         }
+        public string getStoreAddressByUser(int? pStoreId)
+        {
+            var model = (from objStore in db.SieuThis
+                         where objStore.MaST == pStoreId
+                         select new StoreBO()
+                         {
+                             MaST = objStore.MaST,
+                             TenST = objStore.TenST,
+                             DiaChi = objStore.DiaChi,
+                             SDT = objStore.SDT
+                         });
+            return model.Select(t => t.DiaChi).SingleOrDefault();
+        }
 
         public int GetSaleOfStore(DateTime datCurrentDay, int intStoreId, int intUserId)
         {

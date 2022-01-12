@@ -137,7 +137,7 @@ namespace BachHoaXanh_Store
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.84746F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.15254F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 28F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 57F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 58F));
             this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel3, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel4, 3, 1);
@@ -157,7 +157,7 @@ namespace BachHoaXanh_Store
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(181, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(317, 16);
+            this.panel2.Size = new System.Drawing.Size(316, 16);
             this.panel2.TabIndex = 0;
             // 
             // lbl_MaST
@@ -167,7 +167,7 @@ namespace BachHoaXanh_Store
             this.lbl_MaST.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(247)))), ((int)(((byte)(228)))));
             this.lbl_MaST.Location = new System.Drawing.Point(0, 0);
             this.lbl_MaST.Name = "lbl_MaST";
-            this.lbl_MaST.Size = new System.Drawing.Size(317, 16);
+            this.lbl_MaST.Size = new System.Drawing.Size(316, 16);
             this.lbl_MaST.TabIndex = 0;
             this.lbl_MaST.Text = "Mã siêu thị";
             this.lbl_MaST.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -179,7 +179,7 @@ namespace BachHoaXanh_Store
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(181, 25);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(317, 30);
+            this.panel3.Size = new System.Drawing.Size(316, 30);
             this.panel3.TabIndex = 1;
             // 
             // lbl_MaNV
@@ -189,7 +189,7 @@ namespace BachHoaXanh_Store
             this.lbl_MaNV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(247)))), ((int)(((byte)(228)))));
             this.lbl_MaNV.Location = new System.Drawing.Point(0, 0);
             this.lbl_MaNV.Name = "lbl_MaNV";
-            this.lbl_MaNV.Size = new System.Drawing.Size(317, 30);
+            this.lbl_MaNV.Size = new System.Drawing.Size(316, 30);
             this.lbl_MaNV.TabIndex = 0;
             this.lbl_MaNV.Text = "Mã NV - Tên NV";
             this.lbl_MaNV.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -201,7 +201,7 @@ namespace BachHoaXanh_Store
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.Controls.Add(this.comboBoxEdit1, 1, 1);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(504, 25);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(503, 25);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 3;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -238,7 +238,7 @@ namespace BachHoaXanh_Store
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 276F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 83.66248F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.33752F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 300F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 301F));
             this.tableLayoutPanel2.Controls.Add(this.panel5, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.bunifuButton1, 2, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -257,7 +257,7 @@ namespace BachHoaXanh_Store
             this.panel5.Location = new System.Drawing.Point(279, 3);
             this.panel5.Name = "panel5";
             this.tableLayoutPanel2.SetRowSpan(this.panel5, 2);
-            this.panel5.Size = new System.Drawing.Size(424, 94);
+            this.panel5.Size = new System.Drawing.Size(423, 94);
             this.panel5.TabIndex = 0;
             // 
             // tableLayoutPanel3
@@ -274,7 +274,7 @@ namespace BachHoaXanh_Store
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(424, 94);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(423, 94);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // panel6
@@ -324,7 +324,7 @@ namespace BachHoaXanh_Store
             this.panel7.Location = new System.Drawing.Point(215, 6);
             this.panel7.Name = "panel7";
             this.tableLayoutPanel3.SetRowSpan(this.panel7, 2);
-            this.panel7.Size = new System.Drawing.Size(203, 82);
+            this.panel7.Size = new System.Drawing.Size(202, 82);
             this.panel7.TabIndex = 1;
             // 
             // label4
@@ -334,7 +334,7 @@ namespace BachHoaXanh_Store
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(34)))), ((int)(((byte)(9)))));
             this.label4.Location = new System.Drawing.Point(0, 33);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(199, 29);
+            this.label4.Size = new System.Drawing.Size(198, 29);
             this.label4.TabIndex = 1;
             this.label4.Text = "label4";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -346,7 +346,7 @@ namespace BachHoaXanh_Store
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(34)))), ((int)(((byte)(9)))));
             this.label3.Location = new System.Drawing.Point(0, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(199, 33);
+            this.label3.Size = new System.Drawing.Size(198, 33);
             this.label3.TabIndex = 0;
             this.label3.Text = "label3";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -388,7 +388,7 @@ namespace BachHoaXanh_Store
             this.bunifuButton1.IdleIconLeftImage = null;
             this.bunifuButton1.IdleIconRightImage = null;
             this.bunifuButton1.IndicateFocus = false;
-            this.bunifuButton1.Location = new System.Drawing.Point(709, 53);
+            this.bunifuButton1.Location = new System.Drawing.Point(708, 53);
             this.bunifuButton1.Name = "bunifuButton1";
             stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(42)))));
             stateProperties1.BorderRadius = 3;
