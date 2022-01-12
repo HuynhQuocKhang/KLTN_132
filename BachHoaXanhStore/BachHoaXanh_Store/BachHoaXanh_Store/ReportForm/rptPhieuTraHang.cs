@@ -16,7 +16,7 @@ namespace BachHoaXanh_Store.ReportForm
         public rptPhieuTraHang()
         {
             InitializeComponent();
-            pMaPhieuTra.Text = (db.PhieuTraHangs.Select(t => t).Count() + 1).ToString();
+            pMaPhieuTra.Text = (db.PhieuTraHangs.Select(t => t).Count()).ToString();
             pNgayTra.Text = DateTime.Now.Day.ToString()+"/"+ DateTime.Now.Month.ToString() + "/" + DateTime.Now.Year.ToString();
             if (FormLogin.objUserBO.Permission == 1)
             {

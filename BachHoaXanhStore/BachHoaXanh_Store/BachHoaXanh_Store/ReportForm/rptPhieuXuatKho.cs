@@ -16,7 +16,7 @@ namespace BachHoaXanh_Store.ReportForm
         public rptPhieuXuatKho()
         {
             InitializeComponent();
-            pMaPhieuXuat.Text = (db.PhieuXuatKhos.Select(t => t).Count() + 1).ToString();
+            pMaPhieuXuat.Text = (db.PhieuXuatKhos.Select(t => t).Count()).ToString();
             pMaSieuThi.Text = FormPhanPhoiHang.objExportProductBO.MaST.ToString();
             pDonDatHang.Text = FormPhanPhoiHang.objExportProductBO.MaDH.ToString();
             pTongTien.Text = FormPhanPhoiHang.objExportProductBO.TongTien.ToString();
