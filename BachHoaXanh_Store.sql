@@ -240,8 +240,8 @@ SELECT * FROM KhoHangKM
 
 select * from KhoSieuThi where MaST = 1 and MaSP = '1012841000006'
 select * from KhoHangKM where MaST = 1 and MaSP = '2701122062900'
-select * from HoaDonBanHang where MaHD = '12221220213'
-select * from CTHoaDonBanHang where MaHD = '12221220213'
+select * from HoaDonBanHang where MaHD = '1214120222';
+select * from CTHoaDonBanHang where MaHD = '1214120222';
 
 select * from KhoHangKM
 

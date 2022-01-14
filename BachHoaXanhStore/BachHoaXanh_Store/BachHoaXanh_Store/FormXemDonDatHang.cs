@@ -17,6 +17,7 @@ namespace BachHoaXanh_Store
         StoreBLL objStoreBLL = new StoreBLL();
         OrderStoreBLL objOrderStoreBLL = new OrderStoreBLL();
         OrderStoreDetailBLL objOrderStoreDetailBLL = new OrderStoreDetailBLL();
+        OrderCustomerBLL objOrderCustomerBLL = new OrderCustomerBLL();
         public FormXemDonDatHang()
         {
             InitializeComponent();
@@ -43,11 +44,24 @@ namespace BachHoaXanh_Store
             {
                 if (chk_AllStore.Checked == true)
                 {
-                    dgv_DSDH.DataSource = objOrderStoreBLL.GetOrderFromStoreBO(0,int.Parse(cbo_TinhTrang.SelectedIndex.ToString()), txtKeyword.Text);
+                    dgv_DSDH.DataSource = objOrderStoreBLL.GetOrderFromStoreBO(-1,int.Parse(cbo_TinhTrang.SelectedIndex.ToString()), txtKeyword.Text);
                 }
                 else
                 {
-                    dgv_DSDH.DataSource = objOrderStoreBLL.GetOrderFromStoreBO(int.Parse(cbo_SieuThi.SelectedValue.ToString()),int.Parse(cbo_TinhTrang.SelectedIndex.ToString()), txtKeyword.Text);
+                    if (int.Parse(cbo_SieuThi.SelectedValue.ToString()) == 0)
+                    {
+                        string strKey = "0";
+                        if (txtKeyword.Text.Trim() != null && txtKeyword.Text.Trim() != string.Empty)
+                        {
+                            strKey = txtKeyword.Text.Trim();
+                        }
+                        dgv_DSDH.DataSource = objOrderCustomerBLL.GetListOrderCustomerView(int.Parse(strKey), int.Parse(cbo_TinhTrang.SelectedIndex.ToString()));
+                    }
+                    else
+                    {
+                        dgv_DSDH.DataSource = objOrderStoreBLL.GetOrderFromStoreBO(int.Parse(cbo_SieuThi.SelectedValue.ToString()), int.Parse(cbo_TinhTrang.SelectedIndex.ToString()), txtKeyword.Text);
+                    }
+                    
                 }
             }
             else
@@ -60,8 +74,11 @@ namespace BachHoaXanh_Store
                 {
                     dgv_DSDH.DataSource = objOrderStoreBLL.GetOrderFromStoreBO(int.Parse(cbo_SieuThi.SelectedValue.ToString()),int.Parse(cbo_TinhTrang.SelectedIndex.ToString()), txtKeyword.Text);
                 }
-            }    
-
+            }
+            if (dgv_DSDH.Rows.Count == 0)
+            {
+                dgv_DHDT.Rows.Clear();
+            }
         }
 
         private void chk_AllStore_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs e)
@@ -83,12 +100,30 @@ namespace BachHoaXanh_Store
             dgv_DHDT.Rows.Clear();
             if (dgv_DSDH.DataSource != null && index != -1)
             {
-                List<GetDetailsOrderStoreByOrderIdBO> lstOrder = objOrderStoreDetailBLL.GetDetailsOrderStoreByOrderId(int.Parse(dgv_DSDH["col_MaDH", index].Value.ToString().Trim()));
-                foreach (GetDetailsOrderStoreByOrderIdBO item in lstOrder)
+                if (int.Parse(cbo_SieuThi.SelectedValue.ToString()) != 0)
                 {
-                    dgv_DHDT.Rows.Add(item.MaSP, item.TenSP, item.GiaBan, item.SoLuong, item.ThanhTien);
+                    List<GetDetailsOrderStoreByOrderIdBO> lstOrder = objOrderStoreDetailBLL.GetDetailsOrderStoreByOrderId(int.Parse(dgv_DSDH["col_MaDH", index].Value.ToString().Trim()));
+                    foreach (GetDetailsOrderStoreByOrderIdBO item in lstOrder)
+                    {
+                        dgv_DHDT.Rows.Add(item.MaSP, item.TenSP, item.GiaBan, item.SoLuong, item.ThanhTien);
+                    }
+                }
+                else
+                {
+                    List<GetDetailsOrderStoreByOrderIdBO> lstOrder = new List<GetDetailsOrderStoreByOrderIdBO>();
+                    lstOrder = objOrderCustomerBLL.GetListOrderCustomerDetailView(int.Parse(dgv_DSDH["col_MaDH", index].Value.ToString().Trim()));
+                    foreach (GetDetailsOrderStoreByOrderIdBO item in lstOrder)
+                    {
+                        dgv_DHDT.Rows.Add(item.MaSP, item.TenSP, item.GiaBan, item.SoLuong, item.ThanhTien);
+                    }
                 }
             }
+        }
+
+        private void txtKeyword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
         }
     }
 }

@@ -31,19 +31,18 @@ namespace BachHoaXanh_Store
             
             if (FormDanhSachSP.isEdit == false)
             {
-                txt_ProductFullName.Text = string.Format(objProduct.MaSP + " - " + objProduct.TenSP);
-                txt_SLTon.Text = objProduct.SoLuong.ToString();
                 txt_SLThem.Text = "0";
             }
             else
             {
-                txt_ProductFullName.Text = string.Format(objProduct.MaSP + " - " + objProduct.TenSP);
-                txt_SLTon.Text = objProduct.SoLuong.ToString();
                 txt_SLThem.Text = objPromotion.SoLuong.ToString();
                 dtp_NgayApDung.Value = (DateTime)objPromotion.NgayKM;
                 dtp_NgayKetThuc.Value = (DateTime)objPromotion.NgayHetHan;
                 txt_GiaKM.Text = objPromotion.GiaKM.ToString();
             }
+            txt_ProductFullName.Text = string.Format(objProduct.MaSP + " - " + objProduct.TenSP);
+            txtGiaBan.Text = objProduct.GiaBan.ToString();
+            txt_SLTon.Text = objProduct.SoLuong.ToString();
         }
 
         private void btn_Huy_Click(object sender, EventArgs e)
@@ -84,6 +83,11 @@ namespace BachHoaXanh_Store
                 MessageBox.Show("Ngày bắt đầu khuyến mãi không được nhỏ hơn ngày kết thúc. Xin vui lòng kiểm tra lại!");
                 isSuccess = false;
             }
+            if (int.Parse(txt_GiaKM.Text.Trim()) > int.Parse(txtGiaBan.Text.Trim()))
+            {
+                MessageBox.Show("Gía bán khuyến mãi của sản phẩm không được lớn hơn giá bán của sản phẩm. Xin vui lòng kiểm tra lại!");
+                isSuccess = false;
+            }
             if (isSuccess == true)
             {
                 if (FormDanhSachSP.isEdit == true && intStockUpdate == 0)
@@ -122,6 +126,18 @@ namespace BachHoaXanh_Store
                     }
                 }
             }
+        }
+
+        private void txt_GiaKM_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
+        }
+
+        private void txt_SLThem_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
         }
     }
 }

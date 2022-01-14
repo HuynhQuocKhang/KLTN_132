@@ -26,7 +26,8 @@ namespace BachHoaXanh_Store
             List<OrderCustomerDetailBO> lstOrderTmp = FormDatHang.lstOrderCustomerDetailBO;
             txt_NguoiDat.Text = FormLogin.objUserBO.UserFullName;
             txt_NhaCungCap.Text = FormDatHang.strCustomerName;
-            txt_NgayDat.Text = DateTime.Now.ToString("d");
+            string strDate = DateTime.Now.ToString("d");
+            txt_NgayDat.Text = strDate;
             txt_TongTien.Text = FormDatHang.intTotalPrice.ToString();
             dgv_Order.DataSource = lstOrderTmp;
             toolTip1.SetToolTip(txt_NguoiDat, "Người đặt");

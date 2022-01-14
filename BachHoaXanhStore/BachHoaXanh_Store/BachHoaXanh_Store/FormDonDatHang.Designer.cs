@@ -190,7 +190,7 @@ namespace BachHoaXanh_Store
             this.txt_NhaCungCap.HideSelection = true;
             this.txt_NhaCungCap.IconLeft = null;
             this.txt_NhaCungCap.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_NhaCungCap.IconPadding = 10;
+            //this.txt_NhaCungCap.IconPadding = 10;
             this.txt_NhaCungCap.IconRight = null;
             this.txt_NhaCungCap.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_NhaCungCap.Lines = new string[0];
@@ -458,7 +458,7 @@ namespace BachHoaXanh_Store
             this.txt_TinhTrang.SelectionLength = 0;
             this.txt_TinhTrang.SelectionStart = 8;
             this.txt_TinhTrang.ShortcutsEnabled = true;
-            this.txt_TinhTrang.Size = new System.Drawing.Size(270, 39);
+            //this.txt_TinhTrang.Size = new System.Drawing.Size(270, 39);
             this.txt_TinhTrang.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txt_TinhTrang.TabIndex = 4;
             this.txt_TinhTrang.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;

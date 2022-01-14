@@ -49,6 +49,86 @@ namespace BLL_DAO
             }
         }
 
+        public List<OrderCustomerGetOrder> GetListOrderCustomerView(int intOrderId, int intStatus)
+        {
+            if (intStatus == 3)
+            {
+                if (intOrderId == 0)
+                {
+                    var model = from objOrderCustomer in db.HoaDonDatNCCs
+                                where objOrderCustomer.Isdeleted == false
+                                select new OrderCustomerGetOrder()
+                                {
+                                    MaHD = objOrderCustomer.MaHDDat,
+                                    MaST = objOrderCustomer.MaNCC,
+                                    NguoiLapPhieu = objOrderCustomer.NguoiLapPhieu,
+                                    TongTien = objOrderCustomer.TongTien,
+                                    NgayDat = objOrderCustomer.NgayDat,
+                                    TinhTrang = objOrderCustomer.TinhTrang,
+                                    //Isdeleted = objOrderCustomer.Isdeleted
+                                };
+                    model.OrderByDescending(x => x.MaHD);
+                    return model.ToList();
+
+                }
+                else
+                {
+                    var model = from objOrderCustomer in db.HoaDonDatNCCs
+                                where objOrderCustomer.Isdeleted == false && objOrderCustomer.MaHDDat == intOrderId
+                                select new OrderCustomerGetOrder()
+                                {
+                                    MaHD = objOrderCustomer.MaHDDat,
+                                    MaST = objOrderCustomer.MaNCC,
+                                    NguoiLapPhieu = objOrderCustomer.NguoiLapPhieu,
+                                    TongTien = objOrderCustomer.TongTien,
+                                    NgayDat = objOrderCustomer.NgayDat,
+                                    TinhTrang = objOrderCustomer.TinhTrang,
+                                    //Isdeleted = objOrderCustomer.Isdeleted
+                                };
+                    model.OrderByDescending(x => x.MaHD);
+                    return model.ToList();
+                }
+            }
+            else
+            {
+                if (intOrderId == 0)
+                {
+                    var model = from objOrderCustomer in db.HoaDonDatNCCs
+                                where objOrderCustomer.Isdeleted == false && objOrderCustomer.TinhTrang == intStatus
+                                select new OrderCustomerGetOrder()
+                                {
+                                    MaHD = objOrderCustomer.MaHDDat,
+                                    MaST = objOrderCustomer.MaNCC,
+                                    NguoiLapPhieu = objOrderCustomer.NguoiLapPhieu,
+                                    TongTien = objOrderCustomer.TongTien,
+                                    NgayDat = objOrderCustomer.NgayDat,
+                                    TinhTrang = objOrderCustomer.TinhTrang,
+                                    //Isdeleted = objOrderCustomer.Isdeleted
+                                };
+                    model.OrderByDescending(x => x.MaHD);
+                    return model.ToList();
+
+                }
+                else
+                {
+                    var model = from objOrderCustomer in db.HoaDonDatNCCs
+                                where objOrderCustomer.Isdeleted == false && objOrderCustomer.MaHDDat == intOrderId && objOrderCustomer.TinhTrang == intStatus
+                                select new OrderCustomerGetOrder()
+                                {
+                                    MaHD = objOrderCustomer.MaHDDat,
+                                    MaST = objOrderCustomer.MaNCC,
+                                    NguoiLapPhieu = objOrderCustomer.NguoiLapPhieu,
+                                    TongTien = objOrderCustomer.TongTien,
+                                    NgayDat = objOrderCustomer.NgayDat,
+                                    TinhTrang = objOrderCustomer.TinhTrang,
+                                    //Isdeleted = objOrderCustomer.Isdeleted
+                                };
+                    model.OrderByDescending(x => x.MaHD);
+                    return model.ToList();
+                }
+            }
+        }
+
         public bool InsertOrderCustomer(OrderCustomerBO model)
         {
             try
@@ -157,6 +237,41 @@ namespace BLL_DAO
             catch
             {
                 return false;
+            }
+        }
+
+        public List<GetDetailsOrderStoreByOrderIdBO> GetListOrderCustomerDetailView(int intOrderId)
+        {
+            if (intOrderId == 0)
+            {
+                var model = from objCTHoaDonDatNCC in db.CTHoaDonDatNCCs
+                            join objProduct in db.SanPhams
+                            on objCTHoaDonDatNCC.MaSP equals objProduct.MaSP
+                            select new GetDetailsOrderStoreByOrderIdBO()
+                            {
+                                MaSP = objCTHoaDonDatNCC.MaSP,
+                                TenSP = objProduct.TenSP,
+                                GiaBan = objProduct.GiaBan,
+                                SoLuong = objCTHoaDonDatNCC.SoLuong,
+                                ThanhTien = objCTHoaDonDatNCC.ThanhTien
+                            };
+                return model.ToList();
+            }
+            else
+            {
+                var model = from objCTHoaDonDatNCC in db.CTHoaDonDatNCCs
+                            join objProduct in db.SanPhams
+                            on objCTHoaDonDatNCC.MaSP equals objProduct.MaSP
+                            where objCTHoaDonDatNCC.MaHDDat == intOrderId
+                            select new GetDetailsOrderStoreByOrderIdBO()
+                            {
+                                MaSP = objCTHoaDonDatNCC.MaSP,
+                                TenSP = objProduct.TenSP,
+                                GiaBan = objProduct.GiaBan,
+                                SoLuong = objCTHoaDonDatNCC.SoLuong,
+                                ThanhTien = objCTHoaDonDatNCC.ThanhTien
+                            };
+                return model.ToList();
             }
         }
     }

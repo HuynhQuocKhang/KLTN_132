@@ -22,7 +22,19 @@ namespace BO
         public string MaHD { get; set; }
         public bool KhuyenMai { get; set; }
         public string MaSP { get; set; }
+        public string TenSP { get; set; }
         public int? SoLuong { get; set; }
+        public int GiaBan { get; set; }
+        public int GiaKM { get; set; }
         public int? ThanhTien { get; set; }
+    }
+
+
+    public class InvoiceWatingBO
+    {
+        public int MaHD { get; set; }
+        public int? TongSP { get; set; }
+        public int? ThanhTien { get; set; }
+        public List<InvoiceDetailBO> ListInvoiceDetailBO { get; set; }
     }
 }

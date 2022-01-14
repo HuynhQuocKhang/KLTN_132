@@ -217,15 +217,16 @@ namespace BachHoaXanh_Store
             this.txtKeyword.SelectionStart = 0;
             this.txtKeyword.ShortcutsEnabled = true;
             this.txtKeyword.Size = new System.Drawing.Size(240, 34);
-            //this.txtKeyword.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            this.txtKeyword.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtKeyword.TabIndex = 2;
             this.txtKeyword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtKeyword.TextMarginBottom = 0;
             this.txtKeyword.TextMarginLeft = 5;
             this.txtKeyword.TextMarginTop = 0;
-            //this.txtKeyword.TextPlaceholder = "";
+            this.txtKeyword.TextPlaceholder = "";
             this.txtKeyword.UseSystemPasswordChar = false;
             this.txtKeyword.WordWrap = true;
+            this.txtKeyword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtKeyword_KeyPress);
             // 
             // panel1
             // 

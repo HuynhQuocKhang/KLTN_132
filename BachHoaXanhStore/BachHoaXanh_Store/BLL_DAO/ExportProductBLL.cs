@@ -95,5 +95,13 @@ namespace BLL_DAO
             { return entities.Sum(x => x.ThanhTien); }
             else return 0;
         }
+
+        public List<CTPhieuXuatKho> GetExportProductDetailByOrderStoreId(int intOrderStoreid, int intStoreid)
+        {
+            var ExportProductBO = db.PhieuXuatKhos.Where(x => x.MaST == intStoreid && x.MaDH == intOrderStoreid).FirstOrDefault();
+            int ExportProductId = ExportProductBO.MaPXK;
+            var model = db.CTPhieuXuatKhos.Where(x => x.MaPXK == ExportProductId).ToList();
+            return model;
+        }
     }
 }

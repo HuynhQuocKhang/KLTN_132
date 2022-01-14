@@ -73,8 +73,8 @@ namespace BachHoaXanh_Store
             this.txt_SLTon = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.txt_SLThem = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.txt_GiaKM = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.txtGiaBan = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tableLayoutPanel2.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -617,6 +617,7 @@ namespace BachHoaXanh_Store
             this.txt_SLThem.TextPlaceholder = "";
             this.txt_SLThem.UseSystemPasswordChar = false;
             this.txt_SLThem.WordWrap = true;
+            this.txt_SLThem.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_SLThem_KeyPress);
             // 
             // txt_GiaKM
             // 
@@ -692,6 +693,7 @@ namespace BachHoaXanh_Store
             this.txt_GiaKM.TextPlaceholder = "";
             this.txt_GiaKM.UseSystemPasswordChar = false;
             this.txt_GiaKM.WordWrap = true;
+            this.txt_GiaKM.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_GiaKM_KeyPress);
             // 
             // txtGiaBan
             // 

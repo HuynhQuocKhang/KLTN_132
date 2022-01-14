@@ -271,13 +271,13 @@ namespace BachHoaXanh_Store
             this.txtKeyWord.SelectionStart = 0;
             this.txtKeyWord.ShortcutsEnabled = true;
             this.txtKeyWord.Size = new System.Drawing.Size(338, 34);
-            //this.txtKeyWord.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            this.txtKeyWord.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtKeyWord.TabIndex = 2;
             this.txtKeyWord.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtKeyWord.TextMarginBottom = 0;
             this.txtKeyWord.TextMarginLeft = 5;
             this.txtKeyWord.TextMarginTop = 0;
-            //this.txtKeyWord.TextPlaceholder = "";
+            this.txtKeyWord.TextPlaceholder = "";
             this.txtKeyWord.UseSystemPasswordChar = false;
             this.txtKeyWord.WordWrap = true;
             // 
@@ -810,13 +810,15 @@ namespace BachHoaXanh_Store
             this.cbo_PageSize.Items.AddRange(new object[] {
             "10",
             "20",
-            "30"});
+            "30",
+            "50"});
             this.cbo_PageSize.Location = new System.Drawing.Point(111, 3);
             this.cbo_PageSize.MaximumSize = new System.Drawing.Size(5000, 0);
             this.cbo_PageSize.Name = "cbo_PageSize";
             this.cbo_PageSize.Size = new System.Drawing.Size(79, 32);
             this.cbo_PageSize.TabIndex = 4;
             this.cbo_PageSize.Text = null;
+            this.cbo_PageSize.SelectedIndexChanged += new System.EventHandler(this.cbo_PageSize_SelectedIndexChanged_1);
             // 
             // panel3
             // 

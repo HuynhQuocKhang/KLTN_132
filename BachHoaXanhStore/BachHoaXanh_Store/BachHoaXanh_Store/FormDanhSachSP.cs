@@ -45,6 +45,7 @@ namespace BachHoaXanh_Store
                 chk_AllStore.Checked = false;
                 bunifuCustomLabel1.Visible = true;
                 bunifuButton1.Text = "Cập Nhật Sản Phẩm Khuyến Mãi";
+                chk_AllStore.Checked = true;
             }
 
             toolTip1.SetToolTip(cbo_LoaiSP, "Chọn tìm kiếm theo loại sản phẩm");
@@ -76,7 +77,7 @@ namespace BachHoaXanh_Store
                 {
                     if (int.Parse(strProductTypeId) == 1)
                     {
-                        dgv_DSSP.DataSource = objProductBLL.GetProductPromotionFromStore(strProductName.Trim(), 0, 0, int.MaxValue, 50, (int)FormLogin.objUserBO.StoreId);
+                        dgv_DSSP.DataSource = objProductBLL.GetProductPromotionFromStore(strProductName.Trim(), 0, 0, int.MaxValue, int.Parse(strPageSize.Trim()), (int)FormLogin.objUserBO.StoreId);
                     }
                     else
                     {
@@ -89,7 +90,7 @@ namespace BachHoaXanh_Store
                 {
                     if (int.Parse(strProductTypeId) == 1)
                     {
-                        dgv_DSSP.DataSource = objOrderStoreBLL.GetProductBOFromStore(strProductName.Trim(), 0, 0, int.MaxValue, 50, (int)FormLogin.objUserBO.StoreId);
+                        dgv_DSSP.DataSource = objOrderStoreBLL.GetProductBOFromStore(strProductName.Trim(), 0, 0, int.MaxValue, int.Parse(strPageSize.Trim()), (int)FormLogin.objUserBO.StoreId);
                     }
                     else
                     {
@@ -224,6 +225,7 @@ namespace BachHoaXanh_Store
                 objProductBO.MaLoaiSP = int.Parse(dgv_DSSP["col_MaLoaiSP", index].Value.ToString());
                 objProductBO.MaNCC = int.Parse(dgv_DSSP["col_MaNCC", index].Value.ToString());
                 objProductBO.SoLuong = int.Parse(dgv_DSSP["col_SoLuong", index].Value.ToString());
+                objProductBO.GiaBan = int.Parse(dgv_DSSP["col_GiaBan", index].Value.ToString());
                 #endregion
 
                 FormThemSPKM frmThemSPKM = new FormThemSPKM();
@@ -234,17 +236,20 @@ namespace BachHoaXanh_Store
         void frmThemSPKM_Event()
         {
             Search(txtKeyWord.Text, cbo_NhaCungCap.SelectedValue.ToString(), cbo_LoaiSP.SelectedValue.ToString(), cbo_PageSize.Text);
+            bunifuButton1.Visible = true;
         }
         void frmChinhSuaSP_Event()
         {
             Search(txtKeyWord.Text, cbo_NhaCungCap.SelectedValue.ToString(), cbo_LoaiSP.SelectedValue.ToString(), cbo_PageSize.Text);
+            bunifuButton1.Visible = true;
         }
-        private void cbo_PageSize_SelectedIndexChanged(object sender, EventArgs e)
+
+        private void bunifuButton3_Click(object sender, EventArgs e)
         {
             Search(txtKeyWord.Text, cbo_NhaCungCap.SelectedValue.ToString(), cbo_LoaiSP.SelectedValue.ToString(), cbo_PageSize.Text);
         }
 
-        private void bunifuButton3_Click(object sender, EventArgs e)
+        private void cbo_PageSize_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             Search(txtKeyWord.Text, cbo_NhaCungCap.SelectedValue.ToString(), cbo_LoaiSP.SelectedValue.ToString(), cbo_PageSize.Text);
         }

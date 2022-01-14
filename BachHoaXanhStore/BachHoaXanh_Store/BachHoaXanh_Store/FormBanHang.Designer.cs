@@ -104,9 +104,6 @@ namespace BachHoaXanh_Store
             this.panel8 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.dgv_DSKM = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.MaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -128,6 +125,11 @@ namespace BachHoaXanh_Store
             this.btn_ThanhToan = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.MaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GiaKM = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -393,13 +395,13 @@ namespace BachHoaXanh_Store
             this.txt_MaSP.SelectionStart = 0;
             this.txt_MaSP.ShortcutsEnabled = true;
             this.txt_MaSP.Size = new System.Drawing.Size(250, 40);
-            //this.txt_MaSP.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            this.txt_MaSP.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txt_MaSP.TabIndex = 2;
             this.txt_MaSP.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_MaSP.TextMarginBottom = 0;
             this.txt_MaSP.TextMarginLeft = 5;
             this.txt_MaSP.TextMarginTop = 0;
-            //this.txt_MaSP.TextPlaceholder = "";
+            this.txt_MaSP.TextPlaceholder = "";
             this.txt_MaSP.UseSystemPasswordChar = false;
             this.txt_MaSP.WordWrap = true;
             this.txt_MaSP.TextChange += new System.EventHandler(this.txt_MaSP_TextChange);
@@ -470,13 +472,13 @@ namespace BachHoaXanh_Store
             this.txt_SoLuong.SelectionStart = 0;
             this.txt_SoLuong.ShortcutsEnabled = true;
             this.txt_SoLuong.Size = new System.Drawing.Size(250, 40);
-            //this.txt_SoLuong.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            this.txt_SoLuong.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txt_SoLuong.TabIndex = 2;
             this.txt_SoLuong.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_SoLuong.TextMarginBottom = 0;
             this.txt_SoLuong.TextMarginLeft = 5;
             this.txt_SoLuong.TextMarginTop = 0;
-            //this.txt_SoLuong.TextPlaceholder = "";
+            this.txt_SoLuong.TextPlaceholder = "";
             this.txt_SoLuong.UseSystemPasswordChar = false;
             this.txt_SoLuong.WordWrap = true;
             this.txt_SoLuong.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_SoLuong_KeyPress);
@@ -750,7 +752,9 @@ namespace BachHoaXanh_Store
             this.dgv_DSKM.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaSP,
             this.TenSP,
-            this.SoLuong});
+            this.SoLuong,
+            this.GiaKM,
+            this.ThanhTien});
             this.tableLayoutPanel5.SetColumnSpan(this.dgv_DSKM, 2);
             this.dgv_DSKM.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_DSKM.DoubleBuffered = true;
@@ -774,27 +778,6 @@ namespace BachHoaXanh_Store
             this.dgv_DSKM.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_DSKM.Size = new System.Drawing.Size(328, 138);
             this.dgv_DSKM.TabIndex = 3;
-            // 
-            // MaSP
-            // 
-            this.MaSP.DataPropertyName = "MaSP";
-            this.MaSP.HeaderText = "Mã sản phẩm";
-            this.MaSP.Name = "MaSP";
-            this.MaSP.ReadOnly = true;
-            // 
-            // TenSP
-            // 
-            this.TenSP.DataPropertyName = "TenSP";
-            this.TenSP.HeaderText = "Tên sản phẩm";
-            this.TenSP.Name = "TenSP";
-            this.TenSP.ReadOnly = true;
-            // 
-            // SoLuong
-            // 
-            this.SoLuong.DataPropertyName = "SoLuong";
-            this.SoLuong.HeaderText = "Số Lượng";
-            this.SoLuong.Name = "SoLuong";
-            this.SoLuong.ReadOnly = true;
             // 
             // panel9
             // 
@@ -1045,6 +1028,7 @@ namespace BachHoaXanh_Store
             this.btn_LuuHangDoi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_LuuHangDoi.TextMarginLeft = 0;
             this.btn_LuuHangDoi.UseDefaultRadiusAndThickness = true;
+            this.btn_LuuHangDoi.Click += new System.EventHandler(this.btn_LuuHangDoi_Click);
             // 
             // btn_HangDoi
             // 
@@ -1450,6 +1434,40 @@ namespace BachHoaXanh_Store
             this.timer2.Interval = 3000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
+            // MaSP
+            // 
+            this.MaSP.DataPropertyName = "MaSP";
+            this.MaSP.HeaderText = "Mã sản phẩm";
+            this.MaSP.Name = "MaSP";
+            this.MaSP.ReadOnly = true;
+            // 
+            // TenSP
+            // 
+            this.TenSP.DataPropertyName = "TenSP";
+            this.TenSP.HeaderText = "Tên sản phẩm";
+            this.TenSP.Name = "TenSP";
+            this.TenSP.ReadOnly = true;
+            // 
+            // SoLuong
+            // 
+            this.SoLuong.DataPropertyName = "SoLuong";
+            this.SoLuong.HeaderText = "Số Lượng";
+            this.SoLuong.Name = "SoLuong";
+            this.SoLuong.ReadOnly = true;
+            // 
+            // GiaKM
+            // 
+            this.GiaKM.DataPropertyName = "GiaKM";
+            this.GiaKM.HeaderText = "Gía Khuyế Mãi";
+            this.GiaKM.Name = "GiaKM";
+            this.GiaKM.ReadOnly = true;
+            // 
+            // ThanhTien
+            // 
+            this.ThanhTien.HeaderText = "Thành Tiền";
+            this.ThanhTien.Name = "ThanhTien";
+            this.ThanhTien.ReadOnly = true;
+            // 
             // FormBanHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1540,5 +1558,7 @@ namespace BachHoaXanh_Store
         private System.Windows.Forms.DataGridViewTextBoxColumn MaSP;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenSP;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GiaKM;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ThanhTien;
     }
 }

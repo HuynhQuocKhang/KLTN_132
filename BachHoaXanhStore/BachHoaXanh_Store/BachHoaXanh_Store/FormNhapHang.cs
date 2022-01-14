@@ -49,7 +49,23 @@ namespace BachHoaXanh_Store
         {
             if (FormLogin.objUserBO.Permission != 1)
             {
-                dgv_DSDH.DataSource = objOrderStoreBLL.GetOrderFromStoreBO((int)FormLogin.objUserBO.StoreId, 1, txtKeyWord.Text.Trim());
+                string key = string.Empty;
+                if (txtKeyWord.Text.Trim() == null || txtKeyWord.Text.Trim() == string.Empty)
+                {
+                    key = txtKeyWord.Text.Trim();
+                }
+                else
+                {
+                    if (int.TryParse(txtKeyWord.Text.Trim(), out int intMaHD))
+                    {
+                        key = intMaHD.ToString();
+                    }
+                    else
+                    {
+                        key = txtKeyWord.Text.Trim();
+                    }
+                }
+                dgv_DSDH.DataSource = objOrderStoreBLL.GetListOrderFromStoreBO((int)FormLogin.objUserBO.StoreId, 1, key);
             }
             else
             {
@@ -104,6 +120,7 @@ namespace BachHoaXanh_Store
             if (dgv_DSCTDH.Rows.Count > 0)
             {
                 List<ProductBO> lstProductBO = new List<ProductBO>();
+                int index = dgv_DSDH.CurrentCell.RowIndex;
                 for (int i = 0; i < dgv_DSCTDH.Rows.Count; i++)
                 {
                     int intStock;
@@ -123,24 +140,42 @@ namespace BachHoaXanh_Store
                         {
                             ProductBO objProductBO = new ProductBO();
                             objProductBO.MaSP = dgv_DSCTDH["col_MaSP", i].Value.ToString().Trim();
+                            objProductBO.TenSP = dgv_DSCTDH["col_TenSP", i].Value.ToString().Trim();
                             objProductBO.SoLuong = intStock;
                             lstProductBO.Add(objProductBO);
                         }
                     }
                     else
                     {
-                        MessageBox.Show("Sản phẩm [ " + dgv_DSCTDH["col_MaSP", i].Value.ToString() + " - " + dgv_DSCTDH["col_TenSP", i].Value.ToString() + " ] có số lượng xuất phải là số nguyên dương và lớn hơn 0");
+                        MessageBox.Show("Sản phẩm [ " + dgv_DSCTDH["col_MaSP", i].Value.ToString() + " - " + dgv_DSCTDH["col_TenSP", i].Value.ToString() + " ] có số lượng nhập phải là số nguyên dương và lớn hơn 0");
                         return;
                     }
                 }
                 if (lstProductBO.Count == dgv_DSCTDH.Rows.Count)
                 {
-                    int index = dgv_DSDH.CurrentCell.RowIndex;
+                    
                     if (FormLogin.objUserBO.Permission != 1)
                     {
-                        if (objWHStoreBLL.UpdateStockOfProductFromStore((int)FormLogin.objUserBO.StoreId, lstProductBO))
+                        int intMaHD = int.Parse(dgv_DSDH["col_MaDH", index].Value.ToString().Trim());
+                        ExportProductBLL objExportProductBLL = new ExportProductBLL();
+                        var lstExportProductDetail = objExportProductBLL.GetExportProductDetailByOrderStoreId(intMaHD, (int)FormLogin.objUserBO.StoreId);
+                        bool isSuccess = true;
+                        foreach (var item in lstProductBO)
                         {
-                            objOrderStoreBLL.UpdateOrderStoreStatus(int.Parse(dgv_DSDH["col_MaDH", index].Value.ToString().Trim()));
+                            var objDetail = lstExportProductDetail.Where(x => x.MaSP.Trim() == item.MaSP.Trim()).FirstOrDefault();
+                            if (objDetail.SoLuong < item.SoLuong)
+                            {
+                                MessageBox.Show("Sản phẩm [ " + item.MaSP + " - " + item.TenSP + " ] có số lượng nhập là [ " + item.SoLuong + " ] lớn hơn số lượng xuất của kho là [ " + objDetail.SoLuong + " ]");
+                                isSuccess = false;
+                                return;
+                            }
+                        }
+                        if (isSuccess)
+                        {
+                            if (objWHStoreBLL.UpdateStockOfProductFromStore((int)FormLogin.objUserBO.StoreId, lstProductBO))
+                            {
+                                objOrderStoreBLL.UpdateOrderStoreStatus(int.Parse(dgv_DSDH["col_MaDH", index].Value.ToString().Trim()));
+                            }
                         }
                     }
 

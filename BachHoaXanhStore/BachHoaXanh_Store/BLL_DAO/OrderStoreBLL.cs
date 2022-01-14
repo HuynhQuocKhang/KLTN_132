@@ -344,6 +344,40 @@ namespace BLL_DAO
             }
         }
 
+        public List<OrderStoreBO> GetListOrderFromStoreBO(int intStoreId, int intTinhTrang, string strkeywords)
+        {
+            if (strkeywords.Trim() == null || strkeywords.Trim() == string.Empty)
+            {
+                var model = from objOrderStore in db.DonDatHangs
+                            where objOrderStore.MaST == intStoreId && objOrderStore.TinhTrang == intTinhTrang
+                            select new OrderStoreBO()
+                            {
+                                MaHD = objOrderStore.MaDH,
+                                MaST = objOrderStore.MaST,
+                                NguoiLapPhieu = objOrderStore.NguoiLapPhieu,
+                                NgayDat = objOrderStore.NgayDat,
+                                TongTien = objOrderStore.TongTien,
+                                TinhTrang = objOrderStore.TinhTrang
+                            };
+                return model.OrderByDescending(x => x.MaHD).ToList();
+            }
+            else
+            {
+                var model = from objOrderStore in db.DonDatHangs
+                            where objOrderStore.MaDH == int.Parse(strkeywords) && objOrderStore.MaST == intStoreId && objOrderStore.TinhTrang == intTinhTrang
+                            select new OrderStoreBO()
+                            {
+                                MaHD = objOrderStore.MaDH,
+                                MaST = objOrderStore.MaST,
+                                NguoiLapPhieu = objOrderStore.NguoiLapPhieu,
+                                NgayDat = objOrderStore.NgayDat,
+                                TongTien = objOrderStore.TongTien,
+                                TinhTrang = objOrderStore.TinhTrang
+                            };
+                return model.OrderByDescending(x => x.MaHD).ToList();
+            }
+        }
+
         public List<OrderStoreBO> GetOrderFromStoreBO(int intStoreId, int pTinhTrang, string strkeywords = "")
         {
             if (pTinhTrang == 3)
@@ -381,7 +415,7 @@ namespace BLL_DAO
             }
             else
             {
-                if (intStoreId == 0)
+                if (intStoreId == -1)
                 {
                     var model = from objOrderStore in db.DonDatHangs
                                 select new OrderStoreBO()
@@ -587,6 +621,8 @@ namespace BLL_DAO
                         objProductPromo.SoLuong = objProductPromotionBO.SoLuong;
                         objProductStore.SoLuong += intStockUpdate;
                         objProductPromo.GiaKM = objProductPromotionBO.GiaKM;
+                        objProductPromo.NgayKM = objProductPromotionBO.NgayKM;
+                        objProductPromo.NgayHetHan = objProductPromotionBO.NgayHetHan;
                         db.SubmitChanges();
                         return true;
                     }
@@ -596,6 +632,8 @@ namespace BLL_DAO
                         objProductPromo.SoLuong = objProductPromotionBO.SoLuong;
                         objProductStore.SoLuong -= intStockUpdate;
                         objProductPromo.GiaKM = objProductPromotionBO.GiaKM;
+                        objProductPromo.NgayKM = objProductPromotionBO.NgayKM;
+                        objProductPromo.NgayHetHan = objProductPromotionBO.NgayHetHan;
                         db.SubmitChanges();
                         return true;
                     }
@@ -748,5 +786,7 @@ namespace BLL_DAO
                 return new List<ProductPromotionBO>();
             }
         }
+
+        
     }
 }

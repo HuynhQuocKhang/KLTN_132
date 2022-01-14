@@ -240,6 +240,7 @@ namespace BachHoaXanh_Store
         private void bunifuButton2_Click(object sender, EventArgs e)
         {
             dgv_DSSP.DataSource = objProductBll.GetProductByKeysForOrderCustomer("", 0, 0, 1000);
+            dgv_Order.Rows.Clear();
         }
     }
 }
