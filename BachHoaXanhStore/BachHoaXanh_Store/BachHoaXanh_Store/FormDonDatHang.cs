@@ -29,11 +29,6 @@ namespace BachHoaXanh_Store
             txt_NgayDat.Text = DateTime.Now.ToString("d");
             txt_TongTien.Text = FormDatHang.intTotalPrice.ToString();
             dgv_Order.DataSource = lstOrderTmp;
-            toolTip1.SetToolTip(txt_NguoiDat, "Người đặt");
-            toolTip1.SetToolTip(txt_NhaCungCap, "Nhà cung cấp");
-            toolTip1.SetToolTip(txt_NgayDat, "Ngày đặt");
-            toolTip1.SetToolTip(txt_TongTien, "Tổng tiền");
-            toolTip1.SetToolTip(txt_TinhTrang, "Tình trạng");
         }
 
         private void btn_Huy_Click(object sender, EventArgs e)

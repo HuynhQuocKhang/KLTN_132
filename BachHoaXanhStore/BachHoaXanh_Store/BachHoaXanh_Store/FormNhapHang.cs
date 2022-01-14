@@ -22,8 +22,6 @@ namespace BachHoaXanh_Store
         public FormNhapHang()
         {
             InitializeComponent();
-            toolTip1.SetToolTip(cbo_NhaCungCap, "Tìm kiếm đơn hàng từ nhà cung cấp"); 
-            toolTip1.SetToolTip(txtKeyWord, "Tìm kiếm");
             if (FormLogin.objUserBO.Permission != 1)
             {
                 cbo_NhaCungCap.Text = "1 - Bách Hóa Xanh";
@@ -155,5 +153,7 @@ namespace BachHoaXanh_Store
                 }
             }
         }
+
+        
     }
 }

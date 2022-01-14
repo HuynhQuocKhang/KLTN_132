@@ -24,8 +24,6 @@ namespace BachHoaXanh_Store
             cbo_MaSieuThi.DataSource = objStoreBLL.GetAllStore();
             cbo_MaSieuThi.DisplayMember = "FullName";
             cbo_MaSieuThi.ValueMember = "MaST";
-            toolTip1.SetToolTip(cbo_MaSieuThi, "Mã siêu thị");
-            toolTip1.SetToolTip(txtKeyWord, "Tìm kiếm");
         }
 
         private void btn_TimKiem_Click(object sender, EventArgs e)
@@ -39,20 +37,6 @@ namespace BachHoaXanh_Store
 
         private void chk_SelectAll_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs e)
         {
-            if (chk_SelectAll.Checked == true)
-            {
-                for (int i = 0; i < dgv_DSPTH.Rows.Count; i++)
-                {
-                    dgv_DSPTH["col_check", i].Value = true;
-                }
-            }
-            else
-            {
-                for (int i = 0; i < dgv_DSPTH.Rows.Count; i++)
-                {
-                    dgv_DSPTH["col_check", i].Value = false;
-                }
-            }
         }
 
         private void dgv_DSPTH_SelectionChanged(object sender, EventArgs e)

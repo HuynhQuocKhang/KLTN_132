@@ -22,12 +22,6 @@ namespace BachHoaXanh_Store
         public FormThemSPKM()
         {
             InitializeComponent();
-
-            toolTip1.SetToolTip(txt_ProductFullName, "Tên sản phẩm");
-            toolTip1.SetToolTip(txt_SLTon, "Số lượng tồn");
-            toolTip1.SetToolTip(txt_SLThem, "Số lượng thêm");
-            toolTip1.SetToolTip(txt_GiaKM, "Giá KM");
-            toolTip1.SetToolTip(txtGiaBan, "Giá sản phẩm");
             
             if (FormDanhSachSP.isEdit == false)
             {

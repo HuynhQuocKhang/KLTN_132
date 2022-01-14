@@ -27,12 +27,6 @@ namespace BachHoaXanh_Store
             txt_TongTien.Text = FormPhanPhoiHang.objExportProductBO.TongTien.ToString();
             txt_NgayXuat.Text = DateTime.Now.ToString("d");
             dgv_CTPX.DataSource = FormPhanPhoiHang.lstExportProductDetailBO;
-
-            toolTip1.SetToolTip(txt_NguoiLap, "Người lập");
-            toolTip1.SetToolTip(txt_MaST, "Mã siêu thị");
-            toolTip1.SetToolTip(txt_DonDatHang, "Mã đơn đặt hàng");
-            toolTip1.SetToolTip(txt_TongTien, "Tổng tiền");
-            toolTip1.SetToolTip(txt_NgayXuat, "Ngày xuất");
         }
 
         private void txt_NgayTra_TextChanged(object sender, EventArgs e)

@@ -69,9 +69,13 @@ namespace BachHoaXanh_Store
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges8 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties23 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties24 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties25 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties26 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties27 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties28 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges9 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties25 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties26 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties29 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties30 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             this.telerikMetroTheme1 = new Telerik.WinControls.Themes.TelerikMetroTheme();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -124,6 +128,12 @@ namespace BachHoaXanh_Store
             this.btn_XoaDonHang = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btn_TimKiem = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btn_Ketca = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
+            this.txt_TienKhachTra = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.lbl_TienThua = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.btn_ThanhToan = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -144,6 +154,8 @@ namespace BachHoaXanh_Store
             this.panel9.SuspendLayout();
             this.panel7.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
+            this.panel10.SuspendLayout();
+            this.tableLayoutPanel7.SuspendLayout();
             this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -393,13 +405,13 @@ namespace BachHoaXanh_Store
             this.txt_MaSP.SelectionStart = 0;
             this.txt_MaSP.ShortcutsEnabled = true;
             this.txt_MaSP.Size = new System.Drawing.Size(250, 40);
-            //this.txt_MaSP.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            this.txt_MaSP.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txt_MaSP.TabIndex = 2;
             this.txt_MaSP.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_MaSP.TextMarginBottom = 0;
             this.txt_MaSP.TextMarginLeft = 5;
             this.txt_MaSP.TextMarginTop = 0;
-            //this.txt_MaSP.TextPlaceholder = "";
+            this.txt_MaSP.TextPlaceholder = "";
             this.txt_MaSP.UseSystemPasswordChar = false;
             this.txt_MaSP.WordWrap = true;
             this.txt_MaSP.TextChange += new System.EventHandler(this.txt_MaSP_TextChange);
@@ -470,13 +482,13 @@ namespace BachHoaXanh_Store
             this.txt_SoLuong.SelectionStart = 0;
             this.txt_SoLuong.ShortcutsEnabled = true;
             this.txt_SoLuong.Size = new System.Drawing.Size(250, 40);
-            //this.txt_SoLuong.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            this.txt_SoLuong.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txt_SoLuong.TabIndex = 2;
             this.txt_SoLuong.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_SoLuong.TextMarginBottom = 0;
             this.txt_SoLuong.TextMarginLeft = 5;
             this.txt_SoLuong.TextMarginTop = 0;
-            //this.txt_SoLuong.TextPlaceholder = "";
+            this.txt_SoLuong.TextPlaceholder = "";
             this.txt_SoLuong.UseSystemPasswordChar = false;
             this.txt_SoLuong.WordWrap = true;
             this.txt_SoLuong.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_SoLuong_KeyPress);
@@ -682,6 +694,7 @@ namespace BachHoaXanh_Store
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.Controls.Add(this.panel8, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.panel7, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.panel10, 0, 2);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 63);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -1366,6 +1379,141 @@ namespace BachHoaXanh_Store
             this.btn_Ketca.UseDefaultRadiusAndThickness = true;
             this.btn_Ketca.Click += new System.EventHandler(this.btn_Ketca_Click);
             // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.tableLayoutPanel7);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel10.Location = new System.Drawing.Point(3, 552);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(334, 65);
+            this.panel10.TabIndex = 3;
+            // 
+            // tableLayoutPanel7
+            // 
+            this.tableLayoutPanel7.ColumnCount = 2;
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.43713F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 68.56287F));
+            this.tableLayoutPanel7.Controls.Add(this.txt_TienKhachTra, 1, 0);
+            this.tableLayoutPanel7.Controls.Add(this.label11, 0, 0);
+            this.tableLayoutPanel7.Controls.Add(this.label12, 0, 1);
+            this.tableLayoutPanel7.Controls.Add(this.lbl_TienThua, 1, 1);
+            this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
+            this.tableLayoutPanel7.RowCount = 2;
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 47.69231F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 52.30769F));
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(334, 65);
+            this.tableLayoutPanel7.TabIndex = 0;
+            // 
+            // txt_TienKhachTra
+            // 
+            this.txt_TienKhachTra.AcceptsReturn = false;
+            this.txt_TienKhachTra.AcceptsTab = false;
+            this.txt_TienKhachTra.AnimationSpeed = 200;
+            this.txt_TienKhachTra.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txt_TienKhachTra.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txt_TienKhachTra.BackColor = System.Drawing.Color.Transparent;
+            this.txt_TienKhachTra.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txt_TienKhachTra.BackgroundImage")));
+            this.txt_TienKhachTra.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.txt_TienKhachTra.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.txt_TienKhachTra.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.txt_TienKhachTra.BorderColorIdle = System.Drawing.Color.Silver;
+            this.txt_TienKhachTra.BorderRadius = 1;
+            this.txt_TienKhachTra.BorderThickness = 1;
+            this.txt_TienKhachTra.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txt_TienKhachTra.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_TienKhachTra.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            this.txt_TienKhachTra.DefaultText = "";
+            this.txt_TienKhachTra.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt_TienKhachTra.FillColor = System.Drawing.Color.White;
+            this.txt_TienKhachTra.HideSelection = true;
+            this.txt_TienKhachTra.IconLeft = null;
+            this.txt_TienKhachTra.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_TienKhachTra.IconPadding = 10;
+            this.txt_TienKhachTra.IconRight = null;
+            this.txt_TienKhachTra.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_TienKhachTra.Lines = new string[0];
+            this.txt_TienKhachTra.Location = new System.Drawing.Point(108, 3);
+            this.txt_TienKhachTra.MaxLength = 32767;
+            this.txt_TienKhachTra.MinimumSize = new System.Drawing.Size(100, 35);
+            this.txt_TienKhachTra.Modified = false;
+            this.txt_TienKhachTra.Multiline = false;
+            this.txt_TienKhachTra.Name = "txt_TienKhachTra";
+            stateProperties25.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties25.FillColor = System.Drawing.Color.Empty;
+            stateProperties25.ForeColor = System.Drawing.Color.Empty;
+            stateProperties25.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txt_TienKhachTra.OnActiveState = stateProperties25;
+            stateProperties26.BorderColor = System.Drawing.Color.Empty;
+            stateProperties26.FillColor = System.Drawing.Color.White;
+            stateProperties26.ForeColor = System.Drawing.Color.Empty;
+            stateProperties26.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txt_TienKhachTra.OnDisabledState = stateProperties26;
+            stateProperties27.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties27.FillColor = System.Drawing.Color.Empty;
+            stateProperties27.ForeColor = System.Drawing.Color.Empty;
+            stateProperties27.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txt_TienKhachTra.OnHoverState = stateProperties27;
+            stateProperties28.BorderColor = System.Drawing.Color.Silver;
+            stateProperties28.FillColor = System.Drawing.Color.White;
+            stateProperties28.ForeColor = System.Drawing.Color.Empty;
+            stateProperties28.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txt_TienKhachTra.OnIdleState = stateProperties28;
+            this.txt_TienKhachTra.PasswordChar = '\0';
+            this.txt_TienKhachTra.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txt_TienKhachTra.PlaceholderText = "";
+            this.txt_TienKhachTra.ReadOnly = false;
+            this.txt_TienKhachTra.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txt_TienKhachTra.SelectedText = "";
+            this.txt_TienKhachTra.SelectionLength = 0;
+            this.txt_TienKhachTra.SelectionStart = 0;
+            this.txt_TienKhachTra.ShortcutsEnabled = true;
+            this.txt_TienKhachTra.Size = new System.Drawing.Size(223, 35);
+            this.txt_TienKhachTra.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            this.txt_TienKhachTra.TabIndex = 3;
+            this.txt_TienKhachTra.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txt_TienKhachTra.TextMarginBottom = 0;
+            this.txt_TienKhachTra.TextMarginLeft = 5;
+            this.txt_TienKhachTra.TextMarginTop = 0;
+            this.txt_TienKhachTra.TextPlaceholder = "";
+            this.txt_TienKhachTra.UseSystemPasswordChar = false;
+            this.txt_TienKhachTra.WordWrap = true;
+            this.txt_TienKhachTra.TextChanged += new System.EventHandler(this.txt_TienKhachTra_TextChanged);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label11.Location = new System.Drawing.Point(3, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(99, 31);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "Tiền khách đưa";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label12.Location = new System.Drawing.Point(3, 31);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(99, 34);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "Tiền thừa";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lbl_TienThua
+            // 
+            this.lbl_TienThua.AutoSize = true;
+            this.lbl_TienThua.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_TienThua.Location = new System.Drawing.Point(108, 31);
+            this.lbl_TienThua.Name = "lbl_TienThua";
+            this.lbl_TienThua.Size = new System.Drawing.Size(223, 34);
+            this.lbl_TienThua.TabIndex = 1;
+            this.lbl_TienThua.Text = "0";
+            this.lbl_TienThua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // panel6
             // 
             this.panel6.Controls.Add(this.btn_ThanhToan);
@@ -1415,24 +1563,24 @@ namespace BachHoaXanh_Store
             this.btn_ThanhToan.IndicateFocus = false;
             this.btn_ThanhToan.Location = new System.Drawing.Point(0, 0);
             this.btn_ThanhToan.Name = "btn_ThanhToan";
-            stateProperties25.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(42)))));
-            stateProperties25.BorderRadius = 3;
-            stateProperties25.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            stateProperties25.BorderThickness = 1;
-            stateProperties25.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(42)))));
-            stateProperties25.ForeColor = System.Drawing.Color.White;
-            stateProperties25.IconLeftImage = null;
-            stateProperties25.IconRightImage = null;
-            this.btn_ThanhToan.onHoverState = stateProperties25;
-            stateProperties26.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(42)))));
-            stateProperties26.BorderRadius = 3;
-            stateProperties26.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            stateProperties26.BorderThickness = 1;
-            stateProperties26.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(42)))));
-            stateProperties26.ForeColor = System.Drawing.Color.White;
-            stateProperties26.IconLeftImage = null;
-            stateProperties26.IconRightImage = null;
-            this.btn_ThanhToan.OnPressedState = stateProperties26;
+            stateProperties29.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(42)))));
+            stateProperties29.BorderRadius = 3;
+            stateProperties29.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            stateProperties29.BorderThickness = 1;
+            stateProperties29.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(42)))));
+            stateProperties29.ForeColor = System.Drawing.Color.White;
+            stateProperties29.IconLeftImage = null;
+            stateProperties29.IconRightImage = null;
+            this.btn_ThanhToan.onHoverState = stateProperties29;
+            stateProperties30.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(42)))));
+            stateProperties30.BorderRadius = 3;
+            stateProperties30.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            stateProperties30.BorderThickness = 1;
+            stateProperties30.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(42)))));
+            stateProperties30.ForeColor = System.Drawing.Color.White;
+            stateProperties30.IconLeftImage = null;
+            stateProperties30.IconRightImage = null;
+            this.btn_ThanhToan.OnPressedState = stateProperties30;
             this.btn_ThanhToan.Size = new System.Drawing.Size(340, 63);
             this.btn_ThanhToan.TabIndex = 0;
             this.btn_ThanhToan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1477,6 +1625,9 @@ namespace BachHoaXanh_Store
             this.panel9.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.tableLayoutPanel6.ResumeLayout(false);
+            this.panel10.ResumeLayout(false);
+            this.tableLayoutPanel7.ResumeLayout(false);
+            this.tableLayoutPanel7.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -1540,5 +1691,11 @@ namespace BachHoaXanh_Store
         private System.Windows.Forms.DataGridViewTextBoxColumn MaSP;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenSP;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
+        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txt_TienKhachTra;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lbl_TienThua;
     }
 }
