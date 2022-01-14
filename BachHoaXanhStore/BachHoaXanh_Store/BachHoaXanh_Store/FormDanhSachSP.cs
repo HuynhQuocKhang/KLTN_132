@@ -48,10 +48,6 @@ namespace BachHoaXanh_Store
                 chk_AllStore.Checked = true;
             }
 
-            toolTip1.SetToolTip(cbo_LoaiSP, "Chọn tìm kiếm theo loại sản phẩm");
-            toolTip1.SetToolTip(cbo_NhaCungCap, "Chọn tìm kiếm theo nhà cung cấp");
-            toolTip1.SetToolTip(txtKeyWord, "Tìm kiếm dữ liệu sản phẩm");
-
             cbo_LoaiSP.DataSource = objProductTypeBLL.GetALLProductType();
             cbo_LoaiSP.DisplayMember = "FullName";
             cbo_LoaiSP.ValueMember = "MaLoaiSP";

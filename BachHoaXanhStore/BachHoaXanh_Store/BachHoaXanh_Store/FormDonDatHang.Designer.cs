@@ -64,6 +64,12 @@ namespace BachHoaXanh_Store
             this.telerikMetroTheme1 = new Telerik.WinControls.Themes.TelerikMetroTheme();
             this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
             this.dgv_Order = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GiaVon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txt_NhaCungCap = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.txt_TongTien = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.txt_NgayDat = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
@@ -79,13 +85,11 @@ namespace BachHoaXanh_Store
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GiaVon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Order)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -161,8 +165,45 @@ namespace BachHoaXanh_Store
             this.dgv_Order.Location = new System.Drawing.Point(3, 71);
             this.dgv_Order.Name = "dgv_Order";
             this.dgv_Order.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgv_Order.Size = new System.Drawing.Size(556, 265);
+            this.dgv_Order.Size = new System.Drawing.Size(556, 367);
             this.dgv_Order.TabIndex = 8;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "MaHDDat";
+            this.Column1.HeaderText = "Mã HDD";
+            this.Column1.Name = "Column1";
+            this.Column1.Visible = false;
+            // 
+            // MaSP
+            // 
+            this.MaSP.DataPropertyName = "MaSP";
+            this.MaSP.HeaderText = "Mã sản phẩm";
+            this.MaSP.Name = "MaSP";
+            // 
+            // TenSP
+            // 
+            this.TenSP.DataPropertyName = "TenSP";
+            this.TenSP.HeaderText = "Tên Sản Phẩm";
+            this.TenSP.Name = "TenSP";
+            // 
+            // SoLuong
+            // 
+            this.SoLuong.DataPropertyName = "SoLuong";
+            this.SoLuong.HeaderText = "Số lượng";
+            this.SoLuong.Name = "SoLuong";
+            // 
+            // GiaVon
+            // 
+            this.GiaVon.DataPropertyName = "GiaVon";
+            this.GiaVon.HeaderText = "Giá Vốn";
+            this.GiaVon.Name = "GiaVon";
+            // 
+            // col_ThanhTien
+            // 
+            this.col_ThanhTien.DataPropertyName = "ThanhTien";
+            this.col_ThanhTien.HeaderText = "Thành tiền";
+            this.col_ThanhTien.Name = "col_ThanhTien";
             // 
             // txt_NhaCungCap
             // 
@@ -194,7 +235,7 @@ namespace BachHoaXanh_Store
             this.txt_NhaCungCap.IconRight = null;
             this.txt_NhaCungCap.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_NhaCungCap.Lines = new string[0];
-            this.txt_NhaCungCap.Location = new System.Drawing.Point(33, 117);
+            this.txt_NhaCungCap.Location = new System.Drawing.Point(33, 157);
             this.txt_NhaCungCap.MaxLength = 32767;
             this.txt_NhaCungCap.MinimumSize = new System.Drawing.Size(100, 35);
             this.txt_NhaCungCap.Modified = false;
@@ -270,7 +311,7 @@ namespace BachHoaXanh_Store
             this.txt_TongTien.IconRight = null;
             this.txt_TongTien.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_TongTien.Lines = new string[0];
-            this.txt_TongTien.Location = new System.Drawing.Point(33, 207);
+            this.txt_TongTien.Location = new System.Drawing.Point(33, 287);
             this.txt_TongTien.MaxLength = 32767;
             this.txt_TongTien.MinimumSize = new System.Drawing.Size(100, 35);
             this.txt_TongTien.Modified = false;
@@ -346,7 +387,7 @@ namespace BachHoaXanh_Store
             this.txt_NgayDat.IconRight = null;
             this.txt_NgayDat.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_NgayDat.Lines = new string[0];
-            this.txt_NgayDat.Location = new System.Drawing.Point(33, 162);
+            this.txt_NgayDat.Location = new System.Drawing.Point(33, 222);
             this.txt_NgayDat.MaxLength = 32767;
             this.txt_NgayDat.MinimumSize = new System.Drawing.Size(100, 35);
             this.txt_NgayDat.Modified = false;
@@ -423,7 +464,7 @@ namespace BachHoaXanh_Store
             this.txt_TinhTrang.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_TinhTrang.Lines = new string[] {
         "Đặt hàng"};
-            this.txt_TinhTrang.Location = new System.Drawing.Point(33, 252);
+            this.txt_TinhTrang.Location = new System.Drawing.Point(33, 352);
             this.txt_TinhTrang.MaxLength = 32767;
             this.txt_TinhTrang.MinimumSize = new System.Drawing.Size(100, 35);
             this.txt_TinhTrang.Modified = false;
@@ -507,7 +548,7 @@ namespace BachHoaXanh_Store
             this.btn_TraHang.IdleIconLeftImage = null;
             this.btn_TraHang.IdleIconRightImage = null;
             this.btn_TraHang.IndicateFocus = false;
-            this.btn_TraHang.Location = new System.Drawing.Point(171, 297);
+            this.btn_TraHang.Location = new System.Drawing.Point(171, 397);
             this.btn_TraHang.Name = "btn_TraHang";
             stateProperties9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(221)))), ((int)(((byte)(158)))));
             stateProperties9.BorderRadius = 25;
@@ -547,9 +588,9 @@ namespace BachHoaXanh_Store
             this.tableLayoutPanel3.RowCount = 3;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 68F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 14F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(562, 372);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(562, 455);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // panel3
@@ -559,7 +600,7 @@ namespace BachHoaXanh_Store
             this.panel3.Location = new System.Drawing.Point(352, 3);
             this.panel3.Name = "panel3";
             this.tableLayoutPanel1.SetRowSpan(this.panel3, 3);
-            this.panel3.Size = new System.Drawing.Size(562, 372);
+            this.panel3.Size = new System.Drawing.Size(562, 455);
             this.panel3.TabIndex = 1;
             // 
             // btn_Huy
@@ -600,7 +641,7 @@ namespace BachHoaXanh_Store
             this.btn_Huy.IdleIconLeftImage = null;
             this.btn_Huy.IdleIconRightImage = null;
             this.btn_Huy.IndicateFocus = false;
-            this.btn_Huy.Location = new System.Drawing.Point(33, 297);
+            this.btn_Huy.Location = new System.Drawing.Point(33, 397);
             this.btn_Huy.Name = "btn_Huy";
             stateProperties11.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(124)))), ((int)(((byte)(75)))));
             stateProperties11.BorderRadius = 25;
@@ -661,27 +702,38 @@ namespace BachHoaXanh_Store
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 37F));
-            this.tableLayoutPanel2.Controls.Add(this.txt_NhaCungCap, 1, 2);
-            this.tableLayoutPanel2.Controls.Add(this.txt_TinhTrang, 1, 5);
-            this.tableLayoutPanel2.Controls.Add(this.btn_TraHang, 2, 6);
-            this.tableLayoutPanel2.Controls.Add(this.btn_Huy, 1, 6);
+            this.tableLayoutPanel2.Controls.Add(this.txt_NhaCungCap, 1, 4);
+            this.tableLayoutPanel2.Controls.Add(this.txt_TinhTrang, 1, 10);
+            this.tableLayoutPanel2.Controls.Add(this.btn_TraHang, 2, 11);
+            this.tableLayoutPanel2.Controls.Add(this.btn_Huy, 1, 11);
             this.tableLayoutPanel2.Controls.Add(this.panel2, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.txt_NguoiDat, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.txt_NgayDat, 1, 3);
-            this.tableLayoutPanel2.Controls.Add(this.txt_TongTien, 1, 4);
+            this.tableLayoutPanel2.Controls.Add(this.txt_NguoiDat, 1, 2);
+            this.tableLayoutPanel2.Controls.Add(this.txt_NgayDat, 1, 6);
+            this.tableLayoutPanel2.Controls.Add(this.txt_TongTien, 1, 8);
+            this.tableLayoutPanel2.Controls.Add(this.label1, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.label2, 1, 3);
+            this.tableLayoutPanel2.Controls.Add(this.label3, 1, 5);
+            this.tableLayoutPanel2.Controls.Add(this.label4, 1, 7);
+            this.tableLayoutPanel2.Controls.Add(this.label5, 1, 9);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 8;
+            this.tableLayoutPanel2.RowCount = 13;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 69F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 44F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(343, 372);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(343, 455);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // txt_NguoiDat
@@ -714,7 +766,7 @@ namespace BachHoaXanh_Store
             this.txt_NguoiDat.IconRight = null;
             this.txt_NguoiDat.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_NguoiDat.Lines = new string[0];
-            this.txt_NguoiDat.Location = new System.Drawing.Point(33, 72);
+            this.txt_NguoiDat.Location = new System.Drawing.Point(33, 92);
             this.txt_NguoiDat.MaxLength = 32767;
             this.txt_NguoiDat.MinimumSize = new System.Drawing.Size(100, 35);
             this.txt_NguoiDat.Modified = false;
@@ -767,7 +819,7 @@ namespace BachHoaXanh_Store
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
             this.tableLayoutPanel1.SetRowSpan(this.panel1, 3);
-            this.panel1.Size = new System.Drawing.Size(343, 372);
+            this.panel1.Size = new System.Drawing.Size(343, 455);
             this.panel1.TabIndex = 0;
             // 
             // tableLayoutPanel1
@@ -785,7 +837,7 @@ namespace BachHoaXanh_Store
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 117F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 78F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(917, 378);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(917, 461);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // bunifuElipse2
@@ -793,49 +845,67 @@ namespace BachHoaXanh_Store
             this.bunifuElipse2.ElipseRadius = 35;
             this.bunifuElipse2.TargetControl = this;
             // 
-            // Column1
+            // label1
             // 
-            this.Column1.DataPropertyName = "MaHDDat";
-            this.Column1.HeaderText = "Mã HDD";
-            this.Column1.Name = "Column1";
-            this.Column1.Visible = false;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(57)))), ((int)(((byte)(32)))));
+            this.label1.Location = new System.Drawing.Point(33, 69);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(72, 14);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Người đặt ";
             // 
-            // MaSP
+            // label2
             // 
-            this.MaSP.DataPropertyName = "MaSP";
-            this.MaSP.HeaderText = "Mã sản phẩm";
-            this.MaSP.Name = "MaSP";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(57)))), ((int)(((byte)(32)))));
+            this.label2.Location = new System.Drawing.Point(33, 134);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(89, 14);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Nhà cung cấp";
             // 
-            // TenSP
+            // label3
             // 
-            this.TenSP.DataPropertyName = "TenSP";
-            this.TenSP.HeaderText = "Tên Sản Phẩm";
-            this.TenSP.Name = "TenSP";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(57)))), ((int)(((byte)(32)))));
+            this.label3.Location = new System.Drawing.Point(33, 199);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(62, 14);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Ngày đặt";
             // 
-            // SoLuong
+            // label4
             // 
-            this.SoLuong.DataPropertyName = "SoLuong";
-            this.SoLuong.HeaderText = "Số lượng";
-            this.SoLuong.Name = "SoLuong";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(57)))), ((int)(((byte)(32)))));
+            this.label4.Location = new System.Drawing.Point(33, 264);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(66, 14);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Tổng tiền";
             // 
-            // GiaVon
+            // label5
             // 
-            this.GiaVon.DataPropertyName = "GiaVon";
-            this.GiaVon.HeaderText = "Giá Vốn";
-            this.GiaVon.Name = "GiaVon";
-            // 
-            // col_ThanhTien
-            // 
-            this.col_ThanhTien.DataPropertyName = "ThanhTien";
-            this.col_ThanhTien.HeaderText = "Thành tiền";
-            this.col_ThanhTien.Name = "col_ThanhTien";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(57)))), ((int)(((byte)(32)))));
+            this.label5.Location = new System.Drawing.Point(33, 329);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(71, 14);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Tình trạng";
             // 
             // FormDonDatHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(247)))), ((int)(((byte)(228)))));
-            this.ClientSize = new System.Drawing.Size(949, 410);
+            this.ClientSize = new System.Drawing.Size(949, 493);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormDonDatHang";
@@ -847,6 +917,7 @@ namespace BachHoaXanh_Store
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -874,12 +945,16 @@ namespace BachHoaXanh_Store
         private Telerik.WinControls.Themes.TelerikMetroTheme telerikMetroTheme1;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txt_NguoiDat;
-        private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaSP;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenSP;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn GiaVon;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_ThanhTien;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }

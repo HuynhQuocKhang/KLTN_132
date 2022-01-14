@@ -271,13 +271,13 @@ namespace BachHoaXanh_Store
             this.txt_pass.SelectionStart = 0;
             this.txt_pass.ShortcutsEnabled = true;
             this.txt_pass.Size = new System.Drawing.Size(260, 35);
-            //this.txt_pass.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            this.txt_pass.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txt_pass.TabIndex = 1;
             this.txt_pass.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_pass.TextMarginBottom = 0;
             this.txt_pass.TextMarginLeft = 5;
             this.txt_pass.TextMarginTop = 0;
-            //this.txt_pass.TextPlaceholder = "Enter text";
+            this.txt_pass.TextPlaceholder = "Enter text";
             this.txt_pass.UseSystemPasswordChar = true;
             this.txt_pass.WordWrap = true;
             // 
@@ -371,13 +371,13 @@ namespace BachHoaXanh_Store
             this.txt_user.SelectionStart = 0;
             this.txt_user.ShortcutsEnabled = true;
             this.txt_user.Size = new System.Drawing.Size(260, 35);
-            //this.txt_user.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            this.txt_user.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txt_user.TabIndex = 1;
             this.txt_user.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_user.TextMarginBottom = 0;
             this.txt_user.TextMarginLeft = 5;
             this.txt_user.TextMarginTop = 0;
-            //this.txt_user.TextPlaceholder = "Enter text";
+            this.txt_user.TextPlaceholder = "Enter text";
             this.txt_user.UseSystemPasswordChar = false;
             this.txt_user.WordWrap = true;
             // 

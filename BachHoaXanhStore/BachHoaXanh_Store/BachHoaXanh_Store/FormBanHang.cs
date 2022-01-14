@@ -25,6 +25,12 @@ namespace BachHoaXanh_Store
         public static bool isApplyPromo = false;
         public static List<InvoiceWatingBO> lstWating = new List<InvoiceWatingBO>();
         int Section = 2;
+        private string tienKhachDua;
+        private string tienThua;
+
+        public string TienThua { get => tienThua; set => tienThua = value; }
+        public string TienKhachDua { get => tienKhachDua; set => tienKhachDua = value; }
+
         public FormBanHang()
         {
             InitializeComponent();
@@ -550,6 +556,8 @@ namespace BachHoaXanh_Store
                         if (objInvoiceBLL.InsertInvoiceDetail(lsInvoiceDetail) && objOrderStoreBLL.UpdateMultiProductFromStore(lstProduct, (int)FormLogin.objUserBO.StoreId))
                         {
                             MessageBox.Show("Tạo hóa đơn thành công");
+                            tienKhachDua = txt_TienKhachTra.Text;
+                            tienThua = lbl_TienThua.Text;
                             Program.frmReport = new FormReport("Bill");
                             Program.frmReport.ShowDialog();
                             lstProduct = new List<ProductBO>();
@@ -933,6 +941,12 @@ namespace BachHoaXanh_Store
             dgv_DSKM.Rows.Clear();
             lbl_SoLuong.Text = "0";
             lbl_TongTien.Text = "0";
+        }
+
+
+        private void txt_TienKhachTra_TextChanged(object sender, EventArgs e)
+        {
+            lbl_TienThua.Text = ( int.Parse(txt_TienKhachTra.Text) - int.Parse(lbl_TongTien.Text)).ToString();
         }
     }
 }

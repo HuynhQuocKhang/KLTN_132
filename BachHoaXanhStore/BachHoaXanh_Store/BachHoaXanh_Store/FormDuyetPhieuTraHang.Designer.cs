@@ -85,10 +85,8 @@ namespace BachHoaXanh_Store
             this.panel4 = new System.Windows.Forms.Panel();
             this.bunifuButton2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btn_DuyetDonTraHang = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.chk_SelectAll = new Bunifu.UI.WinForms.BunifuCheckBox();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -99,7 +97,6 @@ namespace BachHoaXanh_Store
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DSCT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DSPTH)).BeginInit();
             this.panel4.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -118,7 +115,6 @@ namespace BachHoaXanh_Store
             this.tableLayoutPanel1.Controls.Add(this.dgv_DSCT, 2, 2);
             this.tableLayoutPanel1.Controls.Add(this.dgv_DSPTH, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.panel4, 2, 3);
-            this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 3);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(16, 16);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -126,7 +122,7 @@ namespace BachHoaXanh_Store
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 107F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 44F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1334, 736);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
@@ -149,8 +145,8 @@ namespace BachHoaXanh_Store
             this.tableLayoutPanel2.Location = new System.Drawing.Point(23, 13);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 62F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 18F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 68F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 12F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1288, 101);
             this.tableLayoutPanel2.TabIndex = 2;
             // 
@@ -159,9 +155,9 @@ namespace BachHoaXanh_Store
             this.panel1.Controls.Add(this.bunifuCustomLabel1);
             this.panel1.Controls.Add(this.chk_AllStore);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 65);
+            this.panel1.Location = new System.Drawing.Point(3, 71);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(316, 33);
+            this.panel1.Size = new System.Drawing.Size(316, 27);
             this.panel1.TabIndex = 8;
             // 
             // bunifuCustomLabel1
@@ -171,7 +167,7 @@ namespace BachHoaXanh_Store
             this.bunifuCustomLabel1.Location = new System.Drawing.Point(21, 0);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
             this.bunifuCustomLabel1.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(144, 33);
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(144, 27);
             this.bunifuCustomLabel1.TabIndex = 1;
             this.bunifuCustomLabel1.Text = "Tất cả siêu thị";
             // 
@@ -267,7 +263,7 @@ namespace BachHoaXanh_Store
             this.btn_TimKiem.IdleIconLeftImage = null;
             this.btn_TimKiem.IdleIconRightImage = null;
             this.btn_TimKiem.IndicateFocus = false;
-            this.btn_TimKiem.Location = new System.Drawing.Point(969, 65);
+            this.btn_TimKiem.Location = new System.Drawing.Point(969, 71);
             this.btn_TimKiem.Name = "btn_TimKiem";
             stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(221)))), ((int)(((byte)(158)))));
             stateProperties1.BorderRadius = 35;
@@ -287,7 +283,7 @@ namespace BachHoaXanh_Store
             stateProperties2.IconLeftImage = null;
             stateProperties2.IconRightImage = null;
             this.btn_TimKiem.OnPressedState = stateProperties2;
-            this.btn_TimKiem.Size = new System.Drawing.Size(316, 33);
+            this.btn_TimKiem.Size = new System.Drawing.Size(316, 27);
             this.btn_TimKiem.TabIndex = 7;
             this.btn_TimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_TimKiem.TextMarginLeft = 0;
@@ -299,6 +295,7 @@ namespace BachHoaXanh_Store
             this.tableLayoutPanel3.ColumnCount = 2;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.3038F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55.6962F));
+            this.tableLayoutPanel3.Controls.Add(this.bunifuLabel2, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.txtKeyWord, 0, 1);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(325, 3);
@@ -306,7 +303,7 @@ namespace BachHoaXanh_Store
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(316, 56);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(316, 62);
             this.tableLayoutPanel3.TabIndex = 11;
             // 
             // txtKeyWord
@@ -339,7 +336,7 @@ namespace BachHoaXanh_Store
             this.txtKeyWord.IconRight = null;
             this.txtKeyWord.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtKeyWord.Lines = new string[0];
-            this.txtKeyWord.Location = new System.Drawing.Point(3, 19);
+            this.txtKeyWord.Location = new System.Drawing.Point(3, 25);
             this.txtKeyWord.MaxLength = 32767;
             this.txtKeyWord.MinimumSize = new System.Drawing.Size(100, 20);
             this.txtKeyWord.Modified = false;
@@ -390,6 +387,7 @@ namespace BachHoaXanh_Store
             this.tableLayoutPanel4.ColumnCount = 2;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Controls.Add(this.bunifuLabel1, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.cbo_MaSieuThi, 0, 1);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 3);
@@ -397,7 +395,7 @@ namespace BachHoaXanh_Store
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(316, 56);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(316, 62);
             this.tableLayoutPanel4.TabIndex = 12;
             // 
             // cbo_MaSieuThi
@@ -427,7 +425,7 @@ namespace BachHoaXanh_Store
             this.cbo_MaSieuThi.ItemForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(19)))), ((int)(((byte)(10)))));
             this.cbo_MaSieuThi.ItemHeight = 26;
             this.cbo_MaSieuThi.ItemHighLightColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(92)))), ((int)(((byte)(83)))));
-            this.cbo_MaSieuThi.Location = new System.Drawing.Point(3, 19);
+            this.cbo_MaSieuThi.Location = new System.Drawing.Point(3, 25);
             this.cbo_MaSieuThi.MaximumSize = new System.Drawing.Size(5000, 0);
             this.cbo_MaSieuThi.Name = "cbo_MaSieuThi";
             this.cbo_MaSieuThi.Size = new System.Drawing.Size(310, 32);
@@ -447,14 +445,13 @@ namespace BachHoaXanh_Store
             this.tableLayoutPanel5.RowCount = 2;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(316, 56);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(316, 62);
             this.tableLayoutPanel5.TabIndex = 13;
             // 
             // bunifuLabel3
             // 
             this.bunifuLabel3.AutoEllipsis = false;
             this.bunifuLabel3.AutoSize = false;
-            this.tableLayoutPanel5.SetColumnSpan(this.bunifuLabel3, 2);
             this.bunifuLabel3.CursorType = null;
             this.bunifuLabel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bunifuLabel3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -462,7 +459,7 @@ namespace BachHoaXanh_Store
             this.bunifuLabel3.Location = new System.Drawing.Point(3, 3);
             this.bunifuLabel3.Name = "bunifuLabel3";
             this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel3.Size = new System.Drawing.Size(310, 10);
+            this.bunifuLabel3.Size = new System.Drawing.Size(152, 16);
             this.bunifuLabel3.TabIndex = 1;
             this.bunifuLabel3.Text = "Trả hàng từ ngày";
             this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -491,7 +488,7 @@ namespace BachHoaXanh_Store
             this.dtp_NgayBatDau.Icon = ((System.Drawing.Image)(resources.GetObject("dtp_NgayBatDau.Icon")));
             this.dtp_NgayBatDau.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(139)))), ((int)(((byte)(125)))));
             this.dtp_NgayBatDau.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
-            this.dtp_NgayBatDau.Location = new System.Drawing.Point(3, 19);
+            this.dtp_NgayBatDau.Location = new System.Drawing.Point(3, 25);
             this.dtp_NgayBatDau.MinimumSize = new System.Drawing.Size(100, 32);
             this.dtp_NgayBatDau.Name = "dtp_NgayBatDau";
             this.dtp_NgayBatDau.Size = new System.Drawing.Size(310, 32);
@@ -510,7 +507,7 @@ namespace BachHoaXanh_Store
             this.tableLayoutPanel6.RowCount = 2;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(316, 56);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(316, 62);
             this.tableLayoutPanel6.TabIndex = 14;
             // 
             // bunifuLabel4
@@ -525,7 +522,7 @@ namespace BachHoaXanh_Store
             this.bunifuLabel4.Location = new System.Drawing.Point(3, 3);
             this.bunifuLabel4.Name = "bunifuLabel4";
             this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel4.Size = new System.Drawing.Size(310, 10);
+            this.bunifuLabel4.Size = new System.Drawing.Size(310, 16);
             this.bunifuLabel4.TabIndex = 2;
             this.bunifuLabel4.Text = "Đến ngày";
             this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -554,7 +551,7 @@ namespace BachHoaXanh_Store
             this.dtp_NgayKetThuc.Icon = ((System.Drawing.Image)(resources.GetObject("dtp_NgayKetThuc.Icon")));
             this.dtp_NgayKetThuc.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(139)))), ((int)(((byte)(125)))));
             this.dtp_NgayKetThuc.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
-            this.dtp_NgayKetThuc.Location = new System.Drawing.Point(3, 19);
+            this.dtp_NgayKetThuc.Location = new System.Drawing.Point(3, 25);
             this.dtp_NgayKetThuc.MinimumSize = new System.Drawing.Size(100, 32);
             this.dtp_NgayKetThuc.Name = "dtp_NgayKetThuc";
             this.dtp_NgayKetThuc.Size = new System.Drawing.Size(310, 32);
@@ -602,7 +599,7 @@ namespace BachHoaXanh_Store
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv_DSCT.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgv_DSCT.Size = new System.Drawing.Size(641, 574);
+            this.dgv_DSCT.Size = new System.Drawing.Size(641, 569);
             this.dgv_DSCT.TabIndex = 8;
             // 
             // col_MaSP
@@ -685,7 +682,7 @@ namespace BachHoaXanh_Store
             dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv_DSPTH.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgv_DSPTH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_DSPTH.Size = new System.Drawing.Size(641, 574);
+            this.dgv_DSPTH.Size = new System.Drawing.Size(641, 569);
             this.dgv_DSPTH.TabIndex = 0;
             this.dgv_DSPTH.SelectionChanged += new System.EventHandler(this.dgv_DSPTH_SelectionChanged);
             // 
@@ -761,9 +758,9 @@ namespace BachHoaXanh_Store
             this.panel4.Controls.Add(this.bunifuButton2);
             this.panel4.Controls.Add(this.btn_DuyetDonTraHang);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(670, 700);
+            this.panel4.Location = new System.Drawing.Point(670, 695);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(641, 33);
+            this.panel4.Size = new System.Drawing.Size(641, 38);
             this.panel4.TabIndex = 9;
             // 
             // bunifuButton2
@@ -824,7 +821,7 @@ namespace BachHoaXanh_Store
             stateProperties8.IconLeftImage = null;
             stateProperties8.IconRightImage = null;
             this.bunifuButton2.OnPressedState = stateProperties8;
-            this.bunifuButton2.Size = new System.Drawing.Size(250, 33);
+            this.bunifuButton2.Size = new System.Drawing.Size(250, 38);
             this.bunifuButton2.TabIndex = 19;
             this.bunifuButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuButton2.TextMarginLeft = 0;
@@ -889,88 +886,47 @@ namespace BachHoaXanh_Store
             stateProperties10.IconLeftImage = null;
             stateProperties10.IconRightImage = null;
             this.btn_DuyetDonTraHang.OnPressedState = stateProperties10;
-            this.btn_DuyetDonTraHang.Size = new System.Drawing.Size(250, 33);
+            this.btn_DuyetDonTraHang.Size = new System.Drawing.Size(250, 38);
             this.btn_DuyetDonTraHang.TabIndex = 15;
             this.btn_DuyetDonTraHang.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_DuyetDonTraHang.TextMarginLeft = 0;
             this.btn_DuyetDonTraHang.UseDefaultRadiusAndThickness = true;
             this.btn_DuyetDonTraHang.Click += new System.EventHandler(this.btn_DuyetDonTraHang_Click);
             // 
-            // panel2
+            // bunifuLabel1
             // 
-            this.panel2.Controls.Add(this.bunifuCustomLabel2);
-            this.panel2.Controls.Add(this.chk_SelectAll);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(23, 700);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(641, 33);
-            this.panel2.TabIndex = 8;
+            this.bunifuLabel1.AutoEllipsis = false;
+            this.bunifuLabel1.AutoSize = false;
+            this.bunifuLabel1.CursorType = null;
+            this.bunifuLabel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bunifuLabel1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(18)))), ((int)(((byte)(10)))));
+            this.bunifuLabel1.Location = new System.Drawing.Point(3, 3);
+            this.bunifuLabel1.Name = "bunifuLabel1";
+            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel1.Size = new System.Drawing.Size(152, 16);
+            this.bunifuLabel1.TabIndex = 1;
+            this.bunifuLabel1.Text = "Mã siêu thị";
+            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // bunifuCustomLabel2
+            // bunifuLabel2
             // 
-            this.bunifuCustomLabel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(21, 0);
-            this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
-            this.bunifuCustomLabel2.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.bunifuCustomLabel2.Size = new System.Drawing.Size(144, 33);
-            this.bunifuCustomLabel2.TabIndex = 1;
-            this.bunifuCustomLabel2.Text = "Chọn tất cả";
-            // 
-            // chk_SelectAll
-            // 
-            this.chk_SelectAll.AllowBindingControlAnimation = true;
-            this.chk_SelectAll.AllowBindingControlColorChanges = false;
-            this.chk_SelectAll.AllowBindingControlLocation = true;
-            this.chk_SelectAll.AllowCheckBoxAnimation = false;
-            this.chk_SelectAll.AllowCheckmarkAnimation = true;
-            this.chk_SelectAll.AllowOnHoverStates = true;
-            this.chk_SelectAll.AutoCheck = true;
-            this.chk_SelectAll.BackColor = System.Drawing.Color.Transparent;
-            this.chk_SelectAll.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chk_SelectAll.BackgroundImage")));
-            this.chk_SelectAll.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.chk_SelectAll.BindingControl = null;
-            this.chk_SelectAll.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
-            this.chk_SelectAll.Checked = false;
-            this.chk_SelectAll.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
-            this.chk_SelectAll.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.chk_SelectAll.CustomCheckmarkImage = null;
-            this.chk_SelectAll.Dock = System.Windows.Forms.DockStyle.Left;
-            this.chk_SelectAll.Location = new System.Drawing.Point(0, 0);
-            this.chk_SelectAll.MinimumSize = new System.Drawing.Size(17, 17);
-            this.chk_SelectAll.Name = "chk_SelectAll";
-            this.chk_SelectAll.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(186)))), ((int)(((byte)(27)))));
-            this.chk_SelectAll.OnCheck.BorderRadius = 2;
-            this.chk_SelectAll.OnCheck.BorderThickness = 2;
-            this.chk_SelectAll.OnCheck.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(186)))), ((int)(((byte)(27)))));
-            this.chk_SelectAll.OnCheck.CheckmarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(244)))), ((int)(((byte)(215)))));
-            this.chk_SelectAll.OnCheck.CheckmarkThickness = 2;
-            this.chk_SelectAll.OnDisable.BorderColor = System.Drawing.Color.LightGray;
-            this.chk_SelectAll.OnDisable.BorderRadius = 2;
-            this.chk_SelectAll.OnDisable.BorderThickness = 2;
-            this.chk_SelectAll.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.chk_SelectAll.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
-            this.chk_SelectAll.OnDisable.CheckmarkThickness = 2;
-            this.chk_SelectAll.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(86)))), ((int)(((byte)(49)))));
-            this.chk_SelectAll.OnHoverChecked.BorderRadius = 2;
-            this.chk_SelectAll.OnHoverChecked.BorderThickness = 2;
-            this.chk_SelectAll.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(86)))), ((int)(((byte)(49)))));
-            this.chk_SelectAll.OnHoverChecked.CheckmarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(244)))), ((int)(((byte)(215)))));
-            this.chk_SelectAll.OnHoverChecked.CheckmarkThickness = 2;
-            this.chk_SelectAll.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(86)))), ((int)(((byte)(49)))));
-            this.chk_SelectAll.OnHoverUnchecked.BorderRadius = 2;
-            this.chk_SelectAll.OnHoverUnchecked.BorderThickness = 2;
-            this.chk_SelectAll.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.chk_SelectAll.OnUncheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(186)))), ((int)(((byte)(27)))));
-            this.chk_SelectAll.OnUncheck.BorderRadius = 2;
-            this.chk_SelectAll.OnUncheck.BorderThickness = 2;
-            this.chk_SelectAll.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.chk_SelectAll.Size = new System.Drawing.Size(21, 21);
-            this.chk_SelectAll.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
-            this.chk_SelectAll.TabIndex = 0;
-            this.chk_SelectAll.ThreeState = false;
-            this.chk_SelectAll.ToolTipText = null;
-            this.chk_SelectAll.CheckedChanged += new System.EventHandler<Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs>(this.chk_SelectAll_CheckedChanged);
+            this.bunifuLabel2.AutoEllipsis = false;
+            this.bunifuLabel2.AutoSize = false;
+            this.tableLayoutPanel3.SetColumnSpan(this.bunifuLabel2, 2);
+            this.bunifuLabel2.CursorType = null;
+            this.bunifuLabel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bunifuLabel2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(18)))), ((int)(((byte)(10)))));
+            this.bunifuLabel2.Location = new System.Drawing.Point(3, 3);
+            this.bunifuLabel2.Name = "bunifuLabel2";
+            this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel2.Size = new System.Drawing.Size(310, 16);
+            this.bunifuLabel2.TabIndex = 1;
+            this.bunifuLabel2.Text = "Tìm kiếm";
+            this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // FormDuyetPhieuTraHang
             // 
@@ -993,7 +949,6 @@ namespace BachHoaXanh_Store
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DSCT)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DSPTH)).EndInit();
             this.panel4.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1011,9 +966,6 @@ namespace BachHoaXanh_Store
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_TimKiem;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dgv_DSPTH;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dgv_DSCT;
-        private System.Windows.Forms.Panel panel2;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
-        private Bunifu.UI.WinForms.BunifuCheckBox chk_SelectAll;
         private System.Windows.Forms.Panel panel4;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton2;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_DuyetDonTraHang;
@@ -1037,6 +989,7 @@ namespace BachHoaXanh_Store
         private System.Windows.Forms.DataGridViewTextBoxColumn col_TenSP;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_SoLuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_NgayHetHan;
-        private System.Windows.Forms.ToolTip toolTip1;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
     }
 }

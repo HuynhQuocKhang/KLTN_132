@@ -129,11 +129,12 @@ namespace BachHoaXanh_Store
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel4.Controls.Add(this.bunifuDropdown1, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.bunifuLabel5, 0, 0);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(23, 694);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(322, 37);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(618, 39);
             this.tableLayoutPanel4.TabIndex = 22;
             // 
             // bunifuDropdown1
@@ -181,7 +182,7 @@ namespace BachHoaXanh_Store
             this.bunifuLabel5.Location = new System.Drawing.Point(3, 3);
             this.bunifuLabel5.Name = "bunifuLabel5";
             this.bunifuLabel5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel5.Size = new System.Drawing.Size(102, 31);
+            this.bunifuLabel5.Size = new System.Drawing.Size(102, 33);
             this.bunifuLabel5.TabIndex = 5;
             this.bunifuLabel5.Text = "Dữ liệu/Trang";
             this.bunifuLabel5.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
