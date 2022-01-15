@@ -31,6 +31,7 @@ namespace BachHoaXanh_Store.ReportForm
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rptDonDatHang));
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
+            this.img_barcode = new DevExpress.XtraReports.UI.XRPictureBox();
             this.xrLabel19 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel18 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrPictureBox1 = new DevExpress.XtraReports.UI.XRPictureBox();
@@ -72,7 +73,6 @@ namespace BachHoaXanh_Store.ReportForm
             this.xrLine8 = new DevExpress.XtraReports.UI.XRLine();
             this.rptDDH_DataSet1 = new BachHoaXanh_Store.ReportForm.rptDDH_DataSet();
             this.cTHoaDonDatNCCTableAdapter = new BachHoaXanh_Store.ReportForm.rptDDH_DataSetTableAdapters.CTHoaDonDatNCCTableAdapter();
-            this.img_barcode = new DevExpress.XtraReports.UI.XRPictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.rptDDH_DataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -107,6 +107,13 @@ namespace BachHoaXanh_Store.ReportForm
             this.pTongTien});
             this.TopMargin.HeightF = 266.4184F;
             this.TopMargin.Name = "TopMargin";
+            // 
+            // img_barcode
+            // 
+            this.img_barcode.LocationFloat = new DevExpress.Utils.PointFloat(10.00001F, 66.84631F);
+            this.img_barcode.Name = "img_barcode";
+            this.img_barcode.SizeF = new System.Drawing.SizeF(207.6389F, 31.07996F);
+            this.img_barcode.Sizing = DevExpress.XtraPrinting.ImageSizeMode.StretchImage;
             // 
             // xrLabel19
             // 
@@ -417,21 +424,21 @@ namespace BachHoaXanh_Store.ReportForm
             // 
             // xrLine13
             // 
-            this.xrLine13.LocationFloat = new DevExpress.Utils.PointFloat(8.144526F, 31.46837F);
+            this.xrLine13.LocationFloat = new DevExpress.Utils.PointFloat(6.118911F, 31.46836F);
             this.xrLine13.Name = "xrLine13";
             this.xrLine13.SizeF = new System.Drawing.SizeF(634.0001F, 2.946991F);
             // 
             // xrLine11
             // 
             this.xrLine11.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
-            this.xrLine11.LocationFloat = new DevExpress.Utils.PointFloat(7.999933F, 0F);
+            this.xrLine11.LocationFloat = new DevExpress.Utils.PointFloat(5.974357F, 0F);
             this.xrLine11.Name = "xrLine11";
             this.xrLine11.SizeF = new System.Drawing.SizeF(2.144608F, 31.15867F);
             // 
             // xrLine9
             // 
             this.xrLine9.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
-            this.xrLine9.LocationFloat = new DevExpress.Utils.PointFloat(640F, 0F);
+            this.xrLine9.LocationFloat = new DevExpress.Utils.PointFloat(637.9744F, 0F);
             this.xrLine9.Name = "xrLine9";
             this.xrLine9.SizeF = new System.Drawing.SizeF(2.144653F, 31.15867F);
             // 
@@ -439,7 +446,7 @@ namespace BachHoaXanh_Store.ReportForm
             // 
             this.xrLabel15.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[ThanhTien]")});
-            this.xrLabel15.LocationFloat = new DevExpress.Utils.PointFloat(505.3112F, 0F);
+            this.xrLabel15.LocationFloat = new DevExpress.Utils.PointFloat(503.2856F, 0F);
             this.xrLabel15.Multiline = true;
             this.xrLabel15.Name = "xrLabel15";
             this.xrLabel15.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -452,7 +459,7 @@ namespace BachHoaXanh_Store.ReportForm
             // 
             this.xrLabel14.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[TenSP]")});
-            this.xrLabel14.LocationFloat = new DevExpress.Utils.PointFloat(161.3056F, 0F);
+            this.xrLabel14.LocationFloat = new DevExpress.Utils.PointFloat(159.28F, 0F);
             this.xrLabel14.Multiline = true;
             this.xrLabel14.Name = "xrLabel14";
             this.xrLabel14.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -465,7 +472,7 @@ namespace BachHoaXanh_Store.ReportForm
             // 
             this.xrLabel13.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[SoLuong]")});
-            this.xrLabel13.LocationFloat = new DevExpress.Utils.PointFloat(418.582F, 0F);
+            this.xrLabel13.LocationFloat = new DevExpress.Utils.PointFloat(416.5564F, 0F);
             this.xrLabel13.Multiline = true;
             this.xrLabel13.Name = "xrLabel13";
             this.xrLabel13.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -478,7 +485,7 @@ namespace BachHoaXanh_Store.ReportForm
             // 
             this.xrLabel12.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[MaSP]")});
-            this.xrLabel12.LocationFloat = new DevExpress.Utils.PointFloat(10.14454F, 0F);
+            this.xrLabel12.LocationFloat = new DevExpress.Utils.PointFloat(8.11891F, 0F);
             this.xrLabel12.Multiline = true;
             this.xrLabel12.Name = "xrLabel12";
             this.xrLabel12.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -490,21 +497,21 @@ namespace BachHoaXanh_Store.ReportForm
             // xrLine6
             // 
             this.xrLine6.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
-            this.xrLine6.LocationFloat = new DevExpress.Utils.PointFloat(147.8788F, 0F);
+            this.xrLine6.LocationFloat = new DevExpress.Utils.PointFloat(145.8532F, 0F);
             this.xrLine6.Name = "xrLine6";
             this.xrLine6.SizeF = new System.Drawing.SizeF(2.144608F, 31.15867F);
             // 
             // xrLine7
             // 
             this.xrLine7.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
-            this.xrLine7.LocationFloat = new DevExpress.Utils.PointFloat(495.8413F, 0F);
+            this.xrLine7.LocationFloat = new DevExpress.Utils.PointFloat(493.8157F, 0F);
             this.xrLine7.Name = "xrLine7";
             this.xrLine7.SizeF = new System.Drawing.SizeF(2.144592F, 31.15867F);
             // 
             // xrLine8
             // 
             this.xrLine8.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
-            this.xrLine8.LocationFloat = new DevExpress.Utils.PointFloat(416.4374F, 0F);
+            this.xrLine8.LocationFloat = new DevExpress.Utils.PointFloat(414.4118F, 0F);
             this.xrLine8.Name = "xrLine8";
             this.xrLine8.SizeF = new System.Drawing.SizeF(2.144623F, 31.15867F);
             // 
@@ -516,13 +523,6 @@ namespace BachHoaXanh_Store.ReportForm
             // cTHoaDonDatNCCTableAdapter
             // 
             this.cTHoaDonDatNCCTableAdapter.ClearBeforeFill = true;
-            // 
-            // img_barcode
-            // 
-            this.img_barcode.LocationFloat = new DevExpress.Utils.PointFloat(10.00001F, 66.84631F);
-            this.img_barcode.Name = "img_barcode";
-            this.img_barcode.SizeF = new System.Drawing.SizeF(207.6389F, 31.07996F);
-            this.img_barcode.Sizing = DevExpress.XtraPrinting.ImageSizeMode.StretchImage;
             // 
             // rptDonDatHang
             // 

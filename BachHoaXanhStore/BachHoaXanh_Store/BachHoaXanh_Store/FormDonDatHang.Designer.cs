@@ -227,7 +227,7 @@ namespace BachHoaXanh_Store
             this.txt_NhaCungCap.DefaultText = "";
             this.txt_NhaCungCap.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txt_NhaCungCap.Enabled = false;
-            this.txt_NhaCungCap.FillColor = System.Drawing.Color.White;
+            //this.txt_NhaCungCap.FillColor = System.Drawing.Color.White;
             this.txt_NhaCungCap.HideSelection = true;
             this.txt_NhaCungCap.IconLeft = null;
             this.txt_NhaCungCap.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;

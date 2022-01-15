@@ -55,6 +55,18 @@ namespace BachHoaXanh_Store
                 documentViewer1.PrintingSystem = rptBill.PrintingSystem;
                 rptBill.CreateDocument();
             }    
+            else if(reportType== "ThongKeKho")
+            {
+                rptThongKe rptThongKe = new rptThongKe("ThongKeKho");
+                documentViewer1.PrintingSystem = rptThongKe.PrintingSystem;
+                rptThongKe.CreateDocument();
+            }    
+            else if(reportType == "ThongKe")
+            {
+                rptThongKe rptThongKe = new rptThongKe("ThongKe");
+                documentViewer1.PrintingSystem = rptThongKe.PrintingSystem;
+                rptThongKe.CreateDocument();
+            }    
         }
     }
 }
