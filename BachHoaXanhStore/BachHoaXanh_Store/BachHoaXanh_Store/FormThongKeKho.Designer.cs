@@ -29,16 +29,16 @@ namespace BachHoaXanh_Store
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series19 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series20 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series21 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series22 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series23 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series24 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label1 = new System.Windows.Forms.Label();
             this.chr_SoLuong = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chr_GiaTri = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -69,51 +69,51 @@ namespace BachHoaXanh_Store
             // 
             // chr_SoLuong
             // 
-            chartArea7.Name = "ChartArea1";
-            this.chr_SoLuong.ChartAreas.Add(chartArea7);
+            chartArea1.Name = "ChartArea1";
+            this.chr_SoLuong.ChartAreas.Add(chartArea1);
             this.chr_SoLuong.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend7.Name = "Legend1";
-            this.chr_SoLuong.Legends.Add(legend7);
+            legend1.Name = "Legend1";
+            this.chr_SoLuong.Legends.Add(legend1);
             this.chr_SoLuong.Location = new System.Drawing.Point(3, 145);
             this.chr_SoLuong.Name = "chr_SoLuong";
-            series19.ChartArea = "ChartArea1";
-            series19.Legend = "Legend1";
-            series19.Name = "Đơn đặt hàng";
-            series20.ChartArea = "ChartArea1";
-            series20.Legend = "Legend1";
-            series20.Name = "Phiếu trả hàng";
-            series21.ChartArea = "ChartArea1";
-            series21.Legend = "Legend1";
-            series21.Name = "Phiếu xuất kho";
-            this.chr_SoLuong.Series.Add(series19);
-            this.chr_SoLuong.Series.Add(series20);
-            this.chr_SoLuong.Series.Add(series21);
-            this.chr_SoLuong.Size = new System.Drawing.Size(670, 572);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Đơn đặt hàng";
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Phiếu trả hàng";
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Phiếu xuất kho";
+            this.chr_SoLuong.Series.Add(series1);
+            this.chr_SoLuong.Series.Add(series2);
+            this.chr_SoLuong.Series.Add(series3);
+            this.chr_SoLuong.Size = new System.Drawing.Size(671, 572);
             this.chr_SoLuong.TabIndex = 0;
             this.chr_SoLuong.Text = "chart1";
             // 
             // chr_GiaTri
             // 
-            chartArea8.Name = "ChartArea1";
-            this.chr_GiaTri.ChartAreas.Add(chartArea8);
+            chartArea2.Name = "ChartArea1";
+            this.chr_GiaTri.ChartAreas.Add(chartArea2);
             this.chr_GiaTri.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend8.Name = "Legend1";
-            this.chr_GiaTri.Legends.Add(legend8);
-            this.chr_GiaTri.Location = new System.Drawing.Point(679, 145);
+            legend2.Name = "Legend1";
+            this.chr_GiaTri.Legends.Add(legend2);
+            this.chr_GiaTri.Location = new System.Drawing.Point(680, 145);
             this.chr_GiaTri.Name = "chr_GiaTri";
-            series22.ChartArea = "ChartArea1";
-            series22.Legend = "Legend1";
-            series22.Name = "Đơn đặt hàng";
-            series23.ChartArea = "ChartArea1";
-            series23.Legend = "Legend1";
-            series23.Name = "Phiếu trả hàng";
-            series24.ChartArea = "ChartArea1";
-            series24.Legend = "Legend1";
-            series24.Name = "Phiếu xuất kho";
-            this.chr_GiaTri.Series.Add(series22);
-            this.chr_GiaTri.Series.Add(series23);
-            this.chr_GiaTri.Series.Add(series24);
-            this.chr_GiaTri.Size = new System.Drawing.Size(668, 572);
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Đơn đặt hàng";
+            series5.ChartArea = "ChartArea1";
+            series5.Legend = "Legend1";
+            series5.Name = "Phiếu trả hàng";
+            series6.ChartArea = "ChartArea1";
+            series6.Legend = "Legend1";
+            series6.Name = "Phiếu xuất kho";
+            this.chr_GiaTri.Series.Add(series4);
+            this.chr_GiaTri.Series.Add(series5);
+            this.chr_GiaTri.Series.Add(series6);
+            this.chr_GiaTri.Size = new System.Drawing.Size(667, 572);
             this.chr_GiaTri.TabIndex = 0;
             this.chr_GiaTri.Text = "chart1";
             // 
@@ -161,7 +161,7 @@ namespace BachHoaXanh_Store
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 38.59649F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 61.40351F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(670, 57);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(671, 57);
             this.tableLayoutPanel2.TabIndex = 2;
             // 
             // label2
@@ -169,7 +169,7 @@ namespace BachHoaXanh_Store
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(250, 22);
+            this.label2.Size = new System.Drawing.Size(250, 21);
             this.label2.TabIndex = 1;
             this.label2.Text = " Dữ liệu theo tháng";
             this.label2.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -177,7 +177,7 @@ namespace BachHoaXanh_Store
             // cbo_Month
             // 
             this.cbo_Month.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cbo_Month.Location = new System.Drawing.Point(3, 25);
+            this.cbo_Month.Location = new System.Drawing.Point(3, 24);
             this.cbo_Month.Name = "cbo_Month";
             this.cbo_Month.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -200,7 +200,7 @@ namespace BachHoaXanh_Store
             // 
             // simpleButton1
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(259, 25);
+            this.simpleButton1.Location = new System.Drawing.Point(259, 24);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(160, 20);
             this.simpleButton1.TabIndex = 3;
