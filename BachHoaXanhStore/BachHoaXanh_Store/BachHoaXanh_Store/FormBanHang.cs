@@ -517,6 +517,10 @@ namespace BachHoaXanh_Store
                         if (objInvoiceBLL.InsertInvoiceDetail(lsInvoiceDetail) && objOrderStoreBLL.UpdateMultiProductFromStore(lstProduct, (int)FormLogin.objUserBO.StoreId) && objOrderStoreBLL.UpdateListProductPromotion(lstProductPromotion, (int)FormLogin.objUserBO.StoreId))
                         {
                             MessageBox.Show("Tạo hóa đơn thành công");
+                            tienKhachDua = txt_TienKhachTra.Text;
+                            tienThua = lbl_TienThua.Text;
+                            Program.frmReport = new FormReport("Bill");
+                            Program.frmReport.ShowDialog();
                             lstProduct = new List<ProductBO>();
                             lsInvoiceDetail = new List<InvoiceDetailBO>();
                             lstProductPromotion = new List<ProductBO>();
