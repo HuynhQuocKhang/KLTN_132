@@ -59,8 +59,10 @@ namespace BachHoaXanh_Store
             this.chk_AllStore = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.btn_TimKiem = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.txtKeyWord = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.cbo_MaSieuThi = new Bunifu.UI.WinForms.BunifuDropdown();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
@@ -85,8 +87,6 @@ namespace BachHoaXanh_Store
             this.panel4 = new System.Windows.Forms.Panel();
             this.bunifuButton2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btn_DuyetDonTraHang = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -306,6 +306,24 @@ namespace BachHoaXanh_Store
             this.tableLayoutPanel3.Size = new System.Drawing.Size(316, 62);
             this.tableLayoutPanel3.TabIndex = 11;
             // 
+            // bunifuLabel2
+            // 
+            this.bunifuLabel2.AutoEllipsis = false;
+            this.bunifuLabel2.AutoSize = false;
+            this.tableLayoutPanel3.SetColumnSpan(this.bunifuLabel2, 2);
+            this.bunifuLabel2.CursorType = null;
+            this.bunifuLabel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bunifuLabel2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(18)))), ((int)(((byte)(10)))));
+            this.bunifuLabel2.Location = new System.Drawing.Point(3, 3);
+            this.bunifuLabel2.Name = "bunifuLabel2";
+            this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel2.Size = new System.Drawing.Size(310, 16);
+            this.bunifuLabel2.TabIndex = 1;
+            this.bunifuLabel2.Text = "Tìm kiếm";
+            this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
             // txtKeyWord
             // 
             this.txtKeyWord.AcceptsReturn = false;
@@ -397,6 +415,23 @@ namespace BachHoaXanh_Store
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(316, 62);
             this.tableLayoutPanel4.TabIndex = 12;
+            // 
+            // bunifuLabel1
+            // 
+            this.bunifuLabel1.AutoEllipsis = false;
+            this.bunifuLabel1.AutoSize = false;
+            this.bunifuLabel1.CursorType = null;
+            this.bunifuLabel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bunifuLabel1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(18)))), ((int)(((byte)(10)))));
+            this.bunifuLabel1.Location = new System.Drawing.Point(3, 3);
+            this.bunifuLabel1.Name = "bunifuLabel1";
+            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel1.Size = new System.Drawing.Size(152, 16);
+            this.bunifuLabel1.TabIndex = 1;
+            this.bunifuLabel1.Text = "Mã siêu thị";
+            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // cbo_MaSieuThi
             // 
@@ -892,41 +927,6 @@ namespace BachHoaXanh_Store
             this.btn_DuyetDonTraHang.TextMarginLeft = 0;
             this.btn_DuyetDonTraHang.UseDefaultRadiusAndThickness = true;
             this.btn_DuyetDonTraHang.Click += new System.EventHandler(this.btn_DuyetDonTraHang_Click);
-            // 
-            // bunifuLabel1
-            // 
-            this.bunifuLabel1.AutoEllipsis = false;
-            this.bunifuLabel1.AutoSize = false;
-            this.bunifuLabel1.CursorType = null;
-            this.bunifuLabel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuLabel1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(18)))), ((int)(((byte)(10)))));
-            this.bunifuLabel1.Location = new System.Drawing.Point(3, 3);
-            this.bunifuLabel1.Name = "bunifuLabel1";
-            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(152, 16);
-            this.bunifuLabel1.TabIndex = 1;
-            this.bunifuLabel1.Text = "Mã siêu thị";
-            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // bunifuLabel2
-            // 
-            this.bunifuLabel2.AutoEllipsis = false;
-            this.bunifuLabel2.AutoSize = false;
-            this.tableLayoutPanel3.SetColumnSpan(this.bunifuLabel2, 2);
-            this.bunifuLabel2.CursorType = null;
-            this.bunifuLabel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuLabel2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(18)))), ((int)(((byte)(10)))));
-            this.bunifuLabel2.Location = new System.Drawing.Point(3, 3);
-            this.bunifuLabel2.Name = "bunifuLabel2";
-            this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel2.Size = new System.Drawing.Size(310, 16);
-            this.bunifuLabel2.TabIndex = 1;
-            this.bunifuLabel2.Text = "Tìm kiếm";
-            this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // FormDuyetPhieuTraHang
             // 

@@ -26,14 +26,14 @@ namespace BachHoaXanh_Store
             InitializeComponent();
             lbl_MaST.Text = objStoreBLL.getStoreNameByUser(FormLogin.objUserBO.StoreId);
             lbl_MaNV.Text = FormLogin.objUserBO.UserName + " - " + FormLogin.objUserBO.UserFullName;
-            if(FormLogin.objUserBO.Permission==1)
+            if (FormLogin.objUserBO.Permission == 1)
             {
                 accordionControlElement2.Visible = false;
-            }    
+            }
             else
             {
                 accordionControlElement1.Visible = false;
-            }    
+            }
         }
         private string reportType;
         public string ReportType { get => reportType; set => reportType = value; }
@@ -67,7 +67,6 @@ namespace BachHoaXanh_Store
         private void btn_XuatHang_Click(object sender, EventArgs e)
         {
             panel9.Visible = true;
-            bunifuButton1.Visible = true;
             reportType = "PhanPhoiHang";
             label1.Text = "Số đơn đã xuất";
             label3.Text = "Tổng giá trị xuất";
@@ -78,7 +77,6 @@ namespace BachHoaXanh_Store
         private void accordionControlElement6_Click(object sender, EventArgs e)
         {
             panel9.Visible = true;
-            bunifuButton1.Visible = false;
             label1.Text = "Số sản phẩm còn";
             label3.Text = "Số sản phẩm đã hết";
             Program.frmDanhSachSP = new FormDanhSachSP();
@@ -88,7 +86,6 @@ namespace BachHoaXanh_Store
         private void accordionControlElement7_Click(object sender, EventArgs e)
         {
             panel9.Visible = true;
-            bunifuButton1.Visible = false;
             label1.Text = "Số đơn chưa xử lí";
             label3.Text = "Số đơn đã xử lí";
             Program.frmXemDonDatHang = new FormXemDonDatHang();
@@ -97,13 +94,12 @@ namespace BachHoaXanh_Store
 
         private void accordionControlElement3_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void accordionControlElement4_Click(object sender, EventArgs e)
         {
             panel9.Visible = true;
-            bunifuButton1.Visible = true;
             reportType = "TraHang";
             label1.Text = "Số sản phẩm trả về";
             label3.Text = "Tổng giá trị trả về";
@@ -114,7 +110,6 @@ namespace BachHoaXanh_Store
         private void accordionControlElement5_Click(object sender, EventArgs e)
         {
             panel9.Visible = true;
-            bunifuButton1.Visible = false;
             label1.Text = "Số sản phẩm còn";
             label3.Text = "Số sản phẩm đã hết";
             Program.frmDanhSachSP = new FormDanhSachSP();
@@ -124,7 +119,6 @@ namespace BachHoaXanh_Store
         private void accordionControlElement8_Click(object sender, EventArgs e)
         {
             panel9.Visible = true;
-            bunifuButton1.Visible = false;
             label1.Text = "Số đơn chưa xử lí";
             label3.Text = "Số đơn đã xử lí";
             Program.frmXemDonDatHang = new FormXemDonDatHang();
@@ -180,7 +174,7 @@ namespace BachHoaXanh_Store
                     {
                         int intProductOOT = 0;
                         intProductOOT = lstProduct.Count(x => x.SoLuong == 0);
-                        label2.Text= objProductBLL.CountProductStore().ToString();
+                        label2.Text = objProductBLL.CountProductStore().ToString();
                         label4.Text = intProductOOT.ToString();
                     }
 
@@ -229,7 +223,6 @@ namespace BachHoaXanh_Store
         private void accordionControlElement6_Click_1(object sender, EventArgs e)
         {
             panel9.Visible = true;
-            bunifuButton1.Visible = true;
             reportType = "DatHang";
             label1.Text = "Số đơn đã đặt";
             label3.Text = "Tổng giá trị đặt";
@@ -240,7 +233,6 @@ namespace BachHoaXanh_Store
         private void accordionControlElement9_Click(object sender, EventArgs e)
         {
             panel9.Visible = true;
-            bunifuButton1.Visible = true;
             reportType = "DatHang";
             label1.Text = "Số đơn đã đặt";
             label3.Text = "Tổng giá trị đặt";
@@ -270,7 +262,6 @@ namespace BachHoaXanh_Store
         private void accordionControlElement10_Click(object sender, EventArgs e)
         {
             panel9.Visible = true;
-            bunifuButton1.Visible = true;
             reportType = "TraHang";
             label1.Text = "Số sản phẩm trả về";
             label3.Text = "Tổng giá trị trả về";
@@ -281,7 +272,6 @@ namespace BachHoaXanh_Store
         private void accordionControlElement11_Click(object sender, EventArgs e)
         {
             panel9.Visible = true;
-            bunifuButton1.Visible = true;
             reportType = "DuyetTraHang";
             label1.Text = "Số đơn đã duyệt";
             label3.Text = "Số đơn chưa duyệt";
@@ -292,7 +282,6 @@ namespace BachHoaXanh_Store
         private void accordionControlElement12_Click(object sender, EventArgs e)
         {
             panel9.Visible = true;
-            bunifuButton1.Visible = true;
             reportType = "DatHang";
             label1.Text = "Số đơn đã đặt";
             label3.Text = "Tổng giá trị đặt";
@@ -303,7 +292,6 @@ namespace BachHoaXanh_Store
         private void accordionControlElement13_Click(object sender, EventArgs e)
         {
             panel9.Visible = true;
-            bunifuButton1.Visible = true;
             reportType = "DatHang";
             label1.Text = "Số đơn đã đặt";
             label3.Text = "Tổng giá trị đặt";
@@ -314,6 +302,21 @@ namespace BachHoaXanh_Store
         private void accordionControlElement2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void accordionControlElement14_Click(object sender, EventArgs e)
+        {
+            panel9.Visible = false;
+            if (FormLogin.objUserBO.Permission == 2)
+            {
+                FormThongKe formThongKe = new FormThongKe();
+                ViewChildForm(formThongKe);
+            }
+            else
+            {
+                FormThongKeKho formThongKeKho = new FormThongKeKho();
+                ViewChildForm(formThongKeKho);
+            }
         }
     }
 }

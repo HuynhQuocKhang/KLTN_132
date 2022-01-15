@@ -31,6 +31,7 @@ namespace BachHoaXanh_Store.ReportForm
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rptPhieuTraHang));
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
+            this.img_barcode = new DevExpress.XtraReports.UI.XRPictureBox();
             this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
@@ -70,7 +71,6 @@ namespace BachHoaXanh_Store.ReportForm
             this.xrLine13 = new DevExpress.XtraReports.UI.XRLine();
             this.rptPTH_DataSet1 = new BachHoaXanh_Store.ReportForm.rptPTH_DataSet();
             this.cTPhieuTraHangTableAdapter = new BachHoaXanh_Store.ReportForm.rptPTH_DataSetTableAdapters.CTPhieuTraHangTableAdapter();
-            this.img_barcode = new DevExpress.XtraReports.UI.XRPictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.rptPTH_DataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -103,6 +103,13 @@ namespace BachHoaXanh_Store.ReportForm
             this.xrLabel4});
             this.TopMargin.HeightF = 277.0304F;
             this.TopMargin.Name = "TopMargin";
+            // 
+            // img_barcode
+            // 
+            this.img_barcode.LocationFloat = new DevExpress.Utils.PointFloat(10.14455F, 77.26297F);
+            this.img_barcode.Name = "img_barcode";
+            this.img_barcode.SizeF = new System.Drawing.SizeF(207.6389F, 31.07996F);
+            this.img_barcode.Sizing = DevExpress.XtraPrinting.ImageSizeMode.StretchImage;
             // 
             // xrLabel3
             // 
@@ -180,7 +187,7 @@ namespace BachHoaXanh_Store.ReportForm
             // 
             // pNgayTra
             // 
-            this.pNgayTra.LocationFloat = new DevExpress.Utils.PointFloat(179.7914F, 212.4584F);
+            this.pNgayTra.LocationFloat = new DevExpress.Utils.PointFloat(217.6388F, 212.4584F);
             this.pNgayTra.Multiline = true;
             this.pNgayTra.Name = "pNgayTra";
             this.pNgayTra.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -316,7 +323,7 @@ namespace BachHoaXanh_Store.ReportForm
             this.xrLabel7.Multiline = true;
             this.xrLabel7.Name = "xrLabel7";
             this.xrLabel7.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel7.SizeF = new System.Drawing.SizeF(121.875F, 23F);
+            this.xrLabel7.SizeF = new System.Drawing.SizeF(159.7223F, 23.00002F);
             this.xrLabel7.StylePriority.UseTextAlignment = false;
             this.xrLabel7.Text = "Ngày trả";
             this.xrLabel7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
@@ -491,13 +498,6 @@ namespace BachHoaXanh_Store.ReportForm
             // cTPhieuTraHangTableAdapter
             // 
             this.cTPhieuTraHangTableAdapter.ClearBeforeFill = true;
-            // 
-            // img_barcode
-            // 
-            this.img_barcode.LocationFloat = new DevExpress.Utils.PointFloat(10.14455F, 77.26297F);
-            this.img_barcode.Name = "img_barcode";
-            this.img_barcode.SizeF = new System.Drawing.SizeF(207.6389F, 31.07996F);
-            this.img_barcode.Sizing = DevExpress.XtraPrinting.ImageSizeMode.StretchImage;
             // 
             // rptPhieuTraHang
             // 
