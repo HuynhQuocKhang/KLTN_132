@@ -25,8 +25,8 @@ namespace BachHoaXanh_Store.ReportForm
             barcode = new Barcode();
             Image barCodeImage = barcode.Encode(TYPE.CODE128, strBarcode);
             img_barcode.Image = barCodeImage;
-            lbl_TienKhachTra.Text = Program.frmBanHang.TienKhachDua;
-            lbl_TienThua.Text = Program.frmBanHang.TienThua;
+            lbl_TienKhachTra.Text = FormBanHang.TienKhachDua;
+            lbl_TienThua.Text = FormBanHang.TienThua;
         }
 
     }

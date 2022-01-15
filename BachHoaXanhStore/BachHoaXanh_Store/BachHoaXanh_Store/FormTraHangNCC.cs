@@ -124,12 +124,22 @@ namespace BachHoaXanh_Store
                             objOrderCustomerDetailBO.SoLuong = int.Parse(dgv_Order["SoLuong", i].Value.ToString());
                             objOrderCustomerDetailBO.Ngay = dgv_Order["col_NgayHetHan", i].Value.ToString();
                             lstOrderDetailBO.Add(objOrderCustomerDetailBO);
-                            strCustomerName = cbo_NhaCungCap.Text;
-                            intCustomerId = int.Parse(cbo_NhaCungCap.SelectedValue.ToString());
+                            if (objUser.Permission != 1)
+                            {
+                                strCustomerName = cbo_NhaCungCap.Text;
+                                intCustomerId = int.Parse(cbo_NhaCungCap.SelectedValue.ToString());
+                            }
                         }
                     }
                 }
-
+                if (objUser.Permission == 1)
+                {
+                    var objProduct = objProductBLL.GetProductByid(dgv_Order["MaSP", 0].Value.ToString().Trim());
+                    var objCustomeer = objCustomerBLL.GetListALlCustomer().Where(x => x.MaNCC == objProduct.MaNCC).FirstOrDefault();
+                    strCustomerName = objCustomeer.FullName;
+                    intCustomerId = objCustomeer.MaNCC;
+                }
+                    
                 if (isOpen == true)
                 {
                     FormPhieuTraHang frmPhieuTraHang = new FormPhieuTraHang();

@@ -19,7 +19,7 @@ namespace BLL_DAO
                 objPhieuTraHang.MaNCC = model.MaNCC;
                 objPhieuTraHang.NguoiLapPhieu = model.NguoiLapPhieu;
                 objPhieuTraHang.NgayTra = model.NgayTra;
-                objPhieuTraHang.TongTien = 0;
+                objPhieuTraHang.TongTien = model.TongTien;
                 objPhieuTraHang.Isdeleted = false;
                 objPhieuTraHang.TinhTrang = 0;
                 db.PhieuTraHangs.InsertOnSubmit(objPhieuTraHang);

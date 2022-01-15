@@ -12,7 +12,7 @@ namespace BLL_DAO
         BachHoaXanhDataContext db = new BachHoaXanhDataContext();
         public ProductBLL()
         {
-             
+
         }
         //Lấy danh sách tất cả sản phẩm
         public List<ProductBO> GetListAllProduct()
@@ -77,7 +77,7 @@ namespace BLL_DAO
                                 GiaVon = objProduct.GiaVon,
                                 SoLuong = objProduct.SoLuong
                             };
-                
+
 
                 return model.OrderByDescending(x => x.MaSP).Take(intPageSize).ToList();
             }
@@ -88,7 +88,7 @@ namespace BLL_DAO
                             on objProduct.MaLoaiSP equals objProductType.MaLoaiSP
                             join objCustomer in db.NhaCungCaps
                             on objProduct.MaNCC equals objCustomer.MaNCC
-                            where objProduct.Isdeleted == false && objProduct.MaLoaiSP == intProductTypeId && (objProduct.TenSP.Contains(strkeywords.Trim()) || objProduct.MaSP.Contains(strkeywords.Trim())) 
+                            where objProduct.Isdeleted == false && objProduct.MaLoaiSP == intProductTypeId && (objProduct.TenSP.Contains(strkeywords.Trim()) || objProduct.MaSP.Contains(strkeywords.Trim()))
                             select new ProductBO()
                             {
                                 MaSP = objProduct.MaSP,
@@ -228,7 +228,7 @@ namespace BLL_DAO
                     objCheckDuplicate.SoLuong = model.SoLuong;
                     db.SubmitChanges();
                 }
-                
+
                 return true;
             }
             catch
@@ -236,6 +236,13 @@ namespace BLL_DAO
                 return false;
             }
         }
+
+        public SanPham GetProductByid(string strProductId)
+        {
+            var model = db.SanPhams.Where(x => x.MaSP == strProductId);
+            return model.ToList().FirstOrDefault();
+        }
+
 
         public List<ProductOrderCustomerBO> GetProductByKeysForOrderCustomer(string strkeywords = "", int intProductTypeId = 0, int intCustomerId = 0, int intStock = 0, int intPageSize = 50)
         {

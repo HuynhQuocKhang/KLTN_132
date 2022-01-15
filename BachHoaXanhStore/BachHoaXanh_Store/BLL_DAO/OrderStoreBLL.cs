@@ -256,7 +256,7 @@ namespace BLL_DAO
         //Get danh sách ddonwd dặt hàng
         public List<GetOrderFromStoreBO> GetOrderFromStoreBO(int intStoreId, DateTime dateFrom, DateTime dateTo)
         {
-            if (intStoreId == 0)
+            if (intStoreId == -1)
             {
                 var model = from objOrderStore in db.DonDatHangs
                             where objOrderStore.TinhTrang == 0
@@ -522,40 +522,78 @@ namespace BLL_DAO
         }
         public List<GetReturnProductsBO> GetReturnProductOrder(string pKeyWord, string strStoreId, DateTime dateFrom, DateTime dateTo)
         {
-            if (pKeyWord != "")
+            if (strStoreId == "-1")
             {
-                var model = from objOrderStore in db.PhieuTraHangs
-                            where (objOrderStore.MaPTH.ToString().Contains(pKeyWord.Trim()) ||
-                                   objOrderStore.NguoiLapPhieu.ToString().Contains(pKeyWord.Trim())) &&
-                                   objOrderStore.MaST == int.Parse(strStoreId.ToLower().Trim()) &&
-                                   objOrderStore.TinhTrang == 0
-                            select new GetReturnProductsBO()
-                            {
-                                MaPTH = objOrderStore.MaPTH,
-                                MaST = objOrderStore.MaST,
-                                MaNCC = objOrderStore.MaNCC,
-                                NgayTra = objOrderStore.NgayTra,
-                                NguoiLapPhieu = objOrderStore.NguoiLapPhieu,
-                                TongTien = objOrderStore.TongTien
-                            };
-                return model.OrderBy(x => x.MaPTH).Where(x => x.NgayTra <= dateTo && x.NgayTra >= dateFrom).ToList();
+                if (pKeyWord != "")
+                {
+                    var model = from objOrderStore in db.PhieuTraHangs
+                                where (objOrderStore.MaPTH.ToString().Contains(pKeyWord.Trim()) ||
+                                       objOrderStore.NguoiLapPhieu.ToString().Contains(pKeyWord.Trim())) &&
+                                       objOrderStore.MaST != int.Parse(strStoreId.ToLower().Trim()) &&
+                                       objOrderStore.TinhTrang == 0
+                                select new GetReturnProductsBO()
+                                {
+                                    MaPTH = objOrderStore.MaPTH,
+                                    MaST = objOrderStore.MaST,
+                                    MaNCC = objOrderStore.MaNCC,
+                                    NgayTra = objOrderStore.NgayTra,
+                                    NguoiLapPhieu = objOrderStore.NguoiLapPhieu,
+                                    TongTien = objOrderStore.TongTien
+                                };
+                    return model.OrderBy(x => x.MaPTH).Where(x => x.NgayTra <= dateTo && x.NgayTra >= dateFrom).ToList();
+                }
+                else
+                {
+                    var model = from objOrderStore in db.PhieuTraHangs
+                                where objOrderStore.MaST != int.Parse(strStoreId.ToLower().Trim()) && objOrderStore.TinhTrang == 0
+                                select new GetReturnProductsBO()
+                                {
+                                    MaPTH = objOrderStore.MaPTH,
+                                    MaST = objOrderStore.MaST,
+                                    MaNCC = objOrderStore.MaNCC,
+                                    NgayTra = objOrderStore.NgayTra,
+                                    NguoiLapPhieu = objOrderStore.NguoiLapPhieu,
+                                    TongTien = objOrderStore.TongTien
+                                };
+                    return model.OrderBy(x => x.MaPTH).Where(x => x.NgayTra <= dateTo && x.NgayTra >= dateFrom).ToList();
+                }
             }
             else
             {
-                var model = from objOrderStore in db.PhieuTraHangs
-                            where objOrderStore.MaST == (int.Parse(strStoreId.ToLower().Trim())) && objOrderStore.TinhTrang == 0
-                            select new GetReturnProductsBO()
-                            {
-                                MaPTH = objOrderStore.MaPTH,
-                                MaST = objOrderStore.MaST,
-                                MaNCC = objOrderStore.MaNCC,
-                                NgayTra = objOrderStore.NgayTra,
-                                NguoiLapPhieu = objOrderStore.NguoiLapPhieu,
-                                TongTien = objOrderStore.TongTien
-                            };
-                return model.OrderBy(x => x.MaPTH).Where(x => x.NgayTra <= dateTo && x.NgayTra >= dateFrom).ToList();
+                if (pKeyWord != "")
+                {
+                    var model = from objOrderStore in db.PhieuTraHangs
+                                where (objOrderStore.MaPTH.ToString().Contains(pKeyWord.Trim()) ||
+                                       objOrderStore.NguoiLapPhieu.ToString().Contains(pKeyWord.Trim())) &&
+                                       objOrderStore.MaST == int.Parse(strStoreId.ToLower().Trim()) &&
+                                       objOrderStore.TinhTrang == 0
+                                select new GetReturnProductsBO()
+                                {
+                                    MaPTH = objOrderStore.MaPTH,
+                                    MaST = objOrderStore.MaST,
+                                    MaNCC = objOrderStore.MaNCC,
+                                    NgayTra = objOrderStore.NgayTra,
+                                    NguoiLapPhieu = objOrderStore.NguoiLapPhieu,
+                                    TongTien = objOrderStore.TongTien
+                                };
+                    return model.OrderBy(x => x.MaPTH).Where(x => x.NgayTra <= dateTo && x.NgayTra >= dateFrom).ToList();
+                }
+                else
+                {
+                    var model = from objOrderStore in db.PhieuTraHangs
+                                where objOrderStore.MaST == (int.Parse(strStoreId.ToLower().Trim())) && objOrderStore.TinhTrang == 0
+                                select new GetReturnProductsBO()
+                                {
+                                    MaPTH = objOrderStore.MaPTH,
+                                    MaST = objOrderStore.MaST,
+                                    MaNCC = objOrderStore.MaNCC,
+                                    NgayTra = objOrderStore.NgayTra,
+                                    NguoiLapPhieu = objOrderStore.NguoiLapPhieu,
+                                    TongTien = objOrderStore.TongTien
+                                };
+                    return model.OrderBy(x => x.MaPTH).Where(x => x.NgayTra <= dateTo && x.NgayTra >= dateFrom).ToList();
+                }
             }
-
         }
 
         //Lấy Danh sách Sản phẩm Kho KM
@@ -765,7 +803,7 @@ namespace BLL_DAO
                 var model = from objProductPromo in db.KhoHangKMs
                             join objProduct in db.SanPhams
                             on objProductPromo.MaSP equals objProduct.MaSP
-                            where (objProductPromo.MaSP.Contains(strProductId) || objProduct.TenSP.Contains(strProductId)) && objProductPromo.MaST == intStoreId
+                            where (objProductPromo.MaSP.Contains(strProductId) || objProduct.TenSP.Contains(strProductId)) && objProductPromo.MaST == intStoreId && objProductPromo.NgayKM <= DateTime.Now && objProductPromo.NgayHetHan >= DateTime.Now
                             select new ProductPromotionBO()
                             {
                                 MaSP = objProductPromo.MaSP,

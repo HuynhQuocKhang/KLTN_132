@@ -16,15 +16,18 @@ namespace BachHoaXanh_Store
     {
         ExportProductBLL objExportProductBLL = new ExportProductBLL();
         OrderStoreBLL objOrderStoreBLL = new OrderStoreBLL();
+        StoreBLL objStoreBLL = new StoreBLL();
         public delegate void CloseDialog();
         public event CloseDialog CloseDialogEvent;
         public FormPhieuXuatKho()
         {
             InitializeComponent();
+            var objStore = objStoreBLL.GetAllStore().Where(x => x.MaST == FormPhanPhoiHang.objExportProductBO.MaST).FirstOrDefault();
             txt_NguoiLap.Text = FormPhanPhoiHang.objExportProductBO.NguoiLapPhieu;
-            txt_MaST.Text = FormPhanPhoiHang.objExportProductBO.MaST.ToString();
+            txt_MaST.Text = objStore.FullName;
             txt_DonDatHang.Text = FormPhanPhoiHang.objExportProductBO.MaDH.ToString();
-            txt_TongTien.Text = FormPhanPhoiHang.objExportProductBO.TongTien.ToString();
+            string tototPrice = FormPhanPhoiHang.objExportProductBO.TongTien.ToString();
+            txt_TongTien.Text = tototPrice;
             txt_NgayXuat.Text = DateTime.Now.ToString("d");
             dgv_CTPX.DataSource = FormPhanPhoiHang.lstExportProductDetailBO;
         }

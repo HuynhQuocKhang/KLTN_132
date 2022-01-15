@@ -17,7 +17,8 @@ namespace BLL_DAO
                         {
                             MaNCC = objCustomer.MaNCC,
                             TenNCC = objCustomer.TenNCC,
-                            DiaChi = objCustomer.DiaChi
+                            DiaChi = objCustomer.DiaChi,
+                            Email = objCustomer.Email
                         };
             model.OrderByDescending(x => x.MaNCC);
             return model.ToList();

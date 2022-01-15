@@ -11,7 +11,7 @@ namespace BO
         public int MaNCC { get; set; }
         public string TenNCC { get; set; }
         public string DiaChi { get; set; }
-
+        public string Email { get; set; }
         public string FullName
         {
             get { return string.Format(this.MaNCC.ToString() + " - " + this.TenNCC); }

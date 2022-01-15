@@ -44,6 +44,7 @@ namespace BachHoaXanh_Store
             }
             else
             {
+                cbo_DVT.SelectedIndex = 1;
                 bunifuLabel1.Text = "THÊM SẢN PHẢM";
                 btn_TraHang.Text = "Thêm Mới";
             }
@@ -58,7 +59,23 @@ namespace BachHoaXanh_Store
 
         private void btn_TraHang_Click(object sender, EventArgs e)
         {
-            string strNote = CheckValuePrice(txt_GiaBan.Text.Trim(), txt_GiaVon.Text.Trim());
+            string strNote = string.Empty;
+            if (cbo_MaLoaiSP.SelectedValue.ToString() == "1")
+            {
+                strNote = "Mã loại sản phẩm này không được áp dụng cho Kho. Xin vui lòng chọn mã loại sản phẩm khác!";
+            }
+            if ((strNote.Trim() == null || strNote == string.Empty) && cbo_NhaCungCap.SelectedValue.ToString() == "1")
+            {
+                strNote = "Mã nhà cung cấp này không được áp dụng. Xin vui lòng chọn mã loại sản phẩm khác!";
+            }
+            if ((strNote.Trim() == null || strNote == string.Empty) && (txt_TenSP.Text.Trim() == null || txt_TenSP.Text.Trim() == string.Empty))
+            {
+                strNote = "Xin vui lòng điền vào tên của sản phẩm";
+            }
+            if (strNote.Trim() == null || strNote == string.Empty)
+            {
+                strNote = CheckValuePrice(txt_GiaBan.Text.Trim(), txt_GiaVon.Text.Trim());
+            }
             if (strNote.Trim() == null || strNote == string.Empty)
             {
                 if (FormDanhSachSP.isEdit != true)
@@ -73,17 +90,60 @@ namespace BachHoaXanh_Store
                 objProductTmp.GiaBan = int.Parse(txt_GiaBan.Text.Trim());
                 objProductTmp.GiaVon = int.Parse(txt_GiaVon.Text.Trim());
                 objProductTmp.SoLuong = 0;
-                if (objProductBLL.InsertOrUpdate(objProductTmp))
+                //Kiểm tra tòn tại của sản phẩm
+                if (!FormDanhSachSP.isEdit)
                 {
-                    MessageBox.Show("Cập Nhật Thông Tin Thành Công");
-                    CloseDialogEvent();
-                    FormMain.lstProduct = objProductBLL.GetListAllProduct();
-                    FormDanhSachSP.objProductBO = new ProductBO();
-                    this.Close();
+                    var objProductexists = objProductBLL.GetProductByid(objProductTmp.MaSP);
+                    if (objProductexists != null)
+                    {
+                        DialogResult result;
+                        result = MessageBox.Show("Sản phẩm [ " + objProductexists.MaSP + " - " + objProductexists.TenSP + " ] đã tồn tại. Bạn có muốn cập nhật lại thông tin của sản phẩm này?", "Thông báo!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (result == DialogResult.Yes)
+                        {
+                            if (objProductBLL.InsertOrUpdate(objProductTmp))
+                            {
+                                MessageBox.Show("Cập Nhật Thông Tin Thành Công");
+                                CloseDialogEvent();
+                                FormMain.lstProduct = objProductBLL.GetListAllProduct();
+                                FormDanhSachSP.objProductBO = new ProductBO();
+                                this.Close();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Có lỗi trong quá trình thao tác. Xin vui lòng thử lại sau");
+                            }
+                        }
+                    }
+                    else
+                    {
+                        if (objProductBLL.InsertOrUpdate(objProductTmp))
+                        {
+                            MessageBox.Show("Cập Nhật Thông Tin Thành Công");
+                            CloseDialogEvent();
+                            FormMain.lstProduct = objProductBLL.GetListAllProduct();
+                            FormDanhSachSP.objProductBO = new ProductBO();
+                            this.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Có lỗi trong quá trình thao tác. Xin vui lòng thử lại sau");
+                        }
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Có lỗi trong quá trình thao tác. Xin vui lòng thử lại sau");
+                    if (objProductBLL.InsertOrUpdate(objProductTmp))
+                    {
+                        MessageBox.Show("Cập Nhật Thông Tin Thành Công");
+                        CloseDialogEvent();
+                        FormMain.lstProduct = objProductBLL.GetListAllProduct();
+                        FormDanhSachSP.objProductBO = new ProductBO();
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Có lỗi trong quá trình thao tác. Xin vui lòng thử lại sau");
+                    }
                 }
             }
             else
@@ -115,7 +175,5 @@ namespace BachHoaXanh_Store
                 return Note;
             }
         }
-
     }
-
 }

@@ -108,6 +108,11 @@ namespace BachHoaXanh_Store
             this.panel8 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.dgv_DSKM = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.MaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GiaKM = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -135,11 +140,6 @@ namespace BachHoaXanh_Store
             this.btn_ThanhToan = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.MaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GiaKM = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -791,6 +791,40 @@ namespace BachHoaXanh_Store
             this.dgv_DSKM.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_DSKM.Size = new System.Drawing.Size(328, 138);
             this.dgv_DSKM.TabIndex = 3;
+            // 
+            // MaSP
+            // 
+            this.MaSP.DataPropertyName = "MaSP";
+            this.MaSP.HeaderText = "Mã sản phẩm";
+            this.MaSP.Name = "MaSP";
+            this.MaSP.ReadOnly = true;
+            // 
+            // TenSP
+            // 
+            this.TenSP.DataPropertyName = "TenSP";
+            this.TenSP.HeaderText = "Tên sản phẩm";
+            this.TenSP.Name = "TenSP";
+            this.TenSP.ReadOnly = true;
+            // 
+            // SoLuong
+            // 
+            this.SoLuong.DataPropertyName = "SoLuong";
+            this.SoLuong.HeaderText = "Số Lượng";
+            this.SoLuong.Name = "SoLuong";
+            this.SoLuong.ReadOnly = true;
+            // 
+            // GiaKM
+            // 
+            this.GiaKM.DataPropertyName = "GiaKM";
+            this.GiaKM.HeaderText = "Gía Khuyế Mãi";
+            this.GiaKM.Name = "GiaKM";
+            this.GiaKM.ReadOnly = true;
+            // 
+            // ThanhTien
+            // 
+            this.ThanhTien.HeaderText = "Thành Tiền";
+            this.ThanhTien.Name = "ThanhTien";
+            this.ThanhTien.ReadOnly = true;
             // 
             // panel9
             // 
@@ -1463,7 +1497,9 @@ namespace BachHoaXanh_Store
             this.txt_TienKhachTra.TextPlaceholder = "";
             this.txt_TienKhachTra.UseSystemPasswordChar = false;
             this.txt_TienKhachTra.WordWrap = true;
+            this.txt_TienKhachTra.TextChange += new System.EventHandler(this.txt_TienKhachTra_TextChange);
             this.txt_TienKhachTra.TextChanged += new System.EventHandler(this.txt_TienKhachTra_TextChanged);
+            this.txt_TienKhachTra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_TienKhachTra_KeyPress);
             // 
             // label11
             // 
@@ -1581,40 +1617,6 @@ namespace BachHoaXanh_Store
             // 
             this.timer2.Interval = 3000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
-            // 
-            // MaSP
-            // 
-            this.MaSP.DataPropertyName = "MaSP";
-            this.MaSP.HeaderText = "Mã sản phẩm";
-            this.MaSP.Name = "MaSP";
-            this.MaSP.ReadOnly = true;
-            // 
-            // TenSP
-            // 
-            this.TenSP.DataPropertyName = "TenSP";
-            this.TenSP.HeaderText = "Tên sản phẩm";
-            this.TenSP.Name = "TenSP";
-            this.TenSP.ReadOnly = true;
-            // 
-            // SoLuong
-            // 
-            this.SoLuong.DataPropertyName = "SoLuong";
-            this.SoLuong.HeaderText = "Số Lượng";
-            this.SoLuong.Name = "SoLuong";
-            this.SoLuong.ReadOnly = true;
-            // 
-            // GiaKM
-            // 
-            this.GiaKM.DataPropertyName = "GiaKM";
-            this.GiaKM.HeaderText = "Gía Khuyế Mãi";
-            this.GiaKM.Name = "GiaKM";
-            this.GiaKM.ReadOnly = true;
-            // 
-            // ThanhTien
-            // 
-            this.ThanhTien.HeaderText = "Thành Tiền";
-            this.ThanhTien.Name = "ThanhTien";
-            this.ThanhTien.ReadOnly = true;
             // 
             // FormBanHang
             // 

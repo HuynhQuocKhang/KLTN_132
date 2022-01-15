@@ -9,6 +9,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net;
+using System.Net.Mail;
+using System.IO;
 
 namespace BachHoaXanh_Store
 {
@@ -18,8 +21,10 @@ namespace BachHoaXanh_Store
         OrderCustomerBLL objOrderCustomerBLL = new OrderCustomerBLL();
         OrderStoreBLL objOrderStoreBLL = new OrderStoreBLL();
         OrderStoreDetailBLL objOrderStoreDetailBLL = new OrderStoreDetailBLL();
+        CustomerBLL objCustomerBLL = new CustomerBLL();
         public delegate void CloseDialog();
         public event CloseDialog CloseDialogEvent;
+        string[] str2 = new string[500];
         public FormDonDatHang()
         {
             InitializeComponent();
@@ -71,7 +76,51 @@ namespace BachHoaXanh_Store
                     {
                         Program.frmReport = new FormReport("DatHang");
                         Program.frmReport.ShowDialog();
-                        MessageBox.Show("Đặt hàng thành công");
+
+                        //Gửi Email đến NCC
+                        DialogResult result;
+                        result = MessageBox.Show("Bạn có muốn gửi email đến cho Nhà Cung Cấp?", "Thông báo!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (result == DialogResult.Yes)
+                        {
+                            CustomerBO objCustomerBO = objCustomerBLL.GetListALlCustomer().Where(x => x.MaNCC == FormDatHang.intCustomerId).FirstOrDefault();
+                            string fileName = "";
+                            using (OpenFileDialog myDialog = new OpenFileDialog())
+                            {
+                                myDialog.Multiselect = true;
+                                myDialog.InitialDirectory = "";
+                                myDialog.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+                                myDialog.FilterIndex = 2;
+                                myDialog.RestoreDirectory = true;
+
+                                if (myDialog.ShowDialog() == DialogResult.OK)
+                                {
+                                    foreach (string file in myDialog.FileNames)
+                                    {
+                                        fileName = Path.GetFileName(file);
+                                    }
+
+                                }
+                                str2 = myDialog.FileNames;
+                            }
+
+                            MailMessage mail = new MailMessage("doanbachhoaxanh@gmail.com", objCustomerBO.Email, "Đơn Đặt Hàng", "");
+                            mail.IsBodyHtml = true;
+                            SmtpClient client = new SmtpClient("doanbachhoaxanh@gmail.com");
+                            client.Host = "smtp.gmail.com";
+                            client.UseDefaultCredentials = false;
+                            client.Port = 587;
+                            client.Credentials = new System.Net.NetworkCredential("doanbachhoaxanh@gmail.com", "Bhx@2021");
+                            client.EnableSsl = true;
+                            foreach (string names in str2)
+                            {
+                                if (names != null)
+                                {
+                                    mail.Attachments.Add(new Attachment(names));
+                                }
+                            }
+                            client.Send(mail);
+                            MessageBox.Show("Đã gửi tin nhắn thành công!", "Thành Công", MessageBoxButtons.OK);
+                        }
                         FormDatHang.lstOrderCustomerDetailBO = new List<OrderCustomerDetailBO>();
                         FormDatHang.intTotalPrice = 0;
                         CloseDialogEvent();

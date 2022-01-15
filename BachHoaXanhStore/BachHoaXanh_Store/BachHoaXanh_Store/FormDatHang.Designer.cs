@@ -68,6 +68,10 @@ namespace BachHoaXanh_Store
             this.txtSoLuong = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.cbo_NhaCungCap = new Bunifu.UI.WinForms.BunifuDropdown();
             this.cbo_LoaiSP = new Bunifu.UI.WinForms.BunifuDropdown();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.dgv_DSSP = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.col_MaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_TenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -90,10 +94,6 @@ namespace BachHoaXanh_Store
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.cbo_PageSize = new Bunifu.UI.WinForms.BunifuDropdown();
             this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DSSP)).BeginInit();
@@ -444,6 +444,50 @@ namespace BachHoaXanh_Store
             this.cbo_LoaiSP.Size = new System.Drawing.Size(251, 32);
             this.cbo_LoaiSP.TabIndex = 4;
             this.cbo_LoaiSP.Text = null;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(46)))), ((int)(((byte)(41)))));
+            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(60, 14);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Tìm kiếm";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(46)))), ((int)(((byte)(41)))));
+            this.label2.Location = new System.Drawing.Point(260, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(63, 14);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Số lượng";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(46)))), ((int)(((byte)(41)))));
+            this.label3.Location = new System.Drawing.Point(517, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(95, 14);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Loại sản phẩm";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(46)))), ((int)(((byte)(41)))));
+            this.label4.Location = new System.Drawing.Point(774, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(89, 14);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Nhà cung cấp";
             // 
             // dgv_DSSP
             // 
@@ -948,6 +992,7 @@ namespace BachHoaXanh_Store
             this.cbo_PageSize.Size = new System.Drawing.Size(85, 32);
             this.cbo_PageSize.TabIndex = 7;
             this.cbo_PageSize.Text = null;
+            this.cbo_PageSize.SelectedIndexChanged += new System.EventHandler(this.cbo_PageSize_SelectedIndexChanged);
             // 
             // bunifuLabel4
             // 
@@ -965,50 +1010,6 @@ namespace BachHoaXanh_Store
             this.bunifuLabel4.Text = "Dữ liệu/Trang";
             this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
             this.bunifuLabel4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(46)))), ((int)(((byte)(41)))));
-            this.label1.Location = new System.Drawing.Point(3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 14);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Tìm kiếm";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(46)))), ((int)(((byte)(41)))));
-            this.label2.Location = new System.Drawing.Point(260, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 14);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Số lượng";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(46)))), ((int)(((byte)(41)))));
-            this.label3.Location = new System.Drawing.Point(517, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 14);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Loại sản phẩm";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(46)))), ((int)(((byte)(41)))));
-            this.label4.Location = new System.Drawing.Point(774, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(89, 14);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Nhà cung cấp";
             // 
             // FormDatHang
             // 

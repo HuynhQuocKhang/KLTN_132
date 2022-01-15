@@ -230,7 +230,7 @@ namespace BLL_DAO
                     db.SubmitChanges();
                 }
                 var objOrderCustomer = db.HoaDonDatNCCs.Where(x => x.MaHDDat == intOrderId).FirstOrDefault();
-                objOrderCustomer.TinhTrang = 1;
+                objOrderCustomer.TinhTrang = 2;
                 db.SubmitChanges();
                 return true;
             }

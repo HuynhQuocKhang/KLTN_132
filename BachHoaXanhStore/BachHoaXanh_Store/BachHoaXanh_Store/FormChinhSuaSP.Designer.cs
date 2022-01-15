@@ -67,7 +67,6 @@ namespace BachHoaXanh_Store
             this.cbo_MaLoaiSP = new Bunifu.UI.WinForms.BunifuDropdown();
             this.cbo_DVT = new Bunifu.UI.WinForms.BunifuDropdown();
             this.txt_MaSP = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
-            this.crystalDarkTheme1 = new Telerik.WinControls.Themes.CrystalDarkTheme();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -75,6 +74,7 @@ namespace BachHoaXanh_Store
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.crystalDarkTheme1 = new Telerik.WinControls.Themes.CrystalDarkTheme();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();

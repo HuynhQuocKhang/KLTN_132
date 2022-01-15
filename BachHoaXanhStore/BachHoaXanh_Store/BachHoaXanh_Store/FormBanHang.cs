@@ -25,11 +25,9 @@ namespace BachHoaXanh_Store
         public static bool isApplyPromo = false;
         public static List<InvoiceWatingBO> lstWating = new List<InvoiceWatingBO>();
         int Section = 2;
-        private string tienKhachDua;
-        private string tienThua;
 
-        public string TienThua { get => tienThua; set => tienThua = value; }
-        public string TienKhachDua { get => tienKhachDua; set => tienKhachDua = value; }
+        public static string TienThua;
+        public static string TienKhachDua;
 
         public FormBanHang()
         {
@@ -43,10 +41,6 @@ namespace BachHoaXanh_Store
 
         void frmTimKiem_InsertProductEvent(string strProductName, string strProductId, int intStock, int intPrice, int TotalPrice)
         {
-            //if (dgv_DSSP.Rows.Count == 0)
-            //{
-            //    dgv_DSSP.Rows.Add(strProductName, strProductId, intStock, intPrice, TotalPrice);
-            //}
             if (isApplyPromo == false)
             {
                 List<ProductOrderCustomerBO> lstResult = new List<ProductOrderCustomerBO>();
@@ -265,7 +259,6 @@ namespace BachHoaXanh_Store
             {
                 e.Handled = true;
             }
-
         }
 
         private void timer2_Tick(object sender, EventArgs e)
@@ -517,6 +510,10 @@ namespace BachHoaXanh_Store
                         if (objInvoiceBLL.InsertInvoiceDetail(lsInvoiceDetail) && objOrderStoreBLL.UpdateMultiProductFromStore(lstProduct, (int)FormLogin.objUserBO.StoreId) && objOrderStoreBLL.UpdateListProductPromotion(lstProductPromotion, (int)FormLogin.objUserBO.StoreId))
                         {
                             MessageBox.Show("Tạo hóa đơn thành công");
+                            TienKhachDua = txt_TienKhachTra.Text;
+                            TienThua = lbl_TienThua.Text;
+                            Program.frmReport = new FormReport("Bill");
+                            Program.frmReport.ShowDialog();
                             lstProduct = new List<ProductBO>();
                             lsInvoiceDetail = new List<InvoiceDetailBO>();
                             lstProductPromotion = new List<ProductBO>();
@@ -528,6 +525,8 @@ namespace BachHoaXanh_Store
                             lbl_SoLuong.Text = "0";
                             dgv_DSSP.Rows.Clear();
                             dgv_DSKM.Rows.Clear();
+                            txt_TienKhachTra.Text = "0";
+                            lbl_TienThua.Text = "0";
                         }
                         else
                         {
@@ -556,8 +555,8 @@ namespace BachHoaXanh_Store
                         if (objInvoiceBLL.InsertInvoiceDetail(lsInvoiceDetail) && objOrderStoreBLL.UpdateMultiProductFromStore(lstProduct, (int)FormLogin.objUserBO.StoreId))
                         {
                             MessageBox.Show("Tạo hóa đơn thành công");
-                            tienKhachDua = txt_TienKhachTra.Text;
-                            tienThua = lbl_TienThua.Text;
+                            TienKhachDua = txt_TienKhachTra.Text;
+                            TienThua = lbl_TienThua.Text;
                             Program.frmReport = new FormReport("Bill");
                             Program.frmReport.ShowDialog();
                             lstProduct = new List<ProductBO>();
@@ -571,6 +570,8 @@ namespace BachHoaXanh_Store
                             lbl_SoLuong.Text = "0";
                             dgv_DSSP.Rows.Clear();
                             dgv_DSKM.Rows.Clear();
+                            txt_TienKhachTra.Text = "0";
+                            lbl_TienThua.Text = "0";
                         }
                         else
                         {
@@ -947,6 +948,21 @@ namespace BachHoaXanh_Store
         private void txt_TienKhachTra_TextChanged(object sender, EventArgs e)
         {
             lbl_TienThua.Text = ( int.Parse(txt_TienKhachTra.Text) - int.Parse(lbl_TongTien.Text)).ToString();
+        }
+
+        private void txt_TienKhachTra_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txt_TienKhachTra_TextChange(object sender, EventArgs e)
+        {
+            int totalPrice = int.Parse(lbl_TongTien.Text.Trim());
+            int customerPrice = int.Parse(txt_TienKhachTra.Text.Trim());
+            lbl_TienThua.Text = (customerPrice - totalPrice).ToString();
         }
     }
 }

@@ -33,8 +33,8 @@ namespace BachHoaXanh_Store
             {
                 if (objUserBO.Permission == 3)
                 {
-                    Program.frmBanHang = new FormBanHang();
-                    Program.frmBanHang.Show();
+                    FormBanHang frmBanHang = new FormBanHang();
+                    frmBanHang.Show();
                     this.Hide();
                 }
                 else

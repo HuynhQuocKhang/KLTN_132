@@ -307,7 +307,7 @@ namespace BachHoaXanh_Store
             this.txt_TongTien.HideSelection = true;
             this.txt_TongTien.IconLeft = null;
             this.txt_TongTien.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_TongTien.IconPadding = 10;
+            //this.txt_TongTien.IconPadding = 10;
             this.txt_TongTien.IconRight = null;
             this.txt_TongTien.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_TongTien.Lines = new string[0];

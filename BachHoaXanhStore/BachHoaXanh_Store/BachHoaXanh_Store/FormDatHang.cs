@@ -39,6 +39,9 @@ namespace BachHoaXanh_Store
                 cbo_NhaCungCap.SelectedIndex = 0;
                 cbo_NhaCungCap.Enabled = false;
             }
+            txtSoLuong.Text = "50";
+            cbo_PageSize.SelectedIndex = 1;
+            txtSoLuong.Text = "0";
         }
 
         private void bunifuButton1_Click(object sender, EventArgs e)
@@ -83,11 +86,20 @@ namespace BachHoaXanh_Store
                         objOrderCustomerDetailBO.ThanhTien = int.Parse(dgv_Order["col_ThanhTien", i].Value.ToString());
                         lstOrderCustomerDetailBO.Add(objOrderCustomerDetailBO);
                         intTotalPrice += int.Parse(dgv_Order["col_ThanhTien", i].Value.ToString());
-                        strCustomerName = cbo_NhaCungCap.Text;
-                        intCustomerId = int.Parse(cbo_NhaCungCap.SelectedValue.ToString());
+                        if (objUser.Permission != 1)
+                        {
+                            strCustomerName = cbo_NhaCungCap.Text;
+                            intCustomerId = int.Parse(cbo_NhaCungCap.SelectedValue.ToString());
+                        }  
                     }
                 }
-
+                if (objUser.Permission == 1)
+                {
+                    var objProduct = objProductBll.GetProductByid(dgv_Order["MaSP", 0].Value.ToString().Trim());
+                    var objCustomeer = objCustomerBLL.GetListALlCustomer().Where(x => x.MaNCC == objProduct.MaNCC).FirstOrDefault();
+                    strCustomerName = objCustomeer.FullName;
+                    intCustomerId = objCustomeer.MaNCC;
+                }
                 if (isOpen == true)
                 {
                     FormDonDatHang frmDonDatHang = new FormDonDatHang();
@@ -103,7 +115,7 @@ namespace BachHoaXanh_Store
         }
         private void frmDonDatHang_Event()
         {
-            Search(txtKeyWord.Text.Trim(), cbo_LoaiSP.SelectedValue.ToString(), cbo_NhaCungCap.SelectedValue.ToString(), txtSoLuong.Text);
+            Search(txtKeyWord.Text.Trim(), cbo_LoaiSP.SelectedValue.ToString(), cbo_NhaCungCap.SelectedValue.ToString(), txtSoLuong.Text, int.Parse(cbo_PageSize.Text.Trim()));
             dgv_Order.Rows.Clear();
         }
         private void btn_TimKiem_Click(object sender, EventArgs e)
@@ -112,7 +124,7 @@ namespace BachHoaXanh_Store
             {
                 if (cbo_NhaCungCap.SelectedValue.ToString() != "1")
                 {
-                    Search(txtKeyWord.Text.Trim(), cbo_LoaiSP.SelectedValue.ToString(), cbo_NhaCungCap.SelectedValue.ToString(), txtSoLuong.Text);
+                    Search(txtKeyWord.Text.Trim(), cbo_LoaiSP.SelectedValue.ToString(), cbo_NhaCungCap.SelectedValue.ToString(), txtSoLuong.Text, int.Parse(cbo_PageSize.Text.Trim()));
                 }
                 else
                 {
@@ -121,11 +133,11 @@ namespace BachHoaXanh_Store
             }
             else
             {
-                Search(txtKeyWord.Text.Trim(), cbo_LoaiSP.SelectedValue.ToString(), cbo_NhaCungCap.SelectedValue.ToString(), txtSoLuong.Text);
+                Search(txtKeyWord.Text.Trim(), cbo_LoaiSP.SelectedValue.ToString(), cbo_NhaCungCap.SelectedValue.ToString(), txtSoLuong.Text, int.Parse(cbo_PageSize.Text.Trim()));
             }
 
         }
-        private void Search(string strProductName, string strProductTypeId, string strCustomerId, string strStock)
+        private void Search(string strProductName, string strProductTypeId, string strCustomerId, string strStock, int intPageSize)
         {
             if (strStock == null || strStock.Trim() == String.Empty)
             {
@@ -137,30 +149,30 @@ namespace BachHoaXanh_Store
                 {
                     if (int.Parse(strCustomerId) == 1 && int.Parse(strProductTypeId) == 1)
                     {
-                        dgv_DSSP.DataSource = objProductBll.GetProductByKeysForOrderCustomer(strProductName.Trim(), 0, 0, int.Parse(strStock), 50);
+                        dgv_DSSP.DataSource = objProductBll.GetProductByKeysForOrderCustomer(strProductName.Trim(), 0, 0, int.Parse(strStock), intPageSize);
                     }
                     else if (int.Parse(strCustomerId) == 1 && int.Parse(strProductTypeId) != 1)
                     {
-                        dgv_DSSP.DataSource = objProductBll.GetProductByKeysForOrderCustomer(strProductName.Trim(), int.Parse(strProductTypeId), 0, int.Parse(strStock));
+                        dgv_DSSP.DataSource = objProductBll.GetProductByKeysForOrderCustomer(strProductName.Trim(), int.Parse(strProductTypeId), 0, int.Parse(strStock), intPageSize);
                     }
                     else if (int.Parse(strCustomerId) != 1 && int.Parse(strProductTypeId) == 1)
                     {
-                        dgv_DSSP.DataSource = objProductBll.GetProductByKeysForOrderCustomer(strProductName.Trim(), 0, int.Parse(strCustomerId), int.Parse(strStock));
+                        dgv_DSSP.DataSource = objProductBll.GetProductByKeysForOrderCustomer(strProductName.Trim(), 0, int.Parse(strCustomerId), int.Parse(strStock), intPageSize);
                     }
                     else
                     {
-                        dgv_DSSP.DataSource = objProductBll.GetProductByKeysForOrderCustomer(strProductName.Trim(), int.Parse(strProductTypeId), int.Parse(strCustomerId), int.Parse(strStock));
+                        dgv_DSSP.DataSource = objProductBll.GetProductByKeysForOrderCustomer(strProductName.Trim(), int.Parse(strProductTypeId), int.Parse(strCustomerId), int.Parse(strStock), intPageSize);
                     }
                 }
                 else
                 {
                     if (int.Parse(strProductTypeId) == 1)
                     {
-                        dgv_DSSP.DataSource = objOrderStoreBLL.GetProductBOFromStore(strProductName.Trim(), 0, 0, int.Parse(txtSoLuong.Text), 100, (int)objUser.StoreId);
+                        dgv_DSSP.DataSource = objOrderStoreBLL.GetProductBOFromStore(strProductName.Trim(), 0, 0, int.Parse(txtSoLuong.Text), intPageSize, (int)objUser.StoreId);
                     }
                     else
                     {
-                        dgv_DSSP.DataSource = objOrderStoreBLL.GetProductBOFromStore(strProductName.Trim(), int.Parse(strProductTypeId), 0, int.Parse(txtSoLuong.Text), 100, (int)objUser.StoreId);
+                        dgv_DSSP.DataSource = objOrderStoreBLL.GetProductBOFromStore(strProductName.Trim(), int.Parse(strProductTypeId), 0, int.Parse(txtSoLuong.Text), intPageSize, (int)objUser.StoreId);
                     }
                 }
             }
@@ -237,6 +249,11 @@ namespace BachHoaXanh_Store
         {
             dgv_DSSP.DataSource = objProductBll.GetProductByKeysForOrderCustomer("", 0, 0, 1000);
             dgv_Order.Rows.Clear();
+        }
+
+        private void cbo_PageSize_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Search(txtKeyWord.Text.Trim(), cbo_LoaiSP.SelectedValue.ToString(), cbo_NhaCungCap.SelectedValue.ToString(), txtSoLuong.Text, int.Parse(cbo_PageSize.Text.Trim()));
         }
     }
 }

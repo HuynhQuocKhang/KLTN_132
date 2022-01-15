@@ -21,6 +21,25 @@ namespace BachHoaXanh_Store
         public FormTimKiem()
         {
             InitializeComponent();
+            if (FormBanHang.isApplyPromo == false)
+            {
+                dgv_DSSP.DataSource = objOrderStoreBLL.GetProductFromStoreFromSearchUsing(txt_Keyword.Text.Trim(), 0, 0, int.MaxValue, 50, (int)FormLogin.objUserBO.StoreId);
+            }
+            else
+            {
+                List<ProductFromStoreFromSearch> lstProductView = new List<ProductFromStoreFromSearch>();
+                List<ProductPromotionBO> lstPromo = objOrderStoreBLL.GetProductPromotionFromStoreByKey(txt_Keyword.Text.Trim(), (int)FormLogin.objUserBO.StoreId, 50);
+                foreach (ProductPromotionBO item in lstPromo)
+                {
+                    ProductFromStoreFromSearch objProductFromStoreFromSearch = new ProductFromStoreFromSearch();
+                    objProductFromStoreFromSearch.MaSP = item.MaSP;
+                    objProductFromStoreFromSearch.TenSP = item.TenSP;
+                    objProductFromStoreFromSearch.GiaBan = item.GiaKM;
+                    objProductFromStoreFromSearch.SoLuong = item.SoLuong;
+                    lstProductView.Add(objProductFromStoreFromSearch);
+                }
+                dgv_DSSP.DataSource = lstProductView;
+            }
         }
 
         private void txt_MaSP_TextChanged(object sender, EventArgs e)
@@ -42,7 +61,7 @@ namespace BachHoaXanh_Store
                     ProductFromStoreFromSearch objProductFromStoreFromSearch = new ProductFromStoreFromSearch();
                     objProductFromStoreFromSearch.MaSP = item.MaSP;
                     objProductFromStoreFromSearch.TenSP = item.TenSP;
-                    objProductFromStoreFromSearch.GiaBan = 0;
+                    objProductFromStoreFromSearch.GiaBan = item.GiaKM;
                     objProductFromStoreFromSearch.SoLuong = item.SoLuong;
                     lstProductView.Add(objProductFromStoreFromSearch);
                 }

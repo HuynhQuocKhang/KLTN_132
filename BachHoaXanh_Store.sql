@@ -14,6 +14,7 @@ create table NhaCungCap
 	MaNCC int IDENTITY(1,1) not null,
 	TenNCC nvarchar(100),
 	DiaChi nvarchar(100),
+	Email char(50),
 	constraint PK_NhaCungCap primary key (MaNCC),
 )
 
@@ -248,4 +249,8 @@ select * from KhoHangKM
 update LoaiSP
 set Isdeleted = 0
 
-select * from LoaiSP
+update NhaCungCap
+set Email = 'huynhvirgo@gmail.com' where MaNCC > 2
+
+update NhaCungCap
+set Email = 'soncmlt@gmail.com' where MaNCC = 2

@@ -50,12 +50,12 @@ namespace BachHoaXanh_Store
             this.btn_HuyHangDoi = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.dgv_HangDoi = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.telerikMetroTheme1 = new Telerik.WinControls.Themes.TelerikMetroTheme();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.MaHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.telerikMetroTheme1 = new Telerik.WinControls.Themes.TelerikMetroTheme();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
@@ -365,14 +365,6 @@ namespace BachHoaXanh_Store
             this.dgv_HangDoi.Size = new System.Drawing.Size(773, 463);
             this.dgv_HangDoi.TabIndex = 4;
             // 
-            // timer2
-            // 
-            this.timer2.Interval = 3000;
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            // 
             // MaHD
             // 
             this.MaHD.DataPropertyName = "MaDH";
@@ -393,6 +385,14 @@ namespace BachHoaXanh_Store
             this.col_ThanhTien.Name = "col_ThanhTien";
             this.col_ThanhTien.ReadOnly = true;
             // 
+            // timer2
+            // 
+            this.timer2.Interval = 3000;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            // 
             // FormHangDoi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -400,6 +400,7 @@ namespace BachHoaXanh_Store
             this.ClientSize = new System.Drawing.Size(825, 588);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "FormHangDoi";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormHangDoi";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);

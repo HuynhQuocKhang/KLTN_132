@@ -176,19 +176,16 @@ namespace BachHoaXanh_Store
                             }
                         }
                     }
-
                     else
                     {
                         objOrderCustomerBLL.UpdateCustomerOrder(int.Parse(dgv_DSDH["col_MaDH", index].Value.ToString().Trim()), lstProductBO);
                     }
                     MessageBox.Show("Nhập hàng thành công!");
                     lstProductBO = new List<ProductBO>();
-                    dgv_DSCTDH.Rows.Clear();
                     Search();
+                    dgv_DSCTDH.Rows.Clear();
                 }
             }
         }
-
-        
     }
 }

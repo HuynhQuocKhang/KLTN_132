@@ -37,6 +37,7 @@ namespace BachHoaXanh_Store
                 for (int i = 0; i < dgv_DHDT.Rows.Count; i++)
                 {
                     int intStock;
+                    var objProduct = objProductBLL.GetProductByid(dgv_DHDT["col_MaSP", i].Value.ToString().Trim());
                     if(dgv_DHDT["col_SoLuongXuat", i].Value!=null)
                     {
                         if (!int.TryParse(dgv_DHDT["col_SoLuongXuat", i].Value.ToString().Trim(), out intStock))
@@ -48,7 +49,14 @@ namespace BachHoaXanh_Store
                         }
                         if (intStock > int.Parse(dgv_DHDT["col_SoLuong", i].Value.ToString().Trim()) || intStock <= 0)
                         {
-                            MessageBox.Show("Sản phẩm [ " + dgv_DHDT["col_MaSP", i].Value.ToString() + " - " + dgv_DHDT["col_TenSP", i].Value.ToString() + " ] có số lượng xuất phải nhỏ hơn hoặc bằng số lượng của siêu thị");
+                            MessageBox.Show("Sản phẩm [ " + dgv_DHDT["col_MaSP", i].Value.ToString() + " - " + dgv_DHDT["col_TenSP", i].Value.ToString() + " ] có số lượng xuất phải nhỏ hơn hoặc bằng số lượng đặt của siêu thị");
+                            isOpen = false;
+                            lstExportProductDetailBO = new List<ExportProductDetailBO>();
+                            return;
+                        }
+                        if (intStock > objProduct.SoLuong)
+                        {
+                            MessageBox.Show("Sản phẩm [ " + dgv_DHDT["col_MaSP", i].Value.ToString() + " - " + dgv_DHDT["col_TenSP", i].Value.ToString() + " ] có số lượng xuất [ " + intStock + " ] đang lớn hơn số lượng tồn của kho là [ " + objProduct.SoLuong + " ]. Xin vui lòng kiểm tra lại!");
                             isOpen = false;
                             lstExportProductDetailBO = new List<ExportProductDetailBO>();
                             return;
@@ -116,12 +124,13 @@ namespace BachHoaXanh_Store
 
             if (chk_AllStore.Checked == true)
             {
-                dgv_DSDH.DataSource = objOrderStoreBLL.GetOrderFromStoreBO(0, (DateTime)dtp_NgayBatDau.Value, (DateTime)dtp_NgayKetThuc.Value);
+                dgv_DSDH.DataSource = objOrderStoreBLL.GetOrderFromStoreBO(-1, (DateTime)dtp_NgayBatDau.Value, (DateTime)dtp_NgayKetThuc.Value);
+                dgv_DHDT.Rows.Clear();
             }
             else
             {
                 dgv_DSDH.DataSource = objOrderStoreBLL.GetOrderFromStoreBO(int.Parse(cbo_SieuThi.SelectedValue.ToString()), (DateTime)dtp_NgayBatDau.Value, (DateTime)dtp_NgayKetThuc.Value);
-
+                dgv_DHDT.Rows.Clear();
             }
         }
 
@@ -149,7 +158,6 @@ namespace BachHoaXanh_Store
                 {
                     dgv_DHDT.Rows.Add(item.MaSP, item.TenSP, item.SoLuong, item.SoLuong);
                 }
-                //dgv_DHDT.DataSource = objOrderStoreDetailBLL.GetListOrderStoreByOrderId(int.Parse(dgv_DSDH["col_MaDH", index].Value.ToString().Trim()));
             }
         }
 
@@ -158,10 +166,12 @@ namespace BachHoaXanh_Store
             if (chk_AllStore.Checked == true)
             {
                 dgv_DSDH.DataSource = objOrderStoreBLL.GetOrderFromStoreBO(0, (DateTime)dtp_NgayBatDau.Value, (DateTime)dtp_NgayKetThuc.Value);
+                dgv_DHDT.Rows.Clear();
             }
             else
             {
                 dgv_DSDH.DataSource = objOrderStoreBLL.GetOrderFromStoreBO(int.Parse(cbo_SieuThi.SelectedValue.ToString()), (DateTime)dtp_NgayBatDau.Value, (DateTime)dtp_NgayKetThuc.Value);
+                dgv_DHDT.Rows.Clear();
 
             }
         }

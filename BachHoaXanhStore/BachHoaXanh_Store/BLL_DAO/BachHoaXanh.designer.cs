@@ -84,7 +84,7 @@ namespace BLL_DAO
     #endregion
 		
 		public BachHoaXanhDataContext() : 
-				base(global::BLL_DAO.Properties.Settings.Default.BachHoaXanh_StoreConnectionString1, mappingSource)
+				base(global::BLL_DAO.Properties.Settings.Default.BachHoaXanh_StoreConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -3156,6 +3156,8 @@ namespace BLL_DAO
 		
 		private string _DiaChi;
 		
+		private string _Email;
+		
 		private EntitySet<HoaDonDatNCC> _HoaDonDatNCCs;
 		
 		private EntitySet<SanPham> _SanPhams;
@@ -3170,6 +3172,8 @@ namespace BLL_DAO
     partial void OnTenNCCChanged();
     partial void OnDiaChiChanging(string value);
     partial void OnDiaChiChanged();
+    partial void OnEmailChanging(string value);
+    partial void OnEmailChanged();
     #endregion
 		
 		public NhaCungCap()
@@ -3235,6 +3239,26 @@ namespace BLL_DAO
 					this._DiaChi = value;
 					this.SendPropertyChanged("DiaChi");
 					this.OnDiaChiChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", DbType="Char(50)")]
+		public string Email
+		{
+			get
+			{
+				return this._Email;
+			}
+			set
+			{
+				if ((this._Email != value))
+				{
+					this.OnEmailChanging(value);
+					this.SendPropertyChanging();
+					this._Email = value;
+					this.SendPropertyChanged("Email");
+					this.OnEmailChanged();
 				}
 			}
 		}

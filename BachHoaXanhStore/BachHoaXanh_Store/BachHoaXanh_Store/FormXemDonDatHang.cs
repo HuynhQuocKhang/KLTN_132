@@ -66,14 +66,7 @@ namespace BachHoaXanh_Store
             }
             else
             {
-                if (chk_AllStore.Checked == true)
-                {
-                    dgv_DSDH.DataSource = objOrderStoreBLL.GetOrderFromStoreBO(0, int.Parse(cbo_TinhTrang.SelectedIndex.ToString()), txtKeyword.Text);
-                }
-                else
-                {
-                    dgv_DSDH.DataSource = objOrderStoreBLL.GetOrderFromStoreBO(int.Parse(cbo_SieuThi.SelectedValue.ToString()),int.Parse(cbo_TinhTrang.SelectedIndex.ToString()), txtKeyword.Text);
-                }
+                dgv_DSDH.DataSource = objOrderStoreBLL.GetOrderFromStoreBO((int)FormLogin.objUserBO.StoreId, int.Parse(cbo_TinhTrang.SelectedIndex.ToString()), txtKeyword.Text);
             }
             if (dgv_DSDH.Rows.Count == 0)
             {
@@ -100,18 +93,29 @@ namespace BachHoaXanh_Store
             dgv_DHDT.Rows.Clear();
             if (dgv_DSDH.DataSource != null && index != -1)
             {
-                if (int.Parse(cbo_SieuThi.SelectedValue.ToString()) != 0)
+                if (FormLogin.objUserBO.Permission == 1)
                 {
-                    List<GetDetailsOrderStoreByOrderIdBO> lstOrder = objOrderStoreDetailBLL.GetDetailsOrderStoreByOrderId(int.Parse(dgv_DSDH["col_MaDH", index].Value.ToString().Trim()));
-                    foreach (GetDetailsOrderStoreByOrderIdBO item in lstOrder)
+                    if (int.Parse(cbo_SieuThi.SelectedValue.ToString()) != 0)
                     {
-                        dgv_DHDT.Rows.Add(item.MaSP, item.TenSP, item.GiaBan, item.SoLuong, item.ThanhTien);
+                        List<GetDetailsOrderStoreByOrderIdBO> lstOrder = objOrderStoreDetailBLL.GetDetailsOrderStoreByOrderId(int.Parse(dgv_DSDH["col_MaDH", index].Value.ToString().Trim()));
+                        foreach (GetDetailsOrderStoreByOrderIdBO item in lstOrder)
+                        {
+                            dgv_DHDT.Rows.Add(item.MaSP, item.TenSP, item.GiaBan, item.SoLuong, item.ThanhTien);
+                        }
+                    }
+                    else
+                    {
+                        List<GetDetailsOrderStoreByOrderIdBO> lstOrder = new List<GetDetailsOrderStoreByOrderIdBO>();
+                        lstOrder = objOrderCustomerBLL.GetListOrderCustomerDetailView(int.Parse(dgv_DSDH["col_MaDH", index].Value.ToString().Trim()));
+                        foreach (GetDetailsOrderStoreByOrderIdBO item in lstOrder)
+                        {
+                            dgv_DHDT.Rows.Add(item.MaSP, item.TenSP, item.GiaBan, item.SoLuong, item.ThanhTien);
+                        }
                     }
                 }
                 else
                 {
-                    List<GetDetailsOrderStoreByOrderIdBO> lstOrder = new List<GetDetailsOrderStoreByOrderIdBO>();
-                    lstOrder = objOrderCustomerBLL.GetListOrderCustomerDetailView(int.Parse(dgv_DSDH["col_MaDH", index].Value.ToString().Trim()));
+                    List<GetDetailsOrderStoreByOrderIdBO> lstOrder = objOrderStoreDetailBLL.GetDetailsOrderStoreByOrderId(int.Parse(dgv_DSDH["col_MaDH", index].Value.ToString().Trim()));
                     foreach (GetDetailsOrderStoreByOrderIdBO item in lstOrder)
                     {
                         dgv_DHDT.Rows.Add(item.MaSP, item.TenSP, item.GiaBan, item.SoLuong, item.ThanhTien);
