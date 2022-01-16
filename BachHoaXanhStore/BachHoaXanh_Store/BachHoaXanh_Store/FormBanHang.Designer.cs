@@ -122,6 +122,7 @@ namespace BachHoaXanh_Store
             this.lbl_SoLuong = new System.Windows.Forms.Label();
             this.lbl_TongTien = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.lblPromo = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.btn_LuuHangDoi = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -730,6 +731,7 @@ namespace BachHoaXanh_Store
             this.tableLayoutPanel5.Controls.Add(this.lbl_SoLuong, 1, 1);
             this.tableLayoutPanel5.Controls.Add(this.lbl_TongTien, 1, 2);
             this.tableLayoutPanel5.Controls.Add(this.label13, 1, 3);
+            this.tableLayoutPanel5.Controls.Add(this.lblPromo, 0, 5);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
@@ -978,6 +980,18 @@ namespace BachHoaXanh_Store
             this.label13.TabIndex = 2;
             this.label13.Text = "Có || Không";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblPromo
+            // 
+            this.lblPromo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblPromo.AutoSize = true;
+            this.lblPromo.ForeColor = System.Drawing.Color.Red;
+            this.lblPromo.Location = new System.Drawing.Point(3, 338);
+            this.lblPromo.Name = "lblPromo";
+            this.lblPromo.Size = new System.Drawing.Size(127, 40);
+            this.lblPromo.TabIndex = 4;
             // 
             // panel7
             // 
@@ -1498,7 +1512,6 @@ namespace BachHoaXanh_Store
             this.txt_TienKhachTra.UseSystemPasswordChar = false;
             this.txt_TienKhachTra.WordWrap = true;
             this.txt_TienKhachTra.TextChange += new System.EventHandler(this.txt_TienKhachTra_TextChange);
-            this.txt_TienKhachTra.TextChanged += new System.EventHandler(this.txt_TienKhachTra_TextChanged);
             this.txt_TienKhachTra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_TienKhachTra_KeyPress);
             // 
             // label11
@@ -1641,6 +1654,7 @@ namespace BachHoaXanh_Store
             this.tableLayoutPanel3.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
+            this.tableLayoutPanel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DSKM)).EndInit();
             this.panel9.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
@@ -1719,5 +1733,6 @@ namespace BachHoaXanh_Store
         private System.Windows.Forms.Label lbl_TienThua;
         private System.Windows.Forms.DataGridViewTextBoxColumn GiaKM;
         private System.Windows.Forms.DataGridViewTextBoxColumn ThanhTien;
+        private System.Windows.Forms.Label lblPromo;
     }
 }

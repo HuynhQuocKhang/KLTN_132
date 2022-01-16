@@ -39,9 +39,13 @@ namespace BachHoaXanh_Store
                 cbo_NhaCungCap.SelectedIndex = 0;
                 cbo_NhaCungCap.Enabled = false;
             }
+            else
+            {
+                
+                cbo_NhaCungCap.SelectedIndex = 1;
+            }
             txtSoLuong.Text = "50";
             cbo_PageSize.SelectedIndex = 1;
-            txtSoLuong.Text = "0";
         }
 
         private void bunifuButton1_Click(object sender, EventArgs e)
@@ -115,7 +119,21 @@ namespace BachHoaXanh_Store
         }
         private void frmDonDatHang_Event()
         {
-            Search(txtKeyWord.Text.Trim(), cbo_LoaiSP.SelectedValue.ToString(), cbo_NhaCungCap.SelectedValue.ToString(), txtSoLuong.Text, int.Parse(cbo_PageSize.Text.Trim()));
+            if (objUser.Permission == 1)
+            {
+                if (cbo_NhaCungCap.SelectedValue.ToString() != "1")
+                {
+                    Search(txtKeyWord.Text.Trim(), cbo_LoaiSP.SelectedValue.ToString(), cbo_NhaCungCap.SelectedValue.ToString(), txtSoLuong.Text, int.Parse(cbo_PageSize.Text.Trim()));
+                }
+                else
+                {
+                    MessageBox.Show("Nhà cung cấp BHX chỉ áp dụng cho siêu thị");
+                }
+            }
+            else
+            {
+                Search(txtKeyWord.Text.Trim(), cbo_LoaiSP.SelectedValue.ToString(), cbo_NhaCungCap.SelectedValue.ToString(), txtSoLuong.Text, int.Parse(cbo_PageSize.Text.Trim()));
+            }
             dgv_Order.Rows.Clear();
         }
         private void btn_TimKiem_Click(object sender, EventArgs e)
@@ -253,7 +271,21 @@ namespace BachHoaXanh_Store
 
         private void cbo_PageSize_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Search(txtKeyWord.Text.Trim(), cbo_LoaiSP.SelectedValue.ToString(), cbo_NhaCungCap.SelectedValue.ToString(), txtSoLuong.Text, int.Parse(cbo_PageSize.Text.Trim()));
+            if (objUser.Permission == 1)
+            {
+                if (cbo_NhaCungCap.SelectedValue.ToString() != "1")
+                {
+                    Search(txtKeyWord.Text.Trim(), cbo_LoaiSP.SelectedValue.ToString(), cbo_NhaCungCap.SelectedValue.ToString(), txtSoLuong.Text, int.Parse(cbo_PageSize.Text.Trim()));
+                }
+                else
+                {
+                    MessageBox.Show("Nhà cung cấp BHX chỉ áp dụng cho siêu thị");
+                }
+            }
+            else
+            {
+                Search(txtKeyWord.Text.Trim(), cbo_LoaiSP.SelectedValue.ToString(), cbo_NhaCungCap.SelectedValue.ToString(), txtSoLuong.Text, int.Parse(cbo_PageSize.Text.Trim()));
+            }
         }
     }
 }

@@ -37,6 +37,7 @@ namespace BachHoaXanh_Store
             txt_SoLuong.Text = "1";
             lbl_TongTien.Text = "0";
             lbl_SoLuong.Text = "0";
+            label13.Text = "Không";
         }
 
         void frmTimKiem_InsertProductEvent(string strProductName, string strProductId, int intStock, int intPrice, int TotalPrice)
@@ -391,6 +392,14 @@ namespace BachHoaXanh_Store
                                         dgv_DSKM.Rows.Add(objResult.MaSP.ToString(), objResult.TenSP.ToString(), txt_SoLuong.Text);
                                         txt_MaSP.Clear();
                                         txt_SoLuong.Clear();
+                                        if (dgv_DSKM.Rows.Count > 0)
+                                        {
+                                            label13.Text = "Có";
+                                        }
+                                        else
+                                        {
+                                            label13.Text = "Không";
+                                        }
                                     }
                                 }
                                 else
@@ -602,12 +611,14 @@ namespace BachHoaXanh_Store
                     Section++;
                     setColor(Color.Red);
                     isApplyPromo = true;
+                    lblPromo.Text = "Đang áp dụng Khuyến Mãi";
                 }
                 else
                 {
                     setColor(Color.FromArgb(76, 154, 42));
                     isApplyPromo = false;
                     Section++;
+                    lblPromo.Text = "Không áp dụng Khuyến Mãi";
                 }
             }
         }
@@ -944,12 +955,6 @@ namespace BachHoaXanh_Store
             lbl_TongTien.Text = "0";
         }
 
-
-        private void txt_TienKhachTra_TextChanged(object sender, EventArgs e)
-        {
-            lbl_TienThua.Text = ( int.Parse(txt_TienKhachTra.Text) - int.Parse(lbl_TongTien.Text)).ToString();
-        }
-
         private void txt_TienKhachTra_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
@@ -960,9 +965,10 @@ namespace BachHoaXanh_Store
 
         private void txt_TienKhachTra_TextChange(object sender, EventArgs e)
         {
-            int totalPrice = int.Parse(lbl_TongTien.Text.Trim());
-            int customerPrice = int.Parse(txt_TienKhachTra.Text.Trim());
-            lbl_TienThua.Text = (customerPrice - totalPrice).ToString();
+            if (int.TryParse(lbl_TongTien.Text.Trim(), out int totalPrice) && int.TryParse(txt_TienKhachTra.Text.Trim(), out int customerPrice))
+            {
+                lbl_TienThua.Text = (customerPrice - totalPrice).ToString();
+            }
         }
     }
 }

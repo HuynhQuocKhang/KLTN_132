@@ -100,7 +100,6 @@ namespace BachHoaXanh_Store
 
         private void frmPhieuXuatKho_Event()
         {
-            dgv_DHDT.Rows.Clear();
             if (chk_AllStore.Checked == true)
             {
                 dgv_DSDH.DataSource = objOrderStoreBLL.GetOrderFromStoreBO(0, (DateTime)dtp_NgayBatDau.Value, (DateTime)dtp_NgayKetThuc.Value);
@@ -110,6 +109,7 @@ namespace BachHoaXanh_Store
                 dgv_DSDH.DataSource = objOrderStoreBLL.GetOrderFromStoreBO(int.Parse(cbo_SieuThi.SelectedValue.ToString()), (DateTime)dtp_NgayBatDau.Value, (DateTime)dtp_NgayKetThuc.Value);
 
             }
+            dgv_DHDT.Rows.Clear();
         }
         private void chk_AllStore_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs e)
         {

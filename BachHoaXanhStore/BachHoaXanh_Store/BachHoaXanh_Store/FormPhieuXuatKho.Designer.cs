@@ -401,7 +401,7 @@ namespace BachHoaXanh_Store
             this.txt_TongTien.SelectionStart = 0;
             this.txt_TongTien.ShortcutsEnabled = true;
             this.txt_TongTien.Size = new System.Drawing.Size(268, 39);
-            this.txt_TongTien.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            //this.txt_TongTien.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txt_TongTien.TabIndex = 3;
             this.txt_TongTien.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_TongTien.TextMarginBottom = 0;
@@ -482,7 +482,7 @@ namespace BachHoaXanh_Store
             this.txt_NgayXuat.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_NgayXuat.TextMarginBottom = 0;
             this.txt_NgayXuat.TextMarginLeft = 5;
-            this.txt_NgayXuat.TextMarginTop = 0;
+            //this.txt_NgayXuat.TextMarginTop = 0;
             this.txt_NgayXuat.UseSystemPasswordChar = false;
             this.txt_NgayXuat.WordWrap = true;
             // 

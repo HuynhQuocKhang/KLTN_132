@@ -356,7 +356,7 @@ namespace BachHoaXanh_Store
             this.txt_ProductFullName.SelectionLength = 0;
             this.txt_ProductFullName.SelectionStart = 0;
             this.txt_ProductFullName.ShortcutsEnabled = true;
-            this.txt_ProductFullName.Size = new System.Drawing.Size(310, 35);
+            //this.txt_ProductFullName.Size = new System.Drawing.Size(310, 35);
             this.txt_ProductFullName.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txt_ProductFullName.TabIndex = 0;
             this.txt_ProductFullName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
