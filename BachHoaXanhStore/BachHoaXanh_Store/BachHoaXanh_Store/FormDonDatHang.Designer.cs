@@ -505,7 +505,7 @@ namespace BachHoaXanh_Store
             this.txt_TinhTrang.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_TinhTrang.TextMarginBottom = 0;
             this.txt_TinhTrang.TextMarginLeft = 5;
-            this.txt_TinhTrang.TextMarginTop = 0;
+            //this.txt_TinhTrang.TextMarginTop = 0;
             this.txt_TinhTrang.TextPlaceholder = "";
             this.txt_TinhTrang.UseSystemPasswordChar = false;
             this.txt_TinhTrang.WordWrap = true;
@@ -807,7 +807,7 @@ namespace BachHoaXanh_Store
             this.txt_NguoiDat.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_NguoiDat.TextMarginBottom = 0;
             this.txt_NguoiDat.TextMarginLeft = 5;
-            this.txt_NguoiDat.TextMarginTop = 0;
+            //this.txt_NguoiDat.TextMarginTop = 0;
             this.txt_NguoiDat.TextPlaceholder = "";
             this.txt_NguoiDat.UseSystemPasswordChar = false;
             this.txt_NguoiDat.WordWrap = true;

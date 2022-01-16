@@ -265,7 +265,21 @@ namespace BachHoaXanh_Store
 
         private void bunifuButton2_Click(object sender, EventArgs e)
         {
-            dgv_DSSP.DataSource = objProductBll.GetProductByKeysForOrderCustomer("", 0, 0, 1000);
+            if (objUser.Permission == 1)
+            {
+                if (cbo_NhaCungCap.SelectedValue.ToString() != "1")
+                {
+                    Search(txtKeyWord.Text.Trim(), cbo_LoaiSP.SelectedValue.ToString(), cbo_NhaCungCap.SelectedValue.ToString(), txtSoLuong.Text, int.Parse(cbo_PageSize.Text.Trim()));
+                }
+                else
+                {
+                    MessageBox.Show("Nhà cung cấp BHX chỉ áp dụng cho siêu thị");
+                }
+            }
+            else
+            {
+                Search(txtKeyWord.Text.Trim(), cbo_LoaiSP.SelectedValue.ToString(), cbo_NhaCungCap.SelectedValue.ToString(), txtSoLuong.Text, int.Parse(cbo_PageSize.Text.Trim()));
+            }
             dgv_Order.Rows.Clear();
         }
 
@@ -291,6 +305,21 @@ namespace BachHoaXanh_Store
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void dgv_Order_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgv_Order.Rows.Count > 0)
+            {
+                int index = dgv_Order.CurrentCell.RowIndex;
+                if (index != -1)
+                {
+                    if (int.TryParse(dgv_Order["SoLuong", index].Value.ToString().Trim(), out int intStock))
+                    {
+                        dgv_Order["col_ThanhTien", index].Value = intStock * int.Parse(dgv_Order["GiaVon", index].Value.ToString().Trim());
+                    }
+                }
+            }
         }
     }
 }

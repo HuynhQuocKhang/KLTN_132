@@ -207,9 +207,6 @@ Create Table CTHoaDonBanHang
 update SanPham
 set Isdeleted = 'false'
 
-update LoaiSP
-set Isdeleted = 'false'
-
 update SanPham
 set SoLuong = 50 where MaSP = '9932979000038'
 
@@ -217,7 +214,6 @@ set SoLuong = 50 where MaSP = '9932979000038'
 
 select * from HoaDonDatNCC
 select * from CTHoaDonDatNCC
-select * from SanPham where SoLuong <= 10
 select * from CTDonDatHang
 
 select * from PhieuTraHang
@@ -239,12 +235,15 @@ select * from DonDatHang
 select * from CTDonDatHang
 SELECT * FROM KhoHangKM
 
-select * from KhoSieuThi where MaST = 1 and MaSP = '1012841000006'
+select * from KhoSieuThi where MaST = 1 and soluong > 0
 select * from KhoHangKM where MaST = 1 and MaSP = '2701122062900'
 select * from HoaDonBanHang where MaHD = '1214120222';
 select * from CTHoaDonBanHang where MaHD = '1214120222';
 
 select * from KhoHangKM
+
+update KhoHangKM 
+set SoLuong = 100 where MaST = 1  and MaSP = '9932979000038'
 
 update LoaiSP
 set Isdeleted = 0

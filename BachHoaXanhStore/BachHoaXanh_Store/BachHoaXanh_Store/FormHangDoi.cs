@@ -26,28 +26,49 @@ namespace BachHoaXanh_Store
 
         private void btn_Chon_Click(object sender, EventArgs e)
         {
-            int index = dgv_HangDoi.CurrentCell.RowIndex;
-            RemoveInvoiceBOEvent(int.Parse(dgv_HangDoi["MaHD", index].Value.ToString()));
-            this.Close();
+            if (dgv_HangDoi.Rows.Count > 0)
+            {
+                int index = dgv_HangDoi.CurrentCell.RowIndex;
+                RemoveInvoiceBOEvent(int.Parse(dgv_HangDoi["MaHD", index].Value.ToString()));
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Danh sách hàng đợi đang rỗng.Xin vui lòng kiểm tra lại!");
+            }
         }
 
         private void btn_HuyHangDoi_Click(object sender, EventArgs e)
         {
-            FormBanHang.lstWating = new List<BO.InvoiceWatingBO>();
-            dgv_HangDoi.Rows.Clear();
-
+            if (dgv_HangDoi.Rows.Count > 0)
+            {
+                FormBanHang.lstWating = new List<BO.InvoiceWatingBO>();
+                dgv_HangDoi.Rows.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Danh sách hàng đợi đang rỗng.Xin vui lòng kiểm tra lại!");
+            }
         }
 
         private void btn_XoaHoaDon_Click(object sender, EventArgs e)
         {
-            int index = dgv_HangDoi.CurrentCell.RowIndex;
-            foreach (var item in FormBanHang.lstWating)
+            if (dgv_HangDoi.Rows.Count > 0)
             {
-                if (item.MaHD == int.Parse(dgv_HangDoi["MaHD", index].Value.ToString()))
+                int index = dgv_HangDoi.CurrentCell.RowIndex;
+                foreach (var item in FormBanHang.lstWating)
                 {
-                    FormBanHang.lstWating.Remove(item);
-                    break;
+                    if (item.MaHD == int.Parse(dgv_HangDoi["MaHD", index].Value.ToString()))
+                    {
+                        FormBanHang.lstWating.Remove(item);
+                        break;
+                    }
                 }
+                dgv_HangDoi.Rows.RemoveAt(index);
+            }
+            else
+            {
+                MessageBox.Show("Danh sách hàng đợi đang rỗng.Xin vui lòng kiểm tra lại!");
             }
         }
     }

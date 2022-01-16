@@ -32,3 +32,13 @@ E:\09DHTH5\KLTN\SoDoLop\KLTN_132\BachHoaXanhStore\BachHoaXanh_Store\BLL_DAO\bin\
 E:\09DHTH5\KLTN\SoDoLop\KLTN_132\BachHoaXanhStore\BachHoaXanh_Store\BLL_DAO\bin\Debug\ja\DevExpress.Xpo.v20.1.resources.dll
 E:\09DHTH5\KLTN\SoDoLop\KLTN_132\BachHoaXanhStore\BachHoaXanh_Store\BLL_DAO\bin\Debug\ru\DevExpress.Xpo.v20.1.resources.dll
 E:\09DHTH5\KLTN\SoDoLop\KLTN_132\BachHoaXanhStore\BachHoaXanh_Store\BLL_DAO\obj\Debug\BLL_DAO.csproj.CopyComplete
+E:\KhoaLuanTotNghiep\BachHoaXanhStore\BachHoaXanh_Store\BLL_DAO\bin\Debug\DevExpress.Data.v20.1.xml
+E:\KhoaLuanTotNghiep\BachHoaXanhStore\BachHoaXanh_Store\BLL_DAO\bin\Debug\DevExpress.Xpo.v20.1.xml
+E:\KhoaLuanTotNghiep\BachHoaXanhStore\BachHoaXanh_Store\BLL_DAO\bin\Debug\de\DevExpress.Data.v20.1.resources.dll
+E:\KhoaLuanTotNghiep\BachHoaXanhStore\BachHoaXanh_Store\BLL_DAO\bin\Debug\es\DevExpress.Data.v20.1.resources.dll
+E:\KhoaLuanTotNghiep\BachHoaXanhStore\BachHoaXanh_Store\BLL_DAO\bin\Debug\ja\DevExpress.Data.v20.1.resources.dll
+E:\KhoaLuanTotNghiep\BachHoaXanhStore\BachHoaXanh_Store\BLL_DAO\bin\Debug\ru\DevExpress.Data.v20.1.resources.dll
+E:\KhoaLuanTotNghiep\BachHoaXanhStore\BachHoaXanh_Store\BLL_DAO\bin\Debug\de\DevExpress.Xpo.v20.1.resources.dll
+E:\KhoaLuanTotNghiep\BachHoaXanhStore\BachHoaXanh_Store\BLL_DAO\bin\Debug\es\DevExpress.Xpo.v20.1.resources.dll
+E:\KhoaLuanTotNghiep\BachHoaXanhStore\BachHoaXanh_Store\BLL_DAO\bin\Debug\ja\DevExpress.Xpo.v20.1.resources.dll
+E:\KhoaLuanTotNghiep\BachHoaXanhStore\BachHoaXanh_Store\BLL_DAO\bin\Debug\ru\DevExpress.Xpo.v20.1.resources.dll

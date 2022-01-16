@@ -26,8 +26,8 @@ namespace BLL_DAO.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-HAF1U2R\\HUYNHKHANG;Initial Catalog=BachHoaXanh_Store;Integrat" +
-            "ed Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=162860-VHBSON;Initial Catalog=BachHoaXanh_Store;Integrated Security=T" +
+            "rue")]
         public string BachHoaXanh_StoreConnectionString {
             get {
                 return ((string)(this["BachHoaXanh_StoreConnectionString"]));
@@ -37,8 +37,8 @@ namespace BLL_DAO.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-HAF1U2R\\HUYNHKHANG;Initial Catalog=BachHoaXanh_Store;Integrat" +
-            "ed Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=162860-VHBSON;Initial Catalog=BachHoaXanh_Store;Integrated Security=T" +
+            "rue")]
         public string BachHoaXanh_StoreConnectionString1 {
             get {
                 return ((string)(this["BachHoaXanh_StoreConnectionString1"]));

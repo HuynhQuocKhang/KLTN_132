@@ -231,7 +231,7 @@ namespace BachHoaXanh_Store
             this.txt_NhaCungCap.TabIndex = 0;
             this.txt_NhaCungCap.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_NhaCungCap.TextMarginBottom = 0;
-            this.txt_NhaCungCap.TextMarginLeft = 5;
+            //this.txt_NhaCungCap.TextMarginLeft = 5;
             this.txt_NhaCungCap.TextMarginTop = 0;
             this.txt_NhaCungCap.TextPlaceholder = "";
             this.txt_NhaCungCap.UseSystemPasswordChar = false;

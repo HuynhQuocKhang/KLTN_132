@@ -362,7 +362,7 @@ namespace BachHoaXanh_Store
                 if (isApplyPromo == true)
                 {
                     List<ProductPromotionBO> lstResult = new List<ProductPromotionBO>();
-                    lstResult = objOrderStoreBLL.GetProductPromotionFromStore(txt_MaSP.Text.Trim(), (int)FormLogin.objUserBO.StoreId);
+                    lstResult = objOrderStoreBLL.GetProductPromotionFromStoreByKey(txt_MaSP.Text.Trim(), (int)FormLogin.objUserBO.StoreId,10);
                     if (lstResult.Count == 1)
                     {
                         if (txt_SoLuong.Text == null || txt_SoLuong.Text == string.Empty || txt_SoLuong.Text == "0")
@@ -389,7 +389,7 @@ namespace BachHoaXanh_Store
                                     else
                                     {
                                         lbl_SoLuong.Text = (int.Parse(lbl_SoLuong.Text) + int.Parse(txt_SoLuong.Text)).ToString();
-                                        dgv_DSKM.Rows.Add(objResult.MaSP.ToString(), objResult.TenSP.ToString(), txt_SoLuong.Text);
+                                        dgv_DSKM.Rows.Add(objResult.MaSP.ToString(), objResult.TenSP.ToString(), txt_SoLuong.Text, objResult.GiaKM, int.Parse(txt_SoLuong.Text.Trim()) * objResult.GiaKM);
                                         txt_MaSP.Clear();
                                         txt_SoLuong.Clear();
                                         if (dgv_DSKM.Rows.Count > 0)
@@ -427,6 +427,7 @@ namespace BachHoaXanh_Store
                                         else
                                         {
                                             dgv_DSKM["SoLuong", intIndex].Value = intSoluong;
+                                            dgv_DSKM["ThanhTien", intIndex].Value = intSoluong * objResult.GiaKM;
                                             txt_MaSP.Clear();
                                             txt_SoLuong.Clear();
                                         }
@@ -526,8 +527,11 @@ namespace BachHoaXanh_Store
                             lstProduct = new List<ProductBO>();
                             lsInvoiceDetail = new List<InvoiceDetailBO>();
                             lstProductPromotion = new List<ProductBO>();
+                            Section++;
                             setColor(Color.FromArgb(76, 154, 42));
                             isApplyPromo = false;
+                            lblPromo.Text = "Không áp dụng Khuyến Mãi";
+                            label13.Text = "Không";
                             Tag = "1";
                             txt_SoLuong.Text = "1";
                             lbl_TongTien.Text = "0";
@@ -573,6 +577,8 @@ namespace BachHoaXanh_Store
                             lstProductPromotion = new List<ProductBO>();
                             setColor(Color.FromArgb(76, 154, 42));
                             isApplyPromo = false;
+                            lblPromo.Text = "";
+                            label13.Text = "Không";
                             Tag = "1";
                             txt_SoLuong.Text = "1";
                             lbl_TongTien.Text = "0";
@@ -831,8 +837,14 @@ namespace BachHoaXanh_Store
             lstProduct = new List<ProductBO>();
             lsInvoiceDetail = new List<InvoiceDetailBO>();
             lstProductPromotion = new List<ProductBO>();
-            setColor(Color.FromArgb(76, 154, 42));
-            isApplyPromo = false;
+            if (isApplyPromo == true)
+            {
+                Section++;
+                setColor(Color.FromArgb(76, 154, 42));
+                isApplyPromo = false;
+                
+            }
+            lblPromo.Text = string.Empty;
             Tag = "1";
             txt_SoLuong.Text = "1";
             lbl_TongTien.Text = "0";
@@ -882,9 +894,16 @@ namespace BachHoaXanh_Store
 
         private void btn_HangDoi_Click(object sender, EventArgs e)
         {
-            FormHangDoi frmHangDoi = new FormHangDoi();
-            frmHangDoi.RemoveInvoiceBOEvent += frmHangDoi_RemoveInvoiceBOEvent;
-            frmHangDoi.ShowDialog();
+            if (dgv_DSSP.Rows.Count > 0)
+            {
+                MessageBox.Show("Vẫn còn sản phẩm chưa được thanh toán. Vui lòng thanh toán hoặc hủy hóa đơn trước khi xem hàng đợi!");
+            }
+            else
+            {
+                FormHangDoi frmHangDoi = new FormHangDoi();
+                frmHangDoi.RemoveInvoiceBOEvent += frmHangDoi_RemoveInvoiceBOEvent;
+                frmHangDoi.ShowDialog();
+            }
         }
         void frmHangDoi_RemoveInvoiceBOEvent(int intMaHD)
         {
@@ -911,48 +930,66 @@ namespace BachHoaXanh_Store
                     break;
                 }
             }
+            if (dgv_DSKM.Rows.Count > 0)
+            {
+                Section++;
+                setColor(Color.Red);
+                isApplyPromo = true;
+                lblPromo.Text = "Đang áp dụng Khuyến Mãi";
+            }
         }
         private void btn_LuuHangDoi_Click(object sender, EventArgs e)
         {
-            InvoiceWatingBO objInvoiceWatingBO = new InvoiceWatingBO();
-            objInvoiceWatingBO.MaHD = lstWating.Count + 1;
-            objInvoiceWatingBO.TongSP = int.Parse(lbl_SoLuong.Text);
-            objInvoiceWatingBO.ThanhTien = int.Parse(lbl_TongTien.Text);
-            objInvoiceWatingBO.ListInvoiceDetailBO = new List<InvoiceDetailBO>();
             if (dgv_DSSP.Rows.Count > 0)
             {
-                for (int i = 0; i < dgv_DSSP.Rows.Count; i++)
+                InvoiceWatingBO objInvoiceWatingBO = new InvoiceWatingBO();
+                objInvoiceWatingBO.MaHD = lstWating.Count + 1;
+                objInvoiceWatingBO.TongSP = int.Parse(lbl_SoLuong.Text);
+                objInvoiceWatingBO.ThanhTien = int.Parse(lbl_TongTien.Text);
+                objInvoiceWatingBO.ListInvoiceDetailBO = new List<InvoiceDetailBO>();
+                if (dgv_DSSP.Rows.Count > 0)
                 {
-                    InvoiceDetailBO objInvoiceDetail = new InvoiceDetailBO();
-                    objInvoiceDetail.MaSP = dgv_DSSP["col_MaSP", i].Value.ToString();
-                    objInvoiceDetail.SoLuong = int.Parse(dgv_DSSP["col_SoLuong", i].Value.ToString().Trim());
-                    objInvoiceDetail.ThanhTien = int.Parse(dgv_DSSP["col_ThanhTien", i].Value.ToString().Trim());
-                    objInvoiceDetail.GiaBan = int.Parse(dgv_DSSP["col_GiaBan", i].Value.ToString().Trim());
-                    objInvoiceDetail.KhuyenMai = false;
-                    objInvoiceDetail.TenSP = dgv_DSSP["col_TenSP", i].Value.ToString().Trim();
-                    objInvoiceWatingBO.ListInvoiceDetailBO.Add(objInvoiceDetail);
-
-                }
-                if (dgv_DSKM.Rows.Count > 0)
-                {
-                    for (int i = 0; i < dgv_DSKM.Rows.Count; i++)
+                    for (int i = 0; i < dgv_DSSP.Rows.Count; i++)
                     {
                         InvoiceDetailBO objInvoiceDetail = new InvoiceDetailBO();
-                        objInvoiceDetail.MaSP = dgv_DSKM["MaSP", i].Value.ToString();
-                        objInvoiceDetail.SoLuong = int.Parse(dgv_DSKM["SoLuong", i].Value.ToString().Trim());
-                        objInvoiceDetail.ThanhTien = int.Parse(dgv_DSKM["ThanhTien", i].Value.ToString().Trim());
-                        objInvoiceDetail.GiaKM = int.Parse(dgv_DSKM["GiaKM", i].Value.ToString().Trim());
-                        objInvoiceDetail.KhuyenMai = true;
-                        objInvoiceDetail.TenSP = dgv_DSKM["TenSP", i].Value.ToString().Trim();
+                        objInvoiceDetail.MaSP = dgv_DSSP["col_MaSP", i].Value.ToString();
+                        objInvoiceDetail.SoLuong = int.Parse(dgv_DSSP["col_SoLuong", i].Value.ToString().Trim());
+                        objInvoiceDetail.ThanhTien = int.Parse(dgv_DSSP["col_ThanhTien", i].Value.ToString().Trim());
+                        objInvoiceDetail.GiaBan = int.Parse(dgv_DSSP["col_GiaBan", i].Value.ToString().Trim());
+                        objInvoiceDetail.KhuyenMai = false;
+                        objInvoiceDetail.TenSP = dgv_DSSP["col_TenSP", i].Value.ToString().Trim();
                         objInvoiceWatingBO.ListInvoiceDetailBO.Add(objInvoiceDetail);
+
+                    }
+                    if (dgv_DSKM.Rows.Count > 0)
+                    {
+                        for (int i = 0; i < dgv_DSKM.Rows.Count; i++)
+                        {
+                            InvoiceDetailBO objInvoiceDetail = new InvoiceDetailBO();
+                            objInvoiceDetail.MaSP = dgv_DSKM["MaSP", i].Value.ToString();
+                            objInvoiceDetail.SoLuong = int.Parse(dgv_DSKM["SoLuong", i].Value.ToString().Trim());
+                            objInvoiceDetail.ThanhTien = int.Parse(dgv_DSKM["ThanhTien", i].Value.ToString().Trim());
+                            objInvoiceDetail.GiaKM = int.Parse(dgv_DSKM["GiaKM", i].Value.ToString().Trim());
+                            objInvoiceDetail.KhuyenMai = true;
+                            objInvoiceDetail.TenSP = dgv_DSKM["TenSP", i].Value.ToString().Trim();
+                            objInvoiceWatingBO.ListInvoiceDetailBO.Add(objInvoiceDetail);
+                        }
                     }
                 }
+                lstWating.Add(objInvoiceWatingBO);
+                dgv_DSSP.Rows.Clear();
+                dgv_DSKM.Rows.Clear();
+                lbl_SoLuong.Text = "0";
+                lbl_TongTien.Text = "0";
+                if (isApplyPromo == true)
+                {
+                    Section++;
+                    setColor(Color.FromArgb(76, 154, 42));
+                    isApplyPromo = false;
+
+                }
+                lblPromo.Text = string.Empty;
             }
-            lstWating.Add(objInvoiceWatingBO);
-            dgv_DSSP.Rows.Clear();
-            dgv_DSKM.Rows.Clear();
-            lbl_SoLuong.Text = "0";
-            lbl_TongTien.Text = "0";
         }
 
         private void txt_TienKhachTra_KeyPress(object sender, KeyPressEventArgs e)
