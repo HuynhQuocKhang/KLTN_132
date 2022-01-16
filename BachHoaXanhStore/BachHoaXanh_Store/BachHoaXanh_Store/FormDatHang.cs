@@ -287,5 +287,10 @@ namespace BachHoaXanh_Store
                 Search(txtKeyWord.Text.Trim(), cbo_LoaiSP.SelectedValue.ToString(), cbo_NhaCungCap.SelectedValue.ToString(), txtSoLuong.Text, int.Parse(cbo_PageSize.Text.Trim()));
             }
         }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

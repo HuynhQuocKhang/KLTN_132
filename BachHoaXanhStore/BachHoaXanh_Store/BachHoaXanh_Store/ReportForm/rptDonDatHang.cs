@@ -26,7 +26,7 @@ namespace BachHoaXanh_Store.ReportForm
             pTongTien.Text = FormDatHang.intTotalPrice.ToString();
             pNgayTra.Text = DateTime.Now.Day.ToString() + "/" + DateTime.Now.Month.ToString() + "/" + DateTime.Now.Year.ToString();
             xrLabel16.Text = "TP.HCM, ngày "+ DateTime.Now.Day.ToString() + " tháng "+ DateTime.Now.Month.ToString() + " năm " + DateTime.Now.Year.ToString();
-            string strBarcode = pMaDonDat.Text + FormDatHang.intCustomerId + DateTime.Now.Day.ToString() + DateTime.Now.Month.ToString() + DateTime.Now.Year.ToString() + pMaDonDat.Text;
+            string strBarcode = pMaDonDat.Text;
             barcode = new Barcode();
             Image barCodeImage = barcode.Encode(TYPE.CODE128, strBarcode);
             img_barcode.Image = barCodeImage;

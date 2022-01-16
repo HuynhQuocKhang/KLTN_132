@@ -507,7 +507,7 @@ namespace BachHoaXanh_Store
             this.txt_SLTon.HideSelection = true;
             this.txt_SLTon.IconLeft = null;
             this.txt_SLTon.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_SLTon.IconPadding = 10;
+            //this.txt_SLTon.IconPadding = 10;
             this.txt_SLTon.IconRight = null;
             this.txt_SLTon.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_SLTon.Lines = new string[0];

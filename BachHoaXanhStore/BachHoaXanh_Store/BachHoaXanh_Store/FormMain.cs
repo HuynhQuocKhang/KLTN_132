@@ -131,7 +131,6 @@ namespace BachHoaXanh_Store
             {
                 if (xtraTabbedMdiManager1.SelectedPage.Text == "Đặt Hàng")
                 {
-                    bunifuButton1.Visible = true;
                     reportType = "DatHang";
                     label1.Text = "Số đơn đã đặt";
                     label3.Text = "Tổng giá trị đặt";
@@ -140,7 +139,6 @@ namespace BachHoaXanh_Store
                 }
                 else if (xtraTabbedMdiManager1.SelectedPage.Text == "Phân Phối Hàng Hóa")
                 {
-                    bunifuButton1.Visible = true;
                     reportType = "PhanPhoiHang";
                     label1.Text = "Số đơn đã xuất";
                     label3.Text = "Tổng giá trị xuất";
@@ -149,7 +147,6 @@ namespace BachHoaXanh_Store
                 }
                 else if (xtraTabbedMdiManager1.SelectedPage.Text == "Trả Hàng")
                 {
-                    bunifuButton1.Visible = true;
                     reportType = "TraHang";
                     label1.Text = "Số sản phẩm trả về";
                     label3.Text = "Tổng giá trị trả về";
@@ -158,7 +155,6 @@ namespace BachHoaXanh_Store
                 }
                 else if (xtraTabbedMdiManager1.SelectedPage.Text == "Danh Sách Sản Phẩm")
                 {
-                    bunifuButton1.Visible = false;
                     label1.Text = "Số sản phẩm còn";
                     label3.Text = "Số sản phẩm đã hết";
                     if (FormLogin.objUserBO.Permission == 1)
@@ -181,7 +177,6 @@ namespace BachHoaXanh_Store
                 }
                 else if (xtraTabbedMdiManager1.SelectedPage.Text == "Xem Hóa Đơn Đặt")
                 {
-                    bunifuButton1.Visible = false;
                     label1.Text = "Số đơn chưa xử lí";
                     label3.Text = "Số đơn đã xử lí";
                     label2.Text = objOrderStoreBLL.countOrderFromStore().ToString();
@@ -189,7 +184,6 @@ namespace BachHoaXanh_Store
                 }
                 else if (xtraTabbedMdiManager1.SelectedPage.Text == "Nhập Hàng")
                 {
-                    bunifuButton1.Visible = false;
                     label1.Text = "Số đơn chưa xử lí";
                     label3.Text = "Số đơn đã xử lí";
                     label4.Text = objOrderStoreBLL.countOrderFromStore().ToString();
@@ -197,7 +191,6 @@ namespace BachHoaXanh_Store
                 }
                 else if (xtraTabbedMdiManager1.SelectedPage.Text == "Duyệt Phiếu Trả Hàng")
                 {
-                    bunifuButton1.Visible = false;
                     label1.Text = "Số đơn chưa duyệt";
                     label3.Text = "Số đơn đã duyệt";
                     label2.Text = objOrderStoreBLL.countReturnProductOrder().ToString();
