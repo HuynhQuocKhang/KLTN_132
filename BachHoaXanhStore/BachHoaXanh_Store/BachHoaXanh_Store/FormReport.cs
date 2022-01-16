@@ -66,7 +66,13 @@ namespace BachHoaXanh_Store
                 rptThongKe rptThongKe = new rptThongKe("ThongKe");
                 documentViewer1.PrintingSystem = rptThongKe.PrintingSystem;
                 rptThongKe.CreateDocument();
-            }    
+            }
+            else if (reportType == "KetCa")
+            {
+                rptKetCa rpt = new rptKetCa();
+                documentViewer1.PrintingSystem = rpt.PrintingSystem;
+                rpt.CreateDocument();
+            }
         }
     }
 }

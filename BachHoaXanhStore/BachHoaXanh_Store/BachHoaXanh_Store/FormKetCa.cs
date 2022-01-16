@@ -17,6 +17,18 @@ namespace BachHoaXanh_Store
         StoreBLL objStoreBLL = new StoreBLL();
         public delegate void CloseDialog();
         public event CloseDialog CloseDialogEvent;
+        public static int pTotalReality;
+        public static int pTotal;
+        public static int p500;
+        public static int p200;
+        public static int p100;
+        public static int p50;
+        public static int p20;
+        public static int p10;
+        public static int p5;
+        public static int p2;
+        public static int p1;
+        public static int p12;
         public FormKetCa()
         {
             InitializeComponent();
@@ -159,6 +171,7 @@ namespace BachHoaXanh_Store
 
         private void SaleLabelChange()
         {
+            pTotal = 0;
             int total = 0;
             int int500k = 0;
             int int200k = 0;
@@ -177,7 +190,7 @@ namespace BachHoaXanh_Store
             }
             else
             {
-                int500 = int.Parse(txt_500.Text);
+                p12 = int500 = int.Parse(txt_500.Text);
             }
 
             if (txt_1k.Text == null || txt_1k.Text.Trim() == "")
@@ -186,7 +199,7 @@ namespace BachHoaXanh_Store
             }
             else
             {
-                int1k = int.Parse(txt_1k.Text);
+                p1=int1k = int.Parse(txt_1k.Text);
             }
 
             if (txt_2k.Text == null || txt_2k.Text.Trim() == "")
@@ -195,7 +208,7 @@ namespace BachHoaXanh_Store
             }
             else
             {
-                int2k = int.Parse(txt_2k.Text);
+               p2=int2k = int.Parse(txt_2k.Text);
             }
 
             if (txt_5k.Text == null || txt_5k.Text.Trim() == "")
@@ -204,7 +217,7 @@ namespace BachHoaXanh_Store
             }
             else
             {
-                int5k = int.Parse(txt_5k.Text);
+                p5=int5k = int.Parse(txt_5k.Text);
             }
 
             if (txt_10k.Text == null || txt_10k.Text.Trim() == "")
@@ -213,7 +226,7 @@ namespace BachHoaXanh_Store
             }
             else
             {
-                int10k = int.Parse(txt_10k.Text);
+                p10=int10k = int.Parse(txt_10k.Text);
             }
 
 
@@ -223,7 +236,7 @@ namespace BachHoaXanh_Store
             }
             else
             {
-                int20k = int.Parse(txt_20k.Text);
+                p20=int20k = int.Parse(txt_20k.Text);
             }
 
             if (txt_50k.Text == null || txt_50k.Text.Trim() == "")
@@ -232,7 +245,7 @@ namespace BachHoaXanh_Store
             }
             else
             {
-                int50k = int.Parse(txt_50k.Text);
+                p50=int50k = int.Parse(txt_50k.Text);
             }
 
             if (txt_100k.Text == null || txt_100k.Text.Trim() == "")
@@ -241,7 +254,7 @@ namespace BachHoaXanh_Store
             }
             else
             {
-                int100k = int.Parse(txt_100k.Text);
+               p100= int100k = int.Parse(txt_100k.Text);
             }
 
             if (txt_200k.Text == null || txt_200k.Text.Trim() == "")
@@ -250,7 +263,7 @@ namespace BachHoaXanh_Store
             }
             else
             {
-                int200k = int.Parse(txt_200k.Text);
+                p200=int200k = int.Parse(txt_200k.Text);
             }
 
             if (txt_500k.Text == null || txt_500k.Text.Trim() == "")
@@ -259,12 +272,14 @@ namespace BachHoaXanh_Store
             }
             else
             {
-                int500k = int.Parse(txt_500k.Text);
+                p500=int500k = int.Parse(txt_500k.Text);
             }
 
             total += int500k * 500000 + int200k * 200000 + int100k * 100000 + int50k * 50000 +
                                     int20k * 20000 + int10k * 10000 + int5k * 5000 + int2k * 2000 +
                                     int1k * 1000 + int500 * 500;
+            pTotal = total;
+            pTotalReality = int.Parse(lbl_DoanhThuThucTe.Text);
             lbl_DoanhThuNgay.Text = total.ToString();
             lbl_ChenhLech.Text = (Math.Abs(int.Parse(lbl_DoanhThuThucTe.Text) - int.Parse(lbl_DoanhThuNgay.Text))).ToString();
 
@@ -273,6 +288,8 @@ namespace BachHoaXanh_Store
         private void btn_KetCa_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Kết ca thành công!");
+            Program.frmReport = new FormReport("KetCa");
+            Program.frmReport.ShowDialog();
             CloseDialogEvent();
             this.Close();
         }

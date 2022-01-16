@@ -343,6 +343,12 @@
     <Compile Include="ReportForm\rptDonDatHang.Designer.cs">
       <DependentUpon>rptDonDatHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReportForm\rptKetCa.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportForm\rptKetCa.Designer.cs">
+      <DependentUpon>rptKetCa.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReportForm\rptPhieuTraHang.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -466,6 +472,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReportForm\rptDonDatHang.resx">
       <DependentUpon>rptDonDatHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\rptKetCa.resx">
+      <DependentUpon>rptKetCa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReportForm\rptPhieuTraHang.resx">
       <DependentUpon>rptPhieuTraHang.cs</DependentUpon>

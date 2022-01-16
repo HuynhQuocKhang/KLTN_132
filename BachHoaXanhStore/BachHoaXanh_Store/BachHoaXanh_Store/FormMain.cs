@@ -26,6 +26,7 @@ namespace BachHoaXanh_Store
             InitializeComponent();
             lbl_MaST.Text = objStoreBLL.getStoreNameByUser(FormLogin.objUserBO.StoreId);
             lbl_MaNV.Text = FormLogin.objUserBO.UserName + " - " + FormLogin.objUserBO.UserFullName;
+            toolTip1.SetToolTip(simpleButton1, "Đăng xuất");
             if (FormLogin.objUserBO.Permission == 1)
             {
                 accordionControlElement2.Visible = false;
@@ -134,7 +135,7 @@ namespace BachHoaXanh_Store
                     reportType = "DatHang";
                     label1.Text = "Số đơn đã đặt";
                     label3.Text = "Tổng giá trị đặt";
-                    label2.Text = objOrderStoreBLL.countOrderFromStore().ToString();
+                    label2.Text = objOrderStoreBLL.countOrderFromStore(int.Parse(FormLogin.objUserBO.Permission.ToString())).ToString();
                     label4.Text = objOrderStoreBLL.sumValueOrderFormStore().ToString();
                 }
                 else if (xtraTabbedMdiManager1.SelectedPage.Text == "Phân Phối Hàng Hóa")
@@ -142,7 +143,7 @@ namespace BachHoaXanh_Store
                     reportType = "PhanPhoiHang";
                     label1.Text = "Số đơn đã xuất";
                     label3.Text = "Tổng giá trị xuất";
-                    label2.Text = objOrderStoreBLL.countOrderFromStore().ToString();
+                    label2.Text = objOrderStoreBLL.countOrderFromStore(int.Parse(FormLogin.objUserBO.Permission.ToString())).ToString();
                     label4.Text = objOrderStoreBLL.sumValueOrderFormStore().ToString();
                 }
                 else if (xtraTabbedMdiManager1.SelectedPage.Text == "Trả Hàng")
@@ -179,15 +180,15 @@ namespace BachHoaXanh_Store
                 {
                     label1.Text = "Số đơn chưa xử lí";
                     label3.Text = "Số đơn đã xử lí";
-                    label2.Text = objOrderStoreBLL.countOrderFromStore().ToString();
-                    label4.Text = objOrderStoreBLL.countTransferFromStore().ToString();
+                    label2.Text = objOrderStoreBLL.countOrderFromStore(int.Parse(FormLogin.objUserBO.Permission.ToString())).ToString();
+                    label4.Text = objOrderStoreBLL.countTransferFromStore(int.Parse(FormLogin.objUserBO.Permission.ToString())).ToString();
                 }
                 else if (xtraTabbedMdiManager1.SelectedPage.Text == "Nhập Hàng")
                 {
                     label1.Text = "Số đơn chưa xử lí";
                     label3.Text = "Số đơn đã xử lí";
-                    label4.Text = objOrderStoreBLL.countOrderFromStore().ToString();
-                    label2.Text = objOrderStoreBLL.countTransferFromStore().ToString();
+                    label4.Text = objOrderStoreBLL.countOrderFromStore(int.Parse(FormLogin.objUserBO.Permission.ToString())).ToString();
+                    label2.Text = objOrderStoreBLL.countTransferFromStore(int.Parse(FormLogin.objUserBO.Permission.ToString())).ToString();
                 }
                 else if (xtraTabbedMdiManager1.SelectedPage.Text == "Duyệt Phiếu Trả Hàng")
                 {
@@ -239,18 +240,7 @@ namespace BachHoaXanh_Store
             this.Hide();
         }
 
-        private void comboBoxEdit1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (comboBoxEdit1.SelectedItem.ToString() == "Đăng xuất")
-            {
-                DialogResult dr = MessageBox.Show("Bạn có muốn đăng xuất", "Đăng xuất?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (dr == DialogResult.Yes)
-                {
-                    Program.frmLogin.Show();
-                    this.Hide();
-                }
-            }
-        }
+
 
         private void accordionControlElement10_Click(object sender, EventArgs e)
         {
@@ -309,6 +299,16 @@ namespace BachHoaXanh_Store
             {
                 FormThongKeKho formThongKeKho = new FormThongKeKho();
                 ViewChildForm(formThongKeKho);
+            }
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("Bạn có muốn đăng xuất", "Đăng xuất?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dr == DialogResult.Yes)
+            {
+                Program.frmLogin.Show();
+                this.Hide();
             }
         }
     }
