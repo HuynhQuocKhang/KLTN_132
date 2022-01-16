@@ -297,25 +297,33 @@ namespace BLL_DAO
                            };
             return entities.Count();
         }
-        public int countOrderFromStore()
+        public int countOrderFromStore(int permission)
         {
-            var entities = db.DonDatHangs.Where(x => x.TinhTrang == 0).ToList();
-            return entities.Count();
+            if(permission==1)
+            {
+                var entities = db.HoaDonDatNCCs.Where(x => x.TinhTrang == 0).ToList();
+                return entities.Count();
+            }    
+            else
+            {
+                var entities = db.DonDatHangs.Where(x => x.TinhTrang == 0).ToList(); 
+                return entities.Count();
+            }    
+            
+            
         }
-        public int countTransferFromStore()
+        public int countTransferFromStore(int permission)
         {
-            var entities = from objOrderStore in db.DonDatHangs
-                           where objOrderStore.TinhTrang == 1
-                           select new OrderStoreBO()
-                           {
-                               MaHD = objOrderStore.MaDH,
-                               MaST = objOrderStore.MaST,
-                               NguoiLapPhieu = objOrderStore.NguoiLapPhieu,
-                               NgayDat = objOrderStore.NgayDat,
-                               TongTien = objOrderStore.TongTien,
-                               TinhTrang = objOrderStore.TinhTrang
-                           };
-            return entities.Count();
+            if (permission == 1)
+            {
+                var entities = db.HoaDonDatNCCs.Where(x => x.TinhTrang == 1).ToList();
+                return entities.Count();
+            }
+            else
+            {
+                var entities = db.DonDatHangs.Where(x => x.TinhTrang == 1).ToList();
+                return entities.Count();
+            }
         }
         public int sumAllValueOrderFormStore()
         {
