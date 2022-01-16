@@ -33,8 +33,6 @@ namespace BachHoaXanh_Store
                 chr_GiaTri.Series["Phiếu trả hàng"].Points.AddXY(aDateTime.ToShortDateString(), db.PhieuTraHangs.Where(t => t.MaST == FormLogin.objUserBO.StoreId && t.TinhTrang == 1 && t.NgayTra == aDateTime).Sum(t => t.TongTien).ToString());
                 aDateTime = aDateTime.AddDays(1);
             }
-            chr_SoLuong.Titles.Add("Biểu đồ số lượng");
-            chr_GiaTri.Titles.Add("Biểu đồ giá trị");
         }
         public static DateTime GetFistDayInMonth(int year, int month)
         {
@@ -52,10 +50,8 @@ namespace BachHoaXanh_Store
         {
             chr_SoLuong.Series["Đơn đặt hàng"].Points.Clear();
             chr_SoLuong.Series["Phiếu trả hàng"].Points.Clear();
-            chr_SoLuong.Series["Phiếu xuất kho"].Points.Clear();
             chr_GiaTri.Series["Đơn đặt hàng"].Points.Clear();
             chr_GiaTri.Series["Phiếu trả hàng"].Points.Clear();
-            chr_GiaTri.Series["Phiếu xuất kho"].Points.Clear();
             loadChart(cbo_Month.Text);
         }
     }
