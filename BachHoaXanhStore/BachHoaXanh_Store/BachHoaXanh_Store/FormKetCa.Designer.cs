@@ -1314,6 +1314,7 @@ namespace BachHoaXanh_Store
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(894, 464);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("FormKetCa.IconOptions.Image")));
             this.Name = "FormKetCa";
             this.Text = "Kết Ca";
             this.tableLayoutPanel1.ResumeLayout(false);

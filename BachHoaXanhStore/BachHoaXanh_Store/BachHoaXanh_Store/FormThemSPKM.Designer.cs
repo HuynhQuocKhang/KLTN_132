@@ -79,6 +79,7 @@ namespace BachHoaXanh_Store
             this.bunifuLabel6 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel7 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel8 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tableLayoutPanel2.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -356,7 +357,7 @@ namespace BachHoaXanh_Store
             this.txt_ProductFullName.SelectionLength = 0;
             this.txt_ProductFullName.SelectionStart = 0;
             this.txt_ProductFullName.ShortcutsEnabled = true;
-            //this.txt_ProductFullName.Size = new System.Drawing.Size(310, 35);
+            this.txt_ProductFullName.Size = new System.Drawing.Size(310, 35);
             this.txt_ProductFullName.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txt_ProductFullName.TabIndex = 0;
             this.txt_ProductFullName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -365,7 +366,7 @@ namespace BachHoaXanh_Store
             this.txt_ProductFullName.TextMarginTop = 0;
             this.txt_ProductFullName.TextPlaceholder = "";
             this.txt_ProductFullName.UseSystemPasswordChar = false;
-            this.txt_ProductFullName.WordWrap = true;
+            this.txt_ProductFullName.WordWrap = false;
             // 
             // panel3
             // 
@@ -507,7 +508,7 @@ namespace BachHoaXanh_Store
             this.txt_SLTon.HideSelection = true;
             this.txt_SLTon.IconLeft = null;
             this.txt_SLTon.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            //this.txt_SLTon.IconPadding = 10;
+            this.txt_SLTon.IconPadding = 10;
             this.txt_SLTon.IconRight = null;
             this.txt_SLTon.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_SLTon.Lines = new string[0];
@@ -912,5 +913,6 @@ namespace BachHoaXanh_Store
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel6;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel7;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel8;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

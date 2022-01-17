@@ -67,7 +67,8 @@ namespace BachHoaXanh_Store
 
         private void btn_XuatHang_Click(object sender, EventArgs e)
         {
-            panel9.Visible = true;
+            panel6.Visible = true;
+            panel7.Visible = true;
             reportType = "PhanPhoiHang";
             label1.Text = "Số đơn đã xuất";
             label3.Text = "Tổng giá trị xuất";
@@ -77,7 +78,8 @@ namespace BachHoaXanh_Store
 
         private void accordionControlElement6_Click(object sender, EventArgs e)
         {
-            panel9.Visible = true;
+            panel6.Visible = true;
+            panel7.Visible = true;
             label1.Text = "Số sản phẩm còn";
             label3.Text = "Số sản phẩm đã hết";
             Program.frmDanhSachSP = new FormDanhSachSP();
@@ -86,7 +88,8 @@ namespace BachHoaXanh_Store
 
         private void accordionControlElement7_Click(object sender, EventArgs e)
         {
-            panel9.Visible = true;
+            panel6.Visible = true;
+            panel7.Visible = true;
             label1.Text = "Số đơn chưa xử lí";
             label3.Text = "Số đơn đã xử lí";
             Program.frmXemDonDatHang = new FormXemDonDatHang();
@@ -100,7 +103,8 @@ namespace BachHoaXanh_Store
 
         private void accordionControlElement4_Click(object sender, EventArgs e)
         {
-            panel9.Visible = true;
+            panel6.Visible = true;
+            panel7.Visible = true;
             reportType = "TraHang";
             label1.Text = "Số sản phẩm trả về";
             label3.Text = "Tổng giá trị trả về";
@@ -110,7 +114,8 @@ namespace BachHoaXanh_Store
 
         private void accordionControlElement5_Click(object sender, EventArgs e)
         {
-            panel9.Visible = true;
+            panel6.Visible = true;
+            panel7.Visible = true;
             label1.Text = "Số sản phẩm còn";
             label3.Text = "Số sản phẩm đã hết";
             Program.frmDanhSachSP = new FormDanhSachSP();
@@ -119,7 +124,8 @@ namespace BachHoaXanh_Store
 
         private void accordionControlElement8_Click(object sender, EventArgs e)
         {
-            panel9.Visible = true;
+            panel6.Visible = true;
+            panel7.Visible = true;
             label1.Text = "Số đơn chưa xử lí";
             label3.Text = "Số đơn đã xử lí";
             Program.frmXemDonDatHang = new FormXemDonDatHang();
@@ -132,6 +138,8 @@ namespace BachHoaXanh_Store
             {
                 if (xtraTabbedMdiManager1.SelectedPage.Text == "Đặt Hàng")
                 {
+                    panel6.Visible = true;
+                    panel7.Visible = true;
                     reportType = "DatHang";
                     label1.Text = "Số đơn đã đặt";
                     label3.Text = "Tổng giá trị đặt";
@@ -140,6 +148,8 @@ namespace BachHoaXanh_Store
                 }
                 else if (xtraTabbedMdiManager1.SelectedPage.Text == "Phân Phối Hàng Hóa")
                 {
+                    panel6.Visible = true;
+                    panel7.Visible = true;
                     reportType = "PhanPhoiHang";
                     label1.Text = "Số đơn đã xuất";
                     label3.Text = "Tổng giá trị xuất";
@@ -148,6 +158,8 @@ namespace BachHoaXanh_Store
                 }
                 else if (xtraTabbedMdiManager1.SelectedPage.Text == "Trả Hàng")
                 {
+                    panel6.Visible = true;
+                    panel7.Visible = true;
                     reportType = "TraHang";
                     label1.Text = "Số sản phẩm trả về";
                     label3.Text = "Tổng giá trị trả về";
@@ -156,6 +168,8 @@ namespace BachHoaXanh_Store
                 }
                 else if (xtraTabbedMdiManager1.SelectedPage.Text == "Danh Sách Sản Phẩm")
                 {
+                    panel6.Visible = true;
+                    panel7.Visible = true;
                     label1.Text = "Số sản phẩm còn";
                     label3.Text = "Số sản phẩm đã hết";
                     if (FormLogin.objUserBO.Permission == 1)
@@ -178,6 +192,8 @@ namespace BachHoaXanh_Store
                 }
                 else if (xtraTabbedMdiManager1.SelectedPage.Text == "Xem Hóa Đơn Đặt")
                 {
+                    panel6.Visible = true;
+                    panel7.Visible = true;
                     label1.Text = "Số đơn chưa xử lí";
                     label3.Text = "Số đơn đã xử lí";
                     label2.Text = objOrderStoreBLL.countOrderFromStore(int.Parse(FormLogin.objUserBO.Permission.ToString())).ToString();
@@ -185,6 +201,8 @@ namespace BachHoaXanh_Store
                 }
                 else if (xtraTabbedMdiManager1.SelectedPage.Text == "Nhập Hàng")
                 {
+                    panel6.Visible = true;
+                    panel7.Visible = true;
                     label1.Text = "Số đơn chưa xử lí";
                     label3.Text = "Số đơn đã xử lí";
                     label4.Text = objOrderStoreBLL.countOrderFromStore(int.Parse(FormLogin.objUserBO.Permission.ToString())).ToString();
@@ -192,10 +210,17 @@ namespace BachHoaXanh_Store
                 }
                 else if (xtraTabbedMdiManager1.SelectedPage.Text == "Duyệt Phiếu Trả Hàng")
                 {
+                    panel6.Visible = true;
+                    panel7.Visible = true;
                     label1.Text = "Số đơn chưa duyệt";
                     label3.Text = "Số đơn đã duyệt";
                     label2.Text = objOrderStoreBLL.countReturnProductOrder().ToString();
                     label4.Text = objOrderStoreBLL.sumValueReturnProductOrder().ToString();
+                }
+                else if (xtraTabbedMdiManager1.SelectedPage.Text == "FormThongKe")
+                {
+                    panel6.Visible = false;
+                    panel7.Visible = false;
                 }
             }
 
@@ -210,13 +235,14 @@ namespace BachHoaXanh_Store
         {
             if (MdiChildren.Count() == 0)
             {
-                panel9.Visible = false;
+                panel6.Visible = false;
             }
         }
 
         private void accordionControlElement6_Click_1(object sender, EventArgs e)
         {
-            panel9.Visible = true;
+            panel6.Visible = true;
+            panel7.Visible = true;
             reportType = "DatHang";
             label1.Text = "Số đơn đã đặt";
             label3.Text = "Tổng giá trị đặt";
@@ -226,7 +252,8 @@ namespace BachHoaXanh_Store
 
         private void accordionControlElement9_Click(object sender, EventArgs e)
         {
-            panel9.Visible = true;
+            panel6.Visible = true;
+            panel7.Visible = true;
             reportType = "DatHang";
             label1.Text = "Số đơn đã đặt";
             label3.Text = "Tổng giá trị đặt";
@@ -244,7 +271,8 @@ namespace BachHoaXanh_Store
 
         private void accordionControlElement10_Click(object sender, EventArgs e)
         {
-            panel9.Visible = true;
+            panel6.Visible = true;
+            panel7.Visible = true;
             reportType = "TraHang";
             label1.Text = "Số sản phẩm trả về";
             label3.Text = "Tổng giá trị trả về";
@@ -254,7 +282,8 @@ namespace BachHoaXanh_Store
 
         private void accordionControlElement11_Click(object sender, EventArgs e)
         {
-            panel9.Visible = true;
+            panel6.Visible = true;
+            panel7.Visible = true;
             reportType = "DuyetTraHang";
             label1.Text = "Số đơn đã duyệt";
             label3.Text = "Số đơn chưa duyệt";
@@ -264,7 +293,8 @@ namespace BachHoaXanh_Store
 
         private void accordionControlElement12_Click(object sender, EventArgs e)
         {
-            panel9.Visible = true;
+            panel6.Visible = true;
+            panel7.Visible = true;
             reportType = "DatHang";
             label1.Text = "Số đơn đã đặt";
             label3.Text = "Tổng giá trị đặt";
@@ -274,7 +304,8 @@ namespace BachHoaXanh_Store
 
         private void accordionControlElement13_Click(object sender, EventArgs e)
         {
-            panel9.Visible = true;
+            panel6.Visible = true;
+            panel7.Visible = true;
             reportType = "DatHang";
             label1.Text = "Số đơn đã đặt";
             label3.Text = "Tổng giá trị đặt";
@@ -289,7 +320,8 @@ namespace BachHoaXanh_Store
 
         private void accordionControlElement14_Click(object sender, EventArgs e)
         {
-            panel9.Visible = false;
+            panel6.Visible = false;
+            panel7.Visible = false;
             if (FormLogin.objUserBO.Permission == 2)
             {
                 FormThongKe formThongKe = new FormThongKe();

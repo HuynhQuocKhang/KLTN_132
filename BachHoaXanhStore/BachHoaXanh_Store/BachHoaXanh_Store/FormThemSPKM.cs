@@ -35,6 +35,7 @@ namespace BachHoaXanh_Store
                 txt_GiaKM.Text = objPromotion.GiaKM.ToString();
             }
             txt_ProductFullName.Text = string.Format(objProduct.MaSP + " - " + objProduct.TenSP);
+            toolTip1.SetToolTip(txt_ProductFullName, txt_ProductFullName.Text);
             txtGiaBan.Text = objProduct.GiaBan.ToString();
             txt_SLTon.Text = objProduct.SoLuong.ToString();
         }

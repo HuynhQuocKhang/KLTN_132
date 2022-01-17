@@ -399,6 +399,7 @@ namespace BachHoaXanh_Store
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(825, 588);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("FormHangDoi.IconOptions.Image")));
             this.Name = "FormHangDoi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormHangDoi";

@@ -41,3 +41,4 @@ E:\KhoaLuanTotNghiep\BachHoaXanhStore\BachHoaXanh_Store\BLL_DAO\bin\Debug\de\Dev
 E:\KhoaLuanTotNghiep\BachHoaXanhStore\BachHoaXanh_Store\BLL_DAO\bin\Debug\es\DevExpress.Xpo.v20.1.resources.dll
 E:\KhoaLuanTotNghiep\BachHoaXanhStore\BachHoaXanh_Store\BLL_DAO\bin\Debug\ja\DevExpress.Xpo.v20.1.resources.dll
 E:\KhoaLuanTotNghiep\BachHoaXanhStore\BachHoaXanh_Store\BLL_DAO\bin\Debug\ru\DevExpress.Xpo.v20.1.resources.dll
+E:\09DHTH5\KLTN\SoDoLop\KLTN_132\BachHoaXanhStore\BachHoaXanh_Store\BLL_DAO\obj\Debug\BLL_DAO.csproj.CopyComplete

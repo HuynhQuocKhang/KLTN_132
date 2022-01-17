@@ -15,6 +15,7 @@ namespace BachHoaXanh_Store
     public partial class FormThongKe : DevExpress.XtraEditors.XtraForm
     {
         BachHoaXanhDataContext db = new BachHoaXanhDataContext();
+        public static string pMonth;
         public FormThongKe()
         {
             InitializeComponent();
@@ -25,7 +26,7 @@ namespace BachHoaXanh_Store
         }
         public void loadChart(string cbo)
         {
-            DateTime aDateTime = GetFistDayInMonth(DateTime.Now.Year, int.Parse(cbo));
+            DateTime aDateTime = new DateTime(DateTime.Now.Year, int.Parse(cbo),1);
             for (int i = 1; i <= DateTime.DaysInMonth(DateTime.Now.Year, int.Parse(cbo)); i++)
             {
                 chr_SoLuong.Series["Đơn đặt hàng"].Points.AddXY(aDateTime.ToShortDateString(), db.DonDatHangs.Select(t => t).Where(t => t.NgayDat == aDateTime).Count());
@@ -43,8 +44,25 @@ namespace BachHoaXanh_Store
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            Program.frmReport = new FormReport("ThongKe");
-            Program.frmReport.ShowDialog();
+            pMonth = cbo_Month.Text;
+            if (int.TryParse(cbo_Month.Text.Trim(), out int month))
+            {
+                pMonth = month.ToString();
+                if (month > 0 && month < 13)
+                {
+                    FormReport rpt = new FormReport("ThongKe");
+                    rpt.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Tháng nhập vào phải từ 1 đến 12");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Tháng nhập vào phải số nguyên có giá trị từ 1 đến 12");
+            }
+
         }
 
         private void cbo_Month_SelectedIndexChanged(object sender, EventArgs e)
@@ -53,7 +71,13 @@ namespace BachHoaXanh_Store
             chr_SoLuong.Series["Phiếu trả hàng"].Points.Clear();
             chr_GiaTri.Series["Đơn đặt hàng"].Points.Clear();
             chr_GiaTri.Series["Phiếu trả hàng"].Points.Clear();
-            loadChart(cbo_Month.Text);
+            if(int.TryParse(cbo_Month.Text.Trim(),out int month))
+            {
+                if(month > 0 && month < 13)
+                {
+                    loadChart(month.ToString());
+                }
+            }
         }
     }
 }

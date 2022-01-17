@@ -29,23 +29,23 @@ namespace BachHoaXanh_Store
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.chr_SoLuong = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chr_GiaTri = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.cbo_Month = new DevExpress.XtraEditors.ComboBoxEdit();
             this.label2 = new System.Windows.Forms.Label();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.cbo_Month = new DevExpress.XtraEditors.ComboBoxEdit();
             ((System.ComponentModel.ISupportInitialize)(this.chr_SoLuong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chr_GiaTri)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -56,42 +56,42 @@ namespace BachHoaXanh_Store
             // 
             // chr_SoLuong
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chr_SoLuong.ChartAreas.Add(chartArea1);
+            chartArea3.Name = "ChartArea1";
+            this.chr_SoLuong.ChartAreas.Add(chartArea3);
             this.chr_SoLuong.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend1.Name = "Legend1";
-            this.chr_SoLuong.Legends.Add(legend1);
+            legend3.Name = "Legend1";
+            this.chr_SoLuong.Legends.Add(legend3);
             this.chr_SoLuong.Location = new System.Drawing.Point(3, 143);
             this.chr_SoLuong.Name = "chr_SoLuong";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Đơn đặt hàng";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Phiếu trả hàng";
-            this.chr_SoLuong.Series.Add(series1);
-            this.chr_SoLuong.Series.Add(series2);
+            series5.ChartArea = "ChartArea1";
+            series5.Legend = "Legend1";
+            series5.Name = "Đơn đặt hàng";
+            series6.ChartArea = "ChartArea1";
+            series6.Legend = "Legend1";
+            series6.Name = "Phiếu trả hàng";
+            this.chr_SoLuong.Series.Add(series5);
+            this.chr_SoLuong.Series.Add(series6);
             this.chr_SoLuong.Size = new System.Drawing.Size(669, 574);
             this.chr_SoLuong.TabIndex = 0;
             this.chr_SoLuong.Text = "chart1";
             // 
             // chr_GiaTri
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chr_GiaTri.ChartAreas.Add(chartArea2);
+            chartArea4.Name = "ChartArea1";
+            this.chr_GiaTri.ChartAreas.Add(chartArea4);
             this.chr_GiaTri.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend2.Name = "Legend1";
-            this.chr_GiaTri.Legends.Add(legend2);
+            legend4.Name = "Legend1";
+            this.chr_GiaTri.Legends.Add(legend4);
             this.chr_GiaTri.Location = new System.Drawing.Point(678, 143);
             this.chr_GiaTri.Name = "chr_GiaTri";
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Đơn đặt hàng";
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "Phiếu trả hàng";
-            this.chr_GiaTri.Series.Add(series3);
-            this.chr_GiaTri.Series.Add(series4);
+            series7.ChartArea = "ChartArea1";
+            series7.Legend = "Legend1";
+            series7.Name = "Đơn đặt hàng";
+            series8.ChartArea = "ChartArea1";
+            series8.Legend = "Legend1";
+            series8.Name = "Phiếu trả hàng";
+            this.chr_GiaTri.Series.Add(series7);
+            this.chr_GiaTri.Series.Add(series8);
             this.chr_GiaTri.Size = new System.Drawing.Size(669, 574);
             this.chr_GiaTri.TabIndex = 0;
             this.chr_GiaTri.Text = "chart1";
@@ -155,33 +155,6 @@ namespace BachHoaXanh_Store
             this.tableLayoutPanel2.Size = new System.Drawing.Size(669, 54);
             this.tableLayoutPanel2.TabIndex = 2;
             // 
-            // cbo_Month
-            // 
-            this.cbo_Month.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cbo_Month.Location = new System.Drawing.Point(3, 21);
-            this.cbo_Month.Name = "cbo_Month";
-            // 
-            // 
-            // 
-            this.cbo_Month.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbo_Month.Properties.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12"});
-            this.cbo_Month.Size = new System.Drawing.Size(250, 20);
-            this.cbo_Month.TabIndex = 3;
-            this.cbo_Month.SelectedIndexChanged += new System.EventHandler(this.cbo_Month_SelectedIndexChanged);
-            // 
             // label2
             // 
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -200,6 +173,30 @@ namespace BachHoaXanh_Store
             this.simpleButton1.TabIndex = 4;
             this.simpleButton1.Text = "Xuất thống kê trong tháng";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            // 
+            // cbo_Month
+            // 
+            this.cbo_Month.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cbo_Month.Location = new System.Drawing.Point(3, 21);
+            this.cbo_Month.Name = "cbo_Month";
+            this.cbo_Month.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbo_Month.Properties.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12"});
+            this.cbo_Month.Size = new System.Drawing.Size(250, 20);
+            this.cbo_Month.TabIndex = 3;
+            this.cbo_Month.SelectedIndexChanged += new System.EventHandler(this.cbo_Month_SelectedIndexChanged);
             // 
             // FormThongKe
             // 
@@ -228,7 +225,7 @@ namespace BachHoaXanh_Store
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label label2;
-        private DevExpress.XtraEditors.ComboBoxEdit cbo_Month;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.ComboBoxEdit cbo_Month;
     }
 }

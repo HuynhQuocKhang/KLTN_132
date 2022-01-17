@@ -30,18 +30,23 @@ namespace BachHoaXanh_Store
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTimKiem));
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgv_DSSP = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.col_Add = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.col_MaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_TenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_Soluong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_GiaBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.telerikMetroTheme1 = new Telerik.WinControls.Themes.TelerikMetroTheme();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -51,11 +56,6 @@ namespace BachHoaXanh_Store
             this.txt_Keyword = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.btn_TimKiem = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.col_Add = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.col_MaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_TenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_Soluong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_GiaBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DSSP)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -77,20 +77,20 @@ namespace BachHoaXanh_Store
             this.dgv_DSSP.AccessibleName = "";
             this.dgv_DSSP.AllowUserToAddRows = false;
             this.dgv_DSSP.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgv_DSSP.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgv_DSSP.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_DSSP.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_DSSP.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dgv_DSSP.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_DSSP.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_DSSP.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_DSSP.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_DSSP.ColumnHeadersHeight = 35;
             this.dgv_DSSP.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.col_Add,
@@ -113,6 +113,45 @@ namespace BachHoaXanh_Store
             this.dgv_DSSP.Size = new System.Drawing.Size(726, 267);
             this.dgv_DSSP.TabIndex = 3;
             this.dgv_DSSP.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DSSP_CellClick);
+            // 
+            // col_Add
+            // 
+            this.col_Add.HeaderText = "Thao Tác";
+            this.col_Add.Name = "col_Add";
+            this.col_Add.ReadOnly = true;
+            this.col_Add.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.col_Add.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.col_Add.Text = "Thêm";
+            this.col_Add.ToolTipText = "Thêm Sản Phẩm";
+            this.col_Add.UseColumnTextForButtonValue = true;
+            // 
+            // col_MaSP
+            // 
+            this.col_MaSP.DataPropertyName = "MaSP";
+            this.col_MaSP.HeaderText = "Mã sản phẩm";
+            this.col_MaSP.Name = "col_MaSP";
+            this.col_MaSP.ReadOnly = true;
+            // 
+            // col_TenSP
+            // 
+            this.col_TenSP.DataPropertyName = "TenSP";
+            this.col_TenSP.HeaderText = "Tên sản phẩm";
+            this.col_TenSP.Name = "col_TenSP";
+            this.col_TenSP.ReadOnly = true;
+            // 
+            // col_Soluong
+            // 
+            this.col_Soluong.DataPropertyName = "SoLuong";
+            this.col_Soluong.HeaderText = "Số Lượng";
+            this.col_Soluong.Name = "col_Soluong";
+            this.col_Soluong.ReadOnly = true;
+            // 
+            // col_GiaBan
+            // 
+            this.col_GiaBan.DataPropertyName = "GiaBan";
+            this.col_GiaBan.HeaderText = "Giá Bán";
+            this.col_GiaBan.Name = "col_GiaBan";
+            this.col_GiaBan.ReadOnly = true;
             // 
             // timer2
             // 
@@ -214,26 +253,26 @@ namespace BachHoaXanh_Store
             this.txt_Keyword.Modified = false;
             this.txt_Keyword.Multiline = false;
             this.txt_Keyword.Name = "txt_Keyword";
-            stateProperties7.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties7.FillColor = System.Drawing.Color.Empty;
-            stateProperties7.ForeColor = System.Drawing.Color.Empty;
-            stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txt_Keyword.OnActiveState = stateProperties7;
-            stateProperties8.BorderColor = System.Drawing.Color.Empty;
-            stateProperties8.FillColor = System.Drawing.Color.White;
-            stateProperties8.ForeColor = System.Drawing.Color.Empty;
-            stateProperties8.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txt_Keyword.OnDisabledState = stateProperties8;
-            stateProperties9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties9.FillColor = System.Drawing.Color.Empty;
-            stateProperties9.ForeColor = System.Drawing.Color.Empty;
-            stateProperties9.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txt_Keyword.OnHoverState = stateProperties9;
-            stateProperties10.BorderColor = System.Drawing.Color.Silver;
-            stateProperties10.FillColor = System.Drawing.Color.White;
-            stateProperties10.ForeColor = System.Drawing.Color.Empty;
-            stateProperties10.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txt_Keyword.OnIdleState = stateProperties10;
+            stateProperties1.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties1.FillColor = System.Drawing.Color.Empty;
+            stateProperties1.ForeColor = System.Drawing.Color.Empty;
+            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txt_Keyword.OnActiveState = stateProperties1;
+            stateProperties2.BorderColor = System.Drawing.Color.Empty;
+            stateProperties2.FillColor = System.Drawing.Color.White;
+            stateProperties2.ForeColor = System.Drawing.Color.Empty;
+            stateProperties2.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txt_Keyword.OnDisabledState = stateProperties2;
+            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties3.FillColor = System.Drawing.Color.Empty;
+            stateProperties3.ForeColor = System.Drawing.Color.Empty;
+            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txt_Keyword.OnHoverState = stateProperties3;
+            stateProperties4.BorderColor = System.Drawing.Color.Silver;
+            stateProperties4.FillColor = System.Drawing.Color.White;
+            stateProperties4.ForeColor = System.Drawing.Color.Empty;
+            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txt_Keyword.OnIdleState = stateProperties4;
             this.txt_Keyword.PasswordChar = '\0';
             this.txt_Keyword.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txt_Keyword.PlaceholderText = "";
@@ -269,11 +308,11 @@ namespace BachHoaXanh_Store
             this.btn_TimKiem.ColorContrastOnClick = 45;
             this.btn_TimKiem.ColorContrastOnHover = 45;
             this.btn_TimKiem.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.btn_TimKiem.CustomizableEdges = borderEdges2;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.btn_TimKiem.CustomizableEdges = borderEdges1;
             this.btn_TimKiem.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btn_TimKiem.DisabledBorderColor = System.Drawing.Color.Empty;
             this.btn_TimKiem.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -294,24 +333,24 @@ namespace BachHoaXanh_Store
             this.btn_TimKiem.IndicateFocus = false;
             this.btn_TimKiem.Location = new System.Drawing.Point(259, 29);
             this.btn_TimKiem.Name = "btn_TimKiem";
-            stateProperties11.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(42)))));
-            stateProperties11.BorderRadius = 3;
-            stateProperties11.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            stateProperties11.BorderThickness = 1;
-            stateProperties11.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(42)))));
-            stateProperties11.ForeColor = System.Drawing.Color.White;
-            stateProperties11.IconLeftImage = null;
-            stateProperties11.IconRightImage = null;
-            this.btn_TimKiem.onHoverState = stateProperties11;
-            stateProperties12.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(42)))));
-            stateProperties12.BorderRadius = 3;
-            stateProperties12.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            stateProperties12.BorderThickness = 1;
-            stateProperties12.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(42)))));
-            stateProperties12.ForeColor = System.Drawing.Color.White;
-            stateProperties12.IconLeftImage = null;
-            stateProperties12.IconRightImage = null;
-            this.btn_TimKiem.OnPressedState = stateProperties12;
+            stateProperties5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(42)))));
+            stateProperties5.BorderRadius = 3;
+            stateProperties5.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            stateProperties5.BorderThickness = 1;
+            stateProperties5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(42)))));
+            stateProperties5.ForeColor = System.Drawing.Color.White;
+            stateProperties5.IconLeftImage = null;
+            stateProperties5.IconRightImage = null;
+            this.btn_TimKiem.onHoverState = stateProperties5;
+            stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(42)))));
+            stateProperties6.BorderRadius = 3;
+            stateProperties6.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            stateProperties6.BorderThickness = 1;
+            stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(154)))), ((int)(((byte)(42)))));
+            stateProperties6.ForeColor = System.Drawing.Color.White;
+            stateProperties6.IconLeftImage = null;
+            stateProperties6.IconRightImage = null;
+            this.btn_TimKiem.OnPressedState = stateProperties6;
             this.btn_TimKiem.Size = new System.Drawing.Size(141, 35);
             this.btn_TimKiem.TabIndex = 0;
             this.btn_TimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -323,51 +362,13 @@ namespace BachHoaXanh_Store
             // 
             this.timer1.Enabled = true;
             // 
-            // col_Add
-            // 
-            this.col_Add.HeaderText = "Thao Tác";
-            this.col_Add.Name = "col_Add";
-            this.col_Add.ReadOnly = true;
-            this.col_Add.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.col_Add.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.col_Add.Text = "Thêm";
-            this.col_Add.ToolTipText = "Thêm Sản Phẩm";
-            this.col_Add.UseColumnTextForButtonValue = true;
-            // 
-            // col_MaSP
-            // 
-            this.col_MaSP.DataPropertyName = "MaSP";
-            this.col_MaSP.HeaderText = "Mã sản phẩm";
-            this.col_MaSP.Name = "col_MaSP";
-            this.col_MaSP.ReadOnly = true;
-            // 
-            // col_TenSP
-            // 
-            this.col_TenSP.DataPropertyName = "TenSP";
-            this.col_TenSP.HeaderText = "Tên sản phẩm";
-            this.col_TenSP.Name = "col_TenSP";
-            this.col_TenSP.ReadOnly = true;
-            // 
-            // col_Soluong
-            // 
-            this.col_Soluong.DataPropertyName = "SoLuong";
-            this.col_Soluong.HeaderText = "Số Lượng";
-            this.col_Soluong.Name = "col_Soluong";
-            this.col_Soluong.ReadOnly = true;
-            // 
-            // col_GiaBan
-            // 
-            this.col_GiaBan.DataPropertyName = "GiaBan";
-            this.col_GiaBan.HeaderText = "Giá Bán";
-            this.col_GiaBan.Name = "col_GiaBan";
-            this.col_GiaBan.ReadOnly = true;
-            // 
             // FormTimKiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(772, 386);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("FormTimKiem.IconOptions.Image")));
             this.Name = "FormTimKiem";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tìm Kiếm Sản Phẩm";

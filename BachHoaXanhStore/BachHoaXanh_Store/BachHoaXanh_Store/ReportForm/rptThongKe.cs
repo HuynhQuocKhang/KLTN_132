@@ -22,8 +22,8 @@ namespace BachHoaXanh_Store.ReportForm
         {
             if (type == "ThongKeKho")
             {
-                DateTime aDateTime = GetFistDayInMonth(DateTime.Now.Year, DateTime.Now.Month);
-                for (int i = 1; i <= DateTime.DaysInMonth(DateTime.Now.Year, DateTime.Now.Month); i++)
+                DateTime aDateTime = GetFistDayInMonth(DateTime.Now.Year, int.Parse(FormThongKeKho.pMonth));
+                for (int i = 1; i <= DateTime.DaysInMonth(DateTime.Now.Year, int.Parse(FormThongKeKho.pMonth)); i++)
                 {
                     chr_SoLuong.Series["Đơn đặt hàng"].Points.AddPoint(aDateTime.ToShortDateString(), db.HoaDonDatNCCs.Select(t => t).Where(t => t.NgayDat == aDateTime).Count());
                     chr_SoLuong.Series["Phiếu trả hàng"].Points.AddPoint(aDateTime.ToShortDateString(), db.PhieuTraHangs.Select(t => t).Where(t => t.MaST == (-1) && t.NgayTra == aDateTime).Count());
@@ -54,8 +54,8 @@ namespace BachHoaXanh_Store.ReportForm
             {
                 chr_SoLuong.Series.Remove(chr_SoLuong.Series["Phiếu xuất kho"]);
                 chr_GiaTri.Series.Remove(chr_GiaTri.Series["Phiếu xuất kho"]);
-                DateTime aDateTime = GetFistDayInMonth(DateTime.Now.Year, DateTime.Now.Month);
-                for (int i = 1; i <= DateTime.DaysInMonth(DateTime.Now.Year, DateTime.Now.Month); i++)
+                DateTime aDateTime = GetFistDayInMonth(DateTime.Now.Year, int.Parse(FormThongKe.pMonth));
+                for (int i = 1; i <= DateTime.DaysInMonth(DateTime.Now.Year, int.Parse(FormThongKe.pMonth)); i++)
                 {
                     chr_SoLuong.Series["Đơn đặt hàng"].Points.AddPoint(aDateTime.ToShortDateString(), db.DonDatHangs.Select(t => t).Where(t => t.NgayDat == aDateTime).Count());
                     chr_SoLuong.Series["Phiếu trả hàng"].Points.AddPoint(aDateTime.ToShortDateString(), db.PhieuTraHangs.Select(t => t).Where(t => t.MaST == FormLogin.objUserBO.StoreId && t.NgayTra == aDateTime).Count());
