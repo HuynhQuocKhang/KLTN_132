@@ -160,6 +160,9 @@ namespace BachHoaXanh_Store
             this.cbo_Month.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cbo_Month.Location = new System.Drawing.Point(3, 21);
             this.cbo_Month.Name = "cbo_Month";
+            // 
+            // 
+            // 
             this.cbo_Month.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbo_Month.Properties.Items.AddRange(new object[] {

@@ -39,6 +39,7 @@ namespace BO
         public string TenNCC { get; set; }
         public string DVT { get; set; }
         public int? GiaBan { get; set; }
+        public int? GiaVon { get; set; }
         public int? GiaKM { get; set; }
         public int? SoLuong { get; set; }
         public DateTime? NgayKM { get; set; }

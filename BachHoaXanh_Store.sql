@@ -74,6 +74,7 @@ create table KhoSieuThi
 	MaST int not null,
 	MaSP nvarchar(30) not null, 
 	SoLuong int,
+	Isdeleted bit,
 	constraint PK_KhoSieuThi primary key (MaST,MaSP),
 	constraint FK_KhoSieuThi_SieuThi foreign key (MaST) references SieuThi(MaST),
 	constraint FK_KhoSieuThi_SanPham foreign key (MaSP) references SanPham(MaSP)
@@ -253,3 +254,6 @@ set Email = 'huynhvirgo@gmail.com' where MaNCC > 2
 
 update NhaCungCap
 set Email = 'soncmlt@gmail.com' where MaNCC = 2
+
+select * from KhoSieuThi where MaSP = '9932979000038' and MaST = 2;
+

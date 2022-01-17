@@ -2826,6 +2826,8 @@ namespace BLL_DAO
 		
 		private System.Nullable<int> _SoLuong;
 		
+		private System.Nullable<bool> _Isdeleted;
+		
 		private EntityRef<SieuThi> _SieuThi;
 		
 		private EntityRef<SanPham> _SanPham;
@@ -2840,6 +2842,8 @@ namespace BLL_DAO
     partial void OnMaSPChanged();
     partial void OnSoLuongChanging(System.Nullable<int> value);
     partial void OnSoLuongChanged();
+    partial void OnIsdeletedChanging(System.Nullable<bool> value);
+    partial void OnIsdeletedChanged();
     #endregion
 		
 		public KhoSieuThi()
@@ -2913,6 +2917,26 @@ namespace BLL_DAO
 					this._SoLuong = value;
 					this.SendPropertyChanged("SoLuong");
 					this.OnSoLuongChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Isdeleted", DbType="Bit")]
+		public System.Nullable<bool> Isdeleted
+		{
+			get
+			{
+				return this._Isdeleted;
+			}
+			set
+			{
+				if ((this._Isdeleted != value))
+				{
+					this.OnIsdeletedChanging(value);
+					this.SendPropertyChanging();
+					this._Isdeleted = value;
+					this.SendPropertyChanged("Isdeleted");
+					this.OnIsdeletedChanged();
 				}
 			}
 		}

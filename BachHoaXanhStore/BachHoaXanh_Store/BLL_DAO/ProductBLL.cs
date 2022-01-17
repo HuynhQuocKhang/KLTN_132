@@ -183,12 +183,30 @@ namespace BLL_DAO
         {
             try
             {
+                //Lấy danh sách mã ST
+                var lstST = db.SieuThis.ToList();
                 foreach (ProductBO item in lstProduct)
                 {
                     var objProduct = db.SanPhams.SingleOrDefault(t => t.MaSP == item.MaSP);
                     objProduct.Isdeleted = true;
                     db.SubmitChanges();
+
+                    foreach (var itemST in lstST)
+                    {
+                        var objStoreCheckDuplicate = db.KhoSieuThis.Where(x => x.MaSP == item.MaSP && x.MaST == itemST.MaST).FirstOrDefault();
+                        if (objStoreCheckDuplicate != null)
+                        {
+                            objStoreCheckDuplicate.Isdeleted = true;
+
+                            var objProductPromo = db.KhoHangKMs.Where(x => x.MaSP == item.MaSP && x.MaST == itemST.MaST).FirstOrDefault();
+                            if (objProductPromo != null)
+                            {
+                                db.KhoHangKMs.DeleteOnSubmit(objProductPromo);
+                            }
+                        }
+                    }
                 }
+                db.SubmitChanges();
                 return true;
             }
             catch
@@ -201,10 +219,13 @@ namespace BLL_DAO
         {
             try
             {
+                //Lấy danh sách mã ST
+                var lstST = db.SieuThis.ToList();
                 //Kiểm tra tồn tại
                 var objCheckDuplicate = db.SanPhams.Where(x => x.MaSP == model.MaSP).FirstOrDefault();
                 if (objCheckDuplicate == null)
                 {
+                    //Insert SanPham
                     SanPham objSanPham = new SanPham();
                     objSanPham.MaSP = model.MaSP;
                     objSanPham.TenSP = model.TenSP;
@@ -213,12 +234,26 @@ namespace BLL_DAO
                     objSanPham.DVT = model.DVT;
                     objSanPham.GiaBan = model.GiaBan;
                     objSanPham.GiaVon = model.GiaVon;
+                    objSanPham.SoLuong = 0;
                     objSanPham.Isdeleted = false;
                     db.SanPhams.InsertOnSubmit(objSanPham);
+
+                    //Inser Kho Siêu Thị
+                    foreach (var item in lstST)
+                    {
+                        KhoSieuThi objKhoSieuThi = new KhoSieuThi();
+                        objKhoSieuThi.MaST = item.MaST;
+                        objKhoSieuThi.MaSP = model.MaSP;
+                        objKhoSieuThi.SoLuong = 0;
+                        objKhoSieuThi.Isdeleted = false;
+                        db.KhoSieuThis.InsertOnSubmit(objKhoSieuThi);
+                    }
+
                     db.SubmitChanges();
                 }
                 else
                 {
+                    //Update Sản Phẩm
                     objCheckDuplicate.TenSP = model.TenSP;
                     objCheckDuplicate.MaLoaiSP = model.MaLoaiSP;
                     objCheckDuplicate.MaNCC = model.MaNCC;
@@ -226,6 +261,24 @@ namespace BLL_DAO
                     objCheckDuplicate.GiaBan = model.GiaBan;
                     objCheckDuplicate.GiaVon = model.GiaVon;
                     objCheckDuplicate.SoLuong = model.SoLuong;
+                    if (objCheckDuplicate.Isdeleted == true)
+                    {
+                        objCheckDuplicate.Isdeleted = false;
+                        objCheckDuplicate.SoLuong = 0;
+                    }
+                    
+
+                    //update Kho ST
+                    foreach (var item in lstST)
+                    {
+                        var objStoreCheckDuplicate = db.KhoSieuThis.Where(x => x.MaSP == model.MaSP && x.MaST == item.MaST).FirstOrDefault();
+                        if (objStoreCheckDuplicate.Isdeleted == true)
+                        {
+                            objStoreCheckDuplicate.Isdeleted = false;
+                            objStoreCheckDuplicate.SoLuong = 0;
+                        }
+                        db.SubmitChanges();
+                    }
                     db.SubmitChanges();
                 }
 
@@ -353,6 +406,7 @@ namespace BLL_DAO
                                 DVT = objProduct.DVT,
                                 SoLuong = objStorePromotion.SoLuong,
                                 GiaBan = objProduct.GiaBan,
+                                GiaVon = objProduct.GiaVon,
                                 GiaKM = objStorePromotion.GiaKM,
                                 NgayKM = objStorePromotion.NgayKM,
                                 NgayHetHan = objStorePromotion.NgayHetHan
@@ -380,6 +434,7 @@ namespace BLL_DAO
                                 DVT = objProduct.DVT,
                                 SoLuong = objStorePromotion.SoLuong,
                                 GiaBan = objProduct.GiaBan,
+                                GiaVon = objProduct.GiaVon,
                                 GiaKM = objStorePromotion.GiaKM,
                                 NgayKM = objStorePromotion.NgayKM,
                                 NgayHetHan = objStorePromotion.NgayHetHan
@@ -407,6 +462,7 @@ namespace BLL_DAO
                                 DVT = objProduct.DVT,
                                 SoLuong = objStorePromotion.SoLuong,
                                 GiaBan = objProduct.GiaBan,
+                                GiaVon = objProduct.GiaVon,
                                 GiaKM = objStorePromotion.GiaKM,
                                 NgayKM = objStorePromotion.NgayKM,
                                 NgayHetHan = objStorePromotion.NgayHetHan
@@ -435,6 +491,7 @@ namespace BLL_DAO
                                 DVT = objProduct.DVT,
                                 SoLuong = objStorePromotion.SoLuong,
                                 GiaBan = objProduct.GiaBan,
+                                GiaVon = objProduct.GiaVon,
                                 GiaKM = objStorePromotion.GiaKM,
                                 NgayKM = objStorePromotion.NgayKM,
                                 NgayHetHan = objStorePromotion.NgayHetHan

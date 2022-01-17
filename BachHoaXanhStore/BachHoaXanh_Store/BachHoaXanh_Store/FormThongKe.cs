@@ -21,6 +21,7 @@ namespace BachHoaXanh_Store
             loadChart(DateTime.Now.Month.ToString());
             chr_SoLuong.Titles.Add("Biểu đồ số lượng");
             chr_GiaTri.Titles.Add("Biểu đồ giá trị");
+            cbo_Month.Text = DateTime.Now.Month.ToString();
         }
         public void loadChart(string cbo)
         {

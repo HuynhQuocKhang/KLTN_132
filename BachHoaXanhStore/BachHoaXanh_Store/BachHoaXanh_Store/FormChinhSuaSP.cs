@@ -41,6 +41,7 @@ namespace BachHoaXanh_Store
                 txt_GiaBan.Text = objProductTmp.GiaBan.ToString();
                 txt_GiaVon.Text = objProductTmp.GiaVon.ToString();
                 cbo_NhaCungCap.SelectedIndex = FormDanhSachSP.indexCustomerId;
+                cbo_MaLoaiSP.SelectedIndex = FormDanhSachSP.indexProductTypeId;
             }
             else
             {
