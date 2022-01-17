@@ -861,3 +861,4 @@ E:\KhoaLuanTotNghiep\BachHoaXanhStore\BachHoaXanh_Store\BachHoaXanh_Store\bin\De
 E:\KhoaLuanTotNghiep\BachHoaXanhStore\BachHoaXanh_Store\BachHoaXanh_Store\bin\Debug\es\DevExpress.Diagram.v20.1.Core.resources.dll
 E:\KhoaLuanTotNghiep\BachHoaXanhStore\BachHoaXanh_Store\BachHoaXanh_Store\bin\Debug\ja\DevExpress.Diagram.v20.1.Core.resources.dll
 E:\KhoaLuanTotNghiep\BachHoaXanhStore\BachHoaXanh_Store\BachHoaXanh_Store\bin\Debug\ru\DevExpress.Diagram.v20.1.Core.resources.dll
+E:\KhoaLuanTotNghiep\BachHoaXanhStore\BachHoaXanh_Store\BachHoaXanh_Store\obj\Debug\BachHoaXanh_Store.ReportForm.rptKetCa.resources

@@ -37,6 +37,9 @@ namespace BachHoaXanh_Store
             lbl_NhanVienKetCa.Text = FormLogin.objUserBO.UserId.ToString() + " - " + FormLogin.objUserBO.UserFullName;
             lbl_DoanhThuNgay.Text = "0";
             lbl_ChenhLech.Text = "0";
+            pTotalReality = int.Parse(lbl_DoanhThuThucTe.Text);
+            lbl_DoanhThuNgay.Text = "0";
+            lbl_ChenhLech.Text = (Math.Abs(int.Parse(lbl_DoanhThuThucTe.Text) - int.Parse(lbl_DoanhThuNgay.Text))).ToString();
         }
 
         private void txt_200k_KeyPress(object sender, KeyPressEventArgs e)
@@ -279,7 +282,6 @@ namespace BachHoaXanh_Store
                                     int20k * 20000 + int10k * 10000 + int5k * 5000 + int2k * 2000 +
                                     int1k * 1000 + int500 * 500;
             pTotal = total;
-            pTotalReality = int.Parse(lbl_DoanhThuThucTe.Text);
             lbl_DoanhThuNgay.Text = total.ToString();
             lbl_ChenhLech.Text = (Math.Abs(int.Parse(lbl_DoanhThuThucTe.Text) - int.Parse(lbl_DoanhThuNgay.Text))).ToString();
 
@@ -288,9 +290,21 @@ namespace BachHoaXanh_Store
         private void btn_KetCa_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Kết ca thành công!");
-            Program.frmReport = new FormReport("KetCa");
-            Program.frmReport.ShowDialog();
+            FormReport frmReport = new FormReport("KetCa");
+            frmReport.ShowDialog();
             CloseDialogEvent();
+            pTotalReality = 0;
+            pTotal = 0;
+            p500 = 0;
+            p200 = 0;
+            p100 = 0;
+            p50 = 0;
+            p20 = 0;
+            p10 = 0;
+            p5 = 0;
+            p2 = 0;
+            p1 = 0;
+            p12= 0;
             this.Close();
         }
     }
