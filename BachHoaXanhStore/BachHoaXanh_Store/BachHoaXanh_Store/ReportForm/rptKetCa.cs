@@ -38,7 +38,7 @@ namespace BachHoaXanh_Store.ReportForm
             xrLabel18.Text = (100000*FormKetCa.p100).ToString();
             xrLabel21.Text = (50000*FormKetCa.p50).ToString();
             xrLabel24.Text = (20000*FormKetCa.p20).ToString();
-            xrLabel26.Text = (10000*FormKetCa.p10).ToString();
+            xrLabel27.Text = (10000*FormKetCa.p10).ToString();
             xrLabel35.Text = (5000*FormKetCa.p5).ToString();
             xrLabel32.Text = (2000*FormKetCa.p2).ToString();
             xrLabel41.Text = (1000*FormKetCa.p1).ToString();
