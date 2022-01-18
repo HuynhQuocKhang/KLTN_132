@@ -94,7 +94,7 @@ namespace BLL_DAO
                                 GiaVon = objProduct.GiaVon,
                                 SoLuong = objStore.SoLuong
                             };
-                return model.OrderByDescending(x => x.MaSP).Where(x => x.SoLuong <= intStock).Take(intPageSize).ToList();
+                return model.OrderByDescending(x => x.MaSP).Where(x => x.SoLuong <= intStock).Distinct().Take(intPageSize).ToList();
             }
             if (intCustomerId == 0 && intProductTypeId != 0)
             {
@@ -110,7 +110,7 @@ namespace BLL_DAO
                                 GiaVon = objProduct.GiaVon,
                                 SoLuong = objStore.SoLuong
                             };
-                return model.OrderByDescending(x => x.MaSP).Where(x => x.SoLuong <= intStock).Take(intPageSize).ToList();
+                return model.OrderByDescending(x => x.MaSP).Where(x => x.SoLuong <= intStock).Distinct().Take(intPageSize).ToList();
             }
             if (intProductTypeId == 0 && intCustomerId != 0)
             {
@@ -126,8 +126,7 @@ namespace BLL_DAO
                                 GiaVon = objProduct.GiaVon,
                                 SoLuong = objStore.SoLuong
                             };
-
-                return model.OrderByDescending(x => x.MaSP).Where(x => x.SoLuong <= intStock).Take(intPageSize).ToList();
+                return model.OrderByDescending(x => x.MaSP).Where(x => x.SoLuong <= intStock).Distinct().Take(intPageSize).ToList();
             }
             else
             {
@@ -143,7 +142,7 @@ namespace BLL_DAO
                                 GiaVon = objProduct.GiaVon,
                                 SoLuong = objStore.SoLuong
                             };
-                return model.OrderByDescending(x => x.MaSP).Where(x => x.SoLuong <= intStock).Take(intPageSize).ToList();
+                return model.OrderByDescending(x => x.MaSP).Where(x => x.SoLuong <= intStock).Distinct().Take(intPageSize).ToList();
             }
         }
 
@@ -390,7 +389,7 @@ namespace BLL_DAO
         {
             if (pTinhTrang == 3)
             {
-                if (intStoreId == 0)
+                if (intStoreId == -1)
                 {
                     var model = from objOrderStore in db.DonDatHangs
                                 where objOrderStore.NguoiLapPhieu.ToLower().Contains(strkeywords.ToLower().Trim()) || objOrderStore.MaDH.ToString().Contains(strkeywords.Trim())
@@ -421,7 +420,7 @@ namespace BLL_DAO
                     return model.OrderByDescending(x => x.MaHD).Where(x => x.MaST == intStoreId).ToList();
                 }
             }
-            else
+            else 
             {
                 if (intStoreId == -1)
                 {
@@ -690,6 +689,7 @@ namespace BLL_DAO
                     objKhoHangKM.MaSP = objProductPromotionBO.MaSP;
                     objKhoHangKM.MaST = intStoreId;
                     objKhoHangKM.NgayKM = objProductPromotionBO.NgayKM;
+                    objKhoHangKM.GiaKM = objProductPromotionBO.GiaKM;
                     objKhoHangKM.NgayHetHan = objProductPromotionBO.NgayHetHan;
                     objKhoHangKM.SoLuong = objProductPromotionBO.SoLuong;
                     db.KhoHangKMs.InsertOnSubmit(objKhoHangKM);
@@ -754,7 +754,7 @@ namespace BLL_DAO
                                 GiaBan = objProduct.GiaBan,
                                 SoLuong = objStore.SoLuong
                             };
-                return model.OrderByDescending(x => x.MaSP).Where(x => x.SoLuong <= intStock).Take(intPageSize).ToList();
+                return model.OrderByDescending(x => x.MaSP).Where(x => x.SoLuong <= intStock).Distinct().Take(intPageSize).ToList();
             }
             if (intCustomerId == 0 && intProductTypeId != 0)
             {
@@ -769,7 +769,7 @@ namespace BLL_DAO
                                 GiaBan = objProduct.GiaBan,
                                 SoLuong = objStore.SoLuong
                             };
-                return model.OrderByDescending(x => x.MaSP).Where(x => x.SoLuong <= intStock).Take(intPageSize).ToList();
+                return model.OrderByDescending(x => x.MaSP).Where(x => x.SoLuong <= intStock).Distinct().Take(intPageSize).ToList();
             }
             if (intProductTypeId == 0 && intCustomerId != 0)
             {
@@ -785,7 +785,7 @@ namespace BLL_DAO
                                 SoLuong = objStore.SoLuong
                             };
 
-                return model.OrderByDescending(x => x.MaSP).Where(x => x.SoLuong <= intStock).Take(intPageSize).ToList();
+                return model.OrderByDescending(x => x.MaSP).Where(x => x.SoLuong <= intStock).Distinct().Take(intPageSize).ToList();
             }
             else
             {
@@ -800,7 +800,7 @@ namespace BLL_DAO
                                 GiaBan = objProduct.GiaBan,
                                 SoLuong = objStore.SoLuong
                             };
-                return model.OrderByDescending(x => x.MaSP).Where(x => x.SoLuong <= intStock).Take(intPageSize).ToList();
+                return model.OrderByDescending(x => x.MaSP).Where(x => x.SoLuong <= intStock).Distinct().Take(intPageSize).ToList();
             }
         }
 

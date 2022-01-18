@@ -22,6 +22,7 @@ namespace BachHoaXanh_Store
             loadChart(DateTime.Now.Month.ToString());
             chr_SoLuong.Titles.Add("Biểu đồ số lượng");
             chr_GiaTri.Titles.Add("Biểu đồ giá trị");
+            cbo_Month.Text = DateTime.Now.Month.ToString();
         }
         public void loadChart(string cbo)
         {
@@ -32,7 +33,7 @@ namespace BachHoaXanh_Store
                 chr_SoLuong.Series["Phiếu trả hàng"].Points.AddXY(aDateTime.ToShortDateString(), db.PhieuTraHangs.Select(t => t).Where(t => t.MaST == (-1) && t.NgayTra == aDateTime).Count().ToString());
                 chr_SoLuong.Series["Phiếu xuất kho"].Points.AddXY(aDateTime.ToShortDateString(), db.PhieuXuatKhos.Select(t => t).Where(t => t.NgayXuat == aDateTime).Count().ToString());
 
-                chr_GiaTri.Series["Đơn đặt hàng"].Points.AddXY(aDateTime.ToShortDateString(), db.DonDatHangs.Where(t => t.TinhTrang == 2 && t.NgayDat == aDateTime).Sum(t => t.TongTien).ToString());
+                chr_GiaTri.Series["Đơn đặt hàng"].Points.AddXY(aDateTime.ToShortDateString(), db.HoaDonDatNCCs.Where(t => t.TinhTrang == 2 && t.NgayDat == aDateTime).Sum(t => t.TongTien).ToString());
                 chr_GiaTri.Series["Phiếu trả hàng"].Points.AddXY(aDateTime.ToShortDateString(), db.PhieuTraHangs.Where(t => t.MaST == (-1) && t.TinhTrang == 1 && t.NgayTra == aDateTime).Sum(t => t.TongTien).ToString());
                 chr_GiaTri.Series["Phiếu xuất kho"].Points.AddXY(aDateTime.ToShortDateString(), db.PhieuXuatKhos.Where(t => t.NgayXuat == aDateTime).Sum(t => t.TongTien).ToString());
                 aDateTime = aDateTime.AddDays(1);

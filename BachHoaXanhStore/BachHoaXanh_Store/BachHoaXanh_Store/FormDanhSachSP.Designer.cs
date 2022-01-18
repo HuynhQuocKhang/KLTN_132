@@ -54,7 +54,20 @@ namespace BachHoaXanh_Store
             this.txtKeyWord = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.cbo_NhaCungCap = new Bunifu.UI.WinForms.BunifuDropdown();
             this.cbo_LoaiSP = new Bunifu.UI.WinForms.BunifuDropdown();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.dgv_DSSP = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.bunifuButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.bunifuButton3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.chk_AllStore = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
+            this.cbo_PageSize = new Bunifu.UI.WinForms.BunifuDropdown();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.col_Sua = new System.Windows.Forms.DataGridViewButtonColumn();
             this.col_Xoa = new System.Windows.Forms.DataGridViewButtonColumn();
             this.col_MaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,21 +80,9 @@ namespace BachHoaXanh_Store
             this.col_SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_GiaBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_GiaVon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_GiaKM = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_NgayKM = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_NgayHetHan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.bunifuButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.bunifuButton3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.chk_AllStore = new Bunifu.UI.WinForms.BunifuCheckBox();
-            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.cbo_PageSize = new Bunifu.UI.WinForms.BunifuDropdown();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DSSP)).BeginInit();
@@ -184,7 +185,7 @@ namespace BachHoaXanh_Store
             this.btn_TimKiem.IdleIconLeftImage = null;
             this.btn_TimKiem.IdleIconRightImage = null;
             this.btn_TimKiem.IndicateFocus = false;
-            this.btn_TimKiem.Location = new System.Drawing.Point(1032, 23);
+            this.btn_TimKiem.Location = new System.Drawing.Point(1035, 23);
             this.btn_TimKiem.Name = "btn_TimKiem";
             stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(221)))), ((int)(((byte)(158)))));
             stateProperties1.BorderRadius = 35;
@@ -204,7 +205,7 @@ namespace BachHoaXanh_Store
             stateProperties2.IconLeftImage = null;
             stateProperties2.IconRightImage = null;
             this.btn_TimKiem.OnPressedState = stateProperties2;
-            this.btn_TimKiem.Size = new System.Drawing.Size(253, 38);
+            this.btn_TimKiem.Size = new System.Drawing.Size(250, 38);
             this.btn_TimKiem.TabIndex = 8;
             this.btn_TimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_TimKiem.TextMarginLeft = 0;
@@ -275,7 +276,7 @@ namespace BachHoaXanh_Store
             this.txtKeyWord.SelectionLength = 0;
             this.txtKeyWord.SelectionStart = 0;
             this.txtKeyWord.ShortcutsEnabled = true;
-            this.txtKeyWord.Size = new System.Drawing.Size(337, 38);
+            this.txtKeyWord.Size = new System.Drawing.Size(338, 38);
             this.txtKeyWord.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtKeyWord.TabIndex = 2;
             this.txtKeyWord.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -314,10 +315,10 @@ namespace BachHoaXanh_Store
             this.cbo_NhaCungCap.ItemHighLightColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(209)))), ((int)(((byte)(175)))));
             this.cbo_NhaCungCap.Items.AddRange(new object[] {
             "ALL"});
-            this.cbo_NhaCungCap.Location = new System.Drawing.Point(689, 23);
+            this.cbo_NhaCungCap.Location = new System.Drawing.Point(691, 23);
             this.cbo_NhaCungCap.MaximumSize = new System.Drawing.Size(5000, 0);
             this.cbo_NhaCungCap.Name = "cbo_NhaCungCap";
-            this.cbo_NhaCungCap.Size = new System.Drawing.Size(337, 32);
+            this.cbo_NhaCungCap.Size = new System.Drawing.Size(338, 32);
             this.cbo_NhaCungCap.TabIndex = 4;
             this.cbo_NhaCungCap.Text = null;
             // 
@@ -349,12 +350,45 @@ namespace BachHoaXanh_Store
             this.cbo_LoaiSP.ItemHighLightColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(209)))), ((int)(((byte)(175)))));
             this.cbo_LoaiSP.Items.AddRange(new object[] {
             "ALL"});
-            this.cbo_LoaiSP.Location = new System.Drawing.Point(346, 23);
+            this.cbo_LoaiSP.Location = new System.Drawing.Point(347, 23);
             this.cbo_LoaiSP.MaximumSize = new System.Drawing.Size(5000, 0);
             this.cbo_LoaiSP.Name = "cbo_LoaiSP";
-            this.cbo_LoaiSP.Size = new System.Drawing.Size(337, 32);
+            this.cbo_LoaiSP.Size = new System.Drawing.Size(338, 32);
             this.cbo_LoaiSP.TabIndex = 4;
             this.cbo_LoaiSP.Text = null;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(46)))), ((int)(((byte)(41)))));
+            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(60, 14);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Tìm kiếm";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(46)))), ((int)(((byte)(41)))));
+            this.label2.Location = new System.Drawing.Point(347, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(95, 14);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Loại sản phẩm";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(46)))), ((int)(((byte)(41)))));
+            this.label3.Location = new System.Drawing.Point(691, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(89, 14);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Nhà cung cấp";
             // 
             // dgv_DSSP
             // 
@@ -389,6 +423,7 @@ namespace BachHoaXanh_Store
             this.col_SoLuong,
             this.col_GiaBan,
             this.col_GiaVon,
+            this.col_GiaKM,
             this.col_NgayKM,
             this.col_NgayHetHan});
             this.tableLayoutPanel1.SetColumnSpan(this.dgv_DSSP, 2);
@@ -412,140 +447,11 @@ namespace BachHoaXanh_Store
             this.dgv_DSSP.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_DSSP.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.tableLayoutPanel1.SetRowSpan(this.dgv_DSSP, 2);
-            this.dgv_DSSP.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dgv_DSSP.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_DSSP.Size = new System.Drawing.Size(1288, 555);
             this.dgv_DSSP.TabIndex = 2;
             this.dgv_DSSP.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DSSP_CellClick);
             this.dgv_DSSP.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DSSP_CellContentClick);
-            // 
-            // col_Sua
-            // 
-            this.col_Sua.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.col_Sua.FillWeight = 100.9208F;
-            this.col_Sua.HeaderText = "Sửa";
-            this.col_Sua.Name = "col_Sua";
-            this.col_Sua.ReadOnly = true;
-            this.col_Sua.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.col_Sua.Text = "Sửa";
-            this.col_Sua.ToolTipText = "Sửa";
-            this.col_Sua.UseColumnTextForButtonValue = true;
-            this.col_Sua.Width = 55;
-            // 
-            // col_Xoa
-            // 
-            this.col_Xoa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.col_Xoa.FillWeight = 91.37056F;
-            this.col_Xoa.HeaderText = "Xoá";
-            this.col_Xoa.Name = "col_Xoa";
-            this.col_Xoa.ReadOnly = true;
-            this.col_Xoa.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.col_Xoa.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.col_Xoa.Text = "Xóa";
-            this.col_Xoa.ToolTipText = "Xóa";
-            this.col_Xoa.UseColumnTextForButtonValue = true;
-            this.col_Xoa.Width = 55;
-            // 
-            // col_MaSP
-            // 
-            this.col_MaSP.DataPropertyName = "MaSP";
-            this.col_MaSP.FillWeight = 100.7709F;
-            this.col_MaSP.HeaderText = "Mã sản phẩm";
-            this.col_MaSP.Name = "col_MaSP";
-            this.col_MaSP.ReadOnly = true;
-            // 
-            // col_TenSP
-            // 
-            this.col_TenSP.DataPropertyName = "TenSP";
-            this.col_TenSP.FillWeight = 100.7709F;
-            this.col_TenSP.HeaderText = "Tên sản phẩm";
-            this.col_TenSP.Name = "col_TenSP";
-            this.col_TenSP.ReadOnly = true;
-            // 
-            // col_MaLoaiSP
-            // 
-            this.col_MaLoaiSP.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.col_MaLoaiSP.DataPropertyName = "MaLoaiSP";
-            this.col_MaLoaiSP.FillWeight = 100.7709F;
-            this.col_MaLoaiSP.HeaderText = "Mã loại sản phẩm";
-            this.col_MaLoaiSP.Name = "col_MaLoaiSP";
-            this.col_MaLoaiSP.ReadOnly = true;
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column1.DataPropertyName = "TenLoaiSP";
-            this.Column1.FillWeight = 100.7709F;
-            this.Column1.HeaderText = "Tên loại sản phẩm";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // col_MaNCC
-            // 
-            this.col_MaNCC.DataPropertyName = "MaNCC";
-            this.col_MaNCC.FillWeight = 100.7709F;
-            this.col_MaNCC.HeaderText = "Mã nhà cung cấp";
-            this.col_MaNCC.Name = "col_MaNCC";
-            this.col_MaNCC.ReadOnly = true;
-            // 
-            // col_TenNCC
-            // 
-            this.col_TenNCC.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.col_TenNCC.DataPropertyName = "TenNCC";
-            this.col_TenNCC.FillWeight = 100.7709F;
-            this.col_TenNCC.HeaderText = "Tên nhà cung cấp";
-            this.col_TenNCC.Name = "col_TenNCC";
-            this.col_TenNCC.ReadOnly = true;
-            // 
-            // col_DonViTinh
-            // 
-            this.col_DonViTinh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.col_DonViTinh.DataPropertyName = "DVT";
-            this.col_DonViTinh.FillWeight = 100.7709F;
-            this.col_DonViTinh.HeaderText = "ĐVT";
-            this.col_DonViTinh.Name = "col_DonViTinh";
-            this.col_DonViTinh.ReadOnly = true;
-            // 
-            // col_SoLuong
-            // 
-            this.col_SoLuong.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.col_SoLuong.DataPropertyName = "SoLuong";
-            this.col_SoLuong.FillWeight = 100.7709F;
-            this.col_SoLuong.HeaderText = "Số lượng";
-            this.col_SoLuong.Name = "col_SoLuong";
-            this.col_SoLuong.ReadOnly = true;
-            // 
-            // col_GiaBan
-            // 
-            this.col_GiaBan.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.col_GiaBan.DataPropertyName = "GiaBan";
-            this.col_GiaBan.FillWeight = 100.7709F;
-            this.col_GiaBan.HeaderText = "Giá bán";
-            this.col_GiaBan.Name = "col_GiaBan";
-            this.col_GiaBan.ReadOnly = true;
-            this.col_GiaBan.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // col_GiaVon
-            // 
-            this.col_GiaVon.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.col_GiaVon.DataPropertyName = "GiaVon";
-            this.col_GiaVon.FillWeight = 100.7709F;
-            this.col_GiaVon.HeaderText = "Giá vốn";
-            this.col_GiaVon.Name = "col_GiaVon";
-            this.col_GiaVon.ReadOnly = true;
-            // 
-            // col_NgayKM
-            // 
-            this.col_NgayKM.DataPropertyName = "NgayKM";
-            this.col_NgayKM.HeaderText = "Ngày Khuyến Mãi";
-            this.col_NgayKM.Name = "col_NgayKM";
-            this.col_NgayKM.ReadOnly = true;
-            // 
-            // col_NgayHetHan
-            // 
-            this.col_NgayHetHan.DataPropertyName = "NgayHetHan";
-            this.col_NgayHetHan.HeaderText = "Ngày Hết Hạn";
-            this.col_NgayHetHan.Name = "col_NgayHetHan";
-            this.col_NgayHetHan.ReadOnly = true;
             // 
             // tableLayoutPanel3
             // 
@@ -851,38 +757,141 @@ namespace BachHoaXanh_Store
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
             this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // label1
+            // col_Sua
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(46)))), ((int)(((byte)(41)))));
-            this.label1.Location = new System.Drawing.Point(3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 14);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Tìm kiếm";
+            this.col_Sua.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.col_Sua.FillWeight = 100.9208F;
+            this.col_Sua.HeaderText = "Sửa";
+            this.col_Sua.Name = "col_Sua";
+            this.col_Sua.ReadOnly = true;
+            this.col_Sua.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.col_Sua.Text = "Sửa";
+            this.col_Sua.ToolTipText = "Sửa";
+            this.col_Sua.UseColumnTextForButtonValue = true;
+            this.col_Sua.Width = 55;
             // 
-            // label2
+            // col_Xoa
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(46)))), ((int)(((byte)(41)))));
-            this.label2.Location = new System.Drawing.Point(346, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(95, 14);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Loại sản phẩm";
+            this.col_Xoa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.col_Xoa.FillWeight = 91.37056F;
+            this.col_Xoa.HeaderText = "Xoá";
+            this.col_Xoa.Name = "col_Xoa";
+            this.col_Xoa.ReadOnly = true;
+            this.col_Xoa.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.col_Xoa.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.col_Xoa.Text = "Xóa";
+            this.col_Xoa.ToolTipText = "Xóa";
+            this.col_Xoa.UseColumnTextForButtonValue = true;
+            this.col_Xoa.Width = 55;
             // 
-            // label3
+            // col_MaSP
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(46)))), ((int)(((byte)(41)))));
-            this.label3.Location = new System.Drawing.Point(689, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 14);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Nhà cung cấp";
+            this.col_MaSP.DataPropertyName = "MaSP";
+            this.col_MaSP.FillWeight = 100.7709F;
+            this.col_MaSP.HeaderText = "Mã sản phẩm";
+            this.col_MaSP.Name = "col_MaSP";
+            this.col_MaSP.ReadOnly = true;
+            // 
+            // col_TenSP
+            // 
+            this.col_TenSP.DataPropertyName = "TenSP";
+            this.col_TenSP.FillWeight = 100.7709F;
+            this.col_TenSP.HeaderText = "Tên sản phẩm";
+            this.col_TenSP.Name = "col_TenSP";
+            this.col_TenSP.ReadOnly = true;
+            // 
+            // col_MaLoaiSP
+            // 
+            this.col_MaLoaiSP.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.col_MaLoaiSP.DataPropertyName = "MaLoaiSP";
+            this.col_MaLoaiSP.FillWeight = 100.7709F;
+            this.col_MaLoaiSP.HeaderText = "Mã loại sản phẩm";
+            this.col_MaLoaiSP.Name = "col_MaLoaiSP";
+            this.col_MaLoaiSP.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.DataPropertyName = "TenLoaiSP";
+            this.Column1.FillWeight = 100.7709F;
+            this.Column1.HeaderText = "Tên loại sản phẩm";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // col_MaNCC
+            // 
+            this.col_MaNCC.DataPropertyName = "MaNCC";
+            this.col_MaNCC.FillWeight = 100.7709F;
+            this.col_MaNCC.HeaderText = "Mã nhà cung cấp";
+            this.col_MaNCC.Name = "col_MaNCC";
+            this.col_MaNCC.ReadOnly = true;
+            // 
+            // col_TenNCC
+            // 
+            this.col_TenNCC.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.col_TenNCC.DataPropertyName = "TenNCC";
+            this.col_TenNCC.FillWeight = 100.7709F;
+            this.col_TenNCC.HeaderText = "Tên nhà cung cấp";
+            this.col_TenNCC.Name = "col_TenNCC";
+            this.col_TenNCC.ReadOnly = true;
+            // 
+            // col_DonViTinh
+            // 
+            this.col_DonViTinh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.col_DonViTinh.DataPropertyName = "DVT";
+            this.col_DonViTinh.FillWeight = 100.7709F;
+            this.col_DonViTinh.HeaderText = "ĐVT";
+            this.col_DonViTinh.Name = "col_DonViTinh";
+            this.col_DonViTinh.ReadOnly = true;
+            // 
+            // col_SoLuong
+            // 
+            this.col_SoLuong.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.col_SoLuong.DataPropertyName = "SoLuong";
+            this.col_SoLuong.FillWeight = 100.7709F;
+            this.col_SoLuong.HeaderText = "Số lượng";
+            this.col_SoLuong.Name = "col_SoLuong";
+            this.col_SoLuong.ReadOnly = true;
+            // 
+            // col_GiaBan
+            // 
+            this.col_GiaBan.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.col_GiaBan.DataPropertyName = "GiaBan";
+            this.col_GiaBan.FillWeight = 100.7709F;
+            this.col_GiaBan.HeaderText = "Giá bán";
+            this.col_GiaBan.Name = "col_GiaBan";
+            this.col_GiaBan.ReadOnly = true;
+            this.col_GiaBan.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // col_GiaVon
+            // 
+            this.col_GiaVon.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.col_GiaVon.DataPropertyName = "GiaVon";
+            this.col_GiaVon.FillWeight = 100.7709F;
+            this.col_GiaVon.HeaderText = "Giá vốn";
+            this.col_GiaVon.Name = "col_GiaVon";
+            this.col_GiaVon.ReadOnly = true;
+            // 
+            // col_GiaKM
+            // 
+            this.col_GiaKM.DataPropertyName = "GiaKM";
+            this.col_GiaKM.HeaderText = "GiáKM";
+            this.col_GiaKM.Name = "col_GiaKM";
+            this.col_GiaKM.ReadOnly = true;
+            // 
+            // col_NgayKM
+            // 
+            this.col_NgayKM.DataPropertyName = "NgayKM";
+            this.col_NgayKM.HeaderText = "Ngày Khuyến Mãi";
+            this.col_NgayKM.Name = "col_NgayKM";
+            this.col_NgayKM.ReadOnly = true;
+            // 
+            // col_NgayHetHan
+            // 
+            this.col_NgayHetHan.DataPropertyName = "NgayHetHan";
+            this.col_NgayHetHan.HeaderText = "Ngày Hết Hạn";
+            this.col_NgayHetHan.Name = "col_NgayHetHan";
+            this.col_NgayHetHan.ReadOnly = true;
             // 
             // FormDanhSachSP
             // 
@@ -923,6 +932,13 @@ namespace BachHoaXanh_Store
         private System.Windows.Forms.Panel panel2;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         private Bunifu.UI.WinForms.BunifuCheckBox chk_AllStore;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
+        private Bunifu.UI.WinForms.BunifuDropdown cbo_PageSize;
+        private System.Windows.Forms.Panel panel3;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridViewButtonColumn col_Sua;
         private System.Windows.Forms.DataGridViewButtonColumn col_Xoa;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_MaSP;
@@ -935,14 +951,8 @@ namespace BachHoaXanh_Store
         private System.Windows.Forms.DataGridViewTextBoxColumn col_SoLuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_GiaBan;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_GiaVon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_GiaKM;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_NgayKM;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_NgayHetHan;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
-        private Bunifu.UI.WinForms.BunifuDropdown cbo_PageSize;
-        private System.Windows.Forms.Panel panel3;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
     }
 }

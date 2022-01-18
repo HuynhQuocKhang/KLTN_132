@@ -350,7 +350,7 @@ namespace BachHoaXanh_Store
             this.txt_ProductFullName.OnIdleState = stateProperties8;
             this.txt_ProductFullName.PasswordChar = '\0';
             this.txt_ProductFullName.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txt_ProductFullName.PlaceholderText = "";
+            //this.txt_ProductFullName.PlaceholderText = "";
             this.txt_ProductFullName.ReadOnly = true;
             this.txt_ProductFullName.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_ProductFullName.SelectedText = "";
@@ -522,7 +522,7 @@ namespace BachHoaXanh_Store
             stateProperties9.FillColor = System.Drawing.Color.Empty;
             stateProperties9.ForeColor = System.Drawing.Color.Empty;
             stateProperties9.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txt_SLTon.OnActiveState = stateProperties9;
+            //this.txt_SLTon.OnActiveState = stateProperties9;
             stateProperties10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(223)))), ((int)(((byte)(135)))));
             stateProperties10.FillColor = System.Drawing.Color.White;
             stateProperties10.ForeColor = System.Drawing.Color.Empty;
@@ -537,7 +537,7 @@ namespace BachHoaXanh_Store
             stateProperties12.FillColor = System.Drawing.Color.White;
             stateProperties12.ForeColor = System.Drawing.Color.Empty;
             stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txt_SLTon.OnIdleState = stateProperties12;
+            //this.txt_SLTon.OnIdleState = stateProperties12;
             this.txt_SLTon.PasswordChar = '\0';
             this.txt_SLTon.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txt_SLTon.PlaceholderText = "";
@@ -554,7 +554,7 @@ namespace BachHoaXanh_Store
             this.txt_SLTon.TextMarginBottom = 0;
             this.txt_SLTon.TextMarginLeft = 5;
             this.txt_SLTon.TextMarginTop = 0;
-            this.txt_SLTon.TextPlaceholder = "";
+            //this.txt_SLTon.TextPlaceholder = "";
             this.txt_SLTon.UseSystemPasswordChar = false;
             this.txt_SLTon.WordWrap = true;
             // 

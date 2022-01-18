@@ -120,9 +120,10 @@ namespace BachHoaXanh_Store
         private void dgv_DSSP_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int index = dgv_DSSP.CurrentCell.RowIndex;
+            var senderGrid = (DataGridView)sender;
 
             //Sửa Sản phẩm
-            if (dgv_DSSP["col_Sua", index].Selected)
+            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn && senderGrid.Columns[e.ColumnIndex].Name=="col_Sua")
             {
                 if (FormLogin.objUserBO.Permission != 1)
                 {
@@ -162,8 +163,7 @@ namespace BachHoaXanh_Store
                 }
 
             }
-            //Xóa Sản Phẩm
-            if (dgv_DSSP["col_Xoa", index].Selected)
+            else if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn && senderGrid.Columns[e.ColumnIndex].Name == "col_Xoa")
             {
                 if (FormLogin.objUserBO.Permission != 1)
                 {
